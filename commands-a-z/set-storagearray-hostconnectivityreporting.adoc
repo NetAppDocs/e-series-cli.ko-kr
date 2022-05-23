@@ -1,0 +1,67 @@
+---
+permalink: commands-a-z/set-storagearray-hostconnectivityreporting.html 
+sidebar: sidebar 
+keywords: enable, disable, host, connectivity, report 
+summary: set storageArray hostConnectivityReporting 명령은 컨트롤러에서 호스트 연결 보고를 활성화하거나 비활성화합니다. 
+---
+= 호스트 연결 보고를 설정하거나 해제합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray hostConnectivityReporting 명령은 컨트롤러에 대한 호스트 연결 보고를 활성화하거나 비활성화합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+set storageArray hostConnectivityReporting (enable | disable)
+----
+
+
+== 상황
+
+스토리지 어레이에서 호스트 연결 보고를 활성화하면 스토리지 어레이는 스토리지 어레이 컨트롤러와 구성된 호스트 간의 연결을 지속적으로 모니터링하며, 케이블이 느슨하거나 손상되거나 누락된 경우 또는 호스트와 관련된 기타 문제로 인해 연결이 방해를 받을 경우 이를 알려줍니다. 스토리지 시스템에 호스트 유형이 잘못 지정되어 페일오버 문제가 발생할 수 있는 경우에도 알림이 표시됩니다.
+
+[NOTE]
+====
+호스트 연결 보고를 비활성화하려면 먼저 자동 로드 밸런싱을 비활성화해야 합니다.
+
+====
+[NOTE]
+====
+자동 로드 밸런싱이 비활성화된 경우 호스트 연결 보고를 활성 상태로 유지할 수 있습니다.
+
+====
+[NOTE]
+====
+호스트 연결 보고 및 자동 로드 밸런싱 기능은 Linux DHALUA, Windows/Windows 클러스터 및 VMware 호스트 유형에서만 작동합니다.
+
+====
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+8.42 새 명령 매개 변수입니다.

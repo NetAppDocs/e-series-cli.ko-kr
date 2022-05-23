@@ -1,0 +1,127 @@
+---
+permalink: commands-a-z/set-storagearray-isnsregistration.html 
+sidebar: sidebar 
+keywords: set, storage, array, isns, registration 
+summary: 'set storageArray isnsRegistration 명령을 사용하면 IPv4 또는 IPv6 iSNS(Internet Storage Name Service) 서버에 스토리지 배열을 나열할 수 있습니다.' 
+---
+= 스토리지 배열 iSNS 등록을 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Set storageArray isnsRegistration 명령을 사용하면 IPv4 또는 IPv6 iSNS(Internet Storage Name Service) 서버에 스토리지 배열을 나열할 수 있습니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== IPv4에 대한 구문
+
+[listing, subs="+macros"]
+----
+set storageArray isnsRegistration=(TRUE | FALSE)
+isnsIPv4ConfigurationMethod=[static | dhcp]
+isnsIPv4Address=pass:quotes[_ipAddress_]
+[isnsListeningPort]
+----
+
+
+== IPv6에 대한 구문입니다
+
+[listing, subs="+macros"]
+----
+set storageArray isnsRegistration=(TRUE | FALSE)
+isnsIPv6Address=pass:quotes[_ipAddress_]
+[isnsListeningPort]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+isnsRegistration
+ a| 
+iSNS 서버에 iSCSI 타겟을 등록하는 방법입니다. iSCSI 대상을 나열하려면 매개 변수를 "true"로 설정합니다.
+
+이 매개변수를 'true'로 설정하면 IPv4 구성에 다음 매개 변수도 사용해야 합니다.
+
+* isnsIPV4ConfigurationMethod
+* isnsIPV4주소
+
+
+이 매개 변수를 "true"로 설정하면 IPv6 구성에 다음 매개 변수도 사용해야 합니다.
+
+* isnsIPV6Address를 참조하십시오
+
+
+선택적으로, 'isnsListeningPort' 매개변수를 사용하여 포트 모니터를 정의하고 서버로의 트래픽을 관리할 수도 있습니다.
+
+iSNS 서버에서 스토리지 배열에 대한 등록을 제거하려면 이 매개변수를 "false"로 설정합니다.
+
+
+
+ a| 
+isnsIPv4ConfigurationMethod
+ a| 
+iSNS 서버 구성을 정의하는 데 사용할 방법입니다. '정적'을 선택하여 IPv4 iSNS 서버의 IP 주소를 입력할 수 있습니다. IPv4의 경우 DHCP(Dynamic Host Configuration Protocol) 서버에서 DIHCP를 입력하여 iSNS 서버 IP 주소를 선택하도록 선택할 수 있습니다. DHCP를 활성화하려면 isnsIPv4Address 매개변수를 0.0.0.0으로 설정해야 합니다.
+
+
+
+ a| 
+isnsIPv4Address
+ a| 
+iSNS 서버에 연결하는 데 사용되는 IPv4 주소입니다. IPv4 설정에 대한 'totic' 값과 함께 이 파라미터를 사용한다. DHCP 서버가 IPv4 인터넷 iSNS 서버의 IP 주소를 설정하도록 하려면 isnsIPv4Address 매개변수를 0.0.0.0으로 설정해야 합니다.
+
+
+
+ a| 
+isnsIPv6Address
+ a| 
+iSNS 서버에 연결하는 데 사용되는 IPv6 주소입니다.
+
+
+
+ a| 
+isnsListeningPort
+ a| 
+iSNS 서버 수신 대기 포트에 사용할 포트 번호입니다. 수신 포트의 값 범위는 49152 ~ 65535. 기본값은 '3205'입니다.
+
+수신 대기 포트는 서버에 있으며 다음 작업을 수행합니다.
+
+* 들어오는 클라이언트 연결 요청을 모니터링합니다
+* 서버에 대한 트래픽을 관리합니다
+
+
+클라이언트가 서버와 네트워크 세션을 요청하면 수신기는 실제 요청을 받습니다. 클라이언트 정보가 수신기 정보와 일치하면 리스너는 데이터베이스 서버에 대한 연결을 부여합니다.
+
+|===
+
+
+== 참고
+
+iSNS 프로토콜을 사용하면 TCP/IP 네트워크에서 iSCSI 디바이스 및 Fibre Channel 디바이스를 자동으로 검색, 관리 및 구성할 수 있습니다. iSNS는 Fibre Channel 네트워크에 있는 것과 유사한 지능형 스토리지 검색 및 관리 서비스를 제공하므로 일반 IP 네트워크가 스토리지 영역 네트워크와 유사한 용량으로 작동할 수 있습니다. 또한 iSNS는 Fibre Channel 패브릭 서비스를 에뮬레이트하고 iSCSI 디바이스와 Fibre Channel 디바이스를 모두 관리할 수 있기 때문에 IP 네트워크와 Fibre Channel 네트워크를 완벽하게 통합할 수 있습니다.
+
+DHCP 서버는 네트워크 주소와 같은 구성 매개 변수를 IP 노드에 전달합니다. DHCP를 사용하면 클라이언트가 작동되어야 하는 모든 IP 구성 매개 변수를 획득할 수 있습니다. DHCP를 사용하면 재사용 가능한 네트워크 주소를 자동으로 할당할 수 있습니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+7.10

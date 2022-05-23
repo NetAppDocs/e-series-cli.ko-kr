@@ -1,0 +1,78 @@
+---
+permalink: commands-a-z/start-ssdcache-performancemodeling.html 
+sidebar: sidebar 
+keywords: start, ssd, cache, performance, model 
+summary: start ssdCache performanceModeling 명령은 SSD 캐시의 성능 모델링을 시작합니다. 
+---
+= SSD 캐시 성능 모델링을 시작합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'tart ssdCache performanceModeling' 명령어는 SSD Cache에 대한 성능 모델링을 시작한다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800 및 E5700 어레이를 포함한 개별 스토리지 어레이에 적용됩니다. 모든 SMcli 패키지가 설치된 경우
+
+
+
+== 역할
+
+E2800 또는 E5700 스토리지 어레이에서 이 명령을 실행하려면 지원 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+성능 모델링은 일정 기간 I/O 활동을 모니터링 및 측정하고 다양한 SSD 캐시 크기에 대한 성능을 예측합니다. 성능은 캐시 적중율과 평균 응답 시간의 두 가지 메트릭을 사용하여 추정됩니다. 'top ssdCache performanceModeling' 명령어를 사용하여 작업을 중지할 때까지는 성능 모델링 데이터를 사용할 수 없습니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+start ssdCache pass:quotes[[_ssdCacheName_]] performanceModeling
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'ssdCache'입니다
+ a| 
+성능을 모델링할 SSD 캐시의 이름입니다. SSD 캐시 이름은 대괄호([ ])로 묶어야 합니다. SSD 캐시 이름에 특수 문자가 포함되어 있거나 숫자만 포함된 경우 SSD 캐시 이름은 대괄호 안에 큰따옴표(" ")로 묶어야 합니다.
+
+|===
+
+
+== 참고
+
+성능 모델링이 끝나고 다음 조건 중 하나가 발생하면 성능 모델링 데이터를 사용할 수 있습니다.
+
+* 'ssdCache performanceModeling' 명령어를 실행한다.
+* 스토리지 관리 소프트웨어를 사용하여 성능 모델링 데이터를 검색합니다.
+
+
+성능 모델링이 종료되지만 다음 조건 중 하나가 발생하면 데이터를 사용할 수 없습니다.
+
+* 컨트롤러를 재부팅합니다.
+* SSD 캐시 구성을 변경합니다.
+* SSD 캐시 상태가 바뀝니다.
+
+
+
+
+== 최소 펌웨어 레벨입니다
+
+7.84

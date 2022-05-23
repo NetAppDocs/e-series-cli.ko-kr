@@ -1,0 +1,56 @@
+---
+permalink: commands-a-z/save-storagearray-statecapture.html 
+sidebar: sidebar 
+keywords: save, storage, array, state, capture 
+summary: save storageArray stateCapture 명령은 스토리지 배열의 상태 캡처를 파일에 저장합니다. 
+---
+= 스토리지 배열 상태 캡처를 저장합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Save storageArray stateCapture' 명령은 스토리지 배열의 상태 캡처를 파일에 저장합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+save storageArray stateCapture file=pass:quotes["_filename_"]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'파일'
+ a| 
+상태 캡처를 저장할 파일 경로와 파일 이름입니다. 파일 이름은 큰따옴표(" ")로 묶어야 합니다. 예를 들면 다음과 같습니다.
+
+"file="C:\Program Files\CLI\logs\state.txt"
+
+파일 이름은 사용할 수 있지만 확장명은 .txt여야 합니다.
+
+상태 캡처를 포함하는 파일의 기본 이름은 'state-capture-data.txt'입니다. 이 명령은 저장된 파일에 파일 확장명을 자동으로 추가하지 않습니다. 파일 이름을 입력할 때 파일 확장자를 지정해야 합니다.
+
+|===

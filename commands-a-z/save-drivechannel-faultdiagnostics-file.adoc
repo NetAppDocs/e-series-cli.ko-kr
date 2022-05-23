@@ -1,0 +1,76 @@
+---
+permalink: commands-a-z/save-drivechannel-faultdiagnostics-file.html 
+sidebar: sidebar 
+keywords: save, drive, channel, fault, isolation, diagnostic, status 
+summary: save driveChannel defaultDiagnostics 파일 명령은 start driveChannel defaultDiagnostics 명령에서 반환되는 드라이브 채널 장애 격리 진단 데이터를 저장합니다. 
+---
+= 드라이브 채널 장애 격리 진단 상태를 저장합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'드라이브 채널 defaultDiagnostics file' 명령은 'tart driveChannel defaultDiagnostics' 명령에서 반환되는 드라이브 채널 장애 격리 진단 데이터를 저장합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+[NOTE]
+====
+펌웨어 버전 8.10에서는 '드라이브 채널 defaultDiagnostics 저장' 명령이 사용되지 않습니다.
+
+====
+진단 데이터를 표준 텍스트 또는 XML로 파일에 저장할 수 있습니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+save driveChannel faultDiagnostics file=pass:quotes["_filename_"]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'파일'
+ a| 
+드라이브 채널에 대한 장애 격리 진단 테스트 결과를 저장할 파일 경로 및 파일 이름입니다. 파일 이름은 큰따옴표(" ")로 묶어야 합니다. 예를 들면 다음과 같습니다.
+
+"file="C:\Program Files\CLI\sup\fltdiag.txt""
+
+이 명령은 저장된 파일에 파일 확장명을 자동으로 추가하지 않습니다. 파일 이름을 입력할 때 파일 확장자를 지정해야 합니다.
+
+|===
+
+
+== 참고
+
+파일 확장자가 저장된 파일에 자동으로 추가되지 않습니다. 파일에 적용할 수 있는 형식 파일 확장명을 지정해야 합니다. 파일 확장자가 .txt인 경우 출력은 텍스트 파일 형식으로 표시됩니다. '.xml'의 파일 확장자를 지정하면 출력이 XML 파일 형식으로 표시됩니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+7.15에는 기존 컨트롤러 트레이에 이 새로운 기능이 도입되었습니다.

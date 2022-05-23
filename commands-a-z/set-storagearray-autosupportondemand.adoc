@@ -1,0 +1,84 @@
+---
+permalink: commands-a-z/set-storagearray-autosupportondemand.html 
+sidebar: sidebar 
+keywords: enable, disable, autosupport, ondemand, feature, individual, E2800, E5700, arrays 
+summary: set storageArray autoSupportOnDemand 명령은 AutoSupport OnDemand 기능을 설정하거나 해제합니다. 이 기능을 통해 기술 지원 부서에서 AutoSupport 데이터 전송을 조정하고 누락된 지원 데이터의 재전송을 요청할 수 있습니다. 
+---
+= AutoSupport OnDemand 기능을 활성화 또는 비활성화합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+et storageArray autoSupportOnDemand 명령어가 AutoSupport OnDemand 기능을 설정하거나 해제한다. 이 기능을 통해 기술 지원 부서에서 AutoSupport 데이터 전송을 조정하고 누락된 지원 데이터의 재전송을 요청할 수 있습니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+이 기능을 활성화하기 전에 먼저 스토리지 어레이에서 AutoSupport 기능을 활성화해야 합니다. 이 기능을 활성화한 후 AutoSupport 원격 진단 기능을 활성화할 수 있습니다(필요한 경우).
+
+
+
+== 구문
+
+[listing]
+----
+set storageArray autoSupportOnDemand (enable | disable)
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'enable|disable'
+ a| 
+사용자가 AutoSupport OnDemand 기능을 활성화 또는 비활성화할 수 있습니다. AutoSupport가 비활성화된 경우 활성화 작업이 오류를 발생시키고 사용자에게 먼저 활성화하도록 요청합니다. 원격 진단 기능이 활성화된 경우 비활성화 작업도 원격 진단 기능을 해제합니다.
+
+|===
+
+
+== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray autoSupportOnDemand enable;"
+
+SMcli completed successfully.
+----
+
+
+== 검증
+
+이 기능을 사용하도록 설정했는지 확인하려면 'show storageArray AutoSupport' 명령을 사용합니다. 표시된 출력의 처음 두 줄은 AutoSupport 기능의 활성화 상태와 AutoSupport OnDemand 기능을 보여줍니다.
+
+[listing]
+----
+The AutoSupport is enabled on this storage array.
+The AutoSupport OnDemand feature is enabled on this storage array.
+The AutoSupport Remote Diagnostics feature is enabled on this storage array.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

@@ -1,0 +1,60 @@
+---
+permalink: commands-a-z/clear-storagearray-recoverymode.html 
+sidebar: sidebar 
+keywords: clear, storage array, recovery, mode 
+summary: clear storageArray recoveryMode 명령은 스토리지 배열이 복구 모드를 종료하도록 합니다. 
+---
+= 스토리지 배열 복구 모드를 지웁니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+clear storageArray recoveryMode 명령을 실행하면 스토리지 배열의 복구 모드가 종료됩니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+clear storageArray recoveryMode
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 참고
+
+[NOTE]
+====
+복구 모드는 시스템 구성이 지워지고 유효한 온보드 백업을 사용할 수 있을 때 시작 작업 중에 시작됩니다. 이 모드는 백업 위치에서 시스템 구성을 복원하거나 기존 온보드 백업을 지워 종료됩니다. 복구 모드가 실행 중일 때는 Needs Attention(주의 필요) 조건이 발생되고 사용자 인터페이스에서 Recovery Guru(복구 전문가)를 사용할 수 있습니다. 그러나 복구 모드 중에는 시스템 구성이 비어 있습니다.
+
+====
+[NOTE]
+====
+스토리지 배열을 이전 구성으로 되돌리려면 복구 모드를 지우기 전에 백업에서 구성을 복원해야 합니다. 복원 성공 여부를 확인하려면 유효성 검사를 수행하거나 기술 지원 부서에 확인해야 합니다. 복원이 성공적이었는 것을 확인한 후 복구 모드를 지울 수 있습니다.
+
+====
+
+
+== 최소 펌웨어 레벨입니다
+
+7.83

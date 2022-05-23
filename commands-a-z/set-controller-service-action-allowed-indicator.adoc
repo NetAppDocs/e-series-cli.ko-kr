@@ -1,0 +1,68 @@
+---
+permalink: commands-a-z/set-controller-service-action-allowed-indicator.html 
+sidebar: sidebar 
+keywords: set, controller, service, action, allowed, indicator 
+summary: set controller 명령은 컨트롤러 트레이 또는 컨트롤러 드라이브 트레이의 컨트롤러에서 Service Action Allowed 표시등을 켜거나 끕니다 
+---
+= 컨트롤러 서비스 작업 허용 표시기를 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Set controller' 명령은 컨트롤러 트레이 또는 컨트롤러 드라이브 트레이의 컨트롤러에서 Service Action Allowed 표시등을 켜거나 끕니다
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700 및 E5600 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
+
+
+
+== 상황
+
+스토리지 배열이 Service Action Allowed 표시등 기능을 지원하지 않는 경우 이 명령은 오류를 반환합니다. 스토리지 배열이 명령을 지원하지만 표시등을 켜거나 끌 수 없는 경우 이 명령은 오류를 반환합니다. (전원 팬 캐니스터 또는 상호 연결 배터리 캐니스터의 Service Action Allowed 표시등을 켜거나 끄려면 'Set tray serviceAllowedIndicator' 명령을 사용합니다.)
+
+[NOTE]
+====
+이 명령은 E2700, E5600, EF560(및 기타 이전 세대의 E-Series 또는 EF-Series 컨트롤러)에만 유효합니다. E2800 컨트롤러 트레이에는 1) 오류가 있을 때만 켜지는 단일 주의 표시등이 있고 2) 장애가 발생한 구성요소를 안전하게 제거할 수 있습니다.
+
+====
+
+
+== 구문
+
+[listing]
+----
+set controller [(a| b)]
+serviceAllowedIndicator=(on | off)
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+컨트롤러
+ a| 
+Service Action Allowed(서비스 작업 허용) 표시등이 켜져 있거나 꺼져 있는 컨트롤러입니다. 유효한 컨트롤러 식별자는 a나 b이며, 여기서 a는 A 슬롯의 제어기이고 b는 B 슬롯의 제어기입니다 컨트롤러 식별자를 대괄호([ ])로 묶습니다. 컨트롤러를 지정하지 않으면 컨트롤러 펌웨어가 구문 오류를 반환합니다.
+
+
+
+ a| 
+저빙AllowedIndicator를 선택합니다
+ a| 
+Service Action Allowed(서비스 작업 허용) 표시등을 켜거나 끄는 설정입니다. Service Action Allowed(서비스 작업 허용) 표시등을 켜려면 이 매개변수를 "On(켜짐)"으로 설정합니다. Service Action Allowed(서비스 작업 허용) 표시등을 끄려면 이 매개변수를 "off(꺼짐)"로 설정합니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+6.14

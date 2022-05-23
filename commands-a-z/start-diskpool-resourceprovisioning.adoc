@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/start-diskpool-resourceprovisioning.html 
+sidebar: sidebar 
+keywords: start, disk pool, resource, provision 
+summary: start diskpool resourceProvisioning 명령은 지정된 디스크 풀에서 리소스 프로비저닝을 활성화하고 디스크 풀의 각 볼륨에서 리소스 프로비저닝 활성화 비동기 작업을 시작합니다. 리소스 프로비저닝을 수행하려면 디스크 풀의 모든 드라이브에서 NVMe의 DULBE 기능을 지원해야 합니다. 
+---
+= 디스크 풀 리소스 프로비저닝을 시작합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'tart diskpool resourceProvisioning' 명령은 지정된 디스크 풀에서 리소스 프로비저닝을 활성화하고 디스크 풀의 각 볼륨에 대해 리소스 프로비저닝 지원 비동기 작업을 시작합니다. 리소스 프로비저닝을 수행하려면 디스크 풀의 모든 드라이브에서 NVMe의 DULBE 기능을 지원해야 합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 어레이를 비롯한 모든 개별 스토리지 어레이에 적용됩니다.
+
+
+
+== 역할
+
+EF600 및 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+디스크 풀에서 리소스 프로비저닝을 해제하려면 리소스 프로비저닝을 해제하는 옵션과 함께 full provisioning 명령을 사용합니다. 디스크 풀은 모든 드라이브가 DULBE를 지원하며 스토리지 배열의 ProvisionedVolumes 설정이 "true"인 경우 생성될 때 리소스를 프로비저닝합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+start diskPoolpass:quotes[[_diskPoolName_]] resourceProvisioning
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+디즈크풀이름
+ a| 
+리소스 프로비저닝 기능을 설정할 디스크 풀입니다. 디스크 풀 이름은 대괄호([ ])로 묶어야 합니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+11.73

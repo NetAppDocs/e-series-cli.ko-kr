@@ -1,0 +1,43 @@
+---
+permalink: commands-a-z/getting-started-with-external-key-management.html 
+sidebar: sidebar 
+keywords: security, key, string, characters, shared, secure, drives, controllers, storage, array, external, management, maintain, server 
+summary: 보안 키는 문자열을 말합니다. 이 문자열은 스토리지 어레이에서 보안이 설정된 드라이브와 컨트롤러 간에 공유됩니다. 외부 키 관리를 사용하는 경우 키 관리 서버에서 보안 키를 만들고 유지 관리합니다 
+---
+= 외부 키 관리 시작
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+보안 키는 문자열을 말합니다. 이 문자열은 스토리지 어레이에서 보안이 설정된 드라이브와 컨트롤러 간에 공유됩니다. 외부 키 관리를 사용하는 경우 키 관리 서버에서 보안 키를 만들고 유지 관리합니다
+
+외부 키 관리 서버 및 보안 키 사용에 대한 개념적 정보는 SANtricity System Manager 온라인 도움말을 참조하십시오.
+
+다음은 외부 보안 키를 구현하기 위한 기본 워크플로입니다.
+
+. * 인증서 서명 요청 생성 *
+. * KMIP 서버에서 클라이언트 및 서버 인증서를 얻습니다 *
+. * 클라이언트 인증서 설치 *
+. * KMIP 서버의 IP 주소와 포트 번호를 설정합니다. *
+. * KMIP 서버와의 통신 테스트 *
+. * 스토리지 배열 보안 키 생성 *
+. * 보안 키 유효성 검사 *
+
+
+
+
+== 워크플로 단계
+
+인증서 관리와 외부 키 관리 모두 SANtrictity11.40 릴리스의 새로운 보안 기능입니다. 시작하려면 다음 기본 단계를 사용하십시오.
+
+. 'Save storageArray keyManagementClientCSR' 명령어를 사용하여 인증서 서명 요청을 생성합니다. 을 참조하십시오 xref:save-storagearray-keymanagementclientcsr.adoc[키 관리 인증서 서명 요청을 생성합니다].
+. KMIP 서버에서 클라이언트 및 서버 인증서를 요청합니다.
+. certificateType 매개 변수를 client로 설정한 상태에서 download storageArray keyManagementCertificate 명령을 사용하여 클라이언트 인증서를 설치합니다. 을 참조하십시오 xref:download-storagearray-keymanagementcertificate.adoc[스토리지 배열 외부 키 관리 인증서를 설치합니다].
+. certificateType 매개 변수를 'server'로 설정하고 dowload storageArray keyManagementCertificate 명령을 사용하여 서버 인증서를 설치합니다. 을 참조하십시오 xref:download-storagearray-keymanagementcertificate.adoc[스토리지 배열 외부 키 관리 인증서를 설치합니다].
+. Set storageArray externalKeyManagement 명령을 사용하여 키 관리 서버의 IP 주소와 포트 번호를 설정합니다. 을 참조하십시오 xref:set-storagearray-externalkeymanagement.adoc[외부 키 관리 설정을 지정합니다].
+. 'tart storageArray externalKeyManagement test' 명령어를 사용하여 외부 키 관리 서버와의 통신을 테스트합니다. 을 참조하십시오 xref:start-storagearray-externalkeymanagement-test.adoc[외부 키 관리 통신을 테스트합니다].
+. create storageArray securityKey 명령을 사용하여 보안 키를 생성합니다. 을 참조하십시오 xref:create-storagearray-securitykey.adoc[보안 키를 생성합니다].
+. "validate storageArray securityKey" 명령을 사용하여 보안 키를 확인합니다. 을 참조하십시오 xref:validate-storagearray-securitykey.adoc[내부 또는 외부 보안 키를 확인합니다].
+

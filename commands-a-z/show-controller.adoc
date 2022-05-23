@@ -1,0 +1,191 @@
+---
+permalink: commands-a-z/show-controller.html 
+sidebar: sidebar 
+keywords: show, controller 
+summary: show controller 명령은 컨트롤러에 대한 정보를 반환합니다. 
+---
+= 컨트롤러를 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'show controller' 명령어는 컨트롤러에 대한 정보를 반환합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+스토리지 배열의 각 컨트롤러에 대해 이 명령은 다음 정보를 반환합니다.
+
+* 상태(온라인 또는 오프라인)
+* 현재 펌웨어 및 NVSRAM 구성
+* 보류 중인 펌웨어 구성 및 NVSRAM 구성(있는 경우)
+* 보드 ID입니다
+* 제품 ID입니다
+* 제품 개정
+* 일련 번호입니다
+* 제조 날짜
+* 캐시 크기 또는 프로세서 크기입니다
+* 컨트롤러가 설정된 날짜 및 시간입니다
+* 연결된 볼륨(기본 소유자 포함)
+* 이더넷 포트
+* 물리 디스크 인터페이스
+* 호스트 인터페이스로, Fibre Channel 호스트 인터페이스에만 적용됩니다
+
+
+
+
+== 구문
+
+[listing]
+----
+show (allControllers | controller [(a|b)])
+ [summary]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+올컨트롤러
+ a| 
+스토리지 배열의 두 컨트롤러에 대한 정보를 반환하는 설정입니다.
+
+
+
+ a| 
+컨트롤러
+ a| 
+스토리지 배열의 특정 컨트롤러에 대한 정보를 반환하는 설정입니다. 유효한 컨트롤러 식별자는 a나 b이며, 여기서 a는 A 슬롯의 제어기이고 b는 B 슬롯의 제어기입니다 컨트롤러 식별자를 대괄호([ ])로 묶습니다.
+
+
+
+ a| 
+양호실
+ a| 
+스토리지 배열의 두 컨트롤러에 대한 정보를 간결하게 나열하는 설정입니다.
+
+|===
+
+
+== 참고
+
+다음은 show controller 명령으로 반환되는 정보의 예이다. 이 예에서는 정보가 표시되는 방법만 보여 주며 스토리지 배열 구성에 대한 모범 사례를 나타내도록 간주해서는 안 됩니다.
+
+[listing]
+----
+Controller in slot A
+
+   Status: Online
+   Current configuration
+      Firmware version: 96.10.21.00
+         Appware version: 96.10.21.00
+         Bootware version: 96.10.21.00
+      NVSRAM version: N4884-610800-001
+   Pending configuration
+      Firmware version: Not applicable
+         Appware version: Not applicable
+         Bootware version: Not applicable
+      NVSRAM version: Not applicable
+      Transferred on: Not applicable
+   Board ID: 4884
+   Product ID: INF-01-00
+   Product revision: 9610
+   Serial number: 1T14148766
+   Date of manufacture: October 14, 2006
+   Cache/processor size (MB): 1024/128
+   Date/Time: Wed Feb 18 13:55:53 MST 2008
+   Associated Volumes (* = Preferred Owner):
+      1*, 2*, CTL 0 Mirror Repository*, Mirror Repository 1*,
+      JCG_Remote_MirrorMenuTests*
+   Ethernet port: 1
+      MAC address: 00:a0:b8:0c:c3:f5
+      Host name: ausctlr9
+      Network configuration: Static
+      IP address: 172.22.4.249
+      Subnet mask: 255.255.255.0
+      Gateway: 172.22.4.1
+      Remote login: Enabled
+   Drive interface: Fibre
+      Channel: 1
+      Current ID: 125/0x1
+      Maximum data rate: 2 Gbps
+      Current data rate: 1 Gbps
+      Data rate control: Switch
+      Link status: Up
+   Drive interface: Fibre
+      Channel: 2
+      Current ID: 125/0x1
+      Maximum data rate: 2 Gbps
+      Current data rate: 1 Gbps
+      Data rate control: Switch
+      Link status: Up
+   Drive interface: Fibre
+      Channel: 3
+      Current ID: 125/0x1
+      Maximum data rate: 2 Gbps
+      Current data rate: 1 Gbps
+      Data rate control: Switch
+      Link status: Up
+   Drive interface: Fibre
+      Channel: 4
+      Current ID: 125/0x1
+      Maximum data rate: 2 Gbps
+      Current data rate: 1 Gbps
+      Data rate control: Switch
+      Link status: Up
+   Host interface: Fibre
+      Port: 1
+      Current ID: Not applicable/0xFFFFFFFF
+      Preferred ID: 126/0x0
+      NL-Port ID: 0x011100
+      Maximum data rate: 2 Gbps
+      Current data rate: 1 Gbps
+      Data rate control: Switch
+      Link status: Up
+      Topology: Fabric Attach
+      World-wide port name: 20:2c:00:a0:b8:0c:c3:f6
+      World-wide node name: 20:2c:00:a0:b8:0c:c3:f5
+      Part type: HPFC-5200    revision 10
+   Host interface: Fibre
+      Port: 2
+      Current ID: Not applicable/0xFFFFFFFF
+      Preferred ID: 126/0x0
+      NL-Port ID: 0x011100
+      Maximum data rate: 2 Gbps
+      Current data rate: 1 Gbps
+      Data rate control: Switch
+      Link status: Up
+      Topology: Fabric Attach
+      World-wide port name: 20:2c:00:a0:b8:0c:c3:f7
+      World-wide node name: 20:2c:00:a0:b8:0c:c3:f5
+      Part type: HPFC-5200    revision 10
+----
+'Summary' 매개변수를 사용하면 드라이브 채널 정보와 호스트 채널 정보 없이 정보 목록이 반환됩니다.
+
+'show storageArray' 명령도 컨트롤러에 대한 자세한 정보를 반환합니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+5.43은 '요약' 파라미터를 추가합니다.

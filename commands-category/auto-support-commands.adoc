@@ -1,0 +1,67 @@
+---
+permalink: commands-category/auto-support-commands.html 
+sidebar: sidebar 
+keywords: support, commands, bundle, collection, autosupport 
+summary: 자동 지원 명령 
+---
+= 자동 지원 명령
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+
+
+== E2700 및 E5600용 AutoSupport 번들 수집 명령
+
+link:../commands-a-z/smcli-autosupportlog.html["AutoSupport 로그를 캡처하거나 봅니다"]
+
+link:../commands-a-z/smcli-autosupportconfig-show.html["AutoSupport 번들 컬렉션 설정을 표시합니다"]
+
+link:../commands-a-z/smcli-autosupportschedule-show.html["AutoSupport 메시지 수집 일정을 표시합니다"]
+
+link:../commands-a-z/smcli-enable-autosupportfeature.html["EMW 관리 도메인 레벨에서 AutoSupport 활성화 또는 비활성화..."]
+
+link:../commands-a-z/smcli-enable-disable-autosupportondemand.html["EMW 관리 도메인 수준에서 AutoSupport OnDemand 기능 활성화 또는 비활성화(SMcli만 해당)"]
+
+link:../commands-a-z/smcli-enable-disable-autosupportremotediag.html["에서 AutoSupport OnDemand 원격 진단 기능을 활성화 또는 비활성화합니다."]
+
+link:../commands-a-z/smcli-autosupportschedule-reset.html["AutoSupport 메시지 수집 일정을 재설정합니다"]
+
+link:../commands-a-z/smcli-supportbundle-schedule.html["자동 지원 번들 수집 구성을 예약합니다"]
+
+link:../commands-a-z/smcli-autosupportconfig.html["AutoSupport 전달 방법을 지정합니다"]
+
+link:../commands-a-z/smcli-autosupportconfig-test.html["AutoSupport 구성을 테스트합니다"]
+
+
+
+== 모든 스토리지 어레이에 대한 AutoSupport 명령입니다
+
+link:../commands-a-z/enable-or-disable-autosupport-individual-arrays.html["AutoSupport 활성화 또는 비활성화(개별 어레이, E2800, E5700 어레이만 해당)"]
+
+link:../commands-a-z/save-storagearray-supportdata.html["스토리지 배열 지원 데이터를 저장합니다"]
+
+
+
+== E2800, E5700용 AutoSupport 명령
+
+link:../commands-a-z/set-storagearray-autosupportmaintenancewindow.html["AutoSupport 유지보수 윈도우 활성화 또는 비활성화(개별 E2800 또는 E5700 어레이)"]
+
+link:../commands-a-z/set-storagearray-autosupportondemand.html["AutoSupport OnDemand 기능 활성화 또는 비활성화(개별 E2800 또는 E5700 어레이용)"]
+
+link:../commands-a-z/set-storagearray-autosupportremotediag.html["AutoSupport 원격 진단 기능 활성화 또는 비활성화(개별 E2800 또는 E5700 어레이)"]
+
+link:../commands-a-z/save-storagearray-autosupport-log.html["AutoSupport 로그 검색(개별 E2800 또는 E5700 어레이)"]
+
+link:../commands-a-z/reset-storagearray-autosupport-schedule.html["AutoSupport 메시지 수집 일정 재설정(개별 E2800 또는 E5700 어레이)"]
+
+link:../commands-a-z/show-storagearray-autosupport.html["show AutoSupport configuration(E2800 또는 E5700 스토리지 어레이의 경우)"]
+
+link:../commands-a-z/set-storagearray-autosupport-schedule.html["AutoSupport 메시지 수집 일정 설정(개별 E2800 또는 E5700 어레이)"]
+
+link:../commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html["AutoSupport HTTP(S) 제공 방법 지정(개별 E2800 또는 E5700 어레이)"]
+
+link:../commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html["이메일(SMTP) 전달 방법 지정(개별 E2800 또는 E5700 어레이)"]
+
+link:../commands-a-z/start-storagearray-autosupport-deliverytest.html["AutoSupport 제공 설정 테스트(개별 E2800 또는 E5700 어레이)"]

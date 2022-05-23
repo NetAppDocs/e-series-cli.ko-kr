@@ -1,0 +1,353 @@
+---
+permalink: commands-a-z/set-controller.html 
+sidebar: sidebar 
+keywords: set, controller 
+summary: set controller 명령은 컨트롤러의 특성을 정의합니다. 
+---
+= 컨트롤러를 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Set controller' 명령어는 컨트롤러의 속성을 정의한다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+set controller [(a|b)]
+[availability=(online | offline | serviceMode)]
+[ethernetPort [(1| 2)] ethernetPortOptions]
+[globalNVSRAMByte [nvsramOffset]=(nvsramByteSetting | nvsramBitSetting)]
+[hostNVSRAMByte [hostType, nvsramOffset]=(nvsramByteSetting | nvsramBitSetting)]
+[IPv4GatewayIP=ipAddress]
+[IPv6RouterAddress=ipv6Address]
+[iscsiHostPort [portLabel] iscsiHostPortOptions]
+[rloginEnabled=(TRUE | FALSE)]
+[serviceAllowedIndicator=(on | off)]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+컨트롤러
+ a| 
+속성을 정의할 컨트롤러입니다. 유효한 컨트롤러 식별자는 a나 b이며, 여기서 a는 A 슬롯의 제어기이고 b는 B 슬롯의 제어기입니다 컨트롤러의 식별자는 대괄호([ ])로 묶어야 합니다. 컨트롤러를 지정하지 않으면 컨트롤러의 펌웨어에서 구문 오류가 반환됩니다.
+
+
+
+ a| 
+"가용성"
+ a| 
+Online, Offline, erviceMode(서비스)로 설정할 수 있는 Controller의 모드입니다.
+
+
+
+ a| 
+"이테넷포트"
+ a| 
+관리 이더넷 포트의 속성(옵션) 이 매개 변수를 지원하는 항목은 다음 구문 요소 문 데이터 표에 나열되어 있습니다. IP 주소, 게이트웨이 주소 및 서브넷 마스크 주소 설정을 비롯한 다양한 설정이 가능합니다.
+
+
+
+ a| 
+글로불리바이트
+ a| 
+컨트롤러 NVSRAM의 일부입니다. 영역 내의 시작 바이트 오프셋과 NVSRAM에 저장할 새 데이터의 바이트 값 또는 비트 값을 사용하여 수정할 영역을 지정합니다.
+
+
+
+ a| 
+"hostNVSRAMByte"
+ a| 
+호스트별 영역의 NVSRAM. 설정은 특정 호스트의 호스트 인덱스, 영역 내의 시작 오프셋, 바이트 수 및 NVSRAM에 저장할 새 데이터의 바이트 값 또는 비트 값을 지정합니다.
+
+
+
+ a| 
+'IPv4GatewayIP'
+ a| 
+네트워크에 인터페이스를 제공하는 노드의 IP 주소입니다. IPv4 게이트웨이의 주소 형식은 * (0--255).(0--255).(0--255).(0--255) * 입니다
+
+
+
+ a| 
+'IPv6RouterAddress'
+ a| 
+둘 이상의 논리 서브넷을 연결하는 IPv6 라우터의 IP 주소입니다. IPv6 라우터의 주소 형식은 '(0 – FFFF): (0 – FFFF): (0 – FFFF): (0 – FFFF): (0 – FFFF): (0 – FFFF): (0 – FFFF): (0 – FFFF): (0 – FFFF)'입니다.
+
+
+
+ a| 
+iscsiHostPort를 선택합니다
+ a| 
+이 매개 변수를 사용하면 컨트롤러의 iSCSI 포트에 대한 옵션을 설정할 수 있습니다. iSCSI 포트 레이블 또는 번호를 입력한 다음 해당 포트의 옵션을 선택합니다.
+
+자세한 내용은 아래의 _ iSCSI 호스트 포트 레이블 식별 _ 섹션을 참조하십시오.
+
+
+
+ a| 
+"rloginEnabled"
+ a| 
+원격 로그인 기능의 설정 또는 해제 여부 설정 원격 로그인 기능을 켜려면 이 매개변수를 'true'로 설정합니다. 원격 로그인 기능을 끄려면 이 매개변수를 'false'로 설정합니다.
+
+
+
+ a| 
+저빙AllowedIndicator를 선택합니다
+ a| 
+Service Action Allowed(서비스 작업 허용) 표시등이 켜져 있는지 또는 꺼져 있는지에 대한 설정입니다. Service Action Allowed(서비스 작업 허용) 표시등을 켜려면 이 매개변수를 "On(켜짐)"으로 설정합니다. Service Action Allowed(서비스 작업 허용) 표시등을 끄려면 이 매개변수를 "off(꺼짐)"로 설정합니다.
+
+|===
+
+
+== iSCSI 호스트 포트 레이블 식별
+
+호스트 포트의 레이블을 지정해야 합니다. 다음 단계에 따라 호스트 포트 레이블을 지정합니다.
+
+. iSCSI 호스트 포트의 포트 레이블을 모르는 경우 'show controller' 명령을 실행합니다.
+. 결과의 호스트 인터페이스 섹션에서 선택할 호스트 포트를 찾습니다.
++
+[NOTE]
+====
+Port 레이블은 Port 필드에 대해 반환되는 전체 값입니다.
+
+====
+. 포트 레이블의 전체 값을 따옴표로 묶고 대괄호는 ["portLabel"] 로 묶습니다. 예를 들어 포트 레이블이 "Ch 2"인 경우 다음과 같이 iSCSI 호스트 포트를 지정합니다.
++
+[listing]
+----
+iscsiHostPort[\"ch 2\"]
+----
++
+[NOTE]
+====
+Windows 명령줄을 사용하고 있고 레이블에 파이프(|)가 포함되어 있는 경우 문자는 이스케이프되어야 합니다({캐럿} 사용). 그렇지 않으면 명령으로 해석됩니다. 예를 들어 포트 레이블이 "e0b|0b"인 경우 다음과 같이 iSCSI 호스트 포트를 지정합니다.
+
+====
++
+[listing]
+----
+iscsiHostPort[\"e0b^|0b\"]
+----
+
+
+[NOTE]
+====
+이전 버전과의 호환성을 위해, E2700, E5600 또는 EF560 컨트롤러(및 이전 세대의 E-Series 또는 EF-Series 컨트롤러)에는 견적 및 중괄호["]가 아닌 중괄호로 묶인 iscsiPortNumber를 사용할 수 있습니다. 이러한 컨트롤러의 경우 iscsiPortNumber에 유효한 값은 다음과 같습니다.
+
+* 호스트 포트가 통합된 컨트롤러의 경우 번호 매기는 3, 4, 5 또는 6입니다.
+* 호스트 인터페이스 카드에 호스트 포트가 있는 컨트롤러의 경우 1번, 2번, 3번 또는 4번 번호가 매겨집니다.
+
+
+이전 구문의 예는 다음과 같습니다.
+
+[listing]
+----
+iscsiHostPort[3]
+----
+====
+
+
+== eethernetPort 매개 변수에 대한 옵션입니다
+
+[listing]
+----
+enableIPv4=(TRUE | FALSE) |
+----
+[listing]
+----
+enableIPv6=(TRUE | FALSE) |
+----
+[listing]
+----
+IPv6LocalAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+----
+[listing]
+----
+IPv6RoutableAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+----
+[listing]
+----
+IPv4Address=(0-255).(0-255).(0-255).(0-255) |
+----
+[listing]
+----
+IPv4ConfigurationMethod=[(static | dhcp)] |
+----
+[listing]
+----
+IPv4SubnetMask=(0-255).(0-255).(0-255).(0-255) |
+----
+[listing]
+----
+duplexMode=(TRUE | FALSE) |
+----
+[listing]
+----
+portSpeed=[(autoNegotiate | 10 | 100 | 1000)]
+----
+
+
+== iSCSIHostPort 매개변수에 대한 옵션입니다
+
+[listing]
+----
+IPv4Address=(0-255).(0-255).(0-255).(0-255) |
+----
+[listing]
+----
+IPv6LocalAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+----
+[listing]
+----
+IPv6RoutableAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+----
+[listing]
+----
+IPv6RouterAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+----
+[listing]
+----
+enableIPv4=(TRUE | FALSE) | enableIPv6=(TRUE | FALSE) |
+----
+[listing]
+----
+enableIPv4Vlan=(TRUE | FALSE) | enableIPv6Vlan=(TRUE | FALSE) |
+----
+[listing]
+----
+enableIPv4Priority=(TRUE | FALSE) | enableIPv6Priority=(TRUE | FALSE) |
+----
+[listing]
+----
+IPv4ConfigurationMethod=(static | dhcp) |
+----
+[listing]
+----
+IPv6ConfigurationMethod=(static | auto) |
+----
+[listing]
+----
+IPv4GatewayIP=(TRUE | FALSE) |
+----
+[listing]
+----
+IPv6HopLimit=[0-255] |
+----
+[listing]
+----
+IPv6NdDetectDuplicateAddress=[0-256] |
+----
+[listing]
+----
+IPv6NdReachableTime=[0-65535] |
+----
+[listing]
+----
+IPv6NdRetransmitTime=[0-65535] |
+----
+[listing]
+----
+IPv6NdTimeOut=[0-65535] |
+----
+[listing]
+----
+IPv4Priority=[0-7] | IPv6Priority=[0-7] |
+----
+[listing]
+----
+IPv4SubnetMask=(0-255).(0-255).(0-255).(0-255) |
+----
+[listing]
+----
+IPv4VlanId=[1-4094] | IPv6VlanId=[1-4094] |
+----
+[listing]
+----
+maxFramePayload=[*frameSize*] |
+----
+[listing]
+----
+tcpListeningPort=[3260, 49152-65536] |
+----
+[listing]
+----
+portSpeed=[( 10 | 25)]
+----
+
+
+== 참고
+
+[NOTE]
+====
+펌웨어 버전 7.75에 앞서 세트 컨트롤러 명령이 NVSRAMByte 매개변수를 지원했다. NVSRAMByte 매개 변수는 더 이상 사용되지 않으며 hostNVRAMByte 매개 변수 또는 globalNVRAMByte 매개 변수로 대체되어야 합니다.
+
+====
+이 명령을 사용할 때 하나 이상의 매개 변수를 지정할 수 있습니다. 모든 매개 변수를 사용할 필요는 없습니다.
+
+가용성 매개변수를 'erviceMode'로 설정하면 대체 컨트롤러가 모든 볼륨의 소유권을 갖게 됩니다. 지정한 컨트롤러에 더 이상 볼륨이 없으며 더 이상 볼륨의 소유권을 가져오기를 거부합니다. 서비스 모드는 가용성 매개변수가 '온라인'으로 설정될 때까지 재설정 사이클과 전원 사이클에 걸쳐 유지됩니다.
+
+'show controller NVSRAM' 명령어를 이용하여 NVSRAM 정보를 출력한다. NVSRAM을 변경하기 전에 기술 지원 부서에 문의하여 수정할 수 있는 NVSRAM 영역을 확인하십시오.
+
+'UplexMode' 옵션이 'true'로 설정되어 있으면 선택한 Ethernet 포트가 전이중 모드로 설정됩니다. 기본값은 반이중(duplexMode 매개변수가 false로 설정됨)입니다.
+
+IPv4 설정이나 IPv6 설정이 적용되도록 하려면 다음 "iscsiHostPort" 옵션을 설정해야 합니다.
+
+* "enableIPV4=""참"
+* enableIPV6="true"
+
+
+IPv6 주소 공간은 128비트입니다. 콜론으로 구분된 8개의 16비트 16진수 블록으로 표시됩니다.
+
+maxFramePayload 옵션은 IPv4와 IPv6 사이에서 공유됩니다. 표준 이더넷 프레임의 페이로드 부분은 1500으로 설정되고 점보 이더넷 프레임은 9000으로 설정됩니다. 점보 프레임을 사용할 경우 네트워크 경로에 있는 모든 장치에서 더 큰 프레임 크기를 처리할 수 있어야 합니다.
+
+포트스피드 옵션은 초당 메가비트(MB/s)로 표시됩니다.
+
+iscsiHostPort 매개 변수의 "portSpeed" 옵션 값은 초당 메가비트(MB/s)입니다.
+
+다음 값은 "iscsiHostOptions"의 기본값입니다.
+
+* IPv6HopLimit 옵션은 64다.
+* IPv6NdReachableTime 옵션은 30000밀리초입니다.
+* IPv6NdRetransmitTime 옵션은 1000밀리초입니다.
+* IPv6NdTimeOut 옵션은 30000밀리초입니다.
+* tcpListeningPort 옵션은 3260입니다.
+
+
+
+
+== 최소 펌웨어 레벨입니다
+
+7.15는 'bootp' 매개변수를 제거하고 새 이더넷 포트 옵션과 새 iSCSI 호스트 포트 옵션을 추가합니다.
+
+7.50은 iSCSI 호스트 포트 옵션에서 명령으로 "IPV4Gateway" 매개변수와 "IPV6RouterAddress" 매개변수를 이동합니다.
+
+7.60은 iscsiHostPort 매개 변수의 portSpeed 옵션을 추가합니다.
+
+7.75는 'NVSRAMByte' 매개 변수를 사용하지 않습니다.
+
+8.10은 iSCSI 호스트 포트에 대한 식별 방법을 다시 확인합니다.

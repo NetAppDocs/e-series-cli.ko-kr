@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/start-ssdcache-locate.html 
+sidebar: sidebar 
+keywords: start, ssd, cache, locate 
+summary: 'start ssdCache Locate 명령은 SSD의 표시등을 깜박여 SSD 캐시를 형성하기 위해 논리적으로 그룹화된 SSD(Solid State Disk)를 식별합니다.' 
+---
+= SSD 캐시 위치 찾기를 시작합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'start ssdCache locate' 명령은 SSD의 표시등을 깜박여 SSD 캐시를 형성하기 위해 논리적으로 그룹화된 SSD(Solid State Disk)를 식별합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800 및 E5700 어레이를 포함한 개별 스토리지 어레이에 적용됩니다. 모든 SMcli 패키지가 설치된 경우
+
+
+
+== 역할
+
+E2800 또는 E5700 스토리지 어레이에서 이 명령을 실행하려면 지원 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+'top ssdCache locate' 명령을 사용하여 드라이브의 표시등을 끕니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+start ssdCache pass:quotes[[_ssdCacheName_]] locate
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'ssdCache'입니다
+ a| 
+찾을 SSD 캐시의 이름입니다. SSD 캐시 이름은 대괄호([ ])로 묶어야 합니다. SSD 캐시 이름에 특수 문자가 포함되어 있거나 숫자만 포함된 경우 SSD 캐시 이름은 대괄호 안에 큰따옴표(" ")로 묶어야 합니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+7.84

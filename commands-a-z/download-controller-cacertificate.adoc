@@ -1,0 +1,89 @@
+---
+permalink: commands-a-z/download-controller-cacertificate.html 
+sidebar: sidebar 
+keywords: download, controller, certificate, command, install, root, intermediate, web, servers, validate, array, roles, context 
+summary: download controller caCertificate 명령은 컨트롤러의 웹 서버에 루트/중간 CA 인증서를 설치하여 웹 서버가 서명한 인증서의 유효성을 확인합니다. 
+---
+= 루트/중간 CA 인증서를 설치합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+"download controller caCertificate" 명령은 컨트롤러의 웹 서버에 루트/중간 CA 인증서를 설치하여 웹 서버 서명 인증서의 유효성을 검사합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+각 컨트롤러에 대해 이 작업을 수행합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+
+download controller[(a|b)] caCertificate pass:quotes[[alias="_string_"]]
+         pass:quotes[file="_filename_"]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+컨트롤러
+ a| 
+루트/중간 서명 인증서를 설치할 컨트롤러를 지정할 수 있습니다. 유효한 컨트롤러 식별자는 a 또는 b이며, 여기서 a는 슬롯 A의 컨트롤러이고 b는 슬롯 B의 컨트롤러입니다 컨트롤러 식별자를 대괄호([ ])로 묶습니다.
+
+
+
+ a| 
+가칭
+ a| 
+루트/중간 인증서를 나타내는 별칭을 지정할 수 있습니다. 이 별칭은 루트/중간 인증서에 대한 정보를 조회하거나 삭제하는 데 사용됩니다. 별칭은 루트/중간 인증서에 연결되어 있으며 고유해야 합니다.
+
+
+
+ a| 
+'파일'
+ a| 
+루트/중간 CA 인증서를 포함하는 파일을 지정할 수 있습니다. 허용되는 확장명은 .pem, .cer, .crt 및 .der입니다.
+
+|===
+
+
+== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "download controller[a] caCertificate alias="myAlias" file="C:\rootCA1.cer";"
+SMcli -n Array1 -c "download controller[b] caCertificate file="C:\rootCA1.cer";"
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

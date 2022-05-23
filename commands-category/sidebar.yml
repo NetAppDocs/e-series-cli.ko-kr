@@ -1,0 +1,24 @@
+---
+section: commands-category
+title: 범주별 명령
+entries:
+- title: 관리자 명령
+  url: "/commands-category/administrator-commands.html"
+- title: 경고 구성 명령
+  url: "/commands-category/alert-configuration-commands.html"
+- title: 스토리지 구성 명령
+  url: "/commands-category/array-configuration-commands.html"
+- title: 자동 지원 명령
+  url: "/commands-category/auto-support-commands.html"
+- title: 미러링 명령
+  url: "/commands-category/mirroring-commands.html"
+- title: 성능 튜닝 명령
+  url: "/commands-category/performance-tuning-commands.html"
+- title: 복제 명령
+  url: "/commands-category/replication-commands.html"
+- title: 보안 명령
+  url: "/commands-category/security-commands.html"
+- title: 스토리지 모니터 담당자 명령
+  url: "/commands-category/storage-monitor-personal-commands.html"
+- title: 볼륨 구성 명령
+  url: "/commands-category/volume-configuration-commands.html"

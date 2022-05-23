@@ -1,0 +1,145 @@
+---
+permalink: commands-category/replication-commands.html 
+sidebar: sidebar 
+keywords: replication, commands, consistency group, command, repository volume, 
+summary: 복제 명령 
+---
+= 복제 명령
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+
+
+== 정합성 보장 그룹 명령
+
+link:../commands-a-z/set-consistencygroup-addcgmembervolume.html["일관성 그룹에 구성원을 추가합니다"]
+
+link:../commands-a-z/create-consistencygroup.html["일관성 그룹 생성"]
+
+link:../commands-a-z/create-cgsnapimage-consistencygroup.html["정합성 보장 그룹 스냅샷 이미지를 생성합니다"]
+
+link:../commands-a-z/create-cgsnapvolume.html["정합성 보장 그룹 스냅샷 볼륨을 생성합니다"]
+
+link:../commands-a-z/create-mapping-cgsnapvolume.html["정합성 보장 그룹 스냅샷 볼륨 매핑을 생성합니다"]
+
+link:../commands-a-z/delete-consistencygroup.html["일관성 그룹을 삭제합니다"]
+
+link:../commands-a-z/delete-cgsnapimage-consistencygroup.html["정합성 보장 그룹 스냅샷 이미지를 삭제합니다"]
+
+link:../commands-a-z/delete-sgsnapvolume.html["정합성 보장 그룹 스냅샷 볼륨을 삭제합니다"]
+
+link:../commands-a-z/remove-member-volume-from-consistency-group.html["정합성 보장 그룹에서 구성원 볼륨을 제거합니다"]
+
+link:../commands-a-z/resume-cgsnapvolume.html["정합성 보장 그룹 스냅샷 볼륨을 재개합니다"]
+
+link:../commands-a-z/set-consistency-group-attributes.html["정합성 보장 그룹 특성을 설정합니다"]
+
+link:../commands-a-z/set-cgsnapvolume.html["정합성 보장 그룹 스냅샷 볼륨을 설정합니다"]
+
+link:../commands-a-z/show-consistencygroup.html["정합성 보장 그룹을 표시합니다"]
+
+link:../commands-a-z/show-cgsnapimage.html["정합성 보장 그룹 스냅샷 이미지를 표시합니다"]
+
+link:../commands-a-z/start-cgsnapimage-rollback.html["정합성 보장 그룹 스냅샷 롤백을 시작합니다"]
+
+link:../commands-a-z/stop-cgsnapimage-rollback.html["정합성 보장 그룹 스냅샷 롤백을 중지합니다"]
+
+link:../commands-a-z/stop-cgsnapvolume.html["정합성 보장 그룹 스냅샷 볼륨을 중지합니다"]
+
+link:../commands-a-z/stop-consistencygroup-pendingsnapimagecreation.html["정합성 보장 그룹에서 보류 중인 스냅샷 이미지를 중지합니다"]
+
+
+
+== 리포지토리 볼륨 분석 명령
+
+link:../commands-a-z/check-repositoryconsistency.html["저장소 일관성을 확인합니다"]
+
+
+
+== 스냅샷 그룹 명령
+
+link:../commands-a-z/create-snapgroup.html["스냅샷 그룹을 생성합니다"]
+
+link:../commands-a-z/delete-snapvolume.html["스냅샷 볼륨을 삭제합니다"]
+
+link:../commands-a-z/revive-snapgroup.html["스냅샷 그룹을 다시 사용합니다"]
+
+link:../commands-a-z/set-snapgroup.html["스냅샷 그룹 속성을 설정합니다"]
+
+link:../commands-a-z/set-snapgroup-mediascanenabled.html["스냅샷 그룹 미디어 검사를 설정합니다"]
+
+link:../commands-a-z/set-snapgroup-increase-decreaserepositorycapacity.html["스냅샷 그룹 저장소 볼륨 용량을 설정합니다"]
+
+link:../commands-a-z/set-snapgroup-enableschedule.html["스냅샷 그룹 스케줄을 설정합니다"]
+
+link:../commands-a-z/set-volume-ssdcacheenabled.html["볼륨에 대한 SSD 캐시를 설정합니다"]
+
+link:../commands-a-z/show-snapgroup.html["스냅샷 그룹을 표시합니다"]
+
+link:../commands-a-z/stop-pendingsnapimagecreation.html["보류 중인 스냅샷 그룹 스냅샷 이미지를 중지합니다"]
+
+
+
+== 스냅샷 이미지 명령
+
+link:../commands-a-z/create-snapimage.html["스냅샷 이미지를 생성합니다"]
+
+link:../commands-a-z/delete-snapimage.html["스냅샷 이미지를 삭제합니다"]
+
+link:../commands-a-z/resume-snapimage-rollback.html["스냅샷 이미지 롤백을 재개합니다"]
+
+link:../commands-a-z/show-snapimage.html["스냅샷 이미지를 표시합니다"]
+
+link:../commands-a-z/start-snapimage-rollback.html["스냅샷 이미지 롤백을 시작합니다"]
+
+link:../commands-a-z/stop-snapimage-rollback.html["스냅샷 이미지 롤백을 중지합니다"]
+
+
+
+== Snapshot volume 명령
+
+link:../commands-a-z/create-read-only-snapshot-volume.html["읽기 전용 스냅샷 볼륨을 생성합니다"]
+
+link:../commands-a-z/create-snapshot-volume.html["스냅샷 볼륨을 생성합니다"]
+
+link:../commands-a-z/delete-snapgroup.html["스냅샷 그룹을 삭제합니다"]
+
+link:../commands-a-z/set-snapvolume.html["스냅샷 볼륨의 이름을 바꿉니다"]
+
+link:../commands-a-z/resume-snapvolume.html["스냅샷 볼륨을 재개합니다"]
+
+link:../commands-a-z/revive-snapvolume.html["스냅샷 볼륨을 다시 봅니다"]
+
+link:../commands-a-z/set-snapvolume-converttoreadwrite.html["읽기 전용 스냅샷 볼륨을 읽기/쓰기 볼륨으로 설정합니다"]
+
+link:../commands-a-z/set-snapvolume-mediascanenabled.html["스냅샷 볼륨 미디어 스캔을 설정합니다"]
+
+link:../commands-a-z/set-snapvolume-increase-decreaserepositorycapacity.html["스냅샷 볼륨 저장소 볼륨 용량을 설정합니다"]
+
+link:../commands-a-z/set-volume-ssdcacheenabled.html["볼륨에 대한 SSD 캐시를 설정합니다"]
+
+link:../commands-a-z/show-snapvolume.html["스냅샷 볼륨을 표시합니다"]
+
+link:../commands-a-z/stop-snapvolume.html["스냅샷 볼륨을 중지합니다"]
+
+
+
+== 볼륨 복사 명령
+
+link:../commands-a-z/create-volumecopy.html["볼륨 복사본 생성"]
+
+link:../commands-a-z/recopy-volumecopy-target.html["볼륨 복사본을 다시 복사합니다"]
+
+link:../commands-a-z/remove-volumecopy-target.html["볼륨 복사본을 제거합니다"]
+
+link:../commands-a-z/set-volumecopy-target.html["볼륨 복사본을 설정합니다"]
+
+link:../commands-a-z/show-volumecopy.html["볼륨 복사본을 표시합니다"]
+
+link:../commands-a-z/show-volumecopy-sourcecandidates.html["볼륨 복사본 소스 후보 표시"]
+
+link:../commands-a-z/show-volumecopy-source-targetcandidates.html["볼륨 복사본 타겟 후보 표시"]
+
+link:../commands-a-z/stop-volumecopy-target-source.html["볼륨 복사를 중지합니다"]

@@ -1,0 +1,75 @@
+---
+permalink: commands-a-z/set-storagearray-isnslisteningport.html 
+sidebar: sidebar 
+keywords: set, storage, array, isns, server, listen, port 
+summary: set storageArray isnsListeningPort 명령은 iSNS 서버 수신 포트를 설정합니다. 
+---
+= 스토리지 배열 iSNS 서버 수신 포트를 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray isnsListeningPort 명령은 iSNS 서버 수신 포트를 설정합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+set storageArray isnsListeningPort=pass:quotes[_listeningPortIPAddress_]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+isnsListeningPort
+ a| 
+iSNS 서버 수신 대기 포트에 사용할 IP 주소입니다. 수신 포트의 값 범위는 49152 ~ 65535. 기본값은 '53205'입니다.
+
+수신 대기 포트는 서버에 있으며 다음 작업을 수행합니다.
+
+* 들어오는 클라이언트 연결 요청을 모니터링합니다
+* 서버에 대한 트래픽을 관리합니다
+
+
+클라이언트가 서버와 네트워크 세션을 요청하면 수신기는 실제 요청을 받습니다. 클라이언트 정보가 수신기 정보와 일치하면 리스너는 데이터베이스 서버에 대한 연결을 부여합니다.
+
+|===
+
+
+== 참고
+
+수신 대기 포트는 데이터베이스 서버에 있으며 다음 작업을 담당합니다.
+
+* 수신 클라이언트 연결 요청에 대한 수신(모니터링
+* 서버에 대한 트래픽 관리
+
+
+클라이언트가 서버와 네트워크 세션을 요청하면 수신기는 실제 요청을 받습니다. 클라이언트 정보가 수신기 정보와 일치하면 리스너는 데이터베이스 서버에 대한 연결을 부여합니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+7.10

@@ -1,0 +1,123 @@
+---
+permalink: commands-a-z/save-auditlog.html 
+sidebar: sidebar 
+keywords: save, audit log, records 
+summary: auditlog 저장 명령은 감사 로그 레코드를 검색합니다. 
+---
+= 감사 로그 기록을 저장합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'auditlog 저장' 명령어는 감사 로그 기록을 조회한다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+
+save auditLog (all | (beginDate=pass:quotes[_date_ | endDate=_date_)]
+|(beginRecord=pass:quotes[_timestamp_] | endRecord=pass:quotes[_timestamp_))] file=pass:quotes["_filename_"]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+모두
+ a| 
+모든 감사 로그 레코드를 검색할 수 있습니다.
+
+
+
+ a| 
+'시작 날짜'
+ a| 
+검색할 시작 날짜를 지정할 수 있습니다. 날짜 입력 형식은 클라이언트 표준 시간대의 MM:DD:YY입니다. 검색된 첫 번째 감사 로그 레코드는 지정된 날짜 이후에 게시된 첫 번째 레코드입니다.
+
+[NOTE]
+====
+자정-자정 범위는 클라이언트의 시간대를 기반으로 합니다.
+
+====
+
+
+ a| 
+'종료 날짜'
+ a| 
+검색할 종료 날짜를 지정할 수 있습니다. 지정하지 않으면 로그의 마지막 레코드가 검색됩니다. 날짜 입력 형식은 클라이언트 표준 시간대의 MM:DD:YY입니다. 검색된 마지막 감사 로그 레코드는 지정된 날짜 또는 그 이전에 게시된 마지막 레코드입니다.
+
+[NOTE]
+====
+자정-자정 범위는 클라이언트의 시간대를 기반으로 합니다.
+
+====
+
+
+ a| 
+베지녹입니다
+ a| 
+검색할 시작 레코드를 지정할 수 있습니다. 값은 첫 번째 감사 로그 레코드의 타임 스탬프를 나타내는 정수 값입니다. 지정하지 않으면 로그의 첫 번째 레코드가 검색됩니다.
+
+
+
+ a| 
+엔드레코드
+ a| 
+검색할 종료 레코드를 지정할 수 있습니다. 값은 마지막 감사 로그 레코드의 타임 스탬프를 나타내는 정수 값입니다. 지정하지 않으면 로그의 마지막 레코드가 검색됩니다.
+
+
+
+ a| 
+'파일'
+ a| 
+감사 로그의 출력 파일 이름을 지정할 수 있습니다.
+
+[NOTE]
+====
+감사 로그 레코드는 최신 레코드에서 오래된 레코드까지 내림차순으로 파일에 저장됩니다.
+
+====
+|===
+
+
+== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "save auditLog all file="myAuditLog.txt";"
+
+SMcli -n Array1 -c "save auditLog endRecord=1493070393313 file="myAuditLog.txt";"
+
+SMcli -n Array1 -c "save auditLog beginDate=12:12:16 endDate=04:01:17 file="myAuditLog.txt";"
+
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

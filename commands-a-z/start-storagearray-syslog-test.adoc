@@ -1,0 +1,65 @@
+---
+permalink: commands-a-z/start-storagearray-syslog-test.html 
+sidebar: sidebar 
+keywords: start, storage, array, syslog, test 
+summary: start storageArray syslog test 명령을 사용하면 스토리지 어레이와 syslog 서버 간의 통신을 테스트할 수 있습니다. 
+---
+= 스토리지 시스템 syslog 테스트를 시작합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'tart storageArray syslog test' 명령어를 사용하면 스토리지 배열과 syslog 서버 간의 통신을 테스트할 수 있습니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+start storageArray syslog test id="<id>"
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+ID입니다
+ a| 
+테스트할 syslog 구성 ID입니다. ID는 show storageArray syslog 명령어를 사용하여 확인할 수 있다.
+
+|===
+
+
+=== 예
+
+[listing]
+----
+SMcli -n Array1 -c "start storageArray syslog test
+id=\"331998fe-3154-4489-b773-b0bb60c6b48e\";"
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.42

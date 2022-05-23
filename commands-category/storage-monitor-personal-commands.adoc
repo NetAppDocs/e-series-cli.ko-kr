@@ -1,0 +1,121 @@
+---
+permalink: commands-category/storage-monitor-personal-commands.html 
+sidebar: sidebar 
+keywords: storage, monitor, personnel, commands, asynchronous, autosupport, cache, array, synchronous 
+summary: 스토리지 모니터 담당자 명령 
+---
+= 스토리지 모니터 담당자 명령
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+link:../commands-a-z/show-storagearray-usersession.html["스토리지 시스템 사용자 세션을 표시합니다"]
+
+link:../commands-a-z/save-storagearray-loginbanner.html["스토리지 배열 로그인 배너를 저장합니다"]
+
+link:../commands-a-z/set-session-erroraction.html["세션을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-localusername.html["스토리지 배열 로컬 사용자 암호 또는 기호 암호를 설정합니다"]
+
+link:../commands-a-z/show-asyncmirrorgroup-synchronizationprogress.html["비동기식 미러 그룹 동기화 진행률을 표시합니다"]
+
+link:../commands-a-z/show-asyncmirrorgroup-summary.html["비동기식 미러 그룹을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-autosupport.html["show AutoSupport configuration(E2800 또는 E5700 스토리지 어레이의 경우)"]
+
+link:../commands-a-z/show-consistencygroup.html["정합성 보장 그룹을 표시합니다"]
+
+link:../commands-a-z/show-cgsnapimage.html["정합성 보장 그룹 스냅샷 이미지를 표시합니다"]
+
+link:../commands-a-z/show-controller.html["컨트롤러를 표시합니다"]
+
+link:../commands-a-z/show-controller-nvsram.html["컨트롤러 NVSRAM을 표시합니다"]
+
+link:../commands-a-z/show-iscsisessions.html["현재 iSCSI 세션을 표시합니다"]
+
+link:../commands-a-z/show-diskpool.html["디스크 풀을 표시합니다"]
+
+link:../commands-a-z/show-alldrives.html["드라이브를 표시합니다"]
+
+link:../commands-a-z/show-drivechannel-stats.html["드라이브 채널 통계를 표시합니다"]
+
+link:../commands-a-z/show-alldrives-downloadprogress.html["드라이브 다운로드 진행률을 표시합니다"]
+
+link:../commands-a-z/show-alldrives-performancestats.html["드라이브 성능 통계를 표시합니다"]
+
+link:../commands-a-z/show-emailalert-summary.html["e-메일 알림 구성을 표시합니다"]
+
+link:../commands-a-z/show-allhostports.html["호스트 포트를 표시합니다"]
+
+link:../commands-a-z/show-replaceabledrives.html["교체 가능한 드라이브를 표시합니다"]
+
+link:../commands-a-z/show-snapgroup.html["스냅샷 그룹을 표시합니다"]
+
+link:../commands-a-z/show-snapimage.html["스냅샷 이미지를 표시합니다"]
+
+link:../commands-a-z/show-snapvolume.html["스냅샷 볼륨을 표시합니다"]
+
+link:../commands-a-z/show-allsnmpcommunities.html["SNMP 커뮤니티를 표시합니다"]
+
+link:../commands-a-z/show-snmpsystemvariables.html["SNMP MIB II 시스템 그룹 변수를 표시합니다"]
+
+link:../commands-a-z/show-ssd-cache.html["SSD 캐시를 표시합니다"]
+
+link:../commands-a-z/show-ssd-cache-statistics.html["SSD 캐시 통계를 표시합니다"]
+
+link:../commands-a-z/show-storagearray.html["스토리지 배열을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-autoconfiguration.html["스토리지 배열 자동 구성을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-controllerhealthimage.html["스토리지 어레이 컨트롤러 상태 이미지를 표시합니다"]
+
+link:../commands-a-z/show-storagearray-dbmdatabase.html["스토리지 배열 DBM 데이터베이스를 표시합니다"]
+
+link:../commands-a-z/show-storagearray-hostconnectivityreporting.html["스토리지 시스템 호스트 접속 구성을 보여 줍니다"]
+
+link:../commands-a-z/show-storagearray-hosttopology.html["스토리지 시스템 호스트 토폴로지를 표시합니다"]
+
+link:../commands-a-z/show-storagearray-lunmappings.html["스토리지 배열 LUN 매핑을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-iscsinegotiationdefaults.html["스토리지 배열 협상 기본값을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-odxsetting.html["스토리지 배열 ODX 설정을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-powerinfo.html["스토리지 배열 전원 정보를 표시합니다"]
+
+link:../commands-a-z/show-storagearray-unconfigurediscsiinitiators.html["스토리지 배열 구성되지 않은 iSCSI 이니시에이터를 표시합니다"]
+
+link:../commands-a-z/show-storagearray-unreadablesectors.html["스토리지 배열을 읽을 수 없는 섹터를 표시합니다"]
+
+link:../commands-a-z/show-textstring.html["문자열을 표시합니다"]
+
+link:../commands-a-z/show-syncmirror-candidates.html["동기식 미러링 볼륨 후보 표시"]
+
+link:../commands-a-z/show-syncmirror-synchronizationprogress.html["동기 미러링 볼륨 동기화 진행률을 표시합니다"]
+
+link:../commands-a-z/show-syslog-summary.html["syslog 구성을 표시합니다"]
+
+link:../commands-a-z/show-volume.html["씬 볼륨을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-unconfiguredinitiators.html["구성되지 않은 이니시에이터를 표시합니다"]
+
+link:../commands-a-z/show-volume-summary.html["볼륨 표시"]
+
+link:../commands-a-z/show-volume-actionprogress.html["볼륨 작업 진행률을 표시합니다"]
+
+link:../commands-a-z/show-volumecopy.html["볼륨 복사본을 표시합니다"]
+
+link:../commands-a-z/show-volumecopy-sourcecandidates.html["볼륨 복사본 소스 후보 표시"]
+
+link:../commands-a-z/show-volumecopy-source-targetcandidates.html["볼륨 복사본 타겟 후보 표시"]
+
+link:../commands-a-z/show-volumegroup.html["볼륨 그룹을 표시합니다"]
+
+link:../commands-a-z/show-volumegroup-exportdependencies.html["볼륨 그룹 엑스포트 종속성을 표시합니다"]
+
+link:../commands-a-z/show-volumegroup-importdependencies.html["볼륨 그룹 가져오기 종속성을 표시합니다"]
+
+link:../commands-a-z/show-volume-performancestats.html["볼륨 성능 통계를 표시합니다"]
+
+link:../commands-a-z/show-volume-reservations.html["볼륨 예약을 표시합니다"]

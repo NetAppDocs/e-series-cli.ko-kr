@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/start-storagearray-autosupport-deliverytest.html 
+sidebar: sidebar 
+keywords: test, autosupport, delivery, set, individual, E2800, E5700, arrays 
+summary: start storageArray AutoSupport deliveryTest 명령은 지정된 제공 매개 변수를 사용하여 대상 기술 지원 시스템에 대한 연결을 테스트할 수 있도록 샘플 AutoSupport 번들 수집 메시지를 보냅니다. 
+---
+= AutoSupport 전송 설정을 테스트합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'tart storageArray AutoSupport deliveryTest' 명령은 지정된 제공 매개 변수를 사용하여 대상 기술 지원 시스템에 대한 연결을 테스트할 수 있도록 샘플 AutoSupport 번들 수집 메시지를 보냅니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+start storageArray autoSupport deliveryTest pass:quotes[[replyToEmail="_address_"]]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+"재ToEmail"을 선택합니다
+ a| 
+사용자가 AutoSupport 테스트 메시지의 회신 이메일 주소를 지정할 수 있습니다. 전달 방법이 이메일로 설정된 경우에만 사용/필요합니다.
+
+|===
+
+
+=== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "start storageArray autoSupport deliveryTest;"
+
+SMcli -n Array1 -c "start storageArray autoSupport deliveryTest replyToEmail=\"user@company.com\";"
+
+The sample AutoSupport message was successfully sent to the ASUP gateway server.
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

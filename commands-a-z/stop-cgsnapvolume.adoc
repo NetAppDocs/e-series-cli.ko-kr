@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/stop-cgsnapvolume.html 
+sidebar: sidebar 
+keywords: stop, consistency, group, snapshot, volume 
+summary: stop cgSnapVolume 명령은 정합성 보장 그룹 스냅샷 볼륨을 생성하기 위한 쓰기 시 복사 작업을 중지합니다. 
+---
+= 정합성 보장 그룹 스냅샷 볼륨을 중지합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'top cgSnapVolume' 명령은 정합성 보장 그룹 스냅샷 볼륨을 생성하기 위해 쓰기 시 복사 작업을 중지합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+Copy-On-Write 작업을 다시 시작하려면 reSUME cgSnapVolume 명령을 사용합니다.
+
+[NOTE]
+====
+이 명령은 정합성 보장 그룹 스냅샷 볼륨을 삭제하지 않습니다. 정합성 보장 그룹 스냅샷 볼륨을 삭제하려면 'Delete cgSnapVolume' 명령을 사용합니다.
+
+====
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+pass:quotes[stop cgSnapVolume [_snapVolumeName_]]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'cgSnapVolume'
+ a| 
+생성을 중지할 정합성 보장 그룹 스냅샷 볼륨의 이름입니다. 볼륨 이름은 대괄호([ ])로 묶어야 합니다. 볼륨 이름에 특수 문자나 숫자가 있는 경우 이름은 대괄호 안에 큰따옴표(" ")로 묶어야 합니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+7.83

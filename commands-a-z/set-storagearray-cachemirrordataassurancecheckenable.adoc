@@ -1,0 +1,46 @@
+---
+permalink: commands-a-z/set-storagearray-cachemirrordataassurancecheckenable.html 
+sidebar: sidebar 
+keywords: set, storage, array, enable, disable, cache, mirror, data, assurance, check 
+summary: set storageArray cacheMirrorDataAssuranceCheckEnable 명령을 사용하면 캐시 미러 데이터 무결성 검사를 설정하거나 해제할 수 있습니다. 
+---
+= 스토리지 배열을 설정하여 캐시 미러 데이터 무결성 검사를 설정하거나 해제합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'set storageArray cacheMirrorDataAssuranceCheckEnable' 명령을 사용하면 캐시 미러 데이터 무결성 검사를 설정하거나 해제할 수 있습니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+set storageArray cacheMirrorDataAssuranceCheckEnable=(TRUE | FALSE)
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+8.41 새 명령 매개변수.

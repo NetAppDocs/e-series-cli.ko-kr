@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/reset-controller-arraymanagementsignedcertificate.html 
+sidebar: sidebar 
+keywords: reset, installed, signed, certificate 
+summary: reset controller arrayManagementSignedCertificate 명령은 설치된 서명된 인증서와 컨트롤러에 있는 루트/중간 인증서를 재설정합니다. 서명된 인증서와 모든 루트 및 중간 인증서는 자체 서명된 단일 인증서로 대체됩니다. 
+---
+= 설치된 서명된 인증서를 재설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+reset controller arrayManagementSignedCertificate" 명령은 설치된 서명된 인증서와 컨트롤러에 루트/중간 인증서를 재설정합니다. 서명된 인증서와 모든 루트 및 중간 인증서는 자체 서명된 단일 인증서로 대체됩니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+
+reset controller [(a|b)] arrayManagementSignedCertificate
+----
+
+
+== 매개 변수
+
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+컨트롤러
+ a| 
+사용자가 루트/중간 인증서를 검색할 컨트롤러를 지정할 수 있습니다. 유효한 컨트롤러 식별자는 a 또는 b이며, 여기서 a는 슬롯 A의 컨트롤러이고 b는 슬롯 B의 컨트롤러입니다 컨트롤러 식별자를 대괄호([ ])로 묶습니다.
+
+|===
+
+
+== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "reset controller [a] arrayManagementSignedCertificate;"
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

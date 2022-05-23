@@ -1,0 +1,109 @@
+---
+permalink: commands-a-z/save-storagearray-controllerhealthimage.html 
+sidebar: sidebar 
+keywords: save, storage, array, controller, health, image 
+summary: save storageArray controllerHealthImage 명령은 컨트롤러 상태 이미지 기능을 지원하는 스토리지 어레이를 위해 호스트의 지정된 파일에 컨트롤러 상태 이미지를 저장합니다. 
+---
+= 스토리지 어레이 컨트롤러 상태 이미지를 저장합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Save storageArray controllerHealthImage' 명령은 컨트롤러 상태 이미지 기능을 지원하는 스토리지 어레이를 위해 호스트의 지정된 파일에 컨트롤러 상태 이미지를 저장합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+[NOTE]
+====
+펌웨어 버전 8.20에서는 코어 덤프 매개변수가 'controllerHealthImage' 매개 변수로 대체됩니다.
+
+====
+스토리지 어레이에서 컨트롤러 상태 이미지 기능을 지원하지 않으면 명령을 실행하면 오류가 반환됩니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+save storageArray controllerHealthImage file=pass:quotes["_filename_"]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'파일'
+ a| 
+컨트롤러 상태 이미지를 저장할 파일 경로 및 파일 이름입니다. 파일 이름은 큰따옴표(" ")로 묶어야 합니다. 예를 들면 다음과 같습니다.
+
+[listing]
+----
+file="C:\Array Backups\DBMbackup_03302010.core"
+----
+|===
+
+
+== 참고
+
+컨트롤러 상태 이미지 파일의 크기는 1~2GB이며 저장하는 데 몇 분이 걸릴 수 있습니다. 이 명령은 컨트롤러 상태 이미지 자체를 저장하는 것 이외에도 컨트롤러 상태 이미지 메타데이터를 기반으로 XML 설명자 파일을 생성합니다. 이 설명자 파일은 ZIP 파일 형식으로 컨트롤러 상태 이미지와 동일한 경로에 저장됩니다. 다음 예제에서는 설명자 파일의 XML 형식을 보여 줍니다.
+
+[listing]
+----
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+- <DPLcontrollerHealthImageInfo>
+<dplcontrollerHealthImageTag>sometag#</dplcontrollerHealthImageTag>
+<captureTime>12/22/10 3:58:53 PM IST</captureTime>
+- <StorageArrayData>
+<ArraySAID>600a0b80006e006a000000004c65efc1</ArraySAID>
+<ManagementApiVersion>devmgr.v1083api01.Manager</ManagementApiVersion>
+<fwVersion>07.83.01.00</fwVersion>
+<platformType>7091</platformType>
+</StorageArrayData>
+<fullcontrollerHealthImageCtlr>controllerserialNumber1
+     </fullcontrollerHealthImageCtlr>
+<fullcontrollerHealthImageSize>fullCaptureSize</fullcontrollerHealthImageSize>
+<altcontrollerHealthImageCtlr>controllerserialNumber2</altcontrollerHealthImage
+     Ctlr>
+<altcontrollerHealthImageSize>altCaptureSize</altcontrollerHealthImageSize>
+<triggerReason>Exception</triggerReason>-<DPLcontrollerHealthImageDetail>
+<dplcontrollerHealthImageReason>DPLcontrollerHealthImageReason
+     </dplcontrollerHealthImageReason>
+- <fwLocation >
+<filename>filename</filename>
+<lineNumber>line#</lineNumber>
+</fwLocation >
+<panicReason>panicString</panicReason>
+</DPLcontrollerHealthImageDetail>
+</DPLcontrollerHealthImageInfo>
+----
+컨트롤러 캐시에서 호스트로 컨트롤러 상태 이미지를 검색하는 경우 컨트롤러 상태 이미지를 검색할 필요가 없음을 나타내는 플래그가 컨트롤러에 설정되어 있습니다. 이 설정은 48시간 동안 지속됩니다. 이 기간 동안 새 컨트롤러 상태 이미지가 발생하는 경우 새 컨트롤러 상태 이미지가 컨트롤러 캐시에 저장되고 이전 컨트롤러 상태 이미지 데이터를 캐시에 덮어씁니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+7.83
+
+8.20은 '코어 덤프' 매개변수를 'controllerHealthImage' 매개변수로 대체합니다.

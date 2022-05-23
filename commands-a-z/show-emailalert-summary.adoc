@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/show-emailalert-summary.html 
+sidebar: sidebar 
+keywords: show, email, alert, configuration 
+summary: show emailAlert summary 명령은 e-메일 경고 구성 정보를 표시합니다. 
+---
+= e-메일 알림 구성을 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'show emailAlert summary' 명령어는 e-메일 경고 설정 정보를 출력한다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 또는 스토리지 모니터 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+show emailAlert summary
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "show emailAlert summary;"
+
+EMAIL ALERT SETTINGS
+   Mail server address: email@company.com
+   Mail server encryption: starttls
+   Mail server port: 587
+   Mail server user name: accountName
+   Mail server password: secret123
+   Email sender address: no-reply@company.com
+   Recipient Email
+      recipient@company.com
+      recipient-two@company.com
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40
+
+11.70.01 SMTP 암호화(없음, SMTPS, STARTTLS), SMTP 포트 및 SMTP 자격 증명(사용자 이름 및 암호)을 지정하는 매개 변수를 추가했습니다.

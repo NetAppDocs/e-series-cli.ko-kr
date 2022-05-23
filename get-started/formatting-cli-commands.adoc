@@ -1,0 +1,61 @@
+---
+permalink: get-started/formatting-cli-commands.html 
+sidebar: sidebar 
+keywords: format, rules, cli, commands 
+summary: 이름 또는 레이블의 일부로 사용되는 큰따옴표는 Windows, Linux 또는 Solaris 운영 체제에서 CLI 명령 및 스크립트 명령을 실행할 때 특별히 고려해야 합니다. 
+---
+= CLI 명령의 형식 규칙
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+이름 또는 레이블의 일부로 사용되는 큰따옴표(" ")는 Windows, Linux 또는 Solaris 운영 체제에서 CLI 명령 및 스크립트 명령을 실행할 때 특별히 고려해야 합니다.
+
+큰따옴표(" ")가 이름이나 값의 일부인 경우 큰따옴표 문자 앞에 백슬래시(\)를 삽입해야 합니다.
+
+예를 들면 다음과 같습니다.
+
+[listing]
+----
+-c "set storageArray userLabel=\"Engineering\";"
+----
+이 예에서 "Engineering"은 스토리지 배열 이름입니다.
+
+두 번째 예는 다음과 같습니다.
+
+[listing]
+----
+-n \"My\"_Array
+----
+이 예에서 "My"_Array는 스토리지 배열의 이름입니다.
+
+스크립트 명령 내에서 큰따옴표(" ")를 문자열(문자열 리터럴이라고도 함)의 일부로 사용할 수 없습니다. 예를 들어 다음 문자열을 입력하여 스토리지 배열 이름을 "Finance" 배열로 설정할 수 없습니다.
+
+[listing]
+----
+-c "set storageArray userLabel=\"\"Finance\"Array\";"
+----
+Windows 운영 체제에서 이름 주위에 큰따옴표(" ")를 사용하지 않으면 각 특수 스크립트 문자 앞에 캐럿({캐럿})을 삽입해야 합니다. 특수 문자는 {caret}, |, < 및 >입니다.
+
+터미널 '-n', '-o', '-f', '-p'와 함께 사용할 경우 각 특수 스크립트 문자 앞에 캐럿을 삽입합니다. 예를 들어, 스토리지 배열 CLI > 클라이언트를 지정하려면 다음 문자열을 입력합니다.
+
+[listing]
+----
+-n CLI^>CLIENT
+----
+스크립트 명령의 문자열 리터럴에 사용할 경우 각 특수 스크립트 문자 앞에 하나의 캐럿({캐럿})을 삽입합니다. 예를 들어 스토리지 배열의 이름을 Finance_|_payroll 으로 변경하려면 다음 문자열을 입력합니다.
+
+[listing]
+----
+-c "set storageArray userLabel=\"FINANCE_^|_PAYROLL\";"
+----
+[NOTE]
+====
+명령 프롬프트에서 SMcli 명령을 실행할 때 Windows OS를 사용할 때 입력 또는 출력 파일의 파일 경로 이름에 이스케이프 문자로 추가 백슬래시("\") 문자가 필요합니다. 역할 기반 액세스 관리 사용자를 지정하는 -u 옵션을 제공하여 SMcli를 보안 https 모드에서 사용할 때 추가 백슬래시("\")를 포함해야 합니다. * 예: *
+
+[listing]
+----
+C:\\dir\\subdir\\filename
+----
+====

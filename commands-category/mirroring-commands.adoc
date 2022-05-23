@@ -1,0 +1,87 @@
+---
+permalink: commands-category/mirroring-commands.html 
+sidebar: sidebar 
+keywords: commands, mirroring, asynchronous, synchronous, command 
+summary: 미러링 명령 
+---
+= 미러링 명령
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+
+
+== 비동기식 미러링 명령
+
+link:../commands-a-z/activate-asynchronous-mirroring.html["비동기식 미러링을 활성화합니다"]
+
+link:../commands-a-z/add-volume-asyncmirrorgroup.html["비동기식 미러 그룹에 볼륨을 추가합니다"]
+
+link:../commands-a-z/stop-asyncmirrorgroup-rolechange.html["비동기식 미러 그룹 역할 반전을 취소합니다"]
+
+link:../commands-a-z/check-asyncmirrorgroup-repositoryconsistency.html["비동기식 미러 그룹 정합성 보장 확인"]
+
+link:../commands-a-z/clear-asyncmirrorfault.html["비동기식 미러링 장애를 제거합니다"]
+
+link:../commands-a-z/create-asyncmirrorgroup.html["비동기식 미러 그룹을 생성합니다"]
+
+link:../commands-a-z/deactivate-storagearray.html["비동기식 미러링을 비활성화합니다"]
+
+link:../commands-a-z/delete-asyncmirrorgroup.html["비동기식 미러 그룹을 삭제합니다"]
+
+link:../commands-a-z/establish-asyncmirror-volume.html["비동기 미러링 쌍을 설정합니다"]
+
+link:../commands-a-z/remove-asyncmirrorgroup.html["비동기 미러 그룹에서 불완전한 비동기 미러링된 쌍을 제거합니다"]
+
+link:../commands-a-z/remove-volume-asyncmirrorgroup.html["비동기식 미러 그룹에서 볼륨을 제거합니다"]
+
+link:../commands-a-z/reset-storagearray-arvmstats-asyncmirrorgroup.html["비동기식 미러 그룹 통계를 재설정합니다"]
+
+link:../commands-a-z/reset-iscsiipaddress.html["iSCSI IP 주소를 재설정합니다"]
+
+link:../commands-a-z/resume-asyncmirrorgroup.html["비동기식 미러 그룹을 재개합니다"]
+
+link:../commands-a-z/save-storagearray-arvmstats-asyncmirrorgroup.html["비동기식 미러 그룹 통계를 저장합니다"]
+
+link:../commands-a-z/set-asyncmirrorgroup.html["비동기식 미러 그룹을 설정합니다"]
+
+link:../commands-a-z/show-asyncmirrorgroup-summary.html["비동기식 미러 그룹을 표시합니다"]
+
+link:../commands-a-z/show-asyncmirrorgroup-synchronizationprogress.html["비동기식 미러 그룹 동기화 진행률을 표시합니다"]
+
+link:../commands-a-z/start-asyncmirrorgroup-synchronize.html["비동기식 미러링 동기화를 시작합니다"]
+
+link:../commands-a-z/suspend-asyncmirrorgroup.html["비동기식 미러 그룹을 일시 중단합니다"]
+
+link:../commands-a-z/diagnose-asyncmirrorgroup.html["비동기식 미러 그룹 접속을 테스트합니다"]
+
+
+
+== 동기 미러링 명령
+
+link:../commands-a-z/activate-synchronous-mirroring.html["동기 미러링을 활성화합니다"]
+
+link:../commands-a-z/check-syncmirror.html["동기 미러링 상태를 확인한다"]
+
+link:../commands-a-z/create-syncmirror.html["동기 미러링을 만듭니다"]
+
+link:../commands-a-z/deactivate-storagearray-feature.html["동기 미러링을 비활성화합니다"]
+
+link:../commands-a-z/diagnose-syncmirror.html["동기 미러링을 진단하십시오"]
+
+link:../commands-a-z/recreate-storagearray-mirrorrepository.html["동기 미러링 저장소 볼륨을 다시 생성합니다"]
+
+link:../commands-a-z/remove-syncmirror.html["동기 미러링을 제거합니다"]
+
+link:../commands-a-z/resume-syncmirror.html["동기식 미러링을 다시 시작합니다"]
+
+link:../commands-a-z/set-syncmirror.html["동기 미러링을 설정합니다"]
+
+link:../commands-a-z/show-syncmirror-candidates.html["동기식 미러링 볼륨 후보 표시"]
+
+link:../commands-a-z/show-syncmirror-synchronizationprogress.html["동기 미러링 볼륨 동기화 진행률을 표시합니다"]
+
+link:../commands-a-z/start-syncmirror-primary-synchronize.html["동기 미러링 동기화를 시작합니다"]
+
+link:../commands-a-z/suspend-syncmirror-primaries.html["동기 미러링을 일시 중단합니다"]

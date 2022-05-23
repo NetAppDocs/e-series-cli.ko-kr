@@ -1,0 +1,99 @@
+---
+permalink: commands-a-z/set-storagearray-autosupport-schedule.html 
+sidebar: sidebar 
+keywords: set, autosupport, message, collection, schedule, individual, E2800, E5700, arrays 
+summary: set storageArray AutoSupport schedule 명령은 AutoSupport 메시지가 전송되는 요일과 주별 시간 및 요일을 설정합니다. 
+---
+= AutoSupport 메시지 수집 스케줄을 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+et storageArray AutoSupport schedule 명령은 AutoSupport 메시지를 보내는 요일과 주 단위, 일을 설정합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+* AutoSupport가 활성화된 경우 관리 소프트웨어는 일별 AutoSupport 메시지와 주별 AutoSupport 메시지를 모두 전송합니다.
+* 매일 전송할 시기와 관리 도메인의 스토리지 시스템에 대해 주간 메시지를 보낼 시점을 시간 단위로 지정할 수 있습니다.
+* 주별 스케줄의 경우 AutoSupport 수집 및 전송에 대해 원하는 요일을 선택합니다.
+
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+set storageArray autoSupport schedule dailyTime=pass:quotes[_startTime-endTime_]
+ [dayOfWeek=(Sunday Monday Tuesday Wednesday Thursday Friday Saturday)]
+weeklyTime=pass:quotes[_startTime-endTime_]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'일일일일일일시간'
+ a| 
+''sttTime''>-<'endtime'> 모든 스토리지 배열에 대한 AutoSupport 데이터 수집을 시작하고 종료할 시간을 지정합니다. startTime 및 종료 시간은 HH:00의 24시간 형식이어야 하며 시간이어야 합니다. 예를 들어, 오후 9:00입니다 21:00으로 입력해야 합니다.
+
+
+
+ a| 
+다예OfWeek
+ a| 
+(일요일 | 월요일 | 화요일 | 수요일 | 목요일 | 금요일 | 토요일) AutoSupport 번들 컬렉션 데이터를 수집할 요일의 기본 설정 일(일요일 - 토요일)을 지정합니다. dayOfWeek 매개변수는 괄호로 묶고 공백으로 구분해야 합니다.
+
+
+
+ a| 
+주간 시간
+ a| 
+''sttTime''>-<'endtime'> 사용자가 선택한 요일의 AutoSupport bundle 수집 데이터 수집을 시작하고 종료할 시간을 지정합니다. 'tartTime'과 'endtime'은 HH:MM[am|pm]이어야 합니다.
+
+|===
+
+
+=== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray autoSupport schedule dailyTime=14:00-15:00 weeklyTime=1:00-5:00;"
+
+SMcli -n Array1 -c "set storageArray autoSupport schedule dailyTime=14:00-15:00 dayOfWeek=(Monday Friday) weeklyTime=1:00-5:00;"
+
+SMcli completed successfully.
+----
+
+
+=== 검증
+
+'show storageArray AutoSupport' 명령을 사용하여 스케줄의 결과 변경 사항을 확인합니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

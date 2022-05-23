@@ -1,0 +1,92 @@
+---
+permalink: commands-a-z/show-iscsisessions.html 
+sidebar: sidebar 
+keywords: show, current, iscsi, sessions 
+summary: show iscsiSessions 명령은 iSCSI 이니시에이터 또는 iSCSI 타겟의 iSCSI 세션에 대한 정보를 반환합니다. 
+---
+= 현재 iSCSI 세션을 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+sshow iscsiSessions 명령은 iSCSI 이니시에이터 또는 iSCSI 타겟의 iSCSI 세션에 대한 정보를 반환합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+show iscsiInitiator pass:quotes[["_initiatorName_"] | <"iqn">] iscsiSessions
+----
+[listing, subs="+macros"]
+----
+show iscsiTarget pass:quotes[["_targetName_"] | <"iqn">] iscsiSessions
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'iscsiInitiator'입니다
+ a| 
+세션 정보를 가져올 iSCSI 이니시에이터의 이름입니다.
+
+iSCSI 초기자가 레이블이나 별칭을 사용하는 경우 iSCSI 초기자 레이블 또는 별칭을 대괄호([]) 안에 큰따옴표(" ")로 묶습니다.
+
+iSCSI 초기자가 iSCSI 정규화된 이름(IQN)을 사용하는 경우 IQN을 큰따옴표("")로 꺾쇠 괄호(<>)에 묶습니다.
+
+
+
+ a| 
+'iscsiTarget'
+ a| 
+세션 정보를 가져올 iSCSI 타겟의 이름입니다.
+
+iSCSI 대상이 레이블이나 별칭을 사용하는 경우 iSCSI 대상 레이블 또는 별칭을 대괄호([]) 안에 큰따옴표(" ")로 묶습니다.
+
+iSCSI 대상이 IQN(iSCSI Qualified Name)을 사용하는 경우 IQN을 큰따옴표("")로 꺾쇠 괄호(<>)에 묶습니다.
+
+|===
+
+
+== 참고
+
+인수를 정의하지 않고 이 명령을 입력하면 현재 실행 중인 모든 iSCSI 세션에 대한 정보가 반환됩니다. 다음 명령을 실행하면 현재 모든 iSCSI 세션에 대한 정보가 반환됩니다.
+
+[listing]
+----
+show iscsiSessions
+----
+반환되는 정보를 제한하려면 특정 iSCSI 이니시에이터 또는 특정 iSCSI 타겟을 입력합니다. 그런 다음 이 명령은 이름이 지정된 iSCSI 이니시에이터 또는 iSCSI 타겟의 세션에만 대한 정보를 반환합니다.
+
+이니시에이터 이름은 영문자 또는 숫자를 1-30자로 조합하여 사용할 수 있습니다. IQN의 길이는 최대 255자이며 다음 형식을 사용합니다.
+
+[listing]
+----
+iqn.yyyy-mm.naming-authority:unique name
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+7.10

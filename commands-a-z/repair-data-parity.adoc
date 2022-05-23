@@ -1,0 +1,117 @@
+---
+permalink: commands-a-z/repair-data-parity.html 
+sidebar: sidebar 
+keywords: repair, data, parity 
+summary: 데이터 패리티 복구 명령은 데이터 패리티 오류를 복구합니다. 
+---
+= 데이터 패리티 복구
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+데이터 패리티 복구 명령은 데이터 패리티 오류를 복구합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+이 명령을 사용하기 전에 NetApp 지원에 문의하여 영향을 받는 펌웨어, 드라이브 및 RAID 스트라이프에 대한 지침을 확인하십시오.
+
+
+
+== 구문
+
+[listing]
+----
+repair volume[volumeName] parity
+   [startingLBA=LBAvalue]
+   [endingLBA=LBAvalue]
+   [repairMethods=(repairMethod . . . repairMethod)]
+           Space delimited list where possible repair methods are: reconstruct, unmap, updateP, updateQ, updateData, and writeZeros
+   [repairPI=(TRUE|FALSE)]
+   [suspectDrives=(trayID1,[drawerID1,]slotID1 . . . trayIDn,[drawerIDn,]slotIDn)]
+   [timeout=(0-65535)]
+----
+
+
+== 매개 변수
+
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'볼륨'
+ a| 
+패리티를 복구할 볼륨의 이름입니다. 볼륨 이름은 대괄호([])로 묶어야 합니다.
+
+
+
+ a| 
+'타르팅LBA'
+ a| 
+시작 논리적 블록 주소입니다.
+
+
+
+ a| 
+엔딩LBA
+ a| 
+끝 논리 블록 주소입니다.
+
+
+
+ a| 
+'짝짓기즈'
+ a| 
+패리티 오류를 복구하는 데 사용되는 방법입니다. 사용 가능한 방법은 다음과 같습니다.
+
+* Reconstruct:'suspectDrives' 매개 변수에 지정된 드라이브를 재구성합니다.
+* 매핑 해제: R5/R6 하드 볼륨의 경우, R5/R6 RAID 스트라이프를 매핑 해제하는 데 사용됩니다
+* updateP: 데이터 패리티 불일치 유형을 수정하는 데 사용됩니다.
+* updateQ: 데이터 패리티 불일치 유형을 수정하는 데 사용됩니다.
+* updateData: 데이터 패리티 불일치 유형을 수정하는 데 사용됩니다.
+* writeZeros: R5/R6 스토리지 볼륨의 경우, 매핑되고 매핑되지 않은 데이터가 혼합된 예기치 않은 RAID5/6 스트라이프가 있을 때 사용됩니다. 스트라이프에서 매핑되지 않은 블록을 가져와 0을 쓴 다음 패리티를 업데이트합니다
+
+
+
+
+ a| 
+'짝짓기일'
+ a| 
+시작 LBA에서 시작하여 PI를 복구하려면 true로 설정합니다.
+
+
+
+ a| 
+'스펙트 드라이브'
+ a| 
+재구성할 드라이브를 지정하는 데 사용됩니다.
+
+
+
+ a| 
+'시간 초과'입니다
+ a| 
+작업을 실행할 시간(분)입니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+8.63

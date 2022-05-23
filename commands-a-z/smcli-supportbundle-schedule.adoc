@@ -1,0 +1,388 @@
+---
+permalink: commands-a-z/smcli-supportbundle-schedule.html 
+sidebar: sidebar 
+keywords: schedule, automatic, support, bundle, collection, configuration 
+summary: SMcli -supportBundle schedule 명령은 하나 이상의 스토리지 어레이에 지원 번들을 저장하기 위한 일정을 생성하거나 제거합니다. 사용자는 지원 번들을 통해 시스템 및 구성 정보를 수집하여 분석 및 진단을 위해 기술 지원 부서에 정보를 전송합니다. 
+---
+= 자동 지원 번들 수집 구성을 예약합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'SMcli-supportBundle schedule' 명령은 하나 이상의 스토리지 어레이에 지원 번들을 저장하기 위한 일정을 생성하거나 제거합니다. 사용자는 지원 번들을 통해 시스템 및 구성 정보를 수집하여 분석 및 진단을 위해 기술 지원 부서에 정보를 전송합니다.
+
+[NOTE]
+====
+이 명령은 스크립트 명령이 아니라 SMcli 명령입니다. 명령줄에서 이 명령을 실행해야 합니다. 스토리지 관리 소프트웨어의 스크립트 편집기에서 이 명령을 실행할 수 없습니다.
+
+====
+다음과 같은 두 가지 유형의 일정을 생성할 수 있습니다.
+
+* Daily/Weekly -- 새 구성을 모니터링하거나 기존 구성의 문제를 해결하기 위해 데이터를 자주 수집해야 하는 경우에 이 스케줄을 사용합니다.
+* 월별/연간 -- 스토리지 어레이의 장기 운영을 평가하기 위해 데이터를 수집할 때 이 스케줄을 사용합니다.
+
+
+
+
+== 일별/주별 스케줄을 생성하는 구문
+
+[listing, subs="+macros"]
+----
+SMcli -supportBundle schedule enable
+pass:quotes[(all | _storageArrayName_)]
+pass:quotes[startTime=_HH:MM_]
+pass:quotes[startDate=_MM:DD:YYYY_]
+pass:quotes[endDate=_MM:DD:YYYY_]
+daysOfWeek=[Sunday Monday Tuesday Wednesday Thursday Friday Saturday]
+pass:quotes[data=_pathName_]
+----
+
+
+== 월별/연간 스케줄을 생성하는 구문
+
+[listing, subs="+macros"]
+----
+SMcli -supportBundle schedule enable
+pass:quotes[(all | _storageArrayName_)]
+pass:quotes[startTime=_HH:MM_]
+pass:quotes[startDate=_MM:DD:YYYY_]
+pass:quotes[endDate=_MM:DD:YYYY_]
+months=[January February March April May June July August September October
+November December]
+weekNumber=(First|Second|Third|Fourth|Last)
+dayOfWeek=(Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday)|
+onDays=[1-31] |
+pass:quotes[data=_pathName_]
+----
+
+
+== 일정 제거 구문
+
+[NOTE]
+====
+이 명령을 실행하면 스토리지 시스템의 스케줄이 완전히 제거됩니다. 지원 번들 정보 저장을 다시 시작하려면 새 일정을 만들어야 합니다.
+
+====
+[listing, subs="+macros"]
+----
+SMcli -supportBundle schedule disable
+pass:quotes[(all|_storageArrayName_)]
+----
+
+
+== 매개 변수
+
+다음 표에는 일별/주별 스케줄의 매개 변수가 나열되어 있습니다.
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+"활성화"를 선택합니다
+ a| 
+중요 MEL 이벤트가 감지되면 지원 번들 자동 수집을 활성화합니다. 이 매개변수는 지원 번들 데이터가 일시 중지된 경우 수집을 재개합니다. 새 스케줄을 생성하거나 기존 스케줄을 수정할 때마다 매개 변수를 사용해야 합니다.
+
+
+
+ a| 
+모두
+ a| 
+호스트에서 검색된 모든 스토리지 배열에 대한 수집 스케줄을 설정하려면 이 매개 변수를 사용합니다.
+
+
+
+ a| 
+'_storageArrayName_'
+ a| 
+스케줄을 설정하려는 특정 스토리지 어레이의 이름입니다.
+
+
+
+ a| 
+'스타타임'입니다
+ a| 
+지원 번들 컬렉션을 시작할 시간입니다. 시간 입력 형식은 HH:MM이며, 여기서 HH는 시간, MM은 시간 전의 분입니다. 24시간 시계를 사용합니다.
+
+기본 시간은 00:00, 자정입니다. 시작할 시간을 입력하지 않고 지원 번들 수집을 사용하도록 설정한 경우 데이터 수집이 자정에 자동으로 발생합니다.
+
+
+
+ a| 
+'타르트데이트'입니다
+ a| 
+지원 번들 데이터 수집을 시작할 특정 날짜입니다. 날짜 입력 형식은 MM:DD:YY입니다.
+
+기본 날짜는 현재 날짜입니다.
+
+
+
+ a| 
+'종료 날짜'
+ a| 
+지원 번들 데이터 수집을 중지할 특정 날짜입니다. 날짜 입력 형식은 MM:DD:YY입니다.
+
+기본값은 none 입니다.
+
+이 매개 변수를 사용하는 경우 시작 날짜 이후 최소 1주일 이후여야 하며, 과거에는 발생할 수 없습니다.
+
+
+
+ a| 
+다예OfWeek
+ a| 
+지원 번들 데이터를 수집할 특정 요일 또는 요일입니다. 일주일 이상 지원 번들 데이터를 수집하려는 경우 이 매개 변수를 사용합니다. 예를 들면 다음과 같습니다.
+
+[listing]
+----
+daysOfWeek=[Tuesday]
+----
+[listing]
+----
+daysOfWeek=[Monday Wednesday Friday]
+----
+요일을 대괄호([ ])로 묶습니다. 하루 이상을 입력하는 경우 각 날짜를 공백으로 구분합니다.
+
+
+
+ a| 
+다타
+ a| 
+지원 번들 데이터를 저장할 파일 경로 및 파일 이름입니다. 예를 들면 다음과 같습니다.
+
+[listing]
+----
+file="C:\Program Files\CLI\sup\data.txt"
+----
+[NOTE]
+====
+모든 파일 확장자를 사용할 수 있습니다.
+
+====
+파일 경로와 이름은 큰따옴표(" ")로 묶어야 합니다.
+
+|===
+다음 표에는 월별/연간 일정에 대한 매개 변수가 나와 있습니다.
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+"활성화"를 선택합니다
+ a| 
+중요 MEL 이벤트가 감지되면 지원 번들 자동 수집을 활성화합니다. 이 매개변수는 지원 번들 데이터가 일시 중지된 경우 수집을 재개합니다. 새 스케줄을 생성하거나 기존 스케줄을 수정할 때마다 매개 변수를 사용해야 합니다.
+
+
+
+ a| 
+모두
+ a| 
+호스트에서 검색된 모든 스토리지 배열에 대한 수집 스케줄을 설정하려면 이 매개 변수를 사용합니다.
+
+
+
+ a| 
+'torageArrayName'입니다
+ a| 
+스케줄을 설정하려는 특정 스토리지 어레이의 이름입니다.
+
+
+
+ a| 
+'스타타임'입니다
+ a| 
+지원 번들 컬렉션을 시작할 시간입니다. 시간 입력 형식은 HH:MM이며, 여기서 HH는 시간, MM은 시간 전의 분입니다. 24시간 시계를 사용합니다.
+
+기본 시간은 00:00, 자정입니다. 시작할 시간을 입력하지 않고 지원 번들 수집을 사용하도록 설정한 경우 데이터 수집이 자정에 자동으로 발생합니다.
+
+
+
+ a| 
+'타르트데이트'입니다
+ a| 
+지원 번들 데이터 수집을 시작할 특정 날짜입니다. 날짜 입력 형식은 MM:DD:YY입니다.
+
+기본 날짜는 현재 날짜입니다.
+
+
+
+ a| 
+'종료 날짜'
+ a| 
+지원 번들 데이터 수집을 중지할 특정 날짜입니다. 날짜 입력 형식은 MM:DD:YY입니다.
+
+기본값은 none 입니다.
+
+
+
+ a| 
+"네스"
+ a| 
+지원 번들 데이터를 수집하려는 특정 월 또는 월. 1년 1개월 이상 지원 번들 데이터를 수집하려는 경우 이 매개 변수를 사용합니다. 예를 들면 다음과 같습니다.
+
+[listing]
+----
+months=[June]
+----
+[listing]
+----
+months=[January April July October]
+----
+월을 대괄호([ ])로 묶습니다. 한 달 이상을 입력하는 경우 각 달을 공백으로 구분합니다.
+
+
+
+ a| 
+주간 번호
+ a| 
+지원 번들 데이터를 수집하려는 달의 1주입니다. 예를 들면 다음과 같습니다.
+
+[listing]
+----
+weekNumber=first
+----
+
+
+ a| 
+다예OfWeek
+ a| 
+지원 번들 데이터를 수집하려는 특정 요일. 이 매개 변수는 지원 번들 데이터를 일주일 중 1일에만 수집하려는 경우에 사용합니다. 예를 들면 다음과 같습니다.
+
+[listing]
+----
+dayOfWeek=Wednesday
+----
+
+
+ a| 
+오네디스
+ a| 
+지원 번들 데이터를 수집하려는 월의 특정 일 또는 일. 예를 들면 다음과 같습니다.
+
+[listing]
+----
+onDays=[15]
+----
+[listing]
+----
+onDays=[7 21]
+----
+날짜를 대괄호([ ])로 묶습니다. 하루 이상을 입력하는 경우 각 날짜를 공백으로 구분합니다.
+
+[NOTE]
+====
+'* onDays*' 매개변수는 '* weekNumber*' 매개변수 또는 '* dayOfWeek*' 매개변수와 함께 사용할 수 없습니다.
+
+====
+
+
+ a| 
+다타
+ a| 
+지원 번들 데이터를 저장할 파일 경로 및 파일 이름입니다. 예를 들면 다음과 같습니다.
+
+[listing]
+----
+file="C:\Program Files\CLI\sup\data.txt"
+----
+[NOTE]
+====
+모든 파일 확장자를 사용할 수 있습니다.
+
+====
+파일 경로와 이름은 큰따옴표(" ")로 묶어야 합니다.
+
+|===
+다음 표에는 일정을 제거하기 위한 매개 변수가 나와 있습니다.
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+"할 수 없습니다
+ a| 
+지원 번들의 자동 수집을 비활성화하고 이전에 정의한 모든 스케줄을 즉시 삭제합니다.
+
+[NOTE]
+====
+스케줄을 비활성화하면 스케줄도 삭제됩니다.
+
+====
+
+
+ a| 
+모두
+ a| 
+호스트에서 검색된 모든 스토리지 배열에 대한 수집 스케줄을 설정하려면 이 매개 변수를 사용합니다.
+
+
+
+ a| 
+'torageArrayName'입니다
+ a| 
+스케줄을 설정하려는 특정 스토리지 어레이의 이름입니다.
+
+|===
+
+
+== 참고
+
+모든 스토리지 배열에 대해 공통 스케줄을 설정하기 위해 'all' 매개 변수를 사용하면 개별 스토리지 배열에 대한 스케줄이 삭제됩니다. 모든 스토리지 시스템에 대해 스케줄이 설정되어 있는 경우 새로 검색된 스토리지 시스템은 동일한 스케줄을 따릅니다. 모든 스토리지 시스템에 대해 스케줄이 설정된 경우 단일 스토리지 시스템에 스케줄이 설정되면 새로 검색된 스토리지 어레이에 스케줄이 정의되지 않습니다.
+
+다음은 이 명령의 사용 예입니다. 첫 번째 예는 지원 번들 데이터 수집 기준을 충족하는 일일/주간 스케줄입니다.
+
+* 스토리지 배열 이름은 DevKit4입니다
+* 채취 시작 시간은 오전 2시(오전 2시)입니다.
+* 시작 날짜는 2013년 5월 1일(05:01:2013)입니다.
+* 데이터는 매주 월요일 및 금요일에 수집됩니다
+* 이 스케줄은 종료일이 없으며 'Mcli-supportBundle schedule disable' 명령을 실행해야만 중지할 수 있습니다
+
+
+[listing]
+----
+SMcli -supportBundle schedule enable DevKit4 startTime=02:00
+startDate=05:01:2013 endDate=05:10:2014 daysOfWeek=[Monday Friday]
+----
+두 번째 예는 지원 번들 데이터 수집 기준을 충족하는 월간/연간 스케줄입니다.
+
+* 스토리지 배열 이름은 eng_stor1입니다
+* 채취 시작 시간은 오전 4시(오전 4시)입니다.
+* 시작 날짜는 2013년 5월 1일(05:01:2013)입니다.
+* 데이터는 3월, 4월, 5월, 6월 및 8월에 수집됩니다
+* 데이터는 매월 첫 번째 및 20일에 수집됩니다
+* 이 스케줄은 종료일이 없으며 'Mcli-supportBundle schedule disable' 명령을 실행해야만 중지할 수 있습니다
+
+
+[listing]
+----
+SMcli -supportBundle schedule enable eng_stor1 startTime=04:00
+startDate=05:01:2013 months=[March April May June August] onDays=[1 21]
+----
+세 번째 예는 지원 번들 데이터 수집 기준을 충족하는 월간/연간 스케줄입니다.
+
+* 스토리지 배열 이름은 firmware_2입니다
+* 채취 시작 시간은 22:00(밤 10:00)입니다.
+* 시작 날짜는 2013년 5월 1일(05:01:2013)입니다.
+* 데이터는 3월, 4월, 5월, 6월 및 8월에 수집됩니다
+* 데이터는 매월 첫 번째 주의 금요일에 수집됩니다
+* 이 일정은 2014년 5월 10일 에 종료됩니다.
+
+
+[listing]
+----
+SMcli -supportBundle schedule enable firmware_2 startTime=22:00
+startDate=05:01:2013 endDate=05:10:2014 months=[March April May June August]
+weekNumber=First dayOfWeek=Friday
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+7.83

@@ -1,0 +1,136 @@
+---
+permalink: commands-a-z/save-storagearray-hostportstatistics.html 
+sidebar: sidebar 
+keywords: save, storage, array, host, port, statistics 
+summary: save storageArray hostPortStatistics 명령은 스토리지 배열 호스트 포트 통계를 저장합니다. 
+---
+= 스토리지 배열 호스트 포트 통계를 저장합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Save storageArray hostPortStatistics' 명령어는 스토리지 배열 호스트 포트 통계를 저장한다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+[NOTE]
+====
+이 명령은 사용되지 않는 를 대체합니다 xref:save-storagearray-iscsistatistics.adoc[스토리지 배열 iSCSI 통계를 저장합니다], xref:save-storagearray-iserstatistics.adoc[스토리지 배열 iSER 통계 저장], 및 xref:save-storagearray-ibstats.adoc[스토리지 배열 InfiniBand 통계를 저장합니다] 명령.
+
+====
+
+
+== 구문
+
+[listing]
+----
+save storageArray hostPortStatistics [(raw | baseline)] type=(ISCSI| ISER | SRP | NVMEOF) file="filename"
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+날것
+ a| 
+시작 시간 이후 수집된 통계를 검색할 수 있습니다. 매개 변수는 대괄호([ ])로 묶어야 합니다.
+
+
+
+ a| 
+베이스라인입니다
+ a| 
+컨트롤러 '' 기준선이 0으로 재설정된 시간부터 수집된 통계를 검색할 수 있습니다. 매개 변수는 대괄호([ ])로 묶어야 합니다.
+
+
+
+ a| 
+유형
+ a| 
+수집할 통계 유형을 지정할 수 있습니다. iSCSI, iSER, RP, 그리고 NVMEOF를 선택할 수 있습니다.
+
+
+
+ a| 
+'파일'
+ a| 
+통계를 저장할 파일 경로와 파일 이름을 지정할 수 있습니다. 파일 이름은 큰따옴표(" ")로 묶어야 합니다. 확장자가 .csv인 파일 이름을 사용합니다.
+
+|===
+[cols="6*"]
+|===
+| 유형 | 이더넷 MAC, 이더넷 TCP/IP, 로컬 초기자(프로토콜), DCBX 작동 상태, LLDP TLV, DCBX TLV | 타겟(프로토콜) | InfiniBand 인터페이스 | NVMe 하위 시스템 | ASUP 파일 이름 
+
+
+ a| 
+iSCSI
+ a| 
+X
+ a| 
+X
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+'iser'입니다
+ a| 
+ a| 
+X
+ a| 
+X
+ a| 
+ a| 
+
+
+
+ a| 
+'RP'입니다
+ a| 
+ a| 
+ a| 
+X
+ a| 
+ a| 
+
+
+
+ a| 
+'nvmeof'
+ a| 
+ a| 
+ a| 
+X
+ a| 
+X
+ a| 
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+8.41

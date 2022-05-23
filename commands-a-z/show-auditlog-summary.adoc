@@ -1,0 +1,62 @@
+---
+permalink: commands-a-z/show-auditlog-summary.html 
+sidebar: sidebar 
+keywords: show, audit, log, summary 
+summary: show auditlog summary 명령은 감사 로그 요약 정보를 표시합니다. 
+---
+= 감사 로그 요약을 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'show auditlog summary' 명령은 감사 로그 요약 정보를 표시합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+
+show auditLog summary
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "show auditLog summary;"
+
+Total log records: 1,532
+First log record: 1493070393313 (2017-04-24T16:46:33.313-0500)
+Last log record: 1493134565128 (2017-04-25T10:36:05.128-0500)
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

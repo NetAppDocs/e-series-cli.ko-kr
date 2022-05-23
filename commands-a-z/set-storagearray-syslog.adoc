@@ -1,0 +1,102 @@
+---
+permalink: commands-a-z/set-storagearray-syslog.html 
+sidebar: sidebar 
+keywords: update, storage, array, syslog, configuration 
+summary: set storageArray syslog 명령을 사용하면 syslog 서버 주소, 프로토콜 또는 포트 번호를 변경할 수 있습니다. 
+---
+= 스토리지 시스템 syslog 구성을 업데이트합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray syslog 명령을 사용하면 syslog 서버 주소, 프로토콜 또는 포트 번호를 변경할 수 있습니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+set storageArray syslog id="<id>"
+serverAddress="<address>"
+port=<port> protocol=("udp" | "tcp" | "tls")
+components=(componentName=("auditLog") ...)
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'주소'
+ a| 
+Syslog 수신기 호스트 이름 또는 IP 주소입니다.
+
+
+
+ a| 
+포트
+ a| 
+Syslog 수신기 포트 번호입니다.
+
+
+
+ a| 
+프로토콜
+ a| 
+Syslog 전송 프로토콜. 허용되는 값에는 UDP, TCP 또는 TLS가 포함됩니다.
+
+
+
+ a| 
+부품
+ a| 
+syslog 서버에 로깅될 구성 요소 항목 목록입니다. 현재 감사 로그만 지원됩니다.
+
+
+
+ a| 
+'부품이름'
+ a| 
+구성 요소 이름. 현재 "auditlog"만 지원됩니다.
+
+|===
+
+
+=== 예
+
+[listing]
+----
+SMcli -n Array1 -c "set storageArray syslog
+id=\"331998fe-3154-4489-b773-b0bb60c6b48e\"
+serverAddress=\"192.168.2.1\" port=514 protocol=\"udp\"
+components=(componentName=\"auditLog\");"
+ID: 331998fe-3154-4489-b773-b0bb60c6b48e Server Address: 192.168.2.1
+Port: 514 Protocol: udp
+Components
+1. Component Name: auditLog
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.42

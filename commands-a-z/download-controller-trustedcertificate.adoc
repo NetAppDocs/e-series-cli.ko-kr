@@ -1,0 +1,82 @@
+---
+permalink: commands-a-z/download-controller-trustedcertificate.html 
+sidebar: sidebar 
+keywords: download, controller, trusted, certificate, command, install, web, servers, validate, array, roles, context 
+summary: download controller trustedCertificate 명령은 컨트롤러의 웹 서버에 신뢰할 수 있는 CA 인증서를 설치하여 LDAP 서버 서명 인증서의 유효성을 검사합니다. 
+---
+= 신뢰할 수 있는 CA 인증서를 설치합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+"ownload controller trustedCertificate" 명령은 컨트롤러의 웹 서버에 신뢰할 수 있는 CA 인증서를 설치하여 LDAP 서버 서명 인증서의 유효성을 검사합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+인증서에 서명한 CA가 잘 알려져 있지 않거나 일반적으로 신뢰할 수 없는 경우에만 이 작업을 수행합니다. 명령은 두 컨트롤러 모두에 CA 인증서를 설치합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[download storageArray trustedCertificate [alias=_string_]] pass:quotes[file="_filename_"]
+----
+
+
+== 매개 변수
+
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+가칭
+ a| 
+신뢰할 수 있는 CA 인증서를 나타내는 별칭을 지정할 수 있습니다. 이 별칭은 신뢰할 수 있는 CA 인증서에 대한 정보를 조회하거나 삭제하는 데 사용됩니다. 별칭은 신뢰할 수 있는 인증서에 연결되어 있으며 고유해야 합니다.
+
+
+
+ a| 
+'파일'
+ a| 
+신뢰할 수 있는 CA 인증서가 포함된 파일을 지정할 수 있습니다. 허용되는 확장명은 .pem, .cer, .crt 및 .der입니다.
+
+|===
+
+
+== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "download storageArray trustedCertificate alias="myAlias"
+   file="C:\rootCA1.cer";"
+SMcli -n Array1 -c "download storageArray trustedCertificate
+   file="C:\rootCA1.cer";"
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

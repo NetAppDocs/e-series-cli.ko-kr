@@ -1,0 +1,84 @@
+---
+permalink: commands-a-z/show-alldrives-downloadprogress.html 
+sidebar: sidebar 
+keywords: show, drive, download, progress 
+summary: show allDrives downloadProgress 명령은 download drive firmware 명령 또는 download storageArray driveFirmware 명령으로 대상이 되는 드라이브의 펌웨어 다운로드 상태를 반환합니다. 
+---
+= 드라이브 다운로드 진행률을 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'show allDrives downloadProgress' 명령어는 'download drive firmware' 명령이나 'download storageArray driveFirmware' 명령어를 이용하여 대상이 되는 드라이브의 펌웨어 다운로드 상태를 반환한다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+show allDrives downloadProgress
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 참고
+
+모든 펌웨어 다운로드가 성공적으로 완료되면 이 명령은 정상 상태를 반환합니다. 펌웨어 다운로드에 실패한 경우 이 명령은 대상이 지정된 각 드라이브의 펌웨어 다운로드 상태를 표시합니다. 이 명령은 이 표에 표시된 상태를 반환합니다.
+
+[cols="2*"]
+|===
+| 상태 | 정의 
+
+
+ a| 
+"성공했다
+ a| 
+다운로드가 오류 없이 완료되었습니다.
+
+
+
+ a| 
+시도하지 않았습니다
+ a| 
+다운로드가 시작되지 않았습니다.
+
+
+
+ a| 
+부분 다운로드
+ a| 
+다운로드가 진행 중입니다.
+
+
+
+ a| 
+실패했다
+ a| 
+다운로드가 완료되었지만 오류가 발생했습니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+6.10

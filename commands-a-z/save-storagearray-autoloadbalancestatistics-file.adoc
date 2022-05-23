@@ -1,0 +1,94 @@
+---
+permalink: commands-a-z/save-storagearray-autoloadbalancestatistics-file.html 
+sidebar: sidebar 
+keywords: save, auto-load, balance, statistics 
+summary: save storageArray autoLoadBalanceStatistics 파일 명령은 자동화된 입출력 워크로드 밸런싱을 제공하고 호스트에서 수신되는 입출력 트래픽이 두 컨트롤러 간에 동적으로 관리되고 균형을 유지하도록 합니다. 
+---
+= 자동 로드 밸런싱 통계를 저장합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'save storageArray autoLoadBalancanceStatistics file' 명령은 자동화된 입출력 워크로드 밸런싱을 제공하고 호스트에서 수신되는 입출력 트래픽이 두 컨트롤러 간에 동적으로 관리되고 균형을 이루도록 합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+이 명령은 스토리지 배열의 자동 로드 밸런싱 통계를 파일에 저장합니다. 이러한 통계는 어레이의 각 볼륨에 대한 소유권 변경 기록을 표시합니다.
+
+[NOTE]
+====
+이 파일을 기술 지원 부서에 보내 해석합니다.
+
+====
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+ save storageArray autoLoadBalanceStatistics file=pass:quotes["_filename_"]
+(numberOfDays=pass:quotes[_numberOfDays_]);
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'토르ageArray'
+ a| 
+이 명령이 스토리지 배열에서 작동하도록 지정합니다.
+
+
+
+ a| 
+'파일'
+ a| 
+자동 로드 밸런싱 통계를 저장할 파일 경로 및 파일 이름입니다. 파일 이름은 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+'numberOfDays'입니다
+ a| 
+저장할 통계의 일수입니다. 이 매개 변수는 선택 사항이며 기본값은 0이며 사용 가능한 모든 데이터를 나타냅니다.
+
+|===
+
+
+== 예
+
+[listing]
+----
+SMcli -n Array1 -c "save storageArray autoLoadBalanceStatistics file="filename" numberOfDays=30;"
+----
+[NOTE]
+====
+활성 "드라이브 손실 기본 경로" 조건이 되면 자동 로드 밸런싱이 작업 부하의 균형을 맞출 수 없게 됩니다. 이 조건은 자동 로드 밸런싱 기능을 통해 워크로드가 균형 조정되도록 하기 위해 비활성 상태여야 합니다.
+
+====
+
+
+== 최소 펌웨어 레벨입니다
+
+8.30

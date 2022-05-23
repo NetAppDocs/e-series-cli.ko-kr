@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/stop-asyncmirrorgroup-rolechange.html 
+sidebar: sidebar 
+keywords: cancel, asynchronous, mirror, group, role, reversal 
+summary: stop asyncMirrorGroup rolechange 명령은 비동기식 미러 그룹 간의 보류 중인 역할 전환 작업을 취소합니다. 
+---
+= 비동기식 미러 그룹 역할 반전을 취소합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'top asyncMirrorGroup rolechange' 명령은 비동기식 미러 그룹 간의 보류 중인 역할 전환 작업을 취소합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800 및 E5700 어레이를 포함한 개별 스토리지 어레이에 적용됩니다. 모든 SMcli 패키지가 설치된 경우
+
+
+
+== 역할
+
+E2800 또는 E5700 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+pass:quotes[stop asyncMirrorGroup [_asyncMirrorGroupName_]] rolechange
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+아인치마그룹
+ a| 
+보류 중인 역할 취소 작업을 취소할 비동기식 미러 그룹의 이름입니다. 비동기 미러 그룹 이름은 대괄호([ ])로 묶어야 합니다. 비동기 미러 그룹 이름에 특수 문자가 포함되어 있거나 숫자로만 구성된 경우 이름은 대괄호 안에 큰따옴표(" ")로 묶어야 합니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+7.84

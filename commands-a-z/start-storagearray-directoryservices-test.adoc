@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/start-storagearray-directoryservices-test.html 
+sidebar: sidebar 
+keywords: test, storage, array, directory, server 
+summary: start storageArray DirectoryServices 테스트 명령은 구성된 모든 디렉터리 서버와의 통신을 검사하고 서버 도메인 구성의 유효성을 검사합니다. 
+---
+= 스토리지 배열 디렉토리 서버를 테스트합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'tart storageArray DirectoryServices test' 명령은 구성된 모든 디렉터리 서버와의 통신을 검사하고 서버 도메인 구성의 유효성을 검사합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+이 명령은 하나 이상의 디렉터리 서버가 도메인에 아직 추가되지 않은 경우 오류를 반환합니다.
+
+
+
+== 구문
+
+[listing]
+----
+
+start storageArray directoryServices test
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "start storageArray directoryServices test;"
+
+<test results for each domain configured are returned>
+
+SMcli completed successfully.
+----

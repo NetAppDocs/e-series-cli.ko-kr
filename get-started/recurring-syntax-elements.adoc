@@ -1,0 +1,638 @@
+---
+permalink: get-started/recurring-syntax-elements.html 
+sidebar: sidebar 
+keywords: recur, syntax, elements 
+summary: 반복 구문 요소는 스크립트 명령에 사용할 수 있는 매개 변수와 옵션의 일반적인 범주입니다. 
+---
+= 반복 구문 요소
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+반복 구문 요소는 스크립트 명령에 사용할 수 있는 매개 변수와 옵션의 일반적인 범주입니다. 다음 표에서는 반복 구문 요소에 사용되는 규칙을 보여 줍니다.
+
+[cols="2*"]
+|===
+| 컨벤션 | 정의 
+
+
+ a| 
+' * a|b * '
+ a| 
+대체("a" 또는 "b")
+
+
+
+ a| 
+이탤릭체로 쓴 단어
+ a| 
+매개변수(변수에 대한 응답)를 수행하기 위해 사용자 입력이 필요합니다.
+
+
+
+ a| 
+'+[... ]+'(대괄호)
+ a| 
+0 또는 1 발생(대괄호는 일부 명령 매개 변수의 구분 기호로도 사용됨)
+
+
+
+ a| 
+'+{... }+'(중괄호)
+ a| 
+0회 이상 발생
+
+
+
+ a| 
+(* a|b|c *)
+ a| 
+대안 중 하나만 선택하십시오
+
+|===
+다음 표에서는 반복 구문 매개 변수와 반복 구문 매개 변수에 사용할 수 있는 값을 보여 줍니다.
+
+[cols="2*"]
+|===
+| 반복 구문 | 구문 값 
+
+
+ a| 
+'_autoconfiguration-vols-attr-value-list_'
+ a| 
+'_autoconfiguration-vols-attr-value-pair_'{'_autoconfigure-vols-attr-value-pair_'}
+
+
+
+ a| 
+'_autoconfigure-vols-attr-value-pair_'
+ a| 
+[listing]
+----
+driveType=drive-type | driveMediaType=drive-media-type |
+raidLevel=raid-level | volumeGroupWidth=integer-literal |
+volumeGroupCount=integer-literal | volumesPerGroupCount=integer-literal6|
+hotSpareCount=integer-literal | segmentSize=segment-size-spec | cacheReadPrefetch=(TRUE | FALSE)
+securityType=(none | capable | enabled)7| dataAssurance=(none | enabled)5
+----
+
+
+ a| 
+'_boolean_'
+ a| 
+[listing]
+----
+(TRUE | FALSE)
+----
+
+
+ a| 
+'_cache-flush-modifier-setting_'
+ a| 
+[listing]
+----
+immediate, 0, .25, .5, .75, 1, 1.5, 2, 5, 10, 20, 60, 120, 300, 1200, 3600, infinite
+----
+
+
+ a| 
+'_capacity-spec_'
+ a| 
+'_integer-literal_''[KB|MB|GB|TB|bytes]'
+
+
+
+ a| 
+'_count-based-repository-spec_'
+ a| 
+[listing]
+----
+repositoryRAIDLevel =repository-raid-level repositoryDriveCount=integer-literal
+[repositoryVolumeGroupUserLabel =user-label] [driveType=drive-type4
+] [trayLossProtect=(TRUE | FALSE)1] | [drawerLossProtect=(TRUE | FALSE)2] |
+[dataAssurance=(none | enabled)5] |
+----
+
+
+ a| 
+'_create-raid-vol-attr-value-list_'
+ a| 
+'_create-raid-volume-attribute-value-pair_'{'_create-raid-volume-attribute-value-pair_'}
+
+
+
+ a| 
+'_create-raid-volume-attribute-value-pair_'
+ a| 
+[listing]
+----
+capacity=capacity-spec | owner=(a | b) |
+cacheReadPrefetch=(TRUE | FALSE) | segmentSize=integer-literal |
+usageHint=usage-hint-spec
+----
+
+
+ a| 
+'_create-volume-copy-attr-value-list_'
+ a| 
+'_create-volume-copy-attr-value-pair_'{'_create-volume-copy-attr-value-pair_'}
+
+
+
+ a| 
+'_create-volume-copy-attr-value-pair_'
+ a| 
+[listing]
+----
+copyPriority=(highest | high | medium | low | lowest) |
+targetReadOnlyEnabled=(TRUE | FALSE) | copyType=(offline | online) |
+repositoryPercentOfBase=(20 | 40 | 60 | 120 | default) |
+repositoryGroupPreference=(sameAsSource | otherThanSource | default)
+----
+
+
+ a| 
+'_drive-media-type_'
+ a| 
+((HDD|SSD|Unknown|allMedia)'_HDD_는 하드 디스크 드라이브를 의미합니다. _SSD_는 솔리드 스테이트 디스크를 의미합니다.
+
+
+
+ a| 
+'_ 드라이브 - spec _'
+ a| 
+'_trytrID,slotID' 또는 'ytrID,drawerID,slotID_' 드라이브는 쉼표로 구분된 두 개 또는 세 개의 정수 리터럴 값으로 정의됩니다. 저밀도 용지함에는 두 개의 값이 필요합니다. 서랍이 있는 용지함인 고밀도 용지함에는 3개의 값이 필요합니다.
+
+
+
+ a| 
+'_drive-spec-list _'
+ a| 
+'_drive-spec_''_drive-spec_'
+
+
+
+ a| 
+'drive-type'입니다
+ a| 
+((fiber | sata | sas))
+
+[NOTE]
+====
+SAS 드라이브만 펌웨어 버전 7.86 이상에서 지원됩니다.
+
+====
+
+
+ a| 
+'_error-action_'
+ a| 
+'(stop|continue)'
+
+
+
+ a| 
+`_ 이더넷-포트-옵션 _'
+ a| 
+[listing]
+----
+enableIPv4=(TRUE | FALSE) | enableIPv6=(TRUE | FALSE) |
+IPv6LocalAddress=ipv6-address | IPv6RoutableAddress=ipv6-address |
+IPv6RouterAddress=ipv6-address | IPv4Address=ip-address |
+IPv4ConfigurationMethod= (static | dhcp) | IPv4GatewayIP=ip-address |
+IPv4SubnetMask=ip-address | duplexMode=(TRUE | FALSE) | portSpeed=(autoNegotiate | 10 | 100 |
+1000)
+----
+
+
+ a| 
+'_feature-identifier _'(이)가 있습니다
+ a| 
+[NOTE]
+====
+SANtricity 11.40의 모든 기능은 기본적으로 활성화되어 있습니다.
+
+====
+
+
+ a| 
+'_파일 이름_'
+ a| 
+'_string-literal_'
+
+
+
+ a| 
+'_gid_'
+ a| 
+'_string-literal_'
+
+
+
+ a| 
+'_hex-literal_'
+ a| 
+0x00-0xff 범위의 리터럴입니다.
+
+
+
+ a| 
+'_HOST-CARD-IDENTIFIER_'
+ a| 
+((1 | 2 | 3 | 4))
+
+
+
+ a| 
+'_host-type_'
+ a| 
+'문자열 리터럴'|'정수 리터럴'
+
+
+
+ a| 
+'_instance-based-repository-spec_'
+ a| 
+[listing]
+----
+(repositoryRAIDLevel =repository-raid-level repositoryDrives= (drive-spec-list)
+[repositoryVolumeGroupUserLabel =user-label] [trayLossProtect=(TRUE | FALSE)1]) |
+[drawerLossProtect=(TRUE | FALSE)2]) | (repositoryVolumeGroup=user-label
+[freeCapacityArea=integer-literal3])
+----
+' * repositoryRAIDLevel * ' 매개 변수를 ' * repositoryDrives * ' 매개 변수로 지정합니다. RAID 레벨 또는 볼륨 그룹이 있는 드라이브를 지정하지 마십시오. 볼륨 그룹을 지정할 때 '* trayLossProtect*' 매개 변수의 값을 설정하지 마십시오.
+
+
+
+ a| 
+'_ip-address_'
+ a| 
+(*(0-255).(0-255).(0-255).(0-255) *
+
+
+
+ a| 
+'_IPv6-address _'
+ a| 
+(*(0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF) *
+
+32개의 16진수 문자를 모두 입력해야 합니다.
+
+
+
+ a| 
+'_iscsi-host-port_'
+ a| 
+[listing]
+----
+(1 | 2 | 3 | 4)
+----
+사용하는 컨트롤러의 유형에 따라 호스트 포트 번호는 2, 3 또는 4일 수 있습니다.
+
+
+
+ a| 
+'_iscsi-host-port-options_'
+ a| 
+[listing]
+----
+IPv4Address=ip-address | IPv6LocalAddress=ipv6-address |
+IPv6RoutableAddress=ipv6-address | IPv6RouterAddress=ipv6-address |
+enableIPv4=(TRUE | FALSE) | enableIPv6=(TRUE | FALSE) | enableIPv4Priority=(TRUE | FALSE) |
+enableIPv6Priority=(TRUE | FALSE) | IPv4ConfigurationMethod=(static | dhcp) |
+IPv6ConfigurationMethod= (static | auto) | IPv4GatewayIP=ip-address |
+IPv6HopLimit=integer | IPv6NdDetectDuplicateAddress=integer |
+IPv6NdReachableTime=time-interval | IPv6NdRetransmitTime=time-interval |
+IPv6NdTimeOut=time-interval | IPv4Priority=integer |
+IPv6Priority=integer | IPv4SubnetMask=ip-address |
+IPv4VlanId=integer | IPv6VlanId=integer |
+maxFramePayload=integer | tcpListeningPort=tcp-port-id |
+portSpeed=(autoNegotiate | 1 | 10)
+----
+
+
+ a| 
+'_iscsiSession_'
+ a| 
+[listing]
+----
+[session-identifier]
+----
+
+
+ a| 
+'_nvsram-offset_'
+ a| 
+'_hex-literal_'
+
+
+
+ a| 
+'_nvsramBitSetting_'
+ a| 
+'_nvsram-mask, nvsram-value_'='_0x16진수, 0x16진수_'|'_integer-literal_'
+
+'_0x16진수_' 값은 일반적으로 0x00에서 0xff 사이의 값입니다.
+
+
+
+ a| 
+'_nvsramByteSetting_'
+ a| 
+'_nvsram-value_'='_0xsexadecimal_'|'_integer-literal_'
+
+'0x16진수' 값은 일반적으로 0x00에서 0xff 사이의 값입니다.
+
+
+
+ a| 
+'_portID_'
+ a| 
+[listing]
+----
+(0-127)
+----
+
+
+ a| 
+'_RAID 레벨 _'
+ a| 
+[listing]
+----
+(0 | 1 | 3 | 5 | 6)
+----
+
+
+ a| 
+'_recover-raid-volume-attr-value-list_'
+ a| 
+'_recover-raid-volume-attr-value-pair_'{'_recover-raid-volume-attr-value-pair_'}
+
+
+
+ a| 
+'_recover-raid-volume-attr-value-pair_'
+ a| 
+[listing]
+----
+owner=(a|b) |cacheReadPrefetch=(TRUE | FALSE) | dataAssurance=(none | enabled)
+----
+
+
+ a| 
+'_repository-raid-level_'
+ a| 
+[listing]
+----
+(1 | 3 | 5 | 6)
+----
+
+
+ a| 
+'_repository-spec_'
+ a| 
+인스턴스 기반 리포지토리 사양 | 개수 기반 리포지토리 사양
+
+
+
+ a| 
+'_segment-size-spec_'
+ a| 
+'_integer-literal_' - 모든 용량은 base-2에 있습니다.
+
+
+
+ a| 
+'_SERIAL-NUMBER_'
+ a| 
+[listing]
+----
+string-literal
+----
+
+
+ a| 
+'_slotID_'
+ a| 
+고용량 드라이브 트레이의 경우 트레이 ID 값, 서랍 ID 값 및 드라이브의 슬롯 ID 값을 지정합니다. 저용량 드라이브 트레이의 경우, 트레이 ID 값과 드라이브의 슬롯 ID 값을 지정합니다. 용지함 ID 값은 0 ~ 99입니다. 문서함 ID 값은 1에서 5까지.
+
+모든 슬롯 ID 최대값은 24입니다. 슬롯 ID 값은 용지함 모델에 따라 0 또는 1에서 시작합니다.
+
+트레이 ID 값, 문서함 ID 값 및 슬롯 ID 값은 대괄호([])로 묶습니다.
+
+[listing]
+----
+(drive=\(trayID,[drawerID,]slotID\)|
+drives=\(trayID1,[drawerID1,]slotID1 ... trayIDn,[drawerIDn,]slotIDn\) )
+----
+
+
+ a| 
+'_test-devices_'
+ a| 
+[listing]
+----
+controller=(a|b)
+esms=(esm-spec-list)drives=(drive-spec-list)
+----
+
+
+ a| 
+'_test-devices-list_'
+ a| 
+'_test-devices_'{'_test-devices_'}
+
+
+
+ a| 
+`_ 시간대 -spec _'
+ a| 
+[listing]
+----
+(GMT+HH:MM | GMT-HH:MM) [dayLightSaving=HH:MM]
+----
+
+
+ a| 
+'_trayID-list _'
+ a| 
+'_trayID_'{'_trayID_'}
+
+
+
+ a| 
+'_usage-힌트-spec_'
+ a| 
+[listing]
+----
+usageHint=(multiMedia | database | fileSystem)
+----
+컨트롤러에서 볼륨의 사용 힌트 또는 예상 I/O 특성을 사용하여 적절한 기본 볼륨 세그먼트 크기 및 동적 캐시 읽기 프리페치를 표시합니다. 파일 시스템 및 데이터베이스의 경우 128KB의 세그먼트 크기가 사용됩니다. 멀티미디어의 경우 256KB 세그먼트 크기가 사용됩니다. 세 가지 사용 힌트는 모두 동적 캐시 읽기 프리페치를 설정합니다.
+
+
+
+ a| 
+'_user-label_'
+ a| 
+'_string-literal_'
+
+유효한 문자는 영숫자, 대시 및 밑줄입니다.
+
+
+
+ a| 
+'_user-label-list _'
+ a| 
+'_user-label_'{'_user-label_'}
+
+
+
+ a| 
+'_volumeGroup-number _'
+ a| 
+'_integer-literal_'
+
+
+
+ a| 
+'_WWID_'
+ a| 
+'_string-literal_'
+
+|===
+1트레이 손실 방지 기능이 작동하려면 구성이 다음 지침을 준수해야 합니다.
+
+[cols="3*"]
+|===
+| 레벨 | 트레이 손실 방지 기준 | 필요한 최소 용지함 수입니다 
+
+
+ a| 
+디스크 풀
+ a| 
+디스크 풀에는 하나의 트레이에 두 개 이상의 드라이브가 포함되어 있지 않습니다
+ a| 
+6
+
+
+
+ a| 
+RAID 6
+ a| 
+볼륨 그룹은 단일 트레이에 두 개 이상의 드라이브를 포함하지 않습니다
+ a| 
+3
+
+
+
+ a| 
+RAID 3 또는 RAID 5
+ a| 
+볼륨 그룹의 각 드라이브는 별도의 트레이에 있습니다
+ a| 
+3
+
+
+
+ a| 
+RAID 1
+ a| 
+RAID 1 쌍의 각 드라이브는 별도의 트레이에 있어야 합니다
+ a| 
+2
+
+
+
+ a| 
+RAID 0
+ a| 
+트레이 손실 방지를 달성할 수 없습니다.
+ a| 
+해당 없음
+
+|===
+2드로어 손실 방지 기능이 작동하려면 구성이 다음 지침을 준수해야 합니다.
+
+[cols="3*"]
+|===
+| 레벨 | 서랍 손실 방지 기준 | 필요한 최소 드로어 수입니다 
+
+
+ a| 
+디스크 풀
+ a| 
+이 풀에는 5개의 드로어 모두에서 드라이브가 포함되며 각 드로어에 동일한 수의 드라이브가 있습니다. 디스크 풀에 15, 20, 25, 30, 35가 포함된 경우 60개 드라이브 트레이가 드로어 손실 방지를 달성할 수 있습니다. 40, 45, 50, 55 또는 60개 드라이브.
+ a| 
+5
+
+
+
+ a| 
+RAID 6
+ a| 
+볼륨 그룹은 단일 드로어에 2개 이상의 드라이브를 포함하지 않습니다.
+ a| 
+3
+
+
+
+ a| 
+RAID 3 또는 RAID 5
+ a| 
+볼륨 그룹의 각 드라이브는 별도의 드로어에 있습니다.
+ a| 
+3
+
+
+
+ a| 
+RAID 1
+ a| 
+미러링된 쌍의 각 드라이브는 별도의 드로어에 위치해야 합니다.
+ a| 
+2
+
+
+
+ a| 
+RAID 0
+ a| 
+문서함 손실 방지를 달성할 수 없습니다.
+ a| 
+해당 없음
+
+|===
+볼륨 그룹이 여러 개의 트레이에 걸쳐 있는 저장소 배열 구성이 있는 경우 용지함 손실 보호 설정이 용지함 손실 보호 설정과 일치하는지 확인해야 합니다. 트레이 손실 방지 없이 드로어 손실 방지 기능을 사용할 수 있습니다. 용지함 손실 방지 기능이 없으면 용지함 손실 방지 기능을 사용할 수 없습니다. '* trayLossProtect*' 매개변수와 '* drawerLossProtect*' 매개변수가 동일한 값으로 설정되지 않으면 스토리지 배열이 오류 메시지를 반환하고 스토리지 배열 구성이 생성되지 않습니다.
+
+3 여유 용량 영역이 있는지 확인하려면 'show volumeGroup' 명령을 실행합니다.
+
+4 기본 드라이브(드라이브 유형)는 'AS'입니다.
+
+스토리지 배열에 한 가지 드라이브 유형만 있는 경우, '* DriveType*' 매개변수는 필요하지 않습니다. '* DriveType*' 파라미터를 사용하는 경우에는 '* hotSpareCount*' 매개변수와 '* volumeGroupWidth*' 매개변수도 사용해야 합니다.
+
+5 ' * dataAssurance * ' 매개변수는 DA(Data Assurance) 기능과 관련이 있습니다.
+
+DA(Data Assurance) 기능은 전체 스토리지 시스템에서 데이터 무결성을 향상시킵니다. DA를 사용하면 호스트와 드라이브 간에 데이터가 이동할 때 발생할 수 있는 오류를 스토리지 시스템에서 확인할 수 있습니다. 이 기능을 활성화하면 스토리지 배열은 볼륨의 각 데이터 블록에 오류 검사 코드(순환 중복 검사 또는 CRC라고도 함)를 추가합니다. 데이터 블록이 이동된 후 스토리지 배열은 이러한 CRC 코드를 사용하여 전송 중에 오류가 발생했는지 확인합니다. 잠재적으로 손상된 데이터는 디스크에 기록되거나 호스트에 반환되지 않습니다.
+
+DA 기능을 사용하려면 DA를 지원하는 드라이브만 포함된 풀 또는 볼륨 그룹으로 시작하십시오. 그런 다음 DA 가능 볼륨을 생성합니다. 마지막으로 DA를 지원하는 I/O 인터페이스를 사용하여 이러한 DA 지원 볼륨을 호스트에 매핑합니다. DA를 지원하는 I/O 인터페이스로는 InfiniBand를 통한 파이버 채널, SAS 및 iSER(RDMA/IB용 iSCSI 확장) 등이 있습니다. DA는 이더넷을 통한 iSCSI 또는 InfiniBand를 통한 SRP에서 지원되지 않습니다.
+
+[NOTE]
+====
+필요한 모든 하드웨어와 I/O 인터페이스가 DA 지원 가능한 경우, ' * dataAssurance * ' 매개변수를 '사용'으로 설정한 다음 DA를 특정 작업에 사용할 수 있습니다. 예를 들어, DA 지원 드라이브를 포함하는 볼륨 그룹을 생성한 다음 해당 볼륨 그룹 내에서 DA 지원 볼륨을 생성할 수 있습니다. DA 지원 볼륨을 사용하는 다른 작업에는 DA 기능을 지원하는 옵션이 있습니다.
+
+====
+6 ' * volumesPerGroupCount * ' 매개변수는 볼륨 그룹당 동일한 용량의 수입니다.
+
+7 ' * securityType * ' 매개 변수를 사용하면 생성 중인 볼륨 그룹의 보안 설정을 지정할 수 있습니다. 또한 모든 볼륨은 사용자가 선택한 보안 설정으로 설정됩니다. 보안 설정을 설정하는 데 사용할 수 있는 옵션은 다음과 같습니다.
+
+* "없음" -- 볼륨 그룹이 안전하지 않습니다.
+* "Capable" -- 볼륨 그룹은 보안이 가능하지만 보안이 활성화되지 않았습니다.
+* "활성화됨" -- 볼륨 그룹이 보안이 활성화되어 있습니다.
+
+
+[NOTE]
+====
+'* securityType=enabled*'를 설정하려면 스토리지 배열에 대한 스토리지 배열 보안 키가 이미 생성되어 있어야 합니다. 스토리지 배열 보안 키를 생성하려면 "create storageArray securityKey" 명령을 사용합니다.
+
+====

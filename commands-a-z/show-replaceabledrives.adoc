@@ -1,0 +1,71 @@
+---
+permalink: commands-a-z/show-replaceabledrives.html 
+sidebar: sidebar 
+keywords: show, replaceable, drives 
+summary: show replaceableDrives 명령은 스토리지 배열의 모든 교체 가능한 드라이브를 표시합니다. 
+---
+= 교체 가능한 드라이브를 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'show replacableDrives' 명령은 스토리지 배열의 모든 교체 가능한 드라이브를 표시합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+스토리지 배열의 각 교체 가능 드라이브에 대해 이 명령은 다음 정보를 반환합니다.
+
+* 용지함 위치 및 슬롯 위치
+* 드라이브가 속한 볼륨 그룹 이름입니다
+* WWN(World Wide Name)
+* 드라이브의 상태입니다
+
+
+
+
+== 구문
+
+[listing]
+----
+show replaceableDrives
+----
+
+
+== 예제 출력
+
+[listing]
+----
+Replaceable drive at Tray 0, Slot 3
+                Volume group: 2
+                World-wide name: 5000c50028785aff0000000000000000
+                Status: Removed
+Replaceable drive at Tray 0, Slot 23
+                Volume group: 2
+                World-wide name: 5000c500095d46df0000000000000000
+                Status: Removed
+Replaceable drive at Tray 0, Slot 24
+                Volume group: 2
+                World-wide name: 5000c500287854d70000000000000000
+                Status: Removed
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+7.10

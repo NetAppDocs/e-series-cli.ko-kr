@@ -1,0 +1,91 @@
+---
+permalink: commands-a-z/resume-cgsnapvolume.html 
+sidebar: sidebar 
+keywords: resume, consistency, group, snapshot, volume 
+summary: resume cgSnapVolume 명령은 stop cgSnapVolume 명령을 사용하여 중지한 일관성 그룹 스냅샷 볼륨을 생성하기 위한 쓰기 시 복사 작업을 다시 시작합니다. 
+---
+= 정합성 보장 그룹 스냅샷 볼륨을 재개합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'reSUME cgSnapVolume' 명령은 'top cgSnapVolume' 명령을 사용하여 중지한 정합성 보장 그룹 스냅샷 볼륨을 생성하기 위해 쓰기 시 복사 작업을 다시 시작합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+resume cgSnapVolume pass:quotes[[_"snapVolumeName"_]]
+cgSnapImage=pass:quotes[_"snapImageName"_]
+----
+
+
+== 매개 변수
+
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'cgSnapVolume'
+ a| 
+재개할 정합성 보장 그룹 스냅샷 볼륨의 이름입니다. 정합성 보장 그룹 스냅샷 볼륨의 이름은 큰따옴표(" ")로 대괄호([])로 묶어야 합니다.
+
+
+
+ a| 
+'cgSnapImage'
+ a| 
+정합성 보장 그룹에서 다시 시작하는 스냅샷 이미지의 이름입니다. 스냅샷 이미지의 이름은 다음 두 부분으로 구성됩니다.
+
+* 일관성 그룹의 이름입니다
+* 정합성 보장 그룹에 있는 스냅샷 이미지의 식별자입니다
+
+
+스냅샷 이미지의 식별자는 다음 중 하나일 수 있습니다.
+
+* 정합성 보장 그룹에 있는 스냅샷의 시퀀스 번호인 정수 값입니다.
+* '최신' - 정합성 보장 그룹에서 생성된 최신 스냅샷 이미지를 표시하려면 이 옵션을 사용합니다.
+* '가장 오래된 항목' - 정합성 보장 그룹에서 생성된 가장 빠른 스냅샷 이미지를 표시하려면 이 옵션을 사용합니다.
+
+
+스냅샷 이미지 이름은 큰따옴표(" ")로 묶어야 합니다.
+
+|===
+
+
+== 참고
+
+스냅샷 이미지의 이름은 콜론(:)으로 구분된 두 부분으로 구성됩니다.
+
+* 일관성 그룹의 식별자입니다
+* 스냅샷 이미지의 식별자입니다
+
+
+예를 들어 snapVol1이라는 이름의 일관성 그룹 스냅샷 볼륨에 있는 스냅샷 정합성 보장 그룹 snapgroup1에 있는 스냅샷 이미지 12345에 대한 쓰기 시 복사 작업을 다시 시작하려면 다음 명령을 사용합니다.
+
+[listing]
+----
+resume cgSnapVolume ["snapVol1"] cgSnapImage=["snapgroup1:12345"]
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+7.83

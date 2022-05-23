@@ -1,0 +1,81 @@
+---
+permalink: commands-a-z/set-drive-serviceallowedindicator.html 
+sidebar: sidebar 
+keywords: set, drive, service, action, allowed, indicator 
+summary: set drive serviceAllowedIndicator 명령은 Service Action Allowed 표시등 기능을 지원하는 드라이브 트레이 드라이브 또는 드라이브에서 Service Action Allowed 표시등을 켜거나 끕니다. 
+---
+= 드라이브 서비스 작업 허용 표시등을 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Set drive serviceAllowedIndicator' 명령은 Service Action Allowed 표시등 기능을 지원하는 드라이브 또는 드라이브 트레이의 드라이브에서 Service Action Allowed 표시등을 켜거나 끕니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+스토리지 배열이 Service Action Allowed 표시등 기능을 지원하지 않는 경우 이 명령은 오류를 반환합니다. 스토리지 배열이 명령을 지원하지만 표시등을 켜거나 끌 수 없는 경우 이 명령은 오류를 반환합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+set (drive pass:quotes[[_trayID_],pass:quotes[[_drawerID_,]]pass:quotes[_slotID_]] | drivespass:quotes[[_trayID1_],pass:quotes[[_drawerID1_,]]pass:quotes[_slotID1_] ... pass:quotes[_trayIDn_],pass:quotes[[_drawerIDn_,]]pass:quotes[_slotIDn_]])
+serviceAllowedIndicator=(on | off)
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'늑대'나 '늑대'가 있습니다
+ a| 
+고용량 드라이브 트레이의 경우 트레이 ID 값, 서랍 ID 값 및 드라이브의 슬롯 ID 값을 지정합니다. 저용량 드라이브 트레이의 경우, 트레이 ID 값과 드라이브의 슬롯 ID 값을 지정합니다. 용지함 ID 값은 0 ~ 99입니다. 문서함 ID 값은 1에서 5까지.
+
+모든 슬롯 ID 최대값은 24입니다. 슬롯 ID 값은 용지함 모델에 따라 0 또는 1에서 시작합니다. E2800 및 E5700 컨트롤러와 호환되는 드라이브 트레이는 0부터 시작하는 슬롯 ID 번호가 있습니다. E2700 및 E5600 컨트롤러와 호환되는 드라이브 트레이는 슬롯 ID 번호가 1부터 시작합니다.
+
+트레이 ID 값, 문서함 ID 값 및 슬롯 ID 값은 대괄호([])로 묶습니다.
+
+
+
+ a| 
+저빙AllowedIndicator를 선택합니다
+ a| 
+Service Action Allowed(서비스 작업 허용) 표시등을 켜거나 끄는 설정입니다. Service Action Allowed(서비스 작업 허용) 표시등을 켜려면 이 매개변수를 "On(켜짐)"으로 설정합니다. Service Action Allowed(서비스 작업 허용) 표시등을 끄려면 이 매개변수를 "off(꺼짐)"로 설정합니다.
+
+|===
+
+
+== 참고
+
+"드라이브" 매개변수는 고용량 드라이브 트레이와 저용량 드라이브 트레이를 모두 지원합니다. 고용량 드라이브 트레이에는 드라이브를 보관하는 서랍이 있습니다. 드로어는 드라이브 트레이에서 밀어 드라이브에 액세스할 수 있도록 합니다. 저용량 드라이브 트레이에는 서랍이 없습니다. 고용량 드라이브 트레이의 경우 드라이브 트레이의 ID, 드로어의 ID 및 드라이브가 상주하는 슬롯의 ID를 지정해야 합니다. 저용량 드라이브 트레이의 경우 드라이브 트레이의 ID와 드라이브가 있는 슬롯의 ID만 지정하면 됩니다. 저용량 드라이브 트레이의 경우 드라이브 트레이 ID를 지정하고 드로어의 ID를 0으로 설정한 다음 드라이브가 상주하는 슬롯의 ID를 지정하는 방법도 있습니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+6.16
+
+7.60은 drawerID 사용자 입력을 추가합니다.

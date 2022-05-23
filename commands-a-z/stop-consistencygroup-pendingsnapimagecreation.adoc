@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/stop-consistencygroup-pendingsnapimagecreation.html 
+sidebar: sidebar 
+keywords: stop, snapshot, images, consistency, group 
+summary: STOP ConsistencyGroup PendingSnapImageCreation 명령은 스냅샷 정합성 보장 그룹에 생성될 보류 중인 모든 스냅샷 이미지를 중지합니다. 
+---
+= 정합성 보장 그룹에서 보류 중인 스냅샷 이미지를 중지합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Top ConsistencyGroup pendingSnapImageCreation' 명령은 스냅샷 정합성 보장 그룹에 생성될 보류 중인 모든 스냅샷 이미지를 중지합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+스냅샷 정합성 보장 그룹에 보류 중인 스냅샷 이미지가 없으면 스토리지 관리 소프트웨어에 오류 메시지가 표시되고 명령이 실행되지 않습니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+stop consistencyGroup pass:quotes[[_consistencyGroupName_]]pendingSnapImageCreation
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+일관성 그룹 이름
+ a| 
+보류 중인 스냅샷 작업을 중지할 정합성 보장 그룹의 이름입니다. 일관성 그룹의 이름은 대괄호([ ])로 묶어야 합니다. 일관성 그룹 이름에 특수 문자나 숫자가 있으면 일관성 그룹 이름은 대괄호 안에 큰따옴표(" ")로 묶어야 합니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+7.83

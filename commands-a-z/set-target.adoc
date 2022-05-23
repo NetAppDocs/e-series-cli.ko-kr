@@ -1,0 +1,86 @@
+---
+permalink: commands-a-z/set-target.html 
+sidebar: sidebar 
+keywords: set, target, properties 
+summary: set target 명령은 인증 방법 및 별칭 이름을 포함하여 iSCSI/iSER 타겟의 속성을 변경합니다. 
+---
+= 대상 속성을 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Set target' 명령어는 인증 방식, 별칭 이름 등 iSCSI/iSER Target의 속성을 변경한다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 스토리지 모니터 역할이 있어야 합니다.
+
+
+
+== 상황
+
+[NOTE]
+====
+이 명령은 사용되지 않는 를 대체합니다 xref:set-isertarget.adoc[iSER 대상을 설정합니다] 및 xref:set-iscsitarget.adoc[iSCSI 타겟 속성을 설정합니다] 명령.
+
+====
+
+
+== 구문
+
+[listing]
+----
+
+set target (["targetAliasName"] | <"targetQualifiedName">) (authenticationMethod=(none | chap chapSecret="newSecurityKey") | targetAlias="newAliasName")
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+표적
+ a| 
+설정할 대상을 지정할 수 있습니다. 타겟의 별칭 이름 또는 정규화된 이름(예: iqn)을 지정할 수 있습니다. 대상 식별자를 큰따옴표(" ")로 묶습니다. 또한 정규화된 이름인 경우 별칭 또는 꺾쇠 괄호(<>)인 경우 이 식별자는 대괄호([])로 묶어야 합니다.
+
+
+
+ a| 
+인증 방법
+ a| 
+세션을 인증하는 방법을 설정할 수 있습니다. "없음" 또는 "CHAP"를 선택할 수 있습니다.
+
+
+
+ a| 
+'챕시크릿
+ a| 
+보안 키를 입력하여 피어 연결을 인증할 수 있습니다. 이는 authenticationMethod가 CHAP로 설정된 경우에만 적용됩니다.
+
+
+
+ a| 
+'targetAlias'
+ a| 
+대상의 새 별칭 이름을 지정할 수 있습니다. 이름은 큰따옴표(" ")로 묶어야 합니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+8.41

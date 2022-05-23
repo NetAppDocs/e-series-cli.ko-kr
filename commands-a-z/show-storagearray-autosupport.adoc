@@ -1,0 +1,109 @@
+---
+permalink: commands-a-z/show-storagearray-autosupport.html 
+sidebar: sidebar 
+keywords: show, autosupport, configuration, e2800, e5700, storage, arrays 
+summary: show storageArray AutoSupport 명령은 스토리지 배열에 대한 AutoSupport 번들 수집 설정을 표시합니다. 
+---
+= AutoSupport 설정을 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'show storageArray AutoSupport' 명령어는 스토리지 배열에 대한 AutoSupport bundle collection 설정을 출력한다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2800, E5700, EF600 및 EF300 스토리지 어레이에서 사용할 수 있습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 또는 스토리지 모니터 역할이 있어야 합니다.
+
+
+
+== 상황
+
+이 명령의 명령 출력에는 다음 구성 정보가 표시됩니다.
+
+* AutoSupport 기능, AutoSupport OnDemand 기능 및 AutoSupport 원격 진단 기능의 이 관리 도메인에 대한 활성화 상태입니다
+* 구성된 전달 방법에 따라 달라지는 전달 매개 변수:
++
+** 전달 방법은 전자 메일(SMTP) 입니다. 대상 전자 메일 주소, 메일 릴레이 서버 및 보낸 사람 전자 메일 주소가 표시됩니다
+** 전송 방법은 HTTP 또는 HTTPS입니다.
++
+*** 직접 연결 대상 IP 주소가 표시됩니다
+*** 프록시 서버 연결 - 호스트 주소, 포트 번호 및 인증 세부 정보가 표시됩니다
+*** 자동 프록시 구성 스크립트(PAC) 연결 - 스크립트 위치가 표시됩니다
+
+
+
+
+* AutoSupport 일별 및 주별 선호 시간 범위
+* ASUP 기능, 섀시 일련 번호 및 구성된 일별 및 주별 일정에 대한 정보
+
+
+
+
+== 구문
+
+[listing]
+----
+show storageArray autoSupport
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+=== 예
+
+[listing]
+----
+
+   SMcli -n Array1 -c "show storageArray autoSupport;"
+
+   The AutoSupport feature is enabled on this storage array.
+   The AutoSupport OnDemand feature is enabled on this storage array.
+   The AutoSupport Remote Diagnostics feature is enabled on this storage array.
+
+   Delivery Method: Email (SMTP)
+     Destination email address: http://support.mycompany.com/put/AsupPut/
+     Mail relay server: ra.eng.netapp.com
+     Sender email address: user@netapp.com
+   -or-
+   Delivery Method: HTTP
+     Destination IP address: http://support.mycompany.com/put/AsupPut/
+     Connection: Direct
+         -or-
+     Connection: Proxy server
+      Host Address: 10.227.76.178
+       Port number: 8080
+       Authentication required: Yes
+        User name: admin
+        Password: ********
+         -or-
+     Connection: Automatic proxy configuration script (PAC)
+      Script location: http://esgweb.eng.mycompany.com/proxy.pac
+
+   The AutoSupport daily schedule preferred time range is from 12:00 AM to 01:00 AM.
+   The AutoSupport weekly schedule preferred time range is from 10:00 PM to 11:00 PM on Thursday, Saturday.
+
+   AutoSupport Capable  AutoSupport OnDemand Capable  Chassis Serial Number  Daily Schedule  Weekly Schedule
+   Yes (enabled)        Yes                           SX94500434             12:55 AM        10:08 PM on Thursdays
+
+   SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

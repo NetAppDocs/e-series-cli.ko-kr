@@ -1,0 +1,57 @@
+---
+permalink: commands-a-z/deactivate-storagearray-feature.html 
+sidebar: sidebar 
+keywords: deactivate, synchronous, mirror 
+summary: deactivate storageArray feature 명령은 동기 미러링 기능을 비활성화하고 미러 저장소 볼륨을 해체하며 보조 볼륨의 컨트롤러 소유자를 해제합니다. 
+---
+= 동기 미러링을 비활성화합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+deeactivate storageArray feature 명령은 동기 미러링 기능을 비활성화하고 미러 저장소 볼륨을 분해하며 보조 볼륨의 컨트롤러 소유자를 해제합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800 및 E5700 어레이를 포함한 개별 스토리지 어레이에 적용됩니다. 모든 SMcli 패키지가 설치된 경우
+
+
+
+== 역할
+
+E2800 또는 E5700 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+보조 볼륨 전용의 컨트롤러 호스트 포트는 호스트 데이터 전송에 사용할 수 있습니다.
+
+[NOTE]
+====
+이 명령의 이전 버전에서는 기능 식별자가 'remoteMirror'였습니다. 이 기능 식별자는 더 이상 유효하지 않으며 SyncMirror로 대체됩니다.
+
+====
+
+
+== 구문
+
+[listing]
+----
+deactivate storageArray feature=syncMirror
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+6.10

@@ -1,0 +1,85 @@
+---
+permalink: commands-category/alert-configuration-commands.html 
+sidebar: sidebar 
+keywords: configuration, commands, alert, embedded 
+summary: 경고 구성 명령 
+---
+= 경고 구성 명령
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+
+
+== 내장 SNMP 구성
+
+link:../commands-a-z/create-snmpcommunity.html["SNMP 커뮤니티를 등록합니다"]
+
+link:../commands-a-z/create-snmptrapdestination.html["SNMP 트랩 대상을 등록합니다"]
+
+link:../commands-a-z/show-allsnmpcommunities.html["SNMP 커뮤니티를 표시합니다"]
+
+link:../commands-a-z/show-snmpsystemvariables.html["SNMP MIB II 시스템 그룹 변수를 표시합니다"]
+
+link:../commands-a-z/start-snmptrapdestination.html["SNMP 트랩 대상을 테스트합니다"]
+
+link:../commands-a-z/delete-snmpcommunity.html["SNMP 커뮤니티 등록을 취소합니다"]
+
+link:../commands-a-z/delete-snmptrapdestination.html["SNMP 트랩 대상 등록을 취소합니다"]
+
+link:../commands-a-z/set-snmpcommunity.html["SNMP 커뮤니티를 업데이트합니다"]
+
+link:../commands-a-z/set-snmpsystemvariables.html["SNMP MIB II 시스템 그룹 변수를 업데이트합니다"]
+
+link:../commands-a-z/set-snmptrapdestination-trapreceiverip.html["SNMP 트랩 대상을 업데이트합니다"]
+
+
+
+== 이메일 경고 구성 - E2700 또는 E5600 어레이
+
+link:../commands-a-z/set-emailalert.html["e-메일 알림 설정을 구성합니다"]
+
+link:../commands-a-z/set-event-alert.html["이벤트 경고 필터링을 설정합니다"]
+
+link:../commands-a-z/show-blockedeventalertlist.html["차단된 이벤트 표시"]
+
+link:../commands-a-z/smcli-alerttest.html["경고를 테스트합니다"]
+
+
+
+== SSD 캐시 명령입니다
+
+link:../commands-a-z/clear-emailalert-configuration.html["e-메일 알림 구성을 지웁니다"]
+
+link:../commands-a-z/set-emailalert.html["e-메일 알림 설정을 구성합니다"]
+
+link:../commands-a-z/delete-emailalert.html["이메일 알림 수신자를 삭제합니다"]
+
+link:../commands-a-z/show-emailalert-summary.html["e-메일 알림 구성을 표시합니다"]
+
+link:../commands-a-z/start-emailalert-test.html["이메일 경고 구성을 테스트합니다"]
+
+
+
+== Syslog 구성
+
+link:../commands-a-z/clear-syslog-configuration.html["syslog 구성을 지웁니다"]
+
+link:../commands-a-z/set-syslog.html["syslog 설정을 구성합니다"]
+
+link:../commands-a-z/create-storagearray-syslog.html["스토리지 시스템 syslog 구성을 생성합니다"]
+
+link:../commands-a-z/delete-storagearray-syslog.html["스토리지 시스템 syslog 구성을 삭제합니다"]
+
+link:../commands-a-z/delete-syslog.html["syslog 서버를 삭제합니다"]
+
+link:../commands-a-z/show-storagearray-syslog.html["스토리지 시스템 syslog 구성을 표시합니다"]
+
+link:../commands-a-z/show-syslog-summary.html["syslog 구성을 표시합니다"]
+
+link:../commands-a-z/start-storagearray-syslog-test.html["스토리지 시스템 syslog 테스트를 시작합니다"]
+
+link:../commands-a-z/start-syslog-test.html["syslog 구성을 테스트합니다"]
+
+link:../commands-a-z/set-storagearray-syslog.html["스토리지 시스템 syslog 구성을 업데이트합니다"]

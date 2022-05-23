@@ -1,0 +1,50 @@
+---
+permalink: commands-a-z/show-volumecopy-source-targetcandidates.html 
+sidebar: sidebar 
+keywords: show, volume, copy, target, candidates 
+summary: show volumeCopy source targetCandidates 명령은 볼륨 복사 작업의 대상으로 사용할 수 있는 대상 볼륨에 대한 정보를 반환합니다. 이 명령은 스냅샷 볼륨 복사본 쌍에 대해 유효합니다. 
+---
+= 볼륨 복사본 타겟 후보 표시
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'show volumeCopy source targetCandidates' 명령은 볼륨 복사 작업의 대상으로 사용할 수 있는 대상 볼륨에 대한 정보를 반환합니다. 이 명령은 스냅샷 볼륨 복사본 쌍에 대해 유효합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 스토리지 모니터 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+show volumeCopy source pass:quotes[["_sourceName_"]] targetCandidates
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'소스'입니다
+ a| 
+대상 볼륨을 찾으려는 소스 볼륨의 이름입니다. 볼륨 이름은 대괄호([ ])로 묶어야 합니다. 볼륨 이름에 특수 문자나 숫자가 있는 경우 볼륨 이름은 대괄호 안에 큰따옴표(" ")로 묶어야 합니다.
+
+|===

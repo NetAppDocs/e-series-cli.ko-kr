@@ -1,0 +1,161 @@
+---
+permalink: commands-a-z/set-storagearray-directoryserver.html 
+sidebar: sidebar 
+keywords: set, storage, array, directory, server 
+summary: set storageArray DirectoryServer 명령은 디렉터리 서버 구성을 업데이트합니다. 
+---
+= 스토리지 배열 디렉토리 서버를 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'et storageArray DirectoryServer' 명령은 디렉토리 서버 구성을 업데이트합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+
+set storageArray directoryServer ["domainId"]
+    (domainNames=pass:quotes[("_domainName1_"..."_domainNameN_")] |
+     addDomainNames=pass:quotes[("_domainName1_"..."_domainNameN_")] |
+     serverUrl=pass:quotes["_serverUrl_"] |
+     bindAccount=pass:quotes["_username_"] bindPassword=pass:quotes["_password_"] |
+     searchBaseDN=pass:quotes["_distinguishedName_"] |
+     usernameAttribute=pass:quotes["_attributeName_"] |
+     groupAttributes=pass:quotes[("_attrName1_"..."_attrNameN_")] |
+     addGroupAttributes=pass:quotes[("_attrName1_"..."_attrNameN_"))]
+    [skipConfigurationTest={true | false}]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+디르토리서버다
+ a| 
+설정을 업데이트할 도메인 ID를 지정할 수 있습니다.
+
+
+
+ a| 
+'다마인Names'입니다
+ a| 
+디렉토리 서버에 대해 하나 이상의 유효한 도메인 이름을 설정할 수 있습니다. 두 개 이상의 이름을 입력하는 경우 값을 공백으로 구분합니다. 이 설정 옵션을 사용하면 기존 도메인 이름이 지워집니다.
+
+
+
+ a| 
+'addDomainNames'입니다
+ a| 
+디렉토리 서버에 대해 하나 이상의 유효한 도메인 이름을 추가할 수 있습니다. 두 개 이상의 이름을 입력하는 경우 값을 공백으로 구분합니다.
+
+
+
+ a| 
+'세르베르Url'
+ a| 
+서버 URL을 지정할 수 있습니다.
+
+
+
+ a| 
+'bindAccount'입니다
+ a| 
+바인딩 계정으로 사용할 사용자 이름을 지정할 수 있습니다.
+
+
+
+ a| 
+'bindPassword'
+ a| 
+바인딩 암호로 사용할 암호를 지정할 수 있습니다.
+
+
+
+ a| 
+'슈어BaseDN'입니다
+ a| 
+그룹 구성원 자격을 결정하기 위해 LDAP 사용자 객체를 검색하는 검색 기준 고유 이름을 지정할 수 있습니다.
+
+
+
+ a| 
+'usernameAttribute'
+ a| 
+그룹 구성원을 결정하기 위해 사용자 개체를 검색하는 데 사용할 특성을 지정할 수 있습니다. 지정한 경우, 문자열에 로그인 중에 사용되는 사용자 이름으로 대체될 변수 "+{uid}+"가 포함되어야 합니다. 예: "+sAMAccountName={uid}+"
+
+
+
+ a| 
+그룹속성
+ a| 
+그룹 고유 이름을 찾는 데 사용할 그룹 특성을 하나 이상 설정할 수 있습니다. 고유 이름은 역할 매핑을 위한 그룹 구성원 자격을 결정하는 데 사용됩니다.
+
+[NOTE]
+====
+둘 이상의 그룹을 입력하는 경우 값을 공백으로 구분합니다.
+
+====
+[NOTE]
+====
+이 매개 변수를 사용하면 기존 그룹이 지워집니다.
+
+====
+
+
+ a| 
+'addGroupAttributes'
+ a| 
+그룹 고유 이름을 찾는 데 사용할 그룹 특성을 하나 이상 추가할 수 있습니다. 고유 이름은 역할 매핑을 위해 그룹 구성원을 결정하는 데 사용됩니다.
+
+[NOTE]
+====
+둘 이상의 그룹을 입력하는 경우 값을 공백으로 구분합니다.
+
+====
+
+
+ a| 
+스킵구성 테스트
+ a| 
+구성을 저장하기 전에 구성 테스트를 건너뛸 수 있습니다. 기본값은 false 입니다.
+
+|===
+
+
+== 예
+
+[listing]
+----
+SMcli -n Array1 -c "set storageArray directoryServer ["domain1"]
+     serverUrl="ldaps://hqldap.eng.mycompany.com:636";"
+
+SMcli -n Array1 -c "set storageArray directoryServer ["domain1"]
+                    bindAccount="bindDN2" bindPassword="thePassword2"
+                    searchBaseDN="OU=_Users,DC=hq,DC=mycompany,DC=com"
+                    usernameAttribute="sAMAccountName" groupAttributes=("memberOf");"
+
+SMcli completed successfully.
+----

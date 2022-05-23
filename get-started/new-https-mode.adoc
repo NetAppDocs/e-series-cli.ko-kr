@@ -1,0 +1,154 @@
+---
+permalink: get-started/new-https-mode.html 
+sidebar: sidebar 
+keywords: new, smcli, https mode 
+summary: 새로운 SMcli는 추가 보안 기능을 제공하는 https 모드에서 작동할 수 있습니다. 
+---
+= SMcli https 모드
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SMcli는 추가 보안 기능을 제공하는 "* https*" 모드로 작동할 수 있습니다.
+
+[NOTE]
+====
+현재 SANtricity 11.52 이하를 사용 중인 경우 레거시 CLI를 통해 SANtricity의 최신 버전으로 업그레이드할 수 없습니다. SANtricity 11.52에서 이후 버전으로 업그레이드하는 작업은 SMcli를 통해서만 수행할 수 있습니다.
+
+====
+11.42 버전의 CLI를 사용하는 경우 스크립트 엔진은 다음 모드 중 하나로 생성됩니다.
+
+* '* https*' -- 추가 보안 기능과 함께 REST 기반 스크립트 엔진이 만들어집니다.
+* '* symbol*' -- 기호 기반 스크립트 엔진이 만들어집니다.
+
+
+'* https*' 클라이언트에서 사용할 수 있는 새로운 보안 기능:
+
+* 고급 보안을 위해서는 신뢰할 수 있는 인증서를 사용한 인증서 인증이 필요합니다. '-k' 옵션을 사용하여 자체 서명된 인증서를 사용하고 안전하지 않은 모드에서 명령을 실행할 수 있습니다.
+* 역할 기반 액세스 관리를 사용할 수 있으며 다른 역할에 할당된 보안 권한이 다릅니다. 사용자 이름 인수를 사용하여 명령을 실행하려면 '-u' 옵션을 사용합니다.
+* 이전에 '* symbol*' 모드에서 사용할 수 있었던 암호 인수는 '* https*' 모드에서도 사용할 수 있으며 특정 사용자 역할의 암호를 지정할 수 있습니다. 명령줄의 암호를 지정하는 데 -p 옵션을 사용하거나 파일 또는 'tdin'에서 암호를 읽을 수 있는 -P 옵션을 사용합니다.
+
+
+이 항목에는 새로운 명령줄 매개 변수를 설명하는 몇 가지 예제가 있습니다.
+
+
+
+== 암호가 필요한 작업, https 클라이언트 모드, 신뢰할 수 있는 인증서가 배열에 설치됩니다
+
+다음 예에서는 사용자 이름과 암호 옵션이 모두 제공되며 신뢰할 수 있는 인증서가 스토리지에 설치됩니다.
+
+[listing]
+----
+C:\Program Files\StorageManager\client>SMcli -n Array1 -u admin@local -p adminPassword -c "set storageArray cacheBlockSize=4;"
+
+Syntax check complete.
+
+Executing script...
+
+Script execution complete.
+
+SMcli completed successfully.
+----
+
+
+== 암호가 필요한 작업, https 클라이언트 모드, 신뢰할 수 있는 인증서가 배열에 설치되지 않았습니다
+
+다음 예에서는 사용자 이름과 암호 옵션이 모두 제공되지만, 어레이에 신뢰할 수 있는 인증서가 설치되어 있지 않으며, '-k' 옵션이 사용되지 않았습니다. 이 예제에서는 반환되는 출력을 보여 줍니다.
+
+[listing]
+----
+C:\Program Files\StorageManager\client>SMcli -n Array1 -u admin@local -p adminPassword -c "set storageArray cacheBlockSize=4;"
+
+Unable to establish a secure connection to the storage array as we were unable to confirm the connection is secure.
+Please configure the storage array to use a trusted security certificate. If the problem persists, contact Technical Support.
+
+SMcli failed.
+----
+
+
+== 암호가 필요한 작업, https 클라이언트 모드, 설치된 신뢰할 수 있는 인증서가 없지만 자체 서명된 인증서에 -k를 사용합니다
+
+다음 예에서는 위의 예제와 같이 사용자 이름과 암호 옵션이 모두 제공되지만 신뢰할 수 있는 인증서가 스토리지에 설치되어 있지 않습니다. 그러나 이 경우 자체 서명된 인증서를 사용하기 위해 -k 옵션을 사용했습니다.
+
+[listing]
+----
+C:\Program Files\StorageManager\client>SMcli -n Array1 -u admin@local -p adminPassword -c "set storageArray cacheBlockSize=4;" -k
+Performing syntax check...
+
+Syntax check complete.
+
+Executing script...
+
+Script execution complete.
+----
+이 예에서는 '* symbol*' 클라이언트 모드를 사용하여 명령을 성공적으로 완료하려면 암호 옵션만 필요합니다.
+
+[listing]
+----
+C:\Program Files\StorageManager\client>SMcli -n Array1 -p adminPassword -c "set storageArray cacheBlockSize=4;"
+Performing syntax check...
+
+Syntax check complete.
+
+Executing script...
+
+Script execution complete.
+
+SMcli completed successfully.
+----
+
+
+== 읽기 전용 작업, 기호 클라이언트 모드
+
+이 예에서는 ' * symbol * ' 클라이언트 모드에서 사용자 이름과 암호가 제공되지 않습니다. 이 작업은 읽기 전용 작업에만 성공적으로 완료됩니다.
+
+[listing]
+----
+C:\Program Files\StorageManager\client>SMcli -n Array1  -c "show allVolumes;"
+Performing syntax check...
+
+Syntax check complete.
+
+Executing script...
+
+STANDARD/THIN VOLUMES------------------------------
+
+   Number of volumes: 0
+Missing Volumes
+
+   Number of missing volumes: 0
+
+
+Script execution complete.
+
+SMcli completed successfully.
+----
+
+
+== 읽기 전용 작업, http 클라이언트 모드입니다
+
+다음 예제에서는 읽기 전용 작업뿐 아니라 '* https*' 클라이언트 모드에서도 사용자 이름과 암호가 모두 필요하며 자체 서명된 인증서를 수락하려면 '-k'와 함께 제공됩니다. '* https*' 클라이언트 모드는 읽기 전용 작업에도 암호가 필요합니다.
+
+[listing]
+----
+C:\Program Files\StorageManager\client>SMcli -n Array1 -u admin@local -p adminPassword -c "show allVolumes;" -k
+Performing syntax check...
+
+Syntax check complete.
+
+Executing script...
+
+THICK/THIN VOLUMES------------------------------
+
+   Number of volumes: 0
+Missing Volumes
+
+   Number of missing volumes: 0
+
+
+Script execution complete.
+
+SMcli completed successfully.
+----

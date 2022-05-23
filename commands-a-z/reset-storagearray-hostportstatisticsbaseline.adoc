@@ -1,0 +1,64 @@
+---
+permalink: commands-a-z/reset-storagearray-hostportstatisticsbaseline.html 
+sidebar: sidebar 
+keywords: reset, storage array, host, port, statistics, baseline 
+summary: reset storageArray hostPortstatisticsBaseline 명령은 스토리지 배열 호스트 포트 통계 기준을 재설정합니다. 
+---
+= 스토리지 배열 호스트 포트 통계 기준을 재설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+reset storageArray hostPortstatisticsBaseline 명령은 스토리지 배열 호스트 포트 통계 기준을 재설정합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 스토리지 모니터 역할이 있어야 합니다.
+
+
+
+== 상황
+
+[NOTE]
+====
+이 명령은 사용되지 않는 를 대체합니다 xref:reset-storagearray-ibstatsbaseline.adoc[스토리지 배열 InfiniBand 통계 기준을 재설정합니다], xref:reset-storagearray-iscsistatsbaseline.adoc[스토리지 배열 iSCSI 기준을 재설정합니다], 및 xref:reset-storagearray-iserstatsbaseline.adoc[스토리지 배열 iSER 기준선을 재설정합니다] 명령.
+
+====
+
+
+== 구문
+
+[listing]
+----
+
+reset storageArray hostPortStatisticsBaseline type=(ISCSI| ISER | SRP | NVMEOF)
+----
+
+
+== 매개 변수
+
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+유형
+ a| 
+수집할 통계 유형을 지정할 수 있습니다. iSCSI, iSER, RP, 그리고 NVMEOF를 선택할 수 있습니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+8.41

@@ -1,0 +1,54 @@
+---
+permalink: commands-a-z/reset-storagearray-volumedistribution.html 
+sidebar: sidebar 
+keywords: reset, storage array, volume, distribution 
+summary: 'reset storageArray volumeDistribution 명령은 모든 볼륨을 원하는 컨트롤러에 다시 할당(이동)합니다.' 
+---
+= 스토리지 배열 볼륨 배포를 재설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+reset storageArray volumeDistribution' 명령은 모든 볼륨을 원하는 컨트롤러로 다시 할당(이동)합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+reset storageArray volumeDistribution
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 참고
+
+다중 경로 드라이버가 없는 호스트에서 이 명령을 사용하는 경우 이 명령이 완료될 때까지 볼륨에 대한 I/O 작업을 중지하여 응용 프로그램 오류를 방지해야 합니다.
+
+특정 호스트 운영 체제 환경에서는 다중 경로 호스트 드라이버를 재구성해야 할 수 있습니다. 볼륨에 대한 새 I/O 경로를 인식하기 위해 운영 체제를 수정해야 할 수도 있습니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+5.20

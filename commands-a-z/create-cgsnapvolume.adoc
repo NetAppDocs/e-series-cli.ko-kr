@@ -1,0 +1,229 @@
+---
+permalink: commands-a-z/create-cgsnapvolume.html 
+sidebar: sidebar 
+keywords: create, consistency group, snapshot, volume 
+summary: create cgSnapVolume 명령은 정합성 보장 그룹의 기본 볼륨에 있는 특정 이미지의 스냅샷 볼륨을 생성합니다. 
+---
+= 정합성 보장 그룹 스냅샷 볼륨을 생성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+"create cgSnapVolume" 명령은 정합성 보장 그룹의 기본 볼륨에 있는 특정 이미지의 스냅샷 볼륨을 생성합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+스냅샷 볼륨에 포함할 하나의 기본 볼륨 또는 둘 이상의 기본 볼륨을 일관성 그룹에서 선택할 수 있습니다. 일관성 그룹의 스냅샷 볼륨을 생성할 때 확인할 수 있는 콘텐츠가 포함된 볼륨을 생성합니다.
+
+
+
+== 사용자 지정 기본 볼륨을 사용한 구문
+
+[listing, subs="+macros"]
+----
+create cgSnapVolume userLabel=pass:quotes[_"cgVolumeName"_]
+cgSnapImageID=pass:quotes[_"snapCGID:imageID"_]
+members=pass:quotes[_(baseVolume1:repos_XXXX ... baseVolumen:repos_YYYY)_]
+----
+
+
+== 정합성 보장 그룹 스냅샷 볼륨을 읽기 전용으로 설정할 때의 구문
+
+[listing, subs="+macros"]
+----
+create cgSnapVolume userLabel=pass:quotes[_"cgVolumeName"_]
+cgSnapImageID=pass:quotes[_"snapCGID:imageID"_]
+readOnly
+----
+
+
+== 리포지토리 전체 제한 설정 시 구문
+
+[listing, subs="+macros"]
+----
+create cgSnapVolume userLabel=pass:quotes[_"cgVolumeName"_]
+cgSnapImageID=pass:quotes[_"snapCGID:imageID"_]
+members=pass:quotes[_(baseVolume1:repos_XXXX_] |
+baseVolume1: (pass:quotes[_volumeGroupName_] pass:quotes[[_capacity=capacityValue_])] |
+(baseVolume1:pass:quotes[_diskPoolName_] [capacity=pass:quotes[_capacityValue_]])
+... baseVolumen:repos_YYYY |
+baseVolumen: (pass:quotes[_volumeGroupName_] [capacity=pass:quotes[_capacityValue_]]) |
+baseVolumen: (pass:quotes[_diskPoolName_] [capacity=pass:quotes{_capacityValue_]]))
+repositoryFullLimit=pass:quotes[_percentValue_]
+----
+
+
+== 매개 변수
+
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'사용자 레이블'
+ a| 
+생성 중인 일관성 그룹 스냅샷 볼륨에 지정할 이름입니다. 정합성 보장 그룹 스냅샷 볼륨 이름은 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+cgSnapImageID
+ a| 
+정합성 보장 그룹에 있는 스냅샷 이미지의 이름입니다. 스냅샷 이미지의 이름은 다음 두 부분으로 구성됩니다.
+
+* 일관성 그룹의 이름입니다
+* 정합성 보장 그룹에 있는 스냅샷 이미지의 식별자입니다
+
+
+스냅샷 이미지의 식별자는 다음 중 하나일 수 있습니다.
+
+* '최신' - 정합성 보장 그룹에서 생성된 최신 스냅샷 이미지를 표시하려면 이 옵션을 사용합니다.
+* '가장 오래된 항목' - 정합성 보장 그룹에서 생성된 가장 빠른 스냅샷 이미지를 표시하려면 이 옵션을 사용합니다.
+
+
+스냅샷 이미지 이름은 큰따옴표(" ")로 묶어야 합니다.
+
+둘 이상의 스냅샷 이미지 이름 또는 시퀀스 번호를 입력할 수 있습니다. 모든 스냅샷 이미지 이름을 괄호 안에 포함합니다. 각 스냅샷 이미지 이름을 공백으로 구분합니다.
+
+
+
+ a| 
+타다
+ a| 
+기본 볼륨 하나 또는 추가할 기본 볼륨 두 개 이상의 식별자입니다. 구성원 식별자는 저장소 볼륨 이름과 연결된 기본 볼륨 이름으로 구성됩니다. 두 이름 사이에 콜론(:)을 사용해야 합니다. 모든 멤버 식별자를 괄호로 묶습니다. 둘 이상의 구성원을 입력하면 구성원이 공백으로 구분됩니다.
+
+구성원 매개 변수를 사용하지 않으면 모든 구성원이 새 정합성 보장 그룹 스냅샷 볼륨에 자동으로 추가됩니다.
+
+
+
+ a| 
+재량권
+ a| 
+정합성 보장 그룹 구성원 볼륨을 포함할 저장소 볼륨의 이름입니다.
+
+저장소 볼륨의 이름을 정의하는 두 가지 옵션이 있습니다.
+
+* 기존 리포지토리 볼륨 사용: 이름
+* 이 명령을 실행할 때 새 저장소 볼륨을 생성합니다
+
+
+기존 저장소 볼륨의 이름은 다음 두 부분으로 구성됩니다.
+
+* 용어 "Repos"
+* 저장소 관리 소프트웨어가 저장소 볼륨 이름에 할당하는 4자리 숫자 식별자입니다
+
+
+기존 저장소 볼륨의 이름은 큰따옴표(" ")로 묶어야 합니다.
+
+이 명령을 실행할 때 새 저장소 볼륨을 만들려면 저장소 볼륨을 만들 볼륨 그룹 또는 디스크 풀의 이름을 입력해야 합니다. 필요에 따라 저장소 볼륨의 용량을 정의할 수도 있습니다. 용량을 정의하려면 다음 값을 사용합니다.
+
+* 기본 볼륨 용량의 백분율을 나타내는 정수 값입니다
+* 기본 볼륨 용량의 백분율을 나타내는 10진수 분수입니다
+* 저장소 볼륨의 특정 크기입니다. 크기는 바이트, KB, MB, GB 또는 TB 단위로 정의됩니다.
+
+
+용량 옵션을 사용하지 않으면 스토리지 관리 소프트웨어가 기본 볼륨 용량의 20%로 용량을 설정합니다.
+
+이 명령을 실행하면 스토리지 관리 소프트웨어가 스냅샷 볼륨의 저장소 볼륨을 생성합니다.
+
+
+
+ a| 
+재허용 FullLimit
+ a| 
+정합성 보장 그룹 스냅샷 저장소 볼륨이 거의 꽉 찬 저장소 용량의 비율입니다. 정수 값을 사용합니다. 예를 들어 값이 70이면 70%를 의미합니다.
+
+
+
+ a| 
+"재만"을 선택합니다
+ a| 
+스냅샷 볼륨에 쓸 수 있는지 또는 스냅샷 볼륨에서 읽기만 할 수 있는지 여부를 결정하는 설정입니다. 스냅샷 볼륨에 쓰려면 이 매개 변수를 포함하지 마십시오. 스냅샷 볼륨에 쓰지 않으려면 이 매개 변수를 포함합니다.
+
+|===
+
+
+== 참고
+
+이름에 영숫자, 밑줄(_), 하이픈(-) 및 파운드(#)를 조합하여 사용할 수 있습니다. 이름에는 최대 30자를 사용할 수 있습니다.
+
+스냅샷 이미지의 이름은 콜론(:)으로 구분된 두 부분으로 구성됩니다.
+
+* 스냅샷 그룹의 식별자입니다
+* 스냅샷 이미지의 식별자입니다
+
+
+'RepositoryVolumeType' 또는 'ReadOnly' 매개 변수를 지정하지 않으면 스토리지 관리 소프트웨어가 정합성 보장 그룹 스냅샷 볼륨의 저장소를 선택합니다. 기본 볼륨이 상주하는 볼륨 그룹 또는 디스크 풀에 공간이 충분하지 않은 경우 이 명령은 실패합니다.
+
+'create cgSnapVolume' 명령에는 다음 예제에 설명된 고유한 양식이 있습니다.
+
+* cgm1, cgm2 및 cgm3의 구성원이 3개인 "snapcg1"이라는 스냅샷 일관성 그룹에 읽기/쓰기 일관성 그룹 스냅샷 볼륨을 생성합니다. 저장소 볼륨은 이미 있으며 이 명령에서 사용자가 선택합니다.
++
+[listing]
+----
+create cgSnapVolume userLabel="cgSnapVolume1"
+cgSnapImageID="snapCG1:oldest"
+members=(cgm1:repos_0010 cgm2:repos_0011 cgm3:repos_0007);
+----
++
+정합성 보장 그룹 스냅샷 볼륨에 포함될 스냅샷 이미지 이름에 콜론(:)을 사용합니다. 콜론은 사용하려는 특정 스냅샷 이미지와 스냅샷 볼륨의 이름을 구분하는 구분 기호입니다. 콜론 다음에 다음 옵션 중 하나를 사용할 수 있습니다.
+
++
+** 스냅샷 이미지의 실제 시퀀스 번호인 정수 값입니다.
+** 최신 정합성 보장 그룹 스냅샷 이미지를 표시하려면 이 옵션을 사용합니다.
+** '가장 오래된 항목' - 생성된 가장 빠른 스냅샷 이미지를 표시하려면 이 옵션을 사용합니다. 스냅샷 정합성 보장 그룹의 구성원 이름 다음에 콜론을 사용하면 구성원과 저장소 볼륨 간의 매핑이 정의됩니다. 예를 들어, 'cgm1:Repos_10'에서 멤버 cgm1이 리포지토리 볼륨 Repos_0010에 매핑됩니다.
+
+
+* cgm1 및 cgm2 구성원 중 "snapcg1"이라는 스냅샷 정합성 보장 그룹에 읽기/쓰기 정합성 보장 그룹 스냅샷 볼륨 생성:
++
+[listing]
+----
+create cgSnapVolume userLabel="cgSnapVolume2"
+cgSnapImageID="snapCG1:14214"
+members=(cgm1:repos_1000 cgm2:repos_1001);
+----
+* cgm1, cgm2 및 cgm3의 구성원이 있는 snapcg1이라는 스냅샷 일관성 그룹에 읽기 전용 일관성 그룹 스냅샷 볼륨 생성:
++
+[listing]
+----
+create cgSnapVolume userLabel="cgSnapVolume3"
+cgSnapImageID="snapCG1:oldest" readOnly;
+----
+* 스냅샷 정합성 보장 그룹에서 저장소 전체 제한이 60%로 설정된 정합성 보장 그룹 스냅샷 볼륨을 생성하는 데, 스냅샷 정합성 보장 그룹에는 cgm1, cgm2 및 cgm3의 구성원이 3개 있습니다.
++
+[listing]
+----
+create cgSnapVolume userLabel="cgSnapVolume3"
+cgSnapImageID="snapCG1:oldest"
+repositoryFullLimit=60;
+----
+* cgm1, cgm2 및 cgm3의 구성원이 포함된 snapcg1이라는 스냅샷 일관성 그룹에서 자동 저장소를 선택하여 읽기/쓰기 일관성 그룹 스냅샷 볼륨 생성:
++
+[listing]
+----
+create cgSnapVolume userLabel="cgSnapVolume4"
+cgSnapImageID="snapCG1:oldest";
+----
+
+
+
+
+== 최소 펌웨어 레벨입니다
+
+7.83

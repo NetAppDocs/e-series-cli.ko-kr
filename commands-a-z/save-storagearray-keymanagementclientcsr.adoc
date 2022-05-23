@@ -1,0 +1,130 @@
+---
+permalink: commands-a-z/save-storagearray-keymanagementclientcsr.html 
+sidebar: sidebar 
+keywords: generate, key, management, certificate, sign, request, csr 
+summary: save storageArray keyManagementClientCSR 명령은 파일에 저장할 수 있는 스토리지 배열에 대해 생성된 CSR을 요청합니다. 
+---
+= 키 관리 인증서 서명 요청(CSR) 생성
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Save storageArray keyManagementClientCSR' 명령은 파일에 저장할 수 있는 스토리지 배열에 대해 생성된 CSR을 요청합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+[NOTE]
+====
+이 명령은 외부 키 관리에만 적용됩니다.
+
+====
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+
+save storageArray keyManagementClientCSR commonName=pass:quotes["_common_name_"]
+organization=pass:quotes["_organization_"]
+locality=pass:quotes["_locality_"]
+country=pass:quotes["_country_"]
+file=pass:quotes["_file_"]
+[organizationalUnit=pass:quotes["_organizational unit_"]]
+[stateProvince=pass:quotes["_state_province_"]]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'공통 이름'
+ a| 
+이 매개 변수에 입력한 값은 KMIP 서버에 정의된 사용자 이름 중 하나와 일치해야 합니다.
+
+
+
+ a| 
+'조직'입니다
+ a| 
+스토리지 배열이 속한 조직의 전체 법적 이름을 지정할 수 있습니다. 약어로 표시하지 말고 Inc, Corp 또는 LLC와 같은 접미사를 포함시키십시오.
+
+
+
+ a| 
+지역성
+ a| 
+스토리지 배열이 있는 도시 또는 인접성을 지정할 수 있습니다.
+
+
+
+ a| 
+"국가"입니다
+ a| 
+해당 국가의 두 자리 ISO(International Organization for Standardization) 3166-1 alpha-2 코드(예: US)를 지정할 수 있습니다.
+
+
+
+ a| 
+'파일'
+ a| 
+컨트롤러의 서명된 인증서 파일을 저장할 파일 및 파일 위치를 지정할 수 있습니다.
+
+
+
+ a| 
+조직단위
+ a| 
+인증서를 처리하는 조직의 부서를 지정할 수 있습니다.
+
+
+
+ a| 
+'선서주'입니다
+ a| 
+스토리지 배열이 있는 상태 또는 영역을 지정할 수 있습니다. 이 항목은 약어로 표현해서는 안 됩니다.
+
+|===
+
+
+== 예
+
+[listing, subs="+macros"]
+----
+
+SMcli -n Array1 -c "save storageArray keyManagementClientCSR commonName=pass:quotes["_192.0.2.1_"]
+organization=pass:quotes["_Widgets Are Us_, _Inc_."]
+locality=pass:quotes["_sedgwick_"]
+country=pass:quotes["_US_"]
+file=pass:quotes["_latestCertificate_"]
+organizationalUnit=pass:quotes["_Products Unit_"]
+stateProvince=pass:quotes["_Kansas_"];"
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

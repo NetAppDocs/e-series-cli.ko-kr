@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/enable-controller-datatransfer.html 
+sidebar: sidebar 
+keywords: enable, controller, datatransfer, command, revive, quiesced, running, diagnostics, role, syntax, parameter, firmware level 
+summary: enable controller dataTransfer 명령은 진단을 실행하는 동안 중지된 컨트롤러를 다시 활성화합니다. 
+---
+= 컨트롤러 데이터 전송을 활성화합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+enable controller dataTransfer(컨트롤러 데이터 전송 활성화) 명령은 진단을 실행하는 동안 정지된 컨트롤러를 다시 활성화합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+enable controller [(a|b)] dataTransfer
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+컨트롤러
+ a| 
+되살릴 컨트롤러입니다. 유효한 컨트롤러 식별자는 a나 b이며, 여기서 a는 A 슬롯의 제어기이고 b는 B 슬롯의 제어기입니다 컨트롤러 식별자를 대괄호([ ])로 묶습니다. 컨트롤러를 지정하지 않으면 스토리지 관리 소프트웨어에서 구문 오류를 반환합니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+6.10

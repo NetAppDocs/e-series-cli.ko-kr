@@ -1,0 +1,71 @@
+---
+permalink: commands-a-z/show-volumegroup-importdependencies.html 
+sidebar: sidebar 
+keywords: show, volume, group, import, dependencies 
+summary: show volumeGroup importDependencies 명령은 하나의 스토리지 어레이에서 두 번째 스토리지 어레이로 이동할 볼륨 그룹의 드라이브에 대한 종속성 목록을 표시합니다. 
+---
+= 볼륨 그룹 가져오기 종속성을 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'show volumeGroup importDependencies' 명령은 하나의 스토리지 어레이에서 두 번째 스토리지 어레이로 이동할 볼륨 그룹의 드라이브에 대한 종속성 목록을 표시합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 스토리지 모니터 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+pass:quotes[show volumeGroup [_volumeGroupName_]] importDependencies
+[cancelImport=(TRUE | FALSE)]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+볼륨그룹
+ a| 
+가져오기 종속성을 표시할 볼륨 그룹의 이름입니다. 볼륨 그룹 이름은 대괄호([])로 묶어야 합니다.
+
+
+
+ a| 
+캔슬가져오기
+ a| 
+볼륨 그룹 종속성을 읽은 후 드라이브를 다시 스핀다운하는 설정입니다. 드라이브를 스핀다운하려면 이 매개변수를 "true"로 설정합니다. 드라이브가 계속 회전하도록 하려면 이 매개 변수를 "false"로 설정합니다.
+
+|===
+
+
+== 참고
+
+이 명령은 내보낸 상태 또는 강제 상태에 있어야 하는 특정 볼륨 그룹의 종속성을 반환합니다. 나열된 종속 항목을 보존하기로 결정한 경우 'cancelImport' 매개 변수를 사용하여 드라이브를 다시 스핀다운할 수 있습니다.
+
+'볼륨 그룹 가져오기 시작' 명령을 실행하기 전에 '볼륨 그룹 가져오기 종속성' 명령을 실행해야 합니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+7.10

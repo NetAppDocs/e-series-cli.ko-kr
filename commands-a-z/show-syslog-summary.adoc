@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/show-syslog-summary.html 
+sidebar: sidebar 
+keywords: show, syslog, configuration 
+summary: show syslog summary 명령은 syslog 경고 구성 정보를 표시합니다. 
+---
+= syslog 구성을 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'show syslog summary' 명령어는 syslog alert 설정 정보를 출력한다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 또는 스토리지 모니터 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+show syslog summary
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 예
+
+[listing]
+----
+
+SYSLOG SUMMARY
+   Default facility: 3
+   Default tag: StorageArray
+   Syslog format: rfc5424
+   Syslog Servers
+      Server Address               Port Number
+      serverName1.company.com      514
+      serverName2.company.com      514
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40
+
+11.70.1은 Syslog 메시지 형식을 지정하기 위해 'syslogFormat' 매개변수를 추가했습니다.

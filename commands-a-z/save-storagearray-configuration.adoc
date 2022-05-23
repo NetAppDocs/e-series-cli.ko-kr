@@ -1,0 +1,113 @@
+---
+permalink: commands-a-z/save-storagearray-configuration.html 
+sidebar: sidebar 
+keywords: save, storage, array, configuration 
+summary: save storageArray configuration 명령은 현재 스토리지 배열 볼륨 구성을 다시 생성하는 데 사용할 수 있는 스크립트 파일을 생성합니다. 
+---
+= 스토리지 배열 구성을 저장합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Save storageArray configuration' 명령은 현재 스토리지 배열 볼륨 구성을 다시 생성하는 데 사용할 수 있는 스크립트 파일을 만듭니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다. 그러나 LDAP 매개 변수와 함께 이 명령을 사용하는 것은 보안 관리자 역할을 가진 명령으로 제한됩니다.
+
+
+
+== 상황
+
+[NOTE]
+====
+이 명령은 현재 스토리지 배열의 원격 미러링 또는 볼륨 복사본 구성 데이터를 파일에 저장하지 않습니다.
+
+====
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+save storageArray configuration file=pass:quotes["_filename_"]
+(allconfig|[globalSettings=(TRUE | FALSE)]
+[volumeConfigAndSettings=(TRUE | FALSE)]
+[hostTopology=(TRUE | FALSE)]
+[lunMappings=(TRUE | FALSE)])
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'파일'
+ a| 
+구성 설정을 저장할 파일 경로 및 파일 이름입니다. 파일 이름은 큰따옴표(" ")로 묶어야 합니다. 예를 들면 다음과 같습니다.
+
+"file="C:\Program Files\CLI\logs\saconf.cfg"
+
+구성 설정이 포함된 파일의 기본 이름은 'storage-array-configuration.cfg'입니다. 이 명령은 저장된 파일에 파일 확장명을 자동으로 추가하지 않습니다. 파일 이름을 입력할 때 파일 확장자를 지정해야 합니다.
+
+
+
+ a| 
+'allConfig'
+ a| 
+모든 구성 값을 파일에 저장하는 설정입니다. (이 매개변수를 선택하면 모든 설정 매개변수가 'true'로 설정됩니다.)
+
+
+
+ a| 
+'GlobalSettings'(GlobalSettings)
+ a| 
+전역 설정을 파일에 저장하는 설정입니다. 전역 설정을 저장하려면 이 매개변수를 "TRUE"로 설정합니다. 전역 설정을 저장하지 않으려면 이 매개변수를 "false"로 설정합니다. 기본값은 "true"입니다.
+
+
+
+ a| 
+'volumeConfigAndSettings'입니다
+ a| 
+볼륨 구성 설정 및 모든 글로벌 설정을 파일에 저장하는 설정입니다. 볼륨 구성 설정과 글로벌 설정을 저장하려면 이 매개변수를 "TRUE"로 설정합니다. 볼륨 구성 설정과 글로벌 설정을 저장하지 않으려면 이 매개변수를 "false"로 설정하십시오. 기본값은 "true"입니다.
+
+
+
+ a| 
+호스티지 토폴로지
+ a| 
+호스트 토폴로지를 파일에 저장하는 설정입니다. 호스트 토폴로지를 저장하려면 이 매개 변수를 "true"로 설정합니다. 호스트 토폴로지를 저장하지 않으려면 이 매개변수를 "false"로 설정합니다. 기본값은 'false'입니다.
+
+
+
+ a| 
+오찬
+ a| 
+파일에 LUN 또는 NSID 매핑을 저장하는 설정입니다. LUN 또는 NSID 매핑을 저장하려면 이 매개 변수를 "true"로 설정합니다. LUN 또는 NSID 매핑을 저장하지 않으려면 이 매개 변수를 "false"로 설정합니다. 기본값은 'false'입니다.
+
+|===
+
+
+== 참고
+
+이 명령을 사용하면 글로벌 설정, 볼륨 구성 설정, 호스트 토폴로지 또는 LUN 매핑에 대한 매개 변수의 조합을 지정할 수 있습니다. 모든 설정을 입력하려면 allConfig 매개변수를 사용하십시오. 'allConfig' 매개 변수를 사용하거나 다른 4개 매개 변수 중 하나 이상을 사용해야 합니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+6.10

@@ -1,0 +1,73 @@
+---
+permalink: commands-a-z/delete-controller-cacertificate.html 
+sidebar: sidebar 
+keywords: remove, install, root, intermediate, ca, certificates 
+summary: 컨트롤러 caCertificate 삭제 명령은 설치된 루트 또는 중간 CA 인증서를 지정된 컨트롤러에서 제거합니다. 
+---
+= 설치된 루트/중간 CA 인증서를 제거합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+"Delete controller caCertificate" 명령은 설치된 루트/중간 CA 인증서를 지정된 컨트롤러에서 제거합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+
+delete controller [(a|b)] caCertificate aliases=("alias1" ... "aliasN")
+----
+
+
+== 매개 변수
+
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+컨트롤러
+ a| 
+서명된 인증서를 삭제할 컨트롤러를 지정할 수 있습니다. 유효한 컨트롤러 식별자는 a 또는 b이며, 여기서 a는 슬롯 A의 컨트롤러이고 b는 슬롯 B의 컨트롤러입니다 컨트롤러 식별자를 대괄호([ ])로 묶습니다.
+
+
+
+ a| 
+'별칭'
+ a| 
+별칭 이름을 사용하여 삭제할 CA 인증서를 하나 이상 지정하거나 모두 지정할 수 있습니다. 별칭은 인증서가 삭제 중인 컨트롤러에서 가져와야 합니다. 모든 별칭을 괄호로 묶습니다. 둘 이상의 별칭을 입력하는 경우 공백으로 구분하십시오.
+
+|===
+
+
+== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "delete controller[a] caCertificate aliases=("myAlias" "anotherAlias");"
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

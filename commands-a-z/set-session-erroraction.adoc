@@ -1,0 +1,120 @@
+---
+permalink: commands-a-z/set-session-erroraction.html 
+sidebar: sidebar 
+keywords: set, session 
+summary: set session errorAction 명령은 현재 스크립트 엔진 세션을 실행할 방법을 정의합니다. 
+---
+= 세션을 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Set session errorAction 명령은 현재 스크립트 엔진 세션을 실행할 방법을 정의합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자, 지원 관리자, 보안 관리자 또는 스토리지 모니터 역할이 있어야 합니다.
+
+
+
+== 상황
+
+이 명령을 사용하기 위해 세션은 명령을 실행하는 기간입니다. 이 명령은 스토리지 배열에 대한 매개 변수를 영구적으로 설정하지 않습니다.
+
+
+
+== 구문
+
+[listing]
+----
+set session errorAction=(stop | continue)
+password="storageArrayPassword"
+performanceMonitorInterval=intervalValue
+performanceMonitorIterations=iterationValue
+----
+[listing]
+----
+set session errorAction=(stop | continue)
+password="storageArrayPassword"
+userRole=(admin | monitor)
+performanceMonitorInterval=intervalValue
+performanceMonitorIterations=iterationValue
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+"심부름"
+ a| 
+처리 중 오류가 발생할 경우 세션이 응답하는 방식. 오류가 발생하면 세션을 중지하도록 선택하거나 오류가 발생한 후 세션을 계속할 수 있습니다. 기본값은 '맨 위'입니다. (이 매개변수는 구문 오류가 아닌 실행 오류에 대한 작업을 정의합니다. 일부 오류 조건은 '계속' 값을 덮어쓸 수 있습니다.)
+
+
+
+ a| 
+"암호"
+ a| 
+스토리지 배열의 암호입니다. 암호는 큰따옴표(" ")로 묶어야 합니다.
+
+[NOTE]
+====
+클라이언트 유형이 'https'로 설정되면 이 매개 변수는 사용되지 않습니다. 암호는 CLI 명령 스크립트 실행 전에 지정해야 하며 스크립트 중간에 변경할 수 없습니다.
+
+====
+
+
+ a| 
+성능주기간격
+ a| 
+성능 데이터를 수집하는 빈도입니다. 데이터를 캡처할 폴링 간격의 정수 값(초)을 입력합니다. 값의 범위는 3초에서 3600초까지입니다. 기본값은 5초입니다.
+
+[NOTE]
+====
+클라이언트 유형이 'https'로 설정되면 이 매개 변수는 사용되지 않습니다. 대신 기본 간격 값을 변경하려면 영향을 받는 개별 명령에 이 매개 변수를 사용합니다. 저장 스토리지 어레이 성능 통계와 드라이브 성능 통계 보기 명령이 있습니다.
+
+====
+
+
+ a| 
+"성능 모노리반복들"
+ a| 
+캡처할 샘플 수입니다. 정수 값을 입력합니다. 캡처한 샘플의 값 범위는 1에서 3600까지입니다. 기본값은 5입니다.
+
+[NOTE]
+====
+클라이언트 유형이 'https'로 설정되면 이 매개 변수는 사용되지 않습니다. 대신 기본 반복 값을 변경하려면 영향을 받는 개별 명령에 이 매개 변수를 사용합니다. 저장 스토리지 어레이 성능 통계와 드라이브 성능 통계 보기 명령이 있습니다.
+
+====
+|===
+
+
+== 참고
+
+이 명령을 사용할 때 하나 이상의 선택적 매개 변수를 지정할 수 있습니다.
+
+암호는 관리 도메인의 각 스토리지 배열에 저장됩니다. 이전에 암호를 설정하지 않은 경우 암호가 필요하지 않습니다. 암호는 최대 30자의 영숫자 조합으로 구성할 수 있습니다. (Set storageArray 명령어를 이용하여 스토리지 배열 비밀번호를 정의할 수 있다.)
+
+폴링 간격과 지정한 반복 횟수는 세션을 종료할 때까지 유효합니다. 세션을 종료하면 폴링 간격과 반복 횟수가 기본값으로 돌아갑니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+5.20
+
+8.40 - 클라이언트 유형이 https로 설정되면 암호, userRole, performanceMonitorInterval, performanceMonitorIterations 매개 변수를 사용할 수 없습니다.

@@ -1,0 +1,59 @@
+---
+permalink: commands-a-z/reset-storagearray-sasphybaseline.html 
+sidebar: sidebar 
+keywords: reset, storage array, sas, phy, baseline 
+summary: 'reset storageArray SASPHYBaseline 명령은 모든 디바이스의 SAS 물리 계층(SAS PHY) 기준선을 재설정하고 .csv 파일에서 오류 목록을 제거합니다.' 
+---
+= 스토리지 배열 SAS PHY 기준선을 재설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+reset storageArray SASPHYBaseline 명령은 모든 디바이스의 SAS 물리 계층(SAS PHY) 기준선을 재설정하고 '.csv' 파일에서 오류 목록을 제거합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+'Save storageArray SASPHYCounts' 명령어를 실행하면 .csv 파일이 생성됩니다.
+
+[NOTE]
+====
+REset storageArray SASPHYBaseline의 이전 릴리즈에서는 드라이브를 제외한 모든 디바이스의 오류 수를 지웠습니다. 이제 'reset storageArray SASPHYBaseline' 명령이 다른 디바이스와 드라이브의 SAS PHY 기준선을 재설정합니다. 모든 오류는 '.csv' 파일에서 삭제됩니다.
+
+====
+
+
+== 구문
+
+[listing]
+----
+reset storageArray SASPHYBaseline
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+6.10
+
+7.83은 드라이브의 SAS PHY 기준을 재설정합니다.

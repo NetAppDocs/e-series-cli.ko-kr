@@ -1,0 +1,57 @@
+---
+permalink: commands-a-z/clear-emailalert-configuration.html 
+sidebar: sidebar 
+keywords: clear email, alert, configuration 
+summary: emailAlert 구성 지우기 명령은 e-메일 경고 구성을 기본값으로 지웁니다. 
+---
+= e-메일 알림 구성을 지웁니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+"emailAlert 설정 지우기" 명령은 e-메일 경고 구성을 기본값으로 지웁니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+clear emailAlert configuration
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "clear emailAlert configuration;"
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

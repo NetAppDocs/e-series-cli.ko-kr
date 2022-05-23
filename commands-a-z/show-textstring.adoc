@@ -1,0 +1,52 @@
+---
+permalink: commands-a-z/show-textstring.html 
+sidebar: sidebar 
+keywords: show, str 
+summary: show textstring 명령은 스크립트 파일의 텍스트 문자열을 표시합니다. 이 명령은 MS-DOS 및 UNIX의 echo 명령과 유사합니다. 
+---
+= 문자열을 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'show textstring' 명령은 스크립트 파일의 텍스트 문자열을 표시합니다. 이 명령어는 MS-DOS와 UNIX의 echo 명령과 비슷합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 스토리지 모니터 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+pass:quotes[show "_textString_"]
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 참고
+
+문자열을 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+6.10

@@ -1,0 +1,57 @@
+---
+permalink: commands-a-z/reset-storagearray-diagnosticdata.html 
+sidebar: sidebar 
+keywords: reset ,storage, array, diagnostic, data 
+summary: reset storageArray diagnosticData 명령은 스토리지 배열에 대한 진단 데이터를 포함하는 NVSRAM을 재설정합니다. 
+---
+= 스토리지 배열 진단 데이터를 재설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+reset storageArray diagnosticData" 명령은 스토리지 배열에 대한 진단 데이터를 포함하는 NVSRAM을 재설정합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+이 명령은 진단 데이터를 삭제하지 않습니다. 이 명령은 주의 필요 상태를 진단 데이터 사용 가능 상태로 바꿉니다. 새 데이터가 캡처되면 이전 진단 데이터가 자동으로 기록됩니다. 진단 데이터가 들어 있는 메모리는 컨트롤러가 재부팅될 때도 지워집니다. 진단 데이터를 재설정하기 전에 'Save storageArray diagnosticData' 명령어를 사용해 진단 데이터를 파일에 저장한다.
+
+[NOTE]
+====
+이 명령은 기술 지원 부서의 도움을 받아야 합니다.
+
+====
+
+
+== 구문
+
+[listing]
+----
+reset storageArray diagnosticData
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+6.16

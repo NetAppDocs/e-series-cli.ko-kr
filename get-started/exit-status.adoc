@@ -1,0 +1,639 @@
+---
+permalink: get-started/exit-status.html 
+sidebar: sidebar 
+keywords: exit, status 
+summary: 이 표에는 반환되는 종료 상태와 각 상태의 의미가 나열되어 있습니다. 
+---
+= 종료 상태입니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+이 표에는 반환되는 종료 상태와 각 상태의 의미가 나열되어 있습니다.
+
+[cols="3*"]
+|===
+| 상태 값 | 오류 이름 | 의미 
+
+
+ a| 
+0
+ a| 
+성공했습니다
+ a| 
+명령이 오류 없이 종료되었습니다.
+
+
+
+ a| 
+1
+ a| 
+유효하지 않은 사용
+ a| 
+명령이 오류로 인해 종료되었습니다. 오류에 대한 정보도 나타납니다.
+
+
+
+ a| 
+2
+ a| 
+script_file_des_not_exist
+ a| 
+스크립트 파일이 없습니다.
+
+
+
+ a| 
+3
+ a| 
+출력 파일을 여는 중 오류 발생
+ a| 
+출력 파일을 여는 동안 오류가 발생했습니다.
+
+
+
+ a| 
+4
+ a| 
+no_storage_array_at_address입니다
+ a| 
+스토리지 배열이 지정된 주소에 없습니다.
+
+
+
+ a| 
+5
+ a| 
+address_specify_different_array입니다
+ a| 
+주소는 서로 다른 스토리지 배열을 지정합니다.
+
+
+
+ a| 
+6
+ a| 
+no_SANAME_for_host_agent_connect입니다
+ a| 
+접속된 호스트 에이전트에 대한 스토리지 배열 이름이 없습니다.
+
+
+
+ a| 
+7
+ a| 
+SANAME_NOT_AT_ADDRESS
+ a| 
+스토리지 배열 이름이 지정된 주소에 없습니다.
+
+
+
+ a| 
+8
+ a| 
+SANAME_NOT_UNINAVAL
+ a| 
+스토리지 배열 이름이 고유하지 않습니다.
+
+
+
+ a| 
+9
+ a| 
+SANAME_NOT_IN_CONFIG_FILES
+ a| 
+스토리지 배열 이름이 구성 파일에 없습니다.
+
+
+
+ a| 
+10
+ a| 
+SA에 대한 _management_class_for_SA입니다
+ a| 
+스토리지 배열에 대한 관리 클래스가 없습니다.
+
+
+
+ a| 
+11
+ a| 
+Config_file_found에서 _SA_가 없습니다
+ a| 
+구성 파일에서 스토리지 배열을 찾을 수 없습니다.
+
+
+
+ a| 
+12
+ a| 
+Internal_error입니다
+ a| 
+내부 오류가 발생했습니다. 이 종료 상태는 명령줄에서 CLI 명령을 실행할 권한이 없음을 나타냅니다. 명령줄에서 모든 CLI 명령을 실행하려면 관리자 권한이 있어야 합니다.
+
+
+
+ a| 
+13
+ a| 
+잘못된 _script_syntax입니다
+ a| 
+잘못된 스크립트 구문을 찾았습니다.
+
+
+
+ a| 
+14
+ a| 
+통신할 수 없습니다
+ a| 
+컨트롤러가 스토리지 어레이와 통신할 수 없습니다.
+
+
+
+ a| 
+15
+ a| 
+duplicate_argument를 선택합니다
+ a| 
+중복 인수를 입력했습니다.
+
+
+
+ a| 
+16
+ a| 
+execution_error
+ a| 
+실행 오류가 발생했습니다.
+
+
+
+ a| 
+17
+ a| 
+NO_HOST_AT_ADDRESS
+ a| 
+호스트가 지정된 주소에 없습니다.
+
+
+
+ a| 
+18
+ a| 
+WWNAME_NOT_IN_CONFIG_FILES
+ a| 
+WWID가 구성 파일에 없습니다.
+
+
+
+ a| 
+19
+ a| 
+WWNAME_NOT_AT_ADDRESS
+ a| 
+WWID가 주소에 없습니다.
+
+
+
+ a| 
+20
+ a| 
+알 수 없는_IP입니다
+ a| 
+알 수 없는 IP 주소가 지정되었습니다.
+
+
+
+ a| 
+21
+ a| 
+PM_Config_file_corrupted
+ a| 
+이벤트 모니터 구성 파일이 손상되었습니다.
+
+
+
+ a| 
+22
+ a| 
+PM에게 _ 전달 _ 할 수 없습니다
+ a| 
+스토리지 배열이 이벤트 모니터와 통신할 수 없습니다.
+
+
+
+ a| 
+23
+ a| 
+UNEXIST_ALERT
+ a| 
+컨트롤러가 경고 설정을 쓸 수 없습니다.
+
+
+
+ a| 
+24
+ a| 
+잘못된 _organizer_노드
+ a| 
+잘못된 전자수첩 노드가 지정되었습니다.
+
+
+
+ a| 
+25
+ a| 
+Cmd_not_available.(Cmd_
+ a| 
+명령을 사용할 수 없습니다.
+
+
+
+ a| 
+26
+ a| 
+CONFIG_FILE_NOT_IN_DEVICE
+ a| 
+장치가 구성 파일에 없습니다.
+
+
+
+ a| 
+27
+ a| 
+구성 파일 업데이트 중 오류
+ a| 
+구성 파일을 업데이트하는 동안 오류가 발생했습니다.
+
+
+
+ a| 
+28
+ a| 
+unknown_host_error입니다
+ a| 
+알 수 없는 호스트 오류가 발생했습니다.
+
+
+
+ a| 
+29
+ a| 
+sender_contact_file_not_found
+ a| 
+보낸 사람 연락처 정보 파일을 찾을 수 없습니다.
+
+
+
+ a| 
+30
+ a| 
+read_sender_contact_file_failed를 참조하십시오
+ a| 
+보낸 사람 연락처 정보 파일을 읽을 수 없습니다.
+
+
+
+ a| 
+31
+ a| 
+UserData_file_exists
+ a| 
+userdata.txt 파일이 존재합니다.
+
+
+
+ a| 
+32
+ a| 
+bad_email_information_to_include가 있습니다
+ a| 
+e-메일 알림 메시지에 잘못된 '-i' 값이 지정되었습니다.
+
+
+
+ a| 
+33
+ a| 
+Bad_email_frequency(잘못된 이메일 빈도
+ a| 
+e-메일 알림 알림에 잘못된 "-f" 값이 지정되었습니다.
+
+
+
+ a| 
+34
+ a| 
+Option_Removed(옵션 제거)
+ a| 
+'-r' 옵션은 더 이상 지원되지 않습니다.
+
+
+
+ a| 
+35
+ a| 
+UNKNOWN_ALERT_PRIORITY 를
+ a| 
+잘못된 알림 심각도가 지정되었습니다.
+
+
+
+ a| 
+36
+ a| 
+password_필수 요소입니다
+ a| 
+작업을 수행하려면 관리자 또는 모니터 암호를 설정해야 합니다.
+
+
+
+ a| 
+37
+ a| 
+잘못된 _MONITOR_PASSWORD입니다
+ a| 
+잘못된 Monitor 암호를 입력했으므로 작업을 완료할 수 없습니다.
+
+
+
+ a| 
+38
+ a| 
+잘못된 _admin_암호입니다
+ a| 
+잘못된 관리자 암호를 입력했으므로 작업을 완료할 수 없습니다.
+
+
+
+ a| 
+39
+ a| 
+암호 _MAX_chars_를 초과했습니다
+ a| 
+입력한 암호가 문자 제한을 초과합니다.
+
+
+
+ a| 
+40
+ a| 
+잘못된 _monitor_token입니다
+ a| 
+이 어레이에서는 '-R' 모니터가 지원되지 않습니다. 유효한 역할을 사용하고 작업을 재시도하십시오.
+
+
+
+ a| 
+41
+ a| 
+ASUP_CONFIG_ERROR가 있습니다
+ a| 
+AutoSupport 구성 파일에 쓰거나 읽는 동안 오류가 발생했습니다. 이 작업을 다시 시도하십시오.
+
+
+
+ a| 
+42
+ a| 
+메일_서버_알 수 없음
+ a| 
+호스트 주소 또는 메일 서버 주소가 잘못되었습니다.
+
+
+
+ a| 
+43
+ a| 
+ASUP_SMTP_REPLY_ADDRESS_REQUIRED입니다
+ a| 
+ASUP 구성 테스트를 시도하는 동안 ASUP가 활성화된 정상 스토리지가 감지되지 않았습니다.
+
+
+
+ a| 
+44
+ a| 
+NO_ASUP_ARRAIOS_DETECTED
+ a| 
+ASUP 전달 유형이 SMTP인 경우 회신 이메일 요청이 필요합니다.
+
+
+
+ a| 
+45
+ a| 
+ASUP_INVALID_MAIL_RELAY_SERVER입니다
+ a| 
+ASUP 메일 릴레이 서버를 검증할 수 없습니다.
+
+
+
+ a| 
+46
+ a| 
+ASUP_INVALID_Sender_EMAIL입니다
+ a| 
+지정한 보낸 사람 전자 메일 주소는 올바른 형식이 아닙니다.
+
+
+
+ a| 
+47
+ a| 
+ASUP_INVALID_PAC_SCRIPT
+ a| 
+프록시 자동 구성(PAC) 스크립트 파일이 올바른 URL이 아닙니다.
+
+
+
+ a| 
+48
+ a| 
+ASUP_INVALID_PROXY_SERVER_HOST_ADDRESS
+ a| 
+지정한 호스트 주소를 찾을 수 없거나 잘못된 형식입니다.
+
+
+
+ a| 
+49
+ a| 
+ASUP_INVALID_PROXY_SERVER_PORT_NUMBER
+ a| 
+지정한 포트 번호가 잘못된 형식입니다.
+
+
+
+ a| 
+50
+ a| 
+ASUP_INVALID_AUTHENTICATION_PARAMETER
+ a| 
+지정한 사용자 이름 또는 암호가 잘못되었습니다.
+
+
+
+ a| 
+51
+ a| 
+ASUP_INVALID_DAILY_TIME_PARAMETER
+ a| 
+지정한 일별 시간 매개 변수가 잘못되었습니다.
+
+
+
+ a| 
+52
+ a| 
+ASUP_INVALID_DAY_OURCE_PARAMETER
+ a| 
+입력한 `-dayOfWeek ' 매개 변수가 잘못되었습니다.
+
+
+
+ a| 
+53
+ a| 
+ASUP_INVALID_WEEKLY_TIME_PARAMETER
+ a| 
+주간 시간 매개 변수가 잘못되었습니다.
+
+
+
+ a| 
+54
+ a| 
+ASUP_INVALID_schedule_parsing
+ a| 
+제공된 일정 정보를 구문 분석할 수 없습니다.
+
+
+
+ a| 
+55
+ a| 
+ASUP_INVALID_SA_지정했습니다
+ a| 
+잘못된 스토리지 배열 지정자가 제공되었습니다.
+
+
+
+ a| 
+56
+ a| 
+ASUP_INVALID_INPUT_ARCHIVE
+ a| 
+입력한 입력 아카이브가 잘못되었습니다. 입력 아카이브 매개변수는 ''-inputArchive=<n>' 형식이어야 합니다. 여기서 -n은 0에서 5까지의 정수입니다.
+
+
+
+ a| 
+57
+ a| 
+ASUP_INVALID_OUTPUT_LOG
+ a| 
+올바른 출력 로그를 지정하지 않았습니다.
+
+
+
+ a| 
+58
+ a| 
+ASUP_TRANSSION_FILE_COPY_ERROR
+ a| 
+AutoSupport 전송 로그 파일을 복사하는 동안 오류가 발생했습니다. 전송 로그가 없거나 데이터를 복사하려고 시도하는 중 IO 오류가 발생했습니다.
+
+
+
+ a| 
+59
+ a| 
+ASUP_DUPLICATE_Named_ARRA어레이
+ a| 
+이름이 같은 스토리지 배열을 두 개 이상 찾았습니다. 월드 와이드 이름 매개변수 "-w<WWID>"을(를) 사용하여 명령을 다시 시도하십시오.
+
+
+
+ a| 
+60
+ a| 
+ASUP_NO_specified_array_found를 찾을 수 없습니다
+ a| 
+n<storage-system-name> 매개 변수가 있는 지정된 스토리지 배열이 없거나 이 명령에서 지원되지 않습니다.
+
+
+
+ a| 
+61
+ a| 
+ASUP_NO_EXECTED_WWID_FOUND를 찾을 수 없습니다
+ a| 
+"-w<WWID>" 매개 변수가 있는 지정된 스토리지 배열이 없거나 이 명령에 대해 지원되지 않습니다.
+
+
+
+ a| 
+62
+ a| 
+ASUP_filtered_transmission_log_error입니다
+ a| 
+필터링된 전송 로그를 가져오는 동안 알 수 없는 오류가 발생했습니다.
+
+
+
+ a| 
+63
+ a| 
+ASUP_TRANSSION_ARCHIVE_NOT_EXPRY
+ a| 
+""-inputArchive=<n>" 매개변수로 지정된 AutoSupport 입력 아카이브 전송 로그가 존재하지 않습니다.
+
+
+
+ a| 
+64
+ a| 
+no_valid_rest_client_discovered.(No_valid_REST
+ a| 
+https를 통해 스토리지 시스템과 통신할 수 없습니다.
+
+
+
+ a| 
+65
+ a| 
+잘못된 _CLI_버전입니다
+ a| 
+클라이언트 CLI 버전이 스토리지 시스템에서 실행 중인 CLI 버전과 호환되지 않습니다.
+
+
+
+ a| 
+66
+ a| 
+사용자 이름 또는 암호가 잘못되었습니다
+ a| 
+입력한 사용자 이름 또는 암호가 잘못되었습니다.
+
+
+
+ a| 
+67
+ a| 
+untrusted_connection입니다
+ a| 
+스토리지 배열에 대한 보안 연결을 설정할 수 없습니다.
+
+
+
+ a| 
+68
+ a| 
+잘못된 _password_파일입니다
+ a| 
+암호 파일을 찾을 수 없거나 읽을 수 없습니다.
+
+|===

@@ -1,0 +1,150 @@
+---
+permalink: commands-a-z/set-tray-serviceallowedindicator.html 
+sidebar: sidebar 
+keywords: set, tray, service, action, allowed, indicator 
+summary: 'SET TRAY serviceAllowedIndicator 명령은 전원 팬 캐니스터, 상호 연결 배터리 캐니스터 또는 환경 서비스 모듈(ESM) 캐니스터에 있는 Service Action Allowed 표시등을 켜거나 끕니다.' 
+---
+= 트레이 서비스 작업 허용 표시기를 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Set tray serviceAllowedIndicator 명령은 전원 팬 캐니스터, 상호 연결 배터리 캐니스터 또는 환경 서비스 모듈(ESM) 캐니스터에 대해 Service Action Allowed 표시등을 켜거나 끕니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+스토리지 배열이 Service Action Allowed 표시등 기능을 지원하지 않는 경우 이 명령은 오류를 반환합니다. 스토리지 배열이 명령을 지원하지만 표시등을 켜거나 끌 수 없는 경우 이 명령은 오류를 반환합니다.
+
+컨트롤러 캐니스터의 Service Action Allowed 표시등을 켜거나 끄려면 Set controller serviceAllowedIndicator 명령을 사용합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+set tray pass:quotes[[_trayID_]]
+(powerFan [(left | right | top | bottom)] |
+interconnect |
+esm [(left | right | top | bottom)]) |
+battery [(left | right)] |
+fanCanister [(left | right)]  |
+powerCanister [(top | bottom)] |
+serviceAllowedIndicator=(on | off)
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+트레이
+ a| 
+전원 팬 캐니스터, 상호 연결 캐니스터, ESM 캐니스터 또는 배터리 캐니스터가 있는 트레이. 용지함 ID 값은 0 ~ 99입니다. 트레이 ID 값은 대괄호([])로 묶어야 합니다. 용지함 ID 값을 입력하지 않으면 컨트롤러 트레이의 트레이 ID가 기본값입니다.
+
+
+
+ a| 
+파워팬
+ a| 
+전원을 켜거나 끄려는 전원 팬 캐니스터의 Service Action Allowed(서비스 작업 허용) 표시등이 켜집니다. 유효한 파워 팬 캐니스터 식별자는 왼쪽, 오른쪽, 위쪽 또는 아래입니다. 전원 팬 캐니스터 식별자를 대괄호([ ])로 묶습니다.
+
+
+
+ a| 
+상호 연결
+ a| 
+상호 연결 배터리 캐니스터의 Service Action Allowed(서비스 조치 허용) 표시등
+
+
+
+ a| 
+ESM
+ a| 
+ESM 캐니스터에 대한 Service Action Allowed(서비스 작업 허용) 표시등. 유효한 ESM 캐니스터 식별자는 왼쪽, 오른쪽, 위쪽 또는 아래입니다.
+
+
+
+ a| 
+배터리
+ a| 
+배터리에 대한 서비스 조치 허용 표시등 유효한 배터리 식별자는 '왼쪽' 또는 '오른쪽'입니다.
+
+
+
+ a| 
+팬케이스
+ a| 
+팬 캐니스터에 대한 Service Action Allowed(서비스 작업 허용) 표시등. 유효한 팬 캐니스터 식별자는 '왼쪽' 또는 '오른쪽'입니다.
+
+
+
+ a| 
+파워캐니스터
+ a| 
+전원 캐니스터에 대한 Service Action Allowed(서비스 작업 허용) 표시등. 유효한 파워 캐니스터 식별자는 "상단" 또는 "하단"입니다.
+
+
+
+ a| 
+저빙AllowedIndicator를 선택합니다
+ a| 
+Service Action Allowed(서비스 작업 허용) 표시등을 켜거나 끄는 설정입니다. Service Action Allowed(서비스 작업 허용) 표시등을 켜려면 이 매개변수를 "On(켜짐)"으로 설정합니다. Service Action Allowed(서비스 작업 허용) 표시등을 끄려면 이 매개변수를 "off(꺼짐)"로 설정합니다.
+
+|===
+
+
+== 참고
+
+이 명령은 원래 CE6998 컨트롤러 트레이와 함께 사용하도록 정의되었습니다 CE6998 컨트롤러 트레이가 출시되기 전에 제공된 컨트롤러 트레이에서는 이 명령을 지원하지 않습니다
+
+
+
+== 예
+
+이 명령은 IP 주소가 155.155.155.155인 용지함 5의 왼쪽 ESM에 대해 허용되는 서비스 작업 표시등을 켭니다.
+
+[listing]
+----
+SMcli 123.145.167.214 123.145.167.215 -c "set tray [5]
+ESM [left] serviceAllowedIndicator=on;"
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+6.14는 다음 매개변수를 추가합니다.
+
+* 파워팬
+* 상호 연결
+
+
+6.16은 다음 매개변수를 추가합니다.
+
+* 트레이
+* ESM
+
+
+7.60은 'top'과 'bottom'이라는 식별자를 추가한다.
+
+7.60은 파워캐니스터와 팬캐니스터 파라미터를 추가한다.

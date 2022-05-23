@@ -1,0 +1,76 @@
+---
+permalink: commands-a-z/delete-syslog.html 
+sidebar: sidebar 
+keywords: delete, syslog, command, servers, configuration, alerts, array, support, role 
+summary: syslog 삭제 명령은 syslog 구성에서 하나 이상의 서버를 삭제하여 더 이상 경고를 수신하지 않도록 합니다. 
+---
+= syslog 서버를 삭제합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'syslog 삭제' 명령은 syslog 구성에서 하나 이상의 서버를 삭제하여 더 이상 경고를 수신하지 않도록 합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+
+delete syslog (allServers | serverAddresses pass:quotes[[_serverAddress1_ ... _serverAddressN_]])
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+올서버
+ a| 
+사용자가 모든 syslog 서버를 삭제할 수 있습니다.
+
+
+
+ a| 
+'세르베주소'
+ a| 
+사용자가 syslog 서버를 삭제할 수 있습니다. 서버를 대괄호([ ])로 묶습니다.
+
+|===
+
+
+== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "delete syslog allServers;
+
+SMcli -n Array1 -c "delete syslog serverAddresses ["serverName1.company.com"]";
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

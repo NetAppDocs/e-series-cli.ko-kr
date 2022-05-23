@@ -1,0 +1,118 @@
+---
+permalink: commands-a-z/show-volumegroup.html 
+sidebar: sidebar 
+keywords: show, volume, group 
+summary: show volumeGroup 명령은 볼륨 그룹에 대한 정보를 반환합니다. 
+---
+= 볼륨 그룹을 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'show volumeGroup' 명령은 볼륨 그룹에 대한 정보를 반환합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 스토리지 모니터 역할이 있어야 합니다.
+
+
+
+== 상황
+
+이 명령은 볼륨 그룹에 대한 다음 정보를 반환합니다.
+
+* 상태(온라인 또는 오프라인)
+* 용량
+* 현재 소유자(슬롯 A의 컨트롤러 또는 슬롯 B의 컨트롤러)
+* RAID 레벨
+* 드라이브 미디어 유형(HDD 또는 SSD)
+* 드라이브 인터페이스 유형(파이버 채널, iSCSI, InfiniBand, SAS)
+* 트레이 손실 방지(예 또는 아니요)
+* Secure Capable - 볼륨 그룹이 모든 보안 가능 드라이브로 구성되어 있는지 여부를 나타냅니다. FDE 드라이브 또는 FIPS 드라이브일 수 있습니다.
+* 보안 - 볼륨 그룹에 드라이브 보안이 설정되어 있는지 여부를 나타냅니다(이것을 보안 활성화라고 함).
+* 연결된 볼륨 및 사용 가능한 용량입니다
+* 연결된 드라이브
+* Data Assurance 기능 및 Data Assurance가 지원되는 볼륨 존재
+* 리소스 프로비저닝 기능
+
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+pass:quotes[show volumeGroup [_volumeGroupName_]]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+볼륨그룹
+ a| 
+정보를 표시할 볼륨 그룹의 이름입니다. 볼륨 그룹 이름은 대괄호([])로 묶어야 합니다.
+
+|===
+
+
+== 참고
+
+이 명령은 다음 예와 같이 볼륨 그룹 정보를 반환합니다.
+
+[listing]
+----
+Name:              SecureGroup
+
+      Status:         Optimal
+      Capacity:       120.000 GB
+      Current owner: Controller in slot A
+
+      Quality of Service (QoS) Attributes
+
+         RAID level:                  5
+         Drive media type:            Hard Disk Drive
+         Drive interface type:        SAS
+         Shelf loss protection:       No
+         Secure Capable:              Yes
+         Secure:                      No
+         Data Assurance (DA) capable: Yes
+         DA enabled volume present:   No
+         Resource-provisioned:           Yes
+
+
+      Total Volumes:          1
+         Standard volumes:    1
+         Repository volumes:  0
+         Free Capacity:       110.000 GB
+
+      Associated drives - present (in piece order)
+      Total drives present: 5
+
+         Tray     Slot
+         99       1
+         99       2
+         99       3
+         99       4
+         99       5
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+6.10

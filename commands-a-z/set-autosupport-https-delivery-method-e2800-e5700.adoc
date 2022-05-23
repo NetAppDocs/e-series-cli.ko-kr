@@ -1,0 +1,147 @@
+---
+permalink: commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html 
+sidebar: sidebar 
+keywords: 'Specify AutoSupport HTTP(S) delivery method (for individual E2800 or E5700 arrays)' 
+summary: 'set storageArray AutoSupport deliveryMethod 명령은 AutoSupport 메시지를 HTTP(S)로 보내기 위한 전달 방법을 설정합니다.' 
+---
+= AutoSupport HTTP(S) 제공 방법 지정(개별 E2800 또는 E5700 어레이)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+et storageArray AutoSupport deliveryMethod 명령은 AutoSupport 메시지를 HTTP(S)로 전송하기 위한 전달 방법을 설정합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+
+set storageArray autoSupport deliveryMethod={HTTP | HTTPS}
+   {direct | proxyConfigScript=pass:quotes["_proxyConfigScriptUrl_"] |
+proxyServer hostAddress=pass:quotes[_address_] portNumber=pass:quotes[_portNumber_]
+ [userName=pass:quotes["_username_"] password=pass:quotes["_password_"]]}
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'비열법'
+ a| 
+사용자가 AutoSupport 컬렉션의 전달 방법을 지정할 수 있습니다. 유효한 선택 항목은 다음과 같습니다.
+
+* 이메일
+* HTTP
+* HTTPS
+
+
+[NOTE]
+====
+이메일 방법이 구성된 경우 AutoSupport OnDemand 및 원격 진단 기능이 비활성화됩니다.
+
+====
+
+
+ a| 
+"이리"
+ a| 
+사용자가 HTTP 또는 HTTPS 프로토콜을 사용하여 대상 기술 지원 시스템에 직접 연결할 수 있습니다.
+
+
+
+ a| 
+프록시 구성 스크립트
+ a| 
+사용자가 프록시 자동 구성(PAC) 스크립트 파일의 위치를 지정할 수 있습니다
+
+
+
+ a| 
+프록시 서버
+ a| 
+사용자가 대상 기술 지원 시스템과의 연결을 설정하는 데 필요한 HTTP(S) 프록시 서버 세부 정보를 지정할 수 있습니다.
+
+
+
+ a| 
+호스트 주소
+ a| 
+사용자가 프록시 서버의 호스트 주소를 지정할 수 있습니다. proxyServer를 사용하는 경우 필수입니다.
+
+
+
+ a| 
+포트번호
+ a| 
+사용자가 프록시 서버의 포트 번호를 지정할 수 있습니다. proxyServer를 사용하는 경우 필수입니다.
+
+
+
+ a| 
+'사용자 이름'
+ a| 
+프록시 서버가 구성되어 있는 경우 사용자가 프록시 서버의 사용자 이름을 지정할 수 있습니다.
+
+
+
+ a| 
+"암호"
+ a| 
+프록시 서버 암호가 구성되어 있는 경우 사용자가 프록시 서버의 암호를 지정할 수 있습니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40
+
+
+
+== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray autoSupport deliveryMethod=HTTP direct;"
+
+SMcli -n Array1 -c "set storageArray autoSupport deliveryMethod=HTTP
+proxyConfigScript=\"http://company.com/~username/proxy.pac\";"
+
+SMcli -n Array1 -c "set storageArray autoSupport deliveryMethod=HTTPS
+proxyServer hostAddress=10.117.12.112 portNumber=8080 userName=\"tracyt\" password=\"1234456\";"
+
+SMcli completed successfully.
+----
+
+
+== 검증
+
+'tart storageArray AutoSupport deliveryTest' 명령어를 이용하여 시험메시지를 전송하여 전달 방법이 올바르게 설정되어 있는지 확인한다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

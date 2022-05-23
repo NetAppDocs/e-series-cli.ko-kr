@@ -1,0 +1,142 @@
+---
+permalink: commands-a-z/smcli-autosupportconfig-show.html 
+sidebar: sidebar 
+keywords: display, autosupport, bundle, collection, set 
+summary: SMcli -autoSupportConfig show 명령은 관리 도메인에 대한 AutoSupport 번들 수집 설정을 표시합니다. 이러한 설정은 AutoSupport를 설정한 관리 도메인의 모든 스토리지 시스템에 적용됩니다. 
+---
+= AutoSupport 번들 컬렉션 설정을 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'smcli -autoSupportConfig show' 명령은 관리 도메인에 대한 AutoSupport 번들 수집 설정을 표시합니다. 이러한 설정은 AutoSupport를 설정한 관리 도메인의 모든 스토리지 시스템에 적용됩니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 관리 도메인에 있는 모든 E2700 및 E5600 스토리지 어레이에 동시에 적용됩니다. E2800 또는 E5700 스토리지 어레이에는 적용되지 않습니다.
+
+
+
+== 상황
+
+이 명령의 명령 출력에는 다음 구성 정보가 표시됩니다.
+
+* AutoSupport 기능, AutoSupport OnDemand 기능 및 AutoSupport 원격 진단 기능의 이 관리 도메인에 대한 활성화 상태입니다
+* 구성된 전달 방법에 따라 달라지는 전달 매개 변수:
++
+** 전달 방법은 SMTP입니다. 대상 전자 메일 주소, 메일 릴레이 서버 및 보낸 사람 전자 메일 주소가 표시됩니다
+** 전송 방법은 HTTP 또는 HTTPS입니다.
++
+*** 직접 연결 대상 IP 주소가 표시됩니다
+*** 프록시 서버 연결 - 호스트 주소, 포트 번호 및 인증 세부 정보가 표시됩니다
+*** 자동 프록시 구성 스크립트(PAC) 연결 - 스크립트 위치가 표시됩니다
+
+
+
+
+* 각 스토리지 어레이에 대한 ASUP 지원 어레이, 섀시 일련 번호 및 어레이에 있는 컨트롤러의 IP 주소 등 배열 이름이 나열된 표
+
+
+
+
+== 상황
+
+[NOTE]
+====
+이 명령은 스크립트 명령이 아니라 SMcli 명령입니다. 명령줄에서 이 명령을 실행해야 합니다. 스토리지 관리 소프트웨어의 스크립트 편집기에서 이 명령을 실행할 수 없습니다.
+
+====
+[NOTE]
+====
+이 명령은 관리 도메인에 있는 모든 E2700 및 E5600 스토리지 어레이에 동시에 적용됩니다. E2800 또는 E5700 스토리지 어레이에는 적용되지 않습니다.
+
+====
+
+
+== 구문
+
+[listing]
+----
+SMcli -autoSupportConfig show
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+8.25
+
+
+
+== 활성화 상태의 출력 예
+
+[listing]
+----
+The AutoSupport feature is activated on this storage management station.
+The AutoSupport OnDemand feature is de-activated on this storage management station.
+The AutoSupport Remote Diagnostics feature is de-activated on this storage management station.
+----
+
+
+== SMTP 전달 방법의 출력 예
+
+[listing]
+----
+Delivery method: SMTP
+Destination email address:  http://asupserver.corp.netapp.com/put/AsupPut/
+Mail relay server: server.eng.netapp.com
+Sender email address:  user@netapp.com
+----
+
+
+== 직접 연결을 사용하는 HTTP 또는 HTTPS 전달 방법의 출력 예
+
+[listing]
+----
+Delivery method:  HTTP
+Destination IP address:  http://asupserver.corp.netapp.com/put/AsupPut/
+Connection:  Direct
+----
+
+
+== 프록시 연결을 사용하는 HTTP 전송 메서드의 출력 예
+
+[listing]
+----
+Connection:  Proxy server
+Host Address:  10.227.76.123
+Port number: 8080
+Authentication required: Yes
+User name: admin
+Password: **********
+----
+
+
+== 자동 프록시 구성 스크립트(PAC)를 사용한 HTTP 전송 방법의 출력 예
+
+[listing]
+----
+Connection: Automatic proxy configuration script (PAC)
+Script location: http://esgweb.eng.netapp.com/~user/proxy.pac
+----
+
+
+== 배열 테이블의 출력 예(모든 전달 방법)
+
+[listing]
+----
+
+Name  AutoSupport Capable   Chassis Serial Number   IP Address
+SA_1  Yes (enabled)         SX94500434              10.113.173.123, 10.113.173.456
+SA_2  Yes (disabled)        SX94607107              10.113.174.789, 10.113.174.345
+SA_3  No                    Not available           10.113.59.58, 10.113.59.59
+----

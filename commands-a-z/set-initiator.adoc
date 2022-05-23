@@ -1,0 +1,92 @@
+---
+permalink: commands-a-z/set-initiator.html 
+sidebar: sidebar 
+keywords: set, initiator 
+summary: set initiator 명령은 이니시에이터 객체를 업데이트합니다. 
+---
+= 초기자를 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Set initiator' 명령어는 initiator 객체를 갱신한다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+[NOTE]
+====
+이 명령은 사용되지 않는 를 대체합니다 xref:set-iscsiinitiator.adoc[iSCSI 이니시에이터를 설정합니다] 명령.
+
+====
+[NOTE]
+====
+이 명령은 iSCSI, iSER, NVMe over RoCE, NVMe over InfiniBand 및 NVMe over Fibre Channel에만 적용할 수 있습니다.
+
+====
+
+
+== 구문
+
+[listing]
+----
+
+set initiator (["initiatorName"] | <"initiatorQualifiedName">) ([userLabel="newInitiatorName"] |
+[host="newHostName"] | [chapSecret="newSecurityKey"])
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+"이니시에이터"
+ a| 
+속성을 설정할 이니시에이터 식별자를 지정할 수 있습니다. 이름은 큰따옴표(" ")로 묶습니다. 값이 정규화된 이름(예: iqn 또는 nqn)인 경우 값이 사용자 레이블 또는 꺾쇠 괄호(<>)인 경우 이름은 대괄호([])로 묶어야 합니다.
+
+
+
+ a| 
+'사용자 레이블'
+ a| 
+이니시에이터 개체에 대한 새 사용자 레이블을 입력할 수 있습니다. 새 사용자 레이블은 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+호스트
+ a| 
+호스트 포트가 연결된 새 호스트를 입력할 수 있습니다. 호스트 이름은 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+'챕시크릿
+ a| 
+피어 연결을 인증하는 데 사용할 새 보안 키를 입력할 수 있습니다. 보안 키는 큰따옴표(" ")로 묶어야 합니다. 이 매개변수는 iSCSI와 iSER 호스트 인터페이스 유형에만 적용됩니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+8.41

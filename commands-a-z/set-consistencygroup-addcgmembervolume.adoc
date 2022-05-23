@@ -1,0 +1,160 @@
+---
+permalink: commands-a-z/set-consistencygroup-addcgmembervolume.html 
+sidebar: sidebar 
+keywords: add, member, consistency, group 
+summary: set consistencyGroup addCGMemberVolume 명령은 새 기본 볼륨을 기존 정합성 보장 그룹에 구성원으로 추가합니다. 
+---
+= 일관성 그룹에 구성원을 추가합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Set ConsistencyGroup addCGMemberVolume' 명령은 새 기본 볼륨을 기존 정합성 보장 그룹에 구성원으로 추가합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+새 정합성 보장 그룹 구성원에 대한 기존 저장소 볼륨을 지정하거나 새 저장소 볼륨을 생성할 수 있습니다. 새 저장소 볼륨을 생성할 때 저장소 볼륨을 만들 기존 볼륨 그룹 또는 기존 디스크 풀을 식별합니다.
+
+
+
+== 기존 저장소 볼륨과 함께 사용할 구문입니다
+
+[listing, subs="+macros"]
+----
+
+set consistencyGroup ["consistencyGroupName"]
+addCGMemberVolume=pass:quotes["_baseVolumeName_"]
+repositoryVolume=pass:quotes["_volumeGroupName_"]
+----
+
+
+== 볼륨 그룹에서 새 저장소 볼륨을 생성할 때 사용하는 구문입니다
+
+[listing, subs="+macros"]
+----
+
+set consistencyGroup pass:quotes[["_consistencyGroupName_"]]
+addCGMemberVolume=pass:quotes["_baseVolumeName_"]
+repositoryVolume=pass:quotes[("_volumeGroupName_"] capacity=pass:quotes[_capacityValue_](KB|MB|GB|TB|bytes))
+----
+
+
+== 디스크 풀에서 새 저장소 볼륨을 생성할 때 사용하는 구문입니다
+
+[listing, subs="+macros"]
+----
+
+set consistencyGroup pass:quotes[["_consistencyGroupName_"]]
+addCGMemberVolume=pass:quotes["_baseVolumeName_"]
+repositoryVolume=pass:quotes[("_diskPoolName_"] capacity=pass:quotes[_capacityValue_](KB|MB|GB|TB|bytes))
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+일관성 그룹
+ a| 
+새 구성원 볼륨을 추가할 일관성 그룹의 이름입니다. 새 구성원 볼륨은 스냅샷 작업의 기본 볼륨입니다. 일관성 그룹 이름은 큰따옴표(" ")로 대괄호([ ]) 안에 묶어야 합니다.
+
+
+
+ a| 
+'addCGMemberVolume'
+ a| 
+추가할 기본 볼륨의 이름입니다. 볼륨 이름은 큰따옴표(" ")로 묶어야 합니다.
+
+지정된 볼륨이 기존 저장소 볼륨이거나 기존 스냅숏 볼륨인 경우 명령이 실패합니다.
+
+
+
+ a| 
+재량권
+ a| 
+이 매개 변수는 두 가지 기능을 수행합니다.
+
+* 저장소 볼륨이 있는 기존 일관성 그룹에서 이 매개 변수는 저장소 볼륨을 식별합니다.
+* 새 저장소 볼륨을 생성할 때 이 매개변수는 새 저장소 볼륨을 생성할 볼륨 그룹 또는 디스크 풀을 식별합니다.
+
+
+볼륨 이름은 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+용량
+ a| 
+볼륨 그룹 또는 디스크 풀에서 새 저장소 볼륨의 크기입니다. 크기는 바이트, KB, MB, GB 또는 TB 단위로 정의됩니다.
+
+|===
+
+
+== 참고
+
+이름에 영숫자, 밑줄(_), 하이픈(-) 및 파운드(#)를 조합하여 사용할 수 있습니다. 이름에는 최대 30자를 사용할 수 있습니다.
+
+정합성 보장 그룹은 스냅샷의 소스 볼륨인 기본 볼륨의 모음입니다. 각 기본 볼륨에서 동일한 스냅샷 작업을 수행할 수 있도록 일관성 그룹에 기본 볼륨을 수집합니다. 이 명령에서 _member_라는 용어는 스냅샷 작업의 기본 볼륨을 의미합니다. 배치 스타일 작업을 통해 정합성 보장 그룹 구성원과 연결된 스냅샷 이미지를 조작하고 스냅샷 이미지 간의 일관성을 유지할 수 있습니다.
+
+각 구성원 볼륨에는 해당 저장소 볼륨이 있어야 합니다. RepositoryVolume(볼륨 볼륨) 매개변수를 사용하여 구성원 볼륨과 리포지토리 볼륨 간의 관계를 정의할 수 있습니다. RepositoryVolume(재량체적) 매개변수는 다음 작업 중 하나를 수행할 수 있습니다.
+
+* 일관성 그룹에 연결된 기존 저장소 볼륨을 식별합니다.
+* 새 저장소 볼륨을 생성할 볼륨 그룹 또는 디스크 풀을 식별합니다.
+
+
+기존 리포지토리가 있는 일관성 그룹에 구성원을 추가하는 작업은 두 가지 용도로 사용됩니다.
+
+* RepositoryVolume' 매개 변수 없이 명령을 실행하여 완전히 새로운 저장소 볼륨을 생성할 수 있습니다. '볼륨 볼륨' 매개 변수 없이 명령을 실행하면 다른 모든 저장소 볼륨이 저장된 볼륨 그룹 또는 디스크 풀에 새 저장소 볼륨이 생성됩니다. 이 명령 사용의 예는 다음과 같습니다.
++
+[listing]
+----
+
+set consistencyGroup ["First_Images"] addCGMemberVolume="Data_020212"
+----
+* 저장소 볼륨이 비어 있고 다른 구성원 볼륨과 관련이 없는 경우 기존 저장소 볼륨을 다시 사용할 수 있습니다. 저장소 볼륨에 대한 특정 시퀀스 또는 관계를 유지하려면 이 작업을 수행할 수 있습니다. 기존의 빈 저장소 볼륨을 재사용하려면 저장소 볼륨의 이름을 알아야 합니다. 리포지토리 볼륨의 이름을 확인하려면 'show allVolumes summary' 명령을 사용합니다. 모든 저장소 볼륨 이름은 REPOS_XXXX 형식으로 되어 있습니다. 여기서 XXXX는 스토리지 관리 소프트웨어에서 생성되는 고유 식별자입니다. 이 명령 사용의 예는 다음과 같습니다.
++
+[listing]
+----
+
+set consistencyGroup ["First_Images"] addCGMemberVolume="Data_020212"
+repositoryVolume="repos_0011"
+----
+
+
+선택한 볼륨 그룹 또는 디스크 풀에 저장소 볼륨을 배치할 수 있습니다. 다른 저장소 볼륨과 동일한 위치에 저장소 볼륨을 가질 필요는 없습니다. 선택한 볼륨 그룹 또는 디스크 풀에 저장소 볼륨을 배치하려면 RepositoryVolume(볼륨) 매개 변수를 사용하고 볼륨 그룹 또는 디스크 풀 및 저장소 볼륨의 크기를 확인합니다. 이 명령 사용의 예는 다음과 같습니다.
+
+[listing]
+----
+
+set consistencyGroup ["First_Images"] addCGMemberVolume="Data_020212"
+repositoryVolume=("12" capacity=2 GB)
+----
+이 예에서 "[.code]""12""는 기존 볼륨 그룹 또는 기존 디스크 풀의 이름입니다. 용량 매개 변수는 저장소 볼륨 그룹에 대해 원하는 크기를 정의합니다.
+
+볼륨 그룹 또는 디스크 풀에서 새 저장소 볼륨을 생성할 때 볼륨 그룹 이름 및 용량 또는 디스크 풀 이름 및 용량 주위에 괄호를 포함해야 합니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+7.83

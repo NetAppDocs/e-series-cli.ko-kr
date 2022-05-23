@@ -1,0 +1,52 @@
+---
+section: get-started
+title: 시작하십시오
+entries:
+- title: 새로운 소식
+  url: "/get-started/changes-in-the-cli-and-script-commands-in-this-release.html"
+- title: 명령 포맷
+  entries:
+  - title: 개요
+    url: "/get-started/overview-format-commands.html"
+  - title: CLI 구조
+    entries:
+    - title: CLI 명령어의 구조
+      url: "/get-started/structure-of-a-cli-command.html"
+    - title: 대화식 모드
+      url: "/get-started/interactive-mode.html"
+    - title: CLI 래퍼 구문
+      url: "/get-started/cli-command-wrapper-syntax.html"
+    - title: CLI 매개 변수
+      url: "/get-started/command-line-parameters.html"
+  - title: 스크립트 명령 구조
+    entries:
+    - title: 스크립트 명령의 구조
+      url: "/get-started/structure-of-a-script-command.html"
+    - title: 스크립트 명령의 시놉시스입니다
+      url: "/get-started/synopsis-of-the-script-commands.html"
+    - title: 반복 구문 요소
+      url: "/get-started/recurring-syntax-elements.html"
+  - title: 명명 규칙
+    url: "/get-started/naming-conventions.html"
+  - title: 서식 규칙
+    entries:
+    - title: CLI 명령
+      url: "/get-started/formatting-cli-commands.html"
+    - title: 스크립트 명령
+      url: "/get-started/formatting-rules-for-script-commands.html"
+    - title: Windows PowerShell
+      url: "/get-started/formatting-cli-commands-in-windows-powershell.html"
+  - title: 자세한 오류 보고
+    url: "/get-started/detailed-error-reporting.html"
+  - title: 종료 상태입니다
+    url: "/get-started/exit-status.html"
+  - title: 스크립트 파일에 설명을 추가합니다
+    url: "/get-started/adding-comments-to-a-script-file.html"
+  - title: 스크립트 명령 지침
+    url: "/get-started/usage-guidelines.html"
+  - title: 펌웨어 호환성 수준
+    url: "/get-started/firmware-compatibility-levels.html"
+- title: SMcli https 모드
+  url: "/get-started/new-https-mode.html"
+- title: 볼륨 그룹 마이그레이션
+  url: "/get-started/learn-about-volume-group-migration.html"

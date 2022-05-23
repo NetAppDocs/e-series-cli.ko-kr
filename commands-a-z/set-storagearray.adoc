@@ -1,0 +1,545 @@
+---
+permalink: commands-a-z/set-storagearray.html 
+sidebar: sidebar 
+keywords: set, storage, array 
+summary: set storageArray 명령은 스토리지 배열의 속성을 정의합니다. 
+---
+= 스토리지 배열을 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'et storageArray' 명령어는 스토리지 배열의 속성을 정의합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+[NOTE]
+====
+펌웨어 버전 8.10에서는 cacheFlushStop 매개변수가 더 이상 사용되지 않으며 향후 스토리지 관리 소프트웨어 릴리스에서 제거될 예정입니다.
+
+====
+
+
+== 구문
+
+[listing]
+----
+set storageArray
+([autoLoadBalancingEnable=(TRUE | FALSE)]|
+[autoSupportMaintenanceWindow AutoSupport Maintenance Window parameters]
+[autoSupport schedule AutoSupport Schedule Parameters]|
+[autoSupportConfig (enable | disable)]|
+[autoSupportOnDemand (enable | disable)]|
+[autoSupportRemoteDiag (enable |disable)]|
+[cacheBlockSize=cacheBlockSizeValue]|
+[cacheFlushStart=cacheFlushStartSize]|
+[cacheFlushStop=cacheFlushStopSize]|
+[cacheMirrorDataAssuranceCheckEnable=(TRUE | FALSE)]|
+[controllerHealthImageAllowOverWrite]|
+[defaultHostType=("hostTypeName" |"hostTypeIdentifier")] |
+[directoryServer directory server parameters]|
+[externalKeyManagement external key management parameters]|
+[failoverAlertDelay=delayValue]|
+[hostConnectivityReporting (enable | disable)]|
+[icmpPingResponse=(TRUE | FALSE)]|
+[isnsIPV4ConfigurationMethod isns IPv4 Config Method Parameters]|
+[isnsIPv6Address=ipAddress]|
+[isnsListeningPort=listeningPortIPAddress]]|
+[isnsRegistration=(TRUE | FALSE)]|
+[learnCycleDate learn cycle parameters]|
+[localUsername=local user name parameters]|
+[loginBanner file="path_to_login_banner"]|
+[managementInterface restOnly={true | false}]|
+[mediaScanRate=(disabled | 1-30)]|
+[odxEnabled=(TRUE | FALSE)]|
+[password="password"]|
+[passwordLength=<INTEGER>]|
+[pqValidateOnReconstruct P/Q Validate on Reconstruct parameters]|
+[redundancyMode=(simplex | duplex)]|
+[revocationCheckSettings revocation check settings parameters]|
+[securityKey]|
+[symbol SYMbol user name and password parameters]|
+[syslog syslog parameters]|
+[time]|
+[trayPositions=(controller | trayID ... trayIDn)]|
+[unnamedDiscoverySession=(TRUE | FALSE)]|
+[userLabel="storageArrayName"]|
+[userSession sessionTimeout=n]|
+[vaaiEnabled=(TRUE | FALSE)])
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'autoLoadBalancingEnable'
+ a| 
+이 매개 변수는 컨트롤러에서 자동 로드 밸런싱을 사용합니다. 이 옵션을 활성화하려면 이 매개변수를 "TRUE"로 설정하십시오. 이 옵션을 비활성화하려면 이 매개변수를 'false'로 설정합니다.
+
+[NOTE]
+====
+자동 로드 밸런싱 기능이 활성화되면 호스트 연결 보고 기능도 활성화됩니다.
+
+====
+
+
+ a| 
+AutoSupport 일정
+ a| 
+AutoSupport 메시지가 전송되는 요일과 주별 시간 및 요일을 설정합니다.
+
+
+
+ a| 
+자동 지원 구성
+ a| 
+펌웨어가 중요한 MEL 이벤트를 감지할 때마다 지원 데이터를 자동으로 수집하는 설정입니다. 이 매개 변수에는 다음 값이 있습니다.
+
+* Enable(활성화) -- 지원 데이터 수집을 켭니다
+* 불가능하며, 지원 데이터 수집을 끕니다
+
+
+다음 조건에서만 이 매개 변수를 사용합니다.
+
+* 스토리지 어레이에서는 ASUP(AutoSupport) 기능을 사용할 수 없습니다
+* 이전에 이 매개 변수를 사용한 스토리지 배열의 구성을 지원합니다
+
+
+[NOTE]
+====
+ASUP 명령에는 이 매개 변수를 사용할 수 없습니다.
+
+====
+
+
+ a| 
+자동 지원 유지보수창
+ a| 
+AutoSupport 유지 관리 창 기능을 켜거나 끄고 기능을 구성합니다.
+
+
+
+ a| 
+캐시 블록 크기
+ a| 
+캐시 관리에 컨트롤러가 사용하는 캐시 블록 크기입니다. 유효한 값은 4인치(4KB), 8인치(8KB), 16인치(16KB) 또는 32인치(32KB)입니다.
+
+
+
+ a| 
+"cacheMirrorDataAssuranceCheckEnable"을 참조하십시오
+ a| 
+이 매개 변수를 사용하면 컨트롤러에서 캐시 미러 데이터 보증 검사를 수행할 수 있습니다. 이 옵션을 활성화하려면 이 매개변수를 "TRUE"로 설정하십시오. 이 옵션을 비활성화하려면 이 매개변수를 'false'로 설정합니다.
+
+
+
+ a| 
+캐시플래쉬스타트
+ a| 
+캐시 플러시를 발생시키는 캐시의 기록되지 않은 데이터 비율입니다. 0에서 100까지의 정수 값을 사용하여 백분율을 정의합니다. 기본값은 80입니다.
+
+
+
+ a| 
+캐시플래쉬스스톱
+ a| 
+[NOTE]
+====
+이 매개 변수는 더 이상 사용되지 않으며 향후 릴리즈에서 제거될 예정입니다.
+
+====
+캐시 플러시를 중지하는 캐시에 기록되지 않은 데이터의 비율입니다. 0에서 100까지의 정수 값을 사용하여 백분율을 정의합니다. 이 값은 cacheFlushStart 매개 변수의 값보다 작아야 합니다.
+
+
+
+ a| 
+controllerHealthImageAllowOverWrite입니다
+ a| 
+컨트롤러 상태 이미지 기능을 지원하는 스토리지 어레이에서 새 컨트롤러 상태 이미지가 기존 컨트롤러 상태 이미지를 덮어쓸 수 있도록 컨트롤러에 플래그를 설정합니다.
+
+
+
+ a| 
+"defaultHostType"입니다
+ a| 
+컨트롤러가 연결되어 있고 구성되지 않은 호스트 포트의 기본 호스트 유형입니다. 스토리지 배열에 유효한 호스트 유형 목록을 생성하려면 'show storageArray hostTypeTable' 명령어를 실행합니다. 호스트 유형은 이름 또는 숫자 인덱스로 식별됩니다. 호스트 유형 이름은 큰따옴표(" ")로 묶어야 합니다. 호스트 유형 숫자 식별자는 큰따옴표로 묶지 마십시오.
+
+
+
+ a| 
+디르토리서버다
+ a| 
+역할 매핑을 포함하여 디렉토리 서버 구성을 업데이트합니다.
+
+
+
+ a| 
+외부키관리
+ a| 
+외부 키 관리 서버 주소 및 포트 번호를 구성합니다
+
+
+
+ a| 
+'failoverAlertDelay'
+ a| 
+페일오버 경고 지연 시간(분)입니다. 지연 시간의 유효한 값은 0분에서 60분까지입니다. 기본값은 5입니다.
+
+
+
+ a| 
+호스트연결보고
+ a| 
+이 매개 변수를 사용하면 컨트롤러에서 호스트 연결 보고를 사용할 수 있습니다. 이 옵션을 활성화하려면 이 매개변수를 "enable"로 설정하십시오. 이 옵션을 비활성화하려면 이 매개변수를 DISABLE(비활성화) 로 설정합니다.
+
+[NOTE]
+====
+자동 로드 밸런싱이 활성화된 상태에서 호스트 연결 보고를 비활성화하려고 하면 오류가 발생합니다. 먼저 자동 로드 밸런싱 기능을 비활성화한 다음 호스트 연결 보고 기능을 비활성화합니다.
+
+====
+[NOTE]
+====
+자동 로드 밸런싱이 비활성화된 경우 호스트 연결 보고를 활성 상태로 유지할 수 있습니다.
+
+====
+
+
+ a| 
+"icmpPingResponse"
+ a| 
+이 매개변수는 Echo Request 메시지를 켜거나 끕니다. Echo Request 메시지를 켜려면 매개 변수를 "true"로 설정합니다. Echo Request 메시지를 끄려면 매개변수를 'false'로 설정합니다.
+
+
+
+ a| 
+isnsIPv4ConfigurationMethod
+ a| 
+iSNS 서버 구성을 정의하는 데 사용할 방법입니다. '정적'을 선택하여 IPv4 iSNS 서버의 IP 주소를 입력할 수 있습니다. IPv4의 경우 DHCP(Dynamic Host Configuration Protocol) 서버에서 DIHCP를 입력하여 iSNS 서버 IP 주소를 선택하도록 선택할 수 있습니다. DHCP를 활성화하려면 isnsIPv4Address 매개변수를 0.0.0.0으로 설정해야 합니다.
+
+
+
+ a| 
+isnsIPv6Address
+ a| 
+iSNS 서버에 사용할 IPv6 주소입니다.
+
+
+
+ a| 
+isnsListeningPort
+ a| 
+iSNS 서버 수신 대기 포트에 사용할 IP 주소입니다. 수신 포트의 값 범위는 49152 ~ 65535. 기본값은 '53205'입니다.
+
+수신 대기 포트는 서버에 있으며 다음 작업을 수행합니다.
+
+* 들어오는 클라이언트 연결 요청을 모니터링합니다
+* 서버에 대한 트래픽을 관리합니다
+
+
+클라이언트가 서버와 네트워크 세션을 요청하면 수신기는 실제 요청을 받습니다. 클라이언트 정보가 수신기 정보와 일치하면 리스너는 데이터베이스 서버에 대한 연결을 부여합니다.
+
+
+
+ a| 
+isnsRegistration
+ a| 
+이 매개 변수는 스토리지 배열을 iSNS 서버의 iSCSI 타겟으로 나열합니다. iSNS 서버에 스토리지 배열을 등록하려면 이 매개변수를 "true"로 설정합니다. iSNS 서버에서 스토리지 배열을 제거하려면 이 매개변수를 "false"로 설정합니다.
+
+[NOTE]
+====
+'set storageArray' 명령어를 실행할 때는 다른 파라미터와 함께 isnsRegistration 파라미터를 사용할 수 없습니다.
+
+====
+iSNS 등록에 대한 자세한 내용은 'et storageArray isnsRegistration' 명령어를 참조한다.
+
+
+
+ a| 
+'learnCycleDate'입니다
+ a| 
+컨트롤러 배터리 학습 주기를 설정합니다.
+
+
+
+ a| 
+'localUsername'입니다
+ a| 
+로컬 사용자 이름 암호 또는 특정 역할에 대한 기호 암호를 설정할 수 있습니다.
+
+
+
+ a| 
+로기배너
+ a| 
+로그인 배너로 사용할 텍스트 파일을 업로드할 수 있습니다. 배너 텍스트에는 SANtricity System Manager에서 세션을 설정하기 전에 또는 명령을 실행하기 전에 사용자에게 제공되는 권장 사항 및 동의 메시지가 포함될 수 있습니다
+
+
+
+ a| 
+'managementInterface'입니다
+ a| 
+컨트롤러의 관리 인터페이스를 변경합니다. 스토리지 어레이와 관리 소프트웨어 간에 기밀성을 강화하거나 외부 툴에 액세스하도록 관리 인터페이스 유형을 변경합니다.
+
+
+
+ a| 
+'메디스캔레이트'
+ a| 
+미디어 검사가 실행되는 기간(일)입니다. 유효한 값은 미디어 스캔을 끄는 비활성화 또는 1일에서 30일로, 1일은 가장 빠른 스캔 속도이고 30일은 가장 느린 스캔 속도입니다. 비활성화(dissabled) 또는 1에서 30까지 값을 사용하면 미디어 스캔이 작동하지 않습니다.
+
+
+
+ a| 
+'odxEnabled'
+ a| 
+스토리지 어레이에 대한 ODX(Offloaded Data Transfer)를 설정하거나 해제합니다.
+
+
+
+ a| 
+"암호"
+ a| 
+스토리지 배열의 암호입니다. 암호는 큰따옴표(" ")로 묶어야 합니다.
+
+[NOTE]
+====
+8.40 릴리즈에서는 이 매개 변수가 더 이상 사용되지 않습니다. 대신 암호 또는 adminPassword 매개 변수와 함께 localUsername 또는 기호 '기호' 매개 변수를 사용합니다.
+
+====
+
+
+ a| 
+패스워드길이
+ a| 
+새 암호나 업데이트된 모든 암호에 필요한 최소 길이를 설정할 수 있습니다. 0에서 30 사이의 값을 사용합니다.
+
+
+
+ a| 
+pqValidateOnReconstruct
+ a| 
+재구성 기능에 대한 P/Q 검증을 수정합니다.
+
+
+
+ a| 
+재당시모드
+ a| 
+단일 컨트롤러가 있는 경우 'Simplex' 모드를 사용합니다. 2개의 컨트롤러가 있는 경우 duplex 모드를 사용합니다.
+
+
+
+ a| 
+보컬체크 설정
+ a| 
+해지 확인을 활성화 또는 비활성화하고 OCSP(온라인 인증서 상태 프로토콜) 서버를 구성할 수 있습니다.
+
+
+
+ a| 
+'치어키'
+ a| 
+드라이브 보안 기능을 구현하기 위해 스토리지 배열 전체에서 사용되는 내부 보안 키를 설정합니다.
+
+[NOTE]
+====
+내부 보안 키에 사용됩니다. 외부 키 관리 서버를 사용할 때는 create storageArray securityKey 명령을 사용합니다.
+
+====
+
+
+ a| 
+'기호'
+ a| 
+특정 역할에 대한 기호 암호를 설정할 수 있습니다.
+
+
+
+ a| 
+'이즈로그'
+ a| 
+syslog 서버 주소, 프로토콜 또는 포트 번호를 변경할 수 있습니다.
+
+
+
+ a| 
+시간
+ a| 
+컨트롤러 시계를 이 명령을 실행하는 호스트의 시계와 동기화하여 스토리지 배열의 두 컨트롤러에서 모두 시계를 설정합니다.
+
+
+
+ a| 
+'묘사를'
+ a| 
+모든 용지함 ID의 목록입니다. 목록의 트레이 ID 순서는 컨트롤러 트레이 및 스토리지 배열의 드라이브 트레이 위치를 정의합니다. 유효한 값은 0에서 99까지입니다. 공백으로 구분된 용지함 ID 값을 입력하십시오. 트레이 ID 값 목록을 괄호로 묶습니다. 컨트롤러 트레이에 유효한 트레이 위치 값 범위에 없는 미리 정의된 식별자가 있는 스토리지 배열의 경우 "컨트롤러" 값을 사용합니다.
+
+[NOTE]
+====
+펌웨어 릴리스 6.14 이후에는 컨트롤러 옵션이 유효하지 않습니다.
+
+====
+
+
+ a| 
+"UnnamedDiscoverySession"입니다
+ a| 
+스토리지 배열이 명명되지 않은 검색 세션에 참여할 수 있도록 합니다.
+
+
+
+ a| 
+'사용자 레이블'
+ a| 
+스토리지 배열의 이름입니다. 스토리지 배열 이름은 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+'userSession
+ a| 
+System Manager에서 시간 제한을 설정하여 지정된 시간 이후에 비활성 세션의 연결을 끊을 수 있습니다.
+
+
+
+ a| 
+'바가이Enabled'
+ a| 
+스토리지 어레이에 대한 VMware VAAI(vStorage API Array Architecture)를 설정하거나 해제합니다
+
+|===
+
+
+== 참고
+
+isnsRegistration을 제외하고 이 명령을 사용할 때 하나 이상의 선택적 매개 변수를 지정할 수 있습니다.
+
+
+
+== 자동 지원 데이터
+
+[NOTE]
+====
+ASUP 명령에는 이 매개 변수를 사용할 수 없습니다.
+
+====
+이 옵션을 설정하면 MEL(Critical Major Event Log) 이벤트가 감지될 때마다 스토리지 배열에 대한 모든 구성 및 상태 정보가 반환됩니다. 구성 및 상태 정보는 개체 그래프의 형태로 반환됩니다. 오브젝트 그래프에는 스토리지 어레이에 대한 모든 관련 논리/물리적 오브젝트 및 관련 상태 정보가 포함되어 있습니다.
+
+'et storageArray autoSupportConfig' 명령어는 다음과 같은 방법으로 구성 및 상태 정보를 수집한다.
+
+* 구성 및 상태 정보의 자동 수집은 72시간마다 수행됩니다. 구성 및 상태 정보는 스토리지 배열 zip 보관 파일에 저장됩니다. 아카이브 파일에 아카이브 파일을 관리하는 데 사용되는 타임스탬프가 있습니다.
+* 각 스토리지 배열에 대해 2개의 스토리지 배열 zip 아카이브 파일이 유지됩니다. Zip 보관 파일은 드라이브에 보관됩니다. 72시간을 초과한 후에는 새 주기 동안 가장 오래된 아카이브 파일을 항상 덮어씁니다.
+* 이 명령을 사용하여 구성 및 상태 정보의 자동 수집을 사용하도록 설정하면 초기 정보 수집이 시작됩니다. 명령을 실행한 후 정보를 수집하면 아카이브 파일 하나를 사용할 수 있고 타임 스탬프 주기가 시작됩니다.
+
+
+둘 이상의 스토리지 배열에 대해 'et storageArray autoSupportConfig' 명령을 실행할 수 있습니다.
+
+
+
+== 캐시 블록 크기
+
+캐시 블록 크기를 정의할 때 일반적으로 작고 임의적인 I/O 스트림이 필요한 스토리지 시스템에 4KB 캐시 블록 크기를 사용합니다. 대부분의 입출력 스트림이 4KB보다 크지만 8KB보다 작은 경우 8KB 캐시 블록 크기를 사용합니다. 대용량 데이터 전송, 순차 또는 고대역폭 애플리케이션이 필요한 스토리지 어레이에는 16KB 캐시 블록 크기 또는 32KB 캐시 블록 크기를 사용합니다.
+
+"cacheBlockSize" 매개변수는 스토리지 배열의 모든 볼륨에 대해 지원되는 캐시 블록 크기를 정의합니다. 모든 컨트롤러 유형이 모든 캐시 블록 크기를 지원하는 것은 아닙니다. 중복 구성의 경우 이 매개 변수는 스토리지 어레이 내의 두 컨트롤러가 소유하는 모든 볼륨을 포함합니다.
+
+
+
+== 캐시 플러시가 시작됩니다
+
+값을 정의하여 캐시 플러시를 시작하면 값이 너무 낮으면 호스트 읽기에 필요한 데이터가 캐시에 없을 가능성이 높아집니다. 또한 값이 낮으면 캐시 레벨을 유지하는 데 필요한 드라이브 쓰기 횟수가 증가하여 시스템 오버헤드가 증가하고 성능이 저하됩니다.
+
+
+
+== 기본 호스트 유형입니다
+
+호스트 유형을 정의할 때 스토리지 파티셔닝을 사용하는 경우 기본 호스트 유형은 기본 그룹에 매핑된 볼륨에만 영향을 줍니다. 스토리지 파티셔닝이 설정되어 있지 않으면 스토리지 어레이에 연결된 모든 호스트가 동일한 운영 체제를 실행하고 기본 호스트 유형과 호환되어야 합니다.
+
+
+
+== 미디어 스캔 속도
+
+미디어 검사는 최적의 상태를 가진 스토리지 배열의 모든 볼륨에서 실행되며, 진행 중인 수정 작업이 없으며, 'ediaScanRate' 매개 변수가 활성화되어 있습니다. '볼륨 설정' 명령을 사용하여 'ediaScanRate' 파라미터를 활성화 또는 비활성화합니다.
+
+
+
+== 암호
+
+암호는 각 스토리지 배열에 저장됩니다. 최상의 보호를 위해 암호는 다음 기준을 충족해야 합니다.
+
+* 암호는 8자에서 30자 사이여야 합니다.
+* 암호는 하나 이상의 대문자를 포함해야 합니다.
+* 암호는 하나 이상의 소문자를 포함해야 합니다.
+* 암호에는 숫자가 하나 이상 포함되어야 합니다.
+* 암호에는 영숫자 이외의 문자가 하나 이상 포함되어야 합니다(예: <>@+).
+
+
+[NOTE]
+====
+스토리지 배열에서 전체 디스크 암호화 드라이브를 사용하는 경우 스토리지 배열 암호에 이러한 기준을 사용해야 합니다.
+
+====
+[NOTE]
+====
+암호화된 전체 디스크 암호화 드라이브에 대한 보안 키를 생성하려면 먼저 스토리지 배열의 암호를 설정해야 합니다.
+
+====
+
+
+== 최소 펌웨어 레벨입니다
+
+5.00은 defaultHostType 매개변수를 추가합니다.
+
+5.40은 'failoverAlertDelay' 파라미터를 추가합니다.
+
+6.10은 "재조절 모드", "트레이시실션", "시간" 매개 변수를 추가합니다.
+
+6.14는 '알람' 파라미터를 추가한다.
+
+7.10에는 icmpPingResponse, unnamedDiscoverySession, isnsIPv6Address, isnsIPv4ConfigurationMethod 매개 변수가 추가됩니다.
+
+7.15는 더 많은 캐시 블록 크기와 'learnCycleDate' 매개 변수를 추가합니다.
+
+7.86은 더 이상 사용되지 않아 alarm 파라미터를 제거하고 coreDumpAllowOverWrite 파라미터를 추가합니다.
+
+8.10 cacheFlushStop 매개 변수를 사용하지 않습니다.
+
+8.20은 'odxEnabled' 및 'vaaaaEnabled' 파라미터를 추가합니다.
+
+8.20은 "cacheBlockSize" 매개변수를 업데이트하여 4의 cacheBlockSizeValue를 추가합니다(4KB).
+
+8.20은 coreDumpAllowOverWrite 매개 변수를 controllerHealthImageAllowOverWrite 매개 변수로 대체합니다.
+
+8.30은 autoLoadBalancingEnable 매개 변수를 추가합니다.
+
+8.40은 사용자 이름 변수 및 암호 또는 adminPassword 매개변수와 함께 사용되는 localUsername 매개 변수를 추가합니다. 또한 사용자 이름 변수 및 암호 또는 adminPassword 매개변수와 함께 사용되는 '기호' 매개 변수를 추가합니다.
+
+8.40은 암호 및 userRole 독립 실행형 매개 변수를 사용하지 않습니다.
+
+8.40은 'managementInterface' 파라미터를 추가합니다.
+
+8.40은 'externalKeyManagement' 파라미터를 추가합니다.
+
+8.41은 cacheMirrorDataAssuranceCheckEnable, directoryServer, userSession, passwordLength, loginBanner 매개 변수를 추가합니다.
+
+8.42에는 pqValidateOnReconstruct, Syslog, hostConnectivityReporting, revocationCheckSettings 매개 변수가 추가됩니다.

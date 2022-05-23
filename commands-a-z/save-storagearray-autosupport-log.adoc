@@ -1,0 +1,94 @@
+---
+permalink: commands-a-z/save-storagearray-autosupport-log.html 
+sidebar: sidebar 
+keywords: retrieve, autosupport, log, individual, E2800, E5700, arrays 
+summary: save storageArray AutoSupport log 명령을 사용하여 AutoSupport 로그 파일을 볼 수 있습니다. 이 파일은 상태, 전송 작업 기록 및 AutoSupport 메시지 전송 중 발생한 오류에 대한 정보를 제공합니다. 이 로그는 AutoSupport가 지원되는 모든 스토리지 어레이에서 사용할 수 있습니다. 
+---
+= AutoSupport 로그를 조회한다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Save storageArray AutoSupport log' 명령어를 통해 AutoSupport 로그 파일을 볼 수 있다. 이 파일은 상태, 전송 작업 기록 및 AutoSupport 메시지 전송 중 발생한 오류에 대한 정보를 제공합니다. 이 로그는 AutoSupport가 지원되는 모든 스토리지 어레이에서 사용할 수 있습니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+이 명령을 사용하면 두 가지 유형의 로그를 볼 수 있습니다.
+
+* 현재 로그 -- 이 시점에서 캡처한 로그를 봅니다.
+* 보관 로그 -- 보관된 파일에서 로그를 봅니다.
+
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+save storageArray autoSupport log [inputArchive=n]
+file=pass:quotes["_filename_"]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+인퍼아카이브
+ a| 
+아카이브 파일이 0부터 시작하는 정수인 "n"인 보관된 AutoSupport 로그를 지정할 수 있습니다.
+
+[NOTE]
+====
+이 매개 변수를 생략하면 현재 AutoSupport 로그(이 시점에 캡처됨)를 선택할 수 있습니다.
+
+====
+
+
+ a| 
+'파일'
+ a| 
+출력 ASUP 전송 로그 파일 이름을 지정할 수 있습니다.
+
+[NOTE]
+====
+이 매개 변수는 필수입니다.
+
+====
+|===
+
+
+=== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "save storageArray autoSupport log inputArchive=0 file=\"ASUPTransmissionLog\";"
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

@@ -1,0 +1,81 @@
+---
+permalink: commands-a-z/smcli-autosupportschedule-show.html 
+sidebar: sidebar 
+keywords: display, autosupport, message, collection, schedule 
+summary: SMcli -autoSupportSchedule show 명령은 매일 및 매주 AutoSupport 메시지를 수집하고 처리하는 일정을 표시합니다. 
+---
+= AutoSupport 메시지 수집 일정을 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'smcli -autoSupportSchedule show' 명령은 매일 및 매주 AutoSupport 메시지를 수집하고 처리하는 스케줄을 표시합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 관리 도메인에 있는 모든 E2700 및 E5600 스토리지 어레이에 동시에 적용됩니다. E2800 또는 E5700 스토리지 어레이에는 적용되지 않습니다.
+
+
+
+== 상황
+
+[NOTE]
+====
+이 명령은 스크립트 명령이 아니라 SMcli 명령입니다. 명령줄에서 이 명령을 실행해야 합니다. 스토리지 관리 소프트웨어의 스크립트 편집기에서 이 명령을 실행할 수 없습니다.
+
+====
+자동 지원 번들 컬렉션의 예약에 대해서는 다음을 참조하십시오.
+
+* AutoSupport가 활성화된 경우 관리 소프트웨어는 일별 AutoSupport 메시지와 주별 AutoSupport 메시지를 모두 전송합니다.
+* 관리 소프트웨어는 일별 및 주별 메시지의 시간과 주별 메시지의 요일을 무작위로 선택합니다.
+* 관리 소프트웨어는 관리 도메인 내의 두 스토리지 어레이가 예약된 AutoSupport 메시지를 동시에 전송하지 않도록 모든 시도를 합니다.
+* 'smcli -autoSupportSchedule reset' 명령을 사용하면 관리 도메인의 스토리지 어레이에 대해 매일 및 매주 메시지를 보낼 기본 시간의 범위(시간 단위 단위)를 지정할 수 있습니다. 주별 메시지 스케줄의 경우 명령을 사용하여 원하는 요일을 선택합니다.
+
+
+
+
+== 구문
+
+[listing]
+----
+SMcli -autoSupportSchedule show
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+8.25
+
+
+
+== 예
+
+출력에는 기본 설정 시간 범위, 그 다음에 일별 및 주별 일정이 표시됩니다.
+
+[NOTE]
+====
+두 스케줄 및 원하는 요일에 대해 기본 설정 시간 범위를 선택하지 않으면 이 명령은 스토리지 관리 소프트웨어가 임의로 선택한 일일 스케줄과 주간 스케줄을 표시합니다.
+
+====
+[listing]
+----
+SMcli -autoSupportSchedule show
+The AutoSupport daily schedule preferred time range is from 12:00 AM to 01:00 AM.
+The AutoSupport weekly schedule preferred time range is from 10:00 PM to 11:00 PM on Thursday, Saturday.
+
+Name           Daily Schedule         Weekly Schedule
+Accounting     12:55 AM               10:08 PM on Thursdays
+Finance        12:02 AM               10:30 PM on Saturdays
+
+SMcli completed successfully.
+----

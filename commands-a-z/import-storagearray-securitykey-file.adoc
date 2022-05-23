@@ -1,0 +1,115 @@
+---
+permalink: commands-a-z/import-storagearray-securitykey-file.html 
+sidebar: sidebar 
+keywords: import, storage, array, security, file, command, unlock, disk, encryption, context, syntax, firmware level, role, context 
+summary: 'import storageArray securityKey 파일 명령은 한 스토리지 어레이에서 다른 스토리지 어레이로 이동한 하나 이상의 FDE(전체 디스크 암호화) 드라이브의 잠금을 해제합니다.' 
+---
+= 스토리지 배열 보안 키를 가져옵니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'import storageArray securityKey file' 명령은 한 스토리지 어레이에서 다른 스토리지 어레이로 이동한 하나 이상의 전체 디스크 암호화(FDE) 드라이브의 잠금을 해제합니다.
+
+
+
+== 지원되는 어레이
+
+외부 키 관리를 사용하는 경우 이 명령은 E2800, E5700, EF600 또는 EF300 어레이에만 적용됩니다. 내부 키 관리가 활성화된 경우 모든 SMcli 패키지가 설치된 경우 명령은 개별 스토리지 배열에 적용됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+일치하는 보안 키가 있는 드라이브만 잠금 해제됩니다. 잠금을 해제하면 새 스토리지 배열에 대한 보안 키가 적용됩니다.
+
+[NOTE]
+====
+이 명령은 내부 및 외부 키 관리에 모두 적용됩니다.
+
+====
+
+
+== 구문
+
+[listing]
+----
+import storageArray securityKey file="fileName"
+passPhrase="passPhraseString"
+[forceOverwrite=(TRUE|FALSE)]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'파일'
+ a| 
+가져온 FDE 드라이브의 원래 보안 키가 있는 파일 경로 및 파일 이름입니다. 예를 들면 다음과 같습니다.
+
+[listing]
+----
+file="C:\Program Files\CLI\sup\drivesecurity.slk"
+----
+[NOTE]
+====
+파일 이름의 확장명은 .slk이어야 합니다.
+
+====
+
+
+ a| 
+패스프레이즈
+ a| 
+보안 키에 대한 인증을 제공하는 문자열입니다.
+
+
+
+ a| 
+'forceOverwrite
+ a| 
+이 매개 변수를 "true"로 설정하면 컨트롤러 하나가 없거나 실패한 경우와 같이 가져오기가 정상적으로 허용되지 않을 때 FDE 키를 강제로 덮어씁니다. 기본적으로 force overwrite 매개 변수는 false로 설정됩니다.
+
+|===
+
+
+== 참고
+
+컨트롤러 펌웨어는 FDE 드라이브에 대한 액세스를 제한하는 잠금을 생성합니다. FDE 드라이브는 Security Capable이라는 상태를 가집니다. 보안 키를 생성할 때 상태가 보안 사용으로 설정되고, 이는 스토리지 어레이 내에 있는 모든 FDE 드라이브에 대한 액세스를 제한합니다.
+
+암호는 다음 기준을 충족해야 합니다.
+
+* 8자에서 32자 사이여야 합니다.
+* 대문자를 하나 이상 포함해야 합니다.
+* 소문자가 하나 이상 포함되어야 합니다.
+* 하나 이상의 숫자를 포함해야 합니다.
+* 영숫자가 아닌 문자를 하나 이상 포함해야 합니다(예: <>@+).
+
+
+[NOTE]
+====
+암호문이 이러한 기준을 충족하지 않으면 오류 메시지가 표시되고 명령을 다시 시도하라는 메시지가 표시됩니다.
+
+====
+
+
+== 최소 펌웨어 레벨입니다
+
+7.40
+
+8.40에는 외부 스토리지 배열 보안 키를 가져오는 기능이 추가되었습니다
+
+11.70.1은 forceOverwrite 파라미터를 추가했다.

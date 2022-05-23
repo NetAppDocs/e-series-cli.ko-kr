@@ -1,0 +1,91 @@
+---
+permalink: commands-a-z/enable-or-disable-autosupport-individual-arrays.html 
+sidebar: sidebar 
+keywords: command, enable, disable, autosupport, feature, storage, array, possible, transit, messages, technical, support, site, capable, automatically, prepare, collect, data, remote, troubleshooting, problem, analysis 
+summary: '이 명령은 스토리지 어레이에 대한 AutoSupport(ASUP) 기능을 활성화 또는 비활성화하고 메시지를 기술 지원 사이트로 전송할 수 있도록 합니다. ASUP 기능을 활성화하면 ASUP 기능이 있는 스토리지 어레이가 자동으로 준비되어 기술 지원을 위해 지원 관련 데이터를 수집하고 전송합니다. 그런 다음 데이터를 원격 문제 해결 및 문제 분석에 사용할 수 있습니다.' 
+---
+= AutoSupport 활성화 또는 비활성화(모든 개별 어레이)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+이 명령은 스토리지 어레이에 대한 AutoSupport(ASUP) 기능을 활성화 또는 비활성화하고 메시지를 기술 지원 사이트로 전송할 수 있도록 합니다. ASUP 기능을 활성화하면 ASUP 기능이 있는 스토리지 어레이가 자동으로 준비되어 기술 지원을 위해 지원 관련 데이터를 수집하고 전송합니다. 그런 다음 데이터를 원격 문제 해결 및 문제 분석에 사용할 수 있습니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+이 기능을 활성화한 후 필요에 따라 AutoSupport OnDemand 기능을 활성화한 다음 AutoSupport 원격 진단 기능을 활성화할 수 있습니다(필요한 경우).
+
+다음 순서대로 세 가지 기능을 활성화해야 합니다.
+
+. * AutoSupport 사용 *
+. * AutoSupport OnDemand를 활성화합니다
+. * AutoSupport 원격 진단 활성화 *
+
+
+
+
+== 구문
+
+[listing]
+----
+set storageArray autoSupport (enable | disable)
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'enable|disable'
+ a| 
+AutoSupport를 활성화 또는 비활성화할 수 있습니다. OnDemand 및 원격 진단 기능이 활성화된 경우 해제 작업은 OnDemand 및 원격 진단 기능도 해제합니다.
+
+|===
+
+
+=== 예
+
+[listing]
+----
+
+   SMcli -n Array1 -c "set storageArray autoSupport enable;"
+
+   SMcli completed successfully.
+----
+
+
+== 검증
+
+이 기능을 활성화했는지 확인하려면 'show storageArray AutoSupport' 명령을 사용합니다. 표시된 출력의 초기 줄은 활성화 상태를 나타냅니다.
+
+[listing]
+----
+The AutoSupport feature is enabled on this storage array.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+7.86 - 모델 E2700 및 E5600까지 모든 스토리지 어레이에 대한 명령이 추가되었습니다
+
+8.40 - E2800 및 E5700에 대한 추가 지원

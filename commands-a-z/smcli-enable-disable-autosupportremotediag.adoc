@@ -1,0 +1,78 @@
+---
+permalink: commands-a-z/smcli-enable-disable-autosupportremotediag.html 
+sidebar: sidebar 
+keywords: enable, disable, autosupport, remote, diagnostics, feature, emw, management, domain, level, smcli 
+summary: SMcli enable | disable autoSupportRemoteDiag 명령은 AutoSupport 원격 진단 기능을 켜거나 끕니다. 이 기능을 사용하면 기술 지원 부서에서 지원 데이터를 요청하여 원격으로 문제를 진단할 수 있습니다. 
+---
+= EMW 관리 도메인 수준에서 AutoSupport 원격 진단 기능을 활성화 또는 비활성화합니다(SMcli만 해당).
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'SMcli enable | disable autoSupportRemoteDiag' 명령은 AutoSupport 원격 진단 기능을 켜거나 끕니다. 이 기능을 사용하면 기술 지원 부서에서 지원 데이터를 요청하여 원격으로 문제를 진단할 수 있습니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 관리 도메인에 있는 모든 E2700 및 E5600 스토리지 어레이에 동시에 적용됩니다. E2800 또는 E5700 스토리지 어레이에는 적용되지 않습니다.
+
+
+
+== 상황
+
+[NOTE]
+====
+이 명령은 스크립트 명령이 아니라 SMcli 명령입니다. 명령줄에서 이 명령을 실행해야 합니다. 스토리지 관리 소프트웨어의 스크립트 편집기에서 이 명령을 실행할 수 없습니다.
+
+====
+[NOTE]
+====
+이 명령은 관리 도메인의 모든 ASUP 지원 스토리지 어레이에 영향을 줍니다.
+
+====
+이 기능을 활성화하기 전에 먼저 AutoSupport 기능을 사용하도록 설정한 다음 관리 도메인에서 AutoSupport OnDemand 기능을 사용하도록 설정하십시오.
+
+이 순서대로 세 가지 기능을 활성화해야 합니다.
+
+. * AutoSupport 사용 *
+. * AutoSupport OnDemand를 활성화합니다
+. * AutoSupport 원격 진단 활성화 *
+
+
+
+
+== 구문
+
+[listing]
+----
+SMcli enable|disable autoSupportRemoteDiag
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 검증
+
+'smcli -autoSupportConfig show' 명령을 사용하여 이 기능을 활성화했는지 확인합니다. 표시된 출력의 처음 세 줄은 AutoSupport 기능의 활성화 상태와 AutoSupport OnDemand 기능, 그리고 AutoSupport 원격 진단 기능의 상태를 나타냅니다.
+
+[listing]
+----
+The AutoSupport feature is activated on this storage management
+station.
+The AutoSupport OnDemand feature is activated on this storage management
+station.
+The AutoSupport Remote Diagnostics feature is activated on this storage
+management station.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.25

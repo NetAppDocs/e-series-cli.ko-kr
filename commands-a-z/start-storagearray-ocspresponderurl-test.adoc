@@ -1,0 +1,60 @@
+---
+permalink: commands-a-z/start-storagearray-ocspresponderurl-test.html 
+sidebar: sidebar 
+keywords: start, ocsp, server, url, test 
+summary: 'start storageArray ocspResponderUrl 테스트 명령은 OCSP(온라인 인증서 상태 프로토콜) 서버의 지정된 URL에 대한 열린 연결을 확인합니다.' 
+---
+= OCSP 서버 URL 테스트를 시작합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'tart storageArray ocspResponderUrl test' 명령어는 OCSP(Online Certificate Status Protocol) 서버의 지정된 URL에 대한 open connection을 확인한다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+URL입니다
+ a| 
+OCSP 서버 URL의 리터럴 문자열입니다.
+
+[NOTE]
+====
+URL을 지정하지 않으면 인증서 해지 설정에 있는 OCSP 응답자 URL이 사용됩니다.
+
+====
+|===
+
+
+== 구문
+
+[listing]
+----
+start storageArray ocspResponderUrl test (url=stringLiteral)
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.42

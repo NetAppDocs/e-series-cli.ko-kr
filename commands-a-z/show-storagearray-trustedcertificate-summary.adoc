@@ -1,0 +1,100 @@
+---
+permalink: commands-a-z/show-storagearray-trustedcertificate-summary.html 
+sidebar: sidebar 
+keywords: show, installed, trusted, ca, certificates, summary 
+summary: show storageArray trustedCertificate summary 명령은 어레이에서 신뢰할 수 있는 설치된 CA 인증서 요약을 표시합니다. 이 명령은 삭제할 인증서의 별칭 이름을 알 수 있도록 delete storageArray trustedCertificate 명령을 수행하기 전에 사용하는 데 유용합니다. 
+---
+= 설치된 신뢰할 수 있는 CA 인증서 요약을 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'show storageArray trustedCertificate summary' 명령어는 스토리지에서 신뢰할 수 있는 설치된 CA 인증서 요약을 표시합니다. 이 명령은 삭제할 인증서의 별칭 이름을 알 수 있도록 'Delete storageArray trustedCertificate' 명령을 수행하기 전에 사용하는 데 유용합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+
+show storageArray trustedCertificate [all | allUserInstalled|
+ aliases=pass:quotes[("_alias1_" ... "_aliasN_")]] summary
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+모두
+ a| 
+사전 설치된 인증서 및 사용자가 설치한 인증서를 포함하여 모든 인증서 검색을 지정할 수 있습니다.
+
+
+
+ a| 
+'allUserInstalled'입니다
+ a| 
+사용자가 설치한 모든 인증서의 검색을 지정할 수 있습니다. 이 옵션이 기본 옵션입니다.
+
+
+
+ a| 
+'별칭'
+ a| 
+사용자가 별칭으로 검색할 신뢰할 수 있는 인증서를 미리 설치했거나 사용자가 설치한 인증서를 지정할 수 있습니다. 모든 별칭을 괄호로 묶습니다. 둘 이상의 별칭을 입력하는 경우 공백으로 구분하십시오.
+
+|===
+
+
+== 예
+
+샘플 출력은 아래 그림과 다를 수 있습니다.
+
+[listing, subs="+macros"]
+----
+
+SMcli -n Array1 -c "show storageArray trustedCertificate allUserInstalled summary;"
+============================
+Trusted Certificates
+============================
+Alias:        19527b38-8d26-44e5-8c7f-5bf2ca9db7cf
+Type:         Pre-installed | User installed
+Subject DN:   CN=Corp Issuing CA 1
+Issuer DN:    CN=Corp Root CA
+pass:quotes[Start:        _date_]
+pass:quotes[Expire:       _date_]
+---------------------
+Alias:        myAliasName
+Type:         Pre-installed | User installed
+Subject DN:   CN=Corp Issuing CA 1
+Issuer DN:    CN=Corp Root CA
+pass:quotes[Start:        _date_]
+pass:quotes[Expire:       _date_]
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/change-ssd-cache-application-type.html 
+sidebar: sidebar 
+keywords: ssd cache application type 
+summary: set ssdCache 명령은 SSD 캐시와 연결된 애플리케이션 유형을 변경합니다. 애플리케이션 유형은 웹 서버, 데이터베이스 또는 멀티미디어일 수 있습니다. 애플리케이션 유형을 변경하면 블록 크기, 하위 블록 크기가 변경되고, 읽기 임계값에 채워지고, SSD 캐시의 기반이 되는 볼륨에 대한 쓰기 임계값에 채워집니다. 
+---
+= SSD 캐시 애플리케이션 유형을 변경합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+세트 ssdCache는 SSD Cache와 연관된 애플리케이션 유형을 변경한다. 애플리케이션 유형은 웹 서버, 데이터베이스 또는 멀티미디어일 수 있습니다. 애플리케이션 유형을 변경하면 블록 크기, 하위 블록 크기가 변경되고, 읽기 임계값에 채워지고, SSD 캐시의 기반이 되는 볼륨에 대한 쓰기 임계값에 채워집니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800 및 E5700 어레이를 포함한 개별 스토리지 어레이에 적용됩니다. 모든 SMcli 패키지가 설치된 경우
+
+
+
+== 역할
+
+E2800 또는 E5700 스토리지 어레이에서 이 명령을 실행하려면 지원 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+set ssdCache pass:quotes[[_ssdCacheName_]]usageHint=(webServer|dataBase|fileSystem)
+----
+
+
+== 매개 변수
+
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'ssdCache'입니다
+ a| 
+애플리케이션 유형을 변경할 SSD 캐시의 이름입니다. SSD 캐시 이름은 대괄호([ ])로 묶어야 합니다. SSD 캐시 이름에 특수 문자가 포함되어 있거나 숫자만 포함된 경우 SSD 캐시 이름은 대괄호 안에 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+'usageHint'
+ a| 
+이 값은 SSD 캐시를 사용하는 애플리케이션의 일반적인 I/O 사용 패턴을 기반으로 합니다. 유효한 값은 웹서버, 다타바제, 파일 시스템이다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+7.84

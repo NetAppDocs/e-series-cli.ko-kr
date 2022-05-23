@@ -1,0 +1,52 @@
+---
+permalink: commands-a-z/start-storagearray-autosupport-manualdispatch.html 
+sidebar: sidebar 
+keywords: start, storage, array, autosupport, manual, dispatch 
+summary: start storageArray AutoSupport manualDispatch 명령은 번들에 대한 전체 지원 번들 및 ASUP 디스패치를 시작합니다. 
+---
+= 스토리지 배열 AutoSupport 수동 디스패치를 시작합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'tart storageArray AutoSupport manualDispatch' 명령어는 번들에 대한 완벽한 지원 번들과 ASUP 디스패치를 시작한다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+이 명령이 완료되는 데 걸리는 시간 때문에 프로세스가 시작될 수 있으면 명령이 성공한 것으로 반환합니다.
+
+
+
+== 구문
+
+[listing]
+----
+start storageArray autoSupport manualDispatch
+----
+
+
+== 매개 변수
+
+없음
+
+
+
+== 최소 펌웨어 레벨입니다
+
+8.63

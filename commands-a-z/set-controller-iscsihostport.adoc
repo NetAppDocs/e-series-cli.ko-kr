@@ -1,0 +1,488 @@
+---
+permalink: commands-a-z/set-controller-iscsihostport.html 
+sidebar: sidebar 
+keywords: set, iscsi, host, port, network, properties 
+summary: set controller iscsiHostPort 명령은 IPv4 및 IPv6 속성, 포트 속도 및 최대 프레임 페이로드를 포함하여 호스트 포트의 네트워크 속성을 변경합니다. 
+---
+= iSCSI 호스트 포트 네트워킹 속성을 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set controller iscsiHostPort 명령은 IPv4 및 IPv6 속성, 포트 속도 및 최대 프레임 페이로드를 포함하여 호스트 포트의 네트워크 속성을 변경합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+[NOTE]
+====
+이 명령은 더 이상 사용되지 않으며 로 대체됩니다 xref:set-controller-hostport.adoc[컨트롤러 호스트 포트 속성을 설정합니다] 명령.
+
+====
+
+
+== 구문
+
+[listing]
+----
+set controller [(a|b)]
+iscsiHostPort [portLabel]
+----
+[listing]
+----
+([IPv4Address=(0-255).(0-255).(0-255).(0-255) ]|
+----
+[listing]
+----
+[IPv6LocalAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF)] |
+----
+[listing]
+----
+[IPv6RoutableAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) ]|
+----
+[listing]
+----
+[IPv6RouterAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) ]|
+----
+[listing]
+----
+[enableIPv4=(TRUE | FALSE) | enableIPv6=(TRUE | FALSE)] |
+----
+[listing]
+----
+[enableIPv4Vlan=(TRUE | FALSE) | enableIPv6Vlan=(TRUE | FALSE)] |
+----
+[listing]
+----
+[enableIPv4Priority=(TRUE | FALSE) | enableIPv6Priority=(TRUE | FALSE) ]|
+----
+[listing]
+----
+[IPv4ConfigurationMethod=(static | dhcp) ]|
+----
+[listing]
+----
+[IPv6ConfigurationMethod=(static | auto)] |
+----
+[listing]
+----
+[IPv4GatewayIP=(TRUE | FALSE)] |
+----
+[listing]
+----
+[IPv6HopLimit=[0-255] ]|
+----
+[listing]
+----
+[IPv6NdDetectDuplicateAddress=[0-256] ]|
+----
+[listing]
+----
+[IPv6NdReachableTime=[0-65535] ]|
+----
+[listing]
+----
+[IPv6NdRetransmitTime=[0-65535]] |
+----
+[listing]
+----
+[IPv6NdTimeOut=[0-65535] ]|
+----
+[listing]
+----
+[IPv4Priority=[0-7] | IPv6Priority=[0-7] ]|
+----
+[listing]
+----
+[IPv4SubnetMask=(0-255).(0-255).(0-255).(0-255)] |
+----
+[listing]
+----
+[IPv4VlanId=[1-4094] | IPv6VlanId=[1-4094]] |
+----
+[listing]
+----
+[maxFramePayload=[*frameSize*]] |
+----
+[listing]
+----
+[tcpListeningPort=[3260, 49152-65536] ]|
+----
+[listing]
+----
+[portSpeed=[(10 | 25)])
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+"enableIPV4"
+ a| 
+사용 가능한 옵션은 다음과 같습니다.
+
+* 참
+* 거짓
+
+
+
+
+ a| 
+enableIPV4Priority
+ a| 
+네트워크 액세스 우선 순위를 결정하는 매개변수를 활성화하려면 이 옵션을 선택합니다. 슬라이더를 사용하여 1과 7 사이의 우선순위를 선택합니다.
+
+이더넷과 같은 공유 LAN(Local Area Network) 환경에서는 많은 스테이션이 네트워크 액세스에 대해 경합할 수 있습니다. 액세스는 선착순으로 제공됩니다. 두 스테이션이 동시에 네트워크에 액세스하려고 시도할 수 있으며, 이로 인해 두 스테이션이 다시 꺼졌다가 다시 시도하기 전에 대기하게 됩니다. 스위치 포트에 하나의 스테이션만 연결되어 있는 스위치 이더넷의 경우 이 프로세스가 최소화됩니다.
+
+사용 가능한 옵션은 다음과 같습니다.
+
+* 참
+* 거짓
+
+
+[NOTE]
+====
+이 매개 변수는 NVMe over RoCE 환경에서 지원되지 않습니다.
+
+====
+
+
+ a| 
+"enableIPV4Vlan"
+ a| 
+VLAN은 동일한 스위치, 동일한 라우터 또는 둘 다에서 지원되는 다른 물리적 LAN(가상 LAN)과 물리적으로 분리된 것처럼 동작하는 논리 네트워크입니다. 사용 가능한 옵션은 다음과 같습니다.
+
+* 참
+* 거짓
+
+
+[NOTE]
+====
+이 매개 변수는 NVMe over RoCE 환경에서 지원되지 않습니다.
+
+====
+
+
+ a| 
+"enableIPV6"
+ a| 
+IPv6 주소 공간은 128비트입니다. 콜론으로 구분된 8개의 16비트 16진수 블록으로 표시됩니다.
+
+사용 가능한 옵션은 다음과 같습니다.
+
+* 참
+* 거짓
+
+
+
+
+ a| 
+"enableIPV6Priority"를 참조하십시오
+ a| 
+네트워크 액세스 우선 순위를 결정하는 매개변수를 활성화하려면 이 옵션을 선택합니다. 슬라이더를 사용하여 1과 7 사이의 우선순위를 선택합니다.
+
+이더넷과 같은 공유 LAN(Local Area Network) 환경에서는 많은 스테이션이 네트워크 액세스에 대해 경합할 수 있습니다. 액세스는 선착순으로 제공됩니다. 두 스테이션이 동시에 네트워크에 액세스하려고 시도할 수 있으며, 이로 인해 두 스테이션이 다시 꺼졌다가 다시 시도하기 전에 대기하게 됩니다. 스위치 포트에 하나의 스테이션만 연결되어 있는 스위치 이더넷의 경우 이 프로세스가 최소화됩니다.
+
+사용 가능한 옵션은 다음과 같습니다.
+
+* 참
+* 거짓
+
+
+[NOTE]
+====
+이 매개 변수는 NVMe over RoCE 환경에서 지원되지 않습니다.
+
+====
+
+
+ a| 
+"enableIPV6Vlan"을 선택합니다
+ a| 
+VLAN은 동일한 스위치, 동일한 라우터 또는 둘 다에서 지원되는 다른 물리적 LAN(가상 LAN)과 물리적으로 분리된 것처럼 동작하는 논리 네트워크입니다.
+
+사용 가능한 옵션은 다음과 같습니다.
+
+* 참
+* 거짓
+
+
+[NOTE]
+====
+이 매개 변수는 NVMe over RoCE 환경에서 지원되지 않습니다.
+
+====
+
+
+ a| 
+IPV4주소
+ a| 
+(0-255).(0-255).(0-255).(0-255).(0-255).
+
+
+
+ a| 
+IPV4ConfigurationMethod
+ a| 
+사용 가능한 옵션은 다음과 같습니다.
+
+* 정적
+* DHCP를 선택합니다
+
+
+
+
+ a| 
+IPV4GatewayIP
+ a| 
+사용 가능한 옵션은 다음과 같습니다.
+
+* 참
+* 거짓
+
+
+
+
+ a| 
+IPV4우선 순위
+ a| 
+0에서 7 사이의 값을 입력합니다.
+
+[NOTE]
+====
+이 매개 변수는 NVMe over RoCE 환경에서 지원되지 않습니다.
+
+====
+
+
+ a| 
+IPV4SubnetMask
+ a| 
+서브넷 마스크를 (0-255).(0-255).(0-255).(0-255).
+
+
+
+ a| 
+IPV4VlanId
+ a| 
+1에서 4094 사이의 값을 입력합니다.
+
+[NOTE]
+====
+이 매개 변수는 NVMe over RoCE 환경에서 지원되지 않습니다.
+
+====
+
+
+ a| 
+'IPV6ConfigurationMethod'
+ a| 
+사용 가능한 옵션은 다음과 같습니다.
+
+* 정적
+* 자동
+
+
+
+
+ a| 
+'IPV6HopLimit'입니다
+ a| 
+이 옵션은 IPv6 패킷이 통과할 수 있는 최대 홉 수를 구성합니다.
+
+기본값은 64입니다.
+
+
+
+ a| 
+'IPV6LocalAddress'입니다
+ a| 
+주소 형식은 (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF)입니다.
+
+
+
+ a| 
+'IPV6NdDetectDuplicateAddress'를 참조하십시오
+ a| 
+0에서 256 사이의 값을 입력합니다.
+
+
+
+ a| 
+'IPV6NdReachableTime'
+ a| 
+이 옵션은 원격 IPv6 모드에 도달할 수 있는 것으로 간주되는 시간을 구성합니다. 0에서 65535 사이의 값을 밀리초 단위로 지정합니다.
+
+기본값은 '30000'밀리초입니다.
+
+
+
+ a| 
+'IPV6NdRetransmitTime'
+ a| 
+이 옵션은 IPv6 노드로 패킷을 계속 재전송하는 시간을 구성합니다. 0에서 65535 사이의 값을 밀리초 단위로 지정합니다.
+
+기본값은 1000밀리초입니다.
+
+
+
+ a| 
+IPV6NdTimeOut
+ a| 
+이 옵션은 IPv6 노드에 대한 시간 초과 값을 구성합니다. 0에서 65535 사이의 값을 밀리초 단위로 지정합니다.
+
+기본값은 '30000'밀리초입니다.
+
+
+
+ a| 
+'IPV6Priority'입니다
+ a| 
+0에서 7 사이의 값을 입력합니다.
+
+[NOTE]
+====
+이 매개 변수는 NVMe over RoCE 환경에서 지원되지 않습니다.
+
+====
+
+
+ a| 
+'IPV6RoutableAddress'입니다
+ a| 
+주소 형식은 (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF)입니다.
+
+
+
+ a| 
+'IPV6RouterAddress'입니다
+ a| 
+주소 형식은 (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF): (0-FFFF)입니다.
+
+
+
+ a| 
+'IPV6VlanId'입니다
+ a| 
+1에서 4094 사이의 값을 입력합니다.
+
+[NOTE]
+====
+이 매개 변수는 NVMe over RoCE 환경에서 지원되지 않습니다.
+
+====
+
+
+ a| 
+'maxFramePayload
+ a| 
+maxFramePayload 옵션은 IPv4와 IPv6 사이에서 공유되며 네트워크에서 전송할 수 있는 가장 큰 패킷이나 프레임입니다. 표준 이더넷 프레임의 페이로드 부분은 1500으로 설정되고 점보 이더넷 프레임은 9000으로 설정됩니다. 점보 프레임을 사용할 경우 네트워크 경로에 있는 모든 장치에서 더 큰 프레임 크기를 처리할 수 있어야 합니다.
+
+기본값은 프레임당 1500바이트입니다. 1500에서 9000 사이의 값을 입력해야 합니다.
+
+
+
+ a| 
+포트스피드
+ a| 
+사용 가능한 옵션은 다음과 같습니다.
+
+* 10
+* 25
+
+
+[NOTE]
+====
+이 옵션은 25GB/s 이더넷 호스트 인터페이스 카드에만 유효합니다. 한 포트의 속도를 변경하면 카드에 있는 4개의 포트 모두의 속도가 변경됩니다.
+
+====
+[NOTE]
+====
+iscsiHostPort 매개 변수의 "portSpeed" 옵션 값은 초당 메가비트(MB/s)입니다.
+
+====
+
+
+ a| 
+'tcpListeningPort'입니다
+ a| 
+수신 대기 포트는 컨트롤러가 호스트 iSCSI 초기자의 iSCSI 로그인을 수신 대기하기 위해 사용하는 TCP 포트 번호입니다. 기본 수신 대기 포트는 3260입니다. 3260 또는 49152와 65535 사이의 값을 입력해야 합니다.
+
+|===
+
+
+== iSCSI 호스트 포트 레이블 식별
+
+호스트 포트의 레이블을 지정해야 합니다. 다음 단계에 따라 호스트 포트 레이블을 지정합니다.
+
+. iSCSI 호스트 포트의 포트 레이블을 모르는 경우 'show controller' 명령을 실행합니다.
+. 결과의 호스트 인터페이스 섹션에서 선택할 호스트 포트를 찾습니다.
++
+[NOTE]
+====
+Port 레이블은 Port 필드에 대해 반환되는 전체 값입니다.
+
+====
+. 포트 레이블의 전체 값을 따옴표로 묶고 대괄호는 ["portLabel"] 로 묶습니다. 예를 들어 포트 레이블이 "Ch 2"인 경우 다음과 같이 iSCSI 호스트 포트를 지정합니다.
++
+[listing]
+----
+iscsiHostPort[\"ch 2\"]
+----
++
+[NOTE]
+====
+Windows 명령줄을 사용하고 있고 레이블에 파이프(|)가 포함되어 있는 경우 문자는 이스케이프되어야 합니다({캐럿} 사용). 그렇지 않으면 명령으로 해석됩니다. 예를 들어 포트 레이블이 "e0b|0b"인 경우 다음과 같이 iSCSI 호스트 포트를 지정합니다.
+
+====
++
+[listing]
+----
+iscsiHostPort[\"e0b^|0b\"]
+----
+
+
+[NOTE]
+====
+이전 버전과의 호환성을 위해, E2700, E5600 또는 EF560 컨트롤러(및 이전 세대의 E-Series 또는 EF-Series 컨트롤러)에는 견적 및 중괄호["]가 아닌 중괄호로 묶인 iscsiPortNumber를 사용할 수 있습니다. 이러한 컨트롤러의 경우 iscsiPortNumber에 유효한 값은 다음과 같습니다.
+
+* 호스트 포트가 통합된 컨트롤러의 경우 번호 매기는 3, 4, 5 또는 6입니다.
+* 호스트 인터페이스 카드에 호스트 포트가 있는 컨트롤러의 경우 1번, 2번, 3번 또는 4번 번호가 매겨집니다.
+
+
+이전 구문의 예는 다음과 같습니다.
+
+[listing]
+----
+iscsiHostPort[3]
+----
+====
+
+
+== 최소 펌웨어 레벨입니다
+
+7.15는 새 iSCSI 호스트 포트 옵션을 추가합니다.
+
+7.60은 portSpeed 옵션을 추가한다.
+
+8.10은 iSCSI 호스트 포트에 대한 식별 방법을 다시 확인합니다.
+
+8.40은 "iscsiHostPort" 매개 변수의 "portSpeed" 옵션을 다시 수정하여 25GB/s 이더넷 호스트 인터페이스 카드에만 사용할 수 있으며, 한 포트의 속도를 변경하면 카드에 있는 4개의 모든 포트의 속도가 변경된다는 점을 확인합니다.
+
+8.41 이 명령은 사용되지 않습니다.

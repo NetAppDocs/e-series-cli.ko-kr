@@ -1,0 +1,62 @@
+---
+permalink: commands-a-z/show-blockedeventalertlist.html 
+sidebar: sidebar 
+keywords: show, blocked, events 
+summary: show blockedEventAlertList 명령은 set blockEventAlert 명령으로 현재 차단된 이벤트 목록을 반환합니다. 이 목록의 이벤트는 알림 터미널 및 매개 변수를 사용하여 구성한 알림, 즉 e-메일, syslog 및 트랩 알림을 보내지 않는 이벤트입니다. 
+---
+= 차단된 이벤트 표시
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+sockedEventAlertList 명령은 Set blockEventAlert 명령으로 현재 차단된 이벤트 목록을 반환합니다. 이 목록의 이벤트는 알림 터미널 및 매개 변수를 사용하여 구성한 알림, 즉 e-메일, syslog 및 트랩 알림을 보내지 않는 이벤트입니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700 및 E5600 스토리지 어레이에만 적용됩니다.
+
+
+
+== 상황
+
+[NOTE]
+====
+이 명령은 스크립트 명령이 아니라 SMcli 명령입니다. 명령줄에서 이 명령을 실행해야 합니다. 스토리지 관리 소프트웨어의 스크립트 편집기에서 이 명령을 실행할 수 없습니다.
+
+====
+
+
+== 구문
+
+[listing]
+----
+show blockedEventAlertList
+----
+
+
+== 예
+
+출력에는 차단된 각 이벤트에 대해 하나의 줄이 있으며, 이벤트 유형이 16진수 형식으로 나열되고 이벤트 설명이 표시됩니다. 다음은 출력의 예입니다.
+
+[listing]
+----
+Executing Script...
+0x280D Enclosure Failure
+0x282B Tray Redundancy Lost
+Script execution complete.
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+8.10

@@ -1,0 +1,67 @@
+---
+permalink: commands-a-z/set-storagearray-odxenabled.html 
+sidebar: sidebar 
+keywords: enable, disable, odx 
+summary: 'set storageArray odxEnabled 명령은 스토리지 어레이에 대한 ODX(Offloaded Data Transfer)를 설정하거나 해제합니다.' 
+---
+= ODX를 설정 또는 해제합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'set storageArray odxEnabled' 명령은 스토리지 어레이에 대한 ODX(Offloaded Data Transfer)를 설정하거나 해제합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+스토리지 어레이에 ODX를 사용하도록 설정한 상태로 제공됩니다. ODX를 실행하지 않거나 ODX로 인해 스토리지 어레이에 문제가 발생하는 경우 이 명령을 사용하여 ODX를 해제합니다. 영향을 받는 유일한 스토리지 어레이는 명령이 실행되는 스토리지 배열입니다.
+
+
+
+== 구문
+
+[listing]
+----
+set storageArray odxEnabled=(TRUE | FALSE)
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'odxEnabled'
+ a| 
+ODX를 설정하거나 해제하는 설정입니다. ODX를 켜려면 이 매개 변수를 'true'로 설정합니다. ODX를 끄려면 이 매개변수를 'false'로 설정합니다. 기본 설정은 ODX가 켜져 있는 것입니다.
+
+|===
+
+
+== 참고
+
+ODX는 버퍼링된 읽기 및 버퍼링된 쓰기 작업을 사용하지 않고 데이터를 전송하는 방법을 제공하므로 데이터 전송 작업에 호스트를 직접 개입하지 않아도 됩니다. ODX를 사용하도록 설정하지 않으면 소스 스토리지에서 호스트로 데이터를 읽은 다음 호스트에서 타겟 스토리지에 씁니다. ODX를 사용하면 스토리지 인프라에서 데이터 전송 작업을 직접 관리할 수 있습니다. 데이터는 호스트를 통하지 않고 소스 스토리지에서 타겟 스토리지로 직접 이동됩니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+8.20

@@ -1,0 +1,153 @@
+---
+permalink: commands-a-z/save-controller-arraymanagementcsr.html 
+sidebar: sidebar 
+keywords: generate, web server, certificate, sign, request, csr 
+summary: 'save controller arrayManagementCSR 명령은 컨트롤러의 CSR(인증서 서명 요청)을 생성합니다.' 
+---
+= 웹 서버 CSR(인증서 서명 요청) 생성
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Save controller arrayManagementCSR' 명령어는 컨트롤러에 대한 CSR(Certificate Signing Request)을 생성한다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+CSR은 인증 기관(CA)에서 서명해야 합니다. 이렇게 서명된 인증서는 컨트롤러의 웹 서버에 설치되어 있어, 브라우저가 어레이를 관리하려고 할 때 컨트롤러의 웹 서버를 자동으로 신뢰할 수 있습니다. 각 컨트롤러에 대해 이 작업을 수행합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+
+save controller [(a|b)] arrayManagementCSR
+     commonName=pass:quotes["_ipOrDnsName_"]
+     [alternateIPAddresses=pass:quotes[(_ipvX1_..._ipvXN_)]]
+     [alternateDnsNames=pass:quotes[("_dnsName1_"..."_dnsNameN_")]]
+     organization=pass:quotes["_organizationName_"]
+     [organizationalUnit=pass:quotes["_organizationalUnitName_"]]
+     locality=pass:quotes["_cityOrLocality_"]
+     [stateProvince=pass:quotes["_stateOrRegion_"]]
+     country=pass:quotes["_string_"]
+     file=pass:quotes["_filename_"]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+컨트롤러
+ a| 
+CSR을 생성할 컨트롤러를 지정할 수 있습니다. 유효한 컨트롤러 식별자는 a 또는 b이며, 여기서 a는 슬롯 A의 컨트롤러이고 b는 슬롯 B의 컨트롤러입니다 컨트롤러 식별자를 대괄호([ ])로 묶습니다.
+
+
+
+ a| 
+'공통 이름'
+ a| 
+컨트롤러의 IP 주소 또는 DNS 이름을 지정할 수 있습니다. System Manager에 액세스하기 위해 브라우저에 입력할 내용과 정확히 일치해야 합니다(http:// 또는 https:// 제외). 그렇지 않으면 이름 불일치 오류가 발생합니다.
+
+
+
+ a| 
+“대체 IPAddresses”입니다
+ a| 
+컨트롤러의 추가 IP 주소 또는 별칭을 지정할 수 있습니다. 모든 IP 주소는 괄호로 묶습니다. 둘 이상의 IP 주소를 입력하는 경우 공백으로 구분합니다.
+
+
+
+ a| 
+대체 이름
+ a| 
+컨트롤러의 추가 DNS 이름을 지정할 수 있습니다. 모든 DNS 이름은 괄호로 묶습니다. 두 개 이상의 이름을 입력하는 경우 공백으로 구분합니다.
+
+
+
+ a| 
+'조직'입니다
+ a| 
+스토리지 배열이 속한 조직의 전체 법적 이름을 지정할 수 있습니다. 약어로 표시하지 말고 Inc, Corp 또는 LLC와 같은 접미사를 포함시키십시오.
+
+
+
+ a| 
+조직단위
+ a| 
+사용자가 인증서를 처리하는 조직의 부서를 지정할 수 있습니다.
+
+
+
+ a| 
+지역성
+ a| 
+스토리지 배열이 있는 도시 또는 인접성을 지정할 수 있습니다.
+
+
+
+ a| 
+'선서주'입니다
+ a| 
+스토리지 배열이 있는 상태 또는 영역을 지정할 수 있습니다. 이 항목은 약어로 표현해서는 안 됩니다.
+
+
+
+ a| 
+"국가"입니다
+ a| 
+미국 등의 국가 2자리 ISO(International Organization for Standardization) 코드를 지정할 수 있습니다.
+
+
+
+ a| 
+'파일'
+ a| 
+컨트롤러의 CSR 파일을 저장할 파일을 지정할 수 있습니다.
+
+|===
+
+
+== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "save controller [a] arrayManagementCSR
+   commonName="ictd0702s05c01-a.ict.englab.xyz.com"
+   alternateIPAddresses=(10.113.174.190 10.113.174.191)
+   alternateDnsNames=("ictd0702s05c01-b.ict.englab.xyz.com")
+   organization="Company"
+   locality="Wichita"
+   stateProvince="Kansas"
+   country="US"
+   file="C:\storage_array_csr.csr";"
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

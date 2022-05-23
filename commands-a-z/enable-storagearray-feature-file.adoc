@@ -1,0 +1,96 @@
+---
+permalink: commands-a-z/enable-storagearray-feature-file.html 
+sidebar: sidebar 
+keywords: enable, storage, array, feature, file, command, permanent, upgrade, trial period 
+summary: enable storageArray feature file 명령을 사용하면 스토리지 배열에 대한 영구 업그레이드 또는 평가판 업그레이드 기능을 사용할 수 있습니다. 
+---
+= 스토리지 배열 기능을 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+"enable storageArray feature file" 명령을 사용하면 스토리지 어레이로의 영구 업그레이드나 평가판 업그레이드 기능을 사용할 수 있습니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+이 명령은 다음 작업 중 하나를 수행합니다.
+
+* 기능을 영구적으로 업그레이드할 수 있는 기능 키를 활성화합니다
+* 기능 팩의 영구 업그레이드를 위한 기능 키를 활성화합니다
+* 평가판 기간 동안 기능을 활성화합니다
+
+
+기능 팩은 스토리지 분할, 동기식 미러링과 같은 몇 가지 사전 정의된 기능 세트입니다. 이러한 기능은 사용자의 편의를 위해 결합되었습니다. 사용자가 기능 팩을 설치하면 기능 팩의 모든 기능이 한 번에 설치됩니다.
+
+각 기능은 특정 기능 팩 및 특정 스토리지 어레이에 대해 생성된 라이센스 키를 통해 관리됩니다. 라이센스 키는 해당 기능에 대한 라이센스를 적용하기 위해 실행하는 파일로 제공됩니다.
+
+스토리지 배열에 로드되는 기능을 확인하려면 'show storageArray features' 명령어를 실행합니다. 'show storageArray features' 명령어는 스토리지 배열에 설치된 모든 기능을 나열하며, 평가판 기간 동안 평가할 수 있는 기능, 활성화된 기능 및 비활성화된 기능을 나열합니다.
+
+
+
+== 기능 키를 활성화하는 구문
+
+[listing, subs="+macros"]
+----
+pass:quotes[enable storageArray feature file="_filename_"]
+----
+'file' 매개변수는 유효한 피처 키 파일의 파일 경로와 파일 이름을 식별합니다. 파일 경로와 파일 이름은 큰따옴표(" ")로 묶어야 합니다. 예를 들면 다음과 같습니다.
+
+[listing]
+----
+file="C:\Program Files\CLI\dnld\ftrkey.key"
+----
+피처 키 파일의 유효한 파일 이름은 '.key' 확장자로 끝입니다.
+
+활성화할 각 기능에 대한 기능 키 파일이 필요합니다.
+
+
+
+== 기능 팩을 활성화하는 구문
+
+[listing, subs="+macros"]
+----
+pass:quotes[enable storageArray featurePack file="_filename_"]
+----
+'file' 매개변수는 유효한 피처 팩 파일의 파일 경로와 파일 이름을 식별합니다. 파일 경로와 파일 이름은 큰따옴표(" ")로 묶어야 합니다. 예를 들면 다음과 같습니다.
+
+[listing]
+----
+file="C:\Program Files\CLI\dnld\ftrpk.key"
+----
+피처 키 파일의 유효한 파일 이름은 '.key' 확장자로 끝입니다.
+
+
+
+== 평가판 기간 기능을 활성화하는 구문입니다
+
+[listing, subs="+macros"]
+----
+pass:quotes[enable storageArray feature=_featureAttributeList_]
+----
+평가 기간 동안 기능을 평가하려면 다음 특성 값 중 하나 이상을 "featureAttributeList"에 입력할 수 있습니다. 둘 이상의 속성 값을 입력하는 경우 값을 공백으로 구분합니다.
+
+* '보안'을 선택합니다
+
+
+
+
+== 최소 펌웨어 레벨입니다
+
+8.25는 더 이상 유효하지 않은 모든 특성을 제거합니다.

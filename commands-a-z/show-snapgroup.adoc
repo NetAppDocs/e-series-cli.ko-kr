@@ -1,0 +1,151 @@
+---
+permalink: commands-a-z/show-snapgroup.html 
+sidebar: sidebar 
+keywords: show, snapshot, group 
+summary: show SnapGroup 명령은 하나 이상의 스냅샷 이미지 그룹에 대한 정보를 반환합니다. 
+---
+= 스냅샷 그룹을 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'SnapGroup 표시' 명령은 하나 이상의 스냅샷 이미지 그룹에 대한 정보를 반환합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+show (allSnapGroups | snapGroup pass:quotes[[_snapGroupName_]] |
+snapGroups pass:quotes[["_snapGroupName1_" ... "_snapGroupNamen_"]])
+[summary | schedule]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+알SnapGroups
+ a| 
+스토리지 시스템의 모든 스냅샷 그룹에 대한 정보를 반환하는 매개 변수입니다.
+
+
+
+ a| 
+스냅그룹
+ a| 
+정보를 검색할 스냅샷 그룹의 이름입니다. 스냅샷 그룹 이름은 대괄호([ ])로 묶어야 합니다. 스냅샷 그룹 이름에 특수 문자나 숫자가 있는 경우 스냅샷 그룹 이름은 대괄호 안에 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+'냅그룹'
+ a| 
+정보를 검색할 여러 스냅샷 그룹의 이름입니다. 다음 규칙을 사용하여 스냅샷 그룹의 이름을 입력합니다.
+
+* 모든 이름은 대괄호([ ])로 묶어야 합니다.
+* 각 이름을 공백으로 구분합니다.
+
+
+스냅샷 그룹 이름에 특수 문자가 있거나 숫자만 포함된 경우 다음 규칙을 사용하여 이름을 입력합니다.
+
+* 모든 이름은 대괄호([ ])로 묶어야 합니다.
+* 각 이름은 큰따옴표(" ")로 묶어야 합니다.
+* 각 이름을 공백으로 구분합니다.
+
+
+
+
+ a| 
+양호실
+ a| 
+스냅샷 그룹에 대한 간략한 정보 목록을 반환하는 매개 변수입니다.
+
+
+
+ a| 
+스케줄
+ a| 
+스냅샷 그룹 복제 작업의 스케줄에 대한 간략한 정보 목록을 반환하는 매개 변수입니다.
+
+|===
+
+
+== 참고
+
+이름에 영숫자, 밑줄(_), 하이픈(-) 및 파운드(#)를 조합하여 사용할 수 있습니다. 이름에는 최대 30자를 사용할 수 있습니다.
+
+이 명령은 다음 예제와 같이 스냅샷 그룹 정보를 반환합니다.
+
+[listing]
+----
+SNAPSHOT GROUP DETAILS
+
+SNAPSHOT GROUPS-----------------------------
+
+SUMMARY
+----
+[listing]
+----
+  Total Snapshot Groups: 1
+  Total Snapshot Images: 0
+  Enabled Snapshot Image Schedules: 0
+  Status: 1 Optimal, 0 Non Optimal
+
+  Name      Type       Status    Associated Base Volume
+  2_SG_01   Standard   Optimal   2
+  Total Repository Capacity  Available Repository Capacity  Snapshot Image Limit
+  10.318 GB                  10.318 GB (100%)               0
+
+  Snapshot Images   Scheduled
+  0                 No
+DETAILS
+
+  Snapshot Group "2_SG_01"
+
+   Status:  Optimal
+   Type:    Standard
+   Associated base volume: 2
+   Cluster size: 65,536 bytes
+
+   Repository
+
+    Total repository volumes: 3
+    Aggregate repository status: Optimal
+    Total repository capacity:   10.318 GB
+    Used capacity:           0.000 MB (0%)
+    Available repository capacity: 10.318 GB (100%)
+    Repository full policy:    Auto-purge Snapshot Images
+    Utilization alert threshold: 75%
+
+   Snapshot images
+
+    Total Snapshot images: 0
+    Auto-delete Snapshot images: Disabled
+    Snapshot image schedule:   Not Applicable
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+7.83

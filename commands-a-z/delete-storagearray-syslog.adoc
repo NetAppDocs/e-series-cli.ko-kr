@@ -1,0 +1,62 @@
+---
+permalink: commands-a-z/delete-storagearray-syslog.html 
+sidebar: sidebar 
+keywords: delete, storage, array, syslog, command, allow, delete, specified, configuration, storing, audit, logs, role 
+summary: delete storageArray syslog 명령을 사용하면 감사 로그를 저장하는 데 사용되는 지정된 syslog 구성을 삭제할 수 있습니다. 
+---
+= 스토리지 시스템 syslog 구성을 삭제합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Delete storageArray syslog' 명령을 사용하면 감사 로그를 저장하는 데 사용되는 지정된 syslog 구성을 삭제할 수 있습니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+delete storageArray syslog (allServers | id="<id>")
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+올서버
+ a| 
+모든 syslog 구성을 삭제합니다.
+
+
+
+ a| 
+"아이드"
+ a| 
+삭제할 syslog 서버의 ID입니다. ID는 show storageArray syslog 명령어를 사용하여 확인할 수 있다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+8.42

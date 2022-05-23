@@ -1,0 +1,87 @@
+---
+permalink: commands-a-z/show-storagearray-hosttopology.html 
+sidebar: sidebar 
+keywords: show, storage, array, host, topology 
+summary: show storageArray hostTopology 명령은 호스트 스토리지 배열의 스토리지 파티션 토폴로지, 호스트 유형 레이블 및 호스트 유형 인덱스를 반환합니다. 
+---
+= 스토리지 시스템 호스트 토폴로지를 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'show storageArray hostTopology' 명령어는 호스트 스토리지 배열의 스토리지 파티션 토폴로지, 호스트 유형 레이블 및 호스트 유형 인덱스를 반환합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 스토리지 모니터 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+show storageArray hostTopology
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 참고
+
+이 명령은 이 예제와 유사한 호스트 토폴로지 정보를 반환합니다.
+
+[listing]
+----
+TOPOLOGY DEFINITIONS
+ DEFAULT GROUP
+  Default type: Windows 2000/Server 2003 Non-Clustered
+  Host Group: scott
+   Host: scott1
+    Host Port: 28:37:48:55:55:55:55:55
+     Alias: scott11
+     Type: Windows 2000/Server 2003 Clustered
+   Host: scott2
+    Host Port: 98:77:66:55:44:33:21:23
+     Alias: scott21
+     Type: Windows 2000/Server 2003 Clustered
+   Host: Bill
+    Host Port: 12:34:55:67:89:88:88:88
+     Alias: Bill1
+     Type: Windows 2000/Server 2003 Non-Clustered
+NVSRAM HOST TYPE INDEX DEFINITIONS
+HOST TYPE                         ALUA/AVT STATUS   ASSOCIATED INDEXS
+AIX MPIO                          Disabled          9
+AVT_4M                            Enabled           5
+Factory Default                   Disabled          0
+HP-UX                             Enabled           15
+Linux (ATTO)                      Enabled           24
+Linux (DM-MP)                     Disabled          6
+Linux (Pathmanager)               Enabled           25
+Mac OS                            Enabled           22
+ONTAP                             Disabled          4
+SVC                               Enabled           18
+Solaris (v11 or Later)            Enabled           17
+Solaris (version 10 or earlier)   Disabled          2
+VMWare                            Enabled           10 (Default)
+Windows                           Enabled           1
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+5.20

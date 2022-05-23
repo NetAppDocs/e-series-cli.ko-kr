@@ -1,0 +1,46 @@
+---
+permalink: commands-a-z/delete-storagearray-loginbanner.html 
+sidebar: sidebar 
+keywords: delete, storage, array, loginbanner, command, allow, login, banner, text, file, upload, save, role 
+summary: delete storageArray loginBanner 명령을 사용하면 이전에 업로드 및 저장한 로그인 배너 텍스트 파일을 삭제할 수 있습니다. 
+---
+= 스토리지 배열 로그인 배너를 삭제합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Delete storageArray loginBanner' 명령을 사용하면 이전에 업로드 및 저장한 로그인 배너 텍스트 파일을 삭제할 수 있습니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+delete storageArray loginBanner
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+8.41

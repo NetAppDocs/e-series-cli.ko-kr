@@ -1,0 +1,54 @@
+---
+permalink: commands-a-z/resume-ssdcache.html 
+sidebar: sidebar 
+keywords: resume, ssd, cache 
+summary: resume ssdCache 명령은 suspend ssdCache 명령으로 일시적으로 중지된 SSD 캐시를 사용하여 모든 볼륨에 대한 캐싱을 다시 시작합니다. 
+---
+= SSD 캐시를 재개합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'suspend ssdCache' 명령으로 일시적으로 중지된 SSD 캐시를 사용하여 모든 볼륨에 대한 캐싱을 다시 시작합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800 및 E5700 어레이를 포함한 개별 스토리지 어레이에 적용됩니다. 모든 SMcli 패키지가 설치된 경우
+
+
+
+== 역할
+
+E2800 또는 E5700 스토리지 어레이에서 이 명령을 실행하려면 지원 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+resume ssdCache pass:quotes[[_ssdCacheName_]]
+----
+
+
+== 매개 변수
+
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'ssdCache'입니다
+ a| 
+캐싱 작업을 재개하려는 SSD 캐시의 이름입니다. SSD 캐시 이름은 대괄호([ ])로 묶어야 합니다. SSD 캐시 이름에 특수 문자가 있거나 숫자로만 구성된 경우 SSD 캐시 이름을 대괄호 안에 큰따옴표(" ")로 묶어야 합니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+7.84

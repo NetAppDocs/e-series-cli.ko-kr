@@ -1,0 +1,131 @@
+---
+permalink: commands-a-z/start-controller-iscsihostport-dhcprefresh.html 
+sidebar: sidebar 
+keywords: start, iscsi, dhcp, refresh 
+summary: start controller iscsiHostPort dhcpRefresh 명령은 iSCSI 인터페이스에 대한 DHCP 매개 변수의 새로 고침을 시작합니다. 
+---
+= iSCSI DHCP 새로 고침을 시작합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'tart controller iscsiHostPort dhcpRefresh' 명령어는 iSCSI 인터페이스에 대한 DHCP 파라미터를 새로 고치기 시작한다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+인터페이스의 구성 방법이 DHCP로 설정되어 있지 않으면 프로시저에서 오류를 반환합니다.
+
+
+
+== 구문
+
+[listing]
+----
+start controller [(a|b)] iscsiHostPort [portLabel] dhcpRefresh
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+컨트롤러
+ a| 
+iSCSI 호스트 포트가 있는 컨트롤러의 식별자 문자입니다. 유효한 컨트롤러 식별자 값은 a나 b이며, 여기서 a는 A 슬롯의 컨트롤러이고 b는 B 슬롯의 컨트롤러입니다
+
+
+
+ a| 
+iscsiHostPort를 선택합니다
+ a| 
+DHCP 매개변수를 새로 고칠 호스트 포트 레이블 또는 iSCSI 호스트 포트의 번호입니다.
+
+자세한 내용은 다음을 참조하십시오.
+
+<<Identifying an iSCSI host port label,"iSCSI 호스트 포트 레이블 식별">>
+
+|===
+
+
+== iSCSI 호스트 포트 레이블 식별
+
+호스트 포트의 레이블을 지정해야 합니다. 다음 단계에 따라 호스트 포트 레이블을 지정합니다.
+
+.단계
+. iSCSI 호스트 포트의 포트 레이블을 모르는 경우 'show controller' 명령을 실행합니다.
+. 결과의 호스트 인터페이스 섹션에서 선택할 호스트 포트를 찾습니다.
++
+[NOTE]
+====
+Port 레이블은 Port 필드에 대해 반환되는 전체 값입니다.
+
+====
+. 포트 레이블의 전체 값을 따옴표로 묶고 대괄호는 ["portLabel"] 로 묶습니다. 예를 들어 포트 레이블이 "Ch 2"인 경우 다음과 같이 iSCSI 호스트 포트를 지정합니다.
++
+[listing]
+----
+iscsiHostPort[\"ch 2\"]
+----
++
+[NOTE]
+====
+Windows 명령줄을 사용하고 있고 레이블에 파이프(|)가 포함되어 있는 경우 문자는 이스케이프되어야 합니다({캐럿} 사용). 그렇지 않으면 명령으로 해석됩니다. 예를 들어 포트 레이블이 "e0b|0b"인 경우 다음과 같이 iSCSI 호스트 포트를 지정합니다.
+
+====
++
+[listing]
+----
+iscsiHostPort[\"e0b^|0b\"]
+----
+
+
+[NOTE]
+====
+이전 버전과의 호환성을 위해, E2700, E5600 또는 EF560 컨트롤러(및 이전 세대의 E-Series 또는 EF-Series 컨트롤러)에는 견적 및 중괄호["]가 아닌 중괄호로 묶인 iscsiPortNumber를 사용할 수 있습니다. 이러한 컨트롤러의 경우 iscsiPortNumber에 유효한 값은 다음과 같습니다.
+
+* 호스트 포트가 통합된 컨트롤러의 경우 번호 매기는 3, 4, 5 또는 6입니다.
+* 호스트 인터페이스 카드에 호스트 포트가 있는 컨트롤러의 경우 1번, 2번, 3번 또는 4번 번호가 매겨집니다.
+
+
+이전 구문의 예는 다음과 같습니다.
+
+[listing]
+----
+iscsiHostPort[3]
+----
+====
+
+
+== 참고
+
+이 작업은 포털의 iSCSI 연결을 종료하고 포털을 일시적으로 종료합니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+7.10
+
+8.10은 iSCSI 호스트 포트에 대한 번호 지정 시스템을 다시 확인합니다.
+
+8.30은 E2800의 iSCSI 호스트 포트에 대한 식별 방법을 다시 확인합니다.

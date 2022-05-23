@@ -1,0 +1,65 @@
+---
+permalink: commands-a-z/save-storagearray-sasphycounts.html 
+sidebar: sidebar 
+keywords: save, storage, array, sas, phy, counts 
+summary: 'save storageArray SASPHYCounts 명령은 SAS physical layer(SAS PHY) 카운터를 파일에 저장합니다.' 
+---
+= 스토리지 배열 SAS PHY 수를 저장합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Save storageArray SASPHYCounts' 명령어는 SAS physical layer(SAS PHY) 카운터를 파일에 저장한다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+SAS PHY 카운터를 재설정하려면 reset storageArray SASPHYBaseline 명령을 실행합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+save storageArray SASPHYCounts file=pass:quotes["_filename_"]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'파일'
+ a| 
+SAS PHY 카운터를 저장할 파일 경로 및 파일 이름입니다. 파일 경로와 파일 이름은 큰따옴표(" ")로 묶어야 합니다. 예를 들면 다음과 같습니다.
+
+' file="C:\Program Files\CLI\logs\sasphy.csv"
+
+SAS PHY 오류 통계가 포함된 파일의 기본 이름은 'AS-PHY-ERROR-LOG.csv'입니다. 파일 이름은 사용할 수 있지만 확장명은 .csv여야 합니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+6.10

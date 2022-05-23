@@ -1,0 +1,859 @@
+---
+permalink: commands-category/cli-commands.html 
+sidebar: sidebar 
+keywords: cli commands, synchronous, asynchronous, certificate, autoconfigure, storage 
+summary: 'CLI 명령(사전순 목록)' 
+---
+= CLI 명령(사전순 목록)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+link:../commands-a-z/activate-asynchronous-mirroring.html["비동기식 미러링을 활성화합니다"]
+
+link:../commands-a-z/activate-storagearray-firmware.html["스토리지 어레이 펌웨어를 활성화합니다"]
+
+link:../commands-a-z/activate-synchronous-mirroring.html["동기 미러링을 활성화합니다"]
+
+link:../commands-a-z/add-array-label.html["스토리지 레이블을 추가합니다"]
+
+link:../commands-a-z/add-certificate-from-array.html["배열에서 인증서를 추가합니다"]
+
+link:../commands-a-z/add-certificate-from-file.html["파일에서 인증서를 추가합니다"]
+
+link:../commands-a-z/add-drives-to-ssd-cache.html["SSD 캐시에 드라이브를 추가합니다"]
+
+link:../commands-a-z/set-consistencygroup-addcgmembervolume.html["일관성 그룹에 구성원을 추가합니다"]
+
+link:../commands-a-z/add-volume-asyncmirrorgroup.html["비동기식 미러 그룹에 볼륨을 추가합니다"]
+
+link:../commands-a-z/autoconfigure-storagearray.html["스토리지 배열 자동 구성"]
+
+link:../commands-a-z/autoconfigure-storagearray-hotspares.html["스토리지 시스템 핫 스페어 자동 구성"]
+
+link:../commands-a-z/stop-asyncmirrorgroup-rolechange.html["비동기식 미러 그룹 역할 반전을 취소합니다"]
+
+link:../commands-a-z/smcli-autosupportlog.html["AutoSupport 로그를 캡처하거나 봅니다"]
+
+link:../commands-a-z/change-ssd-cache-application-type.html["SSD 캐시 애플리케이션 유형을 변경합니다"]
+
+link:../commands-a-z/check-asyncmirrorgroup-repositoryconsistency.html["비동기식 미러 그룹 정합성 보장 확인"]
+
+link:../commands-a-z/check-repositoryconsistency.html["저장소 일관성을 확인합니다"]
+
+link:../commands-a-z/check-storagearray-connectivity.html["스토리지 배열 연결을 확인합니다"]
+
+link:../commands-a-z/check-syncmirror.html["동기 미러링 상태를 확인한다"]
+
+link:../commands-a-z/check-volume-parity.html["볼륨 패리티를 확인합니다"]
+
+link:../commands-a-z/clear-asyncmirrorfault.html["비동기식 미러링 장애를 제거합니다"]
+
+link:../commands-a-z/clear-alldrivechannels-stats.html["드라이브 채널 통계를 지웁니다"]
+
+link:../commands-a-z/clear-emailalert-configuration.html["e-메일 알림 구성을 지웁니다"]
+
+link:../commands-a-z/clear-storagearray-configuration.html["스토리지 배열 구성을 지웁니다"]
+
+link:../commands-a-z/clear-storagearray-eventlog.html["스토리지 배열 이벤트 로그를 지웁니다"]
+
+link:../commands-a-z/clear-storagearray-firmwarependingarea.html["스토리지 배열 펌웨어 보류 영역을 지웁니다"]
+
+link:../commands-a-z/clear-storagearray-recoverymode.html["스토리지 배열 복구 모드를 지웁니다"]
+
+link:../commands-a-z/clear-syslog-configuration.html["syslog 구성을 지웁니다"]
+
+link:../commands-a-z/clear-volume-reservations.html["볼륨 예약을 지웁니다"]
+
+link:../commands-a-z/clear-volume-unreadablesectors.html["볼륨을 읽을 수 없는 섹터를 지웁니다"]
+
+link:../commands-a-z/set-emailalert.html["e-메일 알림 설정을 구성합니다"]
+
+link:../commands-a-z/set-syslog.html["syslog 설정을 구성합니다"]
+
+link:../commands-a-z/create-asyncmirrorgroup.html["비동기식 미러 그룹을 생성합니다"]
+
+link:../commands-a-z/create-consistencygroup.html["일관성 그룹 생성"]
+
+link:../commands-a-z/create-cgsnapimage-consistencygroup.html["정합성 보장 그룹 스냅샷 이미지를 생성합니다"]
+
+link:../commands-a-z/create-cgsnapvolume.html["정합성 보장 그룹 스냅샷 볼륨을 생성합니다"]
+
+link:../commands-a-z/create-mapping-cgsnapvolume.html["정합성 보장 그룹 스냅샷 볼륨 매핑을 생성합니다"]
+
+link:../commands-a-z/create-diskpool.html["디스크 풀을 생성합니다"]
+
+link:../commands-a-z/create-host.html["호스트를 생성합니다"]
+
+link:../commands-a-z/create-hostgroup.html["호스트 그룹을 생성합니다"]
+
+link:../commands-a-z/create-hostport.html["호스트 포트를 생성합니다"]
+
+link:../commands-a-z/create-initiator.html["이니시에이터를 생성합니다"]
+
+link:../commands-a-z/create-iscsiinitiator.html["iSCSI 이니시에이터를 생성합니다"]
+
+link:../commands-a-z/create-raid-volume-automatic-drive-select.html["RAID 볼륨 생성(자동 드라이브 선택)"]
+
+link:../commands-a-z/create-raid-volume-free-extent-based-select.html["RAID 볼륨 생성(사용 가능한 익스텐트 기반 선택)"]
+
+link:../commands-a-z/create-raid-volume-manual-drive-select.html["RAID 볼륨 생성(수동 드라이브 선택)"]
+
+link:../commands-a-z/create-read-only-snapshot-volume.html["읽기 전용 스냅샷 볼륨을 생성합니다"]
+
+link:../commands-a-z/create-snapgroup.html["스냅샷 그룹을 생성합니다"]
+
+link:../commands-a-z/create-snapimage.html["스냅샷 이미지를 생성합니다"]
+
+link:../commands-a-z/create-snapshot-volume.html["스냅샷 볼륨을 생성합니다"]
+
+link:../commands-a-z/create-ssdcache.html["SSD 캐시를 생성합니다"]
+
+link:../commands-a-z/create-storagearray-directoryserver.html["스토리지 배열 디렉토리 서버를 생성합니다"]
+
+link:../commands-a-z/create-storagearray-securitykey.html["스토리지 배열 보안 키를 생성합니다"]
+
+link:../commands-a-z/create-storagearray-syslog.html["스토리지 시스템 syslog 구성을 생성합니다"]
+
+link:../commands-a-z/create-syncmirror.html["동기 미러링을 만듭니다"]
+
+link:../commands-a-z/create-volumecopy.html["볼륨 복사본 생성"]
+
+link:../commands-a-z/create-volumegroup.html["볼륨 그룹을 생성합니다"]
+
+link:../commands-a-z/create-mapping-volume.html["볼륨 매핑 생성"]
+
+link:../commands-a-z/create-volume-diskpool.html["디스크 풀에서 볼륨을 생성합니다"]
+
+link:../commands-a-z/deactivate-storagearray.html["비동기식 미러링을 비활성화합니다"]
+
+link:../commands-a-z/deactivate-storagearray-feature.html["동기 미러링을 비활성화합니다"]
+
+link:../commands-a-z/delete-asyncmirrorgroup.html["비동기식 미러 그룹을 삭제합니다"]
+
+link:../commands-a-z/delete-auditlog.html["감사 로그 레코드를 삭제합니다"]
+
+link:../commands-a-z/delete-certificates.html["인증서를 삭제합니다"]
+
+link:../commands-a-z/delete-consistencygroup.html["일관성 그룹을 삭제합니다"]
+
+link:../commands-a-z/delete-cgsnapimage-consistencygroup.html["정합성 보장 그룹 스냅샷 이미지를 삭제합니다"]
+
+link:../commands-a-z/delete-sgsnapvolume.html["정합성 보장 그룹 스냅샷 볼륨을 삭제합니다"]
+
+link:../commands-a-z/delete-diskpool.html["디스크 풀을 삭제합니다"]
+
+link:../commands-a-z/delete-emailalert.html["이메일 알림 수신자를 삭제합니다"]
+
+link:../commands-a-z/delete-host.html["호스트를 삭제합니다"]
+
+link:../commands-a-z/delete-hostgroup.html["호스트 그룹을 삭제합니다"]
+
+link:../commands-a-z/delete-hostport.html["호스트 포트를 삭제합니다"]
+
+link:../commands-a-z/delete-initiator.html["이니시에이터를 삭제합니다"]
+
+link:../commands-a-z/delete-iscsiinitiator.html["iSCSI 이니시에이터를 삭제합니다"]
+
+link:../commands-a-z/delete-snapgroup.html["스냅샷 그룹을 삭제합니다"]
+
+link:../commands-a-z/delete-snapimage.html["스냅샷 이미지를 삭제합니다"]
+
+link:../commands-a-z/delete-snapvolume.html["스냅샷 볼륨을 삭제합니다"]
+
+link:../commands-a-z/delete-ssdcache.html["SSD 캐시를 삭제합니다"]
+
+link:../commands-a-z/delete-storagearray-directoryservers.html["스토리지 배열 디렉토리 서버를 삭제합니다"]
+
+link:../commands-a-z/delete-storagearray-loginbanner.html["스토리지 배열 로그인 배너를 삭제합니다"]
+
+link:../commands-a-z/delete-storagearray-syslog.html["스토리지 시스템 syslog 구성을 삭제합니다"]
+
+link:../commands-a-z/delete-syslog.html["syslog 서버를 삭제합니다"]
+
+link:../commands-a-z/delete-volume.html["볼륨을 삭제합니다"]
+
+link:../commands-a-z/delete-volume-from-disk-pool.html["디스크 풀에서 볼륨을 삭제합니다"]
+
+link:../commands-a-z/delete-volumegroup.html["볼륨 그룹을 삭제합니다"]
+
+link:../commands-a-z/diagnose-controller.html["컨트롤러를 진단합니다"]
+
+link:../commands-a-z/diagnose-controller-iscsihostport.html["컨트롤러 iSCSI 호스트 케이블을 진단합니다"]
+
+link:../commands-a-z/diagnose-syncmirror.html["동기 미러링을 진단하십시오"]
+
+link:../commands-a-z/disable-storagearray-externalkeymanagement-file.html["외부 보안 키 관리를 비활성화합니다"]
+
+link:../commands-a-z/disable-storagearray.html["스토리지 배열 기능을 비활성화합니다"]
+
+link:../commands-a-z/smcli-autosupportconfig-show.html["AutoSupport 번들 컬렉션 설정을 표시합니다"]
+
+link:../commands-a-z/smcli-autosupportschedule-show.html["AutoSupport 메시지 수집 일정을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-syslog.html["스토리지 시스템 syslog 구성을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-usersession.html["스토리지 시스템 사용자 세션을 표시합니다"]
+
+link:../commands-a-z/download-drive-firmware.html["드라이브 펌웨어를 다운로드합니다"]
+
+link:../commands-a-z/download-tray-firmware-file.html["환경 카드 펌웨어를 다운로드합니다"]
+
+link:../commands-a-z/download-storagearray-drivefirmware-file.html["스토리지 어레이 드라이브 펌웨어를 다운로드합니다"]
+
+link:../commands-a-z/download-storagearray-firmware.html["스토리지 어레이 펌웨어/NVSRAM을 다운로드합니다"]
+
+link:../commands-a-z/download-storagearray-nvsram.html["스토리지 배열 NVSRAM을 다운로드합니다"]
+
+link:../commands-a-z/download-tray-configurationsettings.html["용지함 구성 설정을 다운로드합니다"]
+
+link:../commands-a-z/enable-controller-datatransfer.html["컨트롤러 데이터 전송을 활성화합니다"]
+
+link:../commands-a-z/enable-diskpool-security.html["디스크 풀 보안을 설정합니다"]
+
+link:../commands-a-z/enable-storagearray-externalkeymanagement-file.html["외부 보안 키 관리를 활성화합니다"]
+
+link:../commands-a-z/enable-or-disable-autosupport-individual-arrays.html["AutoSupport 활성화 또는 비활성화(모든 개별 어레이)"]
+
+link:../commands-a-z/smcli-enable-autosupportfeature.html["EMW 관리 도메인 레벨에서 AutoSupport 활성화 또는 비활성화..."]
+
+link:../commands-a-z/set-storagearray-autosupportmaintenancewindow.html["AutoSupport 유지보수 윈도우 활성화 또는 비활성화(개별 E2800 또는 E5700 어레이)"]
+
+link:../commands-a-z/set-storagearray-hostconnectivityreporting.html["호스트 연결 보고를 설정하거나 해제합니다"]
+
+link:../commands-a-z/set-storagearray-odxenabled.html["ODX를 설정 또는 해제합니다"]
+
+link:../commands-a-z/set-storagearray-autosupportondemand.html["AutoSupport OnDemand 기능 활성화 또는 비활성화(개별 E2800 또는 E5700 어레이용)"]
+
+link:../commands-a-z/smcli-enable-disable-autosupportondemand.html["EMW에서 AutoSupport OnDemand 기능 활성화 또는 비활성화..."]
+
+link:../commands-a-z/smcli-enable-disable-autosupportremotediag.html["다음 사이트에서 AutoSupport OnDemand 원격 진단 기능을 활성화 또는 비활성화합니다."]
+
+link:../commands-a-z/set-storagearray-autosupportremotediag.html["AutoSupport 원격 진단 기능 활성화 또는 비활성화(개별 E2800 또는 E5700 어레이)"]
+
+link:../commands-a-z/set-storagearray-vaaienabled.html["VAAI를 설정하거나 해제합니다"]
+
+link:../commands-a-z/enable-storagearray-feature-file.html["스토리지 배열 기능을 설정합니다"]
+
+link:../commands-a-z/enable-volumegroup-security.html["볼륨 그룹 보안을 설정합니다"]
+
+link:../commands-a-z/establish-asyncmirror-volume.html["비동기 미러링 쌍을 설정합니다"]
+
+link:../commands-a-z/export-storagearray-securitykey.html["스토리지 배열 보안 키를 내보냅니다"]
+
+link:../commands-a-z/save-storagearray-keymanagementclientcsr.html["키 관리 인증서 서명 요청(CSR) 생성"]
+
+link:../commands-a-z/save-controller-arraymanagementcsr.html["웹 서버 CSR(인증서 서명 요청) 생성"]
+
+link:../commands-a-z/import-storagearray-securitykey-file.html["스토리지 배열 보안 키를 가져옵니다"]
+
+link:../commands-a-z/start-increasevolumecapacity-volume.html["디스크 풀 또는 볼륨 그룹의 볼륨 용량 증가..."]
+
+link:../commands-a-z/start-volume-initialize.html["씬 볼륨을 초기화합니다"]
+
+link:../commands-a-z/download-controller-cacertificate.html["루트/중간 CA 인증서를 설치합니다"]
+
+link:../commands-a-z/download-controller-arraymanagementservercertificate.html["서버 서명 인증서를 설치합니다"]
+
+link:../commands-a-z/download-storagearray-keymanagementcertificate.html["스토리지 배열 외부 키 관리 인증서를 설치합니다"]
+
+link:../commands-a-z/download-controller-trustedcertificate.html["신뢰할 수 있는 CA 인증서를 설치합니다"]
+
+link:../commands-a-z/load-storagearray-dbmdatabase.html["스토리지 배열 DBM 데이터베이스를 로드합니다"]
+
+link:../commands-a-z/recopy-volumecopy-target.html["볼륨 복사본을 다시 복사합니다"]
+
+link:../commands-a-z/recover-disabled-driveports.html["비활성화된 드라이브 포트를 복구합니다"]
+
+link:../commands-a-z/recover-volume.html["RAID 볼륨을 복구합니다"]
+
+link:../commands-a-z/recover-sasport-miswire.html["SAS 포트 오선을 복구합니다"]
+
+link:../commands-a-z/recreate-storagearray-securitykey.adocV879933["외부 보안 키를 다시 만듭니다"]
+
+link:../commands-a-z/recreate-storagearray-mirrorrepository.html["동기 미러링 저장소 볼륨을 다시 생성합니다"]
+
+link:../commands-a-z/reduce-disk-pool-capacity.html["디스크 풀 용량을 줄입니다"]
+
+link:../commands-a-z/create-snmpcommunity.html["SNMP 커뮤니티를 등록합니다"]
+
+link:../commands-a-z/create-snmptrapdestination.html["SNMP 트랩 대상을 등록합니다"]
+
+link:../commands-a-z/remove-array-label.html["스토리지 레이블을 제거합니다"]
+
+link:../commands-a-z/remove-drives-from-ssd-cache.html["SSD 캐시에서 드라이브를 제거합니다"]
+
+link:../commands-a-z/remove-asyncmirrorgroup.html["비동기 미러 그룹에서 불완전한 비동기 미러링된 쌍을 제거합니다"]
+
+link:../commands-a-z/delete-storagearray-trustedcertificate.html["설치된 신뢰할 수 있는 CA 인증서를 제거합니다"]
+
+link:../commands-a-z/delete-storagearray-keymanagementcertificate.html["설치된 외부 키 관리 인증서를 제거합니다"]
+
+link:../commands-a-z/delete-controller-cacertificate.html["설치된 루트/중간 CA 인증서를 제거합니다"]
+
+link:../commands-a-z/remove-member-volume-from-consistency-group.html["정합성 보장 그룹에서 구성원 볼륨을 제거합니다"]
+
+link:../commands-a-z/remove-storagearray-directoryserver.html["스토리지 배열 디렉토리 서버 역할 매핑을 제거합니다"]
+
+link:../commands-a-z/remove-syncmirror.html["동기 미러링을 제거합니다"]
+
+link:../commands-a-z/remove-volumecopy-target.html["볼륨 복사본을 제거합니다"]
+
+link:../commands-a-z/remove-volume-asyncmirrorgroup.html["비동기식 미러 그룹에서 볼륨을 제거합니다"]
+
+link:../commands-a-z/remove-lunmapping.html["볼륨 LUN 매핑을 제거합니다"]
+
+link:../commands-a-z/set-snapvolume.html["스냅샷 볼륨의 이름을 바꿉니다"]
+
+link:../commands-a-z/rename-ssd-cache.html["SSD 캐시 이름을 바꿉니다"]
+
+link:../commands-a-z/repair-data-parity.html["데이터 패리티 복구"]
+
+link:../commands-a-z/repair-volume-parity.html["볼륨 패리티를 복구합니다"]
+
+link:../commands-a-z/replace-drive-replacementdrive.html["드라이브를 교체합니다"]
+
+link:../commands-a-z/reset-storagearray-arvmstats-asyncmirrorgroup.html["비동기식 미러 그룹 통계를 재설정합니다"]
+
+link:../commands-a-z/smcli-autosupportschedule-reset.html["AutoSupport 메시지 수집 일정을 재설정합니다"]
+
+link:../commands-a-z/reset-storagearray-autosupport-schedule.html["AutoSupport 메시지 수집 일정 재설정(개별 E2800 또는 E5700 어레이)"]
+
+link:../commands-a-z/reset-controller.html["컨트롤러를 재설정합니다"]
+
+link:../commands-a-z/reset-drive.html["드라이브를 재설정합니다"]
+
+link:../commands-a-z/reset-controller-arraymanagementsignedcertificate.html["설치된 서명된 인증서를 재설정합니다"]
+
+link:../commands-a-z/reset-iscsiipaddress.html["iSCSI IP 주소를 재설정합니다"]
+
+link:../commands-a-z/reset-storagearray-diagnosticdata.html["스토리지 배열 진단 데이터를 재설정합니다"]
+
+link:../commands-a-z/reset-storagearray-hostportstatisticsbaseline.html["스토리지 배열 호스트 포트 통계 기준을 재설정합니다"]
+
+link:../commands-a-z/reset-storagearray-ibstatsbaseline.html["스토리지 배열 InfiniBand 통계 기준을 재설정합니다"]
+
+link:../commands-a-z/reset-storagearray-iscsistatsbaseline.html["스토리지 배열 iSCSI 기준을 재설정합니다"]
+
+link:../commands-a-z/reset-storagearray-iserstatsbaseline.html["스토리지 배열 iSER 기준선을 재설정합니다"]
+
+link:../commands-a-z/reset-storagearray-rlsbaseline.html["스토리지 배열 RLS 기준을 재설정합니다"]
+
+link:../commands-a-z/reset-storagearray-sasphybaseline.html["스토리지 배열 SAS PHY 기준선을 재설정합니다"]
+
+link:../commands-a-z/reset-storagearray-socbaseline.html["스토리지 시스템의 SOC 기준을 재설정합니다"]
+
+link:../commands-a-z/reset-storagearray-volumedistribution.html["스토리지 배열 볼륨 배포를 재설정합니다"]
+
+link:../commands-a-z/resume-asyncmirrorgroup.html["비동기식 미러 그룹을 재개합니다"]
+
+link:../commands-a-z/resume-cgsnapvolume.html["정합성 보장 그룹 스냅샷 볼륨을 재개합니다"]
+
+link:../commands-a-z/resume-snapimage-rollback.html["스냅샷 이미지 롤백을 재개합니다"]
+
+link:../commands-a-z/resume-snapvolume.html["스냅샷 볼륨을 재개합니다"]
+
+link:../commands-a-z/resume-ssdcache.html["SSD 캐시를 재개합니다"]
+
+link:../commands-a-z/resume-syncmirror.html["동기식 미러링을 다시 시작합니다"]
+
+link:../commands-a-z/save-storagearray-autosupport-log.html["AutoSupport 로그 검색(개별 E2800 또는 E5700 어레이)"]
+
+link:../commands-a-z/save-controller-cacertificate.html["설치된 CA 인증서를 검색합니다"]
+
+link:../commands-a-z/save-storagearray-keymanagementcertificate.html["설치된 외부 키 관리 인증서를 검색합니다"]
+
+link:../commands-a-z/save-storagearray-keymanagementcertificate.html["설치된 키 관리 CSR 요청을 검색합니다"]
+
+link:../commands-a-z/save-controller-arraymanagementsignedcertificate.html["설치된 서버 인증서를 검색합니다"]
+
+link:../commands-a-z/save-storagearray-trustedcertificate.html["설치된 신뢰할 수 있는 CA 인증서를 검색합니다"]
+
+link:../commands-a-z/revive-drive.html["드라이브를 되살리기"]
+
+link:../commands-a-z/revive-snapgroup.html["스냅샷 그룹을 다시 사용합니다"]
+
+link:../commands-a-z/revive-snapvolume.html["스냅샷 볼륨을 다시 봅니다"]
+
+link:../commands-a-z/revive-volumegroup.html["볼륨 그룹을 다시 사용합니다"]
+
+link:../commands-a-z/save-storagearray-arvmstats-asyncmirrorgroup.html["비동기식 미러 그룹 통계를 저장합니다"]
+
+link:../commands-a-z/save-auditlog.html["감사 로그 기록을 저장합니다"]
+
+link:../commands-a-z/save-storagearray-autoloadbalancestatistics-file.html["자동 로드 밸런싱 통계를 저장합니다"]
+
+link:../commands-a-z/save-controller-nvsram-file.html["컨트롤러 NVSRAM을 저장합니다"]
+
+link:../commands-a-z/save-drivechannel-faultdiagnostics-file.html["드라이브 채널 장애 격리 진단 상태를 저장합니다"]
+
+link:../commands-a-z/save-alldrives-logfile.html["드라이브 로그를 저장합니다"]
+
+link:../commands-a-z/save-ioclog.html["입력 출력 컨트롤러(IOC) 덤프를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-configuration.html["스토리지 배열 구성을 저장합니다"]
+
+link:../commands-a-z/save-storagearray-controllerhealthimage.html["스토리지 어레이 컨트롤러 상태 이미지를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-dbmdatabase.html["스토리지 배열 DBM 데이터베이스를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-dbmvalidatorinfo.html["스토리지 배열 dBm 유효성 검사기 정보 파일을 저장합니다"]
+
+link:../commands-a-z/save-storage-array-diagnostic-data.html["스토리지 배열 진단 데이터를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-warningevents.html["스토리지 배열 이벤트를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-firmwareinventory.html["스토리지 어레이 펌웨어 인벤토리를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-hostportstatistics.html["스토리지 배열 호스트 포트 통계를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-ibstats.html["스토리지 배열 InfiniBand 통계를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-iscsistatistics.html["스토리지 배열 iSCSI 통계를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-iserstatistics.html["스토리지 배열 iSER 통계 저장"]
+
+link:../commands-a-z/save-storagearray-loginbanner.html["스토리지 배열 로그인 배너를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-performancestats.html["스토리지 배열 성능 통계를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-rlscounts.html["스토리지 배열 RLS 수를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-sasphycounts.html["스토리지 배열 SAS PHY 수를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-soccounts.html["스토리지 시스템의 SOC 수를 줄입니다"]
+
+link:../commands-a-z/save-storagearray-statecapture.html["스토리지 배열 상태 캡처를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-supportdata.html["스토리지 배열 지원 데이터를 저장합니다"]
+
+link:../commands-a-z/save-alltrays-logfile.html["트레이 로그를 저장합니다"]
+
+link:../commands-a-z/smcli-supportbundle-schedule.html["자동 지원 번들 수집 구성을 예약합니다"]
+
+link:../commands-a-z/set-asyncmirrorgroup.html["비동기식 미러 그룹을 설정합니다"]
+
+link:../commands-a-z/set-auditlog.html["감사 로그 설정을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-autosupport-schedule.html["AutoSupport 메시지 수집 일정 설정(개별 E2800 또는 E5700 어레이)"]
+
+link:../commands-a-z/set-storagearray-revocationchecksettings.html["인증서 해지 확인 설정을 설정합니다"]
+
+link:../commands-a-z/set-consistency-group-attributes.html["정합성 보장 그룹 특성을 설정합니다"]
+
+link:../commands-a-z/set-cgsnapvolume.html["정합성 보장 그룹 스냅샷 볼륨을 설정합니다"]
+
+link:../commands-a-z/set-controller.html["컨트롤러를 설정합니다"]
+
+link:../commands-a-z/set-controller-dnsservers.html["컨트롤러 DNS 설정을 지정합니다"]
+
+link:../commands-a-z/set-controller-hostport.html["컨트롤러 호스트 포트 속성을 설정합니다"]
+
+link:../commands-a-z/set-controller-ntpservers.html["컨트롤러 NTP 설정을 설정합니다"]
+
+link:../commands-a-z/set-controller-service-action-allowed-indicator.html["컨트롤러 서비스 작업 허용 표시기를 설정합니다"]
+
+link:../commands-a-z/set-disk-pool.html["디스크 풀을 설정합니다"]
+
+link:../commands-a-z/set-disk-pool-modify-disk-pool.html["디스크 풀 설정(디스크 풀 수정)"]
+
+link:../commands-a-z/set-tray-drawer.html["문서함 서비스 조치 허용 표시기 설정"]
+
+link:../commands-a-z/set-drivechannel.html["드라이브 채널 상태를 설정합니다"]
+
+link:../commands-a-z/set-drive-hotspare.html["드라이브 핫 스페어를 설정하십시오"]
+
+link:../commands-a-z/set-drive-serviceallowedindicator.html["드라이브 서비스 작업 허용 표시등을 설정합니다"]
+
+link:../commands-a-z/set-drive-operationalstate.html["드라이브 상태를 설정합니다"]
+
+link:../commands-a-z/set-event-alert.html["이벤트 경고 필터링을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-externalkeymanagement.html["외부 키 관리 설정을 지정합니다"]
+
+link:../commands-a-z/set-drive-securityid.html["FIPS 드라이브 보안 식별자를 설정합니다"]
+
+link:../commands-a-z/set-drive-nativestate.html["외부 드라이브를 네이티브 드라이브로 설정합니다"]
+
+link:../commands-a-z/set-host.html["호스트를 설정합니다"]
+
+link:../commands-a-z/set-hostchannel.html["호스트 채널을 설정합니다"]
+
+link:../commands-a-z/set-hostgroup.html["호스트 그룹을 설정합니다"]
+
+link:../commands-a-z/set-hostport.html["호스트 포트를 설정합니다"]
+
+link:../commands-a-z/set-initiator.html["초기자를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-securitykey.html["내부 스토리지 배열 보안 키를 설정합니다"]
+
+link:../commands-a-z/set-controller-iscsihostport.html["iSCSI 호스트 포트 네트워킹 속성을 설정합니다"]
+
+link:../commands-a-z/set-iscsiinitiator.html["iSCSI 이니시에이터를 설정합니다"]
+
+link:../commands-a-z/set-iscsitarget.html["iSCSI 타겟 속성을 설정합니다"]
+
+link:../commands-a-z/set-isertarget.html["iSER 대상을 설정합니다"]
+
+link:../commands-a-z/set-snapvolume-converttoreadwrite.html["읽기 전용 스냅샷 볼륨을 읽기/쓰기 볼륨으로 설정합니다"]
+
+link:../commands-a-z/set-session-erroraction.html["세션을 설정합니다"]
+
+link:../commands-a-z/set-snapgroup.html["스냅샷 그룹 속성을 설정합니다"]
+
+link:../commands-a-z/set-snapgroup-mediascanenabled.html["스냅샷 그룹 미디어 검사를 설정합니다"]
+
+link:../commands-a-z/set-snapgroup-increase-decreaserepositorycapacity.html["스냅샷 그룹 저장소 볼륨 용량을 설정합니다"]
+
+link:../commands-a-z/set-snapgroup-enableschedule.html["스냅샷 그룹 스케줄을 설정합니다"]
+
+link:../commands-a-z/set-snapvolume-mediascanenabled.html["스냅샷 볼륨 미디어 스캔을 설정합니다"]
+
+link:../commands-a-z/set-snapvolume-increase-decreaserepositorycapacity.html["스냅샷 볼륨 저장소 볼륨 용량을 설정합니다"]
+
+link:../commands-a-z/set-volume-ssdcacheenabled.html["볼륨에 대한 SSD 캐시를 설정합니다"]
+
+link:../commands-a-z/set-storagearray.html["스토리지 배열을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-learncycledate-controller.html["스토리지 어레이 컨트롤러 배터리 학습 주기를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-controllerhealthimageallowoverwrite.html["스토리지 어레이 컨트롤러 상태 이미지의 덮어쓰기 허용 설정을 지정합니다"]
+
+link:../commands-a-z/set-storagearray-directoryserver.html["스토리지 배열 디렉토리 서버를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-directoryserver-roles.html["스토리지 배열 디렉토리 서버 역할 매핑을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-icmppingresponse.html["스토리지 배열 ICMP 응답을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-isnsregistration.html["스토리지 배열 iSNS 등록을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-isnsipv4configurationmethod.html["스토리지 배열 iSNS 서버 IPv4 주소를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-isnsipv6address.html["스토리지 배열 iSNS 서버 IPv6 주소를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-isnslisteningport.html["스토리지 배열 iSNS 서버 수신 포트를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-isnsserverrefresh.html["스토리지 배열 iSNS 서버 새로 고침을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-localusername.html["스토리지 배열 로컬 사용자 암호 또는 기호 암호를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-loginbanner.html["스토리지 배열 로그인 배너를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-managementinterface.html["스토리지 배열 관리 인터페이스를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-passwordlength.html["스토리지 배열 암호 길이를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-pqvalidateonreconstruct.html["재구성 시 스토리지 배열 PQ 검증을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-redundancymode.html["스토리지 배열 이중화 모드를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-resourceprovisionedvolumes.html["스토리지 시스템 리소스 프로비저닝된 볼륨을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-time.html["스토리지 배열 시간을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-autoloadbalancingenable.html["자동 로드 밸런싱을 활성화 또는 비활성화하도록 스토리지 배열 설정..."]
+
+link:../commands-a-z/set-storagearray-cachemirrordataassurancecheckenable.html["캐시 미러 데이터를 설정하거나 해제하려면 스토리지 배열을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-traypositions.html["스토리지 배열 트레이 위치를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-unnameddiscoverysession.html["스토리지 배열 이름 없는 검색 세션을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-usersession.html["스토리지 시스템 사용자 세션을 설정합니다"]
+
+link:../commands-a-z/set-syncmirror.html["동기 미러링을 설정합니다"]
+
+link:../commands-a-z/set-target.html["대상 속성을 설정합니다"]
+
+link:../commands-a-z/set-thin-volume-attributes.html["씬 볼륨 특성을 설정합니다"]
+
+link:../commands-a-z/set-tray-attribute.html["용지함 속성을 설정합니다"]
+
+link:../commands-a-z/set-tray-identification.html["용지함 ID를 설정합니다"]
+
+link:../commands-a-z/set-tray-serviceallowedindicator.html["트레이 서비스 작업 허용 표시기를 설정합니다"]
+
+link:../commands-a-z/set-volumes.html["디스크 풀의 볼륨에 대한 볼륨 속성 설정..."]
+
+link:../commands-a-z/set-volume-group-attributes-for-volume-in-a-volume-group.html["볼륨 그룹의 볼륨에 대한 볼륨 특성을 설정합니다."]
+
+link:../commands-a-z/set-volumecopy-target.html["볼륨 복사본을 설정합니다"]
+
+link:../commands-a-z/set-volumegroup.html["볼륨 그룹을 설정합니다"]
+
+link:../commands-a-z/set-volumegroup-forcedstate.html["볼륨 그룹 강제 상태를 설정합니다"]
+
+link:../commands-a-z/set-volume-logicalunitnumber.html["볼륨 매핑을 설정합니다"]
+
+link:../commands-a-z/show-array-label.html["배열 레이블을 표시합니다"]
+
+link:../commands-a-z/show-asyncmirrorgroup-synchronizationprogress.html["비동기식 미러 그룹 동기화 진행률을 표시합니다"]
+
+link:../commands-a-z/show-asyncmirrorgroup-summary.html["비동기식 미러 그룹을 표시합니다"]
+
+link:../commands-a-z/show-auditlog-configuration.html["감사 로그 구성을 표시합니다"]
+
+link:../commands-a-z/show-auditlog-summary.html["감사 로그 요약을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-autosupport.html["show AutoSupport configuration(E2800 또는 E5700 스토리지 어레이의 경우)"]
+
+link:../commands-a-z/show-blockedeventalertlist.html["차단된 이벤트 표시"]
+
+link:../commands-a-z/show-storagearray-revocationchecksettings.html["인증서 해지 확인 설정을 표시합니다"]
+
+link:../commands-a-z/show-certificates.html["인증서 표시"]
+
+link:../commands-a-z/show-consistencygroup.html["정합성 보장 그룹을 표시합니다"]
+
+link:../commands-a-z/show-cgsnapimage.html["정합성 보장 그룹 스냅샷 이미지를 표시합니다"]
+
+link:../commands-a-z/show-controller.html["컨트롤러를 표시합니다"]
+
+link:../commands-a-z/show-controller-diagnostic-status.html["컨트롤러 진단 상태를 표시합니다"]
+
+link:../commands-a-z/show-controller-nvsram.html["컨트롤러 NVSRAM을 표시합니다"]
+
+link:../commands-a-z/show-iscsisessions.html["현재 iSCSI 세션을 표시합니다"]
+
+link:../commands-a-z/show-diskpool.html["디스크 풀을 표시합니다"]
+
+link:../commands-a-z/show-alldrives.html["드라이브를 표시합니다"]
+
+link:../commands-a-z/show-drivechannel-stats.html["드라이브 채널 통계를 표시합니다"]
+
+link:../commands-a-z/show-alldrives-downloadprogress.html["드라이브 다운로드 진행률을 표시합니다"]
+
+link:../commands-a-z/show-alldrives-performancestats.html["드라이브 성능 통계를 표시합니다"]
+
+link:../commands-a-z/show-emailalert-summary.html["e-메일 알림 구성을 표시합니다"]
+
+link:../commands-a-z/show-allhostports.html["호스트 포트를 표시합니다"]
+
+link:../commands-a-z/show-controller-cacertificate.html["설치된 루트/중간 CA 인증서 요약을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-trustedcertificate-summary.html["설치된 신뢰할 수 있는 CA 인증서 요약을 표시합니다"]
+
+link:../commands-a-z/show-replaceabledrives.html["교체 가능한 드라이브를 표시합니다"]
+
+link:../commands-a-z/show-controller-arraymanagementsignedcertificate-summary.html["서명된 인증서를 표시합니다"]
+
+link:../commands-a-z/show-snapgroup.html["스냅샷 그룹을 표시합니다"]
+
+link:../commands-a-z/show-snapimage.html["스냅샷 이미지를 표시합니다"]
+
+link:../commands-a-z/show-snapvolume.html["스냅샷 볼륨을 표시합니다"]
+
+link:../commands-a-z/show-allsnmpcommunities.html["SNMP 커뮤니티를 표시합니다"]
+
+link:../commands-a-z/show-snmpsystemvariables.html["SNMP MIB II 시스템 그룹 변수를 표시합니다"]
+
+link:../commands-a-z/show-ssd-cache.html["SSD 캐시를 표시합니다"]
+
+link:../commands-a-z/show-ssd-cache-statistics.html["SSD 캐시 통계를 표시합니다"]
+
+link:../commands-a-z/show-storagearray.html["스토리지 배열을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-autoconfiguration.html["스토리지 배열 자동 구성을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-cachemirrordataassurancecheckenable.html["스토리지 캐시 미러 데이터 보증 검사 설정 표시"]
+
+link:../commands-a-z/show-storagearray-controllerhealthimage.html["스토리지 어레이 컨트롤러 상태 이미지를 표시합니다"]
+
+link:../commands-a-z/show-storagearray-dbmdatabase.html["스토리지 배열 DBM 데이터베이스를 표시합니다"]
+
+link:../commands-a-z/show-storagearray-directoryservices-summary.html["스토리지 배열 디렉토리 서비스 요약을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-hostconnectivityreporting.html["스토리지 시스템 호스트 접속 구성을 보여 줍니다"]
+
+link:../commands-a-z/show-storagearray-hosttopology.html["스토리지 시스템 호스트 토폴로지를 표시합니다"]
+
+link:../commands-a-z/show-storagearray-lunmappings.html["스토리지 배열 LUN 매핑을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-iscsinegotiationdefaults.html["스토리지 배열 협상 기본값을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-odxsetting.html["스토리지 배열 ODX 설정을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-powerinfo.html["스토리지 배열 전원 정보를 표시합니다"]
+
+link:../commands-a-z/show-storagearray-unconfigurediscsiinitiators.html["스토리지 배열 구성되지 않은 iSCSI 이니시에이터를 표시합니다"]
+
+link:../commands-a-z/show-storagearray-unreadablesectors.html["스토리지 배열을 읽을 수 없는 섹터를 표시합니다"]
+
+link:../commands-a-z/show-textstring.html["문자열을 표시합니다"]
+
+link:../commands-a-z/show-syncmirror-candidates.html["동기식 미러링 볼륨 후보 표시"]
+
+link:../commands-a-z/show-syncmirror-synchronizationprogress.html["동기 미러링 볼륨 동기화 진행률을 표시합니다"]
+
+link:../commands-a-z/show-syslog-summary.html["syslog 구성을 표시합니다"]
+
+link:../commands-a-z/show-volume.html["씬 볼륨을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-unconfiguredinitiators.html["구성되지 않은 이니시에이터를 표시합니다"]
+
+link:../commands-a-z/show-volume-summary.html["볼륨 표시"]
+
+link:../commands-a-z/show-volume-actionprogress.html["볼륨 작업 진행률을 표시합니다"]
+
+link:../commands-a-z/show-volumecopy.html["볼륨 복사본을 표시합니다"]
+
+link:../commands-a-z/show-volumecopy-sourcecandidates.html["볼륨 복사본 소스 후보 표시"]
+
+link:../commands-a-z/show-volumecopy-source-targetcandidates.html["볼륨 복사본 타겟 후보 표시"]
+
+link:../commands-a-z/show-volumegroup.html["볼륨 그룹을 표시합니다"]
+
+link:../commands-a-z/show-volumegroup-exportdependencies.html["볼륨 그룹 엑스포트 종속성을 표시합니다"]
+
+link:../commands-a-z/show-volumegroup-importdependencies.html["볼륨 그룹 가져오기 종속성을 표시합니다"]
+
+link:../commands-a-z/show-volume-performancestats.html["볼륨 성능 통계를 표시합니다"]
+
+link:../commands-a-z/show-volume-reservations.html["볼륨 예약을 표시합니다"]
+
+link:../commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html["AutoSupport HTTP(S) 제공 방법 지정(개별 E2800 또는 E5700 어레이)"]
+
+link:../commands-a-z/smcli-autosupportconfig.html["AutoSupport 전달 방법을 지정합니다"]
+
+link:../commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html["이메일(SMTP) 전달 방법 지정(개별 E2800 또는 E5700 어레이)"]
+
+link:../commands-a-z/start-asyncmirrorgroup-synchronize.html["비동기식 미러링 동기화를 시작합니다"]
+
+link:../commands-a-z/start-cgsnapimage-rollback.html["정합성 보장 그룹 스냅샷 롤백을 시작합니다"]
+
+link:../commands-a-z/start-controller.html["컨트롤러 트레이스를 시작합니다"]
+
+link:../commands-a-z/start-diskpool-fullprovisioning.html["디스크 풀 전체 프로비저닝을 시작합니다"]
+
+link:../commands-a-z/start-diskpool-locate.html["디스크 풀 찾기를 시작합니다"]
+
+link:../commands-a-z/start-drivechannel-faultdiagnostics.html["드라이브 채널 장애 격리 진단을 시작합니다"]
+
+link:../commands-a-z/start-drivechannel-locate.html["드라이브 채널 찾기를 시작합니다"]
+
+link:../commands-a-z/start-drive-initialize.html["드라이브 초기화를 시작합니다"]
+
+link:../commands-a-z/start-drive-locate.html["드라이브 찾기를 시작합니다"]
+
+link:../commands-a-z/start-drive-reconstruct.html["드라이브 재구성을 시작합니다"]
+
+link:../commands-a-z/start-secureerase-drive.html["FDE 보안 드라이브 지우기를 시작합니다"]
+
+link:../commands-a-z/start-ioclog.html["입력 출력 컨트롤러(IOC) 덤프를 시작합니다"]
+
+link:../commands-a-z/start-controller-iscsihostport-dhcprefresh.html["iSCSI DHCP 새로 고침을 시작합니다"]
+
+link:../commands-a-z/start-storagearray-ocspresponderurl-test.html["OCSP 서버 URL 테스트를 시작합니다"]
+
+link:../commands-a-z/start-snapimage-rollback.html["스냅샷 이미지 롤백을 시작합니다"]
+
+link:../commands-a-z/start-ssdcache-locate.html["SSD 캐시 위치 찾기를 시작합니다"]
+
+link:../commands-a-z/start-ssdcache-performancemodeling.html["SSD 캐시 성능 모델링을 시작합니다"]
+
+link:../commands-a-z/start-storagearray-autosupport-manualdispatch.html["스토리지 배열 AutoSupport 수동 디스패치를 시작합니다"]
+
+link:../commands-a-z/start-storagearray-configdbdiagnostic.html["스토리지 배열 구성 데이터베이스 진단을 시작합니다"]
+
+link:../commands-a-z/start-storagearray-controllerhealthimage-controller.html["스토리지 배열 컨트롤러 상태 이미지를 시작합니다"]
+
+link:../commands-a-z/start-storagearray-isnsserverrefresh.html["스토리지 배열 iSNS 서버 새로 고침을 시작합니다"]
+
+link:../commands-a-z/start-storagearray-locate.html["스토리지 배열 위치 찾기를 시작합니다"]
+
+link:../commands-a-z/start-storagearray-syslog-test.html["스토리지 시스템 syslog 테스트를 시작합니다"]
+
+link:../commands-a-z/start-syncmirror-primary-synchronize.html["동기 미러링 동기화를 시작합니다"]
+
+link:../commands-a-z/start-tray-locate.html["용지함 위치 찾기를 시작합니다"]
+
+link:../commands-a-z/start-volumegroup-defragment.html["볼륨 그룹 조각 모음을 시작합니다"]
+
+link:../commands-a-z/start-volumegroup-export.html["볼륨 그룹 내보내기를 시작합니다"]
+
+link:../commands-a-z/start-volumegroup-fullprovisioning.html["볼륨 그룹 전체 프로비저닝을 시작합니다"]
+
+link:../commands-a-z/start-volumegroup-import.html["볼륨 그룹 가져오기를 시작합니다"]
+
+link:../commands-a-z/start-volumegroup-locate.html["볼륨 그룹 찾기를 시작합니다"]
+
+link:../commands-a-z/start-volume-initialization.html["볼륨 초기화를 시작합니다"]
+
+link:../commands-a-z/stop-cgsnapimage-rollback.html["정합성 보장 그룹 스냅샷 롤백을 중지합니다"]
+
+link:../commands-a-z/stop-cgsnapvolume.html["정합성 보장 그룹 스냅샷 볼륨을 중지합니다"]
+
+link:../commands-a-z/stop-diskpool-locate.html["디스크 풀 찾기를 중지합니다"]
+
+link:../commands-a-z/stop-drivechannel-faultdiagnostics.html["드라이브 채널 장애 격리 진단을 중지합니다"]
+
+link:../commands-a-z/stop-drivechannel-locate.html["드라이브 채널 위치를 중지합니다"]
+
+link:../commands-a-z/stop-drive-locate.html["드라이브 찾기를 중지합니다"]
+
+link:../commands-a-z/stop-drive-replace.html["드라이브 교체를 중지합니다"]
+
+link:../commands-a-z/stop-consistencygroup-pendingsnapimagecreation.html["정합성 보장 그룹에서 보류 중인 스냅샷 이미지를 중지합니다"]
+
+link:../commands-a-z/stop-pendingsnapimagecreation.html["보류 중인 스냅샷 그룹 스냅샷 이미지를 중지합니다"]
+
+link:../commands-a-z/stop-snapimage-rollback.html["스냅샷 이미지 롤백을 중지합니다"]
+
+link:../commands-a-z/stop-snapvolume.html["스냅샷 볼륨을 중지합니다"]
+
+link:../commands-a-z/stop-ssdcache-locate.html["SSD 캐시 위치를 중지합니다"]
+
+link:../commands-a-z/stop-ssdcache-performancemodeling.html["SSD 캐시 성능 모델링을 중지합니다"]
+
+link:../commands-a-z/stop-storagearray-configdbdiagnostic.html["스토리지 배열 구성 데이터베이스 진단을 중지합니다"]
+
+link:../commands-a-z/stop-storagearray-drivefirmwaredownload.html["스토리지 어레이 드라이브 펌웨어 다운로드를 중지합니다"]
+
+link:../commands-a-z/stop-storagearray-iscsisession.html["스토리지 배열 iSCSI 세션을 중지합니다"]
+
+link:../commands-a-z/stop-storagearray-locate.html["스토리지 배열 위치 찾기를 중지합니다"]
+
+link:../commands-a-z/stop-tray-locate.html["트레이 위치를 중지합니다"]
+
+link:../commands-a-z/stop-volumecopy-target-source.html["볼륨 복사를 중지합니다"]
+
+link:../commands-a-z/stop-volumegroup-locate.html["볼륨 그룹 위치를 중지합니다"]
+
+link:../commands-a-z/suspend-asyncmirrorgroup.html["비동기식 미러 그룹을 일시 중단합니다"]
+
+link:../commands-a-z/suspend-ssdcache.html["SSD 캐시를 일시 중지합니다"]
+
+link:../commands-a-z/suspend-syncmirror-primaries.html["동기 미러링을 일시 중단합니다"]
+
+link:../commands-a-z/smcli-alerttest.html["경고를 테스트합니다"]
+
+link:../commands-a-z/diagnose-asyncmirrorgroup.html["비동기식 미러 그룹 접속을 테스트합니다"]
+
+link:../commands-a-z/start-storagearray-autosupport-deliverytest.html["AutoSupport 제공 설정 테스트(개별 E2800 또는 E5700 어레이)"]
+
+link:../commands-a-z/start-emailalert-test.html["이메일 경고 구성을 테스트합니다"]
+
+link:../commands-a-z/start-storagearray-externalkeymanagement-test.html["외부 키 관리 통신을 테스트합니다"]
+
+link:../commands-a-z/start-snmptrapdestination.html["SNMP 트랩 대상을 테스트합니다"]
+
+link:../commands-a-z/start-storagearray-directoryservices-test.html["스토리지 배열 디렉토리 서버를 테스트합니다"]
+
+link:../commands-a-z/start-syslog-test.html["syslog 구성을 테스트합니다"]
+
+link:../commands-a-z/smcli-autosupportconfig-test.html["AutoSupport 구성을 테스트합니다"]
+
+link:../commands-a-z/delete-snmpcommunity.html["SNMP 커뮤니티 등록을 취소합니다"]
+
+link:../commands-a-z/delete-snmptrapdestination.html["SNMP 트랩 대상 등록을 취소합니다"]
+
+link:../commands-a-z/set-snmpcommunity.html["SNMP 커뮤니티를 업데이트합니다"]
+
+link:../commands-a-z/set-snmpsystemvariables.html["SNMP MIB II 시스템 그룹 변수를 업데이트합니다"]
+
+link:../commands-a-z/set-snmptrapdestination-trapreceiverip.html["SNMP 트랩 대상을 업데이트합니다"]
+
+link:../commands-a-z/set-storagearray-syslog.html["스토리지 시스템 syslog 구성을 업데이트합니다"]
+
+link:../commands-a-z/validate-storagearray-securitykey.html["스토리지 배열 보안 키를 확인합니다"]

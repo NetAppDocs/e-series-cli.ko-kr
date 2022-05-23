@@ -1,0 +1,96 @@
+---
+permalink: commands-a-z/set-storagearray-localusername.html 
+sidebar: sidebar 
+keywords: set, storage, array, local, user, password, symbol 
+summary: set storageArray localUsername 명령과 set storageArray symbol 명령을 사용하면 특정 역할에 대한 로컬 사용자 이름 암호 또는 기호 암호를 설정할 수 있습니다. 
+---
+= 스토리지 배열 로컬 사용자 암호 또는 기호 암호를 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'et storageArray localUsername' 명령과 'et storageArray symbol' 명령을 사용하면 특정 역할에 대한 로컬 사용자 이름 암호나 기호 암호를 설정할 수 있습니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자, 지원 관리자, 보안 관리자 또는 스토리지 모니터 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+set storageArray (localUsername=pass:quotes[{ _admin_ | _storage_ | _security_ | _support_ | _monitor_}]
+| symbol [userRole={admin | monitor}])
+password="string" adminPassword="string"
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'localUsername'입니다
+ a| 
+사용자가 암호를 변경하도록 지정할 수 있습니다. 관리자, 스토리지, 업포트, 모니터, 보안 중에서 선택할 수 있습니다.
+
+
+
+ a| 
+'기호'
+ a| 
+기호 암호를 변경할 수 있습니다. 유효한 선택 항목은 'admin'과 'monitor'입니다.
+
+[NOTE]
+====
+사용되지 않는 'et storageArray password' 명령의 대체 명령입니다.
+
+====
+
+
+ a| 
+"암호"
+ a| 
+역할에 대한 암호를 지정할 수 있습니다.
+
+
+
+ a| 
+"adminPassword"
+ a| 
+새 암호를 설정하는 데 필요한 admin 암호를 지정할 수 있습니다.
+
+|===
+
+
+== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray localUsername=storage password="newPassword" adminPassword="theAdminPassword";"
+SMcli -n Array1 -c "set storageArray localUsername=admin password="newAdminPassword" adminPassword="theAdminPassword";"
+SMcli -n Array1 -c "set storageArray symbol userRole=admin password="newSymbolPassword" adminPassword="theAdminPassword";"
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40은 명령을 추가합니다.

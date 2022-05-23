@@ -1,0 +1,94 @@
+---
+permalink: commands-a-z/reset-storagearray-arvmstats-asyncmirrorgroup.html 
+sidebar: sidebar 
+keywords: reset, asynchronous, mirror group, statistics 
+summary: reset storageArray arvmStats asyncMirrorGroup 명령은 비동기 미러 그룹에 있는 하나 이상의 멤버 볼륨에 대한 동기화 통계를 상대 0으로 재설정합니다. 
+---
+= 비동기식 미러 그룹 통계를 재설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+reset storageArray arvmStats asyncMirrorGroup' 명령은 비동기식 미러 그룹에 있는 하나 이상의 멤버 볼륨에 대한 동기화 통계를 상대 0으로 재설정합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800 및 E5700 어레이를 포함한 개별 스토리지 어레이에 적용됩니다. 모든 SMcli 패키지가 설치된 경우
+
+
+
+== 역할
+
+E2800 또는 E5700 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+reset storageArray arvmStats asyncMirrorGroup pass:quotes[[_asyncMirrorGroupName_]]
+volume=pass:quotes[_"volumeName"_] sampleType=(all | mostRecent | longestSyncTime | errors)
+----
+
+
+== 매개 변수
+
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+아인치마그룹
+ a| 
+동기화 통계를 재설정하는 비동기식 미러 그룹의 이름입니다. 비동기 미러 그룹 이름은 대괄호([ ])로 묶어야 합니다. 비동기 미러 그룹 이름에 특수 문자나 숫자가 있는 경우 비동기 미러 그룹 이름은 대괄호 안에 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+'볼륨'
+ a| 
+이 매개 변수는 선택 사항입니다. 동기화 통계를 재설정하는 비동기식 미러 그룹의 특정 구성원 볼륨의 이름입니다. 볼륨이 지정되지 않은 경우 비동기식 미러 그룹의 모든 구성원 볼륨에 대한 통계가 재설정됩니다.
+
+볼륨 이름은 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+'서미타입'
+ a| 
+이 매개 변수는 선택 사항입니다. 'ExampleType'의 기본값은 'all'입니다.
+
+* 3가지 시료 유형 모두에 대한 모든 데이터가 리셋됩니다.
+* '최고' -- 최근 50개의 재동기화 샘플에 대한 통계가 재설정됩니다.
+* longestSyncTime -- 최근 20개의 가장 긴 재동기화 샘플에 대한 통계가 재설정됩니다.
+* 오류 -- 최근 실패한 20개의 재동기화 샘플에 대한 통계가 재설정됩니다.
+
+
+|===
+
+
+== 참고
+
+기본 역할의 미러링된 볼륨에 대한 통계가 재설정됩니다. 재설정된 통계에는 다음 데이터가 포함됩니다.
+
+* 동기화 시작 시간입니다
+* 동기화 유형(수동 또는 주기적)
+* 동기화 기간
+* 전송된 바이트 수입니다
+* 최대 및 최소 쓰기 시간(단일 쓰기의 경우)
+* 최대 및 최소 동기화 데이터 속도
+* 총 쓰기 시간입니다
+* 저장소 사용률(%)
+* 회복 시점 기간
+
+
+
+
+== 최소 펌웨어 레벨입니다
+
+7.84

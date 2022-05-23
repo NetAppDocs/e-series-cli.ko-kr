@@ -1,0 +1,177 @@
+---
+permalink: commands-a-z/smcli-autosupportconfig.html 
+sidebar: sidebar 
+keywords: specify, autosupport, delivery, method 
+summary: SMcli -autoSupportConfig 명령은 AutoSupport 메시지를 보내기 위한 전달 방법을 설정합니다. 
+---
+= AutoSupport 전달 방법을 지정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'SMcli -autoSupportConfig' 명령어는 AutoSupport 메시지 전송 방법을 설정한다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 관리 도메인에 있는 모든 E2700 및 E5600 스토리지 어레이에 동시에 적용됩니다. E2800 또는 E5700 스토리지 어레이에는 적용되지 않습니다.
+
+
+
+== 상황
+
+[NOTE]
+====
+이 명령은 스크립트 명령이 아니라 SMcli 명령입니다. 명령줄에서 이 명령을 실행해야 합니다. 스토리지 관리 소프트웨어의 스크립트 편집기에서 이 명령을 실행할 수 없습니다.
+
+====
+AutoSupport 메시지를 보내기 위한 두 가지 주요 전달 방법을 만들 수 있습니다.
+
+* SMTP -- AutoSupport 메시지를 보내기 위한 전달 방법으로 전자 메일을 사용하려는 경우 이 방법을 사용합니다.
+* HTTP/HTTPS -- HTTP 또는 HTTPS 프로토콜을 사용하여 AutoSupport 메시지를 보내려면 이 방법을 사용합니다. AutoSupport OnDemand 또는 AutoSupport 원격 진단 유틸리티를 사용하려면 HTTPS를 사용해야 합니다.
+
+
+
+
+== SMTP 배달 방법 구문
+
+[listing]
+----
+SMcli -autoSupportConfig deliveryMethod=SMTP
+mailRelayServer=<mailRelayServerName> senderMail=<senderEmailAddress>
+----
+
+
+== SMTP 전송 방법에 대한 매개 변수입니다
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'비열법'
+ a| 
+AutoSupport 메시지의 전달 방법을 지정할 수 있습니다. 유효한 선택은 SMTP입니다. 유효한 HTTP 또는 HTTPS 사용에 대한 자세한 내용은 이 항목의 다음 섹션을 참조하십시오.
+
+
+
+ a| 
+'메일 서버'
+ a| 
+AutoSupport 메시지의 메일 릴레이 서버를 지정할 수 있습니다.
+
+
+
+ a| 
+'엔더메일'
+ a| 
+AutoSupport 메시지의 보낸 사람 전자 메일 주소를 지정할 수 있습니다.
+
+|===
+
+
+== HTTP/HTTPS 전달 메소드에 대한 구문입니다
+
+[listing]
+----
+SMcli -autoSupportConfig deliveryMethod={HTTP|HTTPS}
+ {direct|proxyConfigScript=<proxyConfigScript>| proxyServer
+hostAddress:<address>portNumber=<portNumber> [userName=<userName>password=<password>]}
+----
+
+
+== HTTP/HTTPS 전송 방법에 대한 매개 변수입니다
+
+다음 표에는 HTTP/HTTPS 전달 방법에 대한 매개 변수가 나와 있습니다.
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'비열법'
+ a| 
+AutoSupport 메시지의 전달 방법을 지정할 수 있습니다. 유효한 선택 항목은 HTTPS 및 HTTP입니다(SMTP의 사용은 이전 섹션 참조, 또한 유효함).
+
+
+
+ a| 
+"이리"
+ a| 
+HTTPS 또는 HTTP 프로토콜을 사용하여 대상 기술 지원 시스템에 직접 연결할 수 있습니다.
+
+
+
+ a| 
+프록시 구성 스크립트
+ a| 
+프록시 자동 구성(PAC) 스크립트 파일의 위치를 지정할 수 있습니다.
+
+
+
+ a| 
+프록시 서버
+ a| 
+대상 기술 지원 시스템과의 연결을 설정하는 데 필요한 HTTP(s) 프록시 서버 세부 정보를 지정할 수 있습니다.
+
+
+
+ a| 
+호스트 주소
+ a| 
+proxyServer의 호스트 IP 주소입니다.
+
+
+
+ a| 
+포트번호
+ a| 
+프록시 서버의 포트 번호입니다. proxyServer 매개 변수를 사용하는 경우 이 매개 변수가 필요합니다.
+
+
+
+ a| 
+'사용자 이름'
+ a| 
+사용자 이름입니다. 이 매개 변수는 필수입니다.
+
+
+
+ a| 
+"암호"
+ a| 
+인증 암호입니다. 이 매개 변수는 필수입니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+8.25
+
+
+
+== 예
+
+[listing]
+----
+SMcli –autoSupportConfig deliveryMethod=SMTP
+mailRelayServer:server.eng.netapp.com
+senderEmail:user@netapp.com
+----
+[listing]
+----
+SMcli -autoSupportConfig deliveryMethod=HTTPS
+proxyServer hostAddress:10.117.12.112 portNumber=8080
+userName=user password=0987654321
+----
+
+
+== 검증
+
+'SMcli -autoSupportConfig test' 명령을 사용하여 테스트 메시지를 보내 전달 방법이 올바르게 설정되었는지 확인합니다.

@@ -1,0 +1,202 @@
+---
+permalink: commands-a-z/set-thin-volume-attributes.html 
+sidebar: sidebar 
+keywords: set, thin, volume, attributes 
+summary: 볼륨 설정 명령은 씬 볼륨의 속성을 정의합니다. 
+---
+= 씬 볼륨 특성을 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'볼륨 설정' 명령은 씬 볼륨의 속성을 정의합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+매개 변수를 사용하여 하나 이상의 씬 볼륨에 대한 속성을 정의할 수 있습니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+set (volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]] | volume <"wwID">)
+[newCapacity=pass:quotes[_capacityValue_]]
+[repositoryMaxCapacity=pass:quotes[_capacityValue_]]
+[repositoryExpansionPolicy=(automatic|manual)]
+[warningThresholdPercent=pass:quotes[_warningThresholdPercentValue_]]
+[addRepositoryCapacity=capacity-spec][hostReportingPolicy=(standard | thin)]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'볼륨'
+ a| 
+속성을 정의할 볼륨의 이름입니다. 볼륨 이름은 대괄호([ ])로 묶어야 합니다. 볼륨 이름에 특수 문자나 숫자가 있는 경우 볼륨 이름은 대괄호 안에 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+'볼륨'
+ a| 
+속성을 정의할 볼륨의 WWID(World Wide Identifier)입니다. WWID는 큰따옴표(" ")로 꺽쇠 괄호(<>)로 묶습니다.
+
+
+
+ a| 
+'볼륨'
+ a| 
+속성을 정의하려는 여러 볼륨의 이름입니다. 모든 볼륨의 속성이 동일합니다. 다음 규칙을 사용하여 볼륨의 이름을 입력합니다.
+
+* 모든 이름은 대괄호([ ])로 묶어야 합니다.
+* 각 이름을 공백으로 구분합니다.
+
+
+볼륨 이름에 특수 문자가 있거나 숫자만 포함된 경우 다음 규칙을 사용하여 이름을 입력합니다.
+
+* 모든 이름은 대괄호([ ])로 묶어야 합니다.
+* 각 이름은 큰따옴표(" ")로 묶어야 합니다.
+* 각 이름을 공백으로 구분합니다.
+
+
+
+
+ a| 
+'newCapacity'
+ a| 
+이 매개 변수는 씬 볼륨의 가상 용량을 늘립니다. 가상 용량은 볼륨이 볼륨에 매핑된 호스트에 보고할 값입니다. 값이 기존 용량과 같거나 작으면 오류가 발생합니다. 크기는 바이트, KB, MB, GB 또는 TB 단위로 정의됩니다.
+
+최소 가상 용량은 32MB입니다.
+
+최대 가상 용량은 63TB입니다.
+
+
+
+ a| 
+RepositoryMaxCapacity *
+ a| 
+이 매개 변수는 저장소 볼륨의 최대 용량을 설정합니다. 값은 저장소 볼륨의 물리적 용량보다 작을 수 없습니다. 새 값으로 인해 용량이 경고 임계값 아래로 감소할 경우 명령이 오류를 생성합니다.
+
+[NOTE]
+====
+RepositoryMaxCapacity 명령은 RepositoryExpansionPolicy=automatic과 함께 작동합니다.
+
+====
+
+
+ a| 
+RepositoryExpandionPolic *
+ a| 
+이 매개 변수는 확장 정책을 자동 또는 수동 으로 설정합니다. 정책을 '자동'에서 '수동'으로 변경하면 최대 용량 값(할당량)이 저장소 볼륨의 물리적 용량으로 변경됩니다.
+
+
+
+ a| 
+"warningThresholdPercent"를 참조하십시오
+ a| 
+씬 볼륨이 거의 꽉 찼다는 경고 메시지가 표시되는 씬 볼륨 용량의 비율입니다. 정수 값을 사용합니다. 예를 들어 값이 70이면 70%를 의미합니다.
+
+유효한 값은 1에서 100 사이의 값입니다.
+
+이 매개 변수를 100으로 설정하면 경고 경고가 비활성화됩니다.
+
+
+
+ a| 
+'addRepositoryCapacity'
+ a| 
+이 매개 변수는 디스크 풀의 사용 가능한 익스텐트에서 용량을 할당합니다. 사용 가능한 공간이 부족하면 명령이 실패합니다.
+
+[NOTE]
+====
+'addRepositoryCapacity' 명령은 RepositoryExpansionPolicy=manual과 함께 작동합니다.
+
+====
+
+
+ a| 
+'* hostReportingPolicy*'
+ a| 
+이 매개 변수는 씬 볼륨이 호스트에 보고되는 방식을 변경합니다. 유효한 값은 '표준' 또는 '얇은' 값입니다.
+
+|===
+
+
+== 참고
+
+이 명령을 사용할 때 하나 이상의 선택적 매개 변수를 지정할 수 있습니다.
+
+다음 표에는 씬 볼륨의 용량 제한이 나와 있습니다.
+
+[cols="2*"]
+|===
+| 용량 유형입니다 | 크기 
+
+
+ a| 
+최소 가상 용량입니다
+ a| 
+32MB
+
+
+
+ a| 
+최대 가상 용량
+ a| 
+63TB
+
+
+
+ a| 
+최소 물리적 용량
+ a| 
+4GB
+
+
+
+ a| 
+최대 물리적 용량입니다
+ a| 
+64TB
+
+|===
+씬 볼륨은 표준 볼륨에서 수행하는 다음과 같은 작업을 모두 지원합니다.
+
+* 씬 볼륨의 세그먼트 크기는 변경할 수 없습니다.
+* 씬 볼륨에 대한 사전 읽기 이중화 검사는 활성화할 수 없습니다.
+* 볼륨 복사본의 타겟 볼륨으로 씬 볼륨을 사용할 수 없습니다.
+* 동기 미러링 작업에서는 씬 볼륨을 사용할 수 없습니다.
+
+
+씬 볼륨을 표준 볼륨으로 변경하려면 볼륨 복사 작업을 사용하여 씬 볼륨의 복사본을 생성합니다. 볼륨 복사본의 대상은 항상 표준 볼륨입니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+7.83

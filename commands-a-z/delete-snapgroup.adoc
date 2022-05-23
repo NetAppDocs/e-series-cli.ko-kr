@@ -1,0 +1,80 @@
+---
+permalink: commands-a-z/delete-snapgroup.html 
+sidebar: sidebar 
+keywords: delete, snapgroup, command, entire, snapshot, group, option, associate, repository, volume 
+summary: delete SnapGroup 명령은 전체 스냅샷 그룹과 선택적으로 연결된 저장소 볼륨을 수행합니다. 
+---
+= 스냅샷 그룹을 삭제합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'SnapGroup 삭제'는 전체 스냅샷 그룹과 연결된 저장소 볼륨을 명령합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+[NOTE]
+====
+* 스토리지 배열 구성 손상 가능성 * -- 이 명령을 실행하면 스냅샷 그룹의 모든 데이터가 손실됩니다.
+
+====
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete snapGroup ["_snapGroupName_"]]
+[deleteRepositoryMembers=(TRUE | FALSE)]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+스냅그룹
+ a| 
+삭제할 스냅샷 그룹의 이름입니다. 스냅샷 그룹 이름은 큰따옴표(" ")로 대괄호([ ]) 안에 묶어야 합니다.
+
+
+
+ a| 
+'RepositoryMembers'
+ a| 
+저장소 볼륨을 삭제하거나 저장할 매개 변수입니다. 리포지토리 볼륨을 삭제하려면 이 매개변수를 "true"로 설정합니다. 리포지토리 볼륨을 저장하려면 이 매개변수를 "false"로 설정합니다. 기본값은 'false'입니다.
+
+|===
+
+
+== 참고
+
+사용자 레이블에는 영숫자, 밑줄(_), 하이픈(-) 및 파운드(#)를 조합하여 사용할 수 있습니다. 사용자 레이블은 최대 30자까지 가능합니다.
+
+스냅샷 그룹이 비어 있거나 스냅샷 이미지가 포함된 경우 삭제할 수 있습니다. 스냅샷 그룹의 모든 스냅샷 이미지가 스냅샷 그룹과 함께 삭제됩니다. 스냅샷 그룹 내의 기존 스냅샷 이미지에 연결된 스냅샷 볼륨이 있는 경우 각 스냅샷 볼륨이 중지되어 스냅샷 이미지에서 분리됩니다. 스냅샷 그룹을 삭제하면 연결된 저장소 볼륨도 삭제됩니다. 기본적으로 저장소 볼륨의 모든 구성원 볼륨은 사용되지 않고 매핑되지 않은 표준 볼륨으로 유지됩니다. 구성원 볼륨을 제거하려면 'deletRepositoryMembers' 매개 변수를 'true'로 설정하거나 이 매개 변수를 사용하지 마십시오. 구성원 볼륨을 유지하려면 'deletRepositoryMembers' 매개 변수를 'false'로 설정합니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+7.83

@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/set-storagearray-loginbanner.html 
+sidebar: sidebar 
+keywords: set, storage, array, login, banner 
+summary: set storageArray loginBanner 명령을 사용하면 로그인 배너로 사용할 텍스트 파일을 업로드할 수 있습니다. 배너 텍스트에는 SANtricity System Manager에서 세션을 설정하기 전에 또는 명령을 실행하기 전에 사용자에게 제공되는 권장 사항 및 동의 메시지가 포함될 수 있습니다. 
+---
+= 스토리지 배열 로그인 배너를 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+세트 storageArray loginBanner 명령어를 사용하면 로그인 배너로 사용할 텍스트 파일을 업로드할 수 있습니다. 배너 텍스트에는 SANtricity System Manager에서 세션을 설정하기 전에 또는 명령을 실행하기 전에 사용자에게 제공되는 권장 사항 및 동의 메시지가 포함될 수 있습니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+set storageArray loginBanner file="path_to_login_banner"
+----
+
+
+== 상황
+
+텍스트 파일을 로드하면 해당 파일이 스토리지 배열에 저장됩니다. 배너 텍스트는 SANtricity System Manager 로그인 화면 앞이나 명령을 실행하기 전에 나타납니다.
+
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'파일'
+ a| 
+로그인 배너 텍스트 파일이 저장된 파일 경로 및 파일 이름입니다.
+
+[NOTE]
+====
+로그인 배너 파일은 비워 둘 수 없으며 5KB 이상이어야 합니다.
+
+====
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+8.41

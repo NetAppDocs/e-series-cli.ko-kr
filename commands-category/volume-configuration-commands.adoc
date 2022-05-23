@@ -1,0 +1,211 @@
+---
+permalink: commands-category/volume-configuration-commands.html 
+sidebar: sidebar 
+keywords: volume, configuration, commands, diskpool, host topology, internet, storage, service, extension, group 
+summary: 볼륨 구성 명령 
+---
+= 볼륨 구성 명령
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+
+
+== 디스크 풀 명령입니다
+
+link:../commands-a-z/create-diskpool.html["디스크 풀을 생성합니다"]
+
+link:../commands-a-z/delete-diskpool.html["디스크 풀을 삭제합니다"]
+
+link:../commands-a-z/enable-diskpool-security.html["디스크 풀 보안을 설정합니다"]
+
+link:../commands-a-z/reduce-disk-pool-capacity.html["디스크 풀 용량을 줄입니다"]
+
+link:../commands-a-z/set-disk-pool.html["디스크 풀을 설정합니다"]
+
+link:../commands-a-z/set-disk-pool-modify-disk-pool.html["디스크 풀 설정(디스크 풀 수정)"]
+
+link:../commands-a-z/show-diskpool.html["디스크 풀을 표시합니다"]
+
+link:../commands-a-z/start-diskpool-fullprovisioning.html["디스크 풀 전체 프로비저닝을 시작합니다"]
+
+link:../commands-a-z/start-diskpool-locate.html["디스크 풀 찾기를 시작합니다"]
+
+link:../commands-a-z/stop-diskpool-locate.html["디스크 풀 찾기를 중지합니다"]
+
+
+
+== 호스트 토폴로지 명령
+
+link:../commands-a-z/create-host.html["호스트를 생성합니다"]
+
+link:../commands-a-z/create-hostgroup.html["호스트 그룹을 생성합니다"]
+
+link:../commands-a-z/create-hostport.html["호스트 포트를 생성합니다"]
+
+link:../commands-a-z/delete-host.html["호스트를 삭제합니다"]
+
+link:../commands-a-z/delete-hostgroup.html["호스트 그룹을 삭제합니다"]
+
+link:../commands-a-z/delete-hostport.html["호스트 포트를 삭제합니다"]
+
+link:../commands-a-z/set-host.html["호스트를 설정합니다"]
+
+link:../commands-a-z/set-hostchannel.html["호스트 채널을 설정합니다"]
+
+link:../commands-a-z/set-hostgroup.html["호스트 그룹을 설정합니다"]
+
+link:../commands-a-z/set-hostport.html["호스트 포트를 설정합니다"]
+
+link:../commands-a-z/show-allhostports.html["호스트 포트를 표시합니다"]
+
+link:../commands-a-z/show-storagearray-hosttopology.html["스토리지 시스템 호스트 토폴로지를 표시합니다"]
+
+
+
+== iSNS(Internet Storage Name Service) 명령입니다
+
+link:../commands-a-z/set-storagearray.html["스토리지 배열을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-isnsregistration.html["스토리지 배열 iSNS 등록을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-isnsipv4configurationmethod.html["스토리지 배열 iSNS 서버 IPv4 주소를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-isnsipv6address.html["스토리지 배열 iSNS 서버 IPv6 주소를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-isnslisteningport.html["스토리지 배열 iSNS 서버 수신 포트를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-isnsserverrefresh.html["스토리지 배열 iSNS 서버 새로 고침을 설정합니다"]
+
+link:../commands-a-z/start-storagearray-isnsserverrefresh.html["스토리지 배열 iSNS 서버 새로 고침을 시작합니다"]
+
+
+
+== iSER(RDMA) 명령을 위한 iSCSI 확장
+
+link:../commands-a-z/reset-storagearray-iserstatsbaseline.html["스토리지 배열 iSER 기준선을 재설정합니다"]
+
+link:../commands-a-z/save-storagearray-iserstatistics.html["스토리지 배열 iSER 통계 저장"]
+
+link:../commands-a-z/set-isertarget.html["iSER 대상을 설정합니다"]
+
+
+
+== iSCSI 명령
+
+link:../commands-a-z/create-iscsiinitiator.html["iSCSI 이니시에이터를 생성합니다"]
+
+link:../commands-a-z/delete-iscsiinitiator.html["iSCSI 이니시에이터를 삭제합니다"]
+
+link:../commands-a-z/diagnose-controller-iscsihostport.html["컨트롤러 iSCSI 호스트 케이블을 진단합니다"]
+
+link:../commands-a-z/reset-storagearray-iscsistatsbaseline.html["스토리지 배열 iSCSI 기준을 재설정합니다"]
+
+link:../commands-a-z/diagnose-controller-iscsihostport.html["스토리지 배열 iSCSI 통계를 저장합니다"]
+
+link:../commands-a-z/set-iscsiinitiator.html["iSCSI 이니시에이터를 설정합니다"]
+
+link:../commands-a-z/set-iscsitarget.html["iSCSI 타겟 속성을 설정합니다"]
+
+link:../commands-a-z/show-iscsisessions.html["현재 iSCSI 세션을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-iscsinegotiationdefaults.html["스토리지 배열 협상 기본값을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-unconfigurediscsiinitiators.html["스토리지 배열 구성되지 않은 iSCSI 이니시에이터를 표시합니다"]
+
+link:../commands-a-z/start-controller-iscsihostport-dhcprefresh.html["iSCSI DHCP 새로 고침을 시작합니다"]
+
+link:../commands-a-z/stop-storagearray-iscsisession.html["스토리지 배열 iSCSI 세션을 중지합니다"]
+
+
+
+== 볼륨 명령
+
+link:../commands-a-z/check-volume-parity.html["볼륨 패리티를 확인합니다"]
+
+link:../commands-a-z/create-mapping-volume.html["볼륨 매핑 생성"]
+
+link:../commands-a-z/clear-volume-reservations.html["볼륨 예약을 지웁니다"]
+
+link:../commands-a-z/clear-volume-unreadablesectors.html["볼륨을 읽을 수 없는 섹터를 지웁니다"]
+
+link:../commands-a-z/create-raid-volume-automatic-drive-select.html["RAID 볼륨 생성(자동 드라이브 선택)"]
+
+link:../commands-a-z/create-raid-volume-free-extent-based-select.html["RAID 볼륨 생성(사용 가능한 익스텐트 기반 선택)"]
+
+link:../commands-a-z/create-raid-volume-manual-drive-select.html["RAID 볼륨 생성(수동 드라이브 선택)"]
+
+link:../commands-a-z/create-volume-diskpool.html["디스크 풀에서 볼륨을 생성합니다"]
+
+link:../commands-a-z/delete-volume.html["볼륨을 삭제합니다"]
+
+link:../commands-a-z/delete-volume-from-disk-pool.html["디스크 풀에서 볼륨을 삭제합니다"]
+
+link:../commands-a-z/start-increasevolumecapacity-volume.html["디스크 풀 또는 볼륨 그룹의 볼륨 용량 증가..."]
+
+link:../commands-a-z/start-volume-initialize.html["씬 볼륨을 초기화합니다"]
+
+link:../commands-a-z/recover-volume.html["RAID 볼륨을 복구합니다"]
+
+link:../commands-a-z/remove-lunmapping.html["볼륨 LUN 매핑을 제거합니다"]
+
+link:../commands-a-z/repair-volume-parity.html["볼륨 패리티를 복구합니다"]
+
+link:../commands-a-z/repair-data-parity.html["데이터 패리티 복구"]
+
+link:../commands-a-z/set-thin-volume-attributes.html["씬 볼륨 특성을 설정합니다"]
+
+link:../commands-a-z/set-volumes.html["디스크 풀의 볼륨에 대한 볼륨 속성 설정..."]
+
+link:../commands-a-z/set-volume-group-attributes-for-volume-in-a-volume-group.html["볼륨 그룹의 볼륨에 대한 볼륨 특성을 설정합니다."]
+
+link:../commands-a-z/set-volume-logicalunitnumber.html["볼륨 매핑을 설정합니다"]
+
+link:../commands-a-z/show-volume.html["씬 볼륨을 표시합니다"]
+
+link:../commands-a-z/show-volume-summary.html["볼륨 표시"]
+
+link:../commands-a-z/show-volume-actionprogress.html["볼륨 작업 진행률을 표시합니다"]
+
+link:../commands-a-z/show-volume-performancestats.html["볼륨 성능 통계를 표시합니다"]
+
+link:../commands-a-z/show-volume-reservations.html["볼륨 예약을 표시합니다"]
+
+link:../commands-a-z/start-volume-initialization.html["볼륨 초기화를 시작합니다"]
+
+
+
+== 볼륨 그룹 명령
+
+link:../commands-a-z/create-volumegroup.html["볼륨 그룹을 생성합니다"]
+
+link:../commands-a-z/delete-volumegroup.html["볼륨 그룹을 삭제합니다"]
+
+link:../commands-a-z/enable-volumegroup-security.html["볼륨 그룹 보안을 설정합니다"]
+
+link:../commands-a-z/revive-volumegroup.html["볼륨 그룹을 다시 사용합니다"]
+
+link:../commands-a-z/set-volumegroup.html["볼륨 그룹을 설정합니다"]
+
+link:../commands-a-z/set-volumegroup-forcedstate.html["볼륨 그룹 강제 상태를 설정합니다"]
+
+link:../commands-a-z/show-volumegroup.html["볼륨 그룹을 표시합니다"]
+
+link:../commands-a-z/show-volumegroup-exportdependencies.html["볼륨 그룹 엑스포트 종속성을 표시합니다"]
+
+link:../commands-a-z/show-volumegroup-importdependencies.html["볼륨 그룹 가져오기 종속성을 표시합니다"]
+
+link:../commands-a-z/start-volumegroup-defragment.html["볼륨 그룹 조각 모음을 시작합니다"]
+
+link:../commands-a-z/start-volumegroup-export.html["볼륨 그룹 내보내기를 시작합니다"]
+
+link:../commands-a-z/start-volumegroup-fullprovisioning.html["볼륨 그룹 전체 프로비저닝을 시작합니다"]
+
+link:learn-about-volume-group-migration.html["볼륨 그룹 마이그레이션에 대한 자세한 정보(CLI만 해당)"]
+
+link:../commands-a-z/start-volumegroup-import.html["볼륨 그룹 가져오기를 시작합니다"]
+
+link:../commands-a-z/start-volumegroup-locate.html["볼륨 그룹 찾기를 시작합니다"]
+
+link:../commands-a-z/stop-volumegroup-locate.html["볼륨 그룹 위치를 중지합니다"]

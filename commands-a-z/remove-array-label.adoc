@@ -1,0 +1,49 @@
+---
+permalink: commands-a-z/remove-array-label.html 
+sidebar: sidebar 
+keywords: remove, array, label 
+summary: 스토리지 레이블 제거 명령을 사용하면 스토리지 배열에 대한 사용자 정의 레이블을 제거할 수 있습니다. 
+---
+= 스토리지 레이블을 제거합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+스토리지 레이블 제거 명령을 사용하면 스토리지 배열에 대한 사용자 정의 레이블을 제거할 수 있습니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 EF600 및 EF300 스토리지 어레이에 적용됩니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+delete storageArrayLabel label pass:quotes[_userDefinedString_]
+delete storageArrayLabel all
+----
+
+
+== 매개 변수
+
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+사용자 정의문자열
+ a| 
+스토리지 배열에 대한 사용자 정의 레이블을 지정할 수 있습니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+8.60

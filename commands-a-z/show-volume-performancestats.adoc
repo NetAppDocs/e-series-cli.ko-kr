@@ -1,0 +1,132 @@
+---
+permalink: commands-a-z/show-volume-performancestats.html 
+sidebar: sidebar 
+keywords: show, volume, performance, statistics 
+summary: show volume performanceStats 명령은 볼륨 성능에 대한 정보를 반환합니다. 
+---
+= 볼륨 성능 통계를 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'show volume performanceStats' 명령은 볼륨 성능에 대한 정보를 반환합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 스토리지 모니터 역할이 있어야 합니다.
+
+
+
+== 상황
+
+스토리지 배열의 각 볼륨에 대해 이 명령은 다음 정보를 반환합니다.
+
+* 스토리지 어레이
+* 총 입출력 수
+* 읽기 %
+* 운영 읽기 캐시 적중률
+* 운영 쓰기 캐시 적중률
+* SSD 캐시 적중률
+* 현재 MBs/s
+* 최대 MBs/s
+* 현재 IO/s
+* 최대 입출력 수
+* 최소 입출력 수
+* 평균 입출력 수
+* 최소 MBs/s
+* 평균 MBs/s
+* 현재 IO 지연 시간
+* 최대 IO 지연 시간
+* 최소 IO 지연 시간
+* 평균 IO 지연 시간입니다
+
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+show (allVolumes | volume pass:quotes[["_volumeName_"]]
+volumes pass:quotes[["_volumeName1_" ... "_volumeNameN_"]]) performanceStats
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'올볼륨'
+ a| 
+스토리지 배열의 모든 볼륨에 대한 성능 통계를 반환하기 위한 매개 변수입니다.
+
+
+
+ a| 
+'볼륨'
+ a| 
+정보를 검색할 볼륨의 이름입니다. 볼륨 이름은 대괄호([ ])로 묶어야 합니다. 볼륨 이름에 특수 문자나 숫자가 있는 경우 이름은 대괄호 안에 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+'볼륨'
+ a| 
+정보를 검색할 여러 볼륨의 이름입니다. 다음 규칙을 사용하여 볼륨의 이름을 입력합니다.
+
+* 모든 이름은 대괄호([ ])로 묶어야 합니다.
+* 각 이름을 공백으로 구분합니다.
+
+
+볼륨 이름에 특수 문자나 숫자가 있으면 다음 규칙을 사용하여 이름을 입력합니다.
+
+* 모든 이름은 대괄호([ ])로 묶어야 합니다.
+* 각 이름은 큰따옴표(" ")로 묶어야 합니다.
+* 각 이름을 공백으로 구분합니다.
+
+
+|===
+
+
+== 참고
+
+'show volume performanceStat' 명령어를 실행하기 전에 'et session performanceMonitorInterval' 명령과 'et session performanceMonitorIterations' 명령을 실행하여 통계를 수집하는 빈도를 정의합니다.
+
+'show volume performanceStat' 명령은 다음 예와 같이 볼륨 성능 통계를 반환합니다.
+
+[listing]
+----
+Performance Monitor Statistics for Storage Array: Tyler -
+Date/Time: 11/6/12 10:00: 34 AM - Polling interval in seconds: 5
+
+
+"Storage Arrays","Total IOs","Read %","Primary Read Cache Hit %",
+"Primary Write Cache Hit %","SSD Read Cache Hit %","Current MBs/sec",
+"Maximum MBs/sec","Current IOs/sec","Maximum IOs/sec","Minimum IOs/sec",
+"Average IOs/sec","Minimum MBs/sec","Average MBs/sec","Current IO Latency",
+"Maximum IO Latency","Minimum IO Latency","Average IO Latency"
+
+"Capture Iteration: 1","","","","","","","","","","","","","","","","",""
+"Date/Time: 11/6/12 10:00:34 AM","","","","","","","","","","","","","","",
+   "","","""Volume Unnamed","0.0","","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0",
+   "0.0","0.0","0.0","0.0","0.0","0.0","0.0"
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+6.10

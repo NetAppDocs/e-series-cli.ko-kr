@@ -1,0 +1,103 @@
+---
+permalink: commands-a-z/set-snapgroup.html 
+sidebar: sidebar 
+keywords: set, snapshot, group, attributes 
+summary: set SnapGroup 명령은 스냅샷 그룹의 속성을 정의합니다. 
+---
+= 스냅샷 그룹 속성을 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'SnapGroup 설정' 명령은 스냅샷 그룹의 속성을 정의합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+set snapGroup pass:quotes[["_snapGroupName_"]]
+[userLabel=pass:quotes["_snapGroupName_"]] |
+[repositoryFullPolicy=(failBaseWrites | purgeSnapImages) |
+[repositoryFullLimit=pass:quotes[_percentValue_] |
+[autoDeleteLimit=pass:quotes[_numberOfSnapImages_]] |
+[rollbackPriority=(lowest | low | medium | high | highest)]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+스냅그룹
+ a| 
+속성을 설정할 스냅샷 그룹의 이름입니다. 스냅샷 그룹 이름은 큰따옴표(" ")로 대괄호([ ]) 안에 묶어야 합니다.
+
+
+
+ a| 
+'사용자 레이블'
+ a| 
+스냅샷 그룹에 지정할 새 이름입니다. 스냅샷 그룹의 이름을 바꾸려면 이 매개 변수를 사용합니다. 새 스냅샷 그룹 이름은 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+재규리풀정책
+ a| 
+스냅샷 이미지 그룹의 저장소 볼륨이 꽉 찬 경우 스냅샷 이미지 처리를 계속할 방법 기본 볼륨('failBaseWrites')에 대한 쓰기를 실패하거나 스냅샷 이미지('purgeSnapImages')를 삭제(삭제)할 수 있습니다. 기본 동작은 "purgeSnapImages"입니다.
+
+
+
+ a| 
+재허용 FullLimit
+ a| 
+스냅샷 이미지 저장소 볼륨이 거의 꽉 찼다는 경고가 표시되는 저장소 볼륨 용량의 비율입니다. 정수 값을 사용합니다. 예를 들어 값이 70이면 70%를 의미합니다. 기본값은 75입니다.
+
+
+
+ a| 
+자동 삭제 제한
+ a| 
+리포지토리 전체 정책의 스냅샷 이미지를 삭제하도록 선택한 경우 자동으로 삭제할 최대 스냅샷 이미지 수입니다. 정수 값을 사용합니다. 기본값은 32입니다.
+
+
+
+ a| 
+롤백우선
+ a| 
+시스템 성능을 희생하여 시스템 리소스를 롤백 작업에 할당해야 하는지 여부를 확인하려면 이 매개 변수를 사용합니다. 유효한 값은 "가장 높음", "높음", "중간", "낮음" 또는 "가장 낮음"입니다. "높음"은 롤백 작업이 다른 모든 호스트 입출력에 우선함을 나타냅니다 "최저"는 롤백 작업이 호스트 입출력에 미치는 영향을 최소화하면서 수행되어야 함을 나타냅니다
+
+|===
+
+
+== 참고
+
+이름에 영숫자, 밑줄(_), 하이픈(-) 및 파운드(#)를 조합하여 사용할 수 있습니다. 이름에는 최대 30자를 사용할 수 있습니다.
+
+이 명령을 사용할 때 하나 이상의 매개 변수를 지정할 수 있습니다. 그러나 모든 매개 변수를 사용할 필요는 없습니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+7.83

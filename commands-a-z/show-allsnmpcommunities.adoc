@@ -1,0 +1,121 @@
+---
+permalink: commands-a-z/show-allsnmpcommunities.html 
+sidebar: sidebar 
+keywords: show, snmp, communities 
+summary: 'show allSnmpCommunities 명령은 스토리지 배열에 대해 정의된 SNMP(Simple Network Management Protocol) 커뮤니티에 대한 정보를 반환합니다. SNMP 커뮤니티는 라우터, 스위치, 프린터, 스토리지 디바이스, 장치를 관리하고 모니터링하기 위해 함께 그룹화됩니다.' 
+---
+= SNMP 커뮤니티를 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'show allSnmpCommunities' 명령어는 스토리지 배열에 대해 정의된 SNMP(Simple Network Management Protocol) 커뮤니티에 대한 정보를 반환합니다. SNMP 커뮤니티는 라우터, 스위치, 프린터, 스토리지 디바이스, 장치를 관리하고 모니터링하기 위해 함께 그룹화됩니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 또는 스토리지 모니터 역할이 있어야 합니다.
+
+
+
+== 상황
+
+반환된 정보에는 다음이 포함됩니다.
+
+* 총 커뮤니티 수입니다
+* 총 트랩 대상 수입니다
+* SNMP 커뮤니티의 이름입니다
+
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+show pass:quotes[(allSnmpCommunities |
+snmpCommunity communityName="_snmpCommunityName_"] |
+snmpCommunities pass:quotes[[_snmpCommunityName1_ ... _snmpCommunityNameN_]])
+[summary]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+allSnmpCommunities를 선택합니다
+ a| 
+이 매개변수는 스토리지 배열의 모든 SNMP 커뮤니티에 대한 정보를 반환합니다.
+
+
+
+ a| 
+공산성
+ a| 
+정보를 검색할 SNMP 커뮤니티의 이름입니다. SNMP 커뮤니티 이름은 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+민동공동체다
+ a| 
+정보를 검색할 여러 SNMP 커뮤니티의 이름입니다. 다음 규칙을 사용하여 SNMP 커뮤니티의 이름을 입력합니다.
+
+* 모든 이름은 대괄호([ ])로 묶어야 합니다.
+* 각 이름은 큰따옴표(" ")로 묶어야 합니다.
+* 각 이름을 공백으로 구분합니다.
+
+
+
+
+ a| 
+양호실
+ a| 
+이 매개변수는 SNMP 커뮤니티의 총 수와 SNMP 트랩 대상의 총 수를 반환합니다. 이 매개 변수를 사용하면 모든 세부 정보가 생략됩니다.
+
+|===
+
+
+== 참고
+
+SNMP는 관리자 및 관리되는 장치가 속하는 하나 이상의 _c커뮤니티_를 지원합니다. SNMP 요청에는 네트워크를 통해 전달되는 데이터 패킷에 _ 커뮤니티 문자열 _ 이(가) 포함되어 있으며, 이 패킷은 원시적인 암호 역할을 합니다. SNMP 에이전트는 인식할 수 없는 커뮤니티 문자열을 사용하여 GET 또는 SET 요청을 거부할 수 있습니다. 커뮤니티 문자열은 에이전트에서 매니저로 전송되는 트랩 알림에도 포함됩니다.
+
+내장 SNMP 에이전트는 IPv4와 IPv6를 모두 지원합니다.
+
+이 명령은 이 예제와 유사한 SNMP 커뮤니티 정보를 반환합니다.
+
+[listing]
+----
+SNMP COMMUNITIES------------------------------
+SUMMARY
+   Total SNMP Communities: 2
+   Total SNMP Trap Destinations: 1
+DETAILS
+   SNMP Community: TestComm1
+   SNMP Permission: Read Only
+      Associated Trap Destination:
+      Trap Receiver IP Address: 10.113.173.133
+      Send Authentication Failure Traps: true
+   SNMP Community: Test2
+   SNMP Permission: Read Only
+      Associated Trap Destination:
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.30

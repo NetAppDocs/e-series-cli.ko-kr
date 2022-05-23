@@ -1,0 +1,53 @@
+---
+permalink: commands-category/performance-tuning-commands.html 
+sidebar: sidebar 
+keywords: performance, tuning, commands, automatic, load balance, cache commands 
+summary: 성능 튜닝 명령 
+---
+= 성능 튜닝 명령
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+
+
+== 자동 로드 밸런싱 명령
+
+link:../commands-a-z/save-storagearray-autoloadbalancestatistics-file.html["자동 로드 밸런싱 통계를 저장합니다"]
+
+link:../commands-a-z/set-storagearray-autoloadbalancingenable.html["자동 로드 밸런싱을 사용하거나 사용하지 않도록 스토리지 배열을 설정합니다"]
+
+
+
+== SSD 캐시 명령입니다
+
+link:../commands-a-z/add-drives-to-ssd-cache.html["SSD 캐시에 드라이브를 추가합니다"]
+
+link:../commands-a-z/change-ssd-cache-application-type.html["SSD 캐시 애플리케이션 유형을 변경합니다"]
+
+link:../commands-a-z/create-ssdcache.html["SSD 캐시를 생성합니다"]
+
+link:../commands-a-z/delete-ssdcache.html["SSD 캐시를 삭제합니다"]
+
+link:../commands-a-z/remove-drives-from-ssd-cache.html["SSD 캐시에서 드라이브를 제거합니다"]
+
+link:../commands-a-z/rename-ssd-cache.html["SSD 캐시 이름을 바꿉니다"]
+
+link:../commands-a-z/resume-ssdcache.html["SSD 캐시를 재개합니다"]
+
+link:../commands-a-z/set-volume-ssdcacheenabled.html["볼륨에 대한 SSD 캐시를 설정합니다"]
+
+link:../commands-a-z/show-ssd-cache.html["SSD 캐시를 표시합니다"]
+
+link:../commands-a-z/show-ssd-cache-statistics.html["SSD 캐시 통계를 표시합니다"]
+
+link:../commands-a-z/start-ssdcache-locate.html["SSD 캐시 위치 찾기를 시작합니다"]
+
+link:../commands-a-z/start-ssdcache-performancemodeling.html["SSD 캐시 성능 모델링을 시작합니다"]
+
+link:../commands-a-z/stop-ssdcache-locate.html["SSD 캐시 위치를 중지합니다"]
+
+link:../commands-a-z/stop-ssdcache-performancemodeling.html["SSD 캐시 성능 모델링을 중지합니다"]
+
+link:../commands-a-z/suspend-ssdcache.html["SSD 캐시를 일시 중지합니다"]

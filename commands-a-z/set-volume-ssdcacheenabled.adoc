@@ -1,0 +1,118 @@
+---
+permalink: commands-a-z/set-volume-ssdcacheenabled.html 
+sidebar: sidebar 
+keywords: set, ssd, cache, volume 
+summary: set volume ssdCacheEnabled 명령은 특정 볼륨에 대한 SSD 캐시 기능을 사용하여 캐싱을 설정하거나 해제합니다. 
+---
+= 볼륨에 대한 SSD 캐시를 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Set volume ssdCacheEnabled' 명령은 특정 볼륨에 대해 SSD 캐시 기능을 사용하여 캐싱을 설정하거나 해제합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800 및 E5700 어레이를 포함한 개별 스토리지 어레이에 적용됩니다. 모든 SMcli 패키지가 설치된 경우
+
+
+
+== 역할
+
+E2800 또는 E5700 스토리지 어레이에서 이 명령을 실행하려면 지원 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+볼륨은 다음 중 하나일 수 있습니다.
+
+* 이름 또는 WWID로 식별되는 표준 볼륨입니다
+* 스냅샷 볼륨
+* 정합성 보장 그룹 스냅샷 볼륨
+
+
+
+
+== 표준 볼륨에 적용할 수 있는 구문입니다
+
+[listing, subs="+macros"]
+----
+set volume (pass:quotes[[_volumeName_]] | <"WWID">) ssdCacheEnabled=(TRUE | FALSE)
+----
+
+
+== 스냅샷 볼륨에 적용할 수 있는 구문입니다
+
+[listing, subs="+macros"]
+----
+set snapVolume pass:quotes[["_snapVolumeName_"]] ssdCacheEnabled=(TRUE | FALSE)
+----
+
+
+== 정합성 보장 그룹 스냅샷 볼륨에 적용할 수 있는 구문입니다
+
+[listing, subs="+macros"]
+----
+set cgSnapVolume pass:quotes[["_cgSnapVolumeName_"]] ssdCacheEnabled=(TRUE | FALSE)
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'볼륨'
+ a| 
+SSD 캐시를 설정하거나 해제할 표준 볼륨의 이름입니다. 볼륨의 이름은 대괄호([])로 묶어야 합니다. 볼륨의 이름에 특수 문자나 숫자가 있는 경우 볼륨의 이름은 대괄호([ ]) 안에 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+'볼륨'
+ a| 
+SSD 캐시를 설정하거나 해제할 표준 볼륨의 WWID(World Wide Identifier)입니다. WWID는 큰따옴표(" ")로 꺽쇠 괄호(<>)로 묶습니다.
+
+
+
+ a| 
+'냅볼륨'
+ a| 
+SSD 캐시를 설정하거나 해제할 스냅샷 볼륨의 이름입니다. 스냅숏 볼륨의 이름은 큰따옴표(" ")로 대괄호([ ]) 안에 묶어야 합니다.
+
+
+
+ a| 
+'cgSnapVolume'
+ a| 
+SSD 캐시를 설정하거나 해제할 일관성 그룹 스냅샷 볼륨의 이름입니다. 정합성 보장 그룹 스냅샷 볼륨의 이름은 대괄호([]) 안에 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+'ssdCacheEnabled
+ a| 
+SSD 캐시를 켜려면 이 매개 변수를 "true"로 설정합니다. SSD 캐시를 해제하려면 이 매개변수를 'false'로 설정하십시오.
+
+|===
+
+
+== 참고
+
+SSD 캐시는 한 번에 하나의 볼륨에만 켜거나 끌 수 있습니다.
+
+볼륨에 대한 SSD 캐시를 끄면 해당 볼륨의 SSD 캐시가 제거됩니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+7.84

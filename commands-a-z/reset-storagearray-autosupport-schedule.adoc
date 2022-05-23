@@ -1,0 +1,71 @@
+---
+permalink: commands-a-z/reset-storagearray-autosupport-schedule.html 
+sidebar: sidebar 
+keywords: reset, autosupport, message, collection, schedule 
+summary: reset storageArray AutoSupport schedule 명령은 AutoSupport 메시지가 관리 소프트웨어에서 생성된 임의의 값으로 다시 전송되는 요일과 주 단위 시간 및 일을 재설정합니다. 
+---
+= AutoSupport 메시지 수집 일정 재설정(개별 E2800 또는 E5700 어레이)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+reset storageArray AutoSupport schedule 명령은 AutoSupport 메시지가 관리 소프트웨어에서 생성된 임의의 값으로 다시 전송되는 요일과 주 단위 시간 및 요일을 재설정합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+* 관리 소프트웨어는 일별 및 주별 메시지의 시간과 주별 메시지의 요일을 무작위로 선택합니다.
+* 관리 소프트웨어는 관리 도메인 내의 두 스토리지 어레이가 예약된 AutoSupport 메시지를 동시에 전송하지 않도록 모든 시도를 합니다.
+
+
+
+
+== 구문
+
+[listing]
+----
+reset storageArray autoSupport schedule
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "reset storageArray autoSupport schedule;"
+
+SMcli completed successfully.
+----
+
+
+== 검증
+
+'show storageArray AutoSupport' 명령을 사용하여 스케줄의 결과 변경 사항을 확인합니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

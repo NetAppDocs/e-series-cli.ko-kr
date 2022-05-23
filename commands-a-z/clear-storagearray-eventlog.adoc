@@ -1,0 +1,49 @@
+---
+permalink: commands-a-z/clear-storagearray-eventlog.html 
+sidebar: sidebar 
+keywords: clear, storage array, event log 
+summary: clear storageArray eventlog 명령은 이벤트 로그 버퍼에서 데이터를 삭제하여 스토리지 배열의 이벤트 로그를 지웁니다. 
+---
+= 스토리지 배열 이벤트 로그를 지웁니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+clear storageArray EventLog 명령은 이벤트 로그 버퍼에서 데이터를 삭제하여 스토리지 배열의 이벤트 로그를 지웁니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+[NOTE]
+====
+* 스토리지 배열 구성 손상 가능성 * -- 이 명령을 실행하면 스토리지 배열의 기존 이벤트 로그가 삭제됩니다.
+
+====
+
+
+== 구문
+
+[listing]
+----
+clear storageArray eventLog
+----
+
+
+== 매개 변수
+
+없음.

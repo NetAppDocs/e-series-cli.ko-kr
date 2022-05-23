@@ -1,0 +1,169 @@
+---
+permalink: commands-category/security-commands.html 
+sidebar: sidebar 
+keywords: security, commands, audit, log management, authentication, certificate, management, embedded, external, key 
+summary: 보안 명령 
+---
+= 보안 명령
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+
+
+== 감사 로그 관리 명령
+
+link:../commands-a-z/delete-auditlog.html["감사 로그 레코드를 삭제합니다"]
+
+link:../commands-a-z/save-auditlog.html["감사 로그 기록을 저장합니다"]
+
+link:../commands-a-z/set-auditlog.html["감사 로그 설정을 설정합니다"]
+
+link:../commands-a-z/show-auditlog-configuration.html["감사 로그 구성을 표시합니다"]
+
+link:../commands-a-z/show-auditlog-summary.html["감사 로그 요약을 표시합니다"]
+
+
+
+== 인증 명령
+
+link:../commands-a-z/getting-started-with-authentication.html["인증 시작하기"]
+
+link:../commands-a-z/create-storagearray-directoryserver.html["스토리지 배열 디렉토리 서버를 생성합니다"]
+
+link:../commands-a-z/delete-storagearray-directoryservers.html["스토리지 배열 디렉토리 서버를 삭제합니다"]
+
+link:../commands-a-z/delete-storagearray-loginbanner.html["스토리지 배열 로그인 배너를 삭제합니다"]
+
+link:../commands-a-z/show-storagearray-usersession.html["스토리지 시스템 사용자 세션을 표시합니다"]
+
+link:../commands-a-z/remove-storagearray-directoryserver.html["스토리지 배열 디렉토리 서버 역할 매핑을 제거합니다"]
+
+link:../commands-a-z/save-storagearray-loginbanner.html["스토리지 배열 로그인 배너를 저장합니다"]
+
+link:../commands-a-z/set-storagearray-directoryserver.html["스토리지 배열 디렉토리 서버를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-directoryserver-roles.html["스토리지 배열 디렉토리 서버 역할 매핑을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-localusername.html["스토리지 배열 로컬 사용자 암호 또는 기호 암호를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-loginbanner.html["스토리지 배열 로그인 배너를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-managementinterface.html["스토리지 배열 관리 인터페이스를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-passwordlength.html["스토리지 배열 암호 길이를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-usersession.html["스토리지 시스템 사용자 세션을 설정합니다"]
+
+link:../commands-a-z/show-storagearray-directoryservices-summary.html["스토리지 배열 디렉토리 서비스 요약을 표시합니다"]
+
+link:../commands-a-z/start-storagearray-directoryservices-test.html["스토리지 배열 디렉토리 서버를 테스트합니다"]
+
+
+
+== E2800 및 E5700 컨트롤러용 인증서 관리 명령
+
+link:../commands-a-z/save-controller-arraymanagementcsr.html["웹 서버 CSR(인증서 서명 요청) 생성"]
+
+link:../commands-a-z/download-controller-arraymanagementservercertificate.html["서버 서명 인증서를 설치합니다"]
+
+link:../commands-a-z/download-controller-cacertificate.html["루트/중간 CA 인증서를 설치합니다"]
+
+link:../commands-a-z/download-controller-trustedcertificate.html["신뢰할 수 있는 CA 인증서를 설치합니다"]
+
+link:../commands-a-z/delete-storagearray-trustedcertificate.html["설치된 신뢰할 수 있는 CA 인증서를 제거합니다"]
+
+link:../commands-a-z/delete-controller-cacertificate.html["설치된 서명된 인증서를 제거합니다"]
+
+link:../commands-a-z/reset-controller-arraymanagementsignedcertificate.html["설치된 서명된 인증서를 재설정합니다"]
+
+link:../commands-a-z/save-controller-cacertificate.html["설치된 CA 인증서를 검색합니다"]
+
+link:../commands-a-z/save-controller-arraymanagementsignedcertificate.html["설치된 서버 인증서를 검색합니다"]
+
+link:../commands-a-z/save-storagearray-trustedcertificate.html["설치된 신뢰할 수 있는 CA 인증서를 검색합니다"]
+
+link:../commands-a-z/set-storagearray-revocationchecksettings.html["인증서 해지 확인 설정을 설정합니다"]
+
+link:../commands-a-z/show-storagearray-revocationchecksettings.html["인증서 해지 확인 설정을 표시합니다"]
+
+link:../commands-a-z/show-controller-cacertificate.html["설치된 루트/중간 CA 인증서 요약을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-trustedcertificate-summary.html["설치된 신뢰할 수 있는 CA 인증서 요약을 표시합니다"]
+
+link:../commands-a-z/show-controller-arraymanagementsignedcertificate-summary.html["서명된 인증서를 표시합니다"]
+
+link:../commands-a-z/start-storagearray-ocspresponderurl-test.html["인증서 해지 OCSP 서버 테스트를 시작합니다"]
+
+
+
+== EF600의 인증서 관리 명령
+
+link:../commands-a-z/add-array-label.html["스토리지 레이블을 추가합니다"]
+
+link:../commands-a-z/remove-array-label.html["스토리지 레이블을 제거합니다"]
+
+link:../commands-a-z/show-array-label.html["배열 레이블을 표시합니다"]
+
+
+
+== 데이터베이스 명령
+
+link:../commands-a-z/clear-storagearray-configuration.html["스토리지 배열 구성을 지웁니다"]
+
+link:../commands-a-z/clear-storagearray-recoverymode.html["스토리지 배열 복구 모드를 지웁니다"]
+
+link:../commands-a-z/load-storagearray-dbmdatabase.html["스토리지 배열 DBM 데이터베이스를 로드합니다"]
+
+link:../commands-a-z/save-storagearray-dbmdatabase.html["스토리지 배열 DBM 데이터베이스를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-dbmvalidatorinfo.html["스토리지 배열 dBm 유효성 검사기 정보 파일을 저장합니다"]
+
+link:../commands-a-z/show-storagearray-dbmdatabase.html["스토리지 배열 DBM 데이터베이스를 표시합니다"]
+
+link:../commands-a-z/start-storagearray-configdbdiagnostic.html["스토리지 배열 구성 데이터베이스 진단을 시작합니다"]
+
+link:../commands-a-z/stop-storagearray-configdbdiagnostic.html["스토리지 배열 구성 진단을 중지합니다"]
+
+
+
+== 내장형 외부 키 관리 명령
+
+link:../commands-a-z/set-storagearray-externalkeymanagement.html["외부 키 관리 시작"]
+
+link:../commands-a-z/getting-started-with-internal-key-management.html["내부 키 관리 시작"]
+
+link:../commands-a-z/create-storagearray-securitykey.html["스토리지 배열 보안 키를 생성합니다"]
+
+link:../commands-a-z/disable-storagearray-externalkeymanagement-file.html["외부 보안 키 관리를 비활성화합니다"]
+
+link:../commands-a-z/enable-storagearray-externalkeymanagement-file.html["외부 보안 키 관리를 활성화합니다"]
+
+link:../commands-a-z/export-storagearray-securitykey.html["스토리지 배열 보안 키를 내보냅니다"]
+
+link:../commands-a-z/import-storagearray-securitykey-file.html["스토리지 배열 보안 키를 가져옵니다"]
+
+link:../commands-a-z/set-storagearray-externalkeymanagement.html["FIPS 드라이브 보안 식별자를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-externalkeymanagement.html["외부 키 관리 설정을 지정합니다"]
+
+link:../commands-a-z/set-storagearray-externalkeymanagement.html["스토리지 배열 보안 키를 설정합니다"]
+
+link:../commands-a-z/start-secureerase-drive.html["FDE 보안 드라이브 지우기를 시작합니다"]
+
+link:../commands-a-z/start-storagearray-externalkeymanagement-test.html["외부 키 관리 통신을 테스트합니다"]
+
+link:../commands-a-z/validate-storagearray-securitykey.html["스토리지 배열 보안 키를 확인합니다"]
+
+
+
+== 인증서와 관련된 외부 키 관리 명령입니다
+
+link:../commands-a-z/save-storagearray-keymanagementclientcsr.html["설치된 키 관리 CSR 요청을 검색합니다"]
+
+link:../commands-a-z/download-storagearray-keymanagementcertificate.html["스토리지 배열 외부 키 관리 인증서를 설치합니다"]
+
+link:../commands-a-z/delete-storagearray-keymanagementcertificate.html["설치된 외부 키 관리 인증서를 제거합니다"]
+
+link:../commands-a-z/save-storagearray-keymanagementcertificate.html["설치된 외부 키 관리 인증서를 검색합니다"]

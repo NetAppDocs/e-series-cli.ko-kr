@@ -1,0 +1,64 @@
+---
+permalink: commands-a-z/show-storagearray-unreadablesectors.html 
+sidebar: sidebar 
+keywords: show, storage, array, unreadable, sectors 
+summary: show storageArray unreadableSecors 명령은 읽을 수 없는 스토리지 배열의 모든 섹터의 주소 테이블을 반환합니다. 
+---
+= 스토리지 배열을 읽을 수 없는 섹터를 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sshow storageArray unreadableSecors' 명령어는 읽을 수 없는 스토리지 배열의 모든 섹터의 주소 테이블을 반환합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 스토리지 모니터 역할이 있어야 합니다.
+
+
+
+== 상황
+
+반환된 테이블은 다음 정보에 대한 열 머리글로 구성되어 있습니다.
+
+* 볼륨 사용자 레이블입니다
+* LUN(Logical Unit Number)
+* 호스트 또는 호스트 그룹에서 액세스 가능
+* 날짜/시간입니다
+* 볼륨 - 상대 논리 블록 주소(16진수 형식 - 0xnnnnnnnn)
+* 드라이브 위치(용지함 t, 슬롯 s)
+* 드라이브 상대 논리 블록 주소(16진수 형식 - 0xnnnnnnnn)
+* 실패 유형
+
+
+데이터는 먼저 볼륨 사용자 레이블별로 정렬되고 두 번째 레이블은 LBA(논리 블록 주소)로 정렬됩니다. 표의 각 항목은 단일 섹터에 해당합니다.
+
+
+
+== 구문
+
+[listing]
+----
+show storageArray unreadableSectors
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+6.10

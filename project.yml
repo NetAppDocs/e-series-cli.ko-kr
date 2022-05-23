@@ -1,0 +1,52 @@
+---
+settings:
+  name: SANtricity commands
+  internal:
+    pdf_enabled: false
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  pdf:
+    zip-level: 1
+    zip-filename: santricity-commands.zip
+  langs: ko-kr,us-en,ja-jp,zh-cn,zh-tw
+sidebar:
+  entries:
+  - title: SANtricity CLI 문서
+    url: "/index.html"
+  - section: get-started
+  - section: commands-category
+  - section: commands-a-z
+  - title: 법적 고지
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: 시작하십시오
+    links:
+    - title: 새로운 소식
+      url: get-started/changes-in-the-cli-and-script-commands-in-this-release.html
+    - title: CLI 개요
+      url: get-started/overview-format-commands.html
+    - title: CLI 명령어 구조
+      url: get-started/structure-of-a-cli-command.html
+  - title: E-Series 문서
+    links:
+    - title: E-Series 시스템 문서
+      url: https://docs.netapp.com/us-en/e-series/index.html
+    - title: SANtricity 시스템 관리자 11.7
+      url: https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html
+    - title: SANtricity 유니파이드 관리자 5
+      url: https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html
+  - title: 도구 지원
+    links:
+    - title: NetApp 상호 운용성 매트릭스
+      url: http://mysupport.netapp.com/matrix/
+    - title: NetApp 기술 자료
+      url: https://kb.netapp.com/
+    - title: Active IQ(로그인 필요)
+      url: https://activeiq.netapp.com/?source=aiqnsspage
+    - title: E-Series/SANtricity 다운로드(로그인 필요)
+      url: https://mysupport.netapp.com/site/downloads#E
+product-family:
+  name: E-Series
+  repo: e-series-family

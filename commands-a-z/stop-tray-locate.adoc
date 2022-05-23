@@ -1,0 +1,46 @@
+---
+permalink: commands-a-z/stop-tray-locate.html 
+sidebar: sidebar 
+keywords: stop, tray, locate 
+summary: 트레이 찾기 중지 명령은 트레이 찾기 시작 명령으로 설정된 용지함의 표시등 전원을 끕니다. 
+---
+= 트레이 위치를 중지합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'트레이 찾기' 명령은 '트레이 찾기 시작' 명령으로 설정된 용지함의 표시등을 끕니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+stop tray locate
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+6.10

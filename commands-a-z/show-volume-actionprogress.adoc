@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/show-volume-actionprogress.html 
+sidebar: sidebar 
+keywords: show, volume, action, progress 
+summary: show volume actionProgress 명령은 볼륨에 대한 장기 실행 작업에 대해 완료된 볼륨 작업과 장기 실행 작업의 양에 대한 정보를 반환합니다. 
+---
+= 볼륨 작업 진행률을 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'show volume actionProgress' 명령어는 볼륨에 대한 장시간 실행 작업에 대해 완료된 볼륨 동작 및 장시간 실행 작업에 대한 정보를 반환합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 스토리지 모니터 역할이 있어야 합니다.
+
+
+
+== 상황
+
+[NOTE]
+====
+펌웨어 버전 7.77에서는 'show volume actionProgress' 명령이 사용되지 않습니다. 이 명령을 show storageArray longRunningOperations로 바꿉니다.
+
+====
+완료된 장시간 실행 작업의 양은 백분율로 표시됩니다(예: 25는 장기 실행 작업의 25%가 완료되었음을 의미).
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+show volume pass:quotes[[_volumeName_]] actionProgress
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'볼륨'
+ a| 
+장시간 실행 작업에 대한 정보를 검색할 볼륨의 이름입니다. 볼륨 이름은 대괄호([ ])로 묶어야 합니다. 볼륨 이름에 특수 문자나 숫자가 있는 경우 이름은 대괄호 안에 큰따옴표(" ")로 묶어야 합니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+5.43

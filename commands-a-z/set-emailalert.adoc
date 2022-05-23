@@ -1,0 +1,148 @@
+---
+permalink: commands-a-z/set-emailalert.html 
+sidebar: sidebar 
+keywords: configure, email, alert, set 
+summary: set emailAlert 명령은 이메일을 지정된 기술 지원 또는 조직에 전송하도록 구성합니다. 이메일 알림에는 이벤트 요약, 영향을 받는 스토리지에 대한 자세한 정보 및 고객 연락처 정보가 포함되어 있습니다. 
+---
+= e-메일 알림 설정을 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Set emailAlert' 명령어는 e-메일이 지정된 기술지원이나 조직에 e-메일을 보내도록 설정한다. 이메일 알림에는 이벤트 요약, 영향을 받는 스토리지에 대한 자세한 정보 및 고객 연락처 정보가 포함되어 있습니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2800, E5700, EF600 및 EF300 스토리지 어레이에 적용됩니다. 그러나 E2700 또는 E5600 어레이의 경우, 명령을 스크립트 명령이 아니라 SMcli 명령으로 사용할 수 있습니다. 이 경우 명령은 관리 도메인에 있는 모든 스토리지에 적용됩니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+
+set emailAlert
+    serverAddress=pass:quotes["_serverAddress_"] |
+    serverEncryption=pass:quotes[_none_ | _smtps_ | _starttls_ |]
+    serverPort=pass:quotes[_port value_] |
+    serverUsername=pass:quotes["_username_"] |
+    serverPassword=pass:quotes["_password_"] |
+    senderAddress=pass:quotes["_emailAddress_"] |
+    additionalContactInfo=pass:quotes["_filename_"]  |
+    (recipientAddresses=pass:quotes[("_emailAddress1_" ... "_emailAddressN_")] |
+ addRecipientAddresses=pass:quotes[("_emailAddress1_" ... "_emailAddressN_"))]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'주소'
+ a| 
+이메일 서버 주소를 설정할 수 있습니다. 전자 메일 서버 주소는 정규화된 도메인 이름, IPv4 주소 또는 IPv6 주소일 수 있습니다.
+
+
+
+ a| 
+'암호화'
+ a| 
+서버와 통신하는 데 사용되는 암호화. 값은 다음 중 하나일 수 있습니다.
+
+* '_none_' - 암호화 없음
+* '_smtps_' - SSL/TLS 연결 생성(암시적 TLS)
+* '_STARTTLS_' - 암호화되지 않은 연결을 만든 다음 SSL/TLS 세션(명시적 TLS)을 설정합니다.
+
+
+
+
+ a| 
+'세르베르포트'
+ a| 
+서버에 연결하는 데 사용되는 TCP 포트입니다. 기본값은 암호화 유형에 따라 다릅니다.
+
+* '_none_' - 포트 25로 기본 설정
+* '_smtps_' - 포트 465로 기본 설정
+* '_STARTTLS_' - 포트 587을 기본값으로 설정합니다
+
+
+
+
+ a| 
+'서버 사용자 이름'
+ a| 
+서버에 인증 자격 증명을 제공하는 사용자 이름입니다. 사용자 이름을 지정한 경우 암호도 지정해야 합니다.
+
+
+
+ a| 
+스베르비밀번호
+ a| 
+서버에 인증 자격 증명을 제공하는 암호입니다. 암호가 지정된 경우 사용자 이름도 지정해야 합니다.
+
+
+
+ a| 
+'엔데어주소'
+ a| 
+발신자의 이메일 주소를 설정할 수 있습니다.
+
+
+
+ a| 
+추가 연락처 정보
+ a| 
+e-메일 알림에 사용할 추가 연락처 정보가 포함된 파일 이름을 제공할 수 있습니다.
+
+
+
+ a| 
+시퍄긴 주소
+ a| 
+하나 이상의 수신자 이메일 주소를 설정할 수 있습니다. 이 설정 옵션을 사용하면 기존 이메일 주소가 지워집니다. 모든 이름은 괄호로 묶습니다. 각 이름은 큰따옴표(" ")로 묶어야 합니다. 각 이름을 공백으로 구분합니다.
+
+
+
+ a| 
+addRecipientAddresses입니다
+ a| 
+하나 이상의 수신자 이메일 주소를 기존 목록에 추가할 수 있습니다. 모든 이름은 괄호로 묶습니다. 각 이름은 큰따옴표(" ")로 묶어야 합니다. 각 이름을 공백으로 구분합니다.
+
+|===
+
+
+== 예
+
+[listing, subs="+macros"]
+----
+
+SMcli -n Array1 -c "set emailAlert
+   serverAddress="email.server.domain.com"
+    serverEncryption=pass:quotes[("_smtps_")] |
+    serverPort=pass:quotes["_smtps_"] |
+    serverUsername=pass:quotes["_username_"] |
+    serverPassword=pass:quotes["_password_"] |
+   senderAddress=\no-reply@server.domain.com
+   additionalContactInfo="C:\additionalInfo.txt"
+   recipientAddresses=("\person1@email.domain.com" "\person2@email.domain.com");"
+
+SMcli -n Array1 -c "set emailAlert addRecipientAddresses=("\person3@netapp.com");"
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40
+
+11.70.1은 'erverEncryption', 'erverPort', 'erverUsername', 'erverPassword' 파라미터를 추가한다.

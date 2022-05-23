@@ -1,0 +1,46 @@
+---
+permalink: commands-a-z/show-storagearray-hostconnectivityreporting.html 
+sidebar: sidebar 
+keywords: show, storage, array, host, connectivity, report 
+summary: show storageArray hostConnectivityReporting 명령은 호스트 연결 보고 기능의 활성화 상태를 반환합니다. 
+---
+= 스토리지 시스템 호스트 접속 구성을 보여 줍니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'show storageArray hostConnectivityReporting' 명령은 호스트 연결 보고 기능의 활성화 상태를 반환합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 스토리지 모니터 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+show storageArray hostConnectivityReporting
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+8.42 새 명령 매개 변수입니다.

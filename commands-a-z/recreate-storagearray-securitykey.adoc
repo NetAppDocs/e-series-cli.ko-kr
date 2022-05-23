@@ -1,0 +1,109 @@
+---
+permalink: commands-a-z/recreate-storagearray-securitykey.html 
+sidebar: sidebar 
+keywords: recreate, external, security key 
+summary: recreate storageArray securityKey 명령은 외부 보안 키 관리 기능과 함께 사용할 스토리지 배열 보안 키를 재생성합니다. 
+---
+= 외부 보안 키를 다시 만듭니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+recreate storageArray securityKey" 명령은 외부 보안 키 관리 기능과 함께 사용할 스토리지 배열 보안 키를 재생성합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+[NOTE]
+====
+이 명령은 외부 키 관리에만 적용됩니다.
+
+====
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+recreate storageArray securityKey
+passPhrase=pass:quotes[_"passPhraseString"_
+file="_fileName"_]
+[deleteOldKey=(TRUE | FALSE)]
+----
+
+
+== 매개 변수
+
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+패스프레이즈
+ a| 
+외부 파일에 보안 키를 저장할 수 있도록 보안 키를 암호화하는 문자열입니다. 암호는 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+'파일'
+ a| 
+보안 키가 있는 파일 경로 및 파일 이름입니다. 예를 들면 다음과 같습니다.
+
+[listing]
+----
+file="C:\Program Files\CLI\sup\drivesecurity.slk"
+----
+[NOTE]
+====
+파일 이름의 확장명은 .slk이어야 합니다.
+
+====
+
+
+ a| 
+'eleteOldKey'입니다
+ a| 
+새 보안 키가 생성된 후 외부 키 관리 서버에서 이전 보안 키를 삭제하려면 이 매개 변수를 "true"로 설정합니다. 기본값은 false 입니다.
+
+|===
+
+
+== 참고
+
+암호는 다음 기준을 충족해야 합니다.
+
+* 암호는 8자에서 32자 사이여야 합니다.
+* 암호문은 하나 이상의 대문자를 포함해야 합니다.
+* 암호문에는 하나 이상의 소문자가 포함되어야 합니다.
+* 암호문에는 숫자가 하나 이상 포함되어야 합니다.
+* 암호문에는 영숫자 이외의 문자가 하나 이상 포함되어야 합니다(예: <>@+).
+
+
+[NOTE]
+====
+암호문이 이러한 기준을 충족하지 않으면 오류 메시지가 표시됩니다.
+
+====
+
+
+== 최소 펌웨어 레벨입니다
+
+7.70
+
+11.73이 'deleteOldKey' 매개 변수를 추가합니다.

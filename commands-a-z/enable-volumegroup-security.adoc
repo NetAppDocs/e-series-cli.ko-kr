@@ -1,0 +1,69 @@
+---
+permalink: commands-a-z/enable-volumegroup-security.html 
+sidebar: sidebar 
+keywords: enable, volumegroup, security, command, non secure, volume, group 
+summary: enable volumeGroup security 명령은 비보안 볼륨 그룹을 보안 볼륨 그룹으로 변환합니다. 
+---
+= 볼륨 그룹 보안을 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+enable volumeGroup security 명령은 비보안 볼륨 그룹을 보안 볼륨 그룹으로 변환합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+pass:quotes[enable volumeGroup [_volumeGroupName_]] security
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+볼륨그룹
+ a| 
+Security Enabled 상태로 설정할 볼륨 그룹의 이름입니다. 볼륨 그룹 이름은 대괄호([])로 묶어야 합니다.
+
+|===
+
+
+== 참고
+
+이 명령을 성공적으로 실행하려면 이러한 조건이 충족되어야 합니다.
+
+* 볼륨 그룹의 모든 드라이브는 전체 디스크 암호화 드라이브여야 합니다.
+* 드라이브 보안 기능을 활성화해야 합니다.
+* 스토리지 배열 보안 키를 설정해야 합니다.
+* 볼륨 그룹이 최적이며 저장소 볼륨이 없습니다.
+
+
+컨트롤러 펌웨어는 FDE 드라이브에 대한 액세스를 제한하는 잠금을 생성합니다. FDE 드라이브는 Security Capable이라는 상태를 가집니다. 보안 키를 생성할 때 상태가 보안 사용으로 설정되고, 이는 스토리지 어레이 내에 있는 모든 FDE 드라이브에 대한 액세스를 제한합니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+7.40

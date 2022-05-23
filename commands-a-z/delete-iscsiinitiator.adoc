@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/delete-iscsiinitiator.html 
+sidebar: sidebar 
+keywords: delete, initiator, command, specific, object, supported, array, role 
+summary: iscsiInitiator 삭제 명령은 특정 iSCSI 이니시에이터 객체를 삭제합니다. 
+---
+= iSCSI 이니시에이터를 삭제합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'iscsiInitiator 삭제' 명령은 특정 iSCSI 이니시에이터 객체를 삭제합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+[IMPORTANT]
+====
+이 명령은 더 이상 사용되지 않으며 로 대체됩니다 xref:delete-initiator.adoc[이니시에이터를 삭제합니다] 명령.
+
+====
+
+
+== 구문
+
+[listing]
+----
+delete iscsiInitiator (<"iscsiID"> | ["name"])
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'iscsiInitiator'입니다
+ a| 
+삭제할 iSCSI 이니시에이터의 식별자입니다. iSCSI 이니시에이터의 식별자는 iSCSI ID 또는 고유 이름이 될 수 있습니다.
+
+iSCSI ID는 큰따옴표(" ")로 꺽쇠 괄호(<>)로 묶습니다.
+
+이름은 큰따옴표(" ")로 대괄호([ ]) 안에 묶습니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+7.10
+
+8.41 이 명령은 사용되지 않습니다.

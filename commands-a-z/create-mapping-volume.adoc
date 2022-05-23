@@ -1,0 +1,92 @@
+---
+permalink: commands-a-z/create-mapping-volume.html 
+sidebar: sidebar 
+keywords: create, volume, map 
+summary: create mapping volume 명령은 볼륨에서 호스트 또는 호스트 그룹으로 논리적 매핑을 생성합니다. 
+---
+= 볼륨 매핑 생성
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+create mapping volume 명령은 볼륨에서 호스트 또는 호스트 그룹으로 논리적 매핑을 생성합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+create mapping volume=pass:quotes[_"VolumeName"_
+(host="_hostName_" | hostGroup=("_hostGroupName_"] | defaultGroup))
+logicalUnitNumber=lun
+mapWaitPeriod=mapWaitPeriodValue
+----
+
+
+== 매개 변수
+
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+볼륨
+ a| 
+논리적 매핑을 생성하려는 볼륨의 이름입니다. 볼륨 이름은 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+호스트
+ a| 
+논리 매핑을 생성할 호스트의 이름입니다. 호스트 이름은 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+호스트그룹
+ a| 
+논리 매핑을 생성할 호스트 그룹의 이름입니다. 호스트 그룹 이름은 큰따옴표(" ")로 묶어야 합니다. defaultGroup 키워드를 사용하는 경우 따옴표로 묶지 마십시오.
+
+
+
+ a| 
+LogicalUnitNumber입니다
+ a| 
+특정 호스트에 매핑하는 데 사용할 논리적 번호 또는 네임스페이스 ID입니다. 또한 이 매개 변수는 호스트를 호스트 그룹에 할당합니다.
+
+[NOTE]
+====
+지정한 논리 단위 번호 또는 네임스페이스 ID는 이미 사용 중인 것은 아니며 호스트 운영 체제에서 지원하는 범위 내에 있어야 합니다. 호스트에서 지원하지 않는 논리 유닛 번호 또는 네임스페이스 ID에 볼륨을 매핑하면 오류가 발생하지 않지만 호스트는 볼륨에 액세스할 수 없습니다.
+
+====
+
+
+ a| 
+무WaitPeriod
+ a| 
+명령을 완료할 수 있을 때까지 매핑을 차단하거나 상호 작용에 영향을 주지 않기 때문에 시간 초과가 됩니다. 값을 입력하지 않으면 볼륨을 즉시 매핑할 수 없는 경우 기본 동작이 실패합니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+7.83
+
+8.63은 mapWaitPeriod 매개 변수를 추가합니다.

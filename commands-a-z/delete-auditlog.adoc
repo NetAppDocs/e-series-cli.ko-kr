@@ -1,0 +1,99 @@
+---
+permalink: commands-a-z/delete-auditlog.html 
+sidebar: sidebar 
+keywords: delete, audit, log, records 
+summary: auditlog 삭제 명령은 감사 로그의 일부 또는 모든 레코드를 삭제합니다. 
+---
+= 감사 로그 레코드를 삭제합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+auditlog 삭제 명령은 감사 로그의 일부 또는 모든 레코드를 삭제합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+
+delete auditLog (all | (endRecord=pass:quotes[_timestamp_ | endDate=_date_) |
+ (retentionCount=_integer_))]
+----
+
+
+== 매개 변수
+
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+모두
+ a| 
+모든 감사 로그 레코드를 삭제할 수 있습니다.
+
+
+
+ a| 
+엔드레코드
+ a| 
+가장 오래된 레코드에서 시작하여 삭제할 종료 레코드를 지정할 수 있습니다. 값은 마지막 감사 로그 레코드의 타임 스탬프를 나타내는 정수 값입니다.
+
+
+
+ a| 
+'종료 날짜'
+ a| 
+가장 오래된 레코드에서 시작하여 삭제할 종료 날짜를 지정할 수 있습니다. 날짜 입력 형식은 클라이언트 표준 시간대의 MM:DD:YY입니다.
+
+[NOTE]
+====
+지정된 날짜를 포함한 감사 로그 레코드가 삭제됩니다.
+
+====
+
+
+ a| 
+"횟수"
+ a| 
+보존할 최신 감사 로그 레코드 수를 지정할 수 있습니다.
+
+|===
+
+
+== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "delete auditLog all;"
+
+SMcli -n Array1 -c "delete auditLog endRecord=1493070393313;"
+
+SMcli -n Array1 -c "delete auditLog endDate=04:30:17;"
+
+SMcli -n Array1 -c "delete auditLog retentionCount=1000;"
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

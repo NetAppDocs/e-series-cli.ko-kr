@@ -1,0 +1,63 @@
+---
+permalink: commands-a-z/show-auditlog-configuration.html 
+sidebar: sidebar 
+keywords: show, audit log, configuration 
+summary: show auditlog configuration 명령은 스토리지 배열에 대한 감사 로그 구성 설정을 표시합니다. 
+---
+= 감사 로그 구성을 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'show auditlog configuration' 명령은 스토리지 배열에 대한 감사 로그 구성 설정을 표시합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+
+show auditLog configuration
+----
+
+
+== 매개 변수
+
+없음.
+
+
+
+== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "show auditLog configuration;"
+
+Logging level: All
+Full policy: Overwrite
+Maximum records: 30,000 count
+Warning threshold: 90 percent
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

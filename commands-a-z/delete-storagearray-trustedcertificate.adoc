@@ -1,0 +1,78 @@
+---
+permalink: commands-a-z/delete-storagearray-trustedcertificate.html 
+sidebar: sidebar 
+keywords: delete, storage, array, trusted, certificate, command, remove, specified, installed, web, servers 
+summary: delete storageArray trustedCertificate 명령은 지정된 사용자가 설치한 CA 인증서를 어레이의 웹 서버에서 제거합니다. 
+---
+= 설치된 신뢰할 수 있는 CA 인증서를 제거합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+"Delete storageArray trustedCertificate" 명령은 지정된 사용자가 설치한 CA 인증서를 스토리지의 웹 서버에서 제거합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[delete storageArray trustedCertificate [(allUserInstalled |
+aliases=("_alias1_" ... "_aliasN_]"))]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'allUserInstalled'입니다
+ a| 
+사용자가 설치한 모든 인증서를 제거하도록 지정할 수 있습니다.
+
+
+
+ a| 
+'별칭'
+ a| 
+별칭 이름을 사용하여 삭제할 CA 인증서를 하나 이상 지정하거나 모두 지정할 수 있습니다. 별칭은 모든 컨트롤러에서 사용할 수 있습니다. 모든 별칭을 괄호로 묶습니다. 둘 이상의 별칭을 입력하는 경우 공백으로 구분하십시오.
+
+|===
+
+
+== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "delete storageArray trustedCertificate allUserInstalled;"
+
+SMcli -n Array1 -c "delete storageArray trustedCertificate
+   aliases=("19527b38-8d26-44e5-8c7f-5bf2ca9db7cf" "04bf744c-413a-49f1-9666-88d74189591d");"
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

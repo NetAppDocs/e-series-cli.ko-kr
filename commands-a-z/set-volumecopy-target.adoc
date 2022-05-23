@@ -1,0 +1,109 @@
+---
+permalink: commands-a-z/set-volumecopy-target.html 
+sidebar: sidebar 
+keywords: set, volume, copy 
+summary: set volumeCopy 타겟 명령은 볼륨 복사본 쌍의 속성을 정의합니다. 
+---
+= 볼륨 복사본을 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Set volumeCopy target' 명령은 볼륨 복제 쌍의 속성을 정의합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+[NOTE]
+====
+펌웨어 버전 7.83에서는 'copyType=(online|offline)' 매개변수가 더 이상 사용되지 않습니다.
+
+====
+이 명령은 스냅샷 볼륨 복사본 쌍에 대해 유효합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+set volumeCopy target pass:quotes[[_targetName_]]
+source pass:quotes[[_sourceName_]]
+[copyPriority=(highest | high | medium | low | lowest)]
+[targetReadOnlyEnabled=(TRUE | FALSE)]
+[copyType=(online | offline)]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+표적
+ a| 
+데이터를 복사할 볼륨의 이름입니다. 타겟 볼륨 이름은 대괄호([])로 묶어야 합니다. 대상 볼륨 이름에 특수 문자나 숫자가 있는 경우 대상 볼륨 이름은 대괄호 안에 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+'소스'입니다
+ a| 
+데이터를 복사할 볼륨의 이름입니다. 소스 볼륨 이름은 대괄호([])로 묶어야 합니다. 소스 볼륨 이름에 특수 문자나 숫자가 있는 경우 소스 볼륨 이름은 대괄호 안에 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+카피프라이어리티
+ a| 
+볼륨 복사본의 우선 순위는 호스트 I/O 활동과 관련이 있습니다. 유효한 값은 '가장 높음', '높음', '중간', '낮음' 또는 '가장 낮음'입니다.
+
+
+
+ a| 
+targetReadOnlyEnabled
+ a| 
+타겟 볼륨에 쓰거나 타겟 볼륨에서만 읽을 수 있도록 하는 설정입니다. 타겟 볼륨에 쓰려면 이 매개변수를 'false'로 설정합니다. 타겟 볼륨에 쓰지 않으려면 이 매개 변수를 "true"로 설정합니다.
+
+
+
+ a| 
+카피타입
+ a| 
+[NOTE]
+====
+이 매개 변수는 더 이상 사용되지 않습니다.
+
+====
+|===
+
+
+== 참고
+
+이 명령을 사용할 때 하나 이상의 선택적 매개 변수를 지정할 수 있습니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+5.40
+
+7.83은 'copyType=(online|offline)' 파라미터를 제거합니다.

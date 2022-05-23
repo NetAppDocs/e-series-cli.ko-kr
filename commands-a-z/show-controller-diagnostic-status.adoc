@@ -1,0 +1,52 @@
+---
+permalink: commands-a-z/show-controller-diagnostic-status.html 
+sidebar: sidebar 
+keywords: show, controller, diagnostic, status 
+summary: show controller 명령은 start controller diagnostic 명령으로 시작된 컨트롤러 진단 상태를 반환합니다. 
+---
+= 컨트롤러 진단 상태를 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'show controller' 명령어는 'tart controller diagnostic' 명령으로 시작된 controller diagnostics의 상태를 반환합니다.
+
+진단 프로그램이 완료되면 진단 테스트의 전체 결과가 표시됩니다. 진단 테스트가 완료되지 않은 경우 완료된 테스트의 결과만 표시됩니다. 테스트 결과는 터미널에 표시되어 있거나 파일에 결과를 기록할 수 있습니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+show controller [(a| b)] diagnosticStatus pass:quotes[[file=_filename_]]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+컨트롤러
+ a| 
+스토리지 배열의 특정 컨트롤러에 대한 정보를 반환하는 설정입니다. 유효한 컨트롤러 식별자는 a나 b이며, 여기서 a는 A 슬롯의 제어기이고 b는 B 슬롯의 제어기입니다 컨트롤러 식별자를 대괄호([ ])로 묶습니다.
+
+
+
+ a| 
+'파일'
+ a| 
+진단 테스트 결과가 들어 있는 파일의 이름입니다. 이 명령은 파일 이름에 파일 확장명을 자동으로 추가하지 않습니다. 파일 이름을 입력할 때 확장명을 추가해야 합니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+7.70은 컨트롤러 진단 상태 기능을 추가합니다.

@@ -1,0 +1,405 @@
+---
+permalink: commands-category/array-configuration-commands.html 
+sidebar: sidebar 
+keywords: configuration, commands, array, controller, health, image, hostport, feature, management 
+summary: 스토리지 구성 명령 
+---
+= 스토리지 구성 명령
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+
+
+== 캐시 미러 데이터 보증 명령
+
+link:../commands-a-z/set-storagearray-cachemirrordataassurancecheckenable.html["캐시 미러 데이터를 설정하거나 해제하려면 스토리지 배열을 설정합니다"]
+
+link:../commands-a-z/show-storagearray-cachemirrordataassurancecheckenable.html["스토리지 캐시 미러 데이터 보증 검사 설정 표시"]
+
+
+
+== 컨트롤러 명령
+
+link:../commands-a-z/clear-alldrivechannels-stats.html["드라이브 채널 통계를 지웁니다"]
+
+link:../commands-a-z/diagnose-controller.html["컨트롤러를 진단합니다"]
+
+link:../commands-a-z/diagnose-controller-iscsihostport.html["컨트롤러 iSCSI 호스트 케이블을 진단합니다"]
+
+link:../commands-a-z/enable-controller-datatransfer.html["컨트롤러 데이터 전송을 활성화합니다"]
+
+link:../commands-a-z/reset-controller.html["컨트롤러를 재설정합니다"]
+
+link:../commands-a-z/save-controller-nvsram-file.html["컨트롤러 NVSRAM을 저장합니다"]
+
+link:../commands-a-z/save-drivechannel-faultdiagnostics-file.html["드라이브 채널 장애 격리 진단 상태를 저장합니다"]
+
+link:../commands-a-z/set-controller.html["컨트롤러를 설정합니다"]
+
+link:../commands-a-z/set-controller-dnsservers.html["컨트롤러 DNS 설정을 지정합니다"]
+
+link:../commands-a-z/set-controller-ntpservers.html["컨트롤러 NTP 설정을 설정합니다"]
+
+link:../commands-a-z/set-controller-service-action-allowed-indicator.html["컨트롤러 서비스 작업 허용 표시기를 설정합니다"]
+
+link:../commands-a-z/set-drivechannel.html["드라이브 채널 상태를 설정합니다"]
+
+link:../commands-a-z/set-hostchannel.html["호스트 채널을 설정합니다"]
+
+link:../commands-a-z/show-controller.html["컨트롤러를 표시합니다"]
+
+link:../commands-a-z/show-controller-diagnostic-status.html["컨트롤러 진단 상태를 표시합니다"]
+
+link:../commands-a-z/show-controller-nvsram.html["컨트롤러 NVSRAM을 표시합니다"]
+
+link:../commands-a-z/show-drivechannel-stats.html["드라이브 채널 통계를 표시합니다"]
+
+link:../commands-a-z/start-controller.html["컨트롤러 트레이스를 시작합니다"]
+
+link:../commands-a-z/start-drivechannel-faultdiagnostics.html["드라이브 채널 장애 격리 진단을 시작합니다"]
+
+link:../commands-a-z/start-drivechannel-locate.html["드라이브 채널 찾기를 시작합니다"]
+
+link:../commands-a-z/start-controller-iscsihostport-dhcprefresh.html["iSCSI DHCP 새로 고침을 시작합니다"]
+
+link:../commands-a-z/stop-drivechannel-faultdiagnostics.html["드라이브 채널 장애 격리 진단을 중지합니다"]
+
+link:../commands-a-z/stop-drivechannel-locate.html["드라이브 채널 위치를 중지합니다"]
+
+
+
+== 컨트롤러 상태 이미지 명령
+
+link:../commands-a-z/save-storagearray-controllerhealthimage.html["스토리지 어레이 컨트롤러 상태 이미지를 저장합니다"]
+
+link:../commands-a-z/set-storagearray-controllerhealthimageallowoverwrite.html["스토리지 어레이 컨트롤러 상태 이미지의 덮어쓰기 허용 설정을 지정합니다"]
+
+link:../commands-a-z/show-storagearray-controllerhealthimage.html["스토리지 어레이 컨트롤러 상태 이미지를 표시합니다"]
+
+link:../commands-a-z/start-storagearray-controllerhealthimage-controller.html["스토리지 배열 컨트롤러 상태 이미지를 시작합니다"]
+
+
+
+== 컨트롤러 호스트 포트 구성 명령
+
+link:../commands-a-z/create-hostport.html["호스트 포트를 생성합니다"]
+
+link:../commands-a-z/create-initiator.html["이니시에이터를 생성합니다"]
+
+link:../commands-a-z/delete-initiator.html["이니시에이터를 삭제합니다"]
+
+link:../commands-a-z/set-initiator.html["초기자를 설정합니다"]
+
+link:../commands-a-z/reset-storagearray-hostportstatisticsbaseline.html["스토리지 배열 호스트 포트 통계 기준을 재설정합니다"]
+
+link:../commands-a-z/save-storagearray-hostportstatistics.html["스토리지 배열 호스트 포트 통계를 저장합니다"]
+
+link:../commands-a-z/set-controller-hostport.html["컨트롤러 호스트 포트 속성을 설정합니다"]
+
+link:../commands-a-z/set-target.html["대상 속성을 설정합니다"]
+
+link:../commands-a-z/set-controller-iscsihostport.html["iSCSI 호스트 포트 네트워킹 속성을 설정합니다"]
+
+link:../commands-a-z/set-iscsiinitiator.html["iSCSI 이니시에이터를 설정합니다"]
+
+link:../commands-a-z/show-storagearray-unconfigurediscsiinitiators.html["스토리지 배열 구성되지 않은 iSCSI 이니시에이터를 표시합니다"]
+
+link:../commands-a-z/show-storagearray-unconfiguredinitiators.html["구성되지 않은 이니시에이터를 표시합니다"]
+
+
+
+== 드라이브 명령
+
+link:../commands-a-z/download-drive-firmware.html["드라이브 펌웨어를 다운로드합니다"]
+
+link:../commands-a-z/recover-disabled-driveports.html["비활성화된 드라이브 포트를 복구합니다"]
+
+link:../commands-a-z/replace-drive-replacementdrive.html["드라이브를 교체합니다"]
+
+link:../commands-a-z/revive-drive.html["드라이브를 되살리기"]
+
+link:../commands-a-z/save-drivechannel-faultdiagnostics-file.html["드라이브 채널 장애 격리 진단 상태를 저장합니다"]
+
+link:../commands-a-z/save-alldrives-logfile.html["드라이브 로그를 저장합니다"]
+
+link:../commands-a-z/set-drive-hotspare.html["드라이브 핫 스페어를 설정하십시오"]
+
+link:../commands-a-z/set-drive-serviceallowedindicator.html["드라이브 서비스 작업 허용 표시등을 설정합니다"]
+
+link:../commands-a-z/set-drive-operationalstate.html["드라이브 상태를 설정합니다"]
+
+link:../commands-a-z/set-drive-securityid.html["FIPS 드라이브 보안 식별자를 설정합니다"]
+
+link:../commands-a-z/set-drive-nativestate.html["외부 드라이브를 네이티브 드라이브로 설정합니다"]
+
+link:../commands-a-z/show-alldrives.html["드라이브를 표시합니다"]
+
+link:../commands-a-z/show-alldrives-downloadprogress.html["드라이브 다운로드 진행률을 표시합니다"]
+
+link:../commands-a-z/show-alldrives-performancestats.html["드라이브 성능 통계를 표시합니다"]
+
+link:../commands-a-z/show-replaceabledrives.html["교체 가능한 드라이브를 표시합니다"]
+
+link:../commands-a-z/start-drivechannel-faultdiagnostics.html["드라이브 채널 장애 격리 진단을 시작합니다"]
+
+link:../commands-a-z/start-drive-initialize.html["드라이브 초기화를 시작합니다"]
+
+link:../commands-a-z/start-drive-locate.html["드라이브 찾기를 시작합니다"]
+
+link:../commands-a-z/start-drive-reconstruct.html["드라이브 재구성을 시작합니다"]
+
+link:../commands-a-z/start-secureerase-drive.html["보안 드라이브 지우기를 시작합니다"]
+
+link:../commands-a-z/stop-drivechannel-faultdiagnostics.html["드라이브 채널 장애 격리 진단을 중지합니다"]
+
+link:../commands-a-z/stop-drive-locate.html["드라이브 찾기를 중지합니다"]
+
+
+
+== 기능 관리 명령
+
+link:../commands-a-z/disable-storagearray.html["스토리지 배열 기능을 비활성화합니다"]
+
+link:../commands-a-z/enable-storagearray-feature-file.html["스토리지 배열 기능을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-autoloadbalancingenable.html["자동 로드 밸런싱을 활성화 또는 비활성화하도록 스토리지 배열 설정..."]
+
+link:../commands-a-z/show-storagearray.html["스토리지 배열을 표시합니다"]
+
+
+
+== 입력 출력 컨트롤러(IOC) 덤프 명령
+
+link:../commands-a-z/save-ioclog.html["입력 출력 컨트롤러(IOC) 덤프를 저장합니다"]
+
+link:../commands-a-z/start-ioclog.html["입력 출력 컨트롤러(IOC) 덤프를 시작합니다"]
+
+
+
+== 제대로 작동하지 않는 드라이브(MBD) 명령
+
+link:../commands-a-z/replace-drive-replacementdrive.html["드라이브를 교체합니다"]
+
+link:../commands-a-z/reset-drive.html["드라이브를 재설정합니다"]
+
+link:../commands-a-z/set-drive-operationalstate.html["드라이브 상태를 설정합니다"]
+
+link:../commands-a-z/stop-drive-replace.html["드라이브 교체를 중지합니다"]
+
+
+
+== 오프로드 데이터 전송(ODX) 명령
+
+link:../commands-a-z/set-storagearray-odxenabled.html["ODX를 설정 또는 해제합니다"]
+
+link:../commands-a-z/set-storagearray-vaaienabled.html["VAAI를 설정하거나 해제합니다"]
+
+link:../commands-a-z/show-storagearray-odxsetting.html["스토리지 배열 ODX 설정을 표시합니다"]
+
+
+
+== 리포지토리 볼륨 분석 명령
+
+link:../commands-a-z/check-repositoryconsistency.html["저장소 일관성을 확인합니다"]
+
+
+
+== 세션 명령
+
+link:../commands-a-z/set-session-erroraction.html["세션을 설정합니다"]
+
+
+
+== 스토리지 배열 명령입니다
+
+link:../commands-a-z/activate-storagearray-firmware.html["스토리지 어레이 펌웨어를 활성화합니다"]
+
+link:../commands-a-z/add-certificate-from-array.html["배열에서 인증서를 추가합니다"]
+
+link:../commands-a-z/add-certificate-from-file.html["파일에서 인증서를 추가합니다"]
+
+link:../commands-a-z/autoconfigure-storagearray.html["스토리지 배열 자동 구성"]
+
+link:../commands-a-z/autoconfigure-storagearray-hotspares.html["스토리지 시스템 핫 스페어 자동 구성"]
+
+link:../commands-a-z/clear-storagearray-configuration.html["스토리지 배열 구성을 지웁니다"]
+
+link:../commands-a-z/clear-storagearray-eventlog.html["스토리지 배열 이벤트 로그를 지웁니다"]
+
+link:../commands-a-z/clear-storagearray-firmwarependingarea.html["스토리지 배열 펌웨어 보류 영역을 지웁니다"]
+
+link:../commands-a-z/clear-storagearray-recoverymode.html["스토리지 배열 복구 모드를 지웁니다"]
+
+link:../commands-a-z/create-storagearray-securitykey.html["스토리지 배열 보안 키를 생성합니다"]
+
+link:../commands-a-z/delete-certificates.html["인증서를 삭제합니다"]
+
+link:../commands-a-z/disable-storagearray-externalkeymanagement-file.html["외부 보안 키 관리를 비활성화합니다"]
+
+link:../commands-a-z/disable-storagearray.html["스토리지 배열 기능을 비활성화합니다"]
+
+link:../commands-a-z/download-storagearray-drivefirmware-file.html["스토리지 어레이 드라이브 펌웨어를 다운로드합니다"]
+
+link:../commands-a-z/download-storagearray-firmware.html["스토리지 어레이 펌웨어/NVSRAM을 다운로드합니다"]
+
+link:../commands-a-z/download-storagearray-nvsram.html["스토리지 배열 NVSRAM을 다운로드합니다"]
+
+link:../commands-a-z/enable-storagearray-externalkeymanagement-file.html["외부 보안 키 관리를 활성화합니다"]
+
+link:../commands-a-z/set-storagearray-hostconnectivityreporting.html["호스트 연결 보고를 설정하거나 해제합니다"]
+
+link:../commands-a-z/enable-storagearray-feature-file.html["스토리지 배열 기능을 설정합니다"]
+
+link:../commands-a-z/export-storagearray-securitykey.html["스토리지 배열 보안 키를 내보냅니다"]
+
+link:../commands-a-z/import-storagearray-securitykey-file.html["스토리지 배열 보안 키를 가져옵니다"]
+
+link:../commands-a-z/load-storagearray-dbmdatabase.html["스토리지 배열 DBM 데이터베이스를 로드합니다"]
+
+link:../commands-a-z/recreate-storagearray-securitykey.html["외부 보안 키를 다시 만듭니다"]
+
+link:../commands-a-z/reset-storagearray-diagnosticdata.html["스토리지 배열 진단 데이터를 재설정합니다"]
+
+link:../commands-a-z/reset-storagearray-ibstatsbaseline.html["스토리지 배열 InfiniBand 통계 기준을 재설정합니다"]
+
+link:../commands-a-z/reset-storagearray-iscsistatsbaseline.html["스토리지 배열 iSCSI 기준을 재설정합니다"]
+
+link:../commands-a-z/reset-storagearray-rlsbaseline.html["스토리지 배열 RLS 기준을 재설정합니다"]
+
+link:../commands-a-z/reset-storagearray-sasphybaseline.html["스토리지 배열 SAS PHY 기준선을 재설정합니다"]
+
+link:../commands-a-z/reset-storagearray-socbaseline.html["스토리지 시스템의 SOC 기준을 재설정합니다"]
+
+link:../commands-a-z/reset-storagearray-volumedistribution.html["스토리지 배열 볼륨 배포를 재설정합니다"]
+
+link:../commands-a-z/save-storagearray-configuration.html["스토리지 배열 구성을 저장합니다"]
+
+link:../commands-a-z/save-storagearray-dbmdatabase.html["스토리지 배열 DBM 데이터베이스를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-dbmvalidatorinfo.html["스토리지 배열 dBm 유효성 검사기 정보 파일을 저장합니다"]
+
+link:../commands-a-z/save-storage-array-diagnostic-data.html["스토리지 배열 진단 데이터를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-warningevents.html["스토리지 배열 이벤트를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-firmwareinventory.html["스토리지 어레이 펌웨어 인벤토리를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-ibstats.html["스토리지 배열 InfiniBand 통계를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-iscsistatistics.html["스토리지 배열 iSCSI 통계를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-performancestats.html["스토리지 배열 성능 통계를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-rlscounts.html["스토리지 배열 RLS 수를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-sasphycounts.html["스토리지 배열 SAS PHY 수를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-soccounts.html["스토리지 시스템의 SOC 수를 줄입니다"]
+
+link:../commands-a-z/save-storagearray-statecapture.html["스토리지 배열 상태 캡처를 저장합니다"]
+
+link:../commands-a-z/save-storagearray-supportdata.html["스토리지 배열 지원 데이터를 저장합니다"]
+
+link:../commands-a-z/set-storagearray.html["스토리지 배열을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-icmppingresponse.html["스토리지 배열 ICMP 응답을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-isnsipv4configurationmethod.html["스토리지 배열 iSNS 서버 IPv4 주소를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-isnsipv6address.html["스토리지 배열 iSNS 서버 IPv6 주소를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-isnslisteningport.html["스토리지 배열 iSNS 서버 수신 포트를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-isnsserverrefresh.html["스토리지 배열 iSNS 서버 새로 고침을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-learncycledate-controller.html["스토리지 배열 학습 주기를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-pqvalidateonreconstruct.html["재구성 시 스토리지 배열 PQ 검증을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-redundancymode.html["스토리지 배열 이중화 모드를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-resourceprovisionedvolumes.html["스토리지 시스템 리소스 프로비저닝된 볼륨을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-securitykey.html["스토리지 배열 보안 키를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-time.html["스토리지 배열 시간을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-traypositions.html["스토리지 배열 트레이 위치를 설정합니다"]
+
+link:../commands-a-z/set-storagearray-unnameddiscoverysession.html["스토리지 배열 이름 없는 검색 세션을 설정합니다"]
+
+link:../commands-a-z/show-certificates.html["인증서 표시"]
+
+link:../commands-a-z/show-storagearray.html["스토리지 배열을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-autoconfiguration.html["스토리지 배열 자동 구성을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-dbmdatabase.html["스토리지 배열 DBM 데이터베이스를 표시합니다"]
+
+link:../commands-a-z/show-storagearray-hostconnectivityreporting.html["스토리지 시스템 호스트 접속 구성을 보여 줍니다"]
+
+link:../commands-a-z/show-storagearray-hosttopology.html["스토리지 시스템 호스트 토폴로지를 표시합니다"]
+
+link:../commands-a-z/show-storagearray-lunmappings.html["스토리지 배열 LUN 매핑을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-iscsinegotiationdefaults.html["스토리지 배열 협상 기본값을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-odxsetting.html["스토리지 배열 ODX 설정을 표시합니다"]
+
+link:../commands-a-z/show-storagearray-powerinfo.html["스토리지 배열 전원 정보를 표시합니다"]
+
+link:../commands-a-z/show-storagearray-unconfigurediscsiinitiators.html["스토리지 배열 구성되지 않은 iSCSI 이니시에이터를 표시합니다"]
+
+link:../commands-a-z/show-storagearray-unreadablesectors.html["스토리지 배열을 읽을 수 없는 섹터를 표시합니다"]
+
+link:../commands-a-z/show-textstring.html["문자열을 표시합니다"]
+
+link:../commands-a-z/start-storagearray-autosupport-manualdispatch.html["스토리지 배열 AutoSupport 수동 디스패치를 시작합니다"]
+
+link:../commands-a-z/start-storagearray-configdbdiagnostic.html["스토리지 배열 구성 데이터베이스 진단을 시작합니다"]
+
+link:../commands-a-z/start-storagearray-isnsserverrefresh.html["스토리지 배열 iSNS 서버 새로 고침을 시작합니다"]
+
+link:../commands-a-z/start-storagearray-locate.html["스토리지 배열 위치 찾기를 시작합니다"]
+
+link:../commands-a-z/stop-storagearray-configdbdiagnostic.html["스토리지 배열 구성 데이터베이스 진단을 중지합니다"]
+
+link:../commands-a-z/stop-storagearray-drivefirmwaredownload.html["스토리지 어레이 드라이브 펌웨어 다운로드를 중지합니다"]
+
+link:../commands-a-z/stop-storagearray-iscsisession.html["스토리지 배열 iSCSI 세션을 중지합니다"]
+
+link:../commands-a-z/stop-storagearray-locate.html["스토리지 배열 위치 찾기를 중지합니다"]
+
+link:../commands-a-z/validate-storagearray-securitykey.html["스토리지 배열 보안 키를 확인합니다"]
+
+
+
+== 트레이 명령
+
+link:../commands-a-z/download-tray-firmware-file.html["환경 카드 펌웨어를 다운로드합니다"]
+
+link:../commands-a-z/download-tray-configurationsettings.html["용지함 구성 설정을 다운로드합니다"]
+
+link:../commands-a-z/save-alltrays-logfile.html["트레이 로그를 저장합니다"]
+
+link:../commands-a-z/set-tray-drawer.html["문서함 서비스 조치 허용 표시기 설정"]
+
+link:../commands-a-z/set-tray-attribute.html["용지함 속성을 설정합니다"]
+
+link:../commands-a-z/set-tray-identification.html["용지함 ID를 설정합니다"]
+
+link:../commands-a-z/set-tray-serviceallowedindicator.html["트레이 서비스 작업 허용 표시기를 설정합니다"]
+
+link:../commands-a-z/start-tray-locate.html["용지함 위치 찾기를 시작합니다"]
+
+link:../commands-a-z/stop-tray-locate.html["트레이 위치를 중지합니다"]
+
+
+
+== 분류되지 않은 명령
+
+link:../commands-a-z/recover-sasport-miswire.html["SAS 포트 오선을 복구합니다"]
+
+link:../commands-a-z/show-textstring.html["문자열을 표시합니다"]

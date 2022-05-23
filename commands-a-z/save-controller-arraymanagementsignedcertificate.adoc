@@ -1,0 +1,79 @@
+---
+permalink: commands-a-z/save-controller-arraymanagementsignedcertificate.html 
+sidebar: sidebar 
+keywords: retrieve, installed, server, certificate 
+summary: save controller arrayManagementSignedCertificate 명령은 컨트롤러에 대해 설치된 서버 인증서를 검색하여 인증서 세부 정보를 볼 수 있도록 합니다. 
+---
+= 설치된 서버 인증서를 검색합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Save controller arrayManagementSignedCertificate' 명령은 컨트롤러에 대해 설치된 서버 인증서를 검색하여 인증서 세부 정보를 볼 수 있도록 합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+
+save controller [(a|b)] arrayManagementSignedCertificate
+     file=pass:quotes["_filename_"]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+컨트롤러
+ a| 
+서명된 인증서를 다운로드할 컨트롤러를 지정할 수 있습니다. 유효한 컨트롤러 식별자는 a 또는 b이며, 여기서 a는 슬롯 A의 컨트롤러이고 b는 슬롯 B의 컨트롤러입니다 컨트롤러 식별자를 대괄호([ ])로 묶습니다.
+
+
+
+ a| 
+'파일'
+ a| 
+컨트롤러의 서명된 인증서 파일을 저장할 파일을 지정할 수 있습니다.
+
+|===
+
+
+== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "save controller [a] arrayManagementSignedCertificate
+   file="C:\controllerAcertificate.cer";"
+
+SMcli -n Array1 -c "save controller [b] arrayManagementSignedCertificate
+   file="C:\controllerBcertificate.cer";"
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40

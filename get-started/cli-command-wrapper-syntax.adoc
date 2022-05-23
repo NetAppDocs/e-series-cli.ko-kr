@@ -1,0 +1,139 @@
+---
+permalink: get-started/cli-command-wrapper-syntax.html 
+sidebar: sidebar 
+keywords: cli, command, wrapper, syntax 
+summary: CLI 명령 래퍼의 일반 구문 형식이 이 섹션에 나와 있습니다. 
+---
+= CLI 명령 래퍼 구문입니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+CLI 명령 래퍼의 일반 구문 형식이 이 섹션에 나와 있습니다. CLI 명령 래퍼 구문에서 사용되는 규칙은 다음 표에 나와 있습니다.
+
+[cols="2*"]
+|===
+| 컨벤션 | 정의 
+
+
+ a| 
+"a|b"
+ a| 
+대체("a" 또는 "b")
+
+
+
+ a| 
+'_기울임꼴-단어_'
+ a| 
+매개변수(변수에 대한 응답)를 수행하기 위해 사용자 입력이 필요합니다.
+
+
+
+ a| 
+'+[... ]+'(대괄호)
+ a| 
+0 또는 1 발생(대괄호는 일부 명령 매개 변수의 구분 기호로도 사용됨)
+
+
+
+ a| 
+'+{... }+'(중괄호)
+ a| 
+0회 이상 발생
+
+
+
+ a| 
+'(a|b|c)'
+ a| 
+대안 중 하나만 선택하십시오
+
+
+
+ a| 
+"a &|b"
+ a| 
+및/또는 이 기능은 하나 또는 두 컨트롤러 IP 주소를 함께 사용할 수 있는 경우 https 클라이언트 모드에 사용됩니다. 이렇게 하면 한 컨트롤러가 응답하지 않는 경우 SMcli가 대체 IP 주소를 사용합니다. 또한 펌웨어 다운로드와 같이 두 IP 주소가 모두 필요한 경우를 다룹니다.
+
+|===
+[NOTE]
+====
+모든 CLI 명령을 실행하려면 관리자 권한이 있어야 합니다. 일부 CLI 명령은 관리자 권한 없이 실행됩니다. 그러나 대부분의 명령은 실행되지 않습니다. 올바른 권한이 없기 때문에 CLI 명령이 실행되지 않으면 종료 코드 12가 반환됩니다.
+
+====
+
+
+== https 클라이언트 모드의 예
+
+다음 예에서는 에 설명된 "https" 클라이언트 모드 명령줄 매개 변수를 보여 줍니다 xref:command-line-parameters.adoc[명령줄 매개변수].
+
+[listing]
+----
+SMcli (Controller A host-name-or-IP-address&|
+Controller B host-name-or-IP-address)  -u username -p password -c "commands;" [-clientType (auto | https | symbol)]
+----
+[NOTE]
+====
+clientType을 지정하지 않고 -u 옵션과 username 변수를 포함하면 https 또는 'symbol' 클라이언트 모드 중 사용 가능한 모드를 사용합니다.
+
+====
+
+
+== 기호 클라이언트 모드의 예
+
+다음 예제는 에서 설명한 '기호' 클라이언트 모드 명령줄 매개변수를 보여줍니다 xref:command-line-parameters.adoc[명령줄 매개변수].
+
+[listing]
+----
+SMcli **-a** **email:** email-address [host-name-or-IP-address1 [host-name-or-IP-address2]] [**-n** storage-system-name | **-w** wwID | **-h** host-name] [**-I** information-to-include] [**-q** frequency] [**-S**]
+----
+[NOTE]
+====
+E2800 또는 E5700 스토리지 어레이에서는 '-A' 명령줄 옵션이 지원되지 않습니다.
+
+====
+[listing]
+----
+SMcli **-x** **email:** email-address [host-name-or-IP-address1 [host-name-or-IP-address2]] [**-n** storage-system-name | **-w** wwID | **-h** host-name] [**-S**]
+----
+[NOTE]
+====
+E2800 또는 E5700 스토리지 어레이에서는 '-x' 명령줄 옵션이 지원되지 않습니다.
+
+====
+[listing]
+----
+SMcli (**-a** | **-x**) **trap:** community, host-name-or-IP-address [host-name-or-IP-address1 [host-name-or-IP-address2]] [**-n** storage-system-name | **-w** wwID | **-h** host-name] [**-S**]
+----
+[NOTE]
+====
+E2800 또는 E5700 스토리지 어레이에는 '-a' 및 '-x' 명령줄 옵션이 지원되지 않습니다.
+
+====
+[listing]
+----
+SMcli **-d** [**-w**] [**-i**] [**-s**] [**-v**] [**-S**]
+----
+[NOTE]
+====
+E2800 또는 E5700 스토리지 어레이에서는 '-s' 명령줄 옵션이 지원되지 않습니다.
+
+====
+[listing]
+----
+SMcli host-name-or-IP-address **-F** email-address [**-g** contactInfoFile] [**-S**]
+----
+[listing]
+----
+SMcli **-A** [host-name-or-IP-address [host-name-or-IP-address]] [**-S**]
+----
+[listing]
+----
+SMcli **-X **(**-n** storage-system-name | **-w** wwID | **-h** host-name)
+----
+[listing]
+----
+SMcli **-?**
+----

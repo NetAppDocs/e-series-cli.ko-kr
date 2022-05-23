@@ -1,0 +1,84 @@
+---
+permalink: commands-a-z/create-snmptrapdestination.html 
+sidebar: sidebar 
+keywords: register, snmp, trap, destination 
+summary: 'create snmpTrapDestination 명령은 새 SNMP(Simple Network Management Protocol) 트랩 대상을 생성합니다. 트랩 대상은 트랩 메시지를 수신하는 SNMP 관리자입니다.' 
+---
+= SNMP 트랩 대상을 등록합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Create snmpTrapDestination 명령은 새로운 SNMP(Simple Network Management Protocol) 트랩 대상을 생성합니다. 트랩 대상은 트랩 메시지를 수신하는 SNMP 관리자입니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+create snmpTrapDestination trapReceiverIP=ipAddress
+    (communityName=pass:quotes[_"communityName" | (userName="userName"_] [engineId=(local | engineId)]))
+    [sendAuthenticationFailureTraps=(TRUE | FALSE)]
+----
+
+
+== 매개 변수
+
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+트라피시베르IP
+ a| 
+트랩 메시지를 보낼 SNMP 관리자의 IP 주소입니다.
+
+
+
+ a| 
+공산성
+ a| 
+트랩 메시지를 보낼 SNMP 커뮤니티의 이름입니다.
+
+
+
+ a| 
+'사용자 이름'
+ a| 
+트랩 메시지를 보낼 SNMP 사용자의 이름입니다.
+
+
+
+ a| 
+엔진 ID
+ a| 
+트랩 메시지를 보낼 SNMP 사용자의 엔진 ID입니다. 동일한 사용자 이름을 가진 USM 사용자가 두 명 이상인 경우 엔진 ID가 필요합니다. 로컬 SNMP 에이전트가 신뢰할 수 있는 에이전트이거나 원격 SNMP 에이전트 엔진 ID를 지정하는 16진수 문자열인 "[.code] ""local""" 값일 수 있습니다.
+
+
+
+ a| 
+'sendAuthenticationFailureTraps'입니다
+ a| 
+이 매개변수는 SNMP 관리자에게 인증 실패 메시지 전송을 켜거나 끕니다. 인증 실패 메시지를 보내려면 매개 변수를 true로 설정합니다. 인증 실패 메시지를 전송하지 않으려면 매개변수를 FALSE로 설정합니다. 기본값은 true입니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+8.30

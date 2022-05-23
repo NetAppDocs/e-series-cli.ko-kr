@@ -1,0 +1,114 @@
+---
+permalink: commands-a-z/set-snapgroup-enableschedule.html 
+sidebar: sidebar 
+keywords: set, snapshot, group, schedule 
+summary: set SnapGroup enableSchedule 명령은 스냅샷 그룹에 대한 스냅샷 이미지를 생성하기 위한 일정을 정의합니다. 
+---
+= 스냅샷 그룹 스케줄을 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Set SnapGroup enableSchedule' 명령은 스냅샷 그룹의 스냅샷 이미지를 찍는 스케줄을 정의합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+set snapGroup pass:quotes[["_snapGroupName_"]]
+enableSchedule=(TRUE | FALSE)
+schedule (immediate | snapshotSchedule)
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+스냅그룹
+ a| 
+속성을 설정할 스냅샷 그룹의 이름입니다. 스냅샷 그룹 이름은 큰따옴표(" ")로 대괄호([ ]) 안에 묶어야 합니다.
+
+
+
+ a| 
+'enableSchedule'
+ a| 
+이 매개 변수를 사용하여 스냅샷 작업 예약 기능을 설정하거나 해제할 수 있습니다. 스냅샷 예약을 설정하려면 이 매개 변수를 "true"로 설정합니다. 스냅샷 예약을 해제하려면 이 매개변수를 "false"로 설정합니다.
+
+|===
+
+
+== 참고
+
+이름에 영숫자, 밑줄(_), 하이픈(-) 및 파운드(#)를 조합하여 사용할 수 있습니다. 이름에는 최대 30자를 사용할 수 있습니다.
+
+'enableSchedule' 매개변수와 'Schedule' 매개변수는 스냅샷 그룹에 대한 스냅샷 영상 생성 일정을 지정할 수 있는 방법을 제공합니다. 이러한 매개 변수를 사용하여 일별, 주별 또는 월별(일별 또는 날짜별)으로 스냅샷을 예약할 수 있습니다. enableSchedule 매개변수는 스냅샷 예약 기능을 켜거나 끕니다. 예약을 활성화할 때 '스케줄' 매개변수를 사용하여 스냅샷을 생성할 시기를 정의합니다.
+
+이 목록은 '스케줄' 파라미터의 옵션을 사용하는 방법을 설명합니다.
+
+* immediate(즉시) -- 명령을 입력하면 스냅샷 이미지가 생성되고 쓰기 시 복사 작업이 시작됩니다.
+* 'tartDate' - 스냅샷 이미지를 생성하고 쓰기 시 복사 작업을 수행할 특정 날짜입니다. 날짜 입력 형식은 MM:DD:YY입니다. 시작 날짜를 입력하지 않으면 현재 날짜가 사용됩니다. 이 옵션의 예는 '스타날짜=06:27:11'입니다.
+* 'ScheduleDay' -- 스냅샷 이미지를 생성하고 기록 시 복사 작업을 수행하려는 요일. 다음 값을 입력할 수 있습니다. '어르투데이', '투데이', '올'. 이 옵션의 예는 'ScheduleDay=Wednesday'입니다.
+* 'tartTime' - 스냅샷 이미지를 생성하고 쓰기 시 복사 작업을 시작할 시간입니다. 시간 입력 형식은 HH:MM이며, 여기서 HH는 시간이고 M은 시간이다. 24시간 시계를 사용합니다. 예를 들어 오후 2:00은 14:00입니다. 이 옵션의 예는 `* startTime=14:27*'입니다.
+* 'ScheduleInterval(일정 간격)' -- 기록 중 복사 작업 사이의 최소 시간(분)입니다. 복제 작업 기간 때문에 쓰기 시 복사 작업이 겹치는 스케줄을 생성할 수 있습니다. 이 옵션을 사용하면 쓰기 시 복사 작업 사이에 시간이 있는지 확인할 수 있습니다. 'ScheduleInterval' 옵션의 최대값은 1440분입니다. 이 옵션의 예는 ' * scheduleInterval = 180 * '입니다.
+* 'endDate' -- 스냅샷 이미지 생성을 중지하고 쓰기 시 복사 작업을 종료하려는 특정 날짜입니다. 날짜 입력 형식은 MM:DD:YY입니다. 이 옵션의 예는 ' * endDate = 11:26:11 * '입니다.
+* NOEndDate -- 예약된 쓰기 시 복사 작업을 끝내지 않으려면 이 옵션을 사용합니다 나중에 쓰기 시 복사 작업을 종료하려면 'SnapGroup 설정' 명령을 다시 입력하고 종료 날짜를 지정해야 합니다.
+* timesPerDay - 스케줄을 하루 동안 실행할 횟수입니다. 이 옵션의 예로는 'timesPerDay=4'가 있습니다.
+* 시간대 -- 이 매개변수를 사용하여 스토리지 배열이 작동하는 시간대를 정의합니다. 다음 두 가지 방법 중 하나로 표준 시간대를 정의할 수 있습니다.
++
+** "GMT ± HH:MM" -- GMT 기준 시간대 오프셋. 시간 및 분 단위로 오프셋을 입력합니다. 예를 들어, GMT-06:00은 미국의 중앙 표준 시간대입니다.
+** 텍스트 문자열 -- 표준 시간대 텍스트 문자열 예: "America/Chicago" 또는 "Australia/Brisbane". 표준 시간대 텍스트 문자열은 대/소문자를 구분합니다. 잘못된 텍스트 문자열을 입력하면 GMT 시간이 사용됩니다. 텍스트 문자열을 큰따옴표로 묶습니다.
+
+
+
+
+스케줄을 정의하는 코드 문자열은 다음 예제와 비슷합니다.
+
+[listing]
+----
+enableSchedule=true schedule startTime=14:27
+----
+[listing]
+----
+enableSchedule=true schedule scheduleInterval=180
+----
+[listing]
+----
+enableSchedule=true schedule timeZone=GMT-06:00
+----
+[listing]
+----
+enableSchedule=true schedule timeZone="America/Chicago"
+----
+'ScheduleInterval' 옵션을 사용할 경우, 펌웨어는 'timesPerDay' 옵션과 'ScheduleInterval' 옵션 중에서 가장 낮은 값을 선택하여 선택합니다. 펌웨어는 사용자가 설정한 'ScheduleInterval' 옵션 값으로 1440을 나누어 'ScheduleInterval' 옵션의 정수 값을 계산합니다. 예: 1440/180 = 8. 그런 다음 펌웨어는 'timesPerDay' 정수 값을 계산된 'ScheduleInterval' 정수 값과 비교하여 더 작은 값을 사용합니다.
+
+스케줄을 제거하려면 스케줄 매개 변수와 함께 볼륨 삭제 명령을 사용합니다. '스케줄' 파라미터로 '볼륨 삭제' 명령은 스냅샷 볼륨이 아닌 스케줄만 삭제합니다.
+
+
+
+== 최소 펌웨어 레벨입니다
+
+7.83
+
+7.86은 'ScheduleDate' 옵션과 'month' 옵션을 추가한다.

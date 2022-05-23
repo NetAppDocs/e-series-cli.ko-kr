@@ -1,0 +1,116 @@
+---
+permalink: commands-a-z/set-syslog.html 
+sidebar: sidebar 
+keywords: configure, syslog, set 
+summary: set syslog 명령은 syslog 경고 정보를 구성합니다. 경고 가능 이벤트가 발생할 때마다 syslog 서버에 경고를 보내도록 이벤트 모니터를 구성할 수 있습니다. 
+---
+= syslog 설정을 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+세트 syslog는 syslog 알림 정보를 설정한다. 경고 가능 이벤트가 발생할 때마다 syslog 서버에 경고를 보내도록 이벤트 모니터를 구성할 수 있습니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+
+
+
+== 상황
+
+* syslog 서버 주소를 사용할 수 있어야 합니다. 이 주소는 정규화된 도메인 이름, IPv4 주소 또는 IPv6 주소일 수 있습니다.
+* syslog 서버의 UDP 포트 번호를 사용할 수 있어야 합니다. 이 포트는 일반적으로 514입니다.
+
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+
+set syslog [defaultFacility=pass:quotes[_facilityNumber_]]
+| [defaultTag=pass:quotes[_defaultTag_]]
+| [syslogFormat=pass:quotes[_rfc3164_|_rfc5424_]]
+| (serverAddresses=pass:quotes[(_serverAddress:portNumber ... serverAddress:portNumber_)]
+| addServerAddresses=pass:quotes[(_serverAddress:portNumber ... serverAddress:portNumber_))]
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'defaultFacility'
+ a| 
+선택 사항. 기본 시설 번호를 지정할 수 있습니다. 기본 기능은 0에서 23 사이의 숫자 값이어야 합니다.
+
+
+
+ a| 
+"defaultTag"입니다
+ a| 
+선택 사항. 기본 태그를 지정할 수 있습니다. 문자열을 따옴표로 묶습니다.
+
+
+
+ a| 
+'SyslogFormat'입니다
+ a| 
+syslog 메시지에 사용되는 메시징 형식입니다. 값은 다음 중 하나일 수 있습니다.
+
+* rfc3164 - RFC 3164 준수 형식
+* rfc5424 - RFC 5424 준수 형식입니다
+
+
+
+
+ a| 
+'세르베주소'
+ a| 
+연결된 포트 번호를 사용하여 하나 이상의 syslog 서버 주소를 설정할 수 있습니다. 이 설정 옵션을 사용하면 기존 서버 주소가 지워집니다. syslog 서버 주소는 정규화된 도메인 이름, IPv4 주소 또는 IPv6 주소일 수 있습니다. UDP 포트는 0과 65535 사이의 숫자 값이어야 합니다. 일반적으로 syslog에 대한 UDP 포트는 514입니다. 모든 주소를 괄호로 묶습니다. 둘 이상의 주소를 입력한 경우 공백으로 구분합니다.
+
+
+
+ a| 
+'addServerAddresses'
+ a| 
+연결된 포트 번호와 함께 하나 이상의 syslog 서버 주소를 추가할 수 있습니다. 이 설정 옵션을 사용하면 기존 서버 주소가 지워지지 않습니다. syslog 서버 주소는 정규화된 도메인 이름, IPv4 주소 또는 IPv6 주소일 수 있습니다. UDP 포트는 0과 65535 사이의 숫자 값이어야 합니다. 일반적으로 syslog에 대한 UDP 포트는 514입니다. 모든 주소를 괄호로 묶습니다. 둘 이상의 주소를 입력한 경우 공백으로 구분합니다.
+
+|===
+
+
+== 예
+
+[listing]
+----
+
+SMcli -n Array1 -c "set syslog serverAddresses=("ICTM1402S02H2.company.com:22");"
+
+SMcli -n Array1 -c "set syslog addServerAddresses=("serverName1.company.com:514"
+"serverName2.company.com:514");"
+
+SMcli completed successfully.
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+8.40
+
+11.70.1은 Syslog 메시지 형식을 지정하기 위해 'syslogFormat' 매개변수를 추가했습니다.

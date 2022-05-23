@@ -1,0 +1,102 @@
+---
+permalink: commands-a-z/create-snmpuser-username.html 
+sidebar: sidebar 
+keywords: register, snmpv3 usm, user 
+summary: 'create snmpUser username 명령은 새 SNMP(Simple Network Management Protocol) 사용자를 생성하고 새 사용자를 알려진 엔터티로 SNMP 에이전트에 등록합니다. 기존 사용자와 동일한 이름 및 엔진 ID를 가진 새 사용자를 등록하려는 시도는 거부됩니다.' 
+---
+= SNMPv3 USM 사용자를 등록합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Create snmpUser username 명령은 새 SNMP(Simple Network Management Protocol) 사용자를 생성하고 새 사용자를 알려진 엔터티로 SNMP 에이전트에 등록합니다. 기존 사용자와 동일한 이름 및 엔진 ID를 가진 새 사용자를 등록하려는 시도는 거부됩니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
+
+
+
+== 구문
+
+[listing]
+----
+create snmpUser userName="snmpUserName"
+    [engineId=(local | engineId)]
+    [authProtocol=(none | sha | sha256 | sha512) authPassword="authPassword"]
+    [privProtocol=(none | aes128) privPassword="privPassword"]
+----
+
+
+== 매개 변수
+
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+'사용자 이름'
+ a| 
+생성할 SNMP USM 사용자의 이름입니다. SNMP USM 사용자 이름은 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+엔진 ID
+ a| 
+사용자의 권한 있는 SNMP 엔진 ID의 식별자입니다. 이 값은 "[.code]""local""일 수 있습니다. 로컬 SNMP 에이전트를 신뢰할 수 있는 에이전트로 지정하거나 16진수 문자열을 지정하여 원격 SNMP 에이전트 엔진 ID를 지정할 수 있습니다. 기본값은 "[.code]""local""입니다.
+
+
+
+ a| 
+진정한 의정입니다
+ a| 
+사용자에게 사용할 인증 프로토콜(HMAC). 값은 다음 중 하나일 수 있습니다.
+
+* "없음" - SNMP 메시지 인증 없음(기본값)
+* 'ha'-SHA-1 인증
+* sha256-SHA-256 인증
+* 'sha512'-SHA-512 인증
+
+
+
+
+ a| 
+'authPassword
+ a| 
+사용자의 인증에 사용할 암호입니다. 인증프로토콜이 `[.code]'ha''''[.code]'ha256''''''[code]'ha512''인 경우 반드시 지정해야 합니다.
+
+
+
+ a| 
+사규약
+ a| 
+사용자에게 사용되는 개인 정보 보호 프로토콜(암호화) 값은 다음 중 하나일 수 있습니다.
+
+* "없음" - SNMP 메시지 암호화 없음(기본값)
+* aes128 - AES-18 암호화
+
+
+
+
+ a| 
+"privPassword"
+ a| 
+사용자의 개인 정보 보호/암호화에 사용할 암호입니다. 개인 정보 보호 프로토콜이 "[.code]" aes128""인 경우 지정해야 합니다.
+
+|===
+
+
+== 최소 펌웨어 레벨입니다
+
+8.72

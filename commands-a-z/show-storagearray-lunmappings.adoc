@@ -1,0 +1,83 @@
+---
+permalink: commands-a-z/show-storagearray-lunmappings.html 
+sidebar: sidebar 
+keywords: show, storage, array, lun, map 
+summary: 'show storageArray lunMappings 명령은 스토리지 배열의 LUN(Logical Unit Number) 또는 NSID(Namespace ID) 매핑에 대한 스토리지 배열 프로파일의 정보를 반환합니다.' 
+---
+= 스토리지 배열 LUN 매핑을 표시합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'show storageArray lunMappings' 명령어는 스토리지 배열의 LUN(Logical Unit Number) 또는 NSID(Namespace ID) 매핑에 대한 스토리지 배열 프로파일의 정보를 반환합니다.
+
+
+
+== 지원되는 어레이
+
+이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+
+
+
+== 역할
+
+E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 스토리지 모니터 역할이 있어야 합니다.
+
+
+
+== 상황
+
+기본 그룹 LUN 또는 NSID 매핑이 항상 표시됩니다. 매개 변수 없이 이 명령을 실행하면 모든 LUN 또는 NSID 매핑이 반환됩니다.
+
+
+
+== 구문
+
+[listing, subs="+macros"]
+----
+show storageArray lunMappings (host pass:quotes[["_hostName_"]] |
+hostgroup pass:quotes[["_hostGroupName_"]])
+----
+
+
+== 매개 변수
+
+[cols="2*"]
+|===
+| 매개 변수 | 설명 
+
+
+ a| 
+호스트
+ a| 
+LUN 또는 NSID 매핑을 확인할 특정 호스트의 이름입니다. 호스트 이름은 대괄호([ ]) 안에 큰따옴표(" ")로 묶어야 합니다.
+
+
+
+ a| 
+호스트그룹
+ a| 
+LUN 또는 NSID 매핑을 확인할 특정 호스트 그룹의 이름입니다. 호스트 그룹 이름은 큰따옴표(" ")로 대괄호([ ]) 안에 묶어야 합니다.
+
+|===
+
+
+== 참고
+
+이 명령은 이 예제와 유사한 호스트 토폴로지 정보를 반환합니다.
+
+[listing]
+----
+MAPPINGS (Storage Partitioning - Enabled (0 of 16 used))
+VOLUME NAME  LUN  CONTROLLER  ACCESSIBLE BY  VOLUME STATUS
+Access Volume 7   A,B         Default Group  Optimal
+21           21   B           Default Group  Optimal
+22           22   B           Default Group  Optimal
+----
+
+
+== 최소 펌웨어 레벨입니다
+
+6.10
