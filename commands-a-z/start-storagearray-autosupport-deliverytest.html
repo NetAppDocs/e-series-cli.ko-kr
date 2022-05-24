@@ -1,0 +1,3241 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head class="at-element-marker">
+  <title>AutoSupport 전송 설정을 테스트합니다</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="AutoSupport 전송 설정을 테스트합니다" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/ko-kr/e-series-cli/commands-a-z/start-storagearray-autosupport-deliverytest.html" />
+	<meta property="og:description" content="start storageArray AutoSupport deliveryTest 명령은 지정된 제공 매개 변수를 사용하여 대상 기술 지원 시스템에 대한 연결을 테스트할 수 있도록 샘플 AutoSupport 번들 수집 메시지를 보냅니다." />
+  <meta property="og:image" content="https://docs.netapp.com/ko-kr/e-series-cli/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="start storageArray AutoSupport deliveryTest 명령은 지정된 제공 매개 변수를 사용하여 대상 기술 지원 시스템에 대한 연결을 테스트할 수 있도록 샘플 AutoSupport 번들 수집 메시지를 보냅니다.">
+  <meta name="keywords" content=" test, autosupport, delivery, set, individual, E2800, E5700, arrays"><!-- Icons -->
+  <link rel="icon" href="/ko-kr/e-series-cli/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/ko-kr/e-series-cli/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/ko-kr/e-series-cli/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/ko-kr/e-series-cli/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/ko-kr/e-series-cli/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/ko-kr/e-series-cli/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/ko-kr/e-series-cli/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/ko-kr/e-series-cli/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/ko-kr/e-series-cli/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/ko-kr/e-series-cli/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/ko-kr/e-series-cli/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/ko-kr/e-series-cli/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/ko-kr/e-series-cli/css/custom-dropdown.css' type='text/css'>
+  <link rel='stylesheet' href='/ko-kr/e-series-cli/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/ko-kr/e-series-cli/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/ko-kr/e-series-cli/css/tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel='stylesheet' href='/ko-kr/e-series-cli/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    if (document.location.hostname === "docs.netapp.com") {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
+
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = "72570c5c-fe30-465f-b0e0-b77f7fb4ae34";
+      head.appendChild(onetrustScript);
+    }
+
+    function OptanonWrapper() { }
+
+    if (document.location.hostname === "docs.netapp.com") {
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+      head.appendChild(adobe);
+
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id=UA-81697994-3";
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-81697994-3');
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/ko-kr/e-series-cli/js/na-search.js'></script><script src='/ko-kr/e-series-cli/js/na-pagenav.js'></script><link rel='stylesheet' href='/ko-kr/e-series-cli/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/ko-kr/e-series-cli/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/ko-kr/e-series-cli/js/na-utility.js'></script>
+  <script src='/ko-kr/e-series-cli/js/clouddocs.js'></script>
+  <script src='/ko-kr/e-series-cli/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/ko-kr/e-series-cli/js/toc.js'></script>
+  <script src='/ko-kr/e-series-cli/js/customscripts.js'></script><script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script>
+  <script src='/ko-kr/e-series-cli/js/custom-dropdown.js'></script>
+  <script src='/ko-kr/e-series-cli/js/FileSaver.min.js'></script>
+  <script src='/ko-kr/e-series-cli/js/jszip-utils.min.js'></script>
+  <script src='/ko-kr/e-series-cli/js/jszip.min.js'></script>
+  <script src='/ko-kr/e-series-cli/js/pdf-ux.js'></script>
+</head>
+
+
+  <body class role="document" data-flavor="">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/e-series-cli/issues/new?body=Page%3A%20[AutoSupport 전송 설정을 테스트합니다](https://docs.netapp.com/ko-kr/e-series-cli/commands-a-z/start-storagearray-autosupport-deliverytest.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/e-series-cli/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a><a target="_blank" href="https://github.com/NetAppDocs/e-series-cli/blob/main/commands-a-z/start-storagearray-autosupport-deliverytest.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/e-series-cli/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/e-series-cli/images/article-sm.svg" class="github-icon" />기여하는 방법 자세히 알아보기</a></div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">이 페이지의 내용</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">제품 및 솔루션</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">지원 및 교육</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">커뮤니티</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">블로그</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">고객 성공 사례</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">연락처</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">연락처</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/ko-kr/e-series-cli/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/ko-kr/e-series-cli/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/ko-kr/e-series-cli/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/ko-kr/e-series-cli/search.html"
+          data-type="widget" 
+          data-placeholder="설명서 검색" 
+          data-no-results-found="{query}에 대한 결과를 찾을 수 없음" 
+          data-did-you-mean="{suggestion}을(를) 검색해보십시오." 
+          data-no-results-found-did-you-mean="{query}에 대한 결과를 찾을 수 없습니다. {suggestion}을(를) 검색하려 하셨습니까?" 
+          data-results-found="{hitCount}개의 결과를 찾음"  
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/e-series-cli/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
+      <div id="ie-i18n-menu">
+      <span class="ie-i18n-lang">한국어</span>
+        <button class="ie-i18n-icon-container" type="button">
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/e-series-cli/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+        <div class="n-language-selector-menu">
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/us-en/e-series-cli/commands-a-z/start-storagearray-autosupport-deliverytest.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ja-jp/e-series-cli/commands-a-z/start-storagearray-autosupport-deliverytest.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ko-kr/e-series-cli/commands-a-z/start-storagearray-autosupport-deliverytest.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-cn/e-series-cli/commands-a-z/start-storagearray-autosupport-deliverytest.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-tw/e-series-cli/commands-a-z/start-storagearray-autosupport-deliverytest.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
+                </li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>사용 가능한 PDF<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
+        <a target="_blank" href="/ko-kr/e-series-cli/pdfs/fullsite-sidebar/SANtricity_시스템_관리자_명령.pdf" >
+          <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>이 문서 사이트의 PDF</a>
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/시작하십시오.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            시작하십시오
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/명령_포맷.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            명령 포맷
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/CLI_구조.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            CLI 구조
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/스크립트_명령_구조.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            스크립트 명령 구조
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/서식_규칙.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            서식 규칙
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/범주별_명령.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            범주별 명령
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/A_Z_명령을_사용합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            A-Z 명령을 사용합니다
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/A.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            A
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/c.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            c
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/D.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            D
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/e.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            e
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/g.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            g
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/나는.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            나는
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/L.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            L
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/R.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            R
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/s__초.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            s.(초
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/저장___.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            저장...
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/설정___.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            설정...
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/표시___.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            표시...
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/SMcli___.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            SMcli...
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/시작___.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            시작...
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/ko-kr/e-series-cli/pdfs/pages/commands-a-z/start-storagearray-autosupport-deliverytest.pdf" >
+    <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/중지___.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            중지...
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/일시_중단___.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            일시 중단...
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/e-series-cli/pdfs/sidebar/V.pdf" 
+            
+          >
+            <img src="/ko-kr/e-series-cli/images/pdf.png" width="16" height="16"/>
+            V
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/ko-kr/e-series-cli/images/pdf-zip.png" width="16" height="16"/>
+      <pre>별도의 PDF 문서 모음<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/index.html">
+        SANtricity CLI 문서
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 시작하십시오</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/get-started/changes-in-the-cli-and-script-commands-in-this-release.html">
+        새로운 소식
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 명령 포맷</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/get-started/overview-format-commands.html">
+        개요
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> CLI 구조</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/get-started/structure-of-a-cli-command.html">
+        CLI 명령어의 구조
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/get-started/interactive-mode.html">
+        대화식 모드
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/get-started/cli-command-wrapper-syntax.html">
+        CLI 래퍼 구문
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/get-started/command-line-parameters.html">
+        CLI 매개 변수
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 스크립트 명령 구조</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/get-started/structure-of-a-script-command.html">
+        스크립트 명령의 구조
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/get-started/synopsis-of-the-script-commands.html">
+        스크립트 명령의 시놉시스입니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/get-started/recurring-syntax-elements.html">
+        반복 구문 요소
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/get-started/naming-conventions.html">
+        명명 규칙
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 서식 규칙</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/get-started/formatting-cli-commands.html">
+        CLI 명령
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/get-started/formatting-rules-for-script-commands.html">
+        스크립트 명령
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/get-started/formatting-cli-commands-in-windows-powershell.html">
+        Windows PowerShell
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/get-started/detailed-error-reporting.html">
+        자세한 오류 보고
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/get-started/exit-status.html">
+        종료 상태입니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/get-started/adding-comments-to-a-script-file.html">
+        스크립트 파일에 설명을 추가합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/get-started/usage-guidelines.html">
+        스크립트 명령 지침
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/get-started/firmware-compatibility-levels.html">
+        펌웨어 호환성 수준
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/get-started/new-https-mode.html">
+        SMcli https 모드
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/get-started/learn-about-volume-group-migration.html">
+        볼륨 그룹 마이그레이션
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 범주별 명령</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-category/administrator-commands.html">
+        관리자 명령
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-category/alert-configuration-commands.html">
+        경고 구성 명령
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-category/array-configuration-commands.html">
+        스토리지 구성 명령
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-category/auto-support-commands.html">
+        자동 지원 명령
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-category/mirroring-commands.html">
+        미러링 명령
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-category/performance-tuning-commands.html">
+        성능 튜닝 명령
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-category/replication-commands.html">
+        복제 명령
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-category/security-commands.html">
+        보안 명령
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-category/storage-monitor-personal-commands.html">
+        스토리지 모니터 담당자 명령
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-category/volume-configuration-commands.html">
+        볼륨 구성 명령
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> A-Z 명령을 사용합니다</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> A</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/activate-asynchronous-mirroring.html">
+        비동기식 미러링을 활성화합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/activate-storagearray-firmware.html">
+        storageArray 펌웨어를 활성화합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/activate-synchronous-mirroring.html">
+        동기 미러링을 활성화합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/add-array-label.html">
+        스토리지 레이블을 추가합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/add-certificate-from-array.html">
+        배열에서 인증서를 추가합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/add-certificate-from-file.html">
+        파일에서 인증서를 추가합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/add-drives-to-ssd-cache.html">
+        SSD 캐시에 드라이브를 추가합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/add-volume-asyncmirrorgroup.html">
+        볼륨 async미러그룹을 추가합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/autoconfigure-storagearray-hotspares.html">
+        스토리지 어레이 핫스페어 자동 구성
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/autoconfigure-storagearray.html">
+        스토리지 배열 자동 구성
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> c</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/change-ssd-cache-application-type.html">
+        SSD 캐시 애플리케이션 유형을 변경합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/check-asyncmirrorgroup-repositoryconsistency.html">
+        동기 미러그룹 리포지토리의 일관성을 확인하십시오
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/check-repositoryconsistency.html">
+        리포지토리의 일관성을 확인하십시오
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/check-storagearray-connectivity.html">
+        스토리지 배열 연결을 확인합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/check-syncmirror.html">
+        SyncMirror를 확인합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/check-volume-parity.html">
+        볼륨 패리티를 확인합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/clear-alldrivechannels-stats.html">
+        클리어 올드라이브 체크무늬 셔츠
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/clear-asyncmirrorfault.html">
+        async미러고장을 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/clear-emailalert-configuration.html">
+        알림 메시지 구성을 지웁니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/clear-storagearray-configuration.html">
+        storageArray 구성을 지웁니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/clear-storagearray-eventlog.html">
+        storageArray EventLog를 지웁니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/clear-storagearray-firmwarependingarea.html">
+        storageArray firmwaredpendingarea를 지웁니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/clear-storagearray-recoverymode.html">
+        storageArray recoverymode를 지웁니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/clear-syslog-configuration.html">
+        syslog 구성을 지웁니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/clear-volume-reservations.html">
+        볼륨 예약을 지웁니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/clear-volume-unreadablesectors.html">
+        볼륨 언readablesectors를 지웁니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-asyncmirrorgroup.html">
+        async미러그룹을 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-cgsnapimage-consistencygroup.html">
+        cgsnapimage 일관성 그룹을 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-cgsnapvolume.html">
+        cgsnapvolume을 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-consistencygroup.html">
+        일관성 그룹을 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-diskpool.html">
+        디스크 풀을 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-host.html">
+        호스트를 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-hostgroup.html">
+        호스트 그룹을 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-hostport.html">
+        호스트 포트를 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-initiator.html">
+        이니시에이터를 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-iscsiinitiator.html">
+        iscsiInitiator를 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-mapping-cgsnapvolume.html">
+        매핑 cgsnapvolume을 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-mapping-volume.html">
+        매핑 볼륨을 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-raid-volume-automatic-drive-select.html">
+        RAID 볼륨 자동 드라이브 선택 생성
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-raid-volume-free-extent-based-select.html">
+        RAID 볼륨 여유 익스텐트 생성 기반 선택
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-raid-volume-manual-drive-select.html">
+        Create RAID volume manual drive select(RAID 볼륨 수동 드라이브 선택 생성
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-read-only-snapshot-volume.html">
+        읽기 전용 스냅샷 볼륨을 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-snapgroup.html">
+        SnapGroup을 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-snapimage.html">
+        SnapImage를 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-snapshot-volume.html">
+        스냅샷 볼륨을 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-snmpcommunity.html">
+        snmpcommunity를 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-snmptrapdestination.html">
+        snmptrapdestination을 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-snmpuser-username.html">
+        snmpuser 사용자 이름을 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-ssdcache.html">
+        ssdcache를 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-storagearray-directoryserver.html">
+        storageArray DirectoryServer 를 만듭니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-storagearray-securitykey.html">
+        스토리지 배열 보안 키를 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-storagearray-syslog.html">
+        storageArray syslog를 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-syncmirror.html">
+        SyncMirror 생성
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-volume-diskpool.html">
+        볼륨 디스크 풀을 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-volumecopy.html">
+        볼륨을 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/create-volumegroup.html">
+        볼륨 그룹을 생성합니다
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> D</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/deactivate-storagearray-feature.html">
+        storageArray 기능을 비활성화합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/deactivate-storagearray.html">
+        storageArray를 비활성화합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-asyncmirrorgroup.html">
+        async미러그룹을 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-auditlog.html">
+        auditlog를 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-certificates.html">
+        인증서를 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-cgsnapimage-consistencygroup.html">
+        cgsnapimage 일관성 그룹을 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-consistencygroup.html">
+        일관성 그룹을 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-controller-cacertificate.html">
+        컨트롤러 인증서 삭제
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-diskpool.html">
+        디스크 풀을 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-emailalert.html">
+        이메일 알림을 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-host.html">
+        호스트를 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-hostgroup.html">
+        호스트 그룹을 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-hostport.html">
+        호스트 포트를 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-initiator.html">
+        이니시에이터를 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-iscsiinitiator.html">
+        iscsiInitiator를 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-sgsnapvolume.html">
+        sgsnapvolume을 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-snapgroup.html">
+        SnapGroup을 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-snapimage.html">
+        SnapImage를 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-snapvolume.html">
+        스냅 볼륨을 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-snmpcommunity.html">
+        snmpcommunity를 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-snmptrapdestination.html">
+        snmptrapdestination을 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-snmpuser-username.html">
+        snmpuser 사용자 이름을 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-ssdcache.html">
+        ssdcache를 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-storagearray-directoryservers.html">
+        storageArray directoryservers를 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-storagearray-keymanagementcertificate.html">
+        storageArray keymanagementcertificate를 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-storagearray-loginbanner.html">
+        storageArray loginbanner를 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-storagearray-syslog.html">
+        storageArray syslog를 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-storagearray-trustedcertificate.html">
+        storageArray trustedcertificate를 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-syslog.html">
+        syslog를 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-volume-from-disk-pool.html">
+        디스크 풀에서 볼륨을 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-volume.html">
+        볼륨을 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/delete-volumegroup.html">
+        볼륨 그룹을 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/diagnose-asyncmirrorgroup.html">
+        async미러그룹을 진단합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/diagnose-controller-iscsihostport.html">
+        컨트롤러 iscsihostport 진단
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/diagnose-controller.html">
+        컨트롤러를 진단합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/diagnose-syncmirror.html">
+        SyncMirror 진단
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/disable-storagearray-externalkeymanagement-file.html">
+        storageArray externalkeymanagement 파일을 비활성화합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/disable-storagearray.html">
+        storageArray를 비활성화합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/download-controller-arraymanagementservercertificate.html">
+        컨트롤러 arraymanagementservercertificate를 다운로드합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/download-controller-cacertificate.html">
+        컨트롤러 인증서 다운로드
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/download-controller-trustedcertificate.html">
+        컨트롤러 신뢰 인증서를 다운로드합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/download-drive-firmware.html">
+        드라이브 펌웨어를 다운로드합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/download-storagearray-drivefirmware-file.html">
+        storageArray 드라이브 펌웨어 파일을 다운로드합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/download-storagearray-firmware.html">
+        storageArray 펌웨어를 다운로드합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/download-storagearray-keymanagementcertificate.html">
+        storageArray keymanagementcertificate를 다운로드합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/download-storagearray-nvsram.html">
+        storageArray nvsram을 다운로드합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/download-tray-configurationsettings.html">
+        용지함 구성 설정을 다운로드합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/download-tray-firmware-file.html">
+        트레이 펌웨어 파일을 다운로드합니다
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> e</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/enable-controller-datatransfer.html">
+        컨트롤러 데이터 전송을 활성화합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/enable-diskpool-security.html">
+        diskpool 보안을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/enable-or-disable-autosupport-individual-arrays.html">
+        AutoSupport 개별 스토리지를 사용하거나 사용하지 않도록 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/enable-storagearray-externalkeymanagement-file.html">
+        storageArray externalkeymanagement 파일을 활성화합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/enable-storagearray-feature-file.html">
+        storageArray 기능 파일을 활성화합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/enable-volumegroup-security.html">
+        볼륨 그룹 보안을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/establish-asyncmirror-volume.html">
+        asyncmirror 볼륨을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/export-storagearray-securitykey.html">
+        스토리지 배열 보안 키를 내보냅니다
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> g</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/getting-started-with-authentication.html">
+        인증 시작하기
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/getting-started-with-external-key-management.html">
+        외부 키 관리 시작
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/getting-started-with-internal-key-management.html">
+        내부 키 관리 시작
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 나는</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/import-storagearray-securitykey-file.html">
+        storageArray securitykey 파일을 가져옵니다
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> L</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/load-storagearray-dbmdatabase.html">
+        storageArray dbmdatabase를 로드합니다
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> R</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/recopy-volumecopy-target.html">
+        볼륨 재복제 타겟
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/recover-disabled-driveports.html">
+        비활성화된 드라이브 포트를 복구합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/recover-sasport-miswire.html">
+        sasport 오선을 복구합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/recover-volume.html">
+        볼륨 복구
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/recreate-storagearray-mirrorrepository.html">
+        스토리지 어레이 미러링 저장소를 다시 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/recreate-storagearray-securitykey.html">
+        storageArray securitykey를 다시 생성합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/reduce-disk-pool-capacity.html">
+        디스크 풀 용량을 줄입니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/remove-array-label.html">
+        스토리지 레이블을 제거합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/remove-asyncmirrorgroup.html">
+        async미러그룹을 제거합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/remove-drives-from-ssd-cache.html">
+        SSD 캐시에서 드라이브를 제거합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/remove-lunmapping.html">
+        lunmapping을 제거합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/remove-member-volume-from-consistency-group.html">
+        정합성 보장 그룹에서 구성원 볼륨을 제거합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/remove-storagearray-directoryserver.html">
+        storageArray DirectoryServer 를 제거합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/remove-syncmirror.html">
+        SyncMirror를 제거합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/remove-volume-asyncmirrorgroup.html">
+        볼륨 async미러그룹을 제거합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/remove-volumecopy-target.html">
+        볼륨 복제 타겟을 제거합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/rename-ssd-cache.html">
+        SSD 캐시 이름을 바꿉니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/repair-data-parity.html">
+        데이터 패리티를 복구합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/repair-volume-parity.html">
+        볼륨 패리티를 복구합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/replace-drive-replacementdrive.html">
+        드라이브 교체 드라이브를 교체합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/reset-controller-arraymanagementsignedcertificate.html">
+        컨트롤러 arraymanagedcertificate를 재설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/reset-controller.html">
+        컨트롤러를 재설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/reset-drive.html">
+        드라이브를 재설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/reset-iscsiipaddress.html">
+        iscsiipaddress를 재설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/reset-storagearray-arvmstats-asyncmirrorgroup.html">
+        storageArray arvmstats async미러그룹을 재설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/reset-storagearray-autosupport-schedule.html">
+        storageArray AutoSupport 스케줄을 재설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/reset-storagearray-diagnosticdata.html">
+        storageArray 진단 데이터를 재설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/reset-storagearray-hostportstatisticsbaseline.html">
+        storageArray hostport통계기준선을 재설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/reset-storagearray-ibstatsbaseline.html">
+        storageArray ibstatsbaseline을 재설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/reset-storagearray-iscsistatsbaseline.html">
+        storageArray isistatsbaseline을 재설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/reset-storagearray-iserstatsbaseline.html">
+        storageArray iserstatssbaseline을 재설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/reset-storagearray-rlsbaseline.html">
+        storageArray rlsbaseline을 재설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/reset-storagearray-sasphybaseline.html">
+        storageArray sasphybaseline을 재설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/reset-storagearray-socbaseline.html">
+        storageArray sockbaseline을 재설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/reset-storagearray-volumedistribution.html">
+        storageArray 볼륨 분포를 재설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/resume-asyncmirrorgroup.html">
+        async미러그룹을 다시 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/resume-cgsnapvolume.html">
+        cgsnapvolume을 다시 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/resume-snapimage-rollback.html">
+        SnapImage 롤백을 다시 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/resume-snapvolume.html">
+        스냅 볼륨을 재개합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/resume-ssdcache.html">
+        ssdcache를 다시 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/resume-syncmirror.html">
+        SyncMirror를 다시 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/revive-drive.html">
+        드라이브를 되살리기
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/revive-snapgroup.html">
+        SnapGroup을 다시 사용합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/revive-snapvolume.html">
+        스냅 볼륨을 다시 봅니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/revive-volumegroup.html">
+        볼륨그룹을 되살리기
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> s.(초</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 저장...</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-alldrives-logfile.html">
+        alldrives 로그 파일을 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-alltrays-logfile.html">
+        모든 트레이 로그 파일을 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-auditlog.html">
+        auditlog를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-controller-arraymanagementcsr.html">
+        컨트롤러 스토리지 관리관리자 저장
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-controller-arraymanagementsignedcertificate.html">
+        컨트롤러 arraymanagedcertificate를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-controller-cacertificate.html">
+        컨트롤러 인증서 저장
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-controller-nvsram-file.html">
+        컨트롤러 nvsram 파일을 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-drivechannel-faultdiagnostics-file.html">
+        드라이브 채널 오류 진단 파일을 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-ioclog.html">
+        ioCLOG를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storage-array-diagnostic-data.html">
+        스토리지 배열 진단 데이터를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-arvmstats-asyncmirrorgroup.html">
+        storageArray arvmstats async미러그룹을 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-autoloadbalancestatistics-file.html">
+        storageArray autooladbalancestatics 파일을 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-autosupport-log.html">
+        storageArray AutoSupport 로그를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-configuration.html">
+        스토리지 배열 구성을 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-controllerhealthimage.html">
+        storageArray controllerhealthimage를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-dbmdatabase.html">
+        storageArray dbmdatabase를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-dbmvalidatorinfo.html">
+        storageArray dbmvalidateinfo를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-firmwareinventory.html">
+        storageArray firmwareinventory를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-hostportstatistics.html">
+        storageArray hostportstatistics를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-ibstats.html">
+        storageArray ibstats를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-iscsistatistics.html">
+        storageArray isistatics를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-iserstatistics.html">
+        storageArray iserstatistics를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-keymanagementcertificate.html">
+        storageArray keymanagementcertificate를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-keymanagementclientcsr.html">
+        storageArray keymanagementclientcsr를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-loginbanner.html">
+        storageArray loginbanner를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-performancestats.html">
+        storageArray performancestats를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-rlscounts.html">
+        storageArray rlscounts를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-sasphycounts.html">
+        storageArray sasphycounts를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-soccounts.html">
+        storageArray soccounts를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-statecapture.html">
+        스토리지 배열 상태 저장
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-supportdata.html">
+        storageArray supportdata를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-trustedcertificate.html">
+        storageArray trustedcertificate를 저장합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/save-storagearray-warningevents.html">
+        storageArray warningevents 를 저장합니다
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 설정...</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-asyncmirrorgroup.html">
+        async미러그룹을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-auditlog.html">
+        auditlog를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html">
+        AutoSupport https 배달 방법 e2800 또는 e5700을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-cgsnapvolume.html">
+        cgsnapvolume을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-consistency-group-attributes.html">
+        정합성 보장 그룹 특성을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-consistencygroup-addcgmembervolume.html">
+        일관성 그룹 addcgcyryvterervolume를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-controller-dnsservers.html">
+        컨트롤러 dnsserver를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-controller-hostport.html">
+        컨트롤러 호스트 포트를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-controller-iscsihostport.html">
+        컨트롤러 iscsihostport를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-controller-ntpservers.html">
+        컨트롤러 ntpserver를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-controller-service-action-allowed-indicator.html">
+        컨트롤러 서비스 작업 허용 표시기를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-controller.html">
+        컨트롤러를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-disk-pool-modify-disk-pool.html">
+        디스크 풀 수정 디스크 풀을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-disk-pool.html">
+        디스크 풀을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-drive-hotspare.html">
+        드라이브 핫스페어를 설정하십시오
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-drive-nativestate.html">
+        드라이브 네이티브한 설정
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-drive-operationalstate.html">
+        드라이브 운영 상태를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-drive-securityid.html">
+        드라이브 보안 ID를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-drive-serviceallowedindicator.html">
+        드라이브 serviceallowedindicator를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-drivechannel.html">
+        드라이브 채널을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html">
+        e-메일 SMTP 전달 방법 e2800 또는 e5700을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-emailalert.html">
+        알림 메시지 설정
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-event-alert.html">
+        이벤트 알림을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-host.html">
+        호스트를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-hostchannel.html">
+        호스트 채널을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-hostgroup.html">
+        호스트 그룹을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-hostport.html">
+        hostport를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-initiator.html">
+        초기자를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-iscsiinitiator.html">
+        iscsiInitiator를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-iscsitarget.html">
+        iscsitarget을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-isertarget.html">
+        isertarget 을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-session-erroraction.html">
+        세션 오류 조치를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-snapgroup-enableschedule.html">
+        SnapGroup을 설정하면 일정 작업이 가능합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-snapgroup-increase-decreaserepositorycapacity.html">
+        SnapGroup을 감소시키십시오
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-snapgroup-mediascanenabled.html">
+        SnapGroup mediascanenabled를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-snapgroup.html">
+        SnapGroup을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-snapvolume-converttoreadwrite.html">
+        스냅 볼륨 변환기 쓰기를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-snapvolume-increase-decreaserepositorycapacity.html">
+        스냅 볼륨 증가 감소량,eposorycapacity를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-snapvolume-mediascanenabled.html">
+        스냅 볼륨 미디어를 사용하도록 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-snapvolume.html">
+        스냅 볼륨을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-snmpcommunity.html">
+        snmpcommunity를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-snmpsystemvariables.html">
+        snmpsystem변수 설정
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-snmptrapdestination-trapreceiverip.html">
+        snmptrapdestination trapreciverip을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-snmpuser-username.html">
+        snmpuser 사용자 이름을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-autoloadbalancingenable.html">
+        storageArray autoladbalancingenable을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-autosupport-schedule.html">
+        storageArray AutoSupport 스케줄을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-autosupportmaintenancewindow.html">
+        storageArray autostsupportmaintenancewindow를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-autosupportondemand.html">
+        storageArray autostsupportondemand를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-autosupportremotediag.html">
+        storageArray autosupportremotediag 를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-cachemirrordataassurancecheckenable.html">
+        storageArray cachemirrordataancecheckenable을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-controllerhealthimageallowoverwrite.html">
+        storageArray controllerhealthimageallowoverwrite 를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-directoryserver-roles.html">
+        storageArray DirectoryServer 역할을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-directoryserver.html">
+        storageArray DirectoryServer 를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-externalkeymanagement.html">
+        storageArray externalkeymanagement를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-hostconnectivityreporting.html">
+        storageArray hostconnectividporting을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-icmppingresponse.html">
+        storageArray icmpingresponse를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-isnsipv4configurationmethod.html">
+        storageArray isnsipv4configurationmethod를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-isnsipv6address.html">
+        storageArray isnsipv6address를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-isnslisteningport.html">
+        storageArray isnsleningport를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-isnsregistration.html">
+        storageArray isnsregistration을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-isnsserverrefresh.html">
+        storageArray isnsserverrefresh를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-learncycledate-controller.html">
+        storageArray learnCycledate 컨트롤러를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-localusername.html">
+        storageArray localusername 을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-loginbanner.html">
+        storageArray loginbanner를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-managementinterface.html">
+        storageArray 관리 인터페이스를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-odxenabled.html">
+        storageArray odxenabled를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-passwordlength.html">
+        storageArray passwordlength를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-pqvalidateonreconstruct.html">
+        storageArray pqvalidateReconstruct 를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-redundancymode.html">
+        storageArray 중복 모드를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-resourceprovisionedvolumes.html">
+        storageArray resourceionedvolumes를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-revocationchecksettings.html">
+        storageArray revocationchecksettings 를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-securitykey.html">
+        storageArray securitykey를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-syslog.html">
+        storageArray syslog를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-time.html">
+        storageArray 시간을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-traypositions.html">
+        storageArray 트레이 위치를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-unnameddiscoverysession.html">
+        storageArray unnameddiscoveryession 을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-usersession.html">
+        storageArray usersession을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray-vaaienabled.html">
+        storageArray vaaaaaaienabled를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-storagearray.html">
+        storageArray를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-syncmirror.html">
+        SyncMirror를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-syslog.html">
+        syslog를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-target.html">
+        대상을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-thin-volume-attributes.html">
+        씬 볼륨 특성을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-tray-attribute.html">
+        용지함 속성을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-tray-drawer.html">
+        용지함 서랍을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-tray-identification.html">
+        용지함 ID를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-tray-serviceallowedindicator.html">
+        트레이 serviceallowedindicator를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-volume-group-attributes-for-volume-in-a-volume-group.html">
+        볼륨 그룹의 볼륨에 대한 볼륨 그룹 특성을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-volume-logicalunitnumber.html">
+        volume logicalunitnumber를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-volume-ssdcacheenabled.html">
+        볼륨 ssdcacheenabled를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-volumecopy-target.html">
+        볼륨 복제 타겟을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-volumegroup-forcedstate.html">
+        볼륨 그룹 forceedstate를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-volumegroup.html">
+        볼륨 그룹을 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/set-volumes.html">
+        볼륨을 설정합니다
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 표시...</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-alldrives-downloadprogress.html">
+        모든 드라이브 다운로더 진행률을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-alldrives-performancestats.html">
+        모든 드라이브 성능을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-alldrives.html">
+        모든 드라이브를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-allhostports.html">
+        모든 호스트 포트를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-allsnmpcommunities.html">
+        allsnmp커뮤니티를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-allsnmpusers.html">
+        allsnmpusers를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-array-label.html">
+        배열 레이블을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-asyncmirrorgroup-summary.html">
+        async미러그룹 요약을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-asyncmirrorgroup-synchronizationprogress.html">
+        async미러그룹 동기화 진행률 표시
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-auditlog-configuration.html">
+        auditlog 구성을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-auditlog-summary.html">
+        auditlog 요약을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-blockedeventalertlist.html">
+        blockkedeventalertlist를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-certificates.html">
+        인증서 표시
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-cgsnapimage.html">
+        cgsnapimage를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-consistencygroup.html">
+        일관성 그룹을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-controller-arraymanagementsignedcertificate-summary.html">
+        show controller arraymanagedignedcertificate summary
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-controller-cacertificate.html">
+        show controller cacertificate(컨트롤러 인증서 표시)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-controller-diagnostic-status.html">
+        컨트롤러 진단 상태를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-controller-nvsram.html">
+        컨트롤러 nvsram을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-controller.html">
+        컨트롤러를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-diskpool.html">
+        diskpool을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-drivechannel-stats.html">
+        드라이브 채널 통계를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-emailalert-summary.html">
+        알림 요약을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-iscsisessions.html">
+        iscsisisions를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-replaceabledrives.html">
+        교체 가능한 드라이브를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-snapgroup.html">
+        SnapGroup을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-snapimage.html">
+        SnapImage를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-snapvolume.html">
+        스냅 볼륨을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-snmpsystemvariables.html">
+        snmpsystem변수 표시
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-ssd-cache-statistics.html">
+        SSD 캐시 통계를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-ssd-cache.html">
+        SSD 캐시를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-storagearray-autoconfiguration.html">
+        storageArray 자동 구성을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-storagearray-autosupport.html">
+        storageArray AutoSupport를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-storagearray-cachemirrordataassurancecheckenable.html">
+        storageArray cachemirrordataancecheckenable을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-storagearray-controllerhealthimage.html">
+        storageArray controllerhealthimage를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-storagearray-dbmdatabase.html">
+        show storageArray dbmdatabase(스토리지 배열 dbmdatabase)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-storagearray-directoryservices-summary.html">
+        storageArray directoryservices 요약을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-storagearray-hostconnectivityreporting.html">
+        storageArray hostconnectividporting을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-storagearray-hosttopology.html">
+        storageArray hosttopology를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-storagearray-iscsinegotiationdefaults.html">
+        show storageArray iscsinegotiate ationdefaults.(storageArray isin
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-storagearray-lunmappings.html">
+        storageArray lunmappings를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-storagearray-odxsetting.html">
+        storageArray odxsetting을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-storagearray-powerinfo.html">
+        storageArray powerinfo를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-storagearray-revocationchecksettings.html">
+        storageArray revocationchecksettings를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-storagearray-syslog.html">
+        storageArray syslog를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-storagearray-trustedcertificate-summary.html">
+        storageArray trustedcertificate 요약을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-storagearray-unconfiguredinitiators.html">
+        show storageArray unconfiguredinitiators 를 선택합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-storagearray-unconfigurediscsiinitiators.html">
+        show storageArray unconfigurediscinitiators(storageArray 구성 해제)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-storagearray-unreadablesectors.html">
+        storageArray Unreadablesectors를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-storagearray-usersession.html">
+        show storageArray usersession(스토리지 배열 사용자 세션 표시
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-storagearray.html">
+        show storageArray(스토리지 배열 표시
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-syncmirror-candidates.html">
+        SyncMirror 후보 표시
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-syncmirror-synchronizationprogress.html">
+        SyncMirror 동기화 진행률을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-syslog-summary.html">
+        syslog 요약을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-textstring.html">
+        텍스트 문자열을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-volume-actionprogress.html">
+        볼륨 작업 진행률을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-volume-performancestats.html">
+        볼륨 성능을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-volume-reservations.html">
+        볼륨 예약을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-volume-summary.html">
+        볼륨 요약을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-volume.html">
+        볼륨 표시
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-volumecopy-source-targetcandidates.html">
+        볼륨 복제 소스 target후보 표시
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-volumecopy-sourcecandidates.html">
+        볼륨 복사 아웃소싱 날짜를 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-volumecopy.html">
+        볼륨 복사본을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-volumegroup-exportdependencies.html">
+        볼륨 그룹 내보내기 종속성을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-volumegroup-importdependencies.html">
+        볼륨 그룹 가져오기 종속성을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/show-volumegroup.html">
+        볼륨 그룹을 표시합니다
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SMcli...</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/smcli-alerttest.html">
+        SMcli alerttest입니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/smcli-autosupportconfig-show.html">
+        SMcli autosupportconfig show 를 참조하십시오
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/smcli-autosupportconfig-test.html">
+        SMcli autosupportconfig 테스트
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/smcli-autosupportconfig.html">
+        SMcli 자동 지원 구성
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/smcli-autosupportlog.html">
+        SMcli autosupportlog입니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/smcli-autosupportschedule-reset.html">
+        SMcli autostupschedule reset
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/smcli-autosupportschedule-show.html">
+        SMcli autostupschedule 이 표시됩니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/smcli-enable-autosupportfeature.html">
+        SMcli가 자동 지원 기능을 활성화합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/smcli-enable-disable-autosupportondemand.html">
+        SMcli enable autostupportondemand를 활성화합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/smcli-enable-disable-autosupportremotediag.html">
+        SMcli enable autostupremotediag를 비활성화합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/smcli-supportbundle-schedule.html">
+        SMcli supportbundle 스케줄입니다
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 시작...</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-asyncmirrorgroup-synchronize.html">
+        async미러그룹 동기화를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-cgsnapimage-rollback.html">
+        cgsnapimage 롤백을 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-controller-iscsihostport-dhcprefresh.html">
+        컨트롤러 iscsihostport dhcprefresh를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-controller.html">
+        컨트롤러를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-diskpool-fullprovisioning.html">
+        diskpool fullprovisioning을 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-diskpool-locate.html">
+        diskpool 위치 찾기를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-diskpool-resourceprovisioning.html">
+        diskpool 리소스 프로비저닝을 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-drive-erase.html">
+        드라이브 지우기를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-drive-initialize.html">
+        드라이브 초기화를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-drive-locate.html">
+        드라이브 찾기를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-drive-reconstruct.html">
+        드라이브 재구성을 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-drivechannel-faultdiagnostics.html">
+        드라이브 채널 결함 진단을 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-drivechannel-locate.html">
+        드라이브 채널 위치를 찾습니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-emailalert-test.html">
+        알림 테스트를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-increasevolumecapacity-volume.html">
+        볼륨 높이기 시작
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-ioclog.html">
+        ioCLOG를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-secureerase-drive.html">
+        secureerase 드라이브를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-snapimage-rollback.html">
+        SnapImage 롤백을 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-snmptrapdestination.html">
+        snmptrapdestination을 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-ssdcache-locate.html">
+        ssdcache 찾기 시작
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-ssdcache-performancemodeling.html">
+        ssdcache performancemodeling을 시작합니다
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-storagearray-autosupport-deliverytest.html">
+        storageArray AutoSupport deliverytest를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-storagearray-autosupport-manualdispatch.html">
+        storageArray AutoSupport 수동 디스패치를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-storagearray-configdbdiagnostic.html">
+        storageArray configdbdiagnostic을 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-storagearray-controllerhealthimage-controller.html">
+        storageArray controllerhealthimage 컨트롤러를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-storagearray-directoryservices-test.html">
+        storageArray directoryservices 테스트를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-storagearray-externalkeymanagement-test.html">
+        storageArray externalkeymanagement test를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-storagearray-isnsserverrefresh.html">
+        storageArray isnsserverrefresh를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-storagearray-locate.html">
+        storageArray Locate를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-storagearray-ocspresponderurl-test.html">
+        storageArray ocspresponderurl 테스트를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-storagearray-syslog-test.html">
+        storageArray syslog 테스트를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-syncmirror-primary-synchronize.html">
+        SyncMirror 기본 동기화를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-syslog-test.html">
+        syslog 테스트를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-tray-locate.html">
+        용지함 위치 찾기를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-volume-initialization.html">
+        볼륨 초기화를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-volume-initialize.html">
+        볼륨 초기화를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-volumegroup-defragment.html">
+        볼륨 그룹 조각 모음을 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-volumegroup-export.html">
+        볼륨 그룹 내보내기를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-volumegroup-fullprovisioning.html">
+        볼륨 그룹 전체 프로비저닝을 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-volumegroup-import.html">
+        볼륨 그룹 가져오기를 시작합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-volumegroup-locate.html">
+        볼륨 그룹 찾기 시작
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/start-volumegroup-resourceprovisioning.html">
+        볼륨 그룹 리소스 프로비저닝을 시작합니다
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 중지...</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/stop-asyncmirrorgroup-rolechange.html">
+        async미러그룹 등록자 변경을 중지합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/stop-cgsnapimage-rollback.html">
+        cgsnapimage 롤백을 중지합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/stop-cgsnapvolume.html">
+        cgsnapvolume을 중지합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/stop-consistencygroup-pendingsnapimagecreation.html">
+        일관성 그룹 펜딩snapimagecreation을 중지합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/stop-diskpool-locate.html">
+        diskpool 위치를 중지합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/stop-drive-locate.html">
+        드라이브 찾기를 중지합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/stop-drive-replace.html">
+        드라이브 교체를 중지합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/stop-drivechannel-faultdiagnostics.html">
+        드라이브 채널 결함 진단을 중지합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/stop-drivechannel-locate.html">
+        드라이브 채널 위치를 중지합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/stop-pendingsnapimagecreation.html">
+        pendingsnapimagecreation을 중지합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/stop-snapimage-rollback.html">
+        SnapImage 롤백을 중지합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/stop-snapvolume.html">
+        스냅 볼륨을 중지합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/stop-ssdcache-locate.html">
+        ssdcache 찾기 중지
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/stop-ssdcache-performancemodeling.html">
+        ssdcache performancemodeling을 중지합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/stop-storagearray-configdbdiagnostic.html">
+        storageArray configdbdiagnostic을 중지합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/stop-storagearray-drivefirmwaredownload.html">
+        storageArray 드라이브 펌웨어 다운로드를 중지합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/stop-storagearray-iscsisession.html">
+        storageArray iscsisession을 중지합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/stop-storagearray-locate.html">
+        storageArray 찾기 중지
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/stop-tray-locate.html">
+        트레이 위치를 중지합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/stop-volumecopy-target-source.html">
+        볼륨 복제 타겟 소스를 중지합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/stop-volumegroup-locate.html">
+        볼륨 그룹 위치를 중지합니다
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 일시 중단...</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/suspend-asyncmirrorgroup.html">
+        async미러그룹을 일시 중단합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/suspend-ssdcache.html">
+        ssdcache를 일시 중단합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/suspend-syncmirror-primaries.html">
+        SyncMirror 운영 중단
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> V</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/commands-a-z/validate-storagearray-securitykey.html">
+        스토리지 배열 보안 키의 유효성을 검사합니다
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/e-series-cli/legal-notices.html">
+        법적 고지
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
+        </li>
+        
+
+        
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com/ko-kr/e-series-family/">E-Series</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/ko-kr/e-series-cli/">SANtricity&nbsp;commands</a>
+        </li>
+
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/ko-kr/e-series-cli/common/svg/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> 본 한국어 번역은 사용자 편의를 위해 제공되는 기계 번역입니다. 영어 버전과 한국어 버전이 서로 어긋나는 경우에는 언제나 영어 버전이 우선합니다. </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">AutoSupport 전송 설정을 테스트합니다</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2022-05-24 03:11:02 +0000">05/24/2022</time>
+    
+  
+
+
+</p>
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>'tart storageArray AutoSupport deliveryTest' 명령은 지정된 제공 매개 변수를 사용하여 대상 기술 지원 시스템에 대한 연결을 테스트할 수 있도록 샘플 AutoSupport 번들 수집 메시지를 보냅니다.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="지원되는-어레이">지원되는 어레이</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="역할">역할</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="구문">구문</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre>start storageArray autoSupport deliveryTest [replyToEmail="<em>address</em>"]</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="매개-변수">매개 변수</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">매개 변수</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>"재ToEmail"을 선택합니다</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>사용자가 AutoSupport 테스트 메시지의 회신 이메일 주소를 지정할 수 있습니다. 전달 방법이 이메일로 설정된 경우에만 사용/필요합니다.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="예">예</h3>
+<div class="listingblock">
+<div class="content">
+<pre>SMcli -n Array1 -c "start storageArray autoSupport deliveryTest;"
+
+SMcli -n Array1 -c "start storageArray autoSupport deliveryTest replyToEmail=\"user@company.com\";"
+
+The sample AutoSupport message was successfully sent to the ASUP gateway server.
+
+SMcli completed successfully.</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="최소-펌웨어-레벨입니다">최소 펌웨어 레벨입니다</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>8.40</p>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">이용 약관</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">개인 정보 보호 정책</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">쿠키 정책</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">쿠키 설정</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <span class="n-footer__fine-print">웹 사이트에 대한 피드백이 있으십니까?</span>
+              <a target="_self" href="javascript:netapp_mailto()">의견을 공유해 주십시오</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://docs.netapp.com/ko-kr/announcements/">공지 사항</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ko-kr/e-series-cli/common/svg/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ko-kr/e-series-cli/common/svg/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ko-kr/e-series-cli/common/svg/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ko-kr/e-series-cli/common/svg/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ko-kr/e-series-cli/common/svg/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ko-kr/e-series-cli/common/svg/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ko-kr/e-series-cli/common/svg/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/ko-kr/e-series-cli/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/ko-kr/e-series-cli/js/prism.js'></script>
+      <script type="text/javascript" src='/ko-kr/e-series-cli/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/ko-kr/e-series-cli/js/www-ntap.js'></script>
+    <script src='/ko-kr/e-series-cli/js/tabbed-blocks.js'></script>
+  </body></html>
