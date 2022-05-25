@@ -202,7 +202,7 @@ link:../commands-a-z/start-volumegroup-export.html["볼륨 그룹 내보내기�
 
 link:../commands-a-z/start-volumegroup-fullprovisioning.html["볼륨 그룹 전체 프로비저닝을 시작합니다"]
 
-link:learn-about-volume-group-migration.html["볼륨 그룹 마이그레이션에 대한 자세한 정보(CLI만 해당)"]
+link:../get-started/learn-about-volume-group-migration.html["볼륨 그룹 마이그레이션에 대한 자세한 정보(CLI만 해당)"]
 
 link:../commands-a-z/start-volumegroup-import.html["볼륨 그룹 가져오기를 시작합니다"]
 
