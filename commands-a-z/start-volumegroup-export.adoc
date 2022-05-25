@@ -33,7 +33,7 @@ E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실�
 
 [CAUTION]
 ====
-에 나열된 단계를 먼저 수행하지 않으면 이 단계를 수행하지 마십시오 xref:../commands-category/learn-about-volume-group-migration.adoc[볼륨 그룹 마이그레이션에 대해 알아보십시오.]
+에 나열된 단계를 먼저 수행하지 않으면 이 단계를 수행하지 마십시오 xref:../get-started/learn-about-volume-group-migration.html[볼륨 그룹 마이그레이션에 대해 알아보십시오.]
 
 ====
 [NOTE]

@@ -3642,7 +3642,6 @@
   <block id="8e61c506c79e13d071037f231e80c38c" category="paragraph">Start volumeGroup export 명령은 볼륨 그룹을 Exported 상태로 이동합니다.</block>
   <block id="f8e1a2f2bb89d0e20261b9118cc2babb" category="paragraph">그런 다음 볼륨 그룹을 구성하는 드라이브를 제거하고 다른 스토리지 배열에 드라이브를 재설치할 수 있습니다.</block>
   <block id="2ac0da7167150cceb962c2e130608bdb" category="inline-xref-macro">볼륨 그룹 마이그레이션에 대해 알아보십시오.</block>
-  <block id="0146caa36736a1cce0c481ebc7b5851b" category="paragraph">에 나열된 단계를 먼저 수행하지 않으면 이 단계를 수행하지 마십시오 <block ref="2e35a658a01f1c02ff017d67706a89f8" category="inline-xref-macro-rx"></block></block>
   <block id="e1704c8c0969c15a2f512b9f0dc8f7d9" category="paragraph">볼륨 그룹 내에서는 기능과 연결된 볼륨을 한 스토리지 어레이에서 다른 스토리지 어레이로 이동할 수 없습니다.</block>
   <block id="10b695519051adb6cbf9a8849bbf4456" category="paragraph">내보낼 볼륨 그룹의 이름입니다. 볼륨 그룹 이름은 대괄호([])로 묶어야 합니다.</block>
   <block id="068f0ca48bb4cd301b90287f7031ed63" category="paragraph">이 명령이 성공하면 'Start volumeGroup import' 명령을 실행하여 볼륨 그룹을 전체 상태로 이동을 완료하면 볼륨 그룹이 새 스토리지 어레이에 사용할 수 있게 됩니다.</block>
@@ -7437,4 +7436,5 @@
   <block id="2d30e328ae4f6dcf3d38d3968d0319a6" category="sidebar">SyncMirror 운영 중단</block>
   <block id="16c09c2705a79763c9682b2f80400d1a" category="sidebar">스토리지 배열 보안 키의 유효성을 검사합니다</block>
   <block id="6039cb24203c113782f6f93ef729fb48" category="sidebar">범주별 명령</block>
+  <block id="5857ef178f3851723d1a670392ade42a" category="paragraph">에 나열된 단계를 먼저 수행하지 않으면 이 단계를 수행하지 마십시오 <block ref="a894c729763686e5823ef858a3aa8302" category="inline-xref-macro-rx"></block></block>
 </blocks>
