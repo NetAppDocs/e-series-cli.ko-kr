@@ -36,12 +36,14 @@ userLabel="_volumeName"_]
 [freeCapacityArea=pass:quotes[_freeCapacityIndexNumber_]]
 [capacity=pass:quotes[_volumeCapacity_]]
 [owner=(a|b)]
+[mapping=(none | default)]
 [cacheReadPrefetch=(TRUE | FALSE)]
 [segmentSize=pass:quotes[_segmentSizeValue_]]
 [usageHint=(fileSystem | dataBase | multiMedia)]
 [dssPreAllocate=(TRUE | FALSE)]
 [securityType=(none | capable | enabled)]
 [dataAssurance=(none | enabled)]
+[blockSize=blockSizeValue]
 ----
 
 
@@ -142,6 +144,20 @@ cacheReadPrefetch 매개변수와 'egmentSize' 매개 변수의 설정이 기본
 
 "활성화됨" -- 볼륨 그룹과 볼륨에 보안이 설정되어 있습니다.
 
+
+
+ a| 
+박수
+ a| 
+이 매개 변수를 사용하여 볼륨을 호스트에 매핑할 수 있습니다. 나중에 매핑하려면 이 매개 변수를 로 설정합니다 `none`. 지금 매핑하려면 이 매개 변수를 로 설정합니다 `default`. 볼륨은 스토리지 풀에 대한 액세스 권한이 있는 모든 호스트에 매핑됩니다. 기본값은 입니다 `none`.
+
+
+
+ a| 
+블록사이즈
+ a| 
+이 매개 변수는 생성할 볼륨의 블록 크기를 설정합니다. 0 또는 설정되지 않은 매개 변수는 기본 블록 크기를 사용합니다.
+
 |===
 
 
@@ -233,3 +249,5 @@ cacheReadPrefetch 매개변수와 'egmentSize' 매개 변수의 설정이 기본
 7.50은 'ecurityType' 파라미터를 추가한다.
 
 7.75는 '다카Assurance' 파라미터를 추가합니다.
+
+11.70이 를 추가합니다 `blockSize` 매개 변수.

@@ -2,8 +2,6 @@
 section: get-started
 title: 시작하십시오
 entries:
-- title: 새로운 소식
-  url: "/get-started/changes-in-the-cli-and-script-commands-in-this-release.html"
 - title: 명령 포맷
   entries:
   - title: 개요
@@ -16,7 +14,9 @@ entries:
       url: "/get-started/interactive-mode.html"
     - title: CLI 래퍼 구문
       url: "/get-started/cli-command-wrapper-syntax.html"
-    - title: CLI 매개 변수
+    - title: SMcli 매개변수를 다운로드합니다
+      url: "/get-started/downloadable-smcli-parameters.html"
+    - title: 레거시 CLI 매개 변수
       url: "/get-started/command-line-parameters.html"
   - title: 스크립트 명령 구조
     entries:

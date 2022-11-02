@@ -62,7 +62,7 @@ DHCP 매개변수를 새로 고칠 호스트 포트 레이블 또는 iSCSI 호�
 
 자세한 내용은 다음을 참조하십시오.
 
-<<Identifying an iSCSI host port label,"iSCSI 호스트 포트 레이블 식별">>
+ an iSCSI host port label,"iSCSI 호스트 포트 레이블 식별"
 
 |===
 

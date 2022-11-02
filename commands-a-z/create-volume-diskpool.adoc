@@ -49,17 +49,7 @@ capacity=_volumeCapacity_]
 [dataAssurance=(none|enabled)]
 [cacheReadPrefetch=(TRUE | FALSE)]
 [raidLevel=(1 | 6)]
-----
-[listing, subs="+macros"]
-----
-create volume diskPool=pass:quotes[_"diskPoolName"_
-userLabel="_volumeName_"
-capacity=_volumeCapacity_]
-[thinProvisioned=(TRUE | FALSE)]
-[owner=(a|b)]
-[mapping=(none|default)]
-[cacheReadPrefetch=(TRUE | FALSE)]
-[raidLevel=(1 | 6)]
+[blockSize=requestedBlockSizeValue]
 ----
 
 
@@ -139,6 +129,9 @@ capacity=_volumeCapacity_]
 '얇은 프로비저닝'
  a| 
 이 매개 변수는 새 볼륨에 대한 씬 프로비저닝을 설정합니다. 씬 프로비저닝을 사용하려면 이 매개 변수를 "true"로 설정합니다. 씬 프로비저닝을 원하지 않는 경우 이 매개 변수를 "false"로 설정합니다.
+
+
+NOTE: RAID1 레벨 볼륨에서는 씬 프로비저닝을 사용할 수 없습니다.
 
 
 
@@ -223,6 +216,13 @@ capacity=_volumeCapacity_]
  a| 
 디스크 풀에서 생성되는 볼륨의 RAID 레벨을 설정합니다. RAID1을 지정하려면 1로 설정합니다. RAID6를 지정하려면 6으로 설정합니다. RAID 레벨이 설정되지 않은 경우 기본적으로 디스크 풀에 RAID6가 사용됩니다.
 
+
+
+ a| 
+블록사이즈
+ a| 
+이 매개 변수는 생성할 볼륨의 블록 크기를 설정합니다. 의 값 `0` 또는 설정되지 않은 매개 변수는 기본 블록 크기를 사용합니다.
+
 |===
 
 
@@ -257,4 +257,4 @@ DA 기능을 사용하려면 DA를 지원하는 드라이브만 포함된 풀 �
 
 7.83
 
-8.70은 '_raidLevel_' 매개변수를 추가합니다.
+8.70이 를 추가합니다 `_raidLevel_` 및 `_blockSize` 매개 변수.

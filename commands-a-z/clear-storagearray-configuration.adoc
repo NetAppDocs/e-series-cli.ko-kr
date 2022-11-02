@@ -62,7 +62,7 @@ clear storageArray configuration factoryReset
 
 
  a| 
-없음
+* 없음 *
  a| 
 매개 변수를 입력하지 않으면 이 명령은 보안 및 식별과 관련된 정보를 제외하고 스토리지 배열에 대한 모든 구성 정보를 제거합니다.
 

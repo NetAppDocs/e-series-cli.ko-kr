@@ -341,8 +341,6 @@ longRunningOperations 매개 변수는 다음 형식으로 정보를 반환합�
 LOGICAL DEVICES  OPERATION         STATUS        TIME REMAINING
 Volume-2         Volume Disk Copy  10% COMPLETED  5 min
 ----
-맞습니다.
-
 longRunningOperations 매개변수가 반환하는 정보 필드는 다음과 같은 의미를 갖습니다.
 
 * 이름(name)은 현재 오래 실행 중인 볼륨의 이름입니다. 볼륨 이름에 "Volume"이 접두사로 있어야 합니다.

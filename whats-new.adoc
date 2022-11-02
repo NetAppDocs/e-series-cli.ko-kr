@@ -1,0 +1,519 @@
+---
+permalink: whats-new.html 
+sidebar: sidebar 
+keywords: 'what"s new' 
+summary: 이 항목에서는 CLI 명령 및 스크립트 명령의 최신 SANtricity System Manager 릴리스에 있는 변경 사항을 나열합니다. 
+---
+= 새로운 기능
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+이 항목에서는 CLI 명령 및 스크립트 명령의 최신 SANtricity System Manager 릴리스에 있는 변경 사항을 나열합니다.
+
+[NOTE]
+====
+명령 프롬프트에서 SMcli 명령을 실행할 때 추가 백슬래시를 입력해야 합니다 (`\`) Windows OS를 사용할 때 입력 또는 출력 파일의 파일 경로 이름에 이스케이프 문자로 사용됩니다. 추가 백슬래시 (`\`)는 역할 기반 액세스 관리 사용자를 지정하는 -u 옵션을 제공하여 SMcli를 보안 https 모드에서 사용할 때 포함되어야 합니다. 예: `C:\\dir\\subdir\\filename`
+
+====
+[NOTE]
+====
+현재 SANtricity 11.52 이하를 사용 중인 경우 레거시 CLI를 통해 SANtricity의 최신 버전으로 업그레이드할 수 없습니다. SANtricity 11.52에서 이후 버전으로 업그레이드하는 작업은 SMcli를 통해서만 수행할 수 있습니다.
+
+====
+
+
+== SANtricity 11.70.4
+
+다음 표에는 릴리즈 11.70.4의 CLI 및 Script 명령이 변경되었습니다.
+
+[cols="2*"]
+|===
+| 명령 | 변경에 대한 설명 
+
+
+ a| 
+xref:./get-started/downloadable-smcli-parameters.adoc[SMcli 명령줄 매개변수를 다운로드합니다]
+ a| 
+추가되었습니다 `-t` 및 `-T` 다단계 인증을 위한 액세스 토큰 매개 변수 설명
+
+|===
+
+
+== SANtricity 11.70.3
+
+다음 표에는 릴리스 11.70.3에 대한 CLI 및 스크립트 명령의 변경 사항이 나와 있습니다.
+
+[cols="2*"]
+|===
+| 명령 | 변경에 대한 설명 
+
+
+ a| 
+xref:./commands-a-z/start-diskpool-resourceprovisioning.adoc[디스크 풀 리소스 프로비저닝을 시작합니다]
+ a| 
+명령이 추가되었습니다
+
+
+
+ a| 
+xref:./commands-a-z/start-volumegroup-resourceprovisioning.adoc[볼륨 그룹 리소스 프로비저닝을 시작합니다]
+ a| 
+명령이 추가되었습니다
+
+
+
+ a| 
+xref:./commands-a-z/start-diskpool-fullprovisioning.adoc[디스크 풀 전체 프로비저닝을 시작합니다]
+ a| 
+업데이트된 dissableResourceProvisioning 매개 변수 설명입니다.
+
+
+
+ a| 
+xref:./commands-a-z/start-volumegroup-fullprovisioning.adoc[볼륨 그룹 전체 프로비저닝을 시작합니다]
+ a| 
+업데이트된 dissableResourceProvisioning 매개 변수 설명입니다.
+
+
+
+ a| 
+xref:./commands-a-z/recreate-storagearray-securitykey.html[외부 보안 키를 다시 만듭니다]
+ a| 
+'deleteOldKey' 매개 변수가 추가되었습니다.
+
+
+
+ a| 
+xref:./commands-a-z/create-diskpool.html[디스크 풀을 생성합니다]
+ a| 
+'diveCount' 매개 변수 설명이 업데이트되었습니다.
+
+|===
+
+
+== SANtricity 11.70.2
+
+다음 표에는 릴리스 11.70.2에 대한 CLI 및 스크립트 명령이 변경되었습니다.
+
+[cols="2*"]
+|===
+| 명령 | 변경에 대한 설명 
+
+
+ a| 
+xref:./commands-a-z/create-snmpuser-username.adoc[SNMPv3 USM 사용자를 등록합니다]
+ a| 
+명령이 추가되었습니다
+
+
+
+ a| 
+xref:./commands-a-z/set-snmpuser-username.adoc[SNMPv3 USM 사용자를 업데이트합니다]
+ a| 
+명령이 추가되었습니다
+
+
+
+ a| 
+xref:./commands-a-z/show-allsnmpusers.adoc[SNMPv3 USM 사용자를 표시합니다]
+ a| 
+명령이 추가되었습니다
+
+
+
+ a| 
+xref:./commands-a-z/delete-snmpuser-username.adoc[SNMPv3 USM 사용자를 등록 취소합니다]
+ a| 
+명령이 추가되었습니다
+
+
+
+ a| 
+xref:./commands-a-z/create-snmptrapdestination.adoc[SNMP 트랩 대상을 등록합니다]
+ a| 
+사용자 이름 및 엔진 매개 변수가 추가되었습니다.
+
+
+
+ a| 
+xref:./commands-a-z/set-snmptrapdestination-trapreceiverip.adoc[SNMP 트랩 대상을 업데이트합니다]
+ a| 
+사용자 이름 및 엔진 매개 변수가 추가되었습니다.
+
+
+
+ a| 
+xref:./commands-a-z/start-snmptrapdestination.adoc[SNMP 트랩 대상을 테스트합니다]
+ a| 
+사용자 이름 및 엔진 매개 변수가 추가되었습니다.
+
+|===
+
+
+== SANtricity 11.70.1
+
+다음 표에는 릴리스 11.70.1의 CLI 및 스크립트 명령에 대한 변경 사항이 나와 있습니다.
+
+[cols="2*"]
+|===
+| 명령 | 변경에 대한 설명 
+
+
+ a| 
+xref:./commands-a-z/start-drive-erase.adoc[드라이브 지우기를 시작합니다]
+ a| 
+명령이 추가되었습니다
+
+
+
+ a| 
+xref:./commands-a-z/import-storagearray-securitykey-file.adoc[스토리지 배열 보안 키를 가져옵니다]
+ a| 
+forceOverwrite 파라미터 추가
+
+
+
+ a| 
+xref:./commands-a-z/set-controller-hostport.adoc[컨트롤러 호스트 포트 속성을 설정합니다]
+ a| 
+대변 모드 매개 변수가 추가되었습니다.
+
+
+
+ a| 
+xref:./commands-a-z/show-syslog-summary.adoc[syslog 구성을 표시합니다]
+ a| 
+'syslogFormat' 파라미터 추가
+
+
+
+ a| 
+xref:./commands-a-z/set-syslog.adoc[syslog 설정을 구성합니다]
+ a| 
+'syslogFormat' 파라미터 추가
+
+
+
+ a| 
+xref:./commands-a-z/set-emailalert.adoc[e-메일 알림 설정을 구성합니다]
+ a| 
+'erverEncryption', 'erverPort', 'erverUsername', 'serverPassword' 파라미터가 추가되었습니다.
+
+
+
+ a| 
+xref:./commands-a-z/show-emailalert-summary.adoc[e-메일 알림 구성을 표시합니다]
+ a| 
+'MTP' 암호화, 포트, 인증정보 파라미터 데이터 추가
+
+
+
+ a| 
+xref:./commands-a-z/recover-volume.adoc[RAID 볼륨을 복구합니다]
+ a| 
+blocksize 매개 변수가 추가되었습니다.
+
+|===
+
+
+== SANtricity 11.70
+
+다음 표에는 릴리스 11.70의 CLI 및 스크립트 명령에 대한 변경 사항이 나와 있습니다.
+
+[cols="2*"]
+|===
+| 명령 | 변경에 대한 설명 
+
+
+ a| 
+xref:./commands-a-z/download-storagearray-firmware.adoc[스토리지 어레이 펌웨어/NVSRAM을 다운로드합니다]
+ a| 
+healthCheckNeedsAttnOverride 매개 변수가 추가되었습니다.
+
+
+
+ a| 
+xref:./commands-a-z/create-volume-diskpool.adoc[디스크 풀에서 볼륨을 생성합니다]
+ a| 
+raidLevel 파라미터가 추가되었습니다.
+
+
+
+ a| 
+xref:./commands-a-z/enable-storagearray-externalkeymanagement-file.adoc[외부 보안 키 관리를 활성화합니다]
+ a| 
+'aveFile' 파라미터 추가
+
+
+
+ a| 
+xref:./commands-a-z/disable-storagearray-externalkeymanagement-file.adoc[외부 보안 키 관리를 비활성화합니다]
+ a| 
+'aveFile' 파라미터 추가
+
+
+
+ a| 
+xref:./commands-a-z/recover-volume.adoc[RAID 볼륨을 복구합니다]
+ a| 
+hostUnmapEnabled 매개변수가 추가되었습니다.
+
+|===
+
+
+== SANtricity 11.63 을 참조하십시오
+
+다음 표에는 릴리스 11.63의 CLI 및 스크립트 명령에 대한 변경 사항이 나와 있습니다.
+
+[cols="2*"]
+|===
+| 명령 | 변경에 대한 설명 
+
+
+ a| 
+xref:./commands-a-z/start-storagearray-autosupport-manualdispatch.adoc[스토리지 배열 AutoSupport 수동 디스패치를 시작합니다]
+ a| 
+명령이 추가되었습니다
+
+
+
+ a| 
+xref:./commands-a-z/start-volumegroup-fullprovisioning.adoc[볼륨 그룹 전체 프로비저닝을 시작합니다]
+ a| 
+명령이 추가되었습니다
+
+
+
+ a| 
+xref:./commands-a-z/start-diskpool-fullprovisioning.adoc[디스크 풀 전체 프로비저닝을 시작합니다]
+ a| 
+명령이 추가되었습니다
+
+
+
+ a| 
+xref:./commands-a-z/repair-data-parity.adoc[데이터 패리티 복구]
+ a| 
+명령이 추가되었습니다
+
+
+
+ a| 
+xref:./commands-a-z/set-storagearray-resourceprovisionedvolumes.adoc[스토리지 시스템 리소스 프로비저닝된 볼륨을 설정합니다]
+ a| 
+명령이 추가되었습니다
+
+
+
+ a| 
+xref:./commands-a-z/create-mapping-volume.adoc[볼륨 매핑 생성]
+ a| 
+'mapWaitPeriod' 파라미터 추가
+
+
+
+ a| 
+xref:./commands-a-z/show-storagearray.adoc[스토리지 배열을 표시합니다]
+ a| 
+profile 매개변수 결과에 Resource-provisioned Volumes 항목이 추가되었습니다.
+
+
+
+ a| 
+xref:./commands-a-z/create-diskpool.adoc[디스크 풀을 생성합니다]
+ a| 
+resourceProvisionCapable' 매개 변수가 추가되었습니다.
+
+
+
+ a| 
+xref:./commands-a-z/create-volumegroup.adoc[볼륨 그룹을 생성합니다]
+ a| 
+resourceProvisionCapable' 매개 변수가 추가되었습니다.
+
+
+
+ a| 
+xref:./commands-a-z/show-volumegroup.adoc[볼륨 그룹을 표시합니다]
+ a| 
+명령어 결과에 resource-provisioned 정보를 추가했다.
+
+
+
+ a| 
+xref:./commands-a-z/create-raid-volume-automatic-drive-select.adoc[RAID 볼륨 생성(자동 드라이브 선택)]
+ a| 
+resourceProvisionCapable' 매개 변수가 추가되었습니다.
+
+
+
+ a| 
+xref:./commands-a-z/create-raid-volume-manual-drive-select.adoc[RAID 볼륨 생성(수동 드라이브 선택)]
+ a| 
+resourceProvisionCapable' 매개 변수가 추가되었습니다.
+
+
+
+ a| 
+xref:./commands-a-z/show-diskpool.adoc[디스크 풀을 표시합니다]
+ a| 
+명령어 결과에 resource-provisioned 정보를 추가했다.
+
+|===
+
+
+== SANtricity 11.62
+
+다음 표에는 릴리스 11.62의 CLI 및 스크립트 명령에 대한 변경 사항이 나와 있습니다.
+
+[cols="2*"]
+|===
+| 명령 | 변경에 대한 설명 
+
+
+ a| 
+xref:./commands-a-z/set-controller-hostport.adoc[컨트롤러 호스트 포트 속성을 설정합니다]
+ a| 
+Host Port 파라미터에 물리적 가상 값이 추가되었습니다.
+
+|===
+
+
+== SANtricity 11.61 이하
+
+* 해당 명령에 대해 지원되는 어레이로 EF600 플랫폼 추가
+
+
+[cols="2*"]
+|===
+| 명령 | 변경에 대한 설명 
+
+
+ a| 
+xref:./commands-a-z/save-storagearray-supportdata.adoc[스토리지 배열 지원 데이터를 저장합니다]
+ a| 
+object-bundle.json 데이터 형식이 추가되었습니다.
+
+
+
+ a| 
+xref:./commands-a-z/show-alldrives.adoc[드라이브를 표시합니다]
+ a| 
+NVMe4K 호환성 추가
+
+
+
+ a| 
+xref:./commands-a-z/activate-synchronous-mirroring.adoc[동기 미러링을 활성화합니다]
+ a| 
+NVMe4K 호환성 추가
+
+
+
+ a| 
+xref:./commands-a-z/recreate-storagearray-mirrorrepository.adoc[동기 미러링 저장소 볼륨을 다시 생성합니다]
+ a| 
+NVMe4K 호환성 추가
+
+
+
+ a| 
+xref:./commands-a-z/create-raid-volume-automatic-drive-select.adoc[RAID 볼륨 생성(자동 드라이브 선택)]
+ a| 
+NVMe4K 호환성 추가
+
+
+
+ a| 
+xref:./commands-a-z/show-storagearray-autoconfiguration.adoc[스토리지 배열 자동 구성을 표시합니다]
+ a| 
+NVMe4K 호환성 추가
+
+
+
+ a| 
+xref:./commands-a-z/autoconfigure-storagearray.adoc[스토리지 배열 자동 구성]
+ a| 
+NVMe4K 호환성 추가
+
+
+
+ a| 
+xref:./commands-a-z/create-diskpool.adoc[디스크 풀을 생성합니다]
+ a| 
+NVMe4K 호환성 추가
+
+
+
+ a| 
+xref:./commands-a-z/create-volumegroup.adoc[볼륨 그룹을 생성합니다]
+ a| 
+NVMe4K 호환성 추가
+
+
+
+ a| 
+xref:./commands-a-z/save-storagearray-autoloadbalancestatistics-file.adoc[자동 로드 밸런싱 통계를 저장합니다]
+ a| 
+"드라이브 손실 기본 경로" 참고 추가
+
+
+
+ a| 
+xref:./commands-a-z/set-storagearray-autoloadbalancingenable.adoc[자동 로드 밸런싱을 사용하거나 사용하지 않도록 스토리지 배열을 설정합니다]
+ a| 
+"드라이브 손실 기본 경로" 참고 추가
+
+
+
+ a| 
+xref:./commands-a-z/add-certificate-from-array.adoc[배열에서 인증서를 추가합니다]
+ a| 
+명령이 추가되었습니다
+
+
+
+ a| 
+xref:./commands-a-z/add-certificate-from-file.adoc[파일에서 인증서를 추가합니다]
+ a| 
+명령이 추가되었습니다
+
+
+
+ a| 
+xref:./commands-a-z/delete-certificates.adoc[인증서를 삭제합니다]
+ a| 
+명령이 추가되었습니다
+
+
+
+ a| 
+xref:./commands-a-z/show-certificates.adoc[인증서 표시]
+ a| 
+명령이 추가되었습니다
+
+
+
+ a| 
+xref:./commands-a-z/add-array-label.adoc[스토리지 레이블을 추가합니다]
+ a| 
+명령이 추가되었습니다
+
+
+
+ a| 
+xref:./commands-a-z/remove-array-label.adoc[스토리지 레이블을 제거합니다]
+ a| 
+명령이 추가되었습니다
+
+
+
+ a| 
+xref:./commands-a-z/show-array-label.adoc[배열 레이블을 표시합니다]
+ a| 
+명령이 추가되었습니다
+
+|===

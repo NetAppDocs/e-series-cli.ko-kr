@@ -48,6 +48,7 @@ driveMediaType=(HDD | SSD | unknown | allMedia)
 [driveType=(SAS | NVMe4K)]
 [capacity=pass:quotes[_volumeCapacity_]]
 [owner=(a|b)]
+[mapping=(none | default)]
 [cacheReadPrefetch=(TRUE | FALSE)]
 [segmentSize=pass:quotes[_segmentSizeValue_]]
 [usageHint=(fileSystem | dataBase | multiMedia)]
@@ -58,6 +59,7 @@ driveMediaType=(HDD | SSD | unknown | allMedia)
 [secureDrives=(fips | fde )]
 [dataAssurance=(none | enabled)]
 [resourceProvisioningCapable=(TRUE | FALSE)]
+[blockSize=blockSizeValue]
 ----
 [listing, subs="+macros"]
 ----
@@ -69,6 +71,7 @@ driveMediaType=(HDD | SSD | unknown | allMedia)
 [driveType=SAS]
 [capacity=pass:quotes[_volumeCapacity_]]
 [owner=(a|b)]
+[mapping=(none | default)]
 [cacheReadPrefetch=(TRUE | FALSE)]
 [segmentSize=pass:quotes[_segmentSizeValue_]]
 [usageHint=(fileSystem | dataBase | multiMedia)]
@@ -79,6 +82,7 @@ driveMediaType=(HDD | SSD | unknown | allMedia)
 [secureDrives=(fips | fde )]
 [dataAssurance=(none | enabled)]
 [resourceProvisioningCapable=(TRUE | FALSE)]
+[blockSize=blockSizeValue]
 ----
 
 
@@ -228,6 +232,20 @@ cacheReadPrefetch 매개변수와 'egmentSize' 매개 변수 모두에 대한 �
 재치 프로비저닝 캐블
  a| 
 리소스 프로비저닝 기능이 설정되어 있는지 여부를 지정하는 설정입니다. 리소스 프로비저닝을 비활성화하려면 이 매개 변수를 "false"로 설정합니다. 기본값은 "true"입니다.
+
+
+
+ a| 
+박수
+ a| 
+이 매개 변수를 사용하여 볼륨을 호스트에 매핑할 수 있습니다. 나중에 매핑하려면 이 매개 변수를 로 설정합니다 `none`. 지금 매핑하려면 이 매개 변수를 로 설정합니다 `default`. 볼륨은 스토리지 풀에 대한 액세스 권한이 있는 모든 호스트에 매핑됩니다. 기본값은 입니다 `none`.
+
+
+
+ a| 
+블록사이즈
+ a| 
+이 매개 변수는 생성할 볼륨의 블록 크기를 설정합니다. 0 또는 설정되지 않은 매개 변수는 기본 블록 크기를 사용합니다.
 
 |===
 
@@ -448,3 +466,5 @@ driveMediaType=HDD securityType=capable secureDrives=fips
 8.25는 'ecureDrives' 파라미터를 추가한다.
 
 8.63은 resourceProvisionCapable 매개 변수를 추가합니다.
+
+11.70이 를 추가합니다 `blockSize` 매개 변수.

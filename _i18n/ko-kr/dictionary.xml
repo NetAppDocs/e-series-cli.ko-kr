@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
-  <block id="05c5d3be594e5bc2293d9efbb13e5ac0" category="summary">SANtricity OS 11.40 릴리즈에는 보안 HTTPS 프로토콜을 사용하여 명령줄에서 상호 작용할 수 있는 웹 서비스가 포함된 E2800 및 E5700 컨트롤러에 대한 기능이 도입되었습니다. 이러한 컨트롤러는 명령줄 상호 작용에 기호 프로토콜을 대신 사용할 수도 있습니다.</block>
   <block id="9cfc4b6c01a61eda2edda8580884f546" category="doc">명령줄 매개변수</block>
-  <block id="302750c230c8231b0e5ae8b563027105" category="section-title">11.40 릴리즈의 새로운 명령줄 매개변수</block>
-  <block id="e992980d4f80a6fb0c1180d277b3563e" category="paragraph">SANtricity OS 11.40 릴리즈에는 보안 HTTPS 프로토콜을 사용하여 명령줄에서 상호 작용할 수 있는 웹 서비스가 포함된 E2800 및 E5700 컨트롤러에 대한 기능이 도입되었습니다. 이러한 컨트롤러는 명령줄 상호 작용에 기호 프로토콜을 대신 사용할 수도 있습니다. 기호 프로토콜은 E2700 및 E5600 컨트롤러에서 지원되는 유일한 프로토콜입니다. 기존 스크립트를 보존하고 전환 시간을 최소화하기 위해 CLI 옵션과 문법은 최대한 보존됩니다. 하지만 보안, 인증, AutoSupport, 경고 메시지와 관련하여 해당 컨트롤러에 대해 일부 CLI 문법을 렌더링하는 E2800 및 E5700 컨트롤러의 기능에는 몇 가지 차이가 있습니다. 그러나 새로운 https 프로토콜을 사용할 경우 E2800 또는 E5700에서는 문법이 사용되지 않을 수도 있습니다.</block>
   <block id="aaedb78025d5d9a4e8dc9d4da12dd28e" category="paragraph">' * https * ' 클라이언트 유형에만 적용되는 새로운 매개 변수의 경우 E2800 또는 E5700 컨트롤러에만 적용됩니다.</block>
-  <block id="c85e51547f06efc79a891c2ac36e7a1f" category="inline-xref-macro">이 릴리즈의 CLI 및 Script 명령의 변경 사항</block>
-  <block id="16d3c453763fe3ed7272ca311343223a" category="paragraph">이 릴리즈의 새 명령, 더 이상 사용되지 않는 명령 목록은 를 참조하십시오 <block ref="5766981eb252a7c1d5434c15f8b92c94" category="inline-xref-macro-rx"></block>.</block>
   <block id="83f499a540b1323009c200d6f8cc9396" category="cell">매개 변수</block>
   <block id="0b890b1926b90387673882e6ccae7fdc" category="cell">정의</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="doc"></block>
@@ -759,148 +754,90 @@
   <block id="4f606061cc4499e411135fef4c307053" category="paragraph">E2800 또는 E5700 스토리지 어레이에는 '-a' 및 '-x' 명령줄 옵션이 지원되지 않습니다.</block>
   <block id="223bbafe2f1dac423520e791e763e6f5" category="paragraph">E2800 또는 E5700 스토리지 어레이에서는 '-s' 명령줄 옵션이 지원되지 않습니다.</block>
   <block id="40bca54aff18bd6b61ab776afa82b445" category="summary">이 항목에서는 CLI 명령 및 스크립트 명령의 최신 SANtricity System Manager 릴리스에 있는 변경 사항을 나열합니다.</block>
-  <block id="5fef629b836b60819e0c0ce49cd2b9d7" category="doc">새로운 기능</block>
-  <block id="8777c423eb5ff6041a851f39dd4409e0" category="paragraph">명령 프롬프트에서 SMcli 명령을 실행할 때 Windows OS를 사용할 때 입력 또는 출력 파일의 파일 경로 이름에 이스케이프 문자로 추가 백슬래시("\") 문자가 필요합니다. 역할 기반 액세스 관리 사용자를 지정하는 -u 옵션을 제공하여 SMcli를 보안 https 모드에서 사용할 때 추가 백슬래시("\")를 포함해야 합니다. 예: 'C:\\dir\\subdir\\filename'</block>
   <block id="e5b376b9bdbfe1612d578d30462ed6ff" category="section-title">SANtricity 11.70.3</block>
-  <block id="cc43cb6c70a489987f30d6aaabafd555" category="paragraph">다음 표에는 릴리스 11.70.3의 CLI 및 스크립트 명령에 대한 변경 사항이 나와 있습니다.</block>
   <block id="ee97be03cb04119af45014d815621ce1" category="cell">명령</block>
   <block id="cabd3dec14f47181e4af36eb550db0ea" category="cell">변경에 대한 설명</block>
   <block id="2095fd6c65341ab93c351699ae64c34e" category="inline-xref-macro">디스크 풀 리소스 프로비저닝을 시작합니다</block>
-  <block id="ede09854458a2cb135d817c6510bc481" category="paragraph"><block ref="ede09854458a2cb135d817c6510bc481" category="inline-xref-macro-rx"></block></block>
   <block id="5f7ba2b716ed29bcc6c93b9e259022ee" category="paragraph">명령이 추가되었습니다</block>
   <block id="2f1b562e05b7449cb98803797eedcc19" category="inline-xref-macro">볼륨 그룹 리소스 프로비저닝을 시작합니다</block>
-  <block id="b30eec40fc469badb14691b602a67632" category="paragraph"><block ref="b30eec40fc469badb14691b602a67632" category="inline-xref-macro-rx"></block></block>
   <block id="87f8a594fb1fc32894281afc20c0dda0" category="inline-xref-macro">디스크 풀 전체 프로비저닝을 시작합니다</block>
-  <block id="58fe324523598b4d0a3a609fafa743fa" category="paragraph"><block ref="58fe324523598b4d0a3a609fafa743fa" category="inline-xref-macro-rx"></block></block>
   <block id="969c2f3727f8a09904f177fa5c0b45d7" category="paragraph">업데이트된 dissableResourceProvisioning 매개 변수 설명입니다.</block>
   <block id="32af27643a1da772d0db094077cce8d8" category="inline-xref-macro">볼륨 그룹 전체 프로비저닝을 시작합니다</block>
-  <block id="0a40938b2ba0dc85879631e682623c50" category="paragraph"><block ref="0a40938b2ba0dc85879631e682623c50" category="inline-xref-macro-rx"></block></block>
   <block id="8a4df40632a4ef19806a0fe552fd3c5b" category="inline-xref-macro">외부 보안 키를 다시 만듭니다</block>
-  <block id="1a83588b8874d482411ae7043b414d0c" category="paragraph"><block ref="1a83588b8874d482411ae7043b414d0c" category="inline-xref-macro-rx"></block></block>
   <block id="8240d06183810907de9b280dfee9a05e" category="paragraph">'deleteOldKey' 매개 변수가 추가되었습니다.</block>
   <block id="ed6c4c5587cae9b7857a4c212c8b34da" category="inline-xref-macro">디스크 풀을 생성합니다</block>
-  <block id="c8cadf21378c7f1640b6dd8327e96197" category="paragraph"><block ref="c8cadf21378c7f1640b6dd8327e96197" category="inline-xref-macro-rx"></block></block>
   <block id="6f716bfd4057a5bb2f73f7b626fff002" category="paragraph">'diveCount' 매개 변수 설명이 업데이트되었습니다.</block>
   <block id="3cffe633df330392f4d88b8478c9390b" category="section-title">SANtricity 11.70.2</block>
-  <block id="b580df9b7b9fe87123296ab444f6854f" category="paragraph">다음 표에는 릴리스 11.70.2의 CLI 및 스크립트 명령에 대한 변경 사항이 나와 있습니다.</block>
   <block id="326299687f74c312b7aaa299887c7d36" category="inline-xref-macro">SNMPv3 USM 사용자를 등록합니다</block>
-  <block id="b23800f9811e58684cffc261aac6d0ab" category="paragraph"><block ref="b23800f9811e58684cffc261aac6d0ab" category="inline-xref-macro-rx"></block></block>
   <block id="e1eeac0853bd4af8dbcb7863b475271f" category="inline-xref-macro">SNMPv3 USM 사용자를 업데이트합니다</block>
-  <block id="ec7d3451c381de8f82589acbc5c59721" category="paragraph"><block ref="ec7d3451c381de8f82589acbc5c59721" category="inline-xref-macro-rx"></block></block>
   <block id="b41c0c310da974a918bce8d5adf0c364" category="inline-xref-macro">SNMPv3 USM 사용자를 표시합니다</block>
-  <block id="507790c178995ba5afc4880ba6a2908b" category="paragraph"><block ref="507790c178995ba5afc4880ba6a2908b" category="inline-xref-macro-rx"></block></block>
   <block id="579373f73990fda09e2fa2adb4b31791" category="inline-xref-macro">SNMPv3 USM 사용자를 등록 취소합니다</block>
-  <block id="a0ab16e2889ba3dc6d08a3b1a3165200" category="paragraph"><block ref="a0ab16e2889ba3dc6d08a3b1a3165200" category="inline-xref-macro-rx"></block></block>
   <block id="3820f77018da043fb66e4fd865a34706" category="inline-xref-macro">SNMP 트랩 대상을 등록합니다</block>
-  <block id="2e40ae0a0a6062d15b29d1c1e5c9fdd1" category="paragraph"><block ref="2e40ae0a0a6062d15b29d1c1e5c9fdd1" category="inline-xref-macro-rx"></block></block>
   <block id="a2c9974b236ee81969b25e3fb9ab1358" category="paragraph">사용자 이름 및 엔진 매개 변수가 추가되었습니다.</block>
   <block id="db81528e982d687f579b76a74b0366f1" category="inline-xref-macro">SNMP 트랩 대상을 업데이트합니다</block>
-  <block id="1722cf6a7cac49167aa9ffd96d074e9f" category="paragraph"><block ref="1722cf6a7cac49167aa9ffd96d074e9f" category="inline-xref-macro-rx"></block></block>
   <block id="35c629434ff0892b4189c42464b27f1b" category="inline-xref-macro">SNMP 트랩 대상을 테스트합니다</block>
-  <block id="abd3b9079a6d6786221954207eb96177" category="paragraph"><block ref="abd3b9079a6d6786221954207eb96177" category="inline-xref-macro-rx"></block></block>
   <block id="cfafd61e53ff8b90ff59654a31683d33" category="section-title">SANtricity 11.70.1</block>
-  <block id="c489c59843bd73037903b8e6389538a7" category="paragraph">다음 표에는 릴리스 11.70.1의 CLI 및 스크립트 명령에 대한 변경 사항이 나와 있습니다.</block>
   <block id="5e1960d53d0e67e3cd307a126a8f75ac" category="inline-xref-macro">드라이브 지우기를 시작합니다</block>
-  <block id="227dbaeff3402ff198e56a75414af408" category="paragraph"><block ref="227dbaeff3402ff198e56a75414af408" category="inline-xref-macro-rx"></block></block>
   <block id="11b1a1e2c28e878f48cf799cce8aa812" category="inline-xref-macro">스토리지 배열 보안 키를 가져옵니다</block>
-  <block id="62993f6010765a155393483d17b2a70c" category="paragraph"><block ref="62993f6010765a155393483d17b2a70c" category="inline-xref-macro-rx"></block></block>
   <block id="c8dcef2f4d406da39ebba027f0ad429b" category="paragraph">forceOverwrite 파라미터 추가</block>
   <block id="a1b505355d4125b9c69b8493dabecadd" category="inline-xref-macro">컨트롤러 호스트 포트 속성을 설정합니다</block>
-  <block id="3fa735e68ba0eddfdb5ecc5b5fd4e534" category="paragraph"><block ref="3fa735e68ba0eddfdb5ecc5b5fd4e534" category="inline-xref-macro-rx"></block></block>
   <block id="417a48334613625984787d90e56e38cb" category="paragraph">대변 모드 매개 변수가 추가되었습니다.</block>
   <block id="7998fd524ef38b7a71eac8f9f4ccd238" category="inline-xref-macro">syslog 구성을 표시합니다</block>
-  <block id="8116fab9bff799135acd5cb840c69e2e" category="paragraph"><block ref="8116fab9bff799135acd5cb840c69e2e" category="inline-xref-macro-rx"></block></block>
   <block id="6be91014f49b358314d631a1bd795452" category="paragraph">'syslogFormat' 파라미터 추가</block>
   <block id="6788b263ca8abda807d586f151085f44" category="inline-xref-macro">syslog 설정을 구성합니다</block>
-  <block id="ceb944f7546b13abafaea97348355d79" category="paragraph"><block ref="ceb944f7546b13abafaea97348355d79" category="inline-xref-macro-rx"></block></block>
   <block id="1b15771136d070897a4786d21a91bfca" category="inline-xref-macro">e-메일 알림 설정을 구성합니다</block>
-  <block id="10268458f0980628772773e153eea80c" category="paragraph"><block ref="10268458f0980628772773e153eea80c" category="inline-xref-macro-rx"></block></block>
   <block id="fb9c0e1d3c7e89668f5d762844e0fff3" category="paragraph">'erverEncryption', 'erverPort', 'erverUsername', 'serverPassword' 파라미터가 추가되었습니다.</block>
   <block id="0675a2151f6d8106026aed9de4d8c5e4" category="inline-xref-macro">e-메일 알림 구성을 표시합니다</block>
-  <block id="fed19fd3135843d564eb904e9ccdac60" category="paragraph"><block ref="fed19fd3135843d564eb904e9ccdac60" category="inline-xref-macro-rx"></block></block>
   <block id="5739d7add341e0326107e029f52ef372" category="paragraph">'MTP' 암호화, 포트, 인증정보 파라미터 데이터 추가</block>
   <block id="3b5d6c04848b808e88bd30603defae1c" category="inline-xref-macro">RAID 볼륨을 복구합니다</block>
-  <block id="860a7823a2af330512f811f2bd8d86e8" category="paragraph"><block ref="860a7823a2af330512f811f2bd8d86e8" category="inline-xref-macro-rx"></block></block>
   <block id="b38477e0ffa079ffe6db9ea9609c7c0c" category="paragraph">blocksize 매개 변수가 추가되었습니다.</block>
   <block id="474034f7e02f357e3878ae2514a2b3fd" category="section-title">SANtricity 11.70</block>
-  <block id="d2ebffdd54980a34b665f5364d95c241" category="paragraph">다음 표에는 릴리스 11.70의 CLI 및 스크립트 명령에 대한 변경 사항이 나와 있습니다.</block>
   <block id="8630f953448efd3164d45bd4733963c9" category="inline-xref-macro">스토리지 어레이 펌웨어/NVSRAM을 다운로드합니다</block>
-  <block id="2577d6851fdd96e616de9ab7837b6852" category="paragraph"><block ref="2577d6851fdd96e616de9ab7837b6852" category="inline-xref-macro-rx"></block></block>
   <block id="ddc948fd2b779667ef8ac6b9fa14e17c" category="paragraph">healthCheckNeedsAttnOverride 매개 변수가 추가되었습니다.</block>
   <block id="60aecce41e2696a961f6c03c42d6fefc" category="inline-xref-macro">디스크 풀에서 볼륨을 생성합니다</block>
-  <block id="fe19bdb144cf589d0cf73d913fd6f0be" category="paragraph"><block ref="fe19bdb144cf589d0cf73d913fd6f0be" category="inline-xref-macro-rx"></block></block>
   <block id="d14dc92dae751ac72bbf29658a8cda5c" category="paragraph">raidLevel 파라미터가 추가되었습니다.</block>
   <block id="0647a5952beb6863aacfa11311d22f0b" category="inline-xref-macro">외부 보안 키 관리를 활성화합니다</block>
-  <block id="84c5266ab41140b5c0cdcbac931a2fa8" category="paragraph"><block ref="84c5266ab41140b5c0cdcbac931a2fa8" category="inline-xref-macro-rx"></block></block>
   <block id="4d926e7d603a8be98a85dd68645636bc" category="paragraph">'aveFile' 파라미터 추가</block>
   <block id="52d53af59b45ed76c374ea97831a2113" category="inline-xref-macro">외부 보안 키 관리를 비활성화합니다</block>
-  <block id="90f2438a9d1f884d50519b799ae56fa4" category="paragraph"><block ref="90f2438a9d1f884d50519b799ae56fa4" category="inline-xref-macro-rx"></block></block>
   <block id="dd62ecca79626b0abf30ba505a8993ef" category="paragraph">hostUnmapEnabled 매개변수가 추가되었습니다.</block>
   <block id="89009756cb3faf02b7f235c5a54cf270" category="section-title">SANtricity 11.63 을 참조하십시오</block>
   <block id="facc1a9ea58302b0eaf856a4b4dc50f5" category="paragraph">다음 표에는 릴리스 11.63의 CLI 및 스크립트 명령에 대한 변경 사항이 나와 있습니다.</block>
   <block id="ae6ca176a200036f0702de4f88af28de" category="inline-xref-macro">스토리지 배열 AutoSupport 수동 디스패치를 시작합니다</block>
-  <block id="f234f138eadfb77cf62a288e3630e58e" category="paragraph"><block ref="f234f138eadfb77cf62a288e3630e58e" category="inline-xref-macro-rx"></block></block>
   <block id="7e75d738e10ff67d5851ae5bca9dab0c" category="inline-xref-macro">데이터 패리티 복구</block>
-  <block id="04fdb467008d5b5016b47fa544519396" category="paragraph"><block ref="04fdb467008d5b5016b47fa544519396" category="inline-xref-macro-rx"></block></block>
   <block id="fd20a97395d72662264f2bfac37873a6" category="inline-xref-macro">스토리지 시스템 리소스 프로비저닝된 볼륨을 설정합니다</block>
-  <block id="eb592d329fb6f7babbfbadde143fd500" category="paragraph"><block ref="eb592d329fb6f7babbfbadde143fd500" category="inline-xref-macro-rx"></block></block>
   <block id="5fb337c5d1b8204f9a719a390633fbdd" category="inline-xref-macro">볼륨 매핑 생성</block>
-  <block id="546cbae6566986b4bedc32a4e5671184" category="paragraph"><block ref="546cbae6566986b4bedc32a4e5671184" category="inline-xref-macro-rx"></block></block>
   <block id="35f524b6f8efa87c84a9936f8afa6ce1" category="paragraph">'mapWaitPeriod' 파라미터 추가</block>
   <block id="a08dfe2f4f0ed8cb0e4ecd537093ea76" category="inline-xref-macro">스토리지 배열을 표시합니다</block>
-  <block id="3438d7385ed22a2d9387c90f34c58bca" category="paragraph"><block ref="3438d7385ed22a2d9387c90f34c58bca" category="inline-xref-macro-rx"></block></block>
   <block id="0ea2489c97700044a62ec015cbfea8cb" category="paragraph">profile 매개변수 결과에 Resource-provisioned Volumes 항목이 추가되었습니다.</block>
-  <block id="cba79b9df9ca5d91c782c5d695700037" category="paragraph"><block ref="cba79b9df9ca5d91c782c5d695700037" category="inline-xref-macro-rx"></block></block>
   <block id="a7dcd6b31c24cfb3a203758b09c31835" category="paragraph">resourceProvisionCapable' 매개 변수가 추가되었습니다.</block>
   <block id="ecd5b19e377ea09681cc3033516727ef" category="inline-xref-macro">볼륨 그룹을 생성합니다</block>
-  <block id="c65261c5759266608f4b239fd59553bc" category="paragraph"><block ref="c65261c5759266608f4b239fd59553bc" category="inline-xref-macro-rx"></block></block>
   <block id="6bbb966265ea9783d25006b17718e5c1" category="inline-xref-macro">볼륨 그룹을 표시합니다</block>
-  <block id="2e6884e692b22d72f34774446ec859ff" category="paragraph"><block ref="2e6884e692b22d72f34774446ec859ff" category="inline-xref-macro-rx"></block></block>
   <block id="feb2059d63d5e46b9d607e1e6c9f4005" category="paragraph">명령어 결과에 resource-provisioned 정보를 추가했다.</block>
   <block id="57b9042e61e804be9d7f7eb21f903bd2" category="inline-xref-macro">RAID 볼륨 생성(자동 드라이브 선택)</block>
-  <block id="b113c506197ceee61715e79148e118c4" category="paragraph"><block ref="b113c506197ceee61715e79148e118c4" category="inline-xref-macro-rx"></block></block>
   <block id="8bc7153babd734a7e9bcb2a8ae0a52a2" category="inline-xref-macro">RAID 볼륨 생성(수동 드라이브 선택)</block>
-  <block id="88d548daf0889c156db5133fc2297627" category="paragraph"><block ref="88d548daf0889c156db5133fc2297627" category="inline-xref-macro-rx"></block></block>
   <block id="9ef63d358bdc217e43dcb0fc830b0afa" category="inline-xref-macro">디스크 풀을 표시합니다</block>
-  <block id="516006f733eca01b974fe755e23087d3" category="paragraph"><block ref="516006f733eca01b974fe755e23087d3" category="inline-xref-macro-rx"></block></block>
   <block id="54f27706dd97a6e4af870a74b6d36046" category="section-title">SANtricity 11.62</block>
-  <block id="479ec17a09a6af1e81955aa32ea0ef99" category="paragraph">다음 표에는 릴리스 11.62의 CLI 및 스크립트 명령에 대한 변경 사항이 나와 있습니다.</block>
   <block id="bbc33257024b79e4fd9ad85a4d1e5402" category="paragraph">Host Port 파라미터에 물리적 가상 값이 추가되었습니다.</block>
   <block id="92ebf9c09deafce375aa7192c5ffc460" category="section-title">SANtricity 11.61 이하</block>
   <block id="e4c60892daa50d0e069f9aaacd2b3e74" category="list-text">해당 명령에 대해 지원되는 어레이로 EF600 플랫폼 추가</block>
   <block id="64a2ce0969644ae2fb0f841ab7d4781b" category="inline-xref-macro">스토리지 배열 지원 데이터를 저장합니다</block>
-  <block id="498dbc04bafe065eb4acb138e4260371" category="paragraph"><block ref="498dbc04bafe065eb4acb138e4260371" category="inline-xref-macro-rx"></block></block>
   <block id="41598ebadd139da8827dc3df7cd355cf" category="paragraph">object-bundle.json 데이터 형식이 추가되었습니다.</block>
   <block id="53fa78337dd74557902d76128f25d718" category="inline-xref-macro">드라이브를 표시합니다</block>
-  <block id="d691799fdd18daabb68011ec1d75ecda" category="paragraph"><block ref="d691799fdd18daabb68011ec1d75ecda" category="inline-xref-macro-rx"></block></block>
   <block id="7706dccc3fd27017e7e31f08d81ce0ca" category="paragraph">NVMe4K 호환성 추가</block>
   <block id="58df588da257807d5f7cbd9390db8785" category="inline-xref-macro">동기 미러링을 활성화합니다</block>
-  <block id="381ed79325d8514f9a1807be863311ea" category="paragraph"><block ref="381ed79325d8514f9a1807be863311ea" category="inline-xref-macro-rx"></block></block>
   <block id="afdba758a33212a451d426e382ffffa6" category="inline-xref-macro">동기 미러링 저장소 볼륨을 다시 생성합니다</block>
-  <block id="a22bcaf4b5224bffcddb6df1849a485b" category="paragraph"><block ref="a22bcaf4b5224bffcddb6df1849a485b" category="inline-xref-macro-rx"></block></block>
   <block id="bf6829a2035da1ee3f5c0ae93652732c" category="inline-xref-macro">스토리지 배열 자동 구성을 표시합니다</block>
-  <block id="3ed5a11fdeb810671acc8de4051adfed" category="paragraph"><block ref="3ed5a11fdeb810671acc8de4051adfed" category="inline-xref-macro-rx"></block></block>
   <block id="e0a196896c0583bda51daf508bf2e9b3" category="inline-xref-macro">스토리지 배열 자동 구성</block>
-  <block id="429106d31bfca1bba99f68194149bbaf" category="paragraph"><block ref="429106d31bfca1bba99f68194149bbaf" category="inline-xref-macro-rx"></block></block>
   <block id="724ce6411c4e487216d71dfe6ca49cdf" category="inline-xref-macro">자동 로드 밸런싱 통계를 저장합니다</block>
-  <block id="9d23a95a3c841d64d1146c7484edd6fe" category="paragraph"><block ref="9d23a95a3c841d64d1146c7484edd6fe" category="inline-xref-macro-rx"></block></block>
   <block id="9064185bbc267e27fe8336512ff6fb89" category="paragraph">"드라이브 손실 기본 경로" 참고 추가</block>
   <block id="799587ec57d3ccaff63b5aeba6541ba1" category="inline-xref-macro">자동 로드 밸런싱을 사용하거나 사용하지 않도록 스토리지 배열을 설정합니다</block>
-  <block id="32585f5091d2b70e0dcdd3bfd20006c2" category="paragraph"><block ref="32585f5091d2b70e0dcdd3bfd20006c2" category="inline-xref-macro-rx"></block></block>
   <block id="a524a99cfdf07f411dee8bf72266b7e5" category="inline-xref-macro">배열에서 인증서를 추가합니다</block>
-  <block id="f297fc0f93be9ef5eab81ac87d5f4e54" category="paragraph"><block ref="f297fc0f93be9ef5eab81ac87d5f4e54" category="inline-xref-macro-rx"></block></block>
   <block id="901711e6beac98bf77c83f0abcd06cc7" category="inline-xref-macro">파일에서 인증서를 추가합니다</block>
-  <block id="2d1c70723fdf3f613f1742dadd716c66" category="paragraph"><block ref="2d1c70723fdf3f613f1742dadd716c66" category="inline-xref-macro-rx"></block></block>
   <block id="98c9f4fd330bc6425238005018128760" category="inline-xref-macro">인증서를 삭제합니다</block>
-  <block id="cdf70c39483ff7bfbe1a4a4cfe78d46d" category="paragraph"><block ref="cdf70c39483ff7bfbe1a4a4cfe78d46d" category="inline-xref-macro-rx"></block></block>
   <block id="08008244ae332cb6cfb7afd0a1421b5d" category="inline-xref-macro">인증서 표시</block>
-  <block id="5014566890153f96aef20449269561f1" category="paragraph"><block ref="5014566890153f96aef20449269561f1" category="inline-xref-macro-rx"></block></block>
   <block id="45f4af5d50e06c45ba28324c2d9fe147" category="inline-xref-macro">스토리지 레이블을 추가합니다</block>
-  <block id="40ae6849374d77536b04e745f251174a" category="paragraph"><block ref="40ae6849374d77536b04e745f251174a" category="inline-xref-macro-rx"></block></block>
   <block id="88e4ef4e75f71281d90069877b8a1847" category="inline-xref-macro">스토리지 레이블을 제거합니다</block>
-  <block id="cd6c694756776556d683d6d767bc1028" category="paragraph"><block ref="cd6c694756776556d683d6d767bc1028" category="inline-xref-macro-rx"></block></block>
   <block id="a8dddcb0378a5adc0ec4222faa73aebe" category="inline-xref-macro">배열 레이블을 표시합니다</block>
-  <block id="f827c222461062316791c13a86072819" category="paragraph"><block ref="f827c222461062316791c13a86072819" category="inline-xref-macro-rx"></block></block>
   <block id="94536b08c149b401c1e3d4aa164b853c" category="summary">Windows PowerShell은 명령줄 도구에 대한 액세스를 제공하는 대화형 스크립팅 셸입니다.</block>
   <block id="0a6760c3056dd4237b647943d44dae70" category="doc">Windows PowerShell에서 CLI 명령에 대한 형식 규칙을 지정합니다</block>
   <block id="decd8a350cdf754c968c86ee87e30c6c" category="paragraph">Windows PowerShell은 명령줄 도구에 대한 액세스를 제공하는 대화형 스크립팅 셸입니다. Windows PowerShell은 더욱 강력한 명령 세트와 스크립팅 기능을 통해 Windows 명령 프롬프트에서 더욱 향상된 기능을 제공합니다. Windows PowerShell에서 모든 CLI 및 스크립트 명령을 실행할 수 있지만, Windows PowerShell에는 몇 가지 고유한 서식 요구 사항이 있습니다. 요구 사항은 다음과 같습니다.</block>
@@ -1235,7 +1172,6 @@
   <block id="28d7c017ab2e702b4a94b5e0c8da9c64" category="paragraph">모든 드라이브가 DA를 지원할 수 있는 경우, DATaAssurance 매개 변수를 "enabled"로 설정한 다음 특정 작업에 DA를 사용할 수 있습니다. 예를 들어, DA 지원 드라이브를 포함하는 볼륨 그룹을 생성한 다음 해당 볼륨 그룹 내에서 DA 지원 볼륨을 생성할 수 있습니다. DA 지원 볼륨을 사용하는 다른 작업에는 DA 기능을 지원하는 옵션이 있습니다.</block>
   <block id="e76a01cf4fd3b99e96ba093271dbe7ee" category="paragraph">"aAssurance" 매개 변수를 "Enabled"로 설정하면 볼륨 후보에 대한 데이터 보증 가능 드라이브만 고려되며, 그렇지 않으면 데이터 보증 가능 드라이브와 비 데이터 보증 가능 드라이브가 모두 고려됩니다. 데이터 보증 드라이브만 사용할 수 있는 경우 활성화된 데이터 보증 드라이브를 사용하여 새 볼륨이 생성됩니다.</block>
   <block id="fa9ea3257bddd6cd4e7b86b67b522394" category="paragraph">7.83</block>
-  <block id="d6e96befd979ff5c979e0ad7360f1ab8" category="paragraph">8.70은 '_raidLevel_' 매개변수를 추가합니다.</block>
   <block id="4af9363fe34346a1ccd2eb55690d09e1" category="summary">clear storageArray recoveryMode 명령은 스토리지 배열이 복구 모드를 종료하도록 합니다.</block>
   <block id="17bf570b0851595dd97edff08d58fed1" category="doc">스토리지 배열 복구 모드를 지웁니다</block>
   <block id="3ceeb02d28d94d773349005fce8d37c7" category="paragraph">clear storageArray recoveryMode 명령을 실행하면 스토리지 배열의 복구 모드가 종료됩니다.</block>
@@ -5819,7 +5755,6 @@
   <block id="e1812aba89c37f99a38a6480719e9d43" category="paragraph">features 매개 변수는 사용 가능, 사용 안 함, 평가 및 사용 가능한 기능을 보여 주는 정보를 반환합니다. 이 명령은 다음과 유사한 형식으로 기능 정보를 반환합니다.</block>
   <block id="ed752efdba38d8799f2a231c4da29f7b" category="paragraph">시간 매개 변수는 이 형식으로 정보를 반환합니다.</block>
   <block id="651eab6f387afcfd63c07cb04724a6a8" category="paragraph">longRunningOperations 매개 변수는 다음 형식으로 정보를 반환합니다.</block>
-  <block id="f2a2de657e92ec72dbe90fa791c2ce34" category="paragraph">맞습니다.</block>
   <block id="890cc787782f1f02570aef423f659823" category="paragraph">longRunningOperations 매개변수가 반환하는 정보 필드는 다음과 같은 의미를 갖습니다.</block>
   <block id="5ede01a707512186e7e34ba2427d90b0" category="list-text">이름(name)은 현재 오래 실행 중인 볼륨의 이름입니다. 볼륨 이름에 "Volume"이 접두사로 있어야 합니다.</block>
   <block id="44b90e580781acbb1643fb5bc7095162" category="list-text">'작동'은 볼륨 그룹 또는 볼륨에 대해 수행되는 작업을 나열합니다.</block>
@@ -6986,7 +6921,6 @@
   <block id="3b878279a04dc47d60932cb294d96259" category="sidebar">개요</block>
   <block id="e5d0c3aab4dc0a6e945737c9328844a6" category="sidebar">CLI 구조</block>
   <block id="a8ae6aca50d39d33a47b24a5e9fa2dab" category="sidebar">CLI 래퍼 구문</block>
-  <block id="88153c8c136afcee6aa324ba5fe8af1c" category="sidebar">CLI 매개 변수</block>
   <block id="63a5617826e6dd4e15f9977b94d8bdc1" category="sidebar">스크립트 명령 구조</block>
   <block id="65791f0e5ca134c2d6fa203ee3f41512" category="sidebar">스크립트 명령의 시놉시스입니다</block>
   <block id="ec15aaf75c6ce2aa003900e30ad2f3b9" category="sidebar">서식 규칙</block>
@@ -7437,4 +7371,141 @@
   <block id="6039cb24203c113782f6f93ef729fb48" category="sidebar">범주별 명령</block>
   <block id="5857ef178f3851723d1a670392ade42a" category="paragraph">에 나열된 단계를 먼저 수행하지 않으면 이 단계를 수행하지 마십시오 <block ref="a894c729763686e5823ef858a3aa8302" category="inline-xref-macro-rx"></block></block>
   <block id="9effc9edc3686486aaacfb6caa40aee6" category="paragraph"><block ref="9effc9edc3686486aaacfb6caa40aee6" category="inline-link-macro-rx"></block></block>
+  <block id="e0180366a7542136793eb497779f0039" category="summary">SANtricity OS 11.60 릴리즈에는 SANtricity 시스템 관리자를 통해 http 기반 버전의 CLI(보안 CLI 또는 SMcli라고도 함)를 직접 다운로드하고 설치할 수 있는 기능이 포함되어 있습니다.</block>
+  <block id="2b21cb9530a6c7704a66108d45c196a1" category="doc">다운로드 가능한 SMcli 명령줄 매개변수</block>
+  <block id="ab21a9218cf2507b606b474a8958d92d" category="section-title">11.60 이상 다운로드 가능한 SMcli 명령줄 매개변수</block>
+  <block id="b6c9cb32de0a61002f039efec80a465c" category="paragraph">SANtricity OS 11.60 릴리스에는 SANtricity 시스템 관리자를 통해 직접 http 기반 버전의 CLI("보안 CLI" 또는 SMcli라고도 함)를 다운로드하고 설치할 수 있는 기능이 포함되어 있습니다. SMcli의 다운로드 가능한 버전은 EF600, EF300, E5700, EF570, E2800에서 사용할 수 있습니다. EF280 컨트롤러: SANtricity 시스템 관리자 내에서 SMcli를 다운로드하려면 * 설정 * &gt; * 시스템 * 및 * 추가 기능 * &gt; * 명령줄 인터페이스 * 를 선택합니다.</block>
+  <block id="75842716a65060950b20cba161cbac95" category="admonition">CLI 명령을 실행하려는 관리 시스템에서 Java Runtime Environment(JRE) 버전 8 이상을 사용할 수 있어야 합니다.</block>
+  <block id="c3369045597873cd151e0a9b94edab23" category="inline-xref-macro">레거시 명령줄 매개변수</block>
+  <block id="720d9a5bd635c70358cdcb41b1eaefaf" category="paragraph">이전 버전의 SMcli와 마찬가지로 SANtricity System Manager를 통해 다운로드할 수 있는 SMcli에는 고유한 매개변수 세트가 있습니다. SANtricity OS 11.53 및 이전 릴리스에 대한 명령줄 매개 변수 사용에 대한 자세한 내용은 을 참조하십시오 <block ref="55493e98e602a03e07f56f1acb2fb353" category="inline-xref-macro-rx"></block></block>
+  <block id="1a98f49f191845835d6fd3e13eb29812" category="section-title">다단계 인증</block>
+  <block id="e228e60d948488385c1b528cc75ed77d" category="paragraph">SAML(Security Assertion Markup Language)이 활성화된 경우 액세스 토큰만 CLI에서 사용할 수 있습니다. SAML이 활성화되지 않은 경우 사용자 이름/암호 또는 액세스 토큰을 사용할 수 있습니다. 액세스 토큰은 SANtricity 시스템 관리자를 통해 생성할 수 있습니다.</block>
+  <block id="e88aeb63b8ab6fc616194c065b4c2b62" category="paragraph"><block ref="b7cc4b6b2b8c0f37377b5cc259385de0" prefix="" category="inline-code"></block></block>
+  <block id="378548dcc9cb4f8858caedf42a766950" category="paragraph">스토리지 시스템에서 인증에 사용할 액세스 토큰을 정의합니다. 액세스 토큰은 사용자 이름과 암호를 제공하는 대체 토큰입니다.</block>
+  <block id="dabb392a962a4c6f7a599fc77ac42873" category="paragraph"><block ref="f2349da52d073d93e5c41656eac03cfe" prefix="" category="inline-code"></block> (대문자)</block>
+  <block id="6c064a9cbbd926e74587f8defd026655" category="list-text"><block ref="ce1dd84bb568503ac83dd4ac6a6214c1" prefix="" category="inline-code"></block> - 인증에 사용할 액세스 토큰을 포함합니다</block>
+  <block id="103239ca71e2d980f813de328f67fd85" category="list-text"><block ref="2181c7399d16e14e568583d1444dafc8" prefix="" category="inline-code"></block> - stdin에서 액세스 토큰을 읽습니다</block>
+  <block id="217925ade44631ba415e673301b463a2" category="paragraph">에 이 매개 변수를 따릅니다<block ref="65daa52bdfbdb10c4e4e8ebe7767219b" prefix=" " category="inline-code"></block> 변수. 이 매개 변수는 액세스 토큰을 사용하지 않을 때마다 필요합니다.</block>
+  <block id="82a1b054b66e0c0b6689bccad53abaa9" category="paragraph"><block ref="0c9c2c88e4d475e2325d26616cd357ea" prefix="" category="inline-code"></block> (대문자)</block>
+  <block id="b46f687fd29df1285d03b2da8709a103" category="section-title">일반 https 모드 명령줄 매개 변수입니다</block>
+  <block id="1ef7e353f59586eef59a967e0d0ac966" category="paragraph">다운로드 가능한 SMcli는 https 모드만 지원합니다. 다음은 https 모드에 대해 일반적으로 사용되는 명령줄 매개 변수입니다.</block>
+  <block id="3e83224f233800bb06ce93d927b35bdd" category="paragraph">호스트 이름 또는 IP(인터넷 프로토콜) 주소를 지정합니다 <block ref="d8c537c0d92ca8927e524da96af38676" prefix="(" category="inline-code"></block>)를 선택합니다.</block>
+  <block id="3757a8693378041a86f885240df2e31c" category="paragraph">각 컨트롤러의 이더넷 연결을 통해 대역외 스토리지 관리를 관리하는 경우 를 지정해야 합니다<block ref="f04d852929cd714ffd6956bb571f80ba" prefix=" " category="inline-code"></block> 합니다.</block>
+  <block id="c36d9cabd1c830b950a2eca784ccfd9c" category="paragraph">이 선택적 인수를 사용하면 가 허용됩니다<block ref="de6b0dcfbccd619d18dc01c80f872c93" prefix=" " category="inline-code"></block> 클라이언트가 안전하지 않은 모드로 작동합니다. 즉, 스토리지 어레이의 인증서가 검증되지 않습니다. 기본적으로 이 인수를 생략하면 적절한 유효성 검사가 수행됩니다.</block>
+  <block id="21b717352b4d2e9ab433c3c73eacec7a" category="inline-xref">저장된 인증서 관리 명령줄 매개 변수입니다</block>
+  <block id="1cee5e6c4e0bed15d3b5693695f307bb" category="admonition">스토리지 배열 인증서 관리에 대한 자세한 내용은 를 참조하십시오 <block ref="afffa566b4a4cd4878295c084c81cf79" category="inline-xref-macro-rx"></block>.</block>
+  <block id="46e449ef50228f4c3b256f38192aabd8" category="paragraph"><block ref="3f9df9336d464ece6989396d54e649e3" prefix="" category="inline-code"></block> (대문자)</block>
+  <block id="00c369eed11ad08d14aa63917019884b" category="paragraph">다운로드 가능한 SMcli에 대한 법적 고지 사항을 표시합니다.</block>
+  <block id="6419c276911d1b1093f7244e44197d6e" category="paragraph">스크립트 명령을 실행할 로컬에 저장된 레이블을 지정합니다. 이 옵션은 를 사용할 때 선택 사항입니다<block ref="f04d852929cd714ffd6956bb571f80ba" prefix=" " category="inline-code"></block>. 에 로컬로 저장된 레이블이 필요합니다<block ref="f04d852929cd714ffd6956bb571f80ba" prefix=" " category="inline-code"></block> 사용되지 않습니다.</block>
+  <block id="42da5ee2f9896e8c87de07aa25a3427f" category="inline-xref">저장된 배열 관리 명령줄 매개변수</block>
+  <block id="422972ba4fd848f3950a3bdfb5ae51b4" category="admonition">로컬에 저장된 레이블을 사용하여 스토리지 배열을 관리하는 방법에 대한 자세한 내용은 을 참조하십시오 <block ref="b0882fa539b94092224c4c1baa28b4b3" category="inline-xref-macro-rx"></block>.</block>
+  <block id="9945659024e2adf80a541a553d3ee3d8" category="paragraph">출력 파일을 지정하지 않으면 출력 텍스트가 표준 출력으로 이동합니다 <block ref="64322f5f3ff7f9f717279e1b017a997e" prefix="(" category="inline-code"></block>)를 클릭합니다. 스크립트 명령이 아닌 명령의 모든 출력이 로 전송됩니다<block ref="64322f5f3ff7f9f717279e1b017a997e" prefix=" " category="inline-code"></block>, 이 매개 변수의 설정 여부에 관계없이 .</block>
+  <block id="d75299987abe492d079cdd1f02711a2d" category="paragraph"><block ref="96cf306e4040200feb7a7bf5e785fe7b" prefix="" category="inline-code"></block></block>
+  <block id="805cf5144eef92ea0cf17108b733cfaa" category="paragraph">다운로드 가능한 SMcli 버전을 표시합니다</block>
+  <block id="831f9cccb445bff4416673e6f3d67d65" category="section-title">저장된 스토리지 관리</block>
+  <block id="ced8a1b5b4cbad8af6ab06b156be7ad5" category="paragraph">다음 명령줄 매개 변수를 사용하면 로컬에 저장된 레이블을 통해 저장된 배열을 관리할 수 있습니다.</block>
+  <block id="78ecfc3f3c8ceb2384456d03a01f4950" category="admonition">로컬에 저장된 레이블이 SANtricity 시스템 관리자 아래에 표시되는 실제 스토리지 배열 이름과 일치하지 않을 수 있습니다.</block>
+  <block id="388a7d73001eb30eff20f129659526f9" category="paragraph"><block ref="2732b74944578d5b25bf007b35e13dfb" prefix="" category="inline-code"></block></block>
+  <block id="c7389fed7a0e11f2c54e2fae853a67d6" category="paragraph">로컬에 저장된 모든 레이블 및 관련 주소를 표시합니다</block>
+  <block id="bfa8cfa24f5f2276aa4e09b29fe4a607" category="paragraph"><block ref="1a1c5f6b854cf8dfb011711f15b27156" prefix="" category="inline-code"></block></block>
+  <block id="65268edc485b5c0a1d39502b4dc1f0dc" category="paragraph">이름이 인 로컬에 저장된 레이블과 연결된 주소를 표시합니다<block ref="3492b4e60f2c816ff28667bb6230d2fc" prefix=" " category="inline-code"></block></block>
+  <block id="1377b4470655e855909e13e156424289" category="paragraph"><block ref="be066fc0d3f0dd00ebc5e337cbdcc0a1" prefix="" category="inline-code"></block></block>
+  <block id="388141b9edfe664201b839307aa959e4" category="paragraph">로컬에 저장된 모든 레이블을 삭제합니다</block>
+  <block id="ca6842956843df292d0720c894750ca9" category="paragraph"><block ref="3a3b01afddcf67fd5fd8b20ee0a7c526" prefix="" category="inline-code"></block></block>
+  <block id="02d8b064331ae4cc1ff77157dfc83684" category="paragraph">이름이 인 로컬에 저장된 레이블을 삭제합니다<block ref="3492b4e60f2c816ff28667bb6230d2fc" prefix=" " category="inline-code"></block></block>
+  <block id="9af5d75bd438b751c86f50328f0250b7" category="paragraph"><block ref="7b43f43d12a18a16ca4e770950a5c931" prefix="" category="inline-code"></block></block>
+  <block id="a7ab762ee2a954edf8fedc15cbd0f795" category="list-text">로컬에 저장된 라벨을 이름과 함께 추가합니다<block ref="3492b4e60f2c816ff28667bb6230d2fc" prefix=" " category="inline-code"></block> 제공된 주소를 포함합니다</block>
+  <block id="ac5232d2345b85aee38c3abd9e361fd3" category="list-text">업데이트는 직접 지원되지 않습니다. 업데이트하려면 레이블을 삭제한 다음 다시 추가하십시오.</block>
+  <block id="936ff13d8f93781765f5a7e48a336646" category="admonition">SMcli는 로컬에 저장된 레이블을 추가할 때 스토리지 배열에 연결되지 않습니다.</block>
+  <block id="c278a5794824006e129b86708d8cd3bd" category="paragraph"><block ref="cfc9154b973ccf018190fb24d316eedb" prefix="" category="inline-code"></block></block>
+  <block id="c32312d45679273684d42154d827111d" category="paragraph">로컬에 저장된 신뢰할 수 있는 인증서를 모두 표시합니다</block>
+  <block id="4b9b62f3d4b5edc0d818f45403120e19" category="paragraph"><block ref="9296c503a7f1121ea4b4473d90b79b8a" prefix="" category="inline-code"></block></block>
+  <block id="bbf94bdff34e510efc30e9914aeb774b" category="paragraph">로컬에 저장된 신뢰할 수 있는 인증서를 별칭과 함께 표시합니다<block ref="33bd7764986e9fb9a2f66ffee227a13d" prefix=" " category="inline-code"></block></block>
+  <block id="29222fa82acac5589e1b38a89a306dd6" category="paragraph"><block ref="bcb57e8a52bb9dc18da53774d0a77623" prefix="" category="inline-code"></block></block>
+  <block id="10197cd52940215d608672db4d523c48" category="paragraph">로컬에 저장된 신뢰할 수 있는 인증서를 모두 삭제합니다</block>
+  <block id="cd971a9a07cd1afad54e546d2bdddbe4" category="paragraph"><block ref="d71c4187699b967f00e5a2198209871b" prefix="" category="inline-code"></block></block>
+  <block id="1cede1a7224fb2a98c345b384f618d2d" category="paragraph">로컬로 저장된 신뢰할 수 있는 인증서를 별칭과 함께 삭제합니다<block ref="33bd7764986e9fb9a2f66ffee227a13d" prefix=" " category="inline-code"></block></block>
+  <block id="594e5c0325c5825b27ded09f8aebefbf" category="paragraph"><block ref="c3d6f515887460b883e167702ceb72e4" prefix="" category="inline-code"></block></block>
+  <block id="d25d0df898e774ce62d2e53a11938c83" category="list-text">신뢰할 수 있는 인증서를 별칭과 함께 저장합니다<block ref="33bd7764986e9fb9a2f66ffee227a13d" prefix=" " category="inline-code"></block></block>
+  <block id="4d9033c5cd8339363f7ff220c0c27fe5" category="list-text">신뢰할 수 있는 인증서는 웹 브라우저 사용과 같은 별도의 작업으로 컨트롤러에서 다운로드됩니다</block>
+  <block id="655a70a2af09b1d4496eb71414a7189c" category="paragraph"><block ref="4fee9d7e2432a79296cdcba9499bc70c" prefix="" category="inline-code"></block></block>
+  <block id="6b35d6fbf55a3720f21fe621981eb545" category="list-text">각 주소에 연결하고 반환된 인증서를 신뢰할 수 있는 인증서 저장소에 저장합니다</block>
+  <block id="2ea5955c79b3de0a046a4906a77d10ed" category="list-text">지정한 호스트 이름 또는 IP 주소는 이러한 방식으로 저장된 각 인증서의 별칭으로 사용됩니다</block>
+  <block id="264ae146b796a6ef6750c695d3b50cf0" category="list-text">사용자는 이 명령을 실행하기 전에 컨트롤러의 인증서를 신뢰할 수 있는지 확인해야 합니다</block>
+  <block id="bcf0c6816d00842bd216f56545da7e12" category="list-text">보안을 강화하기 위해 파일을 사용하는 trust 명령을 사용하여 사용자 유효성 검사와 이 명령 실행 간에 인증서가 변경되지 않도록 해야 합니다</block>
+  <block id="6e560cf6c527d4c279a89d40d90f0f5f" category="summary">SANtricity OS 11.40 릴리즈에는 웹 서비스가 내장된 E2800 및 E5700 컨트롤러용으로 보안 HTTPS 프로토콜을 사용하여 명령줄에서 상호 작용할 수 있는 기능이 도입되었습니다. 이러한 컨트롤러는 명령줄 상호 작용에 기호 프로토콜을 대신 사용할 수도 있습니다.</block>
+  <block id="fcd00ec6de7f196ccf5dd2134ec8c2eb" category="section-title">11.53 및 이전 명령줄 매개변수</block>
+  <block id="7f350558fa31543d0376cb3d9a59b5a6" category="paragraph">SANtricity OS 11.40 릴리즈에는 웹 서비스가 내장된 E2800 및 E5700 컨트롤러용으로 보안 HTTPS 프로토콜을 사용하여 명령줄에서 상호 작용할 수 있는 기능이 도입되었습니다. 이러한 컨트롤러는 명령줄 상호 작용에 기호 프로토콜을 대신 사용할 수도 있습니다. 기호 프로토콜은 E2700 및 E5600 컨트롤러에서 지원되는 유일한 프로토콜입니다. 기존 스크립트를 보존하고 전환 시간을 최소화하기 위해 CLI 옵션과 문법은 최대한 보존됩니다. 하지만 보안, 인증, AutoSupport, 경고 메시지와 관련하여 해당 컨트롤러에 대해 일부 CLI 문법을 렌더링하는 E2800 및 E5700 컨트롤러의 기능에는 몇 가지 차이가 있습니다. 그러나 새로운 https 프로토콜을 사용할 경우 E2800 또는 E5700에서는 문법이 사용되지 않을 수도 있습니다.</block>
+  <block id="992fcf8487a5a376d1da947a5fa72b2b" category="admonition">RAID1 레벨 볼륨에서는 씬 프로비저닝을 사용할 수 없습니다.</block>
+  <block id="57a99d03719693273aad8c6972e18af2" category="paragraph">이 매개 변수는 생성할 볼륨의 블록 크기를 설정합니다. 의 값<block ref="cfcd208495d565ef66e7dff9f98764da" prefix=" " category="inline-code"></block> 또는 설정되지 않은 매개 변수는 기본 블록 크기를 사용합니다.</block>
+  <block id="a5c016ef7bdfc21e730e1ca6061742d6" category="paragraph">8.70이 를 추가합니다<block ref="ac82d3d2e40087720415657115e05003" prefix=" " category="inline-code"></block> 및<block ref="1feb883ec49856bbc2f127143c719ed0" prefix=" " category="inline-code"></block> 매개 변수.</block>
+  <block id="e6bf3c5ef4a41e5e20172fe64b0ac2cd" category="paragraph">이 매개 변수를 사용하여 볼륨을 호스트에 매핑할 수 있습니다. 나중에 매핑하려면 이 매개 변수를 로 설정합니다<block ref="334c4a4c42fdb79d7ebc3e73b517e6f8" prefix=" " category="inline-code"></block>. 지금 매핑하려면 이 매개 변수를 로 설정합니다<block ref="c21f969b5f03d33d43e04f8f136e7682" prefix=" " category="inline-code"></block>. 볼륨은 스토리지 풀에 대한 액세스 권한이 있는 모든 호스트에 매핑됩니다. 기본값은 입니다<block ref="334c4a4c42fdb79d7ebc3e73b517e6f8" prefix=" " category="inline-code"></block>.</block>
+  <block id="9768c8fb089e952c8ed07b137cdddc72" category="paragraph">이 매개 변수는 생성할 볼륨의 블록 크기를 설정합니다. 0 또는 설정되지 않은 매개 변수는 기본 블록 크기를 사용합니다.</block>
+  <block id="611535f9eb3b91162ec562dd92296ebd" category="paragraph">11.70이 를 추가합니다<block ref="480d1b61a0432d1319f7504a3d7318dd" prefix=" " category="inline-code"></block> 매개 변수.</block>
+  <block id="d015a34de96d3f92372df94da0f629a7" category="paragraph">* 없음 *</block>
+  <block id="490414e0366b091220802d406e52c076" category="doc">새로운 기능</block>
+  <block id="951c6ae7fff0668a89aef7dc85bf76d0" category="paragraph">명령 프롬프트에서 SMcli 명령을 실행할 때 추가 백슬래시를 입력해야 합니다 <block ref="28d397e87306b8631f3ed80d858d35f0" prefix="(" category="inline-code"></block>) Windows OS를 사용할 때 입력 또는 출력 파일의 파일 경로 이름에 이스케이프 문자로 사용됩니다. 추가 백슬래시 <block ref="28d397e87306b8631f3ed80d858d35f0" prefix="(" category="inline-code"></block>)는 역할 기반 액세스 관리 사용자를 지정하는 -u 옵션을 제공하여 SMcli를 보안 https 모드에서 사용할 때 포함되어야 합니다. 예:<block ref="1c05e98ca61c10b2b98fcdccf3f101eb" prefix=" " category="inline-code"></block></block>
+  <block id="06d2539958ee4762f25ee6e06e44b9f1" category="section-title">SANtricity 11.70.4</block>
+  <block id="88f7095a6da86281dee41ca1973b59da" category="paragraph">다음 표에는 릴리즈 11.70.4의 CLI 및 Script 명령이 변경되었습니다.</block>
+  <block id="3c81bd0a1f22910d21ddab30497f0cad" category="inline-xref-macro">SMcli 명령줄 매개변수를 다운로드합니다</block>
+  <block id="26f5c6a358189222507298d61acc474c" category="paragraph"><block ref="26f5c6a358189222507298d61acc474c" category="inline-xref-macro-rx"></block></block>
+  <block id="5c0565b7c4e3a02c6f7da8e8b79a7540" category="paragraph">추가되었습니다<block ref="b7cc4b6b2b8c0f37377b5cc259385de0" prefix=" " category="inline-code"></block> 및<block ref="f2349da52d073d93e5c41656eac03cfe" prefix=" " category="inline-code"></block> 다단계 인증을 위한 액세스 토큰 매개 변수 설명</block>
+  <block id="71fff74a4c9d69eab84efedd296433b6" category="paragraph">다음 표에는 릴리스 11.70.3에 대한 CLI 및 스크립트 명령의 변경 사항이 나와 있습니다.</block>
+  <block id="28d2b76e39ac881658909c65abcd0daa" category="paragraph"><block ref="28d2b76e39ac881658909c65abcd0daa" category="inline-xref-macro-rx"></block></block>
+  <block id="183bf6a11cdfba8a784da30f0b6fe98e" category="paragraph"><block ref="183bf6a11cdfba8a784da30f0b6fe98e" category="inline-xref-macro-rx"></block></block>
+  <block id="15be8376d068bc8b336d134596e6b779" category="paragraph"><block ref="15be8376d068bc8b336d134596e6b779" category="inline-xref-macro-rx"></block></block>
+  <block id="b8a49e0477f4912fed8b11000c163cd5" category="paragraph"><block ref="b8a49e0477f4912fed8b11000c163cd5" category="inline-xref-macro-rx"></block></block>
+  <block id="b36598cc51fefae2fc91706fd03c8eef" category="paragraph"><block ref="b36598cc51fefae2fc91706fd03c8eef" category="inline-xref-macro-rx"></block></block>
+  <block id="6d75466b80c625b48fc8ba8590e96c95" category="paragraph"><block ref="6d75466b80c625b48fc8ba8590e96c95" category="inline-xref-macro-rx"></block></block>
+  <block id="f66791a36a8e67b4d2634d7f1e8c68c5" category="paragraph">다음 표에는 릴리스 11.70.2에 대한 CLI 및 스크립트 명령이 변경되었습니다.</block>
+  <block id="b0712e32c143076d1b1765d28c4ff86d" category="paragraph"><block ref="b0712e32c143076d1b1765d28c4ff86d" category="inline-xref-macro-rx"></block></block>
+  <block id="4e932b7c5213821b7cad243423b94008" category="paragraph"><block ref="4e932b7c5213821b7cad243423b94008" category="inline-xref-macro-rx"></block></block>
+  <block id="d1b84f1127025d4d9dc8bd48868e7ce2" category="paragraph"><block ref="d1b84f1127025d4d9dc8bd48868e7ce2" category="inline-xref-macro-rx"></block></block>
+  <block id="5e8c25d9c0b20c68fc8c01b19bff00b2" category="paragraph"><block ref="5e8c25d9c0b20c68fc8c01b19bff00b2" category="inline-xref-macro-rx"></block></block>
+  <block id="cae6a0c64d5540614265350faf69a871" category="paragraph"><block ref="cae6a0c64d5540614265350faf69a871" category="inline-xref-macro-rx"></block></block>
+  <block id="f36c4239322f1d6c4d0012326bb82baf" category="paragraph"><block ref="f36c4239322f1d6c4d0012326bb82baf" category="inline-xref-macro-rx"></block></block>
+  <block id="4e922eeab0693268617854964f734062" category="paragraph"><block ref="4e922eeab0693268617854964f734062" category="inline-xref-macro-rx"></block></block>
+  <block id="59316ba483ba3aec447f68f9ec6e01ea" category="paragraph">다음 표에는 릴리스 11.70.1의 CLI 및 스크립트 명령에 대한 변경 사항이 나와 있습니다.</block>
+  <block id="e49e67325ea9057b09b143e96207afc5" category="paragraph"><block ref="e49e67325ea9057b09b143e96207afc5" category="inline-xref-macro-rx"></block></block>
+  <block id="f45516b35547a02af7b5f630f482b3c8" category="paragraph"><block ref="f45516b35547a02af7b5f630f482b3c8" category="inline-xref-macro-rx"></block></block>
+  <block id="2747069345d99e0acd81d0b24f294ee0" category="paragraph"><block ref="2747069345d99e0acd81d0b24f294ee0" category="inline-xref-macro-rx"></block></block>
+  <block id="be47e9424f352e1615c44e2086319644" category="paragraph"><block ref="be47e9424f352e1615c44e2086319644" category="inline-xref-macro-rx"></block></block>
+  <block id="003747732d93502041ceb1db27619e91" category="paragraph"><block ref="003747732d93502041ceb1db27619e91" category="inline-xref-macro-rx"></block></block>
+  <block id="d93658be0099c4d1add5f22dfc5a0995" category="paragraph"><block ref="d93658be0099c4d1add5f22dfc5a0995" category="inline-xref-macro-rx"></block></block>
+  <block id="31f575b374f6993eb9ed860a914a7de9" category="paragraph"><block ref="31f575b374f6993eb9ed860a914a7de9" category="inline-xref-macro-rx"></block></block>
+  <block id="05271dc1a2c676675a63e13c5b53b947" category="paragraph"><block ref="05271dc1a2c676675a63e13c5b53b947" category="inline-xref-macro-rx"></block></block>
+  <block id="a74afad0edcf76c0a4a9f8c65d64b174" category="paragraph">다음 표에는 릴리스 11.70의 CLI 및 스크립트 명령에 대한 변경 사항이 나와 있습니다.</block>
+  <block id="5e84b4270d9ce9be0ad2533dbfd95b65" category="paragraph"><block ref="5e84b4270d9ce9be0ad2533dbfd95b65" category="inline-xref-macro-rx"></block></block>
+  <block id="9ad23fd2db795292952203f1e70f5cf4" category="paragraph"><block ref="9ad23fd2db795292952203f1e70f5cf4" category="inline-xref-macro-rx"></block></block>
+  <block id="f89d3e2c717672dd2cae630c3229fe43" category="paragraph"><block ref="f89d3e2c717672dd2cae630c3229fe43" category="inline-xref-macro-rx"></block></block>
+  <block id="8ab3987f5e11278960924053c1c48603" category="paragraph"><block ref="8ab3987f5e11278960924053c1c48603" category="inline-xref-macro-rx"></block></block>
+  <block id="3c4554618d02db0aef828e22246c6b59" category="paragraph"><block ref="3c4554618d02db0aef828e22246c6b59" category="inline-xref-macro-rx"></block></block>
+  <block id="c18cced0b91c7306eba8aa95974d5d73" category="paragraph"><block ref="c18cced0b91c7306eba8aa95974d5d73" category="inline-xref-macro-rx"></block></block>
+  <block id="8dc0796d131f84b22d35084484e6f712" category="paragraph"><block ref="8dc0796d131f84b22d35084484e6f712" category="inline-xref-macro-rx"></block></block>
+  <block id="94ac69661c2d717315d8018624ebbe85" category="paragraph"><block ref="94ac69661c2d717315d8018624ebbe85" category="inline-xref-macro-rx"></block></block>
+  <block id="f7c28deada4fce505c370bfe9336570b" category="paragraph"><block ref="f7c28deada4fce505c370bfe9336570b" category="inline-xref-macro-rx"></block></block>
+  <block id="9e0e2266a81338fbfaf354427a1629c8" category="paragraph"><block ref="9e0e2266a81338fbfaf354427a1629c8" category="inline-xref-macro-rx"></block></block>
+  <block id="9b609f7e87918bf9211f6e0e9f22fa5a" category="paragraph"><block ref="9b609f7e87918bf9211f6e0e9f22fa5a" category="inline-xref-macro-rx"></block></block>
+  <block id="40b41041d07ac7993f03456611c81f15" category="paragraph"><block ref="40b41041d07ac7993f03456611c81f15" category="inline-xref-macro-rx"></block></block>
+  <block id="480576ccaea5bc0e0e8ae41d4a033c1b" category="paragraph"><block ref="480576ccaea5bc0e0e8ae41d4a033c1b" category="inline-xref-macro-rx"></block></block>
+  <block id="c9b3eea1b5f6b5ad2989b197b28eedce" category="paragraph"><block ref="c9b3eea1b5f6b5ad2989b197b28eedce" category="inline-xref-macro-rx"></block></block>
+  <block id="4ad59273ade530447003d676a301cc73" category="paragraph"><block ref="4ad59273ade530447003d676a301cc73" category="inline-xref-macro-rx"></block></block>
+  <block id="fd83f34fd47d642e467d2796b016b097" category="paragraph">다음 표에는 릴리스 11.62의 CLI 및 스크립트 명령에 대한 변경 사항이 나와 있습니다.</block>
+  <block id="f37b13e86f97e59ee48d67277e240520" category="paragraph"><block ref="f37b13e86f97e59ee48d67277e240520" category="inline-xref-macro-rx"></block></block>
+  <block id="a26ca5d017415a1eef700afbebf2489d" category="paragraph"><block ref="a26ca5d017415a1eef700afbebf2489d" category="inline-xref-macro-rx"></block></block>
+  <block id="3529e34205440babbcc2a342fff713bd" category="paragraph"><block ref="3529e34205440babbcc2a342fff713bd" category="inline-xref-macro-rx"></block></block>
+  <block id="579c3e6c53c24b3c13e14718b192a91c" category="paragraph"><block ref="579c3e6c53c24b3c13e14718b192a91c" category="inline-xref-macro-rx"></block></block>
+  <block id="adeab83c7aebbd6a5921e03b39ae3692" category="paragraph"><block ref="adeab83c7aebbd6a5921e03b39ae3692" category="inline-xref-macro-rx"></block></block>
+  <block id="e9b46bd45d89b563069e32b2ab8efeec" category="paragraph"><block ref="e9b46bd45d89b563069e32b2ab8efeec" category="inline-xref-macro-rx"></block></block>
+  <block id="6e0478ffff0b3c1332c63ff8e7b14b09" category="paragraph"><block ref="6e0478ffff0b3c1332c63ff8e7b14b09" category="inline-xref-macro-rx"></block></block>
+  <block id="d90e4abdd3ee227c0579661d5d24cef3" category="paragraph"><block ref="d90e4abdd3ee227c0579661d5d24cef3" category="inline-xref-macro-rx"></block></block>
+  <block id="98f0ea9a8f189ba8cb3b4e0f6aad5027" category="paragraph"><block ref="98f0ea9a8f189ba8cb3b4e0f6aad5027" category="inline-xref-macro-rx"></block></block>
+  <block id="d45145e28afa4b36a26e000619d7782f" category="paragraph"><block ref="d45145e28afa4b36a26e000619d7782f" category="inline-xref-macro-rx"></block></block>
+  <block id="0ce9ea5c4824c57f4a47b87c1c3d0a25" category="paragraph"><block ref="0ce9ea5c4824c57f4a47b87c1c3d0a25" category="inline-xref-macro-rx"></block></block>
+  <block id="5a73a4d3914ce0c6f82c2c6d8225421d" category="paragraph"><block ref="5a73a4d3914ce0c6f82c2c6d8225421d" category="inline-xref-macro-rx"></block></block>
+  <block id="98104774738b4d9c0bba90497a5272b7" category="paragraph"><block ref="98104774738b4d9c0bba90497a5272b7" category="inline-xref-macro-rx"></block></block>
+  <block id="2ce1112caa707f16f23146b202be4be9" category="paragraph"><block ref="2ce1112caa707f16f23146b202be4be9" category="inline-xref-macro-rx"></block></block>
+  <block id="7a18d8afc4de5a81e7b0321efd958d8c" category="paragraph"><block ref="7a18d8afc4de5a81e7b0321efd958d8c" category="inline-xref-macro-rx"></block></block>
+  <block id="a17f26ca71a4bb33276e3037806eea2c" category="sidebar">SMcli 매개변수를 다운로드합니다</block>
+  <block id="a87e14eaf99b0ce7290927262e7cb91a" category="sidebar">레거시 CLI 매개 변수</block>
 </blocks>
