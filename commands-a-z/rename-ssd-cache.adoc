@@ -31,7 +31,7 @@ E2800 또는 E5700 스토리지 어레이에서 이 명령을 실행하려면 �
 
 [listing, subs="+macros"]
 ----
-set ssdCache pass:quotes[[_old_ssdCacheName_] userLabel=pass:quotes[_"new_ssdCacheName_"]
+set ssdCache pass:quotes[[_old_ssdCacheName_]] userLabel=pass:quotes[_"new_ssdCacheName_"]
 ----
 
 
