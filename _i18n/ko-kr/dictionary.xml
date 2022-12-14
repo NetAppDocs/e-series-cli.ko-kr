@@ -219,14 +219,10 @@
   <block id="b28de08f5f84620a8d9387e4bc82c145" category="list-text">역할 기반 액세스 관리를 사용할 수 있으며 다른 역할에 할당된 보안 권한이 다릅니다. 사용자 이름 인수를 사용하여 명령을 실행하려면 '-u' 옵션을 사용합니다.</block>
   <block id="31c49cbd47495cd0283671d9f563a6d0" category="list-text">이전에 '* symbol*' 모드에서 사용할 수 있었던 암호 인수는 '* https*' 모드에서도 사용할 수 있으며 특정 사용자 역할의 암호를 지정할 수 있습니다. 명령줄의 암호를 지정하는 데 -p 옵션을 사용하거나 파일 또는 'tdin'에서 암호를 읽을 수 있는 -P 옵션을 사용합니다.</block>
   <block id="a6531c9cca5e8e900e3ca0277d431ca8" category="paragraph">이 항목에는 새로운 명령줄 매개 변수를 설명하는 몇 가지 예제가 있습니다.</block>
-  <block id="c908ce368d4fe8339cba1bf1e4ea861a" category="section-title">암호가 필요한 작업, https 클라이언트 모드, 신뢰할 수 있는 인증서가 배열에 설치됩니다</block>
   <block id="16c398a12b24b49ad8fd9d8cf71bd34d" category="paragraph">다음 예에서는 사용자 이름과 암호 옵션이 모두 제공되며 신뢰할 수 있는 인증서가 스토리지에 설치됩니다.</block>
-  <block id="fa78d93e0beeed4f5375cf768e7a0381" category="section-title">암호가 필요한 작업, https 클라이언트 모드, 신뢰할 수 있는 인증서가 배열에 설치되지 않았습니다</block>
   <block id="57bccb659e7be24e1b2bfe3acd2728ae" category="paragraph">다음 예에서는 사용자 이름과 암호 옵션이 모두 제공되지만, 어레이에 신뢰할 수 있는 인증서가 설치되어 있지 않으며, '-k' 옵션이 사용되지 않았습니다. 이 예제에서는 반환되는 출력을 보여 줍니다.</block>
-  <block id="c063d79f0e133e1256a7a93c57688060" category="section-title">암호가 필요한 작업, https 클라이언트 모드, 설치된 신뢰할 수 있는 인증서가 없지만 자체 서명된 인증서에 -k를 사용합니다</block>
   <block id="945538cd7afe8709efac27b96915389d" category="paragraph">다음 예에서는 위의 예제와 같이 사용자 이름과 암호 옵션이 모두 제공되지만 신뢰할 수 있는 인증서가 스토리지에 설치되어 있지 않습니다. 그러나 이 경우 자체 서명된 인증서를 사용하기 위해 -k 옵션을 사용했습니다.</block>
   <block id="22d5e376747f8800631977368e13fe8a" category="paragraph">이 예에서는 '* symbol*' 클라이언트 모드를 사용하여 명령을 성공적으로 완료하려면 암호 옵션만 필요합니다.</block>
-  <block id="350c6ef338d6ab3369b1b85476ddb126" category="section-title">읽기 전용 작업, 기호 클라이언트 모드</block>
   <block id="8407b004173192880cab6c17030bbd4e" category="paragraph">이 예에서는 ' * symbol * ' 클라이언트 모드에서 사용자 이름과 암호가 제공되지 않습니다. 이 작업은 읽기 전용 작업에만 성공적으로 완료됩니다.</block>
   <block id="e09eb504f4a302a718a04fda53bbcb8c" category="section-title">읽기 전용 작업, http 클라이언트 모드입니다</block>
   <block id="87af3705302719c8461683fbfb64f57a" category="paragraph">다음 예제에서는 읽기 전용 작업뿐 아니라 '* https*' 클라이언트 모드에서도 사용자 이름과 암호가 모두 필요하며 자체 서명된 인증서를 수락하려면 '-k'와 함께 제공됩니다. '* https*' 클라이언트 모드는 읽기 전용 작업에도 암호가 필요합니다.</block>
@@ -4642,7 +4638,6 @@
   <block id="1f6350121cc6be42467adde5ceda9948" category="summary">set storageArray DirectoryServer roles 명령을 사용하면 지정된 디렉터리 서버에 대한 역할 매핑을 정의할 수 있습니다. 이러한 역할 매핑은 다양한 SMcli 명령을 실행하는 사용자를 인증하는 데 사용됩니다.</block>
   <block id="ba82f0e46ee4e71332f094495a7ef046" category="doc">스토리지 배열 디렉토리 서버 역할 매핑을 설정합니다</block>
   <block id="2ce33a36c7495d35412356b5df7429aa" category="paragraph">'Set storageArray DirectoryServer roles' 명령을 사용하면 지정된 디렉터리 서버에 대한 역할 매핑을 정의할 수 있습니다. 이러한 역할 매핑은 다양한 SMcli 명령을 실행하는 사용자를 인증하는 데 사용됩니다.</block>
-  <block id="eed5ddc8f738970611f01ee16f2a17e5" category="section-title">필요한 것</block>
   <block id="9423165348dbe1106dd8519c5f376e8a" category="paragraph">매핑할 수 있는 역할은 다음과 같습니다.</block>
   <block id="b146be7830b865aa772d4dd25fca1a78" category="list-text">* 스토리지 관리자 * -- 스토리지 객체(예: 볼륨 및 디스크 풀)에 대한 전체 읽기/쓰기 액세스이지만 보안 구성에 대한 액세스는 없습니다.</block>
   <block id="892ec2709f7a0ff6e883205b45a6d6a5" category="list-text">* 보안 관리자 * -- 액세스 관리, 인증서 관리, 감사 로그 관리 및 레거시 관리 인터페이스(기호)를 켜거나 끌 수 있는 기능의 보안 구성에 액세스합니다.</block>
@@ -7508,4 +7503,9 @@
   <block id="7a18d8afc4de5a81e7b0321efd958d8c" category="paragraph"><block ref="7a18d8afc4de5a81e7b0321efd958d8c" category="inline-xref-macro-rx"></block></block>
   <block id="a17f26ca71a4bb33276e3037806eea2c" category="sidebar">SMcli 매개변수를 다운로드합니다</block>
   <block id="a87e14eaf99b0ce7290927262e7cb91a" category="sidebar">레거시 CLI 매개 변수</block>
+  <block id="bc968b5475454c32c0accb20e0fffbde" category="section-title">암호가 필요한 작업,<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block> 클라이언트 모드, 신뢰할 수 있는 인증서가 배열에 설치됩니다</block>
+  <block id="7738c732553fe92af1f9ad5d112e48db" category="section-title">암호가 필요한 작업,<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block> 클라이언트 모드, 어레이에 신뢰할 수 있는 인증서가 설치되어 있지 않습니다</block>
+  <block id="54ae93e7b9eb6723cc6c1599cf7e1572" category="section-title">암호가 필요한 작업,<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block> 클라이언트 모드, 설치된 신뢰할 수 있는 인증서가 없지만 자체 서명된 인증서에 -k를 사용합니다</block>
+  <block id="9ccc3ce7d13f58c471a7befa5d7ad4bd" category="section-title">읽기 전용 작업,<block ref="97bff26855a8bfa63e05d5477e794b24" prefix=" " category="inline-code"></block> 클라이언트 모드입니다</block>
+  <block id="d59db7846bd10b6d60d21543df9faa9e" category="section-title">필요한 것</block>
 </blocks>

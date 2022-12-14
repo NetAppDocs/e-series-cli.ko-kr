@@ -64,7 +64,7 @@ iscsiHostPort를 선택합니다
 
 자세한 내용은 다음을 참조하십시오.
 
- an iSCSI host port label,"iSCSI 호스트 포트 레이블 식별"
+<<iSCSI 호스트 포트 레이블 식별,"iSCSI 호스트 포트 레이블 식별">>
 
 
 
