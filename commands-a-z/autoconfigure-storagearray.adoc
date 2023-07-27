@@ -51,6 +51,7 @@ pass:quotes[[readAheadMultiplier=_multiplierValue_]]
 [securityType=(none | capable | enabled)]
 [secureDrives=(fips | fde)]
 [dataAssurance=(none | enabled)]
+[blockSize=(512 | 4096)]
 ----
 
 
@@ -178,6 +179,13 @@ pass:quotes[[readAheadMultiplier=_multiplierValue_]]
 이 파라미터는 'ecurityType' 파라미터와 함께 사용한다. 'ecurityType' 매개 변수에 'none'을 지정하면 비보안 볼륨 그룹에 지정된 보안 드라이브 유형이 필요하지 않으므로 'ecureDrives' 매개 변수의 값이 무시됩니다.
 
 ====
+
+
+ a| 
+블록사이즈
+ a| 
+생성된 볼륨의 블록 크기(바이트)입니다. 지원되는 값은 입니다 `512` 및 `4096`.
+
 |===
 
 

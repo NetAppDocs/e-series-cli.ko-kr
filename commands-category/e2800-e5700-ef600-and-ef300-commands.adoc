@@ -368,6 +368,8 @@ link:../commands-a-z/save-storagearray-arvmstats-asyncmirrorgroup.html["비동�
 
 link:../commands-a-z/save-auditlog.html["감사 로그 기록을 저장합니다"]
 
+link:../commands-a-z/save-check-vol-parity-job-errors.html["저장 확인 볼륨 패리티 작업 패리티 오류"]
+
 link:../commands-a-z/save-controller-nvsram-file.html["컨트롤러 NVSRAM을 저장합니다"]
 
 link:../commands-a-z/save-drivechannel-faultdiagnostics-file.html["드라이브 채널 장애 격리 진단 상태를 저장합니다"]
@@ -582,6 +584,8 @@ link:../commands-a-z/show-storagearray-revocationchecksettings.html["인증서 �
 
 link:../commands-a-z/show-array-label.html["배열 레이블을 표시합니다"]
 
+link:../commands-a-z/show-check-vol-parity-jobs.html["볼륨 패리티 검사 작업을 표시합니다"]
+
 link:../commands-a-z/show-consistencygroup.html["정합성 보장 그룹을 표시합니다"]
 
 link:../commands-a-z/show-cgsnapimage.html["정합성 보장 그룹 스냅샷 이미지를 표시합니다"]
@@ -698,6 +702,8 @@ link:../commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html["Aut
 
 link:../commands-a-z/start-storagearray-ocspresponderurl-test.html["OCSP 서버 URL 테스트를 시작합니다"]
 
+link:../commands-a-z/start-check-vol-parity-job.html["볼륨 패리티 검사 작업을 시작합니다"]
+
 link:../commands-a-z/start-cgsnapimage-rollback.html["정합성 보장 그룹 스냅샷 롤백을 시작합니다"]
 
 link:../commands-a-z/start-controller.html["컨트롤러 트레이스를 시작합니다"]
@@ -755,6 +761,8 @@ link:../commands-a-z/start-volumegroup-import.html["볼륨 그룹 가져오기�
 link:../commands-a-z/start-volumegroup-locate.html["볼륨 그룹 찾기를 시작합니다"]
 
 link:../commands-a-z/start-volume-initialization.html["볼륨 초기화를 시작합니다"]
+
+link:../commands-a-z/stop-check-vol-parity-job.html["볼륨 패리티 검사 작업을 중지합니다"]
 
 link:../commands-a-z/stop-cgsnapimage-rollback.html["정합성 보장 그룹 스냅샷 롤백을 중지합니다"]
 

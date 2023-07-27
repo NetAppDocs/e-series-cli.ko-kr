@@ -67,22 +67,7 @@ capacity=_volumeCapacity_]
 [(existingRepositoryLabel=pass:quotes[_existingRepositoryName_] |
 [newRepositoryCapacity=pass:quotes[_newRepositoryCapacityValue_] (KB | MB | GB | TB | Bytes)]
 [repositoryMaxCapacity=pass:quotes[_repositoryMaxCapacityValue_](KB|MB|GB|TB|Bytes)]
-[warningThresholdPercent=pass:quotes[_warningThresholdPercentValue_]
-[repositoryExpansionPolicy=(automatic|manual)]
-[cacheReadPrefetch=(TRUE | FALSE)]
-----
-[listing, subs="+macros"]
-----
-create volume diskPool=pass:quotes[_"diskPoolName"_
-userLabel="_volumeName_"
-capacity=_volumeCapacity_]
-[thinProvisioned=(TRUE | FALSE)]
-[owner=(a|b)]
-[mapping=(none|default)]
-[(existingRepositoryLabel=pass:quotes[_existingRepositoryName_] |
-[newRepositoryCapacity=pass:quotes[_newRepositoryCapacityValue_] (KB | MB | GB | TB | Bytes)]
-[repositoryMaxCapacity=pass:quotes[_repositoryMaxCapacityValue_](KB|MB|GB|TB|Bytes)]
-[warningThresholdPercent=pass:quotes[_warningThresholdPercentValue_]]
+[warningThresholdPercent=pass:quotes][_warningThresholdPercentValue_]
 [repositoryExpansionPolicy=(automatic|manual)]
 [cacheReadPrefetch=(TRUE | FALSE)]
 ----
@@ -235,6 +220,8 @@ NOTE: RAID1 레벨 볼륨에서는 씬 프로비저닝을 사용할 수 없습�
 씬 볼륨을 생성할 때 최상의 결과를 얻으려면 저장소 볼륨이 이미 존재하거나 이미 존재하는 디스크 풀에 생성되어야 합니다. 씬 볼륨을 생성할 때 선택적 매개 변수 중 일부를 지정하지 않으면 스토리지 관리 소프트웨어가 저장소 볼륨 생성을 시도합니다. 가장 적합한 대상 볼륨은 이미 존재하고 크기 요구 사항 내에 있는 저장소 볼륨입니다. 다음으로 가장 적합한 대상 볼륨은 디스크 풀 사용 가능 범위에서 생성되는 새 저장소 볼륨입니다.
 
 씬 볼륨의 저장소 볼륨은 볼륨 그룹에서 생성할 수 없습니다.
+
+씬 프로비저닝된 볼륨은 EF300 또는 EF600에서 지원되지 않습니다.
 
 
 

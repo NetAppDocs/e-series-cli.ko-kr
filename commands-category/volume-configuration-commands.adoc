@@ -30,6 +30,8 @@ link:../commands-a-z/show-diskpool.html["디스크 풀을 표시합니다"]
 
 link:../commands-a-z/start-diskpool-fullprovisioning.html["디스크 풀 전체 프로비저닝을 시작합니다"]
 
+link:../commands-a-z/start-diskpool-resourceprovisioning.html["디스크 풀 리소스 프로비저닝을 시작합니다"]
+
 link:../commands-a-z/start-diskpool-locate.html["디스크 풀 찾기를 시작합니다"]
 
 link:../commands-a-z/stop-diskpool-locate.html["디스크 풀 찾기를 중지합니다"]
@@ -154,6 +156,8 @@ link:../commands-a-z/repair-volume-parity.html["볼륨 패리티를 복구합니
 
 link:../commands-a-z/repair-data-parity.html["데이터 패리티 복구"]
 
+link:../commands-a-z/save-check-vol-parity-job-errors.html["저장 확인 볼륨 패리티 작업 패리티 오류"]
+
 link:../commands-a-z/set-thin-volume-attributes.html["씬 볼륨 특성을 설정합니다"]
 
 link:../commands-a-z/set-volumes.html["디스크 풀의 볼륨에 대한 볼륨 속성 설정..."]
@@ -161,6 +165,8 @@ link:../commands-a-z/set-volumes.html["디스크 풀의 볼륨에 대한 볼륨 
 link:../commands-a-z/set-volume-group-attributes-for-volume-in-a-volume-group.html["볼륨 그룹의 볼륨에 대한 볼륨 특성을 설정합니다."]
 
 link:../commands-a-z/set-volume-logicalunitnumber.html["볼륨 매핑을 설정합니다"]
+
+link:../commands-a-z/show-check-vol-parity-jobs.html["볼륨 패리티 검사 작업을 표시합니다"]
 
 link:../commands-a-z/show-volume.html["씬 볼륨을 표시합니다"]
 
@@ -172,7 +178,11 @@ link:../commands-a-z/show-volume-performancestats.html["볼륨 성능 통계를 
 
 link:../commands-a-z/show-volume-reservations.html["볼륨 예약을 표시합니다"]
 
+link:../commands-a-z/start-check-vol-parity-job.html["볼륨 패리티 검사 작업을 시작합니다"]
+
 link:../commands-a-z/start-volume-initialization.html["볼륨 초기화를 시작합니다"]
+
+link:../commands-a-z/stop-check-vol-parity-job.html["볼륨 패리티 검사 작업을 중지합니다"]
 
 
 
@@ -201,6 +211,8 @@ link:../commands-a-z/start-volumegroup-defragment.html["볼륨 그룹 조각 모
 link:../commands-a-z/start-volumegroup-export.html["볼륨 그룹 내보내기를 시작합니다"]
 
 link:../commands-a-z/start-volumegroup-fullprovisioning.html["볼륨 그룹 전체 프로비저닝을 시작합니다"]
+
+link:../commands-a-z/start-volumegroup-resourceprovisioning.html["볼륨 그룹 리소스 프로비저닝을 시작합니다"]
 
 link:../get-started/learn-about-volume-group-migration.html["볼륨 그룹 마이그레이션에 대한 자세한 정보(CLI만 해당)"]
 

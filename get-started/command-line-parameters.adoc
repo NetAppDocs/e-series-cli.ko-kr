@@ -346,6 +346,13 @@ set session password=password
 
 
  a| 
+`-useLegacyTransferPort`
+ a| 
+전송 포트를 로 설정하는 데 사용됩니다 `8443` 기본값 대신 `443`.
+
+
+
+ a| 
 '-v'
  a| 
 '-d' 매개변수와 함께 사용할 경우 구성 파일에 있는 알려진 장치의 현재 전역 상태를 표시합니다.

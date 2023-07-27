@@ -69,6 +69,31 @@ iSCSI 대상이 IQN(iSCSI Qualified Name)을 사용하는 경우 IQN을 큰따�
 |===
 
 
+== 예
+
+[listing]
+----
+Retrieve initiator:
+
+SMcli -n Array1 -u admin@local -p adminPassword -k -c "show iscsiSessions;"
+
+Initiator information:
+    Host user label:               bbb000b00b0
+    Host port user label:          bbb000b00b0b0
+    Name:                          iqn.0b0b-0b.com:b0b0b0b0b0b0
+    Alias:                         None
+
+Host port user label:
+
+SMcli -n Array1 -u admin@local -p adminPassword -k -c "show iscsiInitiator [\"bbb000b00b0b0\"] iscsiSessions;"
+
+
+IQN:
+
+SMcli -n Array1 -u admin@local -p adminPassword -k -c "show iscsiInitiator <\"iqn.0b0b-0b.com:b0b0b0b0b0b0\"> iscsiSessions;"
+----
+
+
 == 참고
 
 인수를 정의하지 않고 이 명령을 입력하면 현재 실행 중인 모든 iSCSI 세션에 대한 정보가 반환됩니다. 다음 명령을 실행하면 현재 모든 iSCSI 세션에 대한 정보가 반환됩니다.

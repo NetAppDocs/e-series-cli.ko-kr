@@ -352,6 +352,8 @@ entries:
       url: "/commands-a-z/save-alltrays-logfile.html"
     - title: auditlog를 저장합니다
       url: "/commands-a-z/save-auditlog.html"
+    - title: 볼륨 확인 패리티 작업 패리티 오류 저장
+      url: "/commands-a-z/save-check-vol-parity-job-errors.html"
     - title: 컨트롤러 스토리지 관리관리자 저장
       url: "/commands-a-z/save-controller-arraymanagementcsr.html"
     - title: 컨트롤러 arraymanagedcertificate를 저장합니다
@@ -632,6 +634,8 @@ entries:
       url: "/commands-a-z/show-certificates.html"
     - title: cgsnapimage를 표시합니다
       url: "/commands-a-z/show-cgsnapimage.html"
+    - title: 볼륨 패리티 검사 작업을 표시합니다
+      url: "/commands-a-z/show-check-vol-parity-jobs.html"
     - title: 일관성 그룹을 표시합니다
       url: "/commands-a-z/show-consistencygroup.html"
     - title: show controller arraymanagedignedcertificate summary
@@ -766,6 +770,8 @@ entries:
       url: "/commands-a-z/start-asyncmirrorgroup-synchronize.html"
     - title: cgsnapimage 롤백을 시작합니다
       url: "/commands-a-z/start-cgsnapimage-rollback.html"
+    - title: 볼륨 패리티 검사 작업을 시작합니다
+      url: "/commands-a-z/start-check-vol-parity-job.html"
     - title: 컨트롤러 iscsihostport dhcprefresh를 시작합니다
       url: "/commands-a-z/start-controller-iscsihostport-dhcprefresh.html"
     - title: 컨트롤러를 시작합니다
@@ -854,6 +860,8 @@ entries:
       url: "/commands-a-z/stop-cgsnapimage-rollback.html"
     - title: cgsnapvolume을 중지합니다
       url: "/commands-a-z/stop-cgsnapvolume.html"
+    - title: 볼륨 패리티 검사 작업을 중지합니다
+      url: "/commands-a-z/stop-check-vol-parity-job.html"
     - title: 일관성 그룹 펜딩snapimagecreation을 중지합니다
       url: "/commands-a-z/stop-consistencygroup-pendingsnapimagecreation.html"
     - title: diskpool 위치를 중지합니다
