@@ -54,7 +54,7 @@ start drive pass:quotes[[_trayID_],pass:quotes[[_drawerID_,]]pass:quotes[_slotID
 
 
  a| 
-'늑대'나 '늑대'가 있습니다
+"내가 한 일"이라고 말했습니다
  a| 
 고용량 드라이브 트레이의 경우 트레이 ID 값, 서랍 ID 값 및 드라이브의 슬롯 ID 값을 지정합니다. 저용량 드라이브 트레이의 경우, 트레이 ID 값과 드라이브의 슬롯 ID 값을 지정합니다. 용지함 ID 값은 0 ~ 99입니다. 문서함 ID 값은 1에서 5까지.
 
