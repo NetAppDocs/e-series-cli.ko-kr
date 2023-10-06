@@ -6160,7 +6160,6 @@
   <block id="d27ee9db41cb355edea349ea7588c692" category="paragraph">'newCapacity'</block>
   <block id="8ec6fac1bb3dd6db9c73855881642036" category="paragraph">이 매개 변수는 씬 볼륨의 가상 용량을 늘립니다. 가상 용량은 볼륨이 볼륨에 매핑된 호스트에 보고할 값입니다. 값이 기존 용량과 같거나 작으면 오류가 발생합니다. 크기는 바이트, KB, MB, GB 또는 TB 단위로 정의됩니다.</block>
   <block id="4bd944c067cd0308263d9df1c820d71f" category="paragraph">최소 가상 용량은 32MB입니다.</block>
-  <block id="b306bb1dc4b136b774d5f8dca7910774" category="paragraph">최대 가상 용량은 63TB입니다.</block>
   <block id="e167788620b4089b203eb07b9e11ba76" category="paragraph">RepositoryMaxCapacity *</block>
   <block id="c25c025f154c8960a89c48b38d090c3d" category="paragraph">이 매개 변수는 저장소 볼륨의 최대 용량을 설정합니다. 값은 저장소 볼륨의 물리적 용량보다 작을 수 없습니다. 새 값으로 인해 용량이 경고 임계값 아래로 감소할 경우 명령이 오류를 생성합니다.</block>
   <block id="6e1e474416e0564ab880c5863366af19" category="paragraph">RepositoryMaxCapacity 명령은 RepositoryExpansionPolicy=automatic과 함께 작동합니다.</block>
@@ -6171,8 +6170,6 @@
   <block id="f1ab280b8906396f9d0a560168414811" category="paragraph">'addRepositoryCapacity' 명령은 RepositoryExpansionPolicy=manual과 함께 작동합니다.</block>
   <block id="de44d9b0c50726b618b8207ce1ec73ab" category="paragraph">'* hostReportingPolicy*'</block>
   <block id="948966fb14713f2284165893e91b093c" category="paragraph">이 매개 변수는 씬 볼륨이 호스트에 보고되는 방식을 변경합니다. 유효한 값은 '표준' 또는 '얇은' 값입니다.</block>
-  <block id="52157289efd480729928e4e0118c38e6" category="paragraph">63TB</block>
-  <block id="c1edd650c09defc6ca8d0aaf67803ddc" category="paragraph">64TB</block>
   <block id="8252060fadb0366cba7cd1c3d9b88cc7" category="summary">download storageArray driveFirmware file 명령은 스토리지 배열의 모든 드라이브에 펌웨어 이미지를 다운로드합니다.</block>
   <block id="9e56a4a70a6df59a0704a6194d9f0e16" category="doc">스토리지 어레이 드라이브 펌웨어를 다운로드합니다</block>
   <block id="79d0244851982761ba330d1eb5c8b49d" category="paragraph">download storageArray driveFirmware file 명령을 실행하면 펌웨어 이미지가 스토리지 배열의 모든 드라이브에 다운로드됩니다.</block>
@@ -7546,4 +7543,5 @@
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="f31b4701e236492b39f4226355cb1d49" category="paragraph">이 명령은 개별 E2800, E5700, EF600 또는 EF300 어레이에 적용됩니다. E2700와 E5600 스토리지 어레이에서는 작동하지 않습니다.</block>
+  <block id="9c224ec894ababac5f928548e584eb45" category="paragraph">최대 가상 용량은 256TB입니다.</block>
 </blocks>
