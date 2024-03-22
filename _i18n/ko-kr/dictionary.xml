@@ -7544,4 +7544,5 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="f31b4701e236492b39f4226355cb1d49" category="paragraph">이 명령은 개별 E2800, E5700, EF600 또는 EF300 어레이에 적용됩니다. E2700와 E5600 스토리지 어레이에서는 작동하지 않습니다.</block>
   <block id="9c224ec894ababac5f928548e584eb45" category="paragraph">최대 가상 용량은 256TB입니다.</block>
+  <block id="85e8092ad24869d134ad6af40b479c96" category="sidebar">SANtricity 시스템 관리자 내장 CLI 사용자 지원에 오신 것을 환영합니다. 이 페이지에서는 CLI(명령줄 인터페이스)를 사용하여 스토리지 배열을 구성, 모니터링 및 튜닝하는 방법을 확인할 수 있습니다.'</block>
 </blocks>

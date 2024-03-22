@@ -1,0 +1,32 @@
+---
+indexpage:
+  title: SANtricity 시스템 관리자 명령
+  summary: 에서는 SANtricity 명령의 구문 및 사용법을 설명합니다.
+  keywords: santricity, syntax, commands, user assistance
+  lead: SANtricity 시스템 관리자 내장 CLI 사용자 지원에 오신 것을 환영합니다. 이 페이지에서는 CLI(명령줄 인터페이스)를 사용하여
+    스토리지 배열을 구성, 모니터링 및 튜닝하는 방법을 확인할 수 있습니다.'
+  tiles:
+  - title: 시작하십시오
+    links:
+    - title: CLI 개요
+      url: get-started/overview-format-commands.html
+    - title: CLI 명령어 구조
+      url: get-started/structure-of-a-cli-command.html
+  - title: E-Series 문서
+    links:
+    - title: E-Series 시스템 문서
+      url: https://docs.netapp.com/us-en/e-series/index.html
+    - title: SANtricity 시스템 관리자 11.8
+      url: https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html
+    - title: SANtricity 유니파이드 관리자 6
+      url: https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html
+  - title: 도구 지원
+    links:
+    - title: NetApp 상호 운용성 매트릭스
+      url: http://mysupport.netapp.com/matrix/
+    - title: NetApp 기술 자료
+      url: https://kb.netapp.com/
+    - title: Active IQ(로그인 필요)
+      url: https://activeiq.netapp.com/?source=aiqnsspage
+    - title: E-Series/SANtricity 다운로드(로그인 필요)
+      url: https://mysupport.netapp.com/site/downloads#E
