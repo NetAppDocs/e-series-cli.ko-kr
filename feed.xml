@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>e-series-cli | NetApp Documentation</title>
+    <atom:link href="https://docs.netapp.com/ko-kr/e-series-cli/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>https://docs.netapp.com/ko-kr/e-series-cli</link>
+    <description>The latest updates from NetApp Documentation</description>
+    <language>ko-kr</language>
+    <ttl>60</ttl>
+    <pubDate>Fri, 22 Mar 2024 06:47:23 +0000</pubDate>
+    <lastBuildDate>Fri, 22 Mar 2024 06:47:23 +0000</lastBuildDate>
+    
+    
+    
+    <item>
+      <title>새로운 기능 (28 Jul 2023)</title>
+      <pubDate>Fri, 28 Jul 2023 19:45:21 +0000</pubDate>
+      <link>https://docs.netapp.com/ko-kr/e-series-cli/whats-new.html?time=1690573521</link>
+      <guid isPermaLink="false">Fri, 28 Jul 2023 19:45:21 +0000</guid>
+      <description><![CDATA[ 이 항목에서는 CLI 명령 및 스크립트 명령의 최신 SANtricity System Manager 릴리스에 있는 변경 사항을 나열합니다. ]]></description>
+    </item>
+    
+    
+  </channel>
+</rss>
