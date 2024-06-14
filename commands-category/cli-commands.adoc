@@ -270,7 +270,7 @@ link:../commands-a-z/recover-volume.html["RAID 볼륨을 복구합니다"]
 
 link:../commands-a-z/recover-sasport-miswire.html["SAS 포트 오선을 복구합니다"]
 
-link:../commands-a-z/recreate-storagearray-securitykey.adocV879933["외부 보안 키를 다시 만듭니다"]
+link:../commands-a-z/recreate-storagearray-securitykey.html["외부 보안 키를 다시 만듭니다"]
 
 link:../commands-a-z/recreate-storagearray-mirrorrepository.html["동기 미러링 저장소 볼륨을 다시 생성합니다"]
 

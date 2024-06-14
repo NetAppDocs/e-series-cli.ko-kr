@@ -5023,11 +5023,6 @@
   <block id="aa10cbdddfaa9b241492306fc663004c" category="paragraph">주소</block>
   <block id="81467412741bcb83b3995cc18b1516d9" category="paragraph">"DomainName" | IPv4Address | IPv6Address</block>
   <block id="d0ddb28e638271963e281c74aa6164ff" category="paragraph">도메인 이름이 지정된 경우, 컨트롤러가 서버 IP 주소를 확인할 수 있도록 DNS 서버도 구성해야 합니다.</block>
-  <block id="5f13d4f79dcde55f34ef328e9338aba4" category="paragraph">키식별자 키유형</block>
-  <block id="764c2b587e12f15a3e09f6b9eac104d7" category="paragraph">필요에 따라 이러한 매개 변수는 NTP 인증을 활성화하기 위한 키 자격 증명을 제공합니다.</block>
-  <block id="29bb257c3542b33e69d33ea7fc33c433" category="list-text">키 식별자(key Identifier)는 0에서 65535 사이의 정수입니다.</block>
-  <block id="01e68e6855a7e29f6658f124c09009fd" category="list-text">keyType은 NONE, SHA1, SH224, SHA256, SHA384 또는 SHA512 중 하나입니다.</block>
-  <block id="f6434eb840c71208dfb72ef5c786d39e" category="list-text">암호문은 정확히 40자리(stringLiteral)로 입력된 16진수(0-9, a-f 허용)이거나 최대 20바이트 길이의 영숫자 문자열입니다.</block>
   <block id="a1f3afaef8deadb0480d323937491c5a" category="paragraph">8.42는 NTP 인증에 대한 주요 자격 증명 매개 변수를 추가합니다.</block>
   <block id="6b975d7e3a0158d41f798db9ebc7665d" category="summary">create SnapGroup 명령은 새 스냅샷 그룹과 연결된 저장소 볼륨을 생성합니다.</block>
   <block id="dc6cbd29e6aaab91b2a92d369c5e5a32" category="doc">스냅샷 그룹을 생성합니다</block>
@@ -6518,7 +6513,6 @@
   <block id="5388c504a5adecf71c7c88e13a75a2bc" category="paragraph"><block ref="5388c504a5adecf71c7c88e13a75a2bc" category="inline-link-macro-rx"></block></block>
   <block id="13e26b8fa55eca651252e74cc22ca8a8" category="paragraph"><block ref="13e26b8fa55eca651252e74cc22ca8a8" category="inline-link-macro-rx"></block></block>
   <block id="b618091fab8ba81a2d7825c6dd871932" category="paragraph"><block ref="b618091fab8ba81a2d7825c6dd871932" category="inline-link-macro-rx"></block></block>
-  <block id="2703ec3e21c52f00ef1fdb6211a17fb5" category="paragraph"><block ref="2703ec3e21c52f00ef1fdb6211a17fb5" category="inline-link-macro-rx"></block></block>
   <block id="c8324b99fd0ae7e4d262f7ad6fc5b428" category="paragraph"><block ref="c8324b99fd0ae7e4d262f7ad6fc5b428" category="inline-link-macro-rx"></block></block>
   <block id="5e3d5953db77c176dfbd744f2a4d2933" category="paragraph"><block ref="5e3d5953db77c176dfbd744f2a4d2933" category="inline-link-macro-rx"></block></block>
   <block id="189115fcec4dd11c1e3edee24940c599" category="paragraph"><block ref="189115fcec4dd11c1e3edee24940c599" category="inline-link-macro-rx"></block></block>
@@ -7341,7 +7335,6 @@
   <block id="b6c9cb32de0a61002f039efec80a465c" category="paragraph">SANtricity OS 11.60 릴리스에는 SANtricity 시스템 관리자를 통해 직접 http 기반 버전의 CLI("보안 CLI" 또는 SMcli라고도 함)를 다운로드하고 설치할 수 있는 기능이 포함되어 있습니다. SMcli의 다운로드 가능한 버전은 EF600, EF300, E5700, EF570, E2800에서 사용할 수 있습니다. EF280 컨트롤러: SANtricity 시스템 관리자 내에서 SMcli를 다운로드하려면 * 설정 * &gt; * 시스템 * 및 * 추가 기능 * &gt; * 명령줄 인터페이스 * 를 선택합니다.</block>
   <block id="75842716a65060950b20cba161cbac95" category="admonition">CLI 명령을 실행하려는 관리 시스템에서 Java Runtime Environment(JRE) 버전 8 이상을 사용할 수 있어야 합니다.</block>
   <block id="c3369045597873cd151e0a9b94edab23" category="inline-xref-macro">레거시 명령줄 매개변수</block>
-  <block id="720d9a5bd635c70358cdcb41b1eaefaf" category="paragraph">이전 버전의 SMcli와 마찬가지로 SANtricity System Manager를 통해 다운로드할 수 있는 SMcli에는 고유한 매개변수 세트가 있습니다. SANtricity OS 11.53 및 이전 릴리스에 대한 명령줄 매개 변수 사용에 대한 자세한 내용은 을 참조하십시오 <block ref="55493e98e602a03e07f56f1acb2fb353" category="inline-xref-macro-rx"></block></block>
   <block id="1a98f49f191845835d6fd3e13eb29812" category="section-title">다단계 인증</block>
   <block id="e228e60d948488385c1b528cc75ed77d" category="paragraph">SAML(Security Assertion Markup Language)이 활성화된 경우 액세스 토큰만 CLI에서 사용할 수 있습니다. SAML이 활성화되지 않은 경우 사용자 이름/암호 또는 액세스 토큰을 사용할 수 있습니다. 액세스 토큰은 SANtricity 시스템 관리자를 통해 생성할 수 있습니다.</block>
   <block id="e88aeb63b8ab6fc616194c065b4c2b62" category="paragraph"><block ref="b7cc4b6b2b8c0f37377b5cc259385de0" prefix="" category="inline-code"></block></block>
@@ -7545,4 +7538,23 @@
   <block id="f31b4701e236492b39f4226355cb1d49" category="paragraph">이 명령은 개별 E2800, E5700, EF600 또는 EF300 어레이에 적용됩니다. E2700와 E5600 스토리지 어레이에서는 작동하지 않습니다.</block>
   <block id="9c224ec894ababac5f928548e584eb45" category="paragraph">최대 가상 용량은 256TB입니다.</block>
   <block id="85e8092ad24869d134ad6af40b479c96" category="sidebar">SANtricity 시스템 관리자 내장 CLI 사용자 지원에 오신 것을 환영합니다. 이 페이지에서는 CLI(명령줄 인터페이스)를 사용하여 스토리지 배열을 구성, 모니터링 및 튜닝하는 방법을 확인할 수 있습니다.'</block>
+  <block id="c4f2e9f91e3e5a0d9fb8f8728ed63376" category="paragraph">이전 버전의 SMcli와 마찬가지로 SANtricity System Manager를 통해 다운로드할 수 있는 SMcli에는 고유한 매개변수 세트가 있습니다. SANtricity OS 11.53 및 이전 릴리스에 대한 명령줄 매개 변수 사용에 대한 자세한 내용은 을 참조하십시오 <block ref="f6644819b412d8968161178a2ccec029" category="inline-link-macro-rx"></block>.</block>
+  <block id="2115a9072c5575f3300b4b18e5722de6" category="section-title">장비를 식별합니다</block>
+  <block id="90f4cf9a1fcd3d43e57768f9bb55bbfb" category="paragraph">다음 명령줄 매개 변수를 사용하면 호스트에 표시되는 모든 해당 디바이스에 대한 정보를 표시할 수 있습니다.</block>
+  <block id="222ae10a38daa5038e857b83e1adb270" category="admonition">SANtricity 11.81 릴리스부터 SMcli가 지원됩니다<block ref="35d5ed698aa483d3174ea619db10c0ac" prefix=" " category="inline-code"></block> 매개 변수는 이전에 SMdevices 도구를 통해 사용할 수 있었던 기능을 대체합니다.</block>
+  <block id="64ce8fcd5ac05bd3132098b5581a2dcf" category="paragraph"><block ref="35d5ed698aa483d3174ea619db10c0ac" prefix="" category="inline-code"></block></block>
+  <block id="f53cecbe90c0e9f04dc66481adf123c6" category="paragraph">스토리지 어레이와 연결된 모든 SCSI 기본 블록 장치를 찾습니다. 검색된 각 디바이스에 대해 기본 OS별 디바이스 이름, 관련 스토리지 시스템, 볼륨 이름, LUN 정보 등과 같은 다양한 정보를 보고합니다</block>
+  <block id="312574efd0c8e7ddeea92ab871822aed" category="paragraph">의 예는 다음을 참조하십시오<block ref="14993f95e0d6fc04f9966b0c368a7ed6" prefix=" " category="inline-code"></block> Linux 및 Windows 운영 체제 내의 매개 변수입니다.</block>
+  <block id="edc9f0a5a5d57797bf68e37364743831" category="listing-title">리눅스</block>
+  <block id="aea23489ce3aa9b6406ebb28e0cda430" category="listing-title">Windows</block>
+  <block id="94f04537971d7a4a561c607ec55952a2" category="section-title">추가 참고 사항</block>
+  <block id="ba151d8fe1acd0cb9eca1b6945962e62" category="list-text">SCSI 기반 호스트 인터페이스를 사용하는 x86-64 플랫폼을 실행하는 Linux 및 Windows 운영 체제에서만 호환됩니다.</block>
+  <block id="aaeaddd5c8faa1ad9f766c53197d7ab2" category="list-text">NVMe 기반 호스트 인터페이스는 지원되지 않습니다.</block>
+  <block id="fb52873edf9c97b7281409c640b5ed20" category="list-text">를 클릭합니다<block ref="35d5ed698aa483d3174ea619db10c0ac" prefix=" " category="inline-code"></block> 매개 변수는 OS 수준에서 다시 검색하지 않습니다. OS에 표시되는 기존 장치를 반복합니다.</block>
+  <block id="9c4b22635677ff419bec86d3f3219927" category="list-text">를 실행하려면 충분한 사용자 권한이 있어야 합니다<block ref="35d5ed698aa483d3174ea619db10c0ac" prefix=" " category="inline-code"></block> 명령.</block>
+  <block id="dbb8d2fd09a59e1ab8494de138ceffdb" category="list-text">여기에는 OS 네이티브 블록 디바이스에서 읽고 SCSI Inquiry 명령을 수행하는 기능이 포함됩니다.</block>
+  <block id="5b1cc65d11915b727018c6056792dcef" category="section-title">SANtricity 11.81 을 참조하십시오</block>
+  <block id="a92322756f07d387c173b27babcdad72" category="paragraph">다음 표에는 릴리즈 11.81의 CLI 및 스크립트 명령에 대한 변경 사항이 나와 있습니다.</block>
+  <block id="559b1de3f22ee41aed01495562ee7836" category="paragraph"><block ref="559b1de3f22ee41aed01495562ee7836" category="inline-xref-macro-rx"></block></block>
+  <block id="5fe9c86e85a56fcbfe366c1ef482deb0" category="paragraph">추가되었습니다<block ref="35d5ed698aa483d3174ea619db10c0ac" prefix=" " category="inline-code"></block> 매개 변수.</block>
 </blocks>

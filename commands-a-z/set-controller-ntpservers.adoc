@@ -48,7 +48,7 @@ E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실�
 [listing]
 ----
 
-set controller(a|b) NTPServers=(disabled|auto|(Address1 [keyIdentifier=integerLiteral() keyType=stringLiteral() passPhrase=stringLiteral()] [Address2 [keyIdentifier=integerLiteral() keyType=stringLiteral() passPhrase=stringLiteral()]]))
+set controller(a|b) NTPServers=(disabled|auto|(Address1 [Address2]))
 ----
 
 
@@ -99,20 +99,6 @@ NTP 설정을 변경할 컨트롤러입니다. 유효한 컨트롤러 식별자�
 도메인 이름이 지정된 경우, 컨트롤러가 서버 IP 주소를 확인할 수 있도록 DNS 서버도 구성해야 합니다.
 
 ====
-
-
- a| 
-키식별자 키유형
-
-패스프레이즈
- a| 
-필요에 따라 이러한 매개 변수는 NTP 인증을 활성화하기 위한 키 자격 증명을 제공합니다.
-
-* 키 식별자(key Identifier)는 0에서 65535 사이의 정수입니다.
-* keyType은 NONE, SHA1, SH224, SHA256, SHA384 또는 SHA512 중 하나입니다.
-* 암호문은 정확히 40자리(stringLiteral)로 입력된 16진수(0-9, a-f 허용)이거나 최대 20바이트 길이의 영숫자 문자열입니다.
-
-
 |===
 
 
@@ -122,9 +108,9 @@ NTP 설정을 변경할 컨트롤러입니다. 유효한 컨트롤러 식별자�
 ----
 set controller[a] NTPServers=disabled;
 set controller[a] NTPServers=auto;
-set controller[a] NTPServers=("0.pool.ntp.org" keyIdentifier=3 keyType="sha1" passPhrase="SomePassword1" "1.us.pool.ntp.org" keyIdentifier=3 keyType="sha1" passPhrase=" SomePassword1");
-set controller[b] NTPServers=(192.168.1.105 keyIdentifier=3 keyType="sha1" passPhrase=" SomePassword1" "1.us.pool.ntp.org");
-set controller[b] NTPServers=(set controller[b] NTPServers=(2001:0db8:85a3:0000:0000:8a2e:0370:7334 keyIdentifier=3 keyType="sha1" passPhrase=" SomePassword1");
+set controller[a] NTPServers=("0.pool.ntp.org" "1.us.pool.ntp.org");
+set controller[b] NTPServers=(192.168.1.105 "1.us.pool.ntp.org");
+set controller[b] NTPServers=(2001:0db8:85a3:0000:0000:8a2e:0370:7334);
 ----
 
 
