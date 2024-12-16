@@ -7,7 +7,7 @@ summary: show cgSnapImage 명령은 하나 이상의 스냅샷 정합성 보장 
 = 정합성 보장 그룹 스냅샷 이미지를 표시합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,19 +17,19 @@ summary: show cgSnapImage 명령은 하나 이상의 스냅샷 정합성 보장 
 
 == 지원되는 어레이
 
-이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+이 명령은 모든 SMcli 패키지가 설치되어 있는 경우 E4000, E2700, E5600, E2800, E5700, EF600 및 EF300 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
 == 역할
 
-E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+E4000, E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
 
 
 
 == 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 show ((CGSnapImage pass:quotes[[(_CGSnapImageName_ | _CGSnapImageSequenceNumber_)]]) |
 (CGSnapImages pass:quotes[[(_CGSnapImageNumber1_ ... _CGSnapImageNumbern_ |

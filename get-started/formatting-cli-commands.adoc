@@ -2,13 +2,20 @@
 permalink: get-started/formatting-cli-commands.html 
 sidebar: sidebar 
 keywords: format, rules, cli, commands 
-summary: 이름 또는 레이블의 일부로 사용되는 큰따옴표는 Windows, Linux 또는 Solaris 운영 체제에서 CLI 명령 및 스크립트 명령을 실행할 때 특별히 고려해야 합니다. 
+summary: 입력한 값 또는 이름을 기준으로 CLI 명령에 대해 특정 형식 규칙이 적용됩니다. 
 ---
 = CLI 명령의 형식 규칙
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+입력한 값 또는 이름을 기준으로 CLI 명령에 대해 특정 형식 규칙이 적용됩니다.
+
+
+
+== CLI 형식 규칙
 
 이름 또는 레이블의 일부로 사용되는 큰따옴표(" ")는 Windows, Linux 또는 Solaris 운영 체제에서 CLI 명령 및 스크립트 명령을 실행할 때 특별히 고려해야 합니다.
 

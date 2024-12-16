@@ -7,7 +7,7 @@ summary: SMcli enable | disable autoSupportOnDemand 명령은 AutoSupport OnDema
 = EMW 관리 도메인 수준에서 AutoSupport OnDemand 기능 활성화 또는 비활성화(SMcli만 해당)
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ summary: SMcli enable | disable autoSupportOnDemand 명령은 AutoSupport OnDema
 
 == 지원되는 어레이
 
-이 명령은 관리 도메인에 있는 모든 E2700 및 E5600 스토리지 어레이에 동시에 적용됩니다. E2800 또는 E5700 스토리지 어레이에는 적용되지 않습니다.
+이 명령은 관리 도메인에 있는 모든 E2700 및 E5600 스토리지 어레이에 동시에 적용됩니다. E4000, E2800 또는 E5700 스토리지 어레이에는 적용되지 않습니다.
 
 
 
@@ -34,7 +34,7 @@ summary: SMcli enable | disable autoSupportOnDemand 명령은 AutoSupport OnDema
 
 == 구문
 
-[listing]
+[source, cli]
 ----
 SMcli enable|disable autoSupportOnDemand
 ----

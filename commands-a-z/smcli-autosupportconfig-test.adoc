@@ -7,7 +7,7 @@ summary: SMcli -autoSupportConfig 테스트 명령을 사용하여 테스트 메
 = AutoSupport 구성을 테스트합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -37,7 +37,7 @@ summary: SMcli -autoSupportConfig 테스트 명령을 사용하여 테스트 메
 
 == 구문
 
-[listing]
+[source, cli]
 ----
 SMcli -autoSupportConfig test reply-toEmail<address>
 ----

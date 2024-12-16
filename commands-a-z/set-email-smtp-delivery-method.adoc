@@ -1,5 +1,5 @@
 ---
-permalink: commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html 
+permalink: commands-a-z/set-email-smtp-delivery-method.html 
 sidebar: sidebar 
 keywords: specify, email, smtp, delivery method, individual, E2800, E5700, arrays 
 summary: 'set storageArray AutoSupport deliveryMethod 명령은 AutoSupport 메시지를 전자 메일(SMTP)로 보내는 전달 방법을 설정합니다.' 
@@ -7,7 +7,7 @@ summary: 'set storageArray AutoSupport deliveryMethod 명령은 AutoSupport 메�
 = 이메일(SMTP) 전달 방법을 지정합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,22 +17,22 @@ et storageArray AutoSupport deliveryMethod 명령은 AutoSupport 메시지를 e-
 
 == 지원되는 어레이
 
-이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+이 명령은 개별 E4000, E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
 
 
 
 == 역할
 
-E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
+E4000, E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
 
 
 
 == 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set storageArray autoSupport deliveryMethod=email
-mailRelayServer=pass:quotes["_serverAddress_" senderEmail="_emailAddress_"]
+mailRelayServer=pass:quotes["_serverAddress_" senderEmail="_emailAddress_"] destinationAddress="destination1@example.com" destinationAddress="destination2@example.com";
 ----
 
 
@@ -49,7 +49,6 @@ mailRelayServer=pass:quotes["_serverAddress_" senderEmail="_emailAddress_"]
 사용자가 AutoSupport 컬렉션의 전달 방법을 지정할 수 있습니다. 유효한 선택 항목은 다음과 같습니다.
 
 * 이메일
-* HTTP
 * HTTPS
 
 
@@ -71,6 +70,13 @@ mailRelayServer=pass:quotes["_serverAddress_" senderEmail="_emailAddress_"]
 '이메일'을 선택합니다
  a| 
 사용자가 AutoSupport 컬렉션에 대한 전자 메일 보내기 주소를 지정할 수 있습니다.
+
+
+
+ a| 
+`destinationAddress`
+ a| 
+AutoSupport 디스패치가 전송될 이메일 주소입니다. 이 매개변수는 디스패치가 여러 주소로 전송될 수 있도록 여러 번 제공될 수 있습니다.
 
 |===
 

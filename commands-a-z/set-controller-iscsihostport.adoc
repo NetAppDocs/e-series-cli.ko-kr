@@ -7,7 +7,7 @@ summary: set controller iscsiHostPort 명령은 IPv4 및 IPv6 속성, 포트 속
 = iSCSI 호스트 포트 네트워킹 속성을 설정합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ set controller iscsiHostPort 명령은 IPv4 및 IPv6 속성, 포트 속도 및 �
 
 == 지원되는 어레이
 
-이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+이 명령은 모든 SMcli 패키지가 설치되어 있는 경우 E4000, E2700, E5600, E2800, E5700, EF600 및 EF300 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
 == 역할
 
-E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+E4000, E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
 
 [NOTE]
 ====
@@ -34,94 +34,94 @@ E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실�
 
 == 구문
 
-[listing]
+[source, cli]
 ----
 set controller [(a|b)]
 iscsiHostPort [portLabel]
 ----
-[listing]
+[source, cli]
 ----
 ([IPv4Address=(0-255).(0-255).(0-255).(0-255) ]|
 ----
-[listing]
+[source, cli]
 ----
 [IPv6LocalAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF)] |
 ----
-[listing]
+[source, cli]
 ----
 [IPv6RoutableAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) ]|
 ----
-[listing]
+[source, cli]
 ----
 [IPv6RouterAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) ]|
 ----
-[listing]
+[source, cli]
 ----
 [enableIPv4=(TRUE | FALSE) | enableIPv6=(TRUE | FALSE)] |
 ----
-[listing]
+[source, cli]
 ----
 [enableIPv4Vlan=(TRUE | FALSE) | enableIPv6Vlan=(TRUE | FALSE)] |
 ----
-[listing]
+[source, cli]
 ----
 [enableIPv4Priority=(TRUE | FALSE) | enableIPv6Priority=(TRUE | FALSE) ]|
 ----
-[listing]
+[source, cli]
 ----
 [IPv4ConfigurationMethod=(static | dhcp) ]|
 ----
-[listing]
+[source, cli]
 ----
 [IPv6ConfigurationMethod=(static | auto)] |
 ----
-[listing]
+[source, cli]
 ----
 [IPv4GatewayIP=(TRUE | FALSE)] |
 ----
-[listing]
+[source, cli]
 ----
 [IPv6HopLimit=[0-255] ]|
 ----
-[listing]
+[source, cli]
 ----
 [IPv6NdDetectDuplicateAddress=[0-256] ]|
 ----
-[listing]
+[source, cli]
 ----
 [IPv6NdReachableTime=[0-65535] ]|
 ----
-[listing]
+[source, cli]
 ----
 [IPv6NdRetransmitTime=[0-65535]] |
 ----
-[listing]
+[source, cli]
 ----
 [IPv6NdTimeOut=[0-65535] ]|
 ----
-[listing]
+[source, cli]
 ----
 [IPv4Priority=[0-7] | IPv6Priority=[0-7] ]|
 ----
-[listing]
+[source, cli]
 ----
 [IPv4SubnetMask=(0-255).(0-255).(0-255).(0-255)] |
 ----
-[listing]
+[source, cli]
 ----
 [IPv4VlanId=[1-4094] | IPv6VlanId=[1-4094]] |
 ----
-[listing]
+[source, cli]
 ----
 [maxFramePayload=[*frameSize*]] |
 ----
-[listing]
+[source, cli]
 ----
 [tcpListeningPort=[3260, 49152-65536] ]|
 ----
-[listing]
+[source, cli]
 ----
-[portSpeed=[(10 | 25)])
+[portSpeed=[(10 | 25)]])
 ----
 
 

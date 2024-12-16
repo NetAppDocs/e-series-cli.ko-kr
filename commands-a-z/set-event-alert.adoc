@@ -7,7 +7,7 @@ summary: set event alert 명령은 특정 alertable 이벤트와 관련된 알�
 = 이벤트 경고 필터링을 설정합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -55,7 +55,7 @@ set event alert CLI 명령은 단일 스토리지 어레이에서 작동합니�
 
 == 이벤트 알림을 차단하는 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set blockEventAlert pass:quotes[_eventType_]
 ----
@@ -63,7 +63,7 @@ set blockEventAlert pass:quotes[_eventType_]
 
 == 이벤트 알림을 차단 해제하는 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set unBlockEventAlert pass:quotes[_eventType_]
 ----

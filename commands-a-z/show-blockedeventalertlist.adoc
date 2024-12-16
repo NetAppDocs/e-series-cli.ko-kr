@@ -7,7 +7,7 @@ summary: show blockedEventAlertList 명령은 set blockEventAlert 명령으로 �
 = 차단된 이벤트 표시
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -32,7 +32,7 @@ sockedEventAlertList 명령은 Set blockEventAlert 명령으로 현재 차단된
 
 == 구문
 
-[listing]
+[source, cli]
 ----
 show blockedEventAlertList
 ----

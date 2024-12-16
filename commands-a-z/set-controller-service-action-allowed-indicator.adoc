@@ -7,7 +7,7 @@ summary: set controller 명령은 컨트롤러 트레이 또는 컨트롤러 드
 = 컨트롤러 서비스 작업 허용 표시기를 설정합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -34,7 +34,7 @@ summary: set controller 명령은 컨트롤러 트레이 또는 컨트롤러 드
 
 == 구문
 
-[listing]
+[source, cli]
 ----
 set controller [(a| b)]
 serviceAllowedIndicator=(on | off)

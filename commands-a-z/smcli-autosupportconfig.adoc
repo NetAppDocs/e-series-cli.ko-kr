@@ -7,7 +7,7 @@ summary: SMcli -autoSupportConfig 명령은 AutoSupport 메시지를 보내기 �
 = AutoSupport 전달 방법을 지정합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ summary: SMcli -autoSupportConfig 명령은 AutoSupport 메시지를 보내기 �
 
 == 지원되는 어레이
 
-이 명령은 관리 도메인에 있는 모든 E2700 및 E5600 스토리지 어레이에 동시에 적용됩니다. E2800 또는 E5700 스토리지 어레이에는 적용되지 않습니다.
+이 명령은 관리 도메인에 있는 모든 E2700 및 E5600 스토리지 어레이에 동시에 적용됩니다. E4000, E2800 또는 E5700 스토리지 어레이에는 적용되지 않습니다.
 
 
 
@@ -38,7 +38,7 @@ AutoSupport 메시지를 보내기 위한 두 가지 주요 전달 방법을 만
 
 == SMTP 배달 방법 구문
 
-[listing]
+[source, cli]
 ----
 SMcli -autoSupportConfig deliveryMethod=SMTP
 mailRelayServer=<mailRelayServerName> senderMail=<senderEmailAddress>

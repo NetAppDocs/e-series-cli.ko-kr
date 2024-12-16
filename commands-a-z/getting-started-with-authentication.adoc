@@ -7,7 +7,7 @@ summary: 인증을 위해서는 사용자가 할당된 로그인 자격 증명�
 = 인증 시작하기
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

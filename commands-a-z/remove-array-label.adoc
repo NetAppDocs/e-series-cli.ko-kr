@@ -7,7 +7,7 @@ summary: 스토리지 레이블 제거 명령을 사용하면 스토리지 배�
 = 스토리지 레이블을 제거합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -23,7 +23,7 @@ summary: 스토리지 레이블 제거 명령을 사용하면 스토리지 배�
 
 == 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 delete storageArrayLabel label pass:quotes[_userDefinedString_]
 delete storageArrayLabel all

@@ -7,7 +7,7 @@ summary: show check volume parity job 명령은 지정된 볼륨 패리티 검�
 = 볼륨 패리티 검사 작업을 표시합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -29,7 +29,7 @@ EF600 및 EF300 스토리지 어레이에서 이 명령을 실행하려면 스�
 
 == 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 show check volume parity job jobId=<job_id>;
 ----

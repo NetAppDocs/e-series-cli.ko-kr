@@ -7,10 +7,13 @@ summary: Windows PowerShell은 명령줄 도구에 대한 액세스를 제공하
 = Windows PowerShell에서 CLI 명령에 대한 형식 규칙을 지정합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
-Windows PowerShell은 명령줄 도구에 대한 액세스를 제공하는 대화형 스크립팅 셸입니다. Windows PowerShell은 더욱 강력한 명령 세트와 스크립팅 기능을 통해 Windows 명령 프롬프트에서 더욱 향상된 기능을 제공합니다. Windows PowerShell에서 모든 CLI 및 스크립트 명령을 실행할 수 있지만, Windows PowerShell에는 몇 가지 고유한 서식 요구 사항이 있습니다. 요구 사항은 다음과 같습니다.
+[role="lead"]
+Windows PowerShell은 명령줄 도구에 대한 액세스를 제공하는 대화형 스크립팅 셸입니다.
+
+Windows PowerShell은 더욱 강력한 명령 세트와 스크립팅 기능을 통해 Windows 명령 프롬프트에서 더욱 향상된 기능을 제공합니다. Windows PowerShell에서 모든 CLI 및 스크립트 명령을 실행할 수 있지만, Windows PowerShell에는 몇 가지 고유한 서식 요구 사항이 있습니다. 요구 사항은 다음과 같습니다.
 
 * 모든 SMcli 명령을 마침표 및 슬래시(./)로 시작합니다.
 * SMcli 래퍼는 .exe 확장자(SMcli.exe)를 사용하여 실행 가능한 명령으로 식별되어야 합니다.

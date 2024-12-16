@@ -7,7 +7,7 @@ summary: 보안 키는 문자열을 말합니다. 이 문자열은 스토리지 
 = 내부 키 관리 시작
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

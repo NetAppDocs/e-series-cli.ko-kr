@@ -7,7 +7,7 @@ summary: set storageArray resourceProvisionedVolumes 명령은 DULBE 기능을 �
 = 스토리지 시스템 리소스 프로비저닝된 볼륨을 설정합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -39,7 +39,7 @@ EF600 및 EF300 스토리지 어레이에서 이 명령을 실행하려면 스�
 
 == 구문
 
-[listing]
+[source, cli]
 ----
 set storageArray resourceProvisionedVolumes=(enable|disable)
 ----

@@ -7,7 +7,7 @@ summary: export storageArray securityKey 명령은 드라이브 보안 키를 �
 = 스토리지 배열 보안 키를 내보냅니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ export storageArray securityKey 명령은 드라이브 보안 키를 파일에 �
 
 == 지원되는 어레이
 
-외부 키 관리를 사용하는 경우 이 명령은 E2800, E5700, EF600 및 EF300 어레이에만 적용됩니다. 내부 키 관리가 활성화된 경우 모든 SMcli 패키지가 설치된 경우 명령은 개별 스토리지 배열에 적용됩니다.
+외부 키 관리가 활성화된 경우 이 명령은 E4000, E2800, E5700, EF600 및 EF300 어레이에만 적용됩니다. 내부 키 관리가 활성화된 경우 모든 SMcli 패키지가 설치된 경우 명령은 개별 스토리지 배열에 적용됩니다.
 
 
 
 == 역할
 
-E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+E4000, E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
 
 
 
@@ -40,7 +40,7 @@ E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실�
 
 == 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 export storageArray securityKey
 pass:quotes[passPhrase="_passPhraseString_"]

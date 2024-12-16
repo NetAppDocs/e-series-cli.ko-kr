@@ -7,7 +7,7 @@ summary: set storageArray 명령은 스토리지 배열의 속성을 정의합�
 = 스토리지 배열을 설정합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: set storageArray 명령은 스토리지 배열의 속성을 정의합�
 
 == 지원되는 어레이
 
-이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+이 명령은 모든 SMcli 패키지가 설치되어 있는 경우 E4000, E2700, E5600, E2800, E5700, EF600 및 EF300 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
 == 역할
 
-E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+E4000, E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
 
 
 
@@ -38,7 +38,7 @@ E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실�
 
 == 구문
 
-[listing]
+[source, cli]
 ----
 set storageArray
 ([autoLoadBalancingEnable=(TRUE | FALSE)]|
@@ -49,7 +49,6 @@ set storageArray
 [autoSupportRemoteDiag (enable |disable)]|
 [cacheBlockSize=cacheBlockSizeValue]|
 [cacheFlushStart=cacheFlushStartSize]|
-[cacheFlushStop=cacheFlushStopSize]|
 [cacheMirrorDataAssuranceCheckEnable=(TRUE | FALSE)]|
 [controllerHealthImageAllowOverWrite]|
 [defaultHostType=("hostTypeName" |"hostTypeIdentifier")] |
@@ -60,13 +59,13 @@ set storageArray
 [icmpPingResponse=(TRUE | FALSE)]|
 [isnsIPV4ConfigurationMethod isns IPv4 Config Method Parameters]|
 [isnsIPv6Address=ipAddress]|
-[isnsListeningPort=listeningPortIPAddress]]|
+[isnsListeningPort=listeningPortIPAddress]|
 [isnsRegistration=(TRUE | FALSE)]|
 [learnCycleDate learn cycle parameters]|
 [localUsername=local user name parameters]|
 [loginBanner file="path_to_login_banner"]|
 [managementInterface restOnly={true | false}]|
-[mediaScanRate=(disabled | 1-30)]|
+[mediaScanRate=(disabled | 1-210)]|
 [odxEnabled=(TRUE | FALSE)]|
 [password="password"]|
 [passwordLength=<INTEGER>]|
@@ -306,7 +305,7 @@ iSNS 등록에 대한 자세한 내용은 'et storageArray isnsRegistration' 명
  a| 
 '메디스캔레이트'
  a| 
-미디어 검사가 실행되는 기간(일)입니다. 유효한 값은 미디어 스캔을 끄는 비활성화 또는 1일에서 30일로, 1일은 가장 빠른 스캔 속도이고 30일은 가장 느린 스캔 속도입니다. 비활성화(dissabled) 또는 1에서 30까지 값을 사용하면 미디어 스캔이 작동하지 않습니다.
+미디어 검사가 실행되는 기간(일)입니다. 유효한 값은 미디어 스캔을 끄는 `1` 값이거나 `disabled` 일-일 `1` 단위이며, 여기서 `210` 일은 가장 빠른 스캔 속도이고 일은 가장 느린 스캔 속도입니다. `210` 또는 `1` ~ `210` 이외의 값은 `disabled` 미디어 스캔이 작동하지 않습니다.
 
 
 

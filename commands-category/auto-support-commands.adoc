@@ -7,8 +7,11 @@ summary: 자동 지원 명령
 = 자동 지원 명령
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+다음 자동 지원 명령 목록은 E-Series 스토리지 시스템에서 사용할 수 있습니다.
 
 
 
@@ -44,24 +47,26 @@ link:../commands-a-z/save-storagearray-supportdata.html["스토리지 배열 지
 
 
 
-== E2800, E5700용 AutoSupport 명령
+== E4000, EF300, EF400, E2800, E5700용 AutoSupport 명령
 
-link:../commands-a-z/set-storagearray-autosupportmaintenancewindow.html["AutoSupport 유지보수 윈도우 활성화 또는 비활성화(개별 E2800 또는 E5700 어레이)"]
+link:../commands-a-z/set-autosupport-dispatch-limit.html["AutoSupport 디스패치 크기 제한을 설정합니다"]
 
-link:../commands-a-z/set-storagearray-autosupportondemand.html["AutoSupport OnDemand 기능 활성화 또는 비활성화(개별 E2800 또는 E5700 어레이용)"]
+link:../commands-a-z/set-storagearray-autosupportmaintenancewindow.html["AutoSupport 유지 관리 창을 사용 또는 사용하지 않도록 설정합니다"]
 
-link:../commands-a-z/set-storagearray-autosupportremotediag.html["AutoSupport 원격 진단 기능 활성화 또는 비활성화(개별 E2800 또는 E5700 어레이)"]
+link:../commands-a-z/set-storagearray-autosupportondemand.html["AutoSupport OnDemand 기능을 활성화 또는 비활성화합니다"]
 
-link:../commands-a-z/save-storagearray-autosupport-log.html["AutoSupport 로그 검색(개별 E2800 또는 E5700 어레이)"]
+link:../commands-a-z/set-storagearray-autosupportremotediag.html["AutoSupport 원격 진단 기능을 활성화 또는 비활성화합니다"]
 
-link:../commands-a-z/reset-storagearray-autosupport-schedule.html["AutoSupport 메시지 수집 일정 재설정(개별 E2800 또는 E5700 어레이)"]
+link:../commands-a-z/save-storagearray-autosupport-log.html["AutoSupport 로그를 조회한다"]
+
+link:../commands-a-z/reset-storagearray-autosupport-schedule.html["AutoSupport 메시지 수집 일정을 재설정합니다"]
 
 link:../commands-a-z/show-storagearray-autosupport.html["show AutoSupport configuration(E2800 또는 E5700 스토리지 어레이의 경우)"]
 
-link:../commands-a-z/set-storagearray-autosupport-schedule.html["AutoSupport 메시지 수집 일정 설정(개별 E2800 또는 E5700 어레이)"]
+link:../commands-a-z/set-storagearray-autosupport-schedule.html["AutoSupport 메시지 수집 스케줄을 설정합니다"]
 
-link:../commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html["AutoSupport HTTP(S) 제공 방법 지정(개별 E2800 또는 E5700 어레이)"]
+link:../commands-a-z/set-autosupport-https-delivery-method.html["AutoSupport HTTP(S) 전달 방법을 지정합니다"]
 
-link:../commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html["이메일(SMTP) 전달 방법 지정(개별 E2800 또는 E5700 어레이)"]
+link:../commands-a-z/set-email-smtp-delivery-method.html["이메일(SMTP) 전달 방법을 지정합니다"]
 
-link:../commands-a-z/start-storagearray-autosupport-deliverytest.html["AutoSupport 제공 설정 테스트(개별 E2800 또는 E5700 어레이)"]
+link:../commands-a-z/start-storagearray-autosupport-deliverytest.html["AutoSupport 전송 설정을 테스트합니다"]

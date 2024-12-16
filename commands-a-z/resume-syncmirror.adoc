@@ -7,7 +7,7 @@ summary: resume SyncMirror 명령은 일시 중단된 동기식 미러링 작업
 = 동기식 미러링을 다시 시작합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ reSUME SyncMirror 명령은 일시 중단된 동기 미러링 작업을 다시 �
 
 == 지원되는 어레이
 
-이 명령은 E2700, E5600, E2800 및 E5700 어레이를 포함한 개별 스토리지 어레이에 적용됩니다. 모든 SMcli 패키지가 설치된 경우
+이 명령은 모든 SMcli 패키지가 설치되어 있는 경우 E4000, E2700, E5600, E2800 및 E5700 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
 == 역할
 
-E2800 또는 E5700 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+E4000, E2800 또는 E5700 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
 
 
 
@@ -38,7 +38,7 @@ E2800 또는 E5700 스토리지 어레이에서 이 명령을 실행하려면 �
 
 == 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 resume syncMirror (primary pass:quotes[[_volumeName_]] |
 primaries pass:quotes[[_volumeName1 ... volumeNameN_]])

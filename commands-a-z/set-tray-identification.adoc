@@ -7,7 +7,7 @@ summary: 트레이 설정 명령은 스토리지 배열의 컨트롤러 트레�
 = 용지함 ID를 설정합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -35,7 +35,7 @@ E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실�
 
 == 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set tray pass:quotes[["_serialNumber_"]] pass:quotes[id=_trayID_]
 ----

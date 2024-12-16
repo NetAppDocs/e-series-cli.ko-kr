@@ -7,7 +7,7 @@ summary: 'save controller arrayManagementCSR 명령은 컨트롤러의 CSR(인�
 = 웹 서버 CSR(인증서 서명 요청) 생성
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: 'save controller arrayManagementCSR 명령은 컨트롤러의 CSR(인�
 
 == 지원되는 어레이
 
-이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+이 명령은 개별 E4000, E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
 
 
 
 == 역할
 
-E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+E4000, E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
 
 
 
@@ -35,7 +35,7 @@ CSR은 인증 기관(CA)에서 서명해야 합니다. 이렇게 서명된 인�
 
 == 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 
 save controller [(a|b)] arrayManagementCSR
@@ -47,6 +47,7 @@ save controller [(a|b)] arrayManagementCSR
      locality=pass:quotes["_cityOrLocality_"]
      [stateProvince=pass:quotes["_stateOrRegion_"]]
      country=pass:quotes["_string_"]
+     keySize=["2048 | 3072 | 4096 "]
      file=pass:quotes["_filename_"]
 ----
 
@@ -118,6 +119,13 @@ CSR을 생성할 컨트롤러를 지정할 수 있습니다. 유효한 컨트롤
 "국가"입니다
  a| 
 미국 등의 국가 2자리 ISO(International Organization for Standardization) 코드를 지정할 수 있습니다.
+
+
+
+ a| 
+`keySize`
+ a| 
+서버의 키 크기에 대해, `3072` 또는 `4096` 값을 지정할 수 `2048` 있습니다. 키 크기를 선택하지 않은 경우 기본 키 크기는 3072입니다.
 
 
 

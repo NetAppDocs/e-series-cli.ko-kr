@@ -7,7 +7,7 @@ summary: set snapVolume convertToReadWrite 명령은 읽기 전용 볼륨인 스
 = 읽기 전용 스냅샷 볼륨을 읽기/쓰기 볼륨으로 설정합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ set snapVolume convertToReadWrite 명령을 실행하면 읽기 전용 볼륨인
 
 == 지원되는 어레이
 
-이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+이 명령은 모든 SMcli 패키지가 설치되어 있는 경우 E4000, E2700, E5600, E2800, E5700, EF600 및 EF300 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
 == 역할
 
-E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+E4000, E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
 
 
 
@@ -35,12 +35,12 @@ E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실�
 
 == 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set snapVolume pass:quotes[["_snapImageVolumeName_"]] convertToReadWrite
 [(repositoryVolume="repos_xxxx" |
-repositoryVolume=pass:quotes[(_volumeGroupName_] [capacity=pass:quotes[_capacityValue_]])
-repositoryVolume=pass:quotes[(_diskPoolName_] [capacity=pass:quotes[_capacityValue_]))]]
+repositoryVolume=pass:quotes[(_volumeGroupName_)] [capacity=pass:quotes[_capacityValue_]])
+repositoryVolume=pass:quotes[(_diskPoolName_)] [capacity=pass:quotes[_capacityValue_]]]
 [repositoryFullLimit=pass:quotes[_percentValue_]]
 ----
 

@@ -7,7 +7,7 @@ summary: set emailAlert 명령은 이메일을 지정된 기술 지원 또는 �
 = e-메일 알림 설정을 구성합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,15 +17,14 @@ summary: set emailAlert 명령은 이메일을 지정된 기술 지원 또는 �
 
 == 지원되는 어레이
 
-이 명령은 E2800, E5700, EF600 및 EF300 스토리지 어레이에 적용됩니다. 그러나 E2700 또는 E5600 어레이의 경우, 명령을 스크립트 명령이 아니라 SMcli 명령으로 사용할 수 있습니다. 이 경우 명령은 관리 도메인에 있는 모든 스토리지에 적용됩니다.
+이 명령은 E4000, E2800, E5700, EF600 및 EF300 스토리지 어레이에 적용됩니다. 그러나 E2700 또는 E5600 어레이의 경우, 명령을 스크립트 명령이 아니라 SMcli 명령으로 사용할 수 있습니다. 이 경우 명령은 관리 도메인에 있는 모든 스토리지에 적용됩니다.
 
 
 
 == 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
-
 set emailAlert
     serverAddress=pass:quotes["_serverAddress_"] |
     serverEncryption=pass:quotes[_none_ | _smtps_ | _starttls_ |]

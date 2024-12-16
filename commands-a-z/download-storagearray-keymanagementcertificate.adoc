@@ -7,7 +7,7 @@ summary: download storageArray keyManagementCertificate 명령은 스토리지 �
 = 스토리지 배열 외부 키 관리 인증서를 설치합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ dowload storageArray keyManagementCertificate 명령을 실행하면 스토리�
 
 == 지원되는 어레이
 
-이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+이 명령은 개별 E4000, E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
 
 
 
 == 역할
 
-E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
+E4000, E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 보안 관리자 역할이 있어야 합니다.
 
 
 
@@ -38,10 +38,9 @@ E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실�
 
 == 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
-
-pass:quotes[download storageArray keyManagementClientCertificate certificateType=(client|server) file="_filename_"]
+pass:quotes[download storageArray keyManagementClientCertificate certificateType=(client|server) file="_filename_" [privateKeyFile = "keyFileName"]]
 ----
 
 
@@ -63,6 +62,13 @@ pass:quotes[download storageArray keyManagementClientCertificate certificateType
 '파일'
  a| 
 클라이언트 서명 인증서 또는 서버 루트/중간 CA 인증서를 지정할 수 있습니다. 파일은 PEM/DER 형식이어야 합니다.
+
+
+
+ a| 
+`privateKeyFile`
+ a| 
+서명된 인증서와 함께 개인 키를 다운로드할 수 있습니다.  `privateKeyFile`매개 변수는 value와 함께 사용해야 `certificateType=client` 합니다.
 
 |===
 

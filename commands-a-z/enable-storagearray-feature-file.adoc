@@ -7,7 +7,7 @@ summary: enable storageArray feature file 명령을 사용하면 스토리지 �
 = 스토리지 배열 기능을 설정합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: enable storageArray feature file 명령을 사용하면 스토리지 �
 
 == 지원되는 어레이
 
-이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+이 명령은 모든 SMcli 패키지가 설치되어 있는 경우 E4000, E2700, E5600, E2800, E5700, EF600 및 EF300 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
 == 역할
 
-E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
+E4000, E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
 
 
 
@@ -46,7 +46,7 @@ E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실�
 
 == 기능 키를 활성화하는 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[enable storageArray feature file="_filename_"]
 ----
@@ -64,7 +64,7 @@ file="C:\Program Files\CLI\dnld\ftrkey.key"
 
 == 기능 팩을 활성화하는 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[enable storageArray featurePack file="_filename_"]
 ----
@@ -80,7 +80,7 @@ file="C:\Program Files\CLI\dnld\ftrpk.key"
 
 == 평가판 기간 기능을 활성화하는 구문입니다
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[enable storageArray feature=_featureAttributeList_]
 ----

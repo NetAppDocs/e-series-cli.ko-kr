@@ -2,13 +2,16 @@
 permalink: get-started/usage-guidelines.html 
 sidebar: sidebar 
 keywords: script command, guidelines 
-summary: 이 목록은 명령줄에서 스크립트 명령을 작성하는 지침을 제공합니다. 
+summary: 스크립트 명령을 작성할 때 다음 지침을 준수하십시오. 
 ---
 = 스크립트 명령 지침
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+스크립트 명령을 작성할 때 다음 지침을 준수하십시오.
 
 이 목록은 명령줄에 스크립트 명령을 작성하는 지침을 제공합니다.
 

@@ -7,7 +7,7 @@ summary: SMcli -autoSupportSchedule show 명령은 매일 및 매주 AutoSupport
 = AutoSupport 메시지 수집 일정을 표시합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ summary: SMcli -autoSupportSchedule show 명령은 매일 및 매주 AutoSupport
 
 == 지원되는 어레이
 
-이 명령은 관리 도메인에 있는 모든 E2700 및 E5600 스토리지 어레이에 동시에 적용됩니다. E2800 또는 E5700 스토리지 어레이에는 적용되지 않습니다.
+이 명령은 관리 도메인에 있는 모든 E2700 및 E5600 스토리지 어레이에 동시에 적용됩니다. E4000, E2800 또는 E5700 스토리지 어레이에는 적용되지 않습니다.
 
 
 
@@ -40,7 +40,7 @@ summary: SMcli -autoSupportSchedule show 명령은 매일 및 매주 AutoSupport
 
 == 구문
 
-[listing]
+[source, cli]
 ----
 SMcli -autoSupportSchedule show
 ----

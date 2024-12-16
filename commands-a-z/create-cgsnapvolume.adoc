@@ -7,7 +7,7 @@ summary: create cgSnapVolume 명령은 정합성 보장 그룹의 기본 볼륨�
 = 정합성 보장 그룹 스냅샷 볼륨을 생성합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: create cgSnapVolume 명령은 정합성 보장 그룹의 기본 볼륨�
 
 == 지원되는 어레이
 
-이 명령은 E2700, E5600, E2800, E5700, 기타 스토리지 어레이를 포함한 모든 개별 스토리지 어레이에 모든 SMcli 패키지가 설치된 경우 EF600 및 EF300 스토리지가 제공됩니다.
+이 명령은 모든 SMcli 패키지가 설치되어 있는 경우 E4000, E2700, E5600, E2800, E5700, EF600 및 EF300 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
 == 역할
 
-E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+E4000, E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
 
 
 
@@ -35,7 +35,7 @@ E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실�
 
 == 사용자 지정 기본 볼륨을 사용한 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 create cgSnapVolume userLabel=pass:quotes[_"cgVolumeName"_]
 cgSnapImageID=pass:quotes[_"snapCGID:imageID"_]
@@ -45,7 +45,7 @@ members=pass:quotes[_(baseVolume1:repos_XXXX ... baseVolumen:repos_YYYY)_]
 
 == 정합성 보장 그룹 스냅샷 볼륨을 읽기 전용으로 설정할 때의 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 create cgSnapVolume userLabel=pass:quotes[_"cgVolumeName"_]
 cgSnapImageID=pass:quotes[_"snapCGID:imageID"_]
@@ -55,7 +55,7 @@ readOnly
 
 == 리포지토리 전체 제한 설정 시 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 create cgSnapVolume userLabel=pass:quotes[_"cgVolumeName"_]
 cgSnapImageID=pass:quotes[_"snapCGID:imageID"_]

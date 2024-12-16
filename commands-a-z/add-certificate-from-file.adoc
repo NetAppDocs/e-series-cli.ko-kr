@@ -7,7 +7,7 @@ summary: 파일에서 인증서 추가 명령을 사용하면 파일에서 인�
 = 파일에서 인증서를 추가합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -23,7 +23,7 @@ summary: 파일에서 인증서 추가 명령을 사용하면 파일에서 인�
 
 == 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[trust localCertificate file _filename_ alias user _specified alias_]
 ----

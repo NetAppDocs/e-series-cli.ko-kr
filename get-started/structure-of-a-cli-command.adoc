@@ -7,10 +7,13 @@ summary: CLI 명령은 래퍼에 포함된 명령 래퍼 및 요소의 형식입
 = CLI 명령어의 구조
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
-CLI 명령은 래퍼에 포함된 명령 래퍼 및 요소의 형식입니다. CLI 명령은 다음과 같은 요소로 구성됩니다.
+[role="lead"]
+CLI 명령은 래퍼에 포함된 명령 래퍼 및 요소의 형식입니다.
+
+CLI 명령은 다음과 같은 요소로 구성됩니다.
 
 * 'SMcli'라는 용어로 식별되는 명령 래퍼입니다
 * 스토리지 배열 식별자입니다

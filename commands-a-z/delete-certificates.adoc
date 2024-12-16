@@ -7,7 +7,7 @@ summary: 인증서 삭제 명령을 사용하면 CLI 패키지 신뢰 저장소�
 = 인증서를 삭제합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -23,7 +23,7 @@ summary: 인증서 삭제 명령을 사용하면 CLI 패키지 신뢰 저장소�
 
 == 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 delete localCertificate all | alias pass:quotes[_alias_]
 ----

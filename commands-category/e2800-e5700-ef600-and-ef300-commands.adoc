@@ -2,13 +2,18 @@
 permalink: commands-category/e2800-e5700-ef600-and-ef300-commands.html 
 sidebar: sidebar 
 keywords: commands, cache, file, array, certificate, autoconfigure, storage array 
-summary: E2800, E5700, EF600 및 EF300 명령 
+summary: E4000, E2800, E5700, EF600 및 EF300 명령 등 다양한 명령을 사용할 수 있습니다 
 ---
-= E2800, E5700, EF600 및 EF300 명령
+= E4000, E2800, E5700, EF600 및 EF300 명령 등 다양한 명령을 사용할 수 있습니다
 :allow-uri-read: 
-:icons: font
-:imagesdir: ./media/
 
+
+[role="lead"]
+E4000, E2800, E5700, EF600 및 EF300 시스템에서 사용할 수 있는 명령 목록은 다음과 같습니다.
+
+
+
+= E4000, E2800, E5700, EF600 및 EF300 명령 등 다양한 명령을 사용할 수 있습니다
 
 link:../commands-a-z/activate-asynchronous-mirroring.html["비동기식 미러링을 활성화합니다"]
 
@@ -214,11 +219,11 @@ link:../commands-a-z/smcli-enable-autosupportfeature.html["EMW 관리 도메인 
 
 link:../commands-a-z/enable-or-disable-autosupport-individual-arrays.html["AutoSupport 활성화 또는 비활성화(모든 개별 어레이)"]
 
-link:../commands-a-z/set-storagearray-autosupportmaintenancewindow.html["AutoSupport 유지보수 윈도우 활성화 또는 비활성화(개별 E2800 또는 E5700 어레이)"]
+link:../commands-a-z/set-storagearray-autosupportmaintenancewindow.html["AutoSupport 유지 관리 창을 사용 또는 사용하지 않도록 설정합니다"]
 
 link:../commands-a-z/smcli-enable-disable-autosupportondemand.html["EMW에서 AutoSupport OnDemand 기능 활성화 또는 비활성화..."]
 
-link:../commands-a-z/set-storagearray-autosupportondemand.html["AutoSupport OnDemand 기능 활성화 또는 비활성화(개별 E2800 또는 E5700 어레이용)"]
+link:../commands-a-z/set-storagearray-autosupportondemand.html["AutoSupport OnDemand 기능을 활성화 또는 비활성화합니다"]
 
 link:../commands-a-z/smcli-enable-disable-autosupportremotediag.html["다음 사이트에서 AutoSupport OnDemand 원격 진단 기능을 활성화 또는 비활성화합니다."]
 
@@ -306,7 +311,7 @@ link:../commands-a-z/reset-storagearray-arvmstats-asyncmirrorgroup.html["비동�
 
 link:../commands-a-z/smcli-autosupportschedule-reset.html["AutoSupport 메시지 수집 일정을 재설정합니다"]
 
-link:../commands-a-z/reset-storagearray-autosupport-schedule.html["AutoSupport 메시지 수집 일정 재설정(개별 E2800 또는 E5700 어레이)"]
+link:../commands-a-z/reset-storagearray-autosupport-schedule.html["AutoSupport 메시지 수집 일정을 재설정합니다"]
 
 link:../commands-a-z/reset-controller.html["컨트롤러를 재설정합니다"]
 
@@ -346,7 +351,7 @@ link:../commands-a-z/resume-ssdcache.html["SSD 캐시를 재개합니다"]
 
 link:../commands-a-z/resume-syncmirror.html["동기식 미러링을 다시 시작합니다"]
 
-link:../commands-a-z/save-storagearray-autosupport-log.html["AutoSupport 로그 검색(개별 E2800 또는 E5700 어레이)"]
+link:../commands-a-z/save-storagearray-autosupport-log.html["AutoSupport 로그를 조회한다"]
 
 link:../commands-a-z/save-storagearray-keymanagementcertificate.html["설치된 외부 키 관리 인증서를 검색합니다"]
 
@@ -424,7 +429,9 @@ link:../commands-a-z/set-asyncmirrorgroup.html["비동기식 미러 그룹을 �
 
 link:../commands-a-z/set-auditlog.html["감사 로그 설정을 지정합니다"]
 
-link:../commands-a-z/set-storagearray-autosupport-schedule.html["AutoSupport 메시지 수집 일정 설정(개별 E2800 또는 E5700 어레이)"]
+link:../commands-a-z/set-autosupport-dispatch-limit.html["AutoSupport 디스패치 크기 제한을 설정합니다"]
+
+link:../commands-a-z/set-storagearray-autosupport-schedule.html["AutoSupport 메시지 수집 스케줄을 설정합니다"]
 
 link:../commands-a-z/set-storagearray-revocationchecksettings.html["인증서 해지 확인 설정을 설정합니다"]
 
@@ -696,9 +703,9 @@ link:../commands-a-z/smcli-autosupportconfig.html["AutoSupport 전달 방법을 
 
 link:../commands-a-z/start-asyncmirrorgroup-synchronize.html["비동기식 미러링 동기화를 시작합니다"]
 
-link:../commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html["이메일(SMTP) 전달 방법 지정(개별 E2800 또는 E5700 어레이)"]
+link:../commands-a-z/set-email-smtp-delivery-method.html["이메일(SMTP) 전달 방법을 지정합니다"]
 
-link:../commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html["AutoSupport HTTP(S) 제공 방법 지정(개별 E2800 또는 E5700 어레이)"]
+link:../commands-a-z/set-autosupport-https-delivery-method.html["AutoSupport HTTP(S) 전달 방법을 지정합니다"]
 
 link:../commands-a-z/start-storagearray-ocspresponderurl-test.html["OCSP 서버 URL 테스트를 시작합니다"]
 
@@ -812,7 +819,7 @@ link:../commands-a-z/suspend-syncmirror-primaries.html["동기 미러링을 일�
 
 link:../commands-a-z/diagnose-asyncmirrorgroup.html["비동기식 미러 그룹 접속을 테스트합니다"]
 
-link:../commands-a-z/start-storagearray-autosupport-deliverytest.html["AutoSupport 제공 설정 테스트(개별 E2800 또는 E5700 어레이)"]
+link:../commands-a-z/start-storagearray-autosupport-deliverytest.html["AutoSupport 전송 설정을 테스트합니다"]
 
 link:../commands-a-z/start-emailalert-test.html["이메일 경고 구성을 테스트합니다"]
 

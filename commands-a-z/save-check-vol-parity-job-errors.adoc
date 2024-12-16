@@ -7,7 +7,7 @@ summary: save check volume parity job parity error 명령은 볼륨 패리티 �
 = 볼륨 확인 패리티 작업 패리티 오류 저장
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -29,7 +29,7 @@ EF600 및 EF300 스토리지 어레이에서 이 명령을 실행하려면 스�
 
 == 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 save check volume parity job parityErrors jobId=<job_id> parityErrorFile=<parity_error_file>;
 ----

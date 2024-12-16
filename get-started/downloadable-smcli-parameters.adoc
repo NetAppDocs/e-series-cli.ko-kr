@@ -2,19 +2,22 @@
 permalink: get-started/downloadable-smcli-parameters.html 
 sidebar: sidebar 
 keywords: downloadable, smcli, command line, parameters, identify, devices, SAML, multifactor, authentication, https, certificate, array, 
-summary: 'SANtricity OS 11.60 릴리즈에는 SANtricity 시스템 관리자를 통해 http 기반 버전의 CLI(보안 CLI 또는 SMcli라고도 함)를 직접 다운로드하고 설치할 수 있는 기능이 포함되어 있습니다.' 
+summary: 'SANtricity OS 11.60 이상 릴리즈에는 SANtricity System Manager를 통해 http 기반 버전의 CLI(Secure CLI 또는 SMcli라고도 함)를 직접 다운로드하고 설치할 수 있는 기능이 포함되어 있습니다.' 
 ---
 = 다운로드 가능한 SMcli 명령줄 매개변수
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+SANtricity OS 11.60 이상 릴리즈에는 SANtricity System Manager를 통해 http 기반 버전의 CLI("Secure CLI" 또는 SMcli라고도 함)를 직접 다운로드하고 설치할 수 있는 기능이 포함되어 있습니다.
 
 
 
 == 11.60 이상 다운로드 가능한 SMcli 명령줄 매개변수
 
-SANtricity OS 11.60 릴리스에는 SANtricity 시스템 관리자를 통해 직접 http 기반 버전의 CLI("보안 CLI" 또는 SMcli라고도 함)를 다운로드하고 설치할 수 있는 기능이 포함되어 있습니다. SMcli의 다운로드 가능한 버전은 EF600, EF300, E5700, EF570, E2800에서 사용할 수 있습니다. EF280 컨트롤러: SANtricity 시스템 관리자 내에서 SMcli를 다운로드하려면 * 설정 * > * 시스템 * 및 * 추가 기능 * > * 명령줄 인터페이스 * 를 선택합니다.
+SMcli의 다운로드 가능한 버전은 E4000, EF600, EF300, E5700, EF570, E2800 및 EF280 컨트롤러에서 제공됩니다. SANtricity 시스템 관리자 내에서 SMcli를 다운로드하려면 * 설정 * * * 시스템 * 및 * 추가 기능 * * 명령줄 인터페이스 * 를 선택합니다.
 
 
 NOTE: CLI 명령을 실행하려는 관리 시스템에서 Java Runtime Environment(JRE) 버전 8 이상을 사용할 수 있어야 합니다.

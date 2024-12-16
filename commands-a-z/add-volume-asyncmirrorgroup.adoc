@@ -7,7 +7,7 @@ summary: add volume asyncMirrorGroup 명령은 비동기식 미러 그룹에 운
 = 비동기식 미러 그룹에 볼륨을 추가합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -21,14 +21,14 @@ summary: add volume asyncMirrorGroup 명령은 비동기식 미러 그룹에 운
 
 [NOTE]
 ====
-이 명령은 E2800, E5700, EF600 및 EF300 플랫폼에서는 지원되지 않습니다.
+이 명령은 E4000, E2800, E5700, EF600 및 EF300 플랫폼에서는 지원되지 않습니다.
 
 ====
 
 
 == 역할
 
-E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
+해당 없음
 
 
 
@@ -40,7 +40,7 @@ E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실�
 
 == 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[add volume="_volumeName_" asyncMirrorGroup="_asyncMirrorGroupName_"
 remotePassword="_password_"

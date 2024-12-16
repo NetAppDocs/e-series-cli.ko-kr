@@ -7,7 +7,7 @@ summary: start diskpool resourceProvisioning 명령은 지정된 디스크 풀�
 = 디스크 풀 리소스 프로비저닝을 시작합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -35,7 +35,7 @@ EF600 및 EF300 스토리지 어레이에서 이 명령을 실행하려면 스�
 
 == 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 start diskPoolpass:quotes[[_diskPoolName_]] resourceProvisioning
 ----

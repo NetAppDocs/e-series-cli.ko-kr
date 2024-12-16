@@ -7,10 +7,15 @@ summary: CLI 명령 래퍼의 일반 구문 형식이 이 섹션에 나와 있�
 = CLI 명령 래퍼 구문입니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
+[role="lead"]
 CLI 명령 래퍼의 일반 구문 형식이 이 섹션에 나와 있습니다. CLI 명령 래퍼 구문에서 사용되는 규칙은 다음 표에 나와 있습니다.
+
+
+
+== CLI 명령 래퍼 구문 규칙
 
 [cols="2*"]
 |===

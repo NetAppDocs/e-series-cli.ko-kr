@@ -7,7 +7,7 @@ summary: SMcli -supportBundle schedule 명령은 하나 이상의 스토리지 �
 = 자동 지원 번들 수집 구성을 예약합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -28,7 +28,7 @@ summary: SMcli -supportBundle schedule 명령은 하나 이상의 스토리지 �
 
 == 일별/주별 스케줄을 생성하는 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 SMcli -supportBundle schedule enable
 pass:quotes[(all | _storageArrayName_)]
@@ -42,7 +42,7 @@ pass:quotes[data=_pathName_]
 
 == 월별/연간 스케줄을 생성하는 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 SMcli -supportBundle schedule enable
 pass:quotes[(all | _storageArrayName_)]
@@ -65,7 +65,7 @@ pass:quotes[data=_pathName_]
 이 명령을 실행하면 스토리지 시스템의 스케줄이 완전히 제거됩니다. 지원 번들 정보 저장을 다시 시작하려면 새 일정을 만들어야 합니다.
 
 ====
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 SMcli -supportBundle schedule disable
 pass:quotes[(all|_storageArrayName_)]

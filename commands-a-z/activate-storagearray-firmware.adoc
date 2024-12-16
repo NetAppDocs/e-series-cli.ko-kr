@@ -7,7 +7,7 @@ summary: 'activate storageArray firmware(storageArray 펌웨어 활성화) 명�
 = 스토리지 어레이 펌웨어를 활성화합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ activate storageArray firmware(스토리지 배열 펌웨어 활성화) 명령�
 
 == 구문
 
-[listing]
+[source, cli]
 ----
 activate storageArray firmware
 [healthCheckMelOverride=(TRUE | FALSE)]

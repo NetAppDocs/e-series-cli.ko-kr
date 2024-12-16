@@ -7,7 +7,7 @@ summary: SMcli alertTest 명령은 Windows 이벤트 로그 및 구성된 모든
 = 경고를 테스트합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -32,7 +32,7 @@ summary: SMcli alertTest 명령은 Windows 이벤트 로그 및 구성된 모든
 
 == 구문
 
-[listing]
+[source, cli]
 ----
 SMcli -alertTest
 ----

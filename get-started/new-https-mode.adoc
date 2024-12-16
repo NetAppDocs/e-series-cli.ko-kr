@@ -7,7 +7,7 @@ summary: 새로운 SMcli는 추가 보안 기능을 제공하는 https 모드에
 = SMcli https 모드
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

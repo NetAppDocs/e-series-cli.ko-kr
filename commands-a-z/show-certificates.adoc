@@ -7,7 +7,7 @@ summary: 인증서 표시 명령을 사용하면 CLI 패키지 신뢰 저장소�
 = 인증서 표시
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: 인증서 표시 명령을 사용하면 CLI 패키지 신뢰 저장소�
 
 == 지원되는 어레이
 
-이 명령은 EF600 스토리지 어레이에 적용됩니다.
+이 명령은 EF600 및 EF300 스토리지 어레이에 적용됩니다.
 
 
 
 == 구문
 
-[listing]
+[source, cli]
 ----
 show localCertificate all | alias alias
 ----

@@ -1,13 +1,13 @@
 ---
-permalink: commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html 
+permalink: commands-a-z/set-autosupport-https-delivery-method.html 
 sidebar: sidebar 
-keywords: 'Specify AutoSupport HTTP(S) delivery method (for individual E2800 or E5700 arrays)' 
+keywords: 'Specify AutoSupport HTTP(S) delivery method' 
 summary: 'set storageArray AutoSupport deliveryMethod 명령은 AutoSupport 메시지를 HTTP(S)로 보내기 위한 전달 방법을 설정합니다.' 
 ---
-= AutoSupport HTTP(S) 제공 방법 지정(개별 E2800 또는 E5700 어레이)
+= AutoSupport HTTP(S) 전달 방법을 지정합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,25 +17,22 @@ et storageArray AutoSupport deliveryMethod 명령은 AutoSupport 메시지를 HT
 
 == 지원되는 어레이
 
-이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+이 명령은 개별 E4000, E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
 
 
 
 == 역할
 
-E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
+E4000, E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
 
 
 
 == 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 
-set storageArray autoSupport deliveryMethod={HTTP | HTTPS}
-   {direct | proxyConfigScript=pass:quotes["_proxyConfigScriptUrl_"] |
-proxyServer hostAddress=pass:quotes[_address_] portNumber=pass:quotes[_portNumber_]
- [userName=pass:quotes["_username_"] password=pass:quotes["_password_"]]}
+set storageArray autoSupport deliveryMethod=email mailRelayServer="mail.example.com" senderEmail="sender@example.com"
 ----
 
 
@@ -52,7 +49,6 @@ proxyServer hostAddress=pass:quotes[_address_] portNumber=pass:quotes[_portNumbe
 사용자가 AutoSupport 컬렉션의 전달 방법을 지정할 수 있습니다. 유효한 선택 항목은 다음과 같습니다.
 
 * 이메일
-* HTTP
 * HTTPS
 
 

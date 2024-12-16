@@ -7,7 +7,7 @@ summary: Add array label 명령을 사용하면 사용자 정의 레이블을 �
 = 스토리지 레이블을 추가합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -28,7 +28,7 @@ Add array label 명령을 사용하면 사용자 정의 레이블을 사용하�
 
 == 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 
 pass:quotes[ _Address1 Address2_ add storageArrayLabel label _userDefinedString_]

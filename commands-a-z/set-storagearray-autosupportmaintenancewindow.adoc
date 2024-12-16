@@ -4,10 +4,10 @@ sidebar: sidebar
 keywords: enable, disable, autosupport, maintenance, window, individual, E2800, E5700, arrays 
 summary: set storageArray autoSupport유지보수창 명령은 AutoSupport 유지 보수 창 기능을 설정하거나 해제합니다. 
 ---
-= AutoSupport 유지보수 윈도우 활성화 또는 비활성화(개별 E2800 또는 E5700 어레이)
+= AutoSupport 유지 관리 창을 사용 또는 사용하지 않도록 설정합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -19,19 +19,19 @@ summary: set storageArray autoSupport유지보수창 명령은 AutoSupport 유�
 
 == 지원되는 어레이
 
-이 명령은 개별 E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+이 명령은 개별 E4000, E2800, E5700, EF600 또는 EF300 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
 
 
 
 == 역할
 
-E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
+E4000, E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 또는 지원 관리자 역할이 있어야 합니다.
 
 
 
 == 구문
 
-[listing]
+[source, cli]
 ----
 set storageArray autoSupportMaintenanceWindow (enable | disable)
     emailAddresses=("emailAddress1" "emailAddress2" ...)

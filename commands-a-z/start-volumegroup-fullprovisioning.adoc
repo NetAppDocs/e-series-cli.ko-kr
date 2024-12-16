@@ -7,7 +7,7 @@ summary: start volumeGroup fullProvisioning 명령은 디스크 풀의 모든 �
 = 볼륨 그룹 전체 프로비저닝을 시작합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -39,7 +39,7 @@ EF600 및 EF300 스토리지 어레이에서 이 명령을 실행하려면 스�
 
 == 구문
 
-[listing]
+[source, cli]
 ----
 start volumeGroup[volumeGroupName] fullProvisioning [disableResourceProvisioning=(TRUE | FALSE)]
 ----

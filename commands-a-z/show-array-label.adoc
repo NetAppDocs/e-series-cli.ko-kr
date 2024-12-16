@@ -7,7 +7,7 @@ summary: Show array label 명령은 스토리지 배열 레이블이 정의되�
 = 배열 레이블을 표시합니다
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: Show array label 명령은 스토리지 배열 레이블이 정의되�
 
 == 지원되는 어레이
 
-이 명령은 EF600 스토리지 어레이에 적용됩니다.
+이 명령은 EF600 및 EF300 스토리지 어레이에 적용됩니다.
 
 
 
 == 구문
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[show storageArrayLabel label _userDefinedString_]
 show storageArrayLabel all
