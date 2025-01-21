@@ -8,7 +8,7 @@ entries:
   url: "/commands-category/alert-configuration-commands.html"
 - title: 스토리지 구성 명령
   url: "/commands-category/array-configuration-commands.html"
-- title: 자동 지원 명령
+- title: AutoSupport 명령
   url: "/commands-category/auto-support-commands.html"
 - title: 미러링 명령
   url: "/commands-category/mirroring-commands.html"
