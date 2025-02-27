@@ -17,7 +17,7 @@ SANtricity OS 11.60 이상 릴리즈에는 SANtricity System Manager를 통해 h
 
 == 11.60 이상 다운로드 가능한 SMcli 명령줄 매개변수
 
-SMcli의 다운로드 가능한 버전은 E4000, EF600, EF300, E5700, EF570, E2800 및 EF280 컨트롤러에서 제공됩니다. SANtricity 시스템 관리자 내에서 SMcli를 다운로드하려면 * 설정 * * * 시스템 * 및 * 추가 기능 * * 명령줄 인터페이스 * 를 선택합니다.
+SMcli의 다운로드 가능한 버전은 E4000, EF600, EF300, E5700, EF570, E2800, EF280, EF300C 및 EF600C 컨트롤러에서 사용할 수 있습니다. SANtricity 시스템 관리자 내에서 SMcli를 다운로드하려면 * 설정 * * * 시스템 * 및 * 추가 기능 * * 명령줄 인터페이스 * 를 선택합니다.
 
 
 NOTE: CLI 명령을 실행하려는 관리 시스템에서 Java Runtime Environment(JRE) 버전 8 이상을 사용할 수 있어야 합니다.

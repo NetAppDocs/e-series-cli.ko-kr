@@ -7573,7 +7573,6 @@
   <block id="0c691b598eb5dcf4dbe4aee57abd7fce" category="paragraph">CLI에서 자세한 오류 보고 기능은 다음과 같습니다.</block>
   <block id="7ab16c582be12bf2ea6a9bcbf26ef849" category="summary">SANtricity OS 11.60 이상 릴리즈에는 SANtricity System Manager를 통해 http 기반 버전의 CLI(Secure CLI 또는 SMcli라고도 함)를 직접 다운로드하고 설치할 수 있는 기능이 포함되어 있습니다.</block>
   <block id="3bcaed463dcace2a5d7df8ac788e2faa" category="paragraph">SANtricity OS 11.60 이상 릴리즈에는 SANtricity System Manager를 통해 http 기반 버전의 CLI("Secure CLI" 또는 SMcli라고도 함)를 직접 다운로드하고 설치할 수 있는 기능이 포함되어 있습니다.</block>
-  <block id="326cbd85dc5f285361de38f20d31c9df" category="paragraph">SMcli의 다운로드 가능한 버전은 E4000, EF600, EF300, E5700, EF570, E2800 및 EF280 컨트롤러에서 제공됩니다. SANtricity 시스템 관리자 내에서 SMcli를 다운로드하려면 * 설정 * * * 시스템 * 및 * 추가 기능 * * 명령줄 인터페이스 * 를 선택합니다.</block>
   <block id="afbe36b824d95e989a52e9001491c721" category="summary">종료 상태는 실행된 명령에 대해 반환됩니다. 이 표에는 반환되는 종료 상태와 각 상태의 의미가 나열되어 있습니다.</block>
   <block id="4e0440694d3b4fa172c69a3cac707e21" category="paragraph">종료 상태는 실행된 명령에 대해 반환됩니다. 다음 표에는 반환할 수 있는 종료 상태 및 각 상태의 의미가 나와 있습니다.</block>
   <block id="20b10ae58c66c5b5927a513b2111c0c0" category="section-title">상태 정의를 종료합니다</block>
@@ -7615,5 +7614,6 @@
   <block id="d0a774826d0463e72211475dbf19c749" category="section-title">AutoSupport 데이터</block>
   <block id="e12f84520db4494b5d41a3376aaf2efe" category="summary">AutoSupport 명령</block>
   <block id="f92f6d9fbe12679709b79badc45794e4" category="paragraph">다음 AutoSupport 명령 목록은 E-Series 스토리지 시스템에서 사용할 수 있습니다.</block>
-  <block id="3668b2be3ec33e7453152c010b5ad26a" category="section-title">E4000, EF300, EF400, E2800, E5700용 AutoSupport 명령</block>
+  <block id="7cfe927cc93acde3fd26ff2626d6a30c" category="section-title">E4000, EF300, EF600, E2800, E5700용 AutoSupport 명령</block>
+  <block id="4446202efb248928e4f489743b194e56" category="paragraph">SMcli의 다운로드 가능한 버전은 E4000, EF600, EF300, E5700, EF570, E2800, EF280, EF300C 및 EF600C 컨트롤러에서 사용할 수 있습니다. SANtricity 시스템 관리자 내에서 SMcli를 다운로드하려면 * 설정 * * * 시스템 * 및 * 추가 기능 * * 명령줄 인터페이스 * 를 선택합니다.</block>
 </blocks>
