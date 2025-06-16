@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, install, root, intermediate, ca, certificates 
 summary: 컨트롤러 caCertificate 삭제 명령은 설치된 루트 또는 중간 CA 인증서를 지정된 컨트롤러에서 제거합니다. 
 ---
-= 설치된 루트/중간 CA 인증서를 제거합니다
+= 설치된 루트/중간 CA 인증서 제거 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

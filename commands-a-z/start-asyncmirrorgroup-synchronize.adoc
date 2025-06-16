@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, asynchronous, mirror, synchronization 
 summary: asyncMirrorGroup synchronize 시작 명령은 비동기 미러링 동기화를 시작합니다. 
 ---
-= 비동기식 미러링 동기화를 시작합니다
+= 비동기 미러링 동기화 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

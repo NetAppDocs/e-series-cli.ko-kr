@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, host 
 summary: create host 명령은 새 호스트를 생성합니다. 
 ---
-= 호스트를 생성합니다
+= 호스트 생성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

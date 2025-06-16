@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, support, data 
 summary: save storageArray supportData 명령은 스토리지 배열의 지원 관련 정보를 파일에 저장합니다. 
 ---
-= 스토리지 배열 지원 데이터를 저장합니다
+= 스토리지 어레이 지원 데이터 저장 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, cache, mirror, data, assurance, check, enable 
 summary: show storageArray cacheMirrorDataAssuranceCheckEnable 명령은 캐시 미러 데이터 보증 검사 기능의 활성화 상태를 반환합니다. 
 ---
-= 스토리지 캐시 미러 데이터 보증 검사 설정 표시
+= 스토리지 어레이 캐시 미러 데이터 보증 확인 활성화 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, volume, unreadable, sectors 
 summary: CLEAR VOLUME UnreadableSecors 명령은 하나 이상의 볼륨에서 읽을 수 없는 섹터 정보를 지웁니다. 
 ---
-= 볼륨을 읽을 수 없는 섹터를 지웁니다
+= 볼륨 읽을 수 없는 섹터 지우기 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

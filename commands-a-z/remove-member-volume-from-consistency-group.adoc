@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, member, volume, consistency group 
 summary: set consistencyGroup 명령은 기존 스냅샷 정합성 보장 그룹에서 구성원 볼륨을 제거합니다. 
 ---
-= 정합성 보장 그룹에서 구성원 볼륨을 제거합니다
+= 일관성 그룹에서 멤버 볼륨 제거 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

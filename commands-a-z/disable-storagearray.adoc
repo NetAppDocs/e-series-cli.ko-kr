@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disable, storage, array, command, storage, feature 
 summary: disable storageArray 명령은 스토리지 배열 기능을 비활성화합니다. 
 ---
-= 스토리지 배열 기능을 비활성화합니다
+= 스토리지 어레이 기능 비활성화 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

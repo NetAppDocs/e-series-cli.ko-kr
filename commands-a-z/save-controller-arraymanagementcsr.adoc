@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: generate, web server, certificate, sign, request, csr 
 summary: 'save controller arrayManagementCSR 명령은 컨트롤러의 CSR(인증서 서명 요청)을 생성합니다.' 
 ---
-= 웹 서버 CSR(인증서 서명 요청) 생성
+= 웹 서버 인증서 서명 요청(CSR) 생성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

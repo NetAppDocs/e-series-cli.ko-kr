@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, array, label 
 summary: 스토리지 레이블 제거 명령을 사용하면 스토리지 배열에 대한 사용자 정의 레이블을 제거할 수 있습니다. 
 ---
-= 스토리지 레이블을 제거합니다
+= 배열 레이블 제거 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

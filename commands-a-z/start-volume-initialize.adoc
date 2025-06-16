@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: initialize, thin volume 
 summary: 시작 볼륨 초기화 명령은 씬 볼륨을 초기화하거나 다시 초기화합니다. 
 ---
-= 씬 볼륨을 초기화합니다
+= 씬 볼륨 초기화 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, snapshot, volume, repository, capacity 
 summary: set snapVolume crease/줄어들면 eRepositoryCapacity 명령은 스냅샷 볼륨 저장소 볼륨의 용량을 늘리거나 줄입니다. 
 ---
-= 스냅샷 볼륨 저장소 볼륨 용량을 설정합니다
+= 스냅샷 볼륨 저장소 볼륨 용량 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

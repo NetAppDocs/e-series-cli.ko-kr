@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, volume, reservations 
 summary: 볼륨 예약 지우기 명령은 영구 볼륨 예약을 지웁니다. 
 ---
-= 볼륨 예약을 지웁니다
+= 볼륨 예약 지우기 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

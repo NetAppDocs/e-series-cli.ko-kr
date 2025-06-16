@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, volume, group, forced, state 
 summary: set volumeGroup forceState 명령은 볼륨 그룹을 강제 상태로 이동합니다. 
 ---
-= 볼륨 그룹 강제 상태를 설정합니다
+= 볼륨 그룹 강제 상태 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

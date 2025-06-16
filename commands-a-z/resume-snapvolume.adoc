@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resume, snapshot, volume 
 summary: resume snapVolume 명령은 중지된 스냅샷 볼륨 작업을 다시 시작합니다. 
 ---
-= 스냅샷 볼륨을 재개합니다
+= 스냅샷 볼륨 재개 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

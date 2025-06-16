@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, storage, array, drive, firmware, download 
 summary: stop storageArray drivefirmwareDownload 명령은 storageArray 드라이브 펌웨어 다운로드 명령으로 시작된 스토리지 배열의 드라이브에 대한 펌웨어 다운로드를 중지합니다. 
 ---
-= 스토리지 어레이 드라이브 펌웨어 다운로드를 중지합니다
+= 스토리지 어레이 드라이브 펌웨어 다운로드 중지 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

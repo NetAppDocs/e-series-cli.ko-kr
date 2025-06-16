@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, volume, copy 
 summary: stop volumeCopy 타겟 소스 명령은 볼륨 복제 작업을 중지합니다. 이 명령은 스냅샷 볼륨 복사본 쌍에 대해 유효합니다. 
 ---
-= 볼륨 복사를 중지합니다
+= 볼륨 복사 중지 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

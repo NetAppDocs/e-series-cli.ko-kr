@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add drives ssd cache, supported arrays, syntax, parameters, minimum firmware level 
 summary: 'set ssdCache 명령은 SSD(Solid State Disk)를 추가하여 기존 SSD 캐시의 용량을 늘립니다.' 
 ---
-= SSD 캐시에 드라이브를 추가합니다
+= SSD 캐시에 드라이브 추가 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

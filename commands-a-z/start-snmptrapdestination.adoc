@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, snmp, trap, destination 
 summary: 'start snmpTrapDestination 명령은 특정 SNMP(Simple Network Management Protocol) 커뮤니티 또는 사용자에 대한 트랩 수신기의 연결 및 ID를 테스트합니다. 이 명령은 트랩 수신기로 트랩 메시지를 전송하여 트랩 대상을 테스트합니다.' 
 ---
-= SNMP 트랩 대상을 테스트합니다
+= SNMP 트랩 대상 테스트 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

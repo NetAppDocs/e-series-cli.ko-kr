@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, volume, command, normal, thin, disk pool, roles, support 
 summary: 볼륨 삭제 명령은 디스크 풀에서 일반 볼륨 또는 씬 볼륨을 삭제합니다. 
 ---
-= 디스크 풀에서 볼륨을 삭제합니다
+= 디스크 풀에서 볼륨 삭제 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

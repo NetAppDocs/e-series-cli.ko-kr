@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, vaai 
 summary: 'set storageArray vaaaaaiEnabled 명령은 스토리지 어레이에 대한 VMware VAAI(vStorage API Array Architecture)를 설정하거나 해제합니다.' 
 ---
-= VAAI를 설정하거나 해제합니다
+= VAAI 활성화 또는 비활성화 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

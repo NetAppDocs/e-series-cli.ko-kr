@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: establish, asynmirror, volume, asynchronous, mirrored, remote, storage, array, secondary, existing 
 summary: asyncMirror volume 설정 명령은 기존 비동기식 미러 그룹에 2차 볼륨을 추가하여 원격 스토리지 시스템에서 비동기식 미러링 쌍을 완료합니다. 
 ---
-= 비동기 미러링 쌍을 설정합니다
+= 비동기 미러링 쌍 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

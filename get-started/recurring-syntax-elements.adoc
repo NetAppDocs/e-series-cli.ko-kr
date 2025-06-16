@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recur, syntax, elements 
 summary: 반복 구문 요소는 스크립트 명령에 사용할 수 있는 매개 변수와 옵션의 일반적인 범주입니다. 
 ---
-= 반복 구문 요소
+= 반복되는 SANtricity CLI 구문 요소에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

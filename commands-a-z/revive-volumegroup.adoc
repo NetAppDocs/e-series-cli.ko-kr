@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: revive, volume, group 
 summary: 볼륨 그룹 다시 실행 명령은 지정된 볼륨 그룹 및 관련 장애가 발생한 드라이브를 최적의 상태로 강제로 설정합니다. 
 ---
-= 볼륨 그룹을 다시 사용합니다
+= 볼륨 그룹 다시 활성화 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

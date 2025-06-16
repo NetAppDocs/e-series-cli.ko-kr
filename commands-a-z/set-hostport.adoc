@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, host, port 
 summary: set hostPort 명령은 호스트 포트의 속성을 변경합니다. 
 ---
-= 호스트 포트를 설정합니다
+= 호스트 포트 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

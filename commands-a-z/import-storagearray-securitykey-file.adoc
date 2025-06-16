@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: import, storage, array, security, file, command, unlock, disk, encryption, context, syntax, firmware level, role, context 
 summary: 'import storageArray securityKey 파일 명령은 한 스토리지 어레이에서 다른 스토리지 어레이로 이동한 하나 이상의 FDE(전체 디스크 암호화) 드라이브의 잠금을 해제합니다.' 
 ---
-= 스토리지 배열 보안 키를 가져옵니다
+= 스토리지 어레이 보안 키 가져오기 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

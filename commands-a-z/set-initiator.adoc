@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, initiator 
 summary: set initiator 명령은 이니시에이터 객체를 업데이트합니다. 
 ---
-= 초기자를 설정합니다
+= 개시자 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

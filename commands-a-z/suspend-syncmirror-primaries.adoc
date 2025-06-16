@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: suspend, synchronous, mirror 
 summary: suspend SyncMirror 운영 명령은 동기 미러링 작업을 일시 중단합니다. 
 ---
-= 동기 미러링을 일시 중단합니다
+= 동기식 미러링 일시 중단 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

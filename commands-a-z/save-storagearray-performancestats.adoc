@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, performance, statistics 
 summary: save storageArray performanceStats 명령은 성능 통계를 파일에 저장합니다. 
 ---
-= 스토리지 배열 성능 통계를 저장합니다
+= 스토리지 어레이 성능 통계 저장 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

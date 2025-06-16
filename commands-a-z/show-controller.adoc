@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, controller 
 summary: show controller 명령은 컨트롤러에 대한 정보를 반환합니다. 
 ---
-= 컨트롤러를 표시합니다
+= 쇼 컨트롤러 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

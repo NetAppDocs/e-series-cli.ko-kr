@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, performance, statistics 
 summary: show volume performanceStats 명령은 볼륨 성능에 대한 정보를 반환합니다. 
 ---
-= 볼륨 성능 통계를 표시합니다
+= 볼륨 성능 통계 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

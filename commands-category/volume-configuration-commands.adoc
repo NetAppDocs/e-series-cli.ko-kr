@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: volume, configuration, commands, diskpool, host topology, internet, storage, service, extension, group 
 summary: 볼륨 구성 명령 
 ---
-= 볼륨 구성 명령
+= SANtricity CLI 볼륨 구성 명령
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

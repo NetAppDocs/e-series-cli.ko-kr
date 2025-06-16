@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, incomplete, asynchronous, mirror, pair, group 
 summary: remove asyncMirrorGroup 명령은 스토리지 배열의 분리된 미러링된 쌍 볼륨을 제거합니다. 
 ---
-= 비동기 미러 그룹에서 불완전한 비동기 미러링된 쌍을 제거합니다
+= 비동기 미러 그룹에서 불완전한 비동기 미러 쌍 제거 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

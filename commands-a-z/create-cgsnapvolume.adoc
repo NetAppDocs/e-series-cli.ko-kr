@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, consistency group, snapshot, volume 
 summary: create cgSnapVolume 명령은 정합성 보장 그룹의 기본 볼륨에 있는 특정 이미지의 스냅샷 볼륨을 생성합니다. 
 ---
-= 정합성 보장 그룹 스냅샷 볼륨을 생성합니다
+= 일관성 그룹 스냅샷 볼륨 생성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

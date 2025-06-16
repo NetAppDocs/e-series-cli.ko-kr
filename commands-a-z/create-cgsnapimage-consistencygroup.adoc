@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, consistency group, snapshot image 
 summary: cgSnapImage ConsistencyGroup 명령을 생성하면 스냅샷 정합성 보장 그룹의 구성원인 각 기본 볼륨에 대한 새 스냅샷 이미지가 생성됩니다. 
 ---
-= 정합성 보장 그룹 스냅샷 이미지를 생성합니다
+= 일관성 그룹 스냅샷 이미지 생성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

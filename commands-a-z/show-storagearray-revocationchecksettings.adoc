@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, certificate, revocation, check, set 
 summary: show storageArray revocationCheckSettings 명령을 사용하면 스토리지 배열에 대한 인증서 해지 설정을 볼 수 있습니다. 
 ---
-= 인증서 해지 확인 설정을 표시합니다
+= 인증서 해지 확인 설정 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

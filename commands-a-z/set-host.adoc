@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, host 
 summary: set host 명령은 호스트를 호스트 그룹에 할당하거나 호스트를 다른 호스트 그룹으로 이동합니다. 
 ---
-= 호스트를 설정합니다
+= 호스트 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

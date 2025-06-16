@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, ssd, cache, performance, model 
 summary: stop ssdCache performanceModeling 명령은 성능 모델링 작업을 중지하고 SSD 캐시의 성능 모델링 데이터를 표시합니다. 
 ---
-= SSD 캐시 성능 모델링을 중지합니다
+= SSD 캐시 성능 모델링 중지 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, read-only, snapshot, volume, read/write, volume 
 summary: set snapVolume convertToReadWrite 명령은 읽기 전용 볼륨인 스냅샷 볼륨을 읽기/쓰기 볼륨인 스냅샷 볼륨으로 변경합니다. 
 ---
-= 읽기 전용 스냅샷 볼륨을 읽기/쓰기 볼륨으로 설정합니다
+= 읽기 전용 스냅샷 볼륨을 읽기/쓰기 볼륨으로 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: diagnose, syncmirror, command, test, connection, specified, primary, volumes, mirror, storage, array, synchronous, feature, enabled 
 summary: Diagnose SyncMirror 명령은 동기 미러링 기능이 설정된 스토리지 배열의 미러 볼륨과 지정된 운영 볼륨 간의 연결을 테스트합니다. 
 ---
-= 동기 미러링을 진단하십시오
+= 동기식 미러링 진단 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

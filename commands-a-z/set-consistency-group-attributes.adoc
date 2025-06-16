@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, consistency, group, attributes 
 summary: set consistencyGroup 명령은 스냅샷 정합성 보장 그룹의 속성을 정의합니다. 
 ---
-= 정합성 보장 그룹 특성을 설정합니다
+= 일관성 그룹 속성 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

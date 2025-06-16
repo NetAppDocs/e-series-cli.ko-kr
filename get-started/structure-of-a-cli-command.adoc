@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: structure, cli, commands 
 summary: CLI 명령은 래퍼에 포함된 명령 래퍼 및 요소의 형식입니다. 
 ---
-= CLI 명령어의 구조
+= SANtricity CLI 명령의 구조에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

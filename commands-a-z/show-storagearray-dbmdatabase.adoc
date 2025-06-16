@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, dbm, database 
 summary: show storageArray dbmDatabase 명령은 스토리지 배열의 온보드 백업 위치에 대한 메타데이터를 검색하고 표시합니다. 백업 위치가 여러 개인 경우 각 위치에 대한 메타데이터가 표시됩니다. 
 ---
-= 스토리지 배열 DBM 데이터베이스를 표시합니다
+= 스토리지 어레이 DBM 데이터베이스 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

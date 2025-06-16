@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, sas, phy, baseline 
 summary: 'reset storageArray SASPHYBaseline 명령은 모든 디바이스의 SAS 물리 계층(SAS PHY) 기준선을 재설정하고 .csv 파일에서 오류 목록을 제거합니다.' 
 ---
-= 스토리지 배열 SAS PHY 기준선을 재설정합니다
+= 스토리지 어레이 SAS PHY 기준선 재설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

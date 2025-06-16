@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, controller, dns 
 summary: 'set controller DNSServers 명령은 컨트롤러의 DNS(Domain Name System) 설정을 업데이트합니다. DNS는 컨트롤러 및 NTP(Network Time Protocol) 서버의 정규화된 도메인 이름을 확인하는 데 사용됩니다.' 
 ---
-= 컨트롤러 DNS 설정을 지정합니다
+= 컨트롤러 DNS 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

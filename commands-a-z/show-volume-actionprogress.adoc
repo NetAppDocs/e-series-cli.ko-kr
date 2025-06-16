@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, action, progress 
 summary: show volume actionProgress 명령은 볼륨에 대한 장기 실행 작업에 대해 완료된 볼륨 작업과 장기 실행 작업의 양에 대한 정보를 반환합니다. 
 ---
-= 볼륨 작업 진행률을 표시합니다
+= 볼륨 작업 진행률 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

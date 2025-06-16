@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, volume, group, export 
 summary: start volumeGroup export 명령은 볼륨 그룹을 내보낸 상태로 이동합니다. 
 ---
-= 볼륨 그룹 내보내기를 시작합니다
+= 볼륨 그룹 내보내기 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

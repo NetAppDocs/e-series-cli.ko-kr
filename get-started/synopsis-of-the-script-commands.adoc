@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: synopsis, script commands 
 summary: '스크립트 명령을 사용하여 스토리지 배열의 다양한 측면(예: 호스트 토폴로지, 드라이브 구성, 컨트롤러 구성, 볼륨 정의 및 볼륨 그룹 정의)을 정의하고 관리할 수 있으므로 실제 명령 수는 광범위합니다.' 
 ---
-= 스크립트 명령의 시놉시스입니다
+= SANtricity CLI 스크립트 명령에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

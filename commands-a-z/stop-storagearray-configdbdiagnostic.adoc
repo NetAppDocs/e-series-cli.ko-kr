@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, storage, array, configuration, database, diagnostic 
 summary: stop storageArray configDbDiagnostic 명령은 storageArray configDbDiagnostic 시작 명령으로 시작된 컨트롤러 펌웨어의 구성 데이터베이스를 검증하기 위해 진단 테스트를 중지합니다. 
 ---
-= 스토리지 배열 구성 데이터베이스 진단을 중지합니다
+= 스토리지 어레이 구성 데이터베이스 진단 중지 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

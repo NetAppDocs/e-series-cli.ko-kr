@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, drive, channel, fault, isolation, diagnostic, status 
 summary: save driveChannel defaultDiagnostics 파일 명령은 start driveChannel defaultDiagnostics 명령에서 반환되는 드라이브 채널 장애 격리 진단 데이터를 저장합니다. 
 ---
-= 드라이브 채널 장애 격리 진단 상태를 저장합니다
+= 드라이브 채널 오류 격리 진단 상태 저장 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

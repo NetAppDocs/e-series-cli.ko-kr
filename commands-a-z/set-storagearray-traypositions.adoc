@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, tray, positions 
 summary: set storageArray trayPositionions 명령은 스토리지 배열에서 트레이의 위치를 정의합니다. 이 명령을 입력할 때 스토리지 어레이에 모든 트레이를 포함해야 합니다. 
 ---
-= 스토리지 배열 트레이 위치를 설정합니다
+= 스토리지 어레이 트레이 위치 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

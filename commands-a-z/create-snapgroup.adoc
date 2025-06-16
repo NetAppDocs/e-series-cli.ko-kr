@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, snapshot, group 
 summary: create SnapGroup 명령은 새 스냅샷 그룹과 연결된 저장소 볼륨을 생성합니다. 
 ---
-= 스냅샷 그룹을 생성합니다
+= 스냅샷 그룹 생성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

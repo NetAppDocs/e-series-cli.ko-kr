@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, drive, service, action, allowed, indicator 
 summary: set drive serviceAllowedIndicator 명령은 Service Action Allowed 표시등 기능을 지원하는 드라이브 트레이 드라이브 또는 드라이브에서 Service Action Allowed 표시등을 켜거나 끕니다. 
 ---
-= 드라이브 서비스 작업 허용 표시등을 설정합니다
+= 드라이브 서비스 작업 허용 표시기 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

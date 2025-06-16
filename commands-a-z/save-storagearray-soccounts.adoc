@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, soc, counts 
 summary: save storageArray SOCCounts 명령은 soc 오류 통계를 파일에 저장합니다. 
 ---
-= 스토리지 시스템의 SOC 수를 줄입니다
+= 스토리지 어레이 SOC 카운트 저장 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

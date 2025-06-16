@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: display, storage, array, syslog, configuration 
 summary: show storageArray syslog 명령을 사용하면 감사 로그를 저장하는 데 사용되는 syslog 서버의 구성을 볼 수 있습니다. 구성 정보에는 주소, 프로토콜 및 포트 번호와 함께 서버 ID가 포함됩니다. 
 ---
-= 스토리지 시스템 syslog 구성을 표시합니다
+= 디스플레이 스토리지 어레이 syslog 구성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

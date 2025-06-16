@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: update, snmp, community 
 summary: 'set snmpCommunity 명령은 기존 SNMP(Simple Network Management Protocol) 커뮤니티의 새 이름을 생성합니다.' 
 ---
-= SNMP 커뮤니티를 업데이트합니다
+= SNMP 커뮤니티 업데이트 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

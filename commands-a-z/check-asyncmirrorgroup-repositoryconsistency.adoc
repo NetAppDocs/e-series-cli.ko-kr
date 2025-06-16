@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: check, asynchronous mirror group, consistency 
 summary: asyncMirrorGroup repositoryConsistency 명령은 지정된 비동기 미러 그룹의 기본 저장소 볼륨에 있는 데이터의 분석을 기반으로 보고서를 생성합니다. 
 ---
-= 비동기식 미러 그룹 정합성 보장 확인
+= 비동기 미러 그룹 일관성 확인 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

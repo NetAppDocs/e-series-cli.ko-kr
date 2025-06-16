@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, str 
 summary: show textstring 명령은 스크립트 파일의 텍스트 문자열을 표시합니다. 이 명령은 MS-DOS 및 UNIX의 echo 명령과 유사합니다. 
 ---
-= 문자열을 표시합니다
+= 문자열 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

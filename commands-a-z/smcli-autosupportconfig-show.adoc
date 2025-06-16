@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: display, autosupport, bundle, collection, set 
 summary: SMcli -autoSupportConfig show 명령은 관리 도메인에 대한 AutoSupport 번들 수집 설정을 표시합니다. 이러한 설정은 AutoSupport를 설정한 관리 도메인의 모든 스토리지 시스템에 적용됩니다. 
 ---
-= AutoSupport 번들 컬렉션 설정을 표시합니다
+= AutoSupport 번들 컬렉션 설정 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

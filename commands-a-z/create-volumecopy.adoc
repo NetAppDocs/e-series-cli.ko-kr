@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, volume, copy 
 summary: create volumeCopy 명령은 볼륨 복사본을 생성하고 볼륨 복사 작업을 시작합니다. 이 명령은 스냅샷 이미지 볼륨 복사본 쌍에 대해 유효합니다. 
 ---
-= 볼륨 복사본 생성
+= 볼륨 복사본 생성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

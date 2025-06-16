@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resume, asynchronous, mirror, group 
 summary: resume asyncMirrorGroup 명령은 비동기식 미러 그룹의 모든 미러링된 쌍 간에 데이터 전송을 재개합니다. 
 ---
-= 비동기식 미러 그룹을 재개합니다
+= 비동기 미러 그룹 재개 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

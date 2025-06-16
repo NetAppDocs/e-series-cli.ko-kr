@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, target, properties 
 summary: set target 명령은 인증 방법 및 별칭 이름을 포함하여 iSCSI/iSER 타겟의 속성을 변경합니다. 
 ---
-= 대상 속성을 설정합니다
+= 대상 속성 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

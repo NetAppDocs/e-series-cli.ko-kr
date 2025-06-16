@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, asynchronous mirroring, fault 
 summary: 'asyncMirrorFault 지우기 명령은 하나 이상의 비동기 미러 그룹과 하나 이상의 비동기 미러 그룹 구성원 볼륨에서 비동기 미러링 "스키" 오류를 지웁니다.' 
 ---
-= 비동기식 미러링 장애를 제거합니다
+= 비동기 미러링 오류 해결 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

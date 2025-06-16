@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recreate, synchronous, mirror, repository, volume 
 summary: 'recreate storageArray 미러orRepository 명령은 이전 미러 저장소 볼륨에 대해 정의된 매개 변수를 사용하여 새 동기 미러링 저장소 볼륨(미러 저장소 볼륨이라고도 함)을 생성합니다.' 
 ---
-= 동기 미러링 저장소 볼륨을 다시 생성합니다
+= 동기 미러링 저장소 볼륨 다시 생성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

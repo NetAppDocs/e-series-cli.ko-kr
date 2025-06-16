@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, external key, management, communication 
 summary: 'start storageArray externalKeyManagement 테스트 명령은 구성된 자격 증명(인증서, KMIP 서버 주소, KMIP 포트 번호)을 사용하여 스토리지 어레이가 외부 서버와 통신할 수 있는지 확인합니다.' 
 ---
-= 외부 키 관리 통신을 테스트합니다
+= 외부 키 관리 통신 테스트 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

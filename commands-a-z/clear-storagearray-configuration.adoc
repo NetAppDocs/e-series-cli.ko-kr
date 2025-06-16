@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, storage array, configuration 
 summary: 스토리지 배열 구성 지우기 명령은 전체 스토리지 배열 구성이나 스토리지 배열 구성의 일부를 지우거나 볼륨 그룹 및 볼륨 구성만 지웁니다. 
 ---
-= 스토리지 배열 구성을 지웁니다
+= 스토리지 어레이 구성 지우기 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

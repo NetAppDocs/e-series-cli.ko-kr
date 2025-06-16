@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resume, snapshot, image, rollback 
 summary: SnapImage 롤백 재개 명령은 일시 중지 상태로 전환된 롤백 작업을 재개합니다. 
 ---
-= 스냅샷 이미지 롤백을 재개합니다
+= 스냅샷 이미지 롤백 재개 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

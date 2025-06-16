@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, storage, array, external, key, management, file, command, security, disk, encryption, initial, roles, context, support 
 summary: enable storageArray externalKeyManagement file 명령을 사용하면 전체 디스크 암호화 드라이브가 있는 스토리지 배열에 대한 외부 보안 키 관리가 가능하며 초기 드라이브 보안 키를 생성할 수 있습니다. 
 ---
-= 외부 보안 키 관리를 활성화합니다
+= 외부 보안 키 관리 활성화 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: check, repository, consistency 
 summary: 저장소 유지 일관성 검사 명령은 지정된 개체의 기본 저장소 볼륨에 있는 데이터의 분석을 기반으로 보고서를 생성합니다. 
 ---
-= 저장소 일관성을 확인합니다
+= 저장소 일관성 확인 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

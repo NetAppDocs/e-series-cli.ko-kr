@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, hostgroup, command, support, role 
 summary: delete hostGroup 명령은 호스트 그룹을 삭제합니다. 
 ---
-= 호스트 그룹을 삭제합니다
+= 호스트 그룹 삭제 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

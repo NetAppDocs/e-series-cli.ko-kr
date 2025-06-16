@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, volume, copy 
 summary: remove volumeCopy target 명령은 볼륨 복사본 쌍을 제거합니다. 
 ---
-= 볼륨 복사본을 제거합니다
+= 볼륨 복사본 제거 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

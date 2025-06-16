@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, storage, array, autosupport, manual, dispatch 
 summary: start storageArray AutoSupport manualDispatch 명령은 번들에 대한 전체 지원 번들 및 ASUP 디스패치를 시작합니다. 
 ---
-= 스토리지 배열 AutoSupport 수동 디스패치를 시작합니다
+= 스토리지 어레이 AutoSupport 수동 디스패치 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

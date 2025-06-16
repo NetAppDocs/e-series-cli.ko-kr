@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, rls, baseline 
 summary: 'reset storageArray RLSBaseline 명령은 모든 RLS 수를 0으로 설정하여 모든 장치에 대한 RLS(읽기 링크 상태) 기준선을 재설정합니다.' 
 ---
-= 스토리지 배열 RLS 기준을 재설정합니다
+= 스토리지 어레이 RLS 기준 재설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

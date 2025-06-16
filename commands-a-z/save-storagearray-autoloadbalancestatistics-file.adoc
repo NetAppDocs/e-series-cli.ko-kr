@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, auto-load, balance, statistics 
 summary: save storageArray autoLoadBalanceStatistics 파일 명령은 자동화된 입출력 워크로드 밸런싱을 제공하고 호스트에서 수신되는 입출력 트래픽이 두 컨트롤러 간에 동적으로 관리되고 균형을 유지하도록 합니다. 
 ---
-= 자동 로드 밸런싱 통계를 저장합니다
+= 자동 로드 밸런싱 통계 저장 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, tray log 
 summary: save allTrays logfile 명령은 로그 감지 데이터를 파일에 저장합니다. 
 ---
-= 트레이 로그를 저장합니다
+= 트레이 로그 저장 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

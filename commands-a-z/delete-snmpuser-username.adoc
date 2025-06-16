@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, user, name, command, simple, network, management, protocol, create, register, effective, unregister, trap, destination, associate, remove 
 summary: 'delete snmpUser username 명령은 이전에 "create snmpUser" 명령을 사용하여 생성 및 등록한 기존 SNMP(Simple Network Management Protocol) USM 사용자를 삭제합니다. SNMP 사용자를 삭제하면 사용자의 등록이 효과적으로 해제됩니다. 해당 사용자와 관련된 트랩 대상도 제거됩니다.' 
 ---
-= SNMPv3 USM 사용자를 등록 취소합니다
+= SNMPv3 USM 사용자 등록 취소 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

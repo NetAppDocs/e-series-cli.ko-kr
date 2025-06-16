@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, host, channel 
 summary: set hostChannel 명령은 호스트 채널의 루프 ID를 정의합니다. 
 ---
-= 호스트 채널을 설정합니다
+= 호스트 채널 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

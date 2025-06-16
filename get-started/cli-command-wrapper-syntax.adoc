@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cli, command, wrapper, syntax 
 summary: CLI 명령 래퍼의 일반 구문 형식이 이 섹션에 나와 있습니다. 
 ---
-= CLI 명령 래퍼 구문입니다
+= SANtricity CLI 명령 래퍼 구문에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

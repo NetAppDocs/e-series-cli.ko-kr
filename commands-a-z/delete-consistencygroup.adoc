@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, consistency, group 
 summary: Delete ConsistencyGroup 명령은 스냅샷 정합성 보장 그룹을 삭제합니다. 
 ---
-= 일관성 그룹을 삭제합니다
+= 일관성 그룹 삭제 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

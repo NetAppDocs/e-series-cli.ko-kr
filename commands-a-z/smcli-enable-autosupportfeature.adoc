@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, autosupport, emw, management, domain, level, smcli 
 summary: 'SMcli enable autoSupportFeatature 명령은 모든 관리형 스토리지 어레이에 대한 AutoSupport(ASUP) 기능을 켜고 메시지를 기술 지원 사이트로 전송할 수 있도록 합니다. ASUP 기능을 활성화하면 모든 ASUP 지원 스토리지 어레이가 자동으로 준비되어 기술 지원을 위해 지원 관련 데이터를 전송합니다. 그런 다음 데이터를 원격 문제 해결 및 문제 분석에 사용할 수 있습니다.' 
 ---
-= EMW 관리 도메인 수준에서 AutoSupport 활성화 또는 비활성화(SMcli만 해당)
+= EMW 관리 도메인 수준에서 AutoSupport 활성화 또는 비활성화(SMcli만 해당) - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

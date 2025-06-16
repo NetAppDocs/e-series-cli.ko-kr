@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, user, session 
 summary: set storageArray userSession 명령을 사용하면 System Manager에서 시간 제한을 설정하여 지정된 시간 후에 비활성 세션의 연결이 끊길 수 있습니다. 
 ---
-= 스토리지 시스템 사용자 세션을 설정합니다
+= 스토리지 어레이 사용자 세션 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

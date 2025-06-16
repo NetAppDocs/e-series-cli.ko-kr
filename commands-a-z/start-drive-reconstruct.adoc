@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, drive, reconstruction 
 summary: 드라이브 재구성 시작 명령은 드라이브 재구성을 시작합니다. 
 ---
-= 드라이브 재구성을 시작합니다
+= 드라이브 재구성 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

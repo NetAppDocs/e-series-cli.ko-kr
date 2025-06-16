@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, syslog, configuration 
 summary: syslog 구성 지우기 명령은 syslog 알림 정보를 지웁니다. 
 ---
-= syslog 구성을 지웁니다
+= Syslog 구성 지우기 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resume, consistency, group, snapshot, volume 
 summary: resume cgSnapVolume 명령은 stop cgSnapVolume 명령을 사용하여 중지한 일관성 그룹 스냅샷 볼륨을 생성하기 위한 쓰기 시 복사 작업을 다시 시작합니다. 
 ---
-= 정합성 보장 그룹 스냅샷 볼륨을 재개합니다
+= 일관성 그룹 스냅샷 볼륨 재개 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

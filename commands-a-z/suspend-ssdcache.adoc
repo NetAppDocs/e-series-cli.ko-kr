@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: suspend, ssd cache 
 summary: suspend ssdCache 명령은 SSD 캐시를 사용하는 모든 볼륨에 대해 일시적으로 캐싱을 중지합니다. 
 ---
-= SSD 캐시를 일시 중지합니다
+= SSD 캐시 일시 중단 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, volume, disk pool 
 summary: create volume diskpool 명령은 기존 디스크 풀에 새 표준 RAID 볼륨 또는 씬 볼륨을 생성합니다. 
 ---
-= 디스크 풀에서 볼륨을 생성합니다
+= 디스크 풀에 볼륨 생성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

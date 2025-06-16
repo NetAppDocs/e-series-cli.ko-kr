@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, input, output, controller, ioc, dump 
 summary: start IOCLog 명령은 호스트와 컨트롤러 간의 데이터 전송 IOC 로그의 덤프를 생성합니다. 
 ---
-= 입력 출력 컨트롤러(IOC) 덤프를 시작합니다
+= 입출력 컨트롤러(IOC) 덤프 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

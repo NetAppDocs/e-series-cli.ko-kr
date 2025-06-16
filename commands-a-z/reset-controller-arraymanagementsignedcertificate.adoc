@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, installed, signed, certificate 
 summary: reset controller arrayManagementSignedCertificate 명령은 설치된 서명된 인증서와 컨트롤러에 있는 루트/중간 인증서를 재설정합니다. 서명된 인증서와 모든 루트 및 중간 인증서는 자체 서명된 단일 인증서로 대체됩니다. 
 ---
-= 설치된 서명된 인증서를 재설정합니다
+= 설치된 서명된 인증서 재설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

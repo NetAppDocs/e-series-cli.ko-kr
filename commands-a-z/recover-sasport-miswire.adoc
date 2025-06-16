@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recover, sas, port, mis-wire 
 summary: recover sasPort miscWire 명령은 컨트롤러에 잘못된 연결 상태에서 복구하기 위해 수정 조치가 취해되었음을 알려줍니다. 
 ---
-= SAS 포트 오선을 복구합니다
+= SAS 포트 오배선 복구 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

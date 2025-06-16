@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, drawer, service, action, allowed, indicator 
 summary: 트레이 드로어 설정 명령은 드라이브를 보관하는 드로어에서 서비스 작업 허용 표시등을 켜거나 끕니다. 
 ---
-= 문서함 서비스 조치 허용 표시기 설정
+= 서랍 서비스 작업 허용 표시기 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

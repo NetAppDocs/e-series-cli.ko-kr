@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, controller, array, management, server, certificate, command, install 
 summary: download controller arrayManagementServerCertificate 명령은 컨트롤러에 서버 인증서를 설치합니다. 
 ---
-= 서버 서명 인증서를 설치합니다
+= 서버 서명 인증서 설치 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

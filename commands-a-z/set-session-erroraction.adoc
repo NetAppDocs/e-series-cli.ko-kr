@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, session 
 summary: set session errorAction 명령은 현재 스크립트 엔진 세션을 실행할 방법을 정의합니다. 
 ---
-= 세션을 설정합니다
+= 세션 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

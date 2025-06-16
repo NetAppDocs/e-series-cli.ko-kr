@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: register, snmp, trap, destination 
 summary: 'create snmpTrapDestination 명령은 새 SNMP(Simple Network Management Protocol) 트랩 대상을 생성합니다. 트랩 대상은 트랩 메시지를 수신하는 SNMP 관리자입니다.' 
 ---
-= SNMP 트랩 대상을 등록합니다
+= SNMP 트랩 대상 등록 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: volumecopy, target, command, operation, volume, copy, pair, reinitiate, array, role, context 
 summary: recopy volumeCopy target 명령은 기존 볼륨 복사본 쌍을 사용하여 볼륨 복사본 작업을 다시 시작합니다. 
 ---
-= 볼륨 복사본을 다시 복사합니다
+= 볼륨 복사 재복사 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

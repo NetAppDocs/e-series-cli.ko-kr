@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, volume, map 
 summary: 'set volume logicalUnitNumber 명령은 볼륨과 호스트 또는 호스트 그룹 간의 LUN(Logical Unit Number) 또는 NSID(Namespace ID) 매핑을 정의합니다.' 
 ---
-= 볼륨 매핑을 설정합니다
+= 볼륨 매핑 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

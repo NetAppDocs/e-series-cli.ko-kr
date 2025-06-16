@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, storage, array, controller, health, image 
 summary: start storageArray controllerHealthImage 컨트롤러 명령은 컨트롤러 상태 이미지 기능을 지원하는 스토리지 어레이에서 스토리지 어레이 컨트롤러 상태 이미지를 생성합니다. 
 ---
-= 스토리지 배열 컨트롤러 상태 이미지를 시작합니다
+= 스토리지 어레이 컨트롤러 상태 이미지 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

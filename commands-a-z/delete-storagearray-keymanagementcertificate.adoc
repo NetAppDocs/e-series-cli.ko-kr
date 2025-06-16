@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, storage, array, key, management, certificate, command, remove, install, external 
 summary: delete storageArray keyManagementCertificate 명령은 스토리지 배열에서 설치된 외부 키 관리 인증서를 제거합니다. 
 ---
-= 설치된 외부 키 관리 인증서를 제거합니다
+= 설치된 외부 키 관리 인증서 제거 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, snapshot, images, consistency, group 
 summary: STOP ConsistencyGroup PendingSnapImageCreation 명령은 스냅샷 정합성 보장 그룹에 생성될 보류 중인 모든 스냅샷 이미지를 중지합니다. 
 ---
-= 정합성 보장 그룹에서 보류 중인 스냅샷 이미지를 중지합니다
+= 일관성 그룹에서 보류 중인 스냅샷 이미지 중지 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

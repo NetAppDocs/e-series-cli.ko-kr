@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, storage array, recovery, mode 
 summary: clear storageArray recoveryMode 명령은 스토리지 배열이 복구 모드를 종료하도록 합니다. 
 ---
-= 스토리지 배열 복구 모드를 지웁니다
+= 스토리지 어레이 복구 모드 지우기 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

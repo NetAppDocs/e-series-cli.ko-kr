@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, volume, group, locate 
 summary: start volumeGroup locate 명령은 드라이브의 표시등을 깜박여 논리적으로 그룹화된 드라이브를 식별하여 지정된 볼륨 그룹을 형성합니다. 
 ---
-= 볼륨 그룹 찾기를 시작합니다
+= 볼륨 그룹 찾기 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

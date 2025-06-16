@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, drive channel, fault, isolation, diagnostics 
 summary: start driveChannel defaultDiagnostics 명령은 드라이브 채널 장애 격리 진단을 실행하고 결과를 저장합니다. 
 ---
-= 드라이브 채널 장애 격리 진단을 시작합니다
+= 드라이브 채널 오류 격리 진단 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

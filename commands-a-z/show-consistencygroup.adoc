@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, consistency, group 
 summary: show consistencyGroup 명령은 하나 이상의 정합성 보장 그룹에 대한 정보를 반환합니다. 
 ---
-= 정합성 보장 그룹을 표시합니다
+= 일관성 그룹 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

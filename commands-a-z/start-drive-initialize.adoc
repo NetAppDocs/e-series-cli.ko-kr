@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, drive, initialize 
 summary: start drive initialize 명령은 드라이브 초기화를 시작합니다. 
 ---
-= 드라이브 초기화를 시작합니다
+= 드라이브 초기화 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

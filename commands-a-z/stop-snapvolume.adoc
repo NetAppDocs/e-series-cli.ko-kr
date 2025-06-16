@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, snapshot, volume 
 summary: stop snapVolume 명령은 스냅샷 볼륨 작업을 중지합니다. 
 ---
-= 스냅샷 볼륨을 중지합니다
+= 스냅샷 볼륨 중지 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

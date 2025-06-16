@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, asynchronous, mirror, group 
 summary: create asyncMirrorGroup 명령은 로컬 스토리지 시스템과 원격 스토리지 시스템 모두에 비어 있는 새 비동기식 미러 그룹을 생성합니다. 
 ---
-= 비동기식 미러 그룹을 생성합니다
+= 비동기 미러 그룹 생성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

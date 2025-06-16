@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, tray, configuration, settings, commands, factory, default, drive, array, specific, storage, roles, support 
 summary: download tray ConfigurationSettings 명령은 공장 출하시 기본 설정을 스토리지 배열의 모든 드라이브 트레이 또는 스토리지 배열의 특정 드라이브 트레이로 다운로드합니다. 
 ---
-= 용지함 구성 설정을 다운로드합니다
+= 트레이 구성 설정 다운로드 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

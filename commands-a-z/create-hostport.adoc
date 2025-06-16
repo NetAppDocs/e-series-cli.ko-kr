@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, host, port 
 summary: 'create hostPort 명령은 호스트 버스 어댑터(HBA) 또는 호스트 채널 어댑터(HCA)에 새 호스트 포트 ID를 생성합니다.' 
 ---
-= 호스트 포트를 생성합니다
+= 호스트 포트 생성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

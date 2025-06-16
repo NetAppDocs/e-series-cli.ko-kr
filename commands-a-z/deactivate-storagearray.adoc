@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: deactivate, asynchronous, mirroring 
 summary: deactivate storageArray 기능은 비동기 미러링 기능을 비활성화합니다. 
 ---
-= 비동기식 미러링을 비활성화합니다
+= 비동기 미러링 비활성화 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

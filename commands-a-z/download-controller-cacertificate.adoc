@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, controller, certificate, command, install, root, intermediate, web, servers, validate, array, roles, context 
 summary: download controller caCertificate 명령은 컨트롤러의 웹 서버에 루트/중간 CA 인증서를 설치하여 웹 서버가 서명한 인증서의 유효성을 확인합니다. 
 ---
-= 루트/중간 CA 인증서를 설치합니다
+= 루트/중간 CA 인증서 설치 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

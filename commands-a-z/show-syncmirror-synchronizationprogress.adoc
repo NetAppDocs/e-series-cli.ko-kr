@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, synchronous, mirror, volume, synchronization, progress 
 summary: show SyncMirror SynchronizationProgress 명령은 동기 미러링 구성에서 운영 볼륨과 보조 볼륨 간의 데이터 동기화 진행률을 반환합니다. 
 ---
-= 동기 미러링 볼륨 동기화 진행률을 표시합니다
+= 동기식 미러링 볼륨 동기화 진행률 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, drive, channel, fault, isolation, diagnostics 
 summary: stop driveChannel defaultDiagnostics 명령은 드라이브 채널 오류 격리 진단을 중지하며, 이 경우 드라이브 채널 장애 격리 진단 명령이 완료되기 전에 이 명령을 중지합니다. 
 ---
-= 드라이브 채널 장애 격리 진단을 중지합니다
+= 드라이브 채널 오류 격리 진단 중지 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

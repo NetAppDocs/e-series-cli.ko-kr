@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, volume, initialization 
 summary: start volume initialize 명령은 스토리지 배열의 볼륨 형식을 시작합니다. 
 ---
-= 볼륨 초기화를 시작합니다
+= 볼륨 초기화 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

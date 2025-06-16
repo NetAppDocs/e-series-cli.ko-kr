@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, volume, attributes, disk pool 
 summary: set volumes 명령은 디스크 풀의 볼륨에 대한 속성을 정의합니다. 
 ---
-= 디스크 풀의 볼륨에 대한 볼륨 특성을 설정합니다
+= 디스크 풀의 볼륨에 대한 볼륨 속성 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

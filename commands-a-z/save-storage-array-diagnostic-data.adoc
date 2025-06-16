@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, diagnostic, data 
 summary: 'save storageArray diagnosticData 명령은 컨트롤러 또는 환경 서비스 모듈(ESM)의 스토리지 어레이 진단 데이터를 파일에 저장합니다.' 
 ---
-= 스토리지 배열 진단 데이터를 저장합니다
+= 스토리지 어레이 진단 데이터 저장 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

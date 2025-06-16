@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, fips, drive, security, identifier 
 summary: set drive securityID 명령은 FIPS 드라이브를 원래 제조업체 설정으로 재설정하는 데 사용됩니다. 
 ---
-= FIPS 드라이브 보안 식별자를 설정합니다
+= FIPS 드라이브 보안 식별자 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, unconfigured, iscsi, initiators 
 summary: show storageArray unconfiguredIscsiInitiators 명령은 스토리지 어레이에서 감지되었지만 아직 스토리지 배열 토폴로지로 구성되지 않은 이니시에이터 목록을 반환합니다. 
 ---
-= 스토리지 배열 구성되지 않은 iSCSI 이니시에이터를 표시합니다
+= 스토리지 어레이 구성되지 않은 iSCSI 이니시에이터 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

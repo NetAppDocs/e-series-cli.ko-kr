@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, drive, erase 
 summary: 드라이브 지우기 시작 명령은 하나 이상의 드라이브에서 모든 데이터를 지웁니다. 
 ---
-= 드라이브 지우기를 시작합니다
+= 드라이브 지우기 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -42,7 +42,7 @@ E4000, E2800, E5700, EF600 또는 EF300 스토리지 어레이에서 이 명령�
 
 [source, cli, subs="+macros"]
 ----
-start drive pass:quotes[[_trayID_],pass:quotes[[_drawerID_,]]pass:quotes[_slotID_]] | drivespass:quotes[[_trayID1_],pass:quotes[[_drawerID1_,]]pass:quotes[_slotID1_] ... pass:quotes[_trayIDn_],pass:quotes[[_drawerIDn_,]]pass:quotes[_slotIDn_]] erase
+start (drive [trayID,[drawerID,]slotID] | drives[trayID1,[drawerID1,]slotID1 ... trayIDn,[drawerIDn,]slotIDn]) erase
 ----
 
 

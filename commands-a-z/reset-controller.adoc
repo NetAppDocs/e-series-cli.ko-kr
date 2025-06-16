@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, controller 
 summary: RESET controller 명령은 컨트롤러를 재설정하고 I/O 작업을 중단한다. 
 ---
-= 컨트롤러를 재설정합니다
+= 컨트롤러 재설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

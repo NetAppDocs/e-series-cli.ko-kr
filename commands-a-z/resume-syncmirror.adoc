@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resume, synchronous, mirroring 
 summary: resume SyncMirror 명령은 일시 중단된 동기식 미러링 작업을 재개합니다. 
 ---
-= 동기식 미러링을 다시 시작합니다
+= 동기식 미러링 재개 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

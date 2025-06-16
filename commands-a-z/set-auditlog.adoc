@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, audit log 
 summary: set auditlog 명령은 감사 로그 설정을 구성합니다. 
 ---
-= 감사 로그 설정을 설정합니다
+= 감사 로그 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

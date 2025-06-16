@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: check, volume, parity 
 summary: 볼륨 패리티 검사 명령은 볼륨에 패리티 및 미디어 오류가 있는지 검사한 다음 검사 결과를 파일에 씁니다. 
 ---
-= 볼륨 패리티를 확인합니다
+= 볼륨 패리티 확인 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

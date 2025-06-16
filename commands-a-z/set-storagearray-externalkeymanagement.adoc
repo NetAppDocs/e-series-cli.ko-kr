@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, external, key, management, set 
 summary: set storageArray externalKeyManagement 명령은 외부 키 관리 서버 주소와 포트 번호를 구성합니다. 
 ---
-= 외부 키 관리 설정을 지정합니다
+= 외부 키 관리 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

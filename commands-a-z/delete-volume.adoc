@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, volume, command, one, standard, volume, supported, array, role 
 summary: delete volume 명령은 하나 이상의 표준 볼륨을 삭제합니다. 
 ---
-= 볼륨을 삭제합니다
+= 볼륨 삭제 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

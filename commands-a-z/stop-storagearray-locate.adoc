@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, storage, array, locate 
 summary: stop storageArray locate 명령은 start storageArray locate 명령으로 설정된 스토리지 배열의 표시등을 끕니다. 
 ---
-= 스토리지 배열 위치 찾기를 중지합니다
+= 스토리지 어레이 위치 찾기 중지 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

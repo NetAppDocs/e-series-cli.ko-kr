@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, syslog, configuration 
 summary: show syslog summary 명령은 syslog 경고 구성 정보를 표시합니다. 
 ---
-= syslog 구성을 표시합니다
+= syslog 구성 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

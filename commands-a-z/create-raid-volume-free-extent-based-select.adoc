@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, raid, volume, free, extent, based, select 
 summary: 볼륨 생성 명령은 볼륨 그룹의 여유 공간에 볼륨을 생성합니다. 
 ---
-= RAID 볼륨 생성(사용 가능한 익스텐트 기반 선택)
+= RAID 볼륨 생성(여유 범위 기반 선택) - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

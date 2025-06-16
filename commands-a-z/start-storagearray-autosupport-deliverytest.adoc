@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, autosupport, delivery, set, individual, E2800, E5700, arrays 
 summary: start storageArray AutoSupport deliveryTest 명령은 지정된 제공 매개 변수를 사용하여 대상 기술 지원 시스템에 대한 연결을 테스트할 수 있도록 샘플 AutoSupport 번들 수집 메시지를 보냅니다. 
 ---
-= AutoSupport 전송 설정을 테스트합니다
+= AutoSupport 제공 설정 테스트 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

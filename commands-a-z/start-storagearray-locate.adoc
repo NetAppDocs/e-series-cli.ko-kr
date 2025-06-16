@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, storage, array, locate 
 summary: start storageArray locate 명령은 스토리지 배열의 표시등을 켜서 스토리지 배열을 찾습니다. 
 ---
-= 스토리지 배열 위치 찾기를 시작합니다
+= 스토리지 어레이 찾기 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

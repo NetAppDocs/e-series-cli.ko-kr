@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, consistency, group, snapshot, image 
 summary: show cgSnapImage 명령은 하나 이상의 스냅샷 정합성 보장 그룹에 있는 스냅샷 이미지 또는 여러 스냅샷 이미지를 표시합니다. 
 ---
-= 정합성 보장 그룹 스냅샷 이미지를 표시합니다
+= 일관성 그룹 스냅샷 이미지 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

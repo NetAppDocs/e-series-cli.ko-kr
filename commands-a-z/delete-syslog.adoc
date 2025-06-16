@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, syslog, command, servers, configuration, alerts, array, support, role 
 summary: syslog 삭제 명령은 syslog 구성에서 하나 이상의 서버를 삭제하여 더 이상 경고를 수신하지 않도록 합니다. 
 ---
-= syslog 서버를 삭제합니다
+= Syslog 서버 삭제 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

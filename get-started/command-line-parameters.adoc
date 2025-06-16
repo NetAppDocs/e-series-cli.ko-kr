@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: legacy, command line, parameters 
 summary: SANtricity OS 11.40 릴리즈에는 웹 서비스가 내장된 E2800 및 E5700 컨트롤러용으로 보안 HTTPS 프로토콜을 사용하여 명령줄에서 상호 작용할 수 있는 기능이 도입되었습니다. 이러한 컨트롤러는 명령줄 상호 작용에 기호 프로토콜을 대신 사용할 수도 있습니다. 
 ---
-= 레거시 명령줄 매개변수
+= 레거시 SANtricity CLI 명령줄 매개변수에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

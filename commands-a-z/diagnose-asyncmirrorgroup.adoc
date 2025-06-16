@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: diagnose, command, tests, possible, communication, problems, local, storage, array, remote, asynchronous, mirror, group 
 summary: Diagnose asyncMirrorGroup 명령은 로컬 스토리지 시스템과 비동기 미러 그룹에 연결된 원격 스토리지 시스템 간의 통신 문제를 테스트합니다. 
 ---
-= 비동기식 미러 그룹 접속을 테스트합니다
+= 비동기 미러 그룹 연결 테스트 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

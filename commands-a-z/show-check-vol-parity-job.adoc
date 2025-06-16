@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, check, volume, parity, job, 
 summary: show check volume parity job 명령은 지정된 볼륨 패리티 검사 작업과 작업의 상태를 표시합니다. 
 ---
-= 볼륨 패리티 검사 작업을 표시합니다
+= 볼륨 패리티 검사 작업 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

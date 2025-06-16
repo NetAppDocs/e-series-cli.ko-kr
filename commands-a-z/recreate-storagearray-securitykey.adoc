@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recreate, external, security key 
 summary: recreate storageArray securityKey 명령은 외부 보안 키 관리 기능과 함께 사용할 스토리지 배열 보안 키를 재생성합니다. 
 ---
-= 외부 보안 키를 다시 만듭니다
+= 외부 보안 키 다시 생성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

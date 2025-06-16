@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: autoconfigure storage array,supported, roles, syntax, parameters, minimum firmware level 
 summary: autoConfigure storageArray 명령은 스토리지 배열을 자동으로 구성합니다. 
 ---
-= 스토리지 배열 자동 구성
+= 스토리지 어레이 자동 구성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

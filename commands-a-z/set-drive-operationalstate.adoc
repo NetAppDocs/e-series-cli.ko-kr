@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, drive, state 
 summary: set drive operalState 명령은 드라이브를 Failed 상태로 설정합니다. 
 ---
-= 드라이브 상태를 설정합니다
+= 드라이브 상태 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

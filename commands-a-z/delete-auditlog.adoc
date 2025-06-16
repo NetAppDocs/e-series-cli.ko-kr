@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, audit, log, records 
 summary: auditlog 삭제 명령은 감사 로그의 일부 또는 모든 레코드를 삭제합니다. 
 ---
-= 감사 로그 레코드를 삭제합니다
+= 감사 로그 레코드 삭제 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

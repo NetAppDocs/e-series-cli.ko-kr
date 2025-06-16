@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: diagnose, controller, command, run, diagnostic, tests, arrays, roles, context 
 summary: diagnose controller 명령은 컨트롤러에서 진단 테스트를 실행합니다. 
 ---
-= 컨트롤러를 진단합니다
+= 컨트롤러 진단 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

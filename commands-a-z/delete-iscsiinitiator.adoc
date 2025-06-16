@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, initiator, command, specific, object, supported, array, role 
 summary: iscsiInitiator 삭제 명령은 특정 iSCSI 이니시에이터 객체를 삭제합니다. 
 ---
-= iSCSI 이니시에이터를 삭제합니다
+= iSCSI 이니시에이터 삭제 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

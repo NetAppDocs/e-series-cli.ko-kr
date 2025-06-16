@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, drive, channel, locate 
 summary: stop driveChannel locate 명령은 start driveChannel locate 명령으로 설정된 드라이브 트레이의 표시등을 끕니다. 
 ---
-= 드라이브 채널 위치를 중지합니다
+= 드라이브 채널 찾기 중지 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

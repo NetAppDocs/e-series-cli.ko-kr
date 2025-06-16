@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, auto, configuration 
 summary: show storageArray autoConfiguration 명령은 autoConfigure storageArray 명령을 실행할 경우 스토리지 배열이 생성하는 기본 자동 구성을 표시합니다. 
 ---
-= 스토리지 배열 자동 구성을 표시합니다
+= 스토리지 어레이 자동 구성 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

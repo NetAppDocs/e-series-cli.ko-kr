@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, snapshot, image, rollback 
 summary: SnapImage 롤백 중지 명령은 SnapImage 롤백 시작 명령에 의해 시작된 스냅샷 이미지 롤백 작업을 중지합니다. 
 ---
-= 스냅샷 이미지 롤백을 중지합니다
+= 스냅샷 이미지 롤백 중지 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

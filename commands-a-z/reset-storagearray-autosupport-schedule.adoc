@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, autosupport, message, collection, schedule 
 summary: reset storageArray AutoSupport schedule 명령은 AutoSupport 메시지가 관리 소프트웨어에서 생성된 임의의 값으로 다시 전송되는 요일과 주 단위 시간 및 일을 재설정합니다. 
 ---
-= AutoSupport 메시지 수집 일정을 재설정합니다
+= AutoSupport 메시지 수집 일정 재설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

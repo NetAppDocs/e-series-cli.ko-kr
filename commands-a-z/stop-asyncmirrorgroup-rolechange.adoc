@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cancel, asynchronous, mirror, group, role, reversal 
 summary: stop asyncMirrorGroup rolechange 명령은 비동기식 미러 그룹 간의 보류 중인 역할 전환 작업을 취소합니다. 
 ---
-= 비동기식 미러 그룹 역할 반전을 취소합니다
+= 비동기 미러 그룹 역할 반전 취소 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

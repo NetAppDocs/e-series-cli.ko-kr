@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, synchronous, mirror 
 summary: set SyncMirror 명령은 원격 미러링 쌍의 속성을 정의합니다. 
 ---
-= 동기 미러링을 설정합니다
+= 동기식 미러링 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

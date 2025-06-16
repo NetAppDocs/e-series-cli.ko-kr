@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, controller, trace 
 summary: start controller 명령은 디버그 추적 정보를 압축된 파일에 저장하는 작업을 시작합니다. 
 ---
-= 컨트롤러 트레이스를 시작합니다
+= 컨트롤러 추적 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, odx 
 summary: 'set storageArray odxEnabled 명령은 스토리지 어레이에 대한 ODX(Offloaded Data Transfer)를 설정하거나 해제합니다.' 
 ---
-= ODX를 설정 또는 해제합니다
+= ODX 활성화 또는 비활성화 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

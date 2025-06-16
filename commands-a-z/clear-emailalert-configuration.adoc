@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear email, alert, configuration 
 summary: emailAlert 구성 지우기 명령은 e-메일 경고 구성을 기본값으로 지웁니다. 
 ---
-= e-메일 알림 구성을 지웁니다
+= 이메일 알림 구성 지우기 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: increase, capacity, volume, disk pool, volume, group 
 summary: start increeVolumeCapacity volume 명령은 디스크 풀 또는 볼륨 그룹의 표준 볼륨 또는 저장소 볼륨 용량을 늘립니다. 
 ---
-= 디스크 풀 또는 볼륨 그룹에서 볼륨의 용량을 늘립니다
+= 디스크 풀 또는 볼륨 그룹의 볼륨 용량 늘리기 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

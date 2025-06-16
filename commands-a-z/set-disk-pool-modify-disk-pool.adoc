@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, disk pool, modify 
 summary: 'set diskpool 명령은 디스크 풀(동적 용량 확장 또는 DCE)에 용량을 추가하거나 전체 디스크 풀의 컨트롤러 소유권을 변경합니다.' 
 ---
-= 디스크 풀 설정(디스크 풀 수정)
+= 디스크 풀 설정(디스크 풀 수정) - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

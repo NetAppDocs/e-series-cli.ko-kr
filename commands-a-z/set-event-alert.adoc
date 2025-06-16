@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, event, alert, filter 
 summary: set event alert 명령은 특정 alertable 이벤트와 관련된 알림을 비활성화하거나 활성화하여 경고 이벤트 알림을 관리합니다. 특정 경계 이벤트에 대한 알림을 방지하려면 해당 이벤트를 차단해야 합니다. 특정 경보 가능 이벤트에 대한 알림을 활성화하려면 차단을 해제합니다. 
 ---
-= 이벤트 경고 필터링을 설정합니다
+= 이벤트 알림 필터링 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

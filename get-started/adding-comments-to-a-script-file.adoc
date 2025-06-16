@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add, comments, script file 
 summary: 스크립트 엔진은 특정 문자 또는 명령을 찾아 주석을 표시합니다. 세 가지 방법으로 스크립트 파일에 주석을 추가할 수 있습니다. 
 ---
-= 스크립트 파일에 설명을 추가합니다
+= SANtricity CLI 스크립트 파일에 주석 추가
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add, member, consistency, group 
 summary: set consistencyGroup addCGMemberVolume 명령은 새 기본 볼륨을 기존 정합성 보장 그룹에 구성원으로 추가합니다. 
 ---
-= 일관성 그룹에 구성원을 추가합니다
+= 일관성 그룹에 멤버 추가 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

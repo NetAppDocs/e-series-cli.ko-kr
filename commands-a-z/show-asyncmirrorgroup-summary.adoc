@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, asynchronous, mirror, groups 
 summary: show asyncMirrorGroup summary 명령은 하나 이상의 비동기식 미러 그룹에 대한 구성 정보를 표시합니다. 
 ---
-= 비동기식 미러 그룹을 표시합니다
+= 비동기 미러 그룹 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

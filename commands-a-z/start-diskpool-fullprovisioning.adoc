@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, disk pool, full, provision 
 summary: start diskpool fullProvisioning 명령은 디스크 풀의 모든 볼륨에서 전체 프로비저닝 작업을 시작하고 선택적으로 디스크 풀에서 리소스 프로비저닝을 비활성화합니다. 
 ---
-= 디스크 풀 전체 프로비저닝을 시작합니다
+= 디스크 풀 전체 프로비저닝 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

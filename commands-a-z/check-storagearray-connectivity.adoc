@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: check, storage array, connectivity 
 summary: 스토리지 배열 연결 검사 명령은 로컬 스토리지 배열과 원격 스토리지 배열에 통신 경로가 있는지 확인하고 로컬 스토리지와 원격 스토리지 배열 간의 접속 세부 정보를 표시합니다. 
 ---
-= 스토리지 배열 연결을 확인합니다
+= 스토리지 어레이 연결 확인 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

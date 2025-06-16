@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, storage, array, iscsi session 
 summary: stop storageArray iscsiSession 명령은 스토리지 배열 iSCSI 세션을 강제로 종료합니다. 
 ---
-= 스토리지 배열 iSCSI 세션을 중지합니다
+= 스토리지 어레이 iSCSI 세션 중지 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

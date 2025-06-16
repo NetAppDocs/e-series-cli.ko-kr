@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, isns, server, ipv4, address 
 summary: 'set storageArray isnsIPv4ConfigurationMethod 명령은 IPv4 iSNS(Internet Storage Name Service)의 구성 방법과 주소를 설정합니다.' 
 ---
-= 스토리지 배열 iSNS 서버 IPv4 주소를 설정합니다
+= SANtricity CLI에서 스토리지 어레이 iSNS 서버 IPv4 주소 설정
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

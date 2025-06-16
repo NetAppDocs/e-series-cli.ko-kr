@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, audit log, configuration 
 summary: show auditlog configuration 명령은 스토리지 배열에 대한 감사 로그 구성 설정을 표시합니다. 
 ---
-= 감사 로그 구성을 표시합니다
+= 감사 로그 구성 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

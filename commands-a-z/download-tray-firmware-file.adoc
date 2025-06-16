@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, tray, firmware, file, command, environmental, service, module, array, role, context 
 summary: 'download tray firmware file 명령은 환경 서비스 모듈(ESM) 펌웨어를 다운로드합니다.' 
 ---
-= 환경 카드 펌웨어를 다운로드합니다
+= 환경 카드 펌웨어 다운로드 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

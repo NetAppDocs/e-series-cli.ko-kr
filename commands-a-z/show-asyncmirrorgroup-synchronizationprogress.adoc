@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, asynchronous, mirror, group, synchronization, progress 
 summary: show asyncMirrorGroup SynchronizationProgress 명령은 로컬 스토리지와 원격 스토리지 시스템 간에 비동기 미러 그룹을 주기적으로 동기화하는 진행률을 표시합니다. 
 ---
-= 비동기식 미러 그룹 동기화 진행률을 표시합니다
+= 비동기 미러 그룹 동기화 진행률 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

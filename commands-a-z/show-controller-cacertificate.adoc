@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, installed, root, intermediate, ca, certificates, summary 
 summary: show controller caCertificate 명령은 지정된 컨트롤러의 설치된 CA 인증서 요약을 표시합니다. 이 명령은 삭제할 인증서의 별칭 이름을 알 수 있도록 컨트롤러 caCertificate 삭제 명령을 수행하기 전에 를 사용하는 데 유용합니다. 
 ---
-= 설치된 루트/중간 CA 인증서 요약을 표시합니다
+= 설치된 루트/중간 CA 인증서 요약 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

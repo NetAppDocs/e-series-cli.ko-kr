@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, consistency, group 
 summary: create consistencyGroup 명령은 스냅샷 그룹을 포함할 수 있는 비어 있는 새 정합성 보장 그룹을 생성합니다. set encistencyGroup addCGMember 명령을 사용하여 스냅샷 그룹을 추가해야 합니다. 
 ---
-= 일관성 그룹 생성
+= 일관성 그룹 생성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

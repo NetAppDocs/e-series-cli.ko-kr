@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, audit, log, summary 
 summary: show auditlog summary 명령은 감사 로그 요약 정보를 표시합니다. 
 ---
-= 감사 로그 요약을 표시합니다
+= 감사 로그 요약 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

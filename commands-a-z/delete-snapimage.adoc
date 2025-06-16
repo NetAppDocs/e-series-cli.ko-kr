@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, snapimage, command, snapshot, images, group, support, array, roles 
 summary: SnapImage 삭제 명령은 스냅샷 그룹에서 하나 이상의 스냅샷 이미지를 삭제합니다. 
 ---
-= 스냅샷 이미지를 삭제합니다
+= 스냅샷 이미지 삭제 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

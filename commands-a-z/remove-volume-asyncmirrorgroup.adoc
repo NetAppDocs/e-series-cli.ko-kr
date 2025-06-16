@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, volume, asynchronous, mirror, group 
 summary: remove volume asyncMirrorGroup 명령은 기존의 비동기식 미러 그룹에서 구성원 볼륨을 제거합니다. 
 ---
-= 비동기식 미러 그룹에서 볼륨을 제거합니다
+= 비동기 미러 그룹에서 볼륨 제거 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

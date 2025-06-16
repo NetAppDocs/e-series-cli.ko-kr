@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: suspend, asynchronous, mirror, group 
 summary: suspend asyncMirrorGroup 명령은 비동기식 미러 그룹 레벨에서 미러링된 모든 쌍의 데이터 동기화를 일시 중단합니다. 
 ---
-= 비동기식 미러 그룹을 일시 중단합니다
+= 비동기 미러 그룹 일시 중단 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

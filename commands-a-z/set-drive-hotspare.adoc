@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, drive, hot spare 
 summary: set drive Hotspare 명령은 하나 이상의 드라이브를 핫 스페어로 할당하거나 할당 해제합니다. 
 ---
-= 드라이브 핫 스페어를 설정하십시오
+= 드라이브 핫 스페어 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

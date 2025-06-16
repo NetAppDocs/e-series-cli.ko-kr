@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: performance, tuning, commands, automatic, load balance, cache commands 
 summary: 성능 튜닝 명령 
 ---
-= 성능 튜닝 명령
+= SANtricity CLI 성능 튜닝 명령
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

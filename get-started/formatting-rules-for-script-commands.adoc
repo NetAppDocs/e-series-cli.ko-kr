@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: format, rules, script, commands 
 summary: 특정 스크립트 명령에 고유한 구문은 각 스크립트 명령 설명 끝에 있는 Notes 섹션에 설명되어 있습니다. 
 ---
-= 스크립트 명령에 대한 서식 규칙
+= SANtricity CLI 스크립트 명령에 대한 형식 규칙
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

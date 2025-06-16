@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, read only, snapshot, volume 
 summary: create snapVolume 명령은 기본 볼륨의 스냅샷 이미지에 대한 읽기 전용 스냅샷 볼륨을 생성합니다. 읽기 전용 스냅샷 볼륨을 읽기/쓰기 볼륨으로 변경하려면 set snapVolume convertToReadWrite 명령을 사용합니다. 
 ---
-= 읽기 전용 스냅샷 볼륨을 생성합니다
+= 읽기 전용 스냅샷 볼륨 생성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

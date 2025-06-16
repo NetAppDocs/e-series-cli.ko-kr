@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, drive, locate 
 summary: 드라이브 찾기 중지 명령은 드라이브 찾기 시작 명령을 사용하여 켠 드라이브의 표시등을 끕니다. 
 ---
-= 드라이브 찾기를 중지합니다
+= 드라이브 위치 정지 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

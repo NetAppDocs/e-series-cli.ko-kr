@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, hostport, command, host, port, identification 
 summary: delete hostPort 명령은 호스트 포트 ID를 삭제합니다. 
 ---
-= 호스트 포트를 삭제합니다
+= 호스트 포트 삭제 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

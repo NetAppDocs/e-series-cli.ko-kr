@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, drive, replace 
 summary: stop drive replace 명령은 set drive 명령 또는 replace drive 명령을 사용하여 copyDrive 사용자 입력으로 시작된 데이터 복사 작업을 중지합니다. 
 ---
-= 드라이브 교체를 중지합니다
+= 드라이브 교체 중지 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

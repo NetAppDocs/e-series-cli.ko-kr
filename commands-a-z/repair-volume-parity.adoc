@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: repair, volume, parity 
 summary: 볼륨 패리티 복구 명령은 볼륨의 패리티 오류를 복구합니다. 
 ---
-= 볼륨 패리티를 복구합니다
+= 볼륨 패리티 복구 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

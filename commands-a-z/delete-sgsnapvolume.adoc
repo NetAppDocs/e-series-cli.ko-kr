@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delte, snapvolume, command, snapshot, consistency, group, optionally, repository, members 
 summary: delete sgSnapVolume 명령은 정합성 보장 그룹의 스냅샷 볼륨을 삭제합니다. 필요한 경우 리포지토리 구성원을 삭제할 수도 있습니다. 
 ---
-= 정합성 보장 그룹 스냅샷 볼륨을 삭제합니다
+= 일관성 그룹 스냅샷 볼륨 삭제 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

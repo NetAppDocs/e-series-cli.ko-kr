@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, drive, download, progress 
 summary: show allDrives downloadProgress 명령은 download drive firmware 명령 또는 download storageArray driveFirmware 명령으로 대상이 되는 드라이브의 펌웨어 다운로드 상태를 반환합니다. 
 ---
-= 드라이브 다운로드 진행률을 표시합니다
+= 드라이브 다운로드 진행률 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, controller, health, image 
 summary: 'show storageArray controllerHealthImage 명령은 컨트롤러 상태 이미지를 지원하는 스토리지 어레이에서 컨트롤러 캐시의 컨트롤러 상태 이미지 세부 정보를 표시합니다(컨트롤러 상태 이미지가 있는 경우).' 
 ---
-= 스토리지 어레이 컨트롤러 상태 이미지를 표시합니다
+= 스토리지 어레이 컨트롤러 상태 이미지 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

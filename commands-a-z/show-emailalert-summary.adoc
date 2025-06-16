@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, email, alert, configuration 
 summary: show emailAlert summary 명령은 e-메일 경고 구성 정보를 표시합니다. 
 ---
-= e-메일 알림 구성을 표시합니다
+= 이메일 알림 구성 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

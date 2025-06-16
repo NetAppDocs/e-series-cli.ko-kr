@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, check, volume, parity, job, errors 
 summary: save check volume parity job parity error 명령은 볼륨 패리티 검사 작업에 의해 기록된 패리티 오류를 지정된 파일에 저장합니다. 
 ---
-= 볼륨 확인 패리티 작업 패리티 오류 저장
+= 볼륨 패리티 작업 패리티 오류 검사 저장 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

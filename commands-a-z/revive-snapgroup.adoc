@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: revive, snapshot, group 
 summary: SnapGroup을 다시 실행 명령을 실행하면 지정된 스냅샷 그룹이 Optimal 상태가 됩니다. 
 ---
-= 스냅샷 그룹을 다시 사용합니다
+= 스냅샷 그룹 다시 활성화 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

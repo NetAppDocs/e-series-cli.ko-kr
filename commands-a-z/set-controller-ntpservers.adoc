@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, controller, ntp 
 summary: 'set controller NTPServers 명령은 컨트롤러의 NTP 설정을 설정하므로 컨트롤러가 SNTP(Simple Network Time Protocol)를 사용하여 외부 호스트와 시계를 자동으로 동기화할 수 있습니다.' 
 ---
-= 컨트롤러 NTP 설정을 설정합니다
+= 컨트롤러 NTP 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

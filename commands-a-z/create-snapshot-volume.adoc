@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, snapshot, volume 
 summary: create snapVolume 명령은 기본 볼륨의 스냅샷 이미지에 대한 읽기-쓰기 기능을 사용하여 스냅샷 볼륨을 생성합니다. 
 ---
-= 스냅샷 볼륨을 생성합니다
+= 스냅샷 볼륨 생성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

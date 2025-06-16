@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, ocsp, server, url, test 
 summary: 'start storageArray ocspResponderUrl 테스트 명령은 OCSP(온라인 인증서 상태 프로토콜) 서버의 지정된 URL에 대한 열린 연결을 확인합니다.' 
 ---
-= OCSP 서버 URL 테스트를 시작합니다
+= OCSP 서버 URL 테스트 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

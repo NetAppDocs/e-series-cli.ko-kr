@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, volume, map 
 summary: create mapping volume 명령은 볼륨에서 호스트 또는 호스트 그룹으로 논리적 매핑을 생성합니다. 
 ---
-= 볼륨 매핑 생성
+= 볼륨 매핑 생성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

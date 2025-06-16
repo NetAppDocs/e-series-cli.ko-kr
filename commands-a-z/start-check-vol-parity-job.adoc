@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, check, volume, parity, job 
 summary: 볼륨 패리티 검사 시작 명령은 지정된 볼륨에서 볼륨 패리티 검사 작업을 새로 시작합니다. 
 ---
-= 볼륨 패리티 검사 작업을 시작합니다
+= 볼륨 패리티 검사 작업 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

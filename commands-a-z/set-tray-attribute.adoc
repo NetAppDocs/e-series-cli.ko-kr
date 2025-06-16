@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, tray, attribute 
 summary: 트레이 설정 명령은 용지함에 대해 사용자 정의 속성을 설정합니다 
 ---
-= 용지함 속성을 설정합니다
+= 트레이 속성 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, host, connectivity, report 
 summary: set storageArray hostConnectivityReporting 명령은 컨트롤러에서 호스트 연결 보고를 활성화하거나 비활성화합니다. 
 ---
-= 호스트 연결 보고를 설정하거나 해제합니다
+= 호스트 연결 보고 활성화 또는 비활성화 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

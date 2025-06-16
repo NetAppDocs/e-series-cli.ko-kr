@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, input, output, controller, ioc, dump 
 summary: save IOCLog 명령은 스토리지 배열의 컨트롤러에서 호스트의 파일로 IOC 덤프를 저장합니다. 
 ---
-= 입력 출력 컨트롤러(IOC) 덤프를 저장합니다
+= 입출력 컨트롤러(IOC) 덤프 저장 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

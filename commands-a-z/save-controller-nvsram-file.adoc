@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, controller, nvsram 
 summary: save controller NVSRAM file 명령은 선택한 컨트롤러 NVSRAM 영역 세트를 파일에 저장합니다. 
 ---
-= 컨트롤러 NVSRAM을 저장합니다
+= 컨트롤러 NVSRAM 저장 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

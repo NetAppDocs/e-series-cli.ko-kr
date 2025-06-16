@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, host, connectivity, report 
 summary: show storageArray hostConnectivityReporting 명령은 호스트 연결 보고 기능의 활성화 상태를 반환합니다. 
 ---
-= 스토리지 시스템 호스트 접속 구성을 보여 줍니다
+= 스토리지 어레이 호스트 연결 보고 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

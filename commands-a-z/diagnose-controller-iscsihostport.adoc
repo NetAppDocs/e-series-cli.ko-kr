@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: diagnose, controller, hostport, command, diagnostic, tests, copper, cable, host, interface, cards, support, roles 
 summary: diagnose controller iscsiHostPort 명령은 iSCSI 호스트 인터페이스 카드와 컨트롤러 사이의 구리 케이블에 대한 진단 테스트를 실행합니다. 
 ---
-= 컨트롤러 iSCSI 호스트 케이블을 진단합니다
+= 컨트롤러 iSCSI 호스트 케이블 진단 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

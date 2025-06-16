@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disable, storage, array, external, management, file, command, disable, security, key, full, disk, encryption, drives 
 summary: disable storageArray externalKeyManagement file 명령은 전체 디스크 암호화 드라이브가 있는 스토리지 배열에 대한 외부 보안 키 관리를 비활성화합니다. 
 ---
-= 외부 보안 키 관리를 비활성화합니다
+= 외부 보안 키 관리 비활성화 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

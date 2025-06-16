@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, storage array, firmware, pending, area 
 summary: clear storageArray firmwarePendingArea 명령은 보류 중인 영역 버퍼에서 이전에 다운로드한 펌웨어 이미지 또는 NVSRAM 값을 삭제합니다. 
 ---
-= 스토리지 배열 펌웨어 보류 영역을 지웁니다
+= 스토리지 어레이 펌웨어 보류 영역 지우기 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

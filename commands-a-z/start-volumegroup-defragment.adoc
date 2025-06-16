@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, volume, group, defragment 
 summary: start volumeGroup 조각 모음 명령은 지정된 볼륨 그룹에서 조각 모음 작업을 시작합니다. 
 ---
-= 볼륨 그룹 조각 모음을 시작합니다
+= 볼륨 그룹 조각 모음 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

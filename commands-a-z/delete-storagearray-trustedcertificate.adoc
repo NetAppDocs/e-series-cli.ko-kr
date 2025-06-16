@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, storage, array, trusted, certificate, command, remove, specified, installed, web, servers 
 summary: delete storageArray trustedCertificate 명령은 지정된 사용자가 설치한 CA 인증서를 어레이의 웹 서버에서 제거합니다. 
 ---
-= 설치된 신뢰할 수 있는 CA 인증서를 제거합니다
+= 설치된 신뢰할 수 있는 CA 인증서 제거 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

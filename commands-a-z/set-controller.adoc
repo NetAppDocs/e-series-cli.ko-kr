@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, controller 
 summary: set controller 명령은 컨트롤러의 특성을 정의합니다. 
 ---
-= 컨트롤러를 설정합니다
+= 컨트롤러 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

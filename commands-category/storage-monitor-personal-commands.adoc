@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage, monitor, personnel, commands, asynchronous, autosupport, cache, array, synchronous 
 summary: 스토리지 모니터 담당자 명령 
 ---
-= 스토리지 모니터 담당자 명령
+= SANtricity CLI 스토리지 모니터 인력 명령
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

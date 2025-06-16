@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configuration, commands, alert, embedded 
 summary: 경고 구성 명령 
 ---
-= 경고 구성 명령
+= SANtricity CLI 알림 구성 명령
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, snapshot, image 
 summary: SnapImage 생성 명령은 하나 이상의 기존 스냅샷 그룹에 새 스냅샷 이미지를 생성합니다. 
 ---
-= 스냅샷 이미지를 생성합니다
+= 스냅샷 이미지 생성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

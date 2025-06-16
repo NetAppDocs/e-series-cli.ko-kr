@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: authentication, users, access, system, assign, login credentials, associated, profile, include, specific, role, access, permissions, start 
 summary: 인증을 위해서는 사용자가 할당된 로그인 자격 증명을 사용하여 시스템에 액세스해야 합니다. 각 사용자 로그인은 특정 역할 및 액세스 권한이 포함된 사용자 프로필과 연결됩니다. 
 ---
-= 인증 시작하기
+= 인증 시작하기 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

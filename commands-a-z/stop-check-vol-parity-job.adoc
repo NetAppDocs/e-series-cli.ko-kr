@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, check, volume, parity, job, 
 summary: 볼륨 패리티 검사 중지 명령은 진행 중인 볼륨 패리티 검사 작업을 중지합니다. 
 ---
-= 볼륨 패리티 검사 작업을 중지합니다
+= 볼륨 패리티 검사 작업 중지 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, autosupport, configuration 
 summary: SMcli -autoSupportConfig 테스트 명령을 사용하여 테스트 메시지를 전송하여 AutoSupport 구성을 테스트합니다. 이 명령은 관리 도메인에서 작동합니다. 스토리지 관리 소프트웨어는 테스트 메시지에 포함할 예시 데이터를 위해 관리 도메인에서 자동 지원 가능 어레이를 선택합니다. 
 ---
-= AutoSupport 구성을 테스트합니다
+= AutoSupport 구성 테스트 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

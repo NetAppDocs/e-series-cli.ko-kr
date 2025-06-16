@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, storage, array, loginbanner, command, allow, login, banner, text, file, upload, save, role 
 summary: delete storageArray loginBanner 명령을 사용하면 이전에 업로드 및 저장한 로그인 배너 텍스트 파일을 삭제할 수 있습니다. 
 ---
-= 스토리지 배열 로그인 배너를 삭제합니다
+= 스토리지 어레이 로그인 배너 삭제 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

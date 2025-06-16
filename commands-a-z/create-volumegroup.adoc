@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, volume, group 
 summary: create volumeGroup 명령은 할당되지 않은 드라이브 세트를 입력할 때 한 볼륨의 여유 용량 볼륨 그룹 또는 볼륨 그룹을 생성합니다. 
 ---
-= 볼륨 그룹을 생성합니다
+= 볼륨 그룹 생성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

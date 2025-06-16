@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace, drive 
 summary: Replace drive replacementDrive 명령은 볼륨 그룹의 드라이브를 대체합니다. 
 ---
-= 드라이브를 교체합니다
+= 드라이브 교체 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

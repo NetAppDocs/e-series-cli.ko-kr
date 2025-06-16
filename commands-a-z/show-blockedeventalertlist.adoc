@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, blocked, events 
 summary: show blockedEventAlertList 명령은 set blockEventAlert 명령으로 현재 차단된 이벤트 목록을 반환합니다. 이 목록의 이벤트는 알림 터미널 및 매개 변수를 사용하여 구성한 알림, 즉 e-메일, syslog 및 트랩 알림을 보내지 않는 이벤트입니다. 
 ---
-= 차단된 이벤트 표시
+= 차단된 이벤트 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reduce, disk pool, capacity 
 summary: set diskpool 명령은 풀에서 드라이브를 논리적으로 제거하여 디스크 풀의 용량을 줄입니다. 
 ---
-= 디스크 풀 용량을 줄입니다
+= 디스크 풀 용량 줄이기 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

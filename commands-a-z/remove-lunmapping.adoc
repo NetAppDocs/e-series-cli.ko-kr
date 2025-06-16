@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, volume, lun map 
 summary: 'remove lunMapping 명령은 하나 이상의 볼륨에서 LUN(Logical Unit Number) 또는 NSID(Namespace ID) 매핑을 제거합니다.' 
 ---
-= 볼륨 LUN 매핑을 제거합니다
+= 볼륨 LUN 매핑 제거 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

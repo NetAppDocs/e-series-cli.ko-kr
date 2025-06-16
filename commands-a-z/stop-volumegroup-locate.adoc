@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, volume, group, locate 
 summary: stop volumeGroup locate 명령은 start volumeGroup locate 명령으로 설정된 드라이브의 표시등을 끕니다. 
 ---
-= 볼륨 그룹 위치를 중지합니다
+= 볼륨 그룹 찾기 중지 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

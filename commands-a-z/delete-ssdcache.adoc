@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, cache, command, data, purged, array, support, role, parameter 
 summary: delete ssdCache 명령은 SSD 캐시를 삭제합니다. SSD 캐시의 모든 데이터가 삭제됩니다. 
 ---
-= SSD 캐시를 삭제합니다
+= SSD 캐시 삭제 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

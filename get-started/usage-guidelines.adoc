@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: script command, guidelines 
 summary: 스크립트 명령을 작성할 때 다음 지침을 준수하십시오. 
 ---
-= 스크립트 명령 지침
+= SANtricity CLI 스크립트 명령 지침에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

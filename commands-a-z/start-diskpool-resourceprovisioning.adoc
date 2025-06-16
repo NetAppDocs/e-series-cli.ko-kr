@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, disk pool, resource, provision 
 summary: start diskpool resourceProvisioning 명령은 지정된 디스크 풀에서 리소스 프로비저닝을 활성화하고 디스크 풀의 각 볼륨에서 리소스 프로비저닝 활성화 비동기 작업을 시작합니다. 리소스 프로비저닝을 수행하려면 디스크 풀의 모든 드라이브에서 NVMe의 DULBE 기능을 지원해야 합니다. 
 ---
-= 디스크 풀 리소스 프로비저닝을 시작합니다
+= 디스크 풀 리소스 프로비저닝 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

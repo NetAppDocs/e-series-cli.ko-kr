@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, volume, group, resource, provision 
 summary: start volumeGroup resourceProvisioning 명령은 지정된 볼륨 그룹에서 리소스 프로비저닝을 활성화하고 볼륨 그룹의 각 볼륨에 대해 리소스 프로비저닝 지원 비동기 작업을 시작합니다. 리소스 프로비저닝을 수행하려면 볼륨 그룹의 모든 드라이브가 NVMe의 DULBE 기능을 지원해야 합니다. 
 ---
-= 볼륨 그룹 리소스 프로비저닝을 시작합니다
+= 볼륨 그룹 리소스 프로비저닝 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: register, snmpv3 usm, user 
 summary: 'create snmpUser username 명령은 새 SNMP(Simple Network Management Protocol) 사용자를 생성하고 새 사용자를 알려진 엔터티로 SNMP 에이전트에 등록합니다. 기존 사용자와 동일한 이름 및 엔진 ID를 가진 새 사용자를 등록하려는 시도는 거부됩니다.' 
 ---
-= SNMPv3 USM 사용자를 등록합니다
+= SNMPv3 USM 사용자 등록 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

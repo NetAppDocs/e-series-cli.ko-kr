@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, consistency, group, snapshot, image 
 summary: delete cgSnapImage ConsistencyGroup 명령은 정합성 보장 그룹의 스냅샷 이미지를 삭제합니다. 
 ---
-= 정합성 보장 그룹 스냅샷 이미지를 삭제합니다
+= 일관성 그룹 스냅샷 이미지 삭제 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

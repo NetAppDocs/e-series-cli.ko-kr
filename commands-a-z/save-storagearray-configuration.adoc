@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, configuration 
 summary: save storageArray configuration 명령은 현재 스토리지 배열 볼륨 구성을 다시 생성하는 데 사용할 수 있는 스크립트 파일을 생성합니다. 
 ---
-= 스토리지 배열 구성을 저장합니다
+= 스토리지 어레이 구성 저장 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

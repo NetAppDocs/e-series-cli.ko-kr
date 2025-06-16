@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, consistency, group, snapshot, volume, map 
 summary: create mapping cgSnapVolume 명령은 정합성 보장 그룹 스냅샷 볼륨에서 호스트 또는 호스트 그룹에 대한 논리적 매핑을 생성합니다. 
 ---
-= 정합성 보장 그룹 스냅샷 볼륨 매핑을 생성합니다
+= 일관성 그룹 스냅샷 볼륨 매핑 생성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

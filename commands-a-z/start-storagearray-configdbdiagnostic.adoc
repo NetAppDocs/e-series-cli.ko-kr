@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, storage, array, configuration, database, diagnostic 
 summary: start storageArray configDbDiagnostic 명령은 구성 데이터베이스에 대해 일관성 검사를 실행합니다. 
 ---
-= 스토리지 배열 구성 데이터베이스 진단을 시작합니다
+= 스토리지 어레이 구성 데이터베이스 진단 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

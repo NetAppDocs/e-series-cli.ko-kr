@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, thin, volume, attributes 
 summary: 볼륨 설정 명령은 씬 볼륨의 속성을 정의합니다. 
 ---
-= 씬 볼륨 특성을 설정합니다
+= 씬 볼륨 속성 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

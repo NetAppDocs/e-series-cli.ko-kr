@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, tray, locate 
 summary: 트레이 찾기 중지 명령은 트레이 찾기 시작 명령으로 설정된 용지함의 표시등 전원을 끕니다. 
 ---
-= 트레이 위치를 중지합니다
+= 트레이 위치 찾기 중지 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: register, snmp, community 
 summary: 'create snmpCommunity 명령은 새로운 SNMP(Simple Network Management Protocol) 커뮤니티, 커뮤니티 이름 문자열을 생성하고 새 커뮤니티를 알려진 엔터티로 SNMP 에이전트에 등록합니다. 기존 커뮤니티와 동일한 이름의 새 커뮤니티를 등록하려는 시도는 거부되고 펌웨어는 오류 메시지를 반환합니다.' 
 ---
-= SNMP 커뮤니티를 등록합니다
+= SNMP 커뮤니티 등록 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

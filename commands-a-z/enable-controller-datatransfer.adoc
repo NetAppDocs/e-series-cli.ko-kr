@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, controller, datatransfer, command, revive, quiesced, running, diagnostics, role, syntax, parameter, firmware level 
 summary: enable controller dataTransfer 명령은 진단을 실행하는 동안 중지된 컨트롤러를 다시 활성화합니다. 
 ---
-= 컨트롤러 데이터 전송을 활성화합니다
+= 컨트롤러 데이터 전송 활성화 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

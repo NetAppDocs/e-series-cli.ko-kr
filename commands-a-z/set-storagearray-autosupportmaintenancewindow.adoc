@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, autosupport, maintenance, window, individual, E2800, E5700, arrays 
 summary: set storageArray autoSupport유지보수창 명령은 AutoSupport 유지 보수 창 기능을 설정하거나 해제합니다. 
 ---
-= AutoSupport 유지 관리 창을 사용 또는 사용하지 않도록 설정합니다
+= AutoSupport 유지 관리 창 활성화 또는 비활성화 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

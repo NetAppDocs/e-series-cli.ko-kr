@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, storage, array, syslog, test 
 summary: start storageArray syslog test 명령을 사용하면 스토리지 어레이와 syslog 서버 간의 통신을 테스트할 수 있습니다. 
 ---
-= 스토리지 시스템 syslog 테스트를 시작합니다
+= 스토리지 어레이 syslog 테스트 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

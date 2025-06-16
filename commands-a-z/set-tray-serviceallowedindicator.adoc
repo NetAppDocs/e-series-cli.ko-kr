@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, tray, service, action, allowed, indicator 
 summary: 'SET TRAY serviceAllowedIndicator 명령은 전원 팬 캐니스터, 상호 연결 배터리 캐니스터 또는 환경 서비스 모듈(ESM) 캐니스터에 있는 Service Action Allowed 표시등을 켜거나 끕니다.' 
 ---
-= 트레이 서비스 작업 허용 표시기를 설정합니다
+= 트레이 서비스 작업 허용 표시기 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, iscsi, host, port, network, properties 
 summary: set controller iscsiHostPort 명령은 IPv4 및 IPv6 속성, 포트 속도 및 최대 프레임 페이로드를 포함하여 호스트 포트의 네트워크 속성을 변경합니다. 
 ---
-= iSCSI 호스트 포트 네트워킹 속성을 설정합니다
+= iSCSI 호스트 포트 네트워킹 속성 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

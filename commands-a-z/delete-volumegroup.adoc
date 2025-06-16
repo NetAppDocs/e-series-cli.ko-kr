@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, volume, group, command, entire, associated, support, role 
 summary: delete volumeGroup 명령은 전체 볼륨 그룹과 해당 관련 볼륨을 삭제합니다. 
 ---
-= 볼륨 그룹을 삭제합니다
+= 볼륨 그룹 삭제 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

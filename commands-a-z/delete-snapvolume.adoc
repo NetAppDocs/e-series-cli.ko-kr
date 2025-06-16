@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, snapvolume, command, snapshot, volume, optionally, associate, repository, members 
 summary: delete snapVolume 명령은 스냅샷 볼륨을 삭제하고 필요한 경우 연결된 스냅샷 저장소 구성원을 삭제합니다. 
 ---
-= 스냅샷 볼륨을 삭제합니다
+= 스냅샷 볼륨 삭제 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

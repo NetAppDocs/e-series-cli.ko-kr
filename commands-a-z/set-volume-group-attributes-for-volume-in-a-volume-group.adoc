@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, volume, attributes, group 
 summary: set volume 명령은 볼륨 그룹의 볼륨에 대한 속성을 정의합니다. 
 ---
-= 볼륨 그룹의 볼륨에 대한 볼륨 특성을 설정합니다
+= 볼륨 그룹의 볼륨에 대한 볼륨 속성 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

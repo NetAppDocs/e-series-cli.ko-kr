@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, sas, phy, counts 
 summary: 'save storageArray SASPHYCounts 명령은 SAS physical layer(SAS PHY) 카운터를 파일에 저장합니다.' 
 ---
-= 스토리지 배열 SAS PHY 수를 저장합니다
+= SANtricity CLI에서 스토리지 어레이 SAS PHY 개수 저장
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

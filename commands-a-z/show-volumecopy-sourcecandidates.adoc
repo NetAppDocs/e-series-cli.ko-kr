@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, copy, source, candidates 
 summary: show volumeCopy sourceCandidate 명령은 볼륨 복사 작업의 소스로 사용할 수 있는 대상 볼륨에 대한 정보를 반환합니다. 이 명령은 스냅샷 볼륨 복사본 쌍에 대해 유효합니다. 
 ---
-= 볼륨 복사본 소스 후보 표시
+= 볼륨 복사 소스 후보 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, email, alert, recipient 
 summary: emailAlert 삭제 명령은 e-메일 경고 구성에서 받는 사람 e-메일 주소를 삭제합니다. 
 ---
-= 이메일 알림 수신자를 삭제합니다
+= 이메일 알림 수신자 삭제 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

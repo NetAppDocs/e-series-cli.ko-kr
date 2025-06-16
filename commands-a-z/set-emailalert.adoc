@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure, email, alert, set 
 summary: set emailAlert 명령은 이메일을 지정된 기술 지원 또는 조직에 전송하도록 구성합니다. 이메일 알림에는 이벤트 요약, 영향을 받는 스토리지에 대한 자세한 정보 및 고객 연락처 정보가 포함되어 있습니다. 
 ---
-= e-메일 알림 설정을 구성합니다
+= 이메일 알림 설정 구성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

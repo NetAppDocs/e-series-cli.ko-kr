@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, ssd, cache, volume 
 summary: set volume ssdCacheEnabled 명령은 특정 볼륨에 대한 SSD 캐시 기능을 사용하여 캐싱을 설정하거나 해제합니다. 
 ---
-= 볼륨에 대한 SSD 캐시를 설정합니다
+= 볼륨에 대한 SSD 캐시 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

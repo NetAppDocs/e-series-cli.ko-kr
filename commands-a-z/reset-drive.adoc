@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, drive 
 summary: reset drive 명령은 일관성 없거나 최적화되지 않은 동작을 보이는 드라이브의 복구를 지원하기 위해 볼륨 그룹 또는 디스크 풀의 드라이브를 순환합니다. 
 ---
-= 드라이브를 재설정합니다
+= 드라이브 재설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

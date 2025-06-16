@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, drive channel, statistics 
 summary: show driveChannel stats 명령은 드라이브 채널의 누적 데이터 전송 및 오류 정보를 표시합니다. 
 ---
-= 드라이브 채널 통계를 표시합니다
+= 드라이브 채널 통계 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

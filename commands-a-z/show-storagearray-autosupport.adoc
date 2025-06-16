@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, autosupport, configuration, e2800, e5700, storage, arrays 
 summary: show storageArray AutoSupport 명령은 스토리지 배열에 대한 AutoSupport 번들 수집 설정을 표시합니다. 
 ---
-= AutoSupport 설정을 표시합니다
+= AutoSupport 구성 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, dbm, validator, information, file 
 summary: 'save storageArray dbmValidatorInfo 명령은 XML 파일의 스토리지 배열에 대한 데이터베이스 관리(dBm) 유효성 검사 정보를 저장합니다.' 
 ---
-= 스토리지 배열 dBm 유효성 검사기 정보 파일을 저장합니다
+= 스토리지 어레이 DBM 검증기 정보 파일 저장 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

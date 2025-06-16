@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, array, label 
 summary: Show array label 명령은 스토리지 배열 레이블이 정의되었는지 또는 기존의 모든 스토리지 배열 레이블에 대한 정보를 반환합니다. 
 ---
-= 배열 레이블을 표시합니다
+= 배열 레이블 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

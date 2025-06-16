@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: security, commands, audit, log management, authentication, certificate, management, embedded, external, key 
 summary: 보안 명령 
 ---
-= 보안 명령
+= SANtricity CLI 보안 명령
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recover, raid, volume 
 summary: recover volume 명령은 드라이브의 사용자 데이터 영역을 초기화하지 않고 지정된 속성을 사용하여 RAID 볼륨을 생성합니다. 
 ---
-= RAID 볼륨을 복구합니다
+= RAID 볼륨 복구 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

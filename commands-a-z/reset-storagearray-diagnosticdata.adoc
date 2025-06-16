@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset ,storage, array, diagnostic, data 
 summary: reset storageArray diagnosticData 명령은 스토리지 배열에 대한 진단 데이터를 포함하는 NVSRAM을 재설정합니다. 
 ---
-= 스토리지 배열 진단 데이터를 재설정합니다
+= 스토리지 어레이 진단 데이터 재설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

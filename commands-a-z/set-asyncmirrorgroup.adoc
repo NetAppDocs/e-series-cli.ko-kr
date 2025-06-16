@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, asynchronous, mirror, group 
 summary: set asyncMirrorGroup 명령은 동기화 설정 및 경고 임계값을 변경하여 비동기식 미러 그룹의 운영 측에서 초기 동기화 또는 재동기화를 수행할 때 컨트롤러 소유자가 사용합니다. 
 ---
-= 비동기식 미러 그룹을 설정합니다
+= 비동기 미러 그룹 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

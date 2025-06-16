@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: firmware, compatibility, levels 
 summary: 다음 섹션의 스크립트 명령에는 스크립트 명령을 실행할 수 있는 최소 펌웨어 레벨이 나열되어 있습니다. 
 ---
-= 펌웨어 호환성 수준
+= SANtricity CLI 펌웨어 호환성 수준에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

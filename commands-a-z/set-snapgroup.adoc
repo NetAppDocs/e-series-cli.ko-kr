@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, snapshot, group, attributes 
 summary: set SnapGroup 명령은 스냅샷 그룹의 속성을 정의합니다. 
 ---
-= 스냅샷 그룹 속성을 설정합니다
+= 스냅샷 그룹 속성 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

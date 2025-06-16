@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replication, commands, consistency group, command, repository volume, 
 summary: 복제 명령 
 ---
-= 복제 명령
+= SANtricity CLI 복제 명령
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: activate, asynchronous, mirroring 
 summary: activate storageArray feature 명령은 비동기 미러링 기능을 활성화합니다. 
 ---
-= 비동기식 미러링을 활성화합니다
+= 비동기 미러링 활성화 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

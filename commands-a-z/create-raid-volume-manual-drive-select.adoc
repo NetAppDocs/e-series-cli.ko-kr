@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, raid, volume, manual, drive, select 
 summary: create volume 명령은 새 볼륨 그룹과 볼륨을 생성하고 볼륨에 대한 드라이브를 지정할 수 있습니다. 
 ---
-= RAID 볼륨 생성(수동 드라이브 선택)
+= RAID 볼륨 생성(수동 드라이브 선택) - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

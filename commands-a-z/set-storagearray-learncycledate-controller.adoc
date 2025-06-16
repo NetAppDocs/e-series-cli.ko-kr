@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, controller, battery, learn, cycle 
 summary: set storageArray learnCycleDate 컨트롤러 명령은 컨트롤러 배터리 학습 주기를 설정합니다. 
 ---
-= 스토리지 어레이 컨트롤러 배터리 학습 주기를 설정합니다
+= SANtricity CLI에서 스토리지 어레이 컨트롤러 배터리 학습 주기 설정
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

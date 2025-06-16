@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, initiator, command, object, supported, array, role 
 summary: 이니시에이터 삭제 명령은 이니시에이터 개체를 삭제합니다. 
 ---
-= 이니시에이터를 삭제합니다
+= 이니시에이터 삭제 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

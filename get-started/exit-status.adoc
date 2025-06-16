@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: exit, status 
 summary: 종료 상태는 실행된 명령에 대해 반환됩니다. 이 표에는 반환되는 종료 상태와 각 상태의 의미가 나열되어 있습니다. 
 ---
-= 종료 상태입니다
+= SANtricity CLI 종료 상태에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

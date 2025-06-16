@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: retrieve, installed, external, key management, certificate 
 summary: save storageArray keyManagementCertificate 명령은 설치된 인증서를 검색합니다. 
 ---
-= 설치된 외부 키 관리 인증서를 검색합니다
+= 설치된 외부 키 관리 인증서 검색 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

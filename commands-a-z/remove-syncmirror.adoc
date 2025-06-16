@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, synchronous, mirror 
 summary: remove SyncMirror 명령은 원격 미러링된 쌍의 운영 볼륨과 2차 볼륨 간의 미러 관계를 제거합니다. 
 ---
-= 동기 미러링을 제거합니다
+= 동기식 미러링 제거 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

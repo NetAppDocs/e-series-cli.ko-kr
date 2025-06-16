@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, firmware, inventory 
 summary: save storageArray firmwareInventory 명령은 스토리지 어레이에서 현재 실행 중인 모든 펌웨어의 파일에 보고서를 저장합니다. 
 ---
-= 스토리지 어레이 펌웨어 인벤토리를 저장합니다
+= 스토리지 어레이 펌웨어 인벤토리 저장 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

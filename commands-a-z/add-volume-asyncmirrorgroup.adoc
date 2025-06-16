@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add volume, asynchronous, mirror group, supported arrays, roles, context, syntax, parameter, minimum firmware level 
 summary: add volume asyncMirrorGroup 명령은 비동기식 미러 그룹에 운영 볼륨을 추가합니다. 
 ---
-= 비동기식 미러 그룹에 볼륨을 추가합니다
+= 비동기 미러 그룹에 볼륨 추가 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

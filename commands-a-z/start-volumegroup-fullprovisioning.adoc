@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, volume, group, full provision 
 summary: start volumeGroup fullProvisioning 명령은 디스크 풀의 모든 볼륨에서 전체 프로비저닝 작업을 시작하고 필요에 따라 볼륨 그룹에서 리소스 프로비저닝을 비활성화합니다. 
 ---
-= 볼륨 그룹 전체 프로비저닝을 시작합니다
+= 볼륨 그룹 전체 프로비저닝 시작 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

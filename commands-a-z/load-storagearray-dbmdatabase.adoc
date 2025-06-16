@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: load, storage array, database, command, management 
 summary: 'load storageArray dbmDatabase 명령은 파일 또는 캐시에서 이미지를 검색하여 데이터베이스 관리(dBm) 데이터베이스 이미지를 복원합니다.' 
 ---
-= 스토리지 배열 DBM 데이터베이스를 로드합니다
+= 스토리지 어레이 DBM 데이터베이스 로드 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

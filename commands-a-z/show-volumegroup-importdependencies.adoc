@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, group, import, dependencies 
 summary: show volumeGroup importDependencies 명령은 하나의 스토리지 어레이에서 두 번째 스토리지 어레이로 이동할 볼륨 그룹의 드라이브에 대한 종속성 목록을 표시합니다. 
 ---
-= 볼륨 그룹 가져오기 종속성을 표시합니다
+= 볼륨 그룹 가져오기 종속성 표시 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

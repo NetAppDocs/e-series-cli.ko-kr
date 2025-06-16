@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, initiator 
 summary: create initiator 명령은 이니시에이터 객체를 생성합니다. 
 ---
-= 이니시에이터를 생성합니다
+= 이니시에이터 생성 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

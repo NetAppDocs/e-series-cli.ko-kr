@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: schedule, automatic, support, bundle, collection, configuration 
 summary: SMcli -supportBundle schedule 명령은 하나 이상의 스토리지 어레이에 지원 번들을 저장하기 위한 일정을 생성하거나 제거합니다. 사용자는 지원 번들을 통해 시스템 및 구성 정보를 수집하여 분석 및 진단을 위해 기술 지원 부서에 정보를 전송합니다. 
 ---
-= 자동 지원 번들 수집 구성을 예약합니다
+= 자동 지원 번들 수집 구성 일정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

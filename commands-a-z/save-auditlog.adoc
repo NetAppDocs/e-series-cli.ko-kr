@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, audit log, records 
 summary: auditlog 저장 명령은 감사 로그 레코드를 검색합니다. 
 ---
-= 감사 로그 기록을 저장합니다
+= 감사 로그 레코드 저장 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, storage, array, management, key, certificate, command, intall, external, support, role 
 summary: download storageArray keyManagementCertificate 명령은 스토리지 배열에 외부 키 관리 인증서를 설치합니다. 
 ---
-= 스토리지 배열 외부 키 관리 인증서를 설치합니다
+= SANtricity CLI에서 스토리지 어레이 외부 키 관리 인증서 설치
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

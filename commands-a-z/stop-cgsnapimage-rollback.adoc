@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, consistency, group, snapshot, rollback 
 summary: stop cgSnapImage rollback 명령은 스냅샷 정합성 보장 그룹의 구성원 기본 볼륨에 대한 롤백 작업을 중지합니다. 
 ---
-= 정합성 보장 그룹 스냅샷 롤백을 중지합니다
+= 일관성 그룹 스냅샷 롤백 중지 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

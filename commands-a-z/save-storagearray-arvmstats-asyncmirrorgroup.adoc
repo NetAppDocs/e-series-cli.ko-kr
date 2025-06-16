@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, asynchronous, mirror, group, statistics 
 summary: save storageArray arvmStats asyncMirrorGroup 명령은 비동기 미러 그룹에 있는 하나 이상의 멤버 볼륨에 대한 동기화 통계를 파일에 저장합니다. 
 ---
-= 비동기식 미러 그룹 통계를 저장합니다
+= 비동기 미러 그룹 통계 저장 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

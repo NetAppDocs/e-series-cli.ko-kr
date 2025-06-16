@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: deactivate, synchronous, mirror 
 summary: deactivate storageArray feature 명령은 동기 미러링 기능을 비활성화하고 미러 저장소 볼륨을 해체하며 보조 볼륨의 컨트롤러 소유자를 해제합니다. 
 ---
-= 동기 미러링을 비활성화합니다
+= 동기식 미러링 비활성화 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: retrieve, installed, trusted, ca, certificates 
 summary: save storageArray trustedCertificate 명령은 배열에 대해 설치된 신뢰할 수 있는 CA 인증서를 검색합니다. 검색된 파일에는 어레이의 웹 서버에서 요청된 모든 CA 인증서가 포함됩니다. 
 ---
-= 설치된 신뢰할 수 있는 CA 인증서를 검색합니다
+= 설치된 신뢰할 수 있는 CA 인증서 검색 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

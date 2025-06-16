@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, enable, disable, automatic, load, balance 
 summary: set storageArray autoLoadBalancingEnable 명령은 자동 로드 밸런싱 기능을 설정하거나 해제합니다. 
 ---
-= 자동 로드 밸런싱을 사용하거나 사용하지 않도록 스토리지 배열을 설정합니다
+= 스토리지 어레이를 설정하여 자동 로드 밸런싱을 활성화하거나 비활성화합니다 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

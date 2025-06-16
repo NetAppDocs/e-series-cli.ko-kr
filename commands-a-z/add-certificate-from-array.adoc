@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add certificate array, supported, syntax, parameters, minimum firmware level 
 summary: 배열에서 인증서 추가 명령을 사용하면 배열에서 인증서를 받아서 CLI 패키지의 신뢰 저장소에 추가할 수 있습니다. 추가된 인증서는 CLI 패키지에서만 사용됩니다. 
 ---
-= 배열에서 인증서를 추가합니다
+= 배열에서 인증서 추가 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
