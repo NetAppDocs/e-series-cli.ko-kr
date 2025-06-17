@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, autosupport, remote, diagnostics, feature, individual, E2800, E5700, arrays 
 summary: set storageArray autoSupportRemoteDiag 명령은 AutoSupport OnDemand 원격 진단 기능을 설정하거나 해제합니다. 이 기능을 사용하면 기술 지원 부서에서 지원 데이터를 요청하여 원격으로 문제를 진단할 수 있습니다. 
 ---
-= AutoSupport 원격 진단 기능을 활성화 또는 비활성화합니다
+= AutoSupport 원격 진단 기능 활성화 또는 비활성화 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

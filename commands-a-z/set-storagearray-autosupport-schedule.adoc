@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, autosupport, message, collection, schedule, individual, E2800, E5700, arrays 
 summary: set storageArray AutoSupport schedule 명령은 AutoSupport 메시지가 전송되는 요일과 주별 시간 및 요일을 설정합니다. 
 ---
-= AutoSupport 메시지 수집 스케줄을 설정합니다
+= AutoSupport 메시지 수집 일정 설정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: specify, email, smtp, delivery method, individual, E2800, E5700, arrays 
 summary: 'set storageArray AutoSupport deliveryMethod 명령은 AutoSupport 메시지를 전자 메일(SMTP)로 보내는 전달 방법을 설정합니다.' 
 ---
-= 이메일(SMTP) 전달 방법을 지정합니다
+= 이메일(SMTP) 전달 방법 지정 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, storage array, directory, server, role, mapping 
 summary: remove storageArray DirectoryServer 명령은 지정된 디렉터리 서버에 대해 정의된 역할 매핑을 제거합니다. 
 ---
-= 스토리지 배열 디렉토리 서버 역할 매핑을 제거합니다
+= 스토리지 어레이 디렉토리 서버 역할 매핑 제거 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
