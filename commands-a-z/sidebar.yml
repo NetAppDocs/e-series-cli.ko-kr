@@ -528,6 +528,8 @@ entries:
       url: "/commands-a-z/set-storagearray-externalkeymanagement.html"
     - title: storageArray hostconnectividporting을 설정합니다
       url: "/commands-a-z/set-storagearray-hostconnectivityreporting.html"
+    - title: storageArray hostIoProtocol 설정
+      url: "/commands-a-z/set-storagearray-host-io-protocol.html"
     - title: storageArray icmpingresponse를 설정합니다
       url: "/commands-a-z/set-storagearray-icmppingresponse.html"
     - title: storageArray isnsipv4configurationmethod를 설정합니다
@@ -686,6 +688,8 @@ entries:
       url: "/commands-a-z/show-storagearray-directoryservices-summary.html"
     - title: storageArray hostconnectividporting을 표시합니다
       url: "/commands-a-z/show-storagearray-hostconnectivityreporting.html"
+    - title: storageArray hostIoProtocolInformation 표시
+      url: "/commands-a-z/show-storage-array-host-io-protocol.html"
     - title: storageArray hosttopology를 표시합니다
       url: "/commands-a-z/show-storagearray-hosttopology.html"
     - title: show storageArray iscsinegotiate ationdefaults.(storageArray isin

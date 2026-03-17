@@ -25,6 +25,44 @@ summary: 이 항목에서는 CLI 명령 및 스크립트 명령의 최신 SANtri
 ====
 
 
+== SANtricity 12.0
+
+다음 표에는 릴리스 12.0의 CLI 및 스크립트 명령 변경 사항이 나열되어 있습니다.
+
+[cols="2*"]
+|===
+| 명령 | 변경에 대한 설명 
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/set-storagearray-host-io-protocol.html["스토리지 어레이 호스트 I/O 프로토콜 설정"]
+ a| 
+명령이 추가되었습니다.
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/show-storage-array-host-io-protocol.html["스토리지 어레이 호스트 I/O 프로토콜 정보 표시"]
+ a| 
+명령이 추가되었습니다.
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/start-storagearray-externalkeymanagement-test.html["외부 키 관리 통신을 테스트합니다"]
+ a| 
+명령 출력에 KMS 통신 테스트 결과를 추가했습니다.
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/set-storagearray-managementinterface.html["스토리지 배열 관리 인터페이스를 설정합니다"]
+ a| 
+명령을 제거했습니다.
+
+|===
+
+
 == SANtricity 11.90 을 참조하십시오
 
 다음 표에는 릴리즈 11.90의 CLI 및 스크립트 명령에 대한 변경 사항이 나와 있습니다.
@@ -214,14 +252,14 @@ xref:./commands-a-z/start-volumegroup-fullprovisioning.adoc[볼륨 그룹 전체
 
 
  a| 
-xref:./commands-a-z/recreate-storagearray-securitykey.html[외부 보안 키를 다시 만듭니다]
+xref:./commands-a-z/recreate-storagearray-securitykey.adoc[외부 보안 키를 다시 만듭니다]
  a| 
 'deleteOldKey' 매개 변수가 추가되었습니다.
 
 
 
  a| 
-xref:./commands-a-z/create-diskpool.html[디스크 풀을 생성합니다]
+xref:./commands-a-z/create-diskpool.adoc[디스크 풀을 생성합니다]
  a| 
 'diveCount' 매개 변수 설명이 업데이트되었습니다.
 
