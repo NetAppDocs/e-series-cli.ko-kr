@@ -43,4 +43,4 @@ show storageArray hostIoProtocolInfo;
 
 == 최소 펌웨어 레벨입니다
 
-12.0
+12.00
