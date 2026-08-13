@@ -15,18 +15,21 @@ summary: set storageArray DirectoryServer roles 명령을 사용하면 지정된
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 개별 E4000, E2800, E5700, EF600, EF300, EF50 및 EF80 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Security Admin 역할이 있어야 합니다.
 
 
 
+[[what-youll-need]]
 == 필요한 것
 
 매핑할 수 있는 역할은 다음과 같습니다.
@@ -39,6 +42,7 @@ E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli, subs="+macros"]
@@ -48,6 +52,7 @@ set storageArray directoryServer pass:quotes[["_domainId_"]]
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 [cols="2*"]
@@ -83,6 +88,7 @@ set storageArray directoryServer pass:quotes[["_domainId_"]]
 |===
 
 
+[[examples]]
 == 예
 
 [listing]

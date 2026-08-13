@@ -15,6 +15,7 @@ E-Series 스토리지 시스템에서 사용할 수 있는 관리자 명령 목�
 
 
 
+[[storage-administrators-commands]]
 == 스토리지 관리자 명령
 
 link:../commands-a-z/activate-asynchronous-mirroring.html["비동기식 미러링을 활성화합니다"]
@@ -727,6 +728,7 @@ link:../commands-a-z/set-snmptrapdestination-trapreceiverip.html["SNMP 트랩 �
 
 
 
+[[support-administrators-commands]]
 == 관리자 명령을 지원합니다
 
 link:../commands-a-z/activate-asynchronous-mirroring.html["비동기식 미러링을 활성화합니다"]
@@ -851,6 +853,7 @@ link:../commands-a-z/set-snmptrapdestination-trapreceiverip.html["SNMP 트랩 �
 
 
 
+[[security-administrators-commands]]
 == 보안 관리자 명령
 
 link:../commands-a-z/create-storagearray-directoryserver.html["스토리지 배열 디렉토리 서버를 생성합니다"]

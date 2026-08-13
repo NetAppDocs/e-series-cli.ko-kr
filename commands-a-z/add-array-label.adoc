@@ -15,6 +15,7 @@ Add array label 명령을 사용하면 사용자 정의 레이블을 사용하�
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 [NOTE]
@@ -26,6 +27,7 @@ Add array label 명령을 사용하면 사용자 정의 레이블을 사용하�
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli, subs="+macros"]
@@ -35,6 +37,7 @@ pass:quotes[ _Address1 Address2_ add storageArrayLabel label _userDefinedString_
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 |===
@@ -61,6 +64,7 @@ Address2 값은 선택 사항입니다.
 |===
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 8.60

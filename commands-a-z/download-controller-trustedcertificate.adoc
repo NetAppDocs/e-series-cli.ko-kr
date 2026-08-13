@@ -15,24 +15,28 @@ summary: download controller trustedCertificate 명령은 컨트롤러의 웹 �
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 개별 E4000, E2800, E5700, EF600, EF300, EF50 및 EF80 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Security Admin 역할이 있어야 합니다.
 
 
 
+[[context]]
 == 상황
 
 인증서에 서명한 CA가 잘 알려져 있지 않거나 일반적으로 신뢰할 수 없는 경우에만 이 작업을 수행합니다. 명령은 두 컨트롤러 모두에 CA 인증서를 설치합니다.
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli, subs="+macros"]
@@ -41,6 +45,7 @@ pass:quotes[download storageArray trustedCertificate [alias=_string_]] pass:quot
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 |===
@@ -62,6 +67,7 @@ pass:quotes[download storageArray trustedCertificate [alias=_string_]] pass:quot
 |===
 
 
+[[examples]]
 == 예
 
 [listing]
@@ -76,6 +82,7 @@ SMcli completed successfully.
 ----
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 8.40

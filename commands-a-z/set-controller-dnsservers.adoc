@@ -15,18 +15,21 @@ Set controller DNSServers 명령은 컨트롤러의 DNS(Domain Name System) 설�
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 모든 SMcli 패키지가 설치되어 있는 한 E4000, E2700, E5600, E2800, E5700, EF600, EF300, EF50 및 EF80 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Storage Admin 역할이 있어야 합니다.
 
 
 
+[[context]]
 == 상황
 
 시작하기 전에 다음 사항을 확인하십시오.
@@ -47,6 +50,7 @@ DHCP(Dynamic Host Configuration Protocol)를 사용하여 어레이의 관리 �
 ====
 
 
+[[syntax]]
 == 구문
 
 [source, cli]
@@ -55,6 +59,7 @@ set controller[a] DNSServers=(auto|(Address1 [Address2]))
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 [cols="2*"]
@@ -84,6 +89,7 @@ IPv4Address | IPv6Address 를 참조하십시오
 |===
 
 
+[[examples]]
 == 예
 
 [listing]
@@ -96,6 +102,7 @@ set controller[b] DNSServers=(2001:0db8:85a3:0000:0000:8a2e:0370:7334 192.168.1.
 ----
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 8.25

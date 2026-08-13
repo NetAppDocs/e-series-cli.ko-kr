@@ -15,18 +15,21 @@ summary: 시작 볼륨 초기화 명령은 씬 볼륨을 초기화하거나 다�
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 모든 SMcli 패키지가 설치되어 있는 한 E4000, E2700, E5600, E2800, E5700, EF600, EF300, EF50 및 EF80 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Storage Admin 역할이 있어야 합니다.
 
 
 
+[[context]]
 == 상황
 
 이 작업은 사용되는 매개 변수에 따라 달라집니다.
@@ -42,6 +45,7 @@ E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서
 ====
 
 
+[[syntax]]
 == 구문
 
 [source, cli, subs="+macros"]
@@ -53,6 +57,7 @@ pass:quotes[[diskPool=_diskPoolName_ capacity=_capacityValue_]]
 ----
 
 
+[[parameter]]
 == 매개 변수
 
 [cols="2*"]
@@ -111,6 +116,7 @@ RetainRepositoryMembers(리포지토리 구성원)
 |===
 
 
+[[notes]]
 == 참고
 
 "volume" 매개 변수를 사용하여 볼륨을 지정하지 않으면 이 명령은 리포지토리의 메타데이터를 재설정하고 실제로 씬 볼륨이 호스트에 빈 상태로 표시됩니다. ' * volume * ' 매개 변수를 사용하여 볼륨을 지정하는 경우 해당 볼륨은 새로 생성된 볼륨으로 대체되거나 'existingRepositoryLabel' 매개 변수를 사용하여 볼륨을 지정하는 경우 기존 볼륨으로 대체됩니다. 다른 디스크 풀에 있는 'existingRepositoryLabel' 매개 변수를 사용하여 기존 볼륨을 지정하면 씬 볼륨의 소유권이 새 디스크 풀로 변경됩니다.
@@ -168,6 +174,7 @@ iaf(Immediate Availability Format)은 64TB 이상의 볼륨에는 적용되지 �
 
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 7.83

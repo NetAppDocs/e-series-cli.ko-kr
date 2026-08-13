@@ -15,18 +15,21 @@ summary: set diskpool 명령은 풀에서 드라이브를 논리적으로 제거
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 모든 SMcli 패키지가 설치되어 있는 한 E4000, E2700, E5600, E2800, E5700, EF600, EF300, EF50 및 EF80 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Storage Admin 역할이 있어야 합니다.
 
 
 
+[[context]]
 == 상황
 
 이 명령은 DCR(Dynamic Capacity Reduction) 기능을 사용하여 디스크 풀에서 선택한 드라이브를 제거하고 필요에 따라 제거된 드라이브를 다시 사용할 수 있습니다.
@@ -35,6 +38,7 @@ E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli, subs="+macros"]
@@ -45,6 +49,7 @@ removeDrives=pass:quotes[(_trayID1_],pass:quotes[[_drawerID1_,]]pass:quotes[_slo
 ----
 
 
+[[parameter]]
 == 매개 변수
 
 |===
@@ -70,6 +75,7 @@ removeDrives=pass:quotes[(_trayID1_],pass:quotes[[_drawerID1_,]]pass:quotes[_slo
 |===
 
 
+[[notes]]
 == 참고
 
 각 디스크 풀 이름은 고유해야 합니다. 사용자 레이블에는 영숫자, 밑줄(_), 하이픈(-) 및 파운드(#)를 조합하여 사용할 수 있습니다. 사용자 레이블은 최대 30자까지 가능합니다.
@@ -86,6 +92,7 @@ DCR 작업을 수행하면 구성된 용량이 풀 사용률 임계값 중 하�
 
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 8.10

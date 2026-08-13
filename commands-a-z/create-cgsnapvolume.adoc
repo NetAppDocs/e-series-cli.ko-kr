@@ -15,24 +15,28 @@ summary: create cgSnapVolume 명령은 정합성 보장 그룹의 기본 볼륨�
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 모든 SMcli 패키지가 설치되어 있는 한 E4000, E2700, E5600, E2800, E5700, EF600, EF300, EF50 및 EF80 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Storage Admin 역할이 있어야 합니다.
 
 
 
+[[context]]
 == 상황
 
 스냅샷 볼륨에 포함할 하나의 기본 볼륨 또는 둘 이상의 기본 볼륨을 일관성 그룹에서 선택할 수 있습니다. 일관성 그룹의 스냅샷 볼륨을 생성할 때 확인할 수 있는 콘텐츠가 포함된 볼륨을 생성합니다.
 
 
 
+[[syntax-with-user-specified-base-volumes]]
 == 사용자 지정 기본 볼륨을 사용한 구문
 
 [source, cli, subs="+macros"]
@@ -43,6 +47,7 @@ members=pass:quotes[_(baseVolume1:repos_XXXX ... baseVolumen:repos_YYYY)_]
 ----
 
 
+[[syntax-when-setting-the-consistency-group-snapshot-volume-to-read-only]]
 == 정합성 보장 그룹 스냅샷 볼륨을 읽기 전용으로 설정할 때의 구문
 
 [source, cli, subs="+macros"]
@@ -53,6 +58,7 @@ readOnly
 ----
 
 
+[[syntax-when-setting-the-repository-full-limit]]
 == 리포지토리 전체 제한 설정 시 구문
 
 [source, cli, subs="+macros"]
@@ -69,6 +75,7 @@ repositoryFullLimit=pass:quotes[_percentValue_]
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 |===
@@ -159,6 +166,7 @@ cgSnapImageID
 |===
 
 
+[[notes]]
 == 참고
 
 이름에 영숫자, 밑줄(_), 하이픈(-) 및 파운드(#)를 조합하여 사용할 수 있습니다. 이름에는 최대 30자를 사용할 수 있습니다.
@@ -224,6 +232,7 @@ cgSnapImageID="snapCG1:oldest";
 
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 7.83

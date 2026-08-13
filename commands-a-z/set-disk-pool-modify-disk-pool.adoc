@@ -15,24 +15,28 @@ summary: 'set diskpool 명령은 디스크 풀(동적 용량 확장 또는 DCE)�
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 모든 SMcli 패키지가 설치되어 있는 한 E4000, E2700, E5600, E2800, E5700, EF600, EF300, EF50 및 EF80 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Storage Admin 역할이 있어야 합니다.
 
 
 
+[[context]]
 == 상황
 
 이 두 작업은 상호 배타적입니다.
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli, subs="+macros"]
@@ -44,6 +48,7 @@ addCapacity=pass:quotes[(_diskPoolCapacity_))]
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 [cols="2*"]
@@ -85,6 +90,7 @@ addCapacity=pass:quotes[(_diskPoolCapacity_))]
 |===
 
 
+[[notes]]
 == 참고
 
 새 드라이브를 추가하는 동안 디스크 풀에 이미 있는 볼륨은 온라인 상태로 유지되고 입출력 작업에 사용할 수 있습니다. 용량을 추가하기 전에 디스크 풀이 완료 상태여야 합니다. 디스크 풀이 완료 상태가 아니면 새 드라이브를 추가하기 전에 'show diskpool complete' 명령을 실행합니다.
@@ -95,6 +101,7 @@ addCapacity=pass:quotes[(_diskPoolCapacity_))]
 
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 7.83

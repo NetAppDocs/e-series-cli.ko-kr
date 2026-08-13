@@ -15,12 +15,14 @@ summary: SMcli autoSupportSchedule reset 명령은 AutoSupport 메시지가 전�
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 관리 도메인에 있는 모든 E2700 및 E5600 스토리지 어레이에 동시에 적용됩니다. E4000, E2800 또는 E5700 스토리지 어레이에는 적용되지 않습니다.
 
 
 
+[[context]]
 == 상황
 
 [NOTE]
@@ -36,6 +38,7 @@ summary: SMcli autoSupportSchedule reset 명령은 AutoSupport 메시지가 전�
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli]
@@ -46,6 +49,7 @@ SMcli -autoSupportSchedule reset | (dailyTime=<startTime>-<endTime>
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 [cols="2*"]
@@ -82,12 +86,14 @@ SMcli -autoSupportSchedule reset | (dailyTime=<startTime>-<endTime>
 |===
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 8.25
 
 
 
+[[example]]
 == 예
 
 [listing]
@@ -99,6 +105,7 @@ Smcli -autoSupportSchedule dailyTime = 10:00am - 11:00am dayOfWeek = [월요일 
 
 
 
+[[verification]]
 == 검증
 
 관리 도메인의 스케줄에 대한 변경 결과를 확인하려면 'smcli -autoSupportSchedule show' 명령을 사용합니다.

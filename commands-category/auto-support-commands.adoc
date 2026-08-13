@@ -15,6 +15,7 @@ summary: AutoSupport 명령
 
 
 
+[[autosupport-bundle-collection-commands-for-the-e2700-and-e5600]]
 == E2700 및 E5600용 AutoSupport 번들 수집 명령
 
 link:../commands-a-z/smcli-autosupportlog.html["AutoSupport 로그를 캡처하거나 봅니다"]
@@ -39,6 +40,7 @@ link:../commands-a-z/smcli-autosupportconfig-test.html["AutoSupport 구성을 �
 
 
 
+[[autosupport-commands-for-all-storage-arrays]]
 == 모든 스토리지 어레이에 대한 AutoSupport 명령입니다
 
 link:../commands-a-z/enable-or-disable-autosupport-individual-arrays.html["AutoSupport 활성화 또는 비활성화(개별 어레이, E2800, E5700 어레이만 해당)"]
@@ -47,6 +49,7 @@ link:../commands-a-z/save-storagearray-supportdata.html["스토리지 배열 지
 
 
 
+[[autosupport-commands-for-the-e4000-ef300-ef600-e2800-e5700]]
 == E4000, EF300, EF600, E2800, E5700용 AutoSupport 명령
 
 link:../commands-a-z/set-autosupport-dispatch-limit.html["AutoSupport 디스패치 크기 제한을 설정합니다"]

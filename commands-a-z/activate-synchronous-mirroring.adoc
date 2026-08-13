@@ -15,18 +15,21 @@ summary: activate storageArray feature 명령은 동기 미러링 기능을 활�
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 모든 SMcli 패키지가 설치되어 있는 경우 E4000, E2700, E5600, E2800 및 E5700 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800 또는 E5700 스토리지 어레이에서 이 명령을 실행하려면 스토리지 관리자 역할이 있어야 합니다.
 
 
 
+[[context]]
 == 상황
 
 이 명령을 사용하면 다음 세 가지 방법 중 하나로 미러 저장소 볼륨을 정의할 수 있습니다.
@@ -45,6 +48,7 @@ E4000, E2800 또는 E5700 스토리지 어레이에서 이 명령을 실행하�
 ====
 
 
+[[syntax-user-defined-drives]]
 == 구문(사용자 정의 드라이브)
 
 [source, cli, subs="+macros"]
@@ -71,6 +75,7 @@ repositoryDrives=pass:quotes[_(trayID1,_]pass:quotes[[_drawerID1_,]]pass:quotes[
 ----
 
 
+[[syntax-user-defined-volume-group]]
 == 구문(사용자 정의 볼륨 그룹)
 
 [source, cli, subs="+macros"]
@@ -81,6 +86,7 @@ repositoryVolumeGroup=pass:quotes[_volumeGroupName_]
 ----
 
 
+[[syntax-user-defined-number-of-drives]]
 == 구문(사용자 정의 드라이브 수)
 
 [source, cli, subs="+macros"]
@@ -105,6 +111,7 @@ repositoryDriveCount=pass:quotes[_numberOfDrives_]
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 |===
@@ -195,6 +202,7 @@ freeCapacityArea=2
 |===
 
 
+[[notes]]
 == 참고
 
 "재가용 드라이브" 매개변수는 고용량 드라이브 트레이와 저용량 드라이브 트레이를 모두 지원합니다. 고용량 드라이브 트레이에는 드라이브를 보관하는 서랍이 있습니다. 드로어는 드라이브 트레이에서 밀어 드라이브에 액세스할 수 있도록 합니다. 저용량 드라이브 트레이에는 서랍이 없습니다. 고용량 드라이브 트레이의 경우 드라이브 트레이의 ID, 드로어의 ID 및 드라이브가 상주하는 슬롯의 ID를 지정해야 합니다. 저용량 드라이브 트레이의 경우 드라이브 트레이의 ID와 드라이브가 있는 슬롯의 ID만 지정하면 됩니다. 저용량 드라이브 트레이의 경우 드라이브 트레이 ID를 지정하고 드로어의 ID를 0으로 설정한 다음 드라이브가 상주하는 슬롯의 ID를 지정하는 방법도 있습니다.
@@ -211,6 +219,7 @@ drawerLossProtect 매개변수는 문서함에 오류가 발생할 경우 볼륨
 
 
 
+[[data-assurance-management]]
 == 데이터 무결성 관리
 
 DA(Data Assurance) 기능은 전체 스토리지 시스템에서 데이터 무결성을 향상시킵니다. DA를 사용하면 호스트와 드라이브 간에 데이터가 이동할 때 발생할 수 있는 오류를 스토리지 시스템에서 확인할 수 있습니다. 이 기능을 활성화하면 스토리지 배열은 볼륨의 각 데이터 블록에 오류 검사 코드(순환 중복 검사 또는 CRC라고도 함)를 추가합니다. 데이터 블록이 이동된 후 스토리지 배열은 이러한 CRC 코드를 사용하여 전송 중에 오류가 발생했는지 확인합니다. 잠재적으로 손상된 데이터는 디스크에 기록되거나 호스트에 반환되지 않습니다.
@@ -226,6 +235,7 @@ DA 기능을 사용하려면 DA를 지원하는 드라이브만 포함된 풀 �
 
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 7.10은 RAID 레벨 6 기능을 추가합니다.

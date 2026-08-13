@@ -15,6 +15,7 @@ CLI 명령 래퍼의 일반 구문 형식이 이 섹션에 나와 있습니다. 
 
 
 
+[[conventions-for-cli-command-wrapper-syntax]]
 == CLI 명령 래퍼 구문 규칙
 
 [cols="2*"]
@@ -70,6 +71,7 @@ CLI 명령 래퍼의 일반 구문 형식이 이 섹션에 나와 있습니다. 
 ====
 
 
+[[example-in-https-client-mode]]
 == https 클라이언트 모드의 예
 
 다음 예에서는 에 설명된 "https" 클라이언트 모드 명령줄 매개 변수를 보여 줍니다 xref:command-line-parameters.adoc[명령줄 매개변수].
@@ -86,6 +88,7 @@ clientType을 지정하지 않고 -u 옵션과 username 변수를 포함하면 h
 ====
 
 
+[[examples-in-symbol-client-mode]]
 == 기호 클라이언트 모드의 예
 
 다음 예제는 에서 설명한 '기호' 클라이언트 모드 명령줄 매개변수를 보여줍니다 xref:command-line-parameters.adoc[명령줄 매개변수].

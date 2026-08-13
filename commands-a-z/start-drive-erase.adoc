@@ -15,18 +15,21 @@ summary: 드라이브 지우기 시작 명령은 하나 이상의 드라이브�
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 개별 E4000, E2800, E5700, EF600 또는 EF300 어레이에 적용됩니다. E2700와 E5600 스토리지 어레이에서는 작동하지 않습니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Security Admin 역할이 있어야 합니다.
 
 
 
+[[context]]
 == 상황
 
 드라이브의 모든 데이터를 영구적으로 제거하려는 경우에만 이 명령을 실행합니다. 드라이브를 안전하게 사용할 수 있는 경우 '드라이브 지우기 시작' 명령 옵션은 암호화 지우기를 수행하고 드라이브의 보안 속성을 다시 보안 기능으로 재설정합니다.
@@ -38,6 +41,7 @@ E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서
 ====
 
 
+[[syntax]]
 == 구문
 
 [source, cli, subs="+macros"]
@@ -46,6 +50,7 @@ start (drive [trayID,[drawerID,]slotID] | drives[trayID1,[drawerID1,]slotID1 ...
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 [cols="2*"]
@@ -70,6 +75,7 @@ start (drive [trayID,[drawerID,]slotID] | drives[trayID1,[drawerID1,]slotID1 ...
 |===
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 11.70.1

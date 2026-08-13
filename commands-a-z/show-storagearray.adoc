@@ -15,24 +15,28 @@ summary: show storageArray 명령어는 스토리지 배열에 대한 구성 정
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 모든 SMcli 패키지가 설치되어 있는 한 E4000, E2700, E5600, E2800, E5700, EF600, EF300, EF50 및 EF80 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Storage Admin 또는 Storage Monitor 역할이 있어야 합니다.
 
 
 
+[[context]]
 == 상황
 
 매개 변수는 스토리지 배열의 구성 요소와 기능에 대한 값 목록을 반환합니다. 단일 매개 변수 또는 둘 이상의 매개 변수를 사용하여 명령을 입력할 수 있습니다. 매개 변수 없이 명령을 입력하면 전체 스토리지 배열 프로파일이 표시됩니다(' * profile *' 매개 변수를 입력한 것과 동일한 정보).
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli]
@@ -47,6 +51,7 @@ cacheMirrorDataAssuranceCheckEnable | hostConnectivityReporting]
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 [cols="2*"]
@@ -235,6 +240,7 @@ profile.txt"
 |===
 
 
+[[notes]]
 == 참고
 
 profile 매개 변수는 스토리지 배열에 대한 자세한 정보를 표시합니다. 이 정보는 디스플레이 모니터의 여러 화면에 나타납니다. 모든 정보를 보려면 디스플레이 버퍼의 크기를 늘려야 할 수 있습니다. 이 정보는 매우 상세하므로 이 매개 변수의 출력을 파일에 저장할 수 있습니다. 출력을 파일로 저장하려면 이 예제와 같은 'show storageArray' 명령을 실행합니다.
@@ -376,6 +382,7 @@ volume name: JCG_Remote_MirrorMenuTests
 ----
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 5.00은 defaultHostType 매개변수를 추가합니다.

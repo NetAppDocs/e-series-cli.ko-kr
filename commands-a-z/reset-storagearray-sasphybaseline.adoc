@@ -15,18 +15,21 @@ reset storageArray SASPHYBaseline 명령은 모든 디바이스의 SAS 물리 �
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 모든 SMcli 패키지가 설치되어 있는 한 E4000, E2700, E5600, E2800, E5700, EF600, EF300, EF50 및 EF80 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Storage Admin 역할이 있어야 합니다.
 
 
 
+[[context]]
 == 상황
 
 'Save storageArray SASPHYCounts' 명령어를 실행하면 .csv 파일이 생성됩니다.
@@ -38,6 +41,7 @@ REset storageArray SASPHYBaseline의 이전 릴리즈에서는 드라이브를 �
 ====
 
 
+[[syntax]]
 == 구문
 
 [source, cli]
@@ -46,12 +50,14 @@ reset storageArray SASPHYBaseline
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 없음.
 
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 6.10

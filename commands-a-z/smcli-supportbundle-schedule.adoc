@@ -26,6 +26,7 @@ summary: SMcli -supportBundle schedule 명령은 하나 이상의 스토리지 �
 
 
 
+[[syntax-for-creating-a-dailyweekly-schedule]]
 == 일별/주별 스케줄을 생성하는 구문
 
 [source, cli, subs="+macros"]
@@ -40,6 +41,7 @@ pass:quotes[data=_pathName_]
 ----
 
 
+[[syntax-for-creating-a-monthlyyearly-schedule]]
 == 월별/연간 스케줄을 생성하는 구문
 
 [source, cli, subs="+macros"]
@@ -58,6 +60,7 @@ pass:quotes[data=_pathName_]
 ----
 
 
+[[syntax-for-removing-a-schedule]]
 == 일정 제거 구문
 
 [NOTE]
@@ -72,6 +75,7 @@ pass:quotes[(all|_storageArrayName_)]
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 다음 표에는 일별/주별 스케줄의 매개 변수가 나열되어 있습니다.
@@ -332,6 +336,7 @@ file="C:\Program Files\CLI\sup\data.txt"
 |===
 
 
+[[notes]]
 == 참고
 
 모든 스토리지 배열에 대해 공통 스케줄을 설정하기 위해 'all' 매개 변수를 사용하면 개별 스토리지 배열에 대한 스케줄이 삭제됩니다. 모든 스토리지 시스템에 대해 스케줄이 설정되어 있는 경우 새로 검색된 스토리지 시스템은 동일한 스케줄을 따릅니다. 모든 스토리지 시스템에 대해 스케줄이 설정된 경우 단일 스토리지 시스템에 스케줄이 설정되면 새로 검색된 스토리지 어레이에 스케줄이 정의되지 않습니다.
@@ -383,6 +388,7 @@ weekNumber=First dayOfWeek=Friday
 ----
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 7.83

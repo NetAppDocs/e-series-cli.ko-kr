@@ -15,6 +15,7 @@ activate storageArray firmware(스토리지 배열 펌웨어 활성화) 명령�
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli]
@@ -24,6 +25,7 @@ activate storageArray firmware
 ----
 
 
+[[parameter]]
 == 매개 변수
 
 |===
@@ -42,6 +44,7 @@ MEL(주 이벤트 로그)의 상태 점검 결과를 재정의하는 설정입�
 |===
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 8.10은 healthCheckMelOverride 매개 변수를 추가합니다.

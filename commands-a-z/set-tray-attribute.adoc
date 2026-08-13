@@ -15,6 +15,7 @@ summary: 트레이 설정 명령은 용지함에 대해 사용자 정의 속성�
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli, subs="+macros"]
@@ -23,6 +24,7 @@ set tray pass:quotes[[_trayID_]] (chassisName | assetTag)=pass:quotes["_userID_"
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 [cols="2*"]
@@ -52,6 +54,7 @@ set tray pass:quotes[[_trayID_]] (chassisName | assetTag)=pass:quotes["_userID_"
 |===
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 6.16

@@ -15,6 +15,7 @@ SANtricity OS 11.60 이상 릴리즈에는 SANtricity System Manager를 통해 h
 
 
 
+[[11-60-and-newer-downloadable-smcli-command-line-parameters]]
 == 11.60 이상 다운로드 가능한 SMcli 명령줄 매개변수
 
 SMcli의 다운로드 가능한 버전은 E4000, EF600, EF300, E5700, EF570, E2800, EF280, EF300C 및 EF600C 컨트롤러에서 사용할 수 있습니다. SANtricity 시스템 관리자 내에서 SMcli를 다운로드하려면 * 설정 * * * 시스템 * 및 * 추가 기능 * * 명령줄 인터페이스 * 를 선택합니다.
@@ -26,6 +27,7 @@ NOTE: CLI 명령을 실행하려는 관리 시스템에서 Java Runtime Environm
 
 
 
+[[multifactor-authentication]]
 === 다단계 인증
 
 SAML(Security Assertion Markup Language)이 활성화된 경우 액세스 토큰만 CLI에서 사용할 수 있습니다. SAML이 활성화되지 않은 경우 사용자 이름/암호 또는 액세스 토큰을 사용할 수 있습니다. 액세스 토큰은 SANtricity 시스템 관리자를 통해 생성할 수 있습니다.
@@ -83,6 +85,7 @@ SAML(Security Assertion Markup Language)이 활성화된 경우 액세스 토큰
 |===
 
 
+[[general-https-mode-command-line-parameters]]
 === 일반 https 모드 명령줄 매개 변수입니다
 
 다운로드 가능한 SMcli는 https 모드만 지원합니다. 다음은 https 모드에 대해 일반적으로 사용되는 명령줄 매개 변수입니다.
@@ -177,6 +180,7 @@ CLI 명령에 대한 사용 정보를 표시합니다.
 |===
 
 
+[[managing-stored-arrays]]
 === 저장된 스토리지 관리
 
 다음 명령줄 매개 변수를 사용하면 로컬에 저장된 레이블을 통해 저장된 배열을 관리할 수 있습니다.
@@ -184,6 +188,7 @@ CLI 명령에 대한 사용 정보를 표시합니다.
 
 NOTE: 로컬에 저장된 레이블이 SANtricity 시스템 관리자 아래에 표시되는 실제 스토리지 배열 이름과 일치하지 않을 수 있습니다.
 
+[[managearrays]]
 [cols="2*"]
 |===
 | 매개 변수 | 정의 
@@ -228,6 +233,7 @@ NOTE: 로컬에 저장된 레이블이 SANtricity 시스템 관리자 아래에 
 NOTE: SMcli는 로컬에 저장된 레이블을 추가할 때 스토리지 배열에 연결되지 않습니다.
 
 |===
+[[storedcertificates]]
 [cols="2*"]
 |===
 | 매개 변수 | 정의 
@@ -282,6 +288,7 @@ NOTE: SMcli는 로컬에 저장된 레이블을 추가할 때 스토리지 배�
 |===
 
 
+[[identify-devices]]
 === 장비를 식별합니다
 
 다음 명령줄 매개 변수를 사용하면 호스트에 표시되는 모든 해당 디바이스에 대한 정보를 표시할 수 있습니다.
@@ -289,6 +296,7 @@ NOTE: SMcli는 로컬에 저장된 레이블을 추가할 때 스토리지 배�
 
 NOTE: SANtricity 11.81 릴리스부터 SMcli가 지원됩니다 `identifyDevices` 매개 변수는 이전에 SMdevices 도구를 통해 사용할 수 있었던 기능을 대체합니다.
 
+[[identifyDevices]]
 [cols="2*"]
 |===
 | 매개 변수 | 정의 

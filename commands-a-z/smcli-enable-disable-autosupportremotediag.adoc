@@ -15,12 +15,14 @@ summary: SMcli enable | disable autoSupportRemoteDiag 명령은 AutoSupport 원�
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 관리 도메인에 있는 모든 E2700 및 E5600 스토리지 어레이에 동시에 적용됩니다. E4000, E2800 또는 E5700 스토리지 어레이에는 적용되지 않습니다.
 
 
 
+[[context]]
 == 상황
 
 [NOTE]
@@ -44,6 +46,7 @@ summary: SMcli enable | disable autoSupportRemoteDiag 명령은 AutoSupport 원�
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli]
@@ -52,12 +55,14 @@ SMcli enable|disable autoSupportRemoteDiag
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 없음.
 
 
 
+[[verification]]
 == 검증
 
 'smcli -autoSupportConfig show' 명령을 사용하여 이 기능을 활성화했는지 확인합니다. 표시된 출력의 처음 세 줄은 AutoSupport 기능의 활성화 상태와 AutoSupport OnDemand 기능, 그리고 AutoSupport 원격 진단 기능의 상태를 나타냅니다.
@@ -73,6 +78,7 @@ management station.
 ----
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 8.25

@@ -15,12 +15,14 @@ sockedEventAlertList 명령은 Set blockEventAlert 명령으로 현재 차단된
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 E2700 및 E5600 스토리지 어레이에만 적용됩니다.
 
 
 
+[[context]]
 == 상황
 
 [NOTE]
@@ -30,6 +32,7 @@ sockedEventAlertList 명령은 Set blockEventAlert 명령으로 현재 차단된
 ====
 
 
+[[syntax]]
 == 구문
 
 [source, cli]
@@ -38,6 +41,7 @@ show blockedEventAlertList
 ----
 
 
+[[example]]
 == 예
 
 출력에는 차단된 각 이벤트에 대해 하나의 줄이 있으며, 이벤트 유형이 16진수 형식으로 나열되고 이벤트 설명이 표시됩니다. 다음은 출력의 예입니다.
@@ -51,12 +55,14 @@ Script execution complete.
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 없음.
 
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 8.10

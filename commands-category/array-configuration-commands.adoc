@@ -15,6 +15,7 @@ summary: 스토리지 구성 명령
 
 
 
+[[cache-mirror-data-assurance-commands]]
 == 캐시 미러 데이터 보증 명령
 
 link:../commands-a-z/set-storagearray-cachemirrordataassurancecheckenable.html["캐시 미러 데이터를 설정하거나 해제하려면 스토리지 배열을 설정합니다"]
@@ -23,6 +24,7 @@ link:../commands-a-z/show-storagearray-cachemirrordataassurancecheckenable.html[
 
 
 
+[[controller-commands]]
 == 컨트롤러 명령
 
 link:../commands-a-z/clear-alldrivechannels-stats.html["드라이브 채널 통계를 지웁니다"]
@@ -73,6 +75,7 @@ link:../commands-a-z/stop-drivechannel-locate.html["드라이브 채널 위치�
 
 
 
+[[controller-health-image-commands]]
 == 컨트롤러 상태 이미지 명령
 
 link:../commands-a-z/save-storagearray-controllerhealthimage.html["스토리지 어레이 컨트롤러 상태 이미지를 저장합니다"]
@@ -85,6 +88,7 @@ link:../commands-a-z/start-storagearray-controllerhealthimage-controller.html["�
 
 
 
+[[controller-host-port-configuration-commands]]
 == 컨트롤러 호스트 포트 구성 명령
 
 link:../commands-a-z/create-hostport.html["호스트 포트를 생성합니다"]
@@ -117,6 +121,7 @@ link:../commands-a-z/show-storagearray-unconfiguredinitiators.html["구성되지
 
 
 
+[[drive-commands]]
 == 드라이브 명령
 
 link:../commands-a-z/download-drive-firmware.html["드라이브 펌웨어를 다운로드합니다"]
@@ -165,6 +170,7 @@ link:../commands-a-z/stop-drive-locate.html["드라이브 찾기를 중지합니
 
 
 
+[[feature-management-commands]]
 == 기능 관리 명령
 
 link:../commands-a-z/disable-storagearray.html["스토리지 배열 기능을 비활성화합니다"]
@@ -177,6 +183,7 @@ link:../commands-a-z/show-storagearray.html["스토리지 배열을 표시합니
 
 
 
+[[input-output-controller-ioc-dump-commands]]
 == 입력 출력 컨트롤러(IOC) 덤프 명령
 
 link:../commands-a-z/save-ioclog.html["입력 출력 컨트롤러(IOC) 덤프를 저장합니다"]
@@ -185,6 +192,7 @@ link:../commands-a-z/start-ioclog.html["입력 출력 컨트롤러(IOC) 덤프�
 
 
 
+[[misbehaving-drive-mbd-commands]]
 == 제대로 작동하지 않는 드라이브(MBD) 명령
 
 link:../commands-a-z/replace-drive-replacementdrive.html["드라이브를 교체합니다"]
@@ -197,6 +205,7 @@ link:../commands-a-z/stop-drive-replace.html["드라이브 교체를 중지합�
 
 
 
+[[offloaded-data-transfer-odx-commands]]
 == 오프로드 데이터 전송(ODX) 명령
 
 link:../commands-a-z/set-storagearray-odxenabled.html["ODX를 설정 또는 해제합니다"]
@@ -207,18 +216,21 @@ link:../commands-a-z/show-storagearray-odxsetting.html["스토리지 배열 ODX 
 
 
 
+[[repository-volume-analysis-commands]]
 == 리포지토리 볼륨 분석 명령
 
 link:../commands-a-z/check-repositoryconsistency.html["저장소 일관성을 확인합니다"]
 
 
 
+[[session-commands]]
 == 세션 명령
 
 link:../commands-a-z/set-session-erroraction.html["세션을 설정합니다"]
 
 
 
+[[storage-array-commands]]
 == 스토리지 배열 명령입니다
 
 link:../commands-a-z/activate-storagearray-firmware.html["스토리지 어레이 펌웨어를 활성화합니다"]
@@ -383,6 +395,7 @@ link:../commands-a-z/validate-storagearray-securitykey.html["스토리지 배열
 
 
 
+[[tray-commands]]
 == 트레이 명령
 
 link:../commands-a-z/download-tray-firmware-file.html["환경 카드 펌웨어를 다운로드합니다"]
@@ -405,6 +418,7 @@ link:../commands-a-z/stop-tray-locate.html["트레이 위치를 중지합니다"
 
 
 
+[[uncategorized-commands]]
 == 분류되지 않은 명령
 
 link:../commands-a-z/recover-sasport-miswire.html["SAS 포트 오선을 복구합니다"]

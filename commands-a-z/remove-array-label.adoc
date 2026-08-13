@@ -15,12 +15,14 @@ summary: 스토리지 레이블 제거 명령을 사용하면 스토리지 배�
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 EF600, EF300, EF50 및 EF80 스토리지 어레이에 적용됩니다.
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli, subs="+macros"]
@@ -30,6 +32,7 @@ delete storageArrayLabel all
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 |===
@@ -44,6 +47,7 @@ delete storageArrayLabel all
 |===
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 8.60

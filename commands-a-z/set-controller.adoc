@@ -15,18 +15,21 @@ summary: set controller 명령은 컨트롤러의 특성을 정의합니다.
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 모든 SMcli 패키지가 설치되어 있는 한 E4000, E2700, E5600, E2800, E5700, EF600, EF300, EF50 및 EF80 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Storage Admin 역할이 있어야 합니다.
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli]
@@ -44,6 +47,7 @@ set controller [(a|b)]
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 [cols="2*"]
@@ -124,6 +128,7 @@ Service Action Allowed(서비스 작업 허용) 표시등이 켜져 있는지 �
 |===
 
 
+[[identifying-an-iscsi-host-port-label]]
 == iSCSI 호스트 포트 레이블 식별
 
 호스트 포트의 레이블을 지정해야 합니다. 다음 단계에 따라 호스트 포트 레이블을 지정합니다.
@@ -172,6 +177,7 @@ iscsiHostPort[3]
 ====
 
 
+[[options-for-the-ethernetport-parameter]]
 == eethernetPort 매개 변수에 대한 옵션입니다
 
 [listing]
@@ -212,6 +218,7 @@ portSpeed=[(autoNegotiate | 10 | 100 | 1000)]
 ----
 
 
+[[options-for-the-iscsihostport-parameter]]
 == iSCSIHostPort 매개변수에 대한 옵션입니다
 
 [listing]
@@ -300,6 +307,7 @@ portSpeed=[( 10 | 25)]
 ----
 
 
+[[notes]]
 == 참고
 
 [NOTE]
@@ -340,6 +348,7 @@ iscsiHostPort 매개 변수의 "portSpeed" 옵션 값은 초당 메가비트(MB/
 
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 7.15는 'bootp' 매개변수를 제거하고 새 이더넷 포트 옵션과 새 iSCSI 호스트 포트 옵션을 추가합니다.

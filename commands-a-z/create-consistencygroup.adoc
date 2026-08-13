@@ -15,18 +15,21 @@ summary: create consistencyGroup 명령은 스냅샷 그룹을 포함할 수 있
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 모든 SMcli 패키지가 설치되어 있는 한 E4000, E2700, E5600, E2800, E5700, EF600, EF300, EF50 및 EF80 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Storage Admin 역할이 있어야 합니다.
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli, subs="+macros"]
@@ -41,6 +44,7 @@ create consistencyGroup userLabel=pass:quotes[_"consistencyGroupName"_]
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 |===
@@ -90,6 +94,7 @@ create consistencyGroup userLabel=pass:quotes[_"consistencyGroupName"_]
 |===
 
 
+[[notes]]
 == 참고
 
 정합성 보장 그룹은 컬렉션에 추가하는 모든 스냅샷 이미지를 일괄 형태로 관리할 수 있는 논리적 엔터티입니다. 정합성 보장 그룹은 스냅샷 이미지에 대한 상호 정합성 요구 사항 또는 종속성이 있는 스냅샷 그룹의 모음입니다. 이 컬렉션에 생성 및 사용하는 모든 스냅샷 이미지는 정합성 보장 종속성에 따라 관리해야 합니다.
@@ -104,12 +109,14 @@ create consistencyGroup userLabel=pass:quotes[_"consistencyGroupName"_]
 
 
 
+[[auto-delete]]
 == 자동 삭제
 
 스냅샷 그룹의 총 스냅샷 이미지 수를 최대 이미지 수 이하로 유지하도록 각 스냅샷 그룹을 자동으로 삭제하도록 구성할 수 있습니다. 스냅샷 그룹의 스냅샷 이미지 수가 최대 제한에 도달했을 때 스냅샷 그룹에 새 스냅샷 이미지가 생성될 때마다 "autoDeleteLimit" 매개 변수는 스냅샷 이미지를 자동으로 삭제합니다. "autoDeleteLimit" 매개 변수는 매개 변수로 정의된 최대 이미지 수가 충족될 때까지 스냅샷 그룹에서 가장 오래된 스냅샷 이미지를 삭제합니다. 이렇게 하면 저장소 용량을 확보함으로써 나머지 스냅샷 이미지에 대한 지속적인 쓰기 중 복제 요구 사항을 충족할 수 있습니다.
 
 
 
+[[scheduling-snapshot-images-in-a-consistency-group]]
 == 정합성 보장 그룹에서 스냅샷 이미지를 스케줄링하는 중입니다
 
 'enableSchedule' 매개변수와 'schedule' 매개변수를 사용하여 스냅샷을 예약할 수 있습니다. 이러한 매개 변수를 사용하여 일별, 주별 또는 월별(일별 또는 날짜별)으로 스냅샷을 예약할 수 있습니다. enableSchedule 매개변수는 스냅샷 예약 기능을 켜거나 끕니다. 예약을 활성화할 때 '스케줄' 매개변수를 사용하여 스냅샷을 생성할 시기를 정의합니다.
@@ -972,6 +979,7 @@ enableSchedule=true schedule timeZone="America/Chicago"
 
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 7.83

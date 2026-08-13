@@ -15,18 +15,21 @@ summary: set storageArray pqValidateOnReconstruct 명령은 재구성 시 스토
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 개별 E4000, E2800, E5700, EF600, EF300, EF50 및 EF80 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, 2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Storage Admin 역할이 있어야 합니다.
 
 
 
+[[context]]
 == 상황
 
 이 기능은 이중 패리티가 있는 디스크 풀 및 RAID 6 볼륨 그룹에 적용됩니다. 이 경우 드라이브 장애가 발생하더라도 볼륨 그룹 또는 디스크 풀에 중복성이 있으므로 재구성 중 데이터 및 패리티 일관성을 확인할 수 있습니다. 재구성 중에 불일치가 발견되고 볼륨에 대해 Data Assurance가 활성화된 경우, 나머지 드라이브를 사용하여 데이터를 재구성할 수 있도록 비일관성의 소스를 식별할 수 있습니다. 이 기능이 활성화되어 있고 볼륨에 대해 Data Assurance가 활성화되어 있지 않거나 비일관성을 단일 드라이브로 격리할 수 없는 경우 재구성되는 블록이 읽을 수 없는 것으로 표시됩니다.
@@ -35,6 +38,7 @@ E4000, 2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli]
@@ -43,6 +47,7 @@ set storageArray pqValidateOnReconstruct (enable | disable) driveMediaType=(hdd 
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 [cols="2*"]
@@ -77,6 +82,7 @@ P/Q 검증 기능을 설정할 드라이브 미디어 유형입니다. 지원되
 |===
 
 
+[[example-with-drive-media-type-specified-as-hard-disk-drives]]
 == 하드 디스크 드라이브로 지정된 드라이브 미디어 유형의 예
 
 [listing]
@@ -88,6 +94,7 @@ SMcli completed successfully.
 ----
 
 
+[[example-with-drive-media-type-specified-as-solid-state-drives]]
 == 솔리드 스테이트 드라이브로 지정된 드라이브 미디어 유형의 예
 
 [listing]
@@ -99,6 +106,7 @@ SMcli completed successfully.
 ----
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 8.42

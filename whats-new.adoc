@@ -25,6 +25,7 @@ summary: 이 항목에서는 CLI 명령 및 스크립트 명령의 최신 SANtri
 ====
 
 
+[[santricity-12-00]]
 == SANtricity 12.00
 
 다음 표에는 릴리스 12.00의 CLI 및 스크립트 명령 변경 사항이 나열되어 있습니다.
@@ -63,6 +64,7 @@ https://docs.netapp.com/us-en/e-series-cli/commands-a-z/set-storagearray-managem
 |===
 
 
+[[santricity-11-90]]
 == SANtricity 11.90 을 참조하십시오
 
 다음 표에는 릴리즈 11.90의 CLI 및 스크립트 명령에 대한 변경 사항이 나와 있습니다.
@@ -108,6 +110,7 @@ https://docs.netapp.com/us-en/e-series-cli/commands-a-z/download-storagearray-ke
 |===
 
 
+[[santricity-11-81]]
 == SANtricity 11.81 을 참조하십시오
 
 다음 표에는 릴리즈 11.81의 CLI 및 스크립트 명령에 대한 변경 사항이 나와 있습니다.
@@ -125,6 +128,7 @@ https://docs.netapp.com/us-en/e-series-cli/get-started/downloadable-smcli-parame
 |===
 
 
+[[santricity-11-80]]
 == SANtricity 11.80
 
 다음 표에는 릴리스 11.80의 CLI 및 스크립트 명령에 대한 변경 사항이 나와 있습니다.
@@ -191,12 +195,14 @@ xref:./commands-a-z/check-volume-parity.adoc[볼륨 패리티를 확인합니다
 |===
 
 
+[[santricity-11-70-5]]
 == SANtricity 11.70.5
 
 릴리스 11.70.5에 대한 CLI 및 스크립트 명령 변경 사항은 없습니다.
 
 
 
+[[santricity-11-70-4]]
 == SANtricity 11.70.4
 
 다음 표에는 릴리즈 11.70.4의 CLI 및 Script 명령이 변경되었습니다.
@@ -214,6 +220,7 @@ xref:./get-started/downloadable-smcli-parameters.adoc[SMcli 명령줄 매개변�
 |===
 
 
+[[santricity-11-70-3]]
 == SANtricity 11.70.3
 
 다음 표에는 릴리스 11.70.3에 대한 CLI 및 스크립트 명령의 변경 사항이 나와 있습니다.
@@ -266,6 +273,7 @@ xref:./commands-a-z/create-diskpool.adoc[디스크 풀을 생성합니다]
 |===
 
 
+[[santricity-11-70-2]]
 == SANtricity 11.70.2
 
 다음 표에는 릴리스 11.70.2에 대한 CLI 및 스크립트 명령이 변경되었습니다.
@@ -325,6 +333,7 @@ xref:./commands-a-z/start-snmptrapdestination.adoc[SNMP 트랩 대상을 테스�
 |===
 
 
+[[santricity-11-70-1]]
 == SANtricity 11.70.1
 
 다음 표에는 릴리스 11.70.1의 CLI 및 스크립트 명령에 대한 변경 사항이 나와 있습니다.
@@ -391,6 +400,7 @@ blocksize 매개 변수가 추가되었습니다.
 |===
 
 
+[[santricity-11-70]]
 == SANtricity 11.70
 
 다음 표에는 릴리스 11.70의 CLI 및 스크립트 명령에 대한 변경 사항이 나와 있습니다.

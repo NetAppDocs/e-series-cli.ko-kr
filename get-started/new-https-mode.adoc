@@ -35,6 +35,7 @@ SMcli는 추가 보안 기능을 제공하는 "* https*" 모드로 작동할 수
 
 
 
+[[operations-requiring-a-password-https-client-mode-trusted-certificate-is-installed-on-the-array]]
 == 암호가 필요한 작업, `https` 클라이언트 모드, 신뢰할 수 있는 인증서가 배열에 설치됩니다
 
 다음 예에서는 사용자 이름과 암호 옵션이 모두 제공되며 신뢰할 수 있는 인증서가 스토리지에 설치됩니다.
@@ -53,6 +54,7 @@ SMcli completed successfully.
 ----
 
 
+[[operations-requiring-a-password-https-client-mode-no-trusted-certificate-is-installed-on-the-array]]
 == 암호가 필요한 작업, `https` 클라이언트 모드, 어레이에 신뢰할 수 있는 인증서가 설치되어 있지 않습니다
 
 다음 예에서는 사용자 이름과 암호 옵션이 모두 제공되지만, 어레이에 신뢰할 수 있는 인증서가 설치되어 있지 않으며, '-k' 옵션이 사용되지 않았습니다. 이 예제에서는 반환되는 출력을 보여 줍니다.
@@ -68,6 +70,7 @@ SMcli failed.
 ----
 
 
+[[operations-requiring-a-password-https-client-mode-no-trusted-certificate-installed-but-using-k-for-self-signed-certificate]]
 == 암호가 필요한 작업, `https` 클라이언트 모드, 설치된 신뢰할 수 있는 인증서가 없지만 자체 서명된 인증서에 -k를 사용합니다
 
 다음 예에서는 위의 예제와 같이 사용자 이름과 암호 옵션이 모두 제공되지만 신뢰할 수 있는 인증서가 스토리지에 설치되어 있지 않습니다. 그러나 이 경우 자체 서명된 인증서를 사용하기 위해 -k 옵션을 사용했습니다.
@@ -100,6 +103,7 @@ SMcli completed successfully.
 ----
 
 
+[[read-only-operations-symbol-client-mode]]
 == 읽기 전용 작업, `symbol` 클라이언트 모드입니다
 
 이 예에서는 ' * symbol * ' 클라이언트 모드에서 사용자 이름과 암호가 제공되지 않습니다. 이 작업은 읽기 전용 작업에만 성공적으로 완료됩니다.
@@ -127,6 +131,7 @@ SMcli completed successfully.
 ----
 
 
+[[read-only-operations-http-client-mode]]
 == 읽기 전용 작업, http 클라이언트 모드입니다
 
 다음 예제에서는 읽기 전용 작업뿐 아니라 '* https*' 클라이언트 모드에서도 사용자 이름과 암호가 모두 필요하며 자체 서명된 인증서를 수락하려면 '-k'와 함께 제공됩니다. '* https*' 클라이언트 모드는 읽기 전용 작업에도 암호가 필요합니다.

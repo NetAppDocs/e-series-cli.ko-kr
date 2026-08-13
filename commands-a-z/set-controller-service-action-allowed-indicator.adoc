@@ -15,12 +15,14 @@ summary: set controller 명령은 컨트롤러 트레이 또는 컨트롤러 드
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 E2700 및 E5600 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[context]]
 == 상황
 
 스토리지 배열이 Service Action Allowed 표시등 기능을 지원하지 않는 경우 이 명령은 오류를 반환합니다. 스토리지 배열이 명령을 지원하지만 표시등을 켜거나 끌 수 없는 경우 이 명령은 오류를 반환합니다. (전원 팬 캐니스터 또는 상호 연결 배터리 캐니스터의 Service Action Allowed 표시등을 켜거나 끄려면 'Set tray serviceAllowedIndicator' 명령을 사용합니다.)
@@ -32,6 +34,7 @@ summary: set controller 명령은 컨트롤러 트레이 또는 컨트롤러 드
 ====
 
 
+[[syntax]]
 == 구문
 
 [source, cli]
@@ -41,6 +44,7 @@ serviceAllowedIndicator=(on | off)
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 [cols="2*"]
@@ -63,6 +67,7 @@ Service Action Allowed(서비스 작업 허용) 표시등을 켜거나 끄는 �
 |===
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 6.14

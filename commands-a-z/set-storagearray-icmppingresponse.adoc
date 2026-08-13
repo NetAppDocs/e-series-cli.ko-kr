@@ -15,18 +15,21 @@ summary: set storageArray icmpPingResponse 명령은 협상 시 스토리지 배
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 모든 SMcli 패키지가 설치되어 있는 한 E4000, E2700, E5600, E2800, E5700, EF600, EF300, EF50 및 EF80 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Storage Admin 역할이 있어야 합니다.
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli]
@@ -35,6 +38,7 @@ set storageArray icmpPingResponse=(TRUE | FALSE)
 ----
 
 
+[[parameter]]
 == 매개 변수
 
 [cols="2*"]
@@ -50,12 +54,14 @@ set storageArray icmpPingResponse=(TRUE | FALSE)
 |===
 
 
+[[notes]]
 == 참고
 
 ICMP(Internet Control Message Protocol)는 네트워크의 운영 체제에서 요청된 서비스를 사용할 수 없거나 호스트 또는 라우터에 연결할 수 없는 등의 IP 관련 오류 메시지, 테스트 패킷 및 정보 메시지를 보내는 데 사용됩니다. ICMP 응답 명령은 ICMP Echo Request 메시지를 보내고 ICMP Echo Response 메시지를 수신하여 호스트에 연결할 수 있는지 여부와 패킷이 해당 호스트로 송수신되는 데 걸리는 시간을 결정합니다.
 
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 7.10

@@ -15,6 +15,7 @@ summary: 종료 상태는 실행된 명령에 대해 반환됩니다. 이 표에
 
 
 
+[[exit-status-definitions]]
 == 상태 정의를 종료합니다
 
 [cols="3*"]

@@ -15,18 +15,21 @@ Load storageArray dbmDatabase 명령은 파일 또는 캐시에서 이미지를 
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 모든 SMcli 패키지가 설치되어 있는 한 E4000, E2700, E5600, E2800, E5700, EF600, EF300, EF50 및 EF80 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Security Admin 역할이 있어야 합니다.
 
 
 
+[[context]]
 == 상황
 
 이 명령어는 'Save storageArray dbmDatabase' 명령어를 이용하여 데이터베이스 이미지를 캡처할 때 존재했던 정확한 구성으로 스토리지 배열 dbm 데이터베이스를 복구한다. 파일의 데이터에는 RAID 구성, 볼륨 그룹 및 디스크 풀에 대한 데이터가 포함됩니다.
@@ -35,6 +38,7 @@ E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli, subs="+macros"]
@@ -46,6 +50,7 @@ pass:quotes[((file="_filename_" validator="_validatorValue_") | sourceLocation=o
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 [cols="2*"]
@@ -99,12 +104,14 @@ Disk Pool 구성 데이터를 포함한 모든 데이터를 조회할 수 있도
 |===
 
 
+[[notes]]
 == 참고
 
 데이터베이스 이미지 크기에 따라 데이터베이스를 복원하는 데 최대 30분이 걸릴 수 있습니다. 데이터베이스 이미지 로드에 대한 모든 작업이 컨트롤러에서 완료될 때까지 호스트 소프트웨어는 컨트롤러를 최적의 상태로 표시하지 않습니다.
 
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 7.75

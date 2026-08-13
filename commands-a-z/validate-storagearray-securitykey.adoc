@@ -15,18 +15,21 @@ summary: Validate storageArray securityKey 명령은 보안 가능 드라이브�
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 외부 키 관리가 활성화된 경우 이 명령은 E4000, E2800 및 E5700 어레이에만 적용됩니다. 내부 키 관리가 활성화된 경우 모든 SMcli 패키지가 설치된 경우 명령은 개별 스토리지 배열에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Security Admin 역할이 있어야 합니다.
 
 
 
+[[context]]
 == 상황
 
 보안 키 유효성 검사에서는 파일을 생성하여 키를 해독하고 컨트롤러 메모리(내부 키의 경우) 또는 외부 서버(외부 키의 경우)에 유지되는 값과 일치시키는 데 사용되는 암호 구문을 사용합니다.
@@ -38,6 +41,7 @@ E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서
 ====
 
 
+[[syntax]]
 == 구문
 
 [source, cli, subs="+macros"]
@@ -47,6 +51,7 @@ pass:quotes[validate storageArray securityKey file="_fileName_" passPhrase="_pas
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 [cols="2*"]
@@ -78,6 +83,7 @@ file="C:\Program Files\CLI\sup\drivesecurity.slk"
 |===
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 7.70

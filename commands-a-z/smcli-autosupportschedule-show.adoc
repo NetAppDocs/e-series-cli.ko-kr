@@ -15,12 +15,14 @@ summary: SMcli -autoSupportSchedule show 명령은 매일 및 매주 AutoSupport
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 관리 도메인에 있는 모든 E2700 및 E5600 스토리지 어레이에 동시에 적용됩니다. E4000, E2800 또는 E5700 스토리지 어레이에는 적용되지 않습니다.
 
 
 
+[[context]]
 == 상황
 
 [NOTE]
@@ -38,6 +40,7 @@ summary: SMcli -autoSupportSchedule show 명령은 매일 및 매주 AutoSupport
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli]
@@ -46,18 +49,21 @@ SMcli -autoSupportSchedule show
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 없음.
 
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 8.25
 
 
 
+[[example]]
 == 예
 
 출력에는 기본 설정 시간 범위, 그 다음에 일별 및 주별 일정이 표시됩니다.

@@ -15,24 +15,28 @@ summary: start ssdCache performanceModeling 명령은 SSD 캐시의 성능 모�
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 모든 SMcli 패키지가 설치되어 있는 한 E4000, E2700, E5600, E2800, E5700, EF600, EF300, EF50 및 EF80 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Support Admin 역할이 있어야 합니다.
 
 
 
+[[context]]
 == 상황
 
 성능 모델링은 일정 기간 I/O 활동을 모니터링 및 측정하고 다양한 SSD 캐시 크기에 대한 성능을 예측합니다. 성능은 캐시 적중율과 평균 응답 시간의 두 가지 메트릭을 사용하여 추정됩니다. 'top ssdCache performanceModeling' 명령어를 사용하여 작업을 중지할 때까지는 성능 모델링 데이터를 사용할 수 없습니다.
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli, subs="+macros"]
@@ -41,6 +45,7 @@ start ssdCache pass:quotes[[_ssdCacheName_]] performanceModeling
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 [cols="2*"]
@@ -56,6 +61,7 @@ start ssdCache pass:quotes[[_ssdCacheName_]] performanceModeling
 |===
 
 
+[[notes]]
 == 참고
 
 성능 모델링이 끝나고 다음 조건 중 하나가 발생하면 성능 모델링 데이터를 사용할 수 있습니다.
@@ -73,6 +79,7 @@ start ssdCache pass:quotes[[_ssdCacheName_]] performanceModeling
 
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 7.84

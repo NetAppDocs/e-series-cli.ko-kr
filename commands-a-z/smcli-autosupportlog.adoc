@@ -15,12 +15,14 @@ summary: SMcli -autoSupportLog 명령을 사용하면 AutoSupport 로그 파일�
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 관리 도메인에 있는 모든 E2700 및 E5600 스토리지 어레이에 동시에 적용됩니다. E4000, E2800 또는 E5700 스토리지 어레이에는 적용되지 않습니다.
 
 
 
+[[context]]
 == 상황
 
 이 명령을 사용하면 두 가지 유형의 로그를 볼 수 있습니다.
@@ -36,6 +38,7 @@ summary: SMcli -autoSupportLog 명령을 사용하면 AutoSupport 로그 파일�
 ====
 
 
+[[syntax]]
 == 구문
 
 [source, cli, subs="+macros"]
@@ -45,6 +48,7 @@ pass:quotes[inputArchive=_n_] pass:quotes[outputLog=_filename_]
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 다음 표에는 명령 매개 변수가 나와 있습니다.
@@ -100,12 +104,14 @@ AutoSupport 로그를 보려는 스토리지 어레이의 WWID(World Wide Identi
 |===
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 8.25
 
 
 
+[[example]]
 == 예
 
 [listing]
@@ -114,6 +120,7 @@ SMcli -autosupportLog -n StorageArrayName inputArchive=0 outputLog=ASUPTransmiss
 ----
 
 
+[[verification]]
 == 검증
 
 스토리지 관리 소프트웨어가 설치된 클라이언트 디렉토리에 있는 요청한 AutoSupport 로그를 확인합니다.

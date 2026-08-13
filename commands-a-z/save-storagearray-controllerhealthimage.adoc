@@ -15,18 +15,21 @@ summary: save storageArray controllerHealthImage 명령은 컨트롤러 상태 �
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 모든 SMcli 패키지가 설치되어 있는 한 E4000, E2700, E5600, E2800, E5700, EF600, EF300, EF50 및 EF80 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Storage Admin 역할이 있어야 합니다.
 
 
 
+[[context]]
 == 상황
 
 [NOTE]
@@ -38,6 +41,7 @@ E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli, subs="+macros"]
@@ -46,6 +50,7 @@ save storageArray controllerHealthImage file=pass:quotes["_filename_"]
 ----
 
 
+[[parameter]]
 == 매개 변수
 
 [cols="2*"]
@@ -65,6 +70,7 @@ file="C:\Array Backups\DBMbackup_03302010.core"
 |===
 
 
+[[notes]]
 == 참고
 
 컨트롤러 상태 이미지 파일의 크기는 1~2GB이며 저장하는 데 몇 분이 걸릴 수 있습니다. 이 명령은 컨트롤러 상태 이미지 자체를 저장하는 것 이외에도 컨트롤러 상태 이미지 메타데이터를 기반으로 XML 설명자 파일을 생성합니다. 이 설명자 파일은 ZIP 파일 형식으로 컨트롤러 상태 이미지와 동일한 경로에 저장됩니다. 다음 예제에서는 설명자 파일의 XML 형식을 보여 줍니다.
@@ -102,6 +108,7 @@ file="C:\Array Backups\DBMbackup_03302010.core"
 
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 7.83

@@ -27,6 +27,7 @@ summary: 다음 섹션의 스크립트 명령에는 스크립트 명령을 실�
 ====
 
 
+[[examples-of-firmware-compatibility-levels]]
 == 펌웨어 호환성 수준의 예
 
 hostGroup 생성 명령은 다음과 같다.

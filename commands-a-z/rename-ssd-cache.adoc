@@ -15,18 +15,21 @@ summary: set ssdCache 명령은 SSD 캐시의 이름을 변경합니다.
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 모든 SMcli 패키지가 설치되어 있는 한 E4000, E2700, E5600, E2800, E5700, EF600, EF300, EF50 및 EF80 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Support Admin 역할이 있어야 합니다.
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli, subs="+macros"]
@@ -35,6 +38,7 @@ set ssdCache pass:quotes[[_old_ssdCacheName_]] userLabel=pass:quotes[_"new_ssdCa
 ----
 
 
+[[parameter]]
 == 매개 변수
 
 |===
@@ -56,6 +60,7 @@ SSD 캐시의 새 이름입니다. 이름은 큰따옴표(" ")로 묶어야 합�
 |===
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 7.84

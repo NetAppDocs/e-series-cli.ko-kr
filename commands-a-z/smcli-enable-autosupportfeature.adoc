@@ -15,12 +15,14 @@ summary: 'SMcli enable autoSupportFeatature 명령은 모든 관리형 스토리
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 관리 도메인에 있는 모든 E2700 및 E5600 스토리지 어레이에 동시에 적용됩니다. E4000, E2800 또는 E5700 스토리지 어레이에는 적용되지 않습니다.
 
 
 
+[[context]]
 == 상황
 
 [NOTE]
@@ -51,6 +53,7 @@ AutoSupport 기능이 작동하려면 영구 모니터가 활성화되어 있어
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli]
@@ -59,12 +62,14 @@ SMcli enable|disable autoSupportFeature
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 없음.
 
 
 
+[[verification]]
 == 검증
 
 'smcli -autoSupportConfig show' 명령을 사용하여 이 기능을 활성화했는지 확인합니다. 표시된 출력의 초기 줄은 활성화 상태를 나타냅니다.
@@ -75,6 +80,7 @@ The AutoSupport feature is activated on this storage management station.
 ----
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 7.86

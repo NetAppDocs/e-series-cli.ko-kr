@@ -15,18 +15,21 @@ recopy volumeCopy target' 명령은 기존 볼륨 복사본 쌍을 사용하여 
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 모든 SMcli 패키지가 설치되어 있는 한 E4000, E2700, E5600, E2800, E5700, EF600, EF300, EF50 및 EF80 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Storage Admin 역할이 있어야 합니다.
 
 
 
+[[context]]
 == 상황
 
 [NOTE]
@@ -45,6 +48,7 @@ E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서
 ====
 
 
+[[syntax]]
 == 구문
 
 [source, cli]
@@ -56,6 +60,7 @@ recopy volumeCopy target [targetName]
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 |===
@@ -91,12 +96,14 @@ targetReadOnlyEnabled
 |===
 
 
+[[notes]]
 == 참고
 
 복사 우선 순위는 소스 볼륨과 볼륨 복사본 쌍의 타겟 볼륨 간의 데이터를 복사하는 데 사용되는 시스템 리소스의 양을 정의합니다. 가장 높은 우선 순위 수준을 선택하면 볼륨 복사본은 대부분의 시스템 리소스를 사용하여 볼륨 복사본을 수행하므로 호스트 데이터 전송 성능이 저하됩니다.
 
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 6.10

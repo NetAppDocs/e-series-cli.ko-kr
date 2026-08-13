@@ -15,12 +15,14 @@ iscsiInitiator 설정 명령은 iSCSI 초기자에 대한 속성을 설정합니
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 모든 SMcli 패키지가 설치되어 있는 한 E4000, E2700, E5600, E2800, E5700, EF600, EF300, EF50 및 EF80 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Storage Admin 역할이 있어야 합니다.
@@ -32,6 +34,7 @@ E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서
 ====
 
 
+[[syntax]]
 == 구문
 
 [source, cli, subs="+macros"]
@@ -43,6 +46,7 @@ chapSecret=pass:quotes["_newSecurityKey_"])
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 [cols="2*"]
@@ -117,6 +121,7 @@ set iscsiInitiator ["ICTM1590S02H1_AA"]
 |===
 
 
+[[notes]]
 == 참고
 
 이름에 영숫자, 하이픈 및 밑줄을 조합하여 사용할 수 있습니다. 이름에는 최대 30자를 사용할 수 있습니다.
@@ -344,6 +349,7 @@ Z
 |===
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 7.10

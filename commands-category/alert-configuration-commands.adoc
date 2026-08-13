@@ -15,6 +15,7 @@ summary: 경고 구성 명령
 
 
 
+[[embedded-snmp-configuration]]
 == 내장 SNMP 구성
 
 link:../commands-a-z/create-snmpcommunity.html["SNMP 커뮤니티를 등록합니다"]
@@ -39,6 +40,7 @@ link:../commands-a-z/set-snmptrapdestination-trapreceiverip.html["SNMP 트랩 �
 
 
 
+[[email-alert-configuration-e2700-or-e5600-arrays]]
 == 이메일 경고 구성 - E2700 또는 E5600 어레이
 
 link:../commands-a-z/set-emailalert.html["e-메일 알림 설정을 구성합니다"]
@@ -51,6 +53,7 @@ link:../commands-a-z/smcli-alerttest.html["경고를 테스트합니다"]
 
 
 
+[[ssd-cache-commands]]
 == SSD 캐시 명령입니다
 
 link:../commands-a-z/clear-emailalert-configuration.html["e-메일 알림 구성을 지웁니다"]
@@ -65,6 +68,7 @@ link:../commands-a-z/start-emailalert-test.html["이메일 경고 구성을 테�
 
 
 
+[[syslog-configuration]]
 == Syslog 구성
 
 link:../commands-a-z/clear-syslog-configuration.html["syslog 구성을 지웁니다"]

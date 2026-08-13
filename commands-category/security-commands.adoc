@@ -15,6 +15,7 @@ summary: 보안 명령
 
 
 
+[[audit-log-management-commands]]
 == 감사 로그 관리 명령
 
 link:../commands-a-z/delete-auditlog.html["감사 로그 레코드를 삭제합니다"]
@@ -29,6 +30,7 @@ link:../commands-a-z/show-auditlog-summary.html["감사 로그 요약을 표시�
 
 
 
+[[authentication-commands]]
 == 인증 명령
 
 link:../commands-a-z/getting-started-with-authentication.html["인증 시작하기"]
@@ -65,6 +67,7 @@ link:../commands-a-z/start-storagearray-directoryservices-test.html["스토리�
 
 
 
+[[certificate-management-commands-for-e2800-and-e5700-controllers]]
 == E2800 및 E5700 컨트롤러용 인증서 관리 명령
 
 link:../commands-a-z/save-controller-arraymanagementcsr.html["웹 서버 CSR(인증서 서명 요청) 생성"]
@@ -101,6 +104,7 @@ link:../commands-a-z/start-storagearray-ocspresponderurl-test.html["인증서 �
 
 
 
+[[certificate-management-commands-for-ef600]]
 == EF600의 인증서 관리 명령
 
 link:../commands-a-z/add-array-label.html["스토리지 레이블을 추가합니다"]
@@ -111,6 +115,7 @@ link:../commands-a-z/show-array-label.html["배열 레이블을 표시합니다"
 
 
 
+[[database-commands]]
 == 데이터베이스 명령
 
 link:../commands-a-z/clear-storagearray-configuration.html["스토리지 배열 구성을 지웁니다"]
@@ -131,6 +136,7 @@ link:../commands-a-z/stop-storagearray-configdbdiagnostic.html["스토리지 배
 
 
 
+[[embedded-external-key-management-commands]]
 == 내장형 외부 키 관리 명령
 
 link:../commands-a-z/set-storagearray-externalkeymanagement.html["외부 키 관리 시작"]
@@ -161,6 +167,7 @@ link:../commands-a-z/validate-storagearray-securitykey.html["스토리지 배열
 
 
 
+[[external-key-management-commands-related-to-certificates]]
 == 인증서와 관련된 외부 키 관리 명령입니다
 
 link:../commands-a-z/save-storagearray-keymanagementclientcsr.html["설치된 키 관리 CSR 요청을 검색합니다"]

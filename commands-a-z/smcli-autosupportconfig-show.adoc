@@ -15,12 +15,14 @@ summary: SMcli -autoSupportConfig show 명령은 관리 도메인에 대한 Auto
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 관리 도메인에 있는 모든 E2700 및 E5600 스토리지 어레이에 동시에 적용됩니다. E2800 또는 E5700 스토리지 어레이에는 적용되지 않습니다.
 
 
 
+[[context]]
 == 상황
 
 이 명령의 명령 출력에는 다음 구성 정보가 표시됩니다.
@@ -43,6 +45,7 @@ summary: SMcli -autoSupportConfig show 명령은 관리 도메인에 대한 Auto
 
 
 
+[[context]]
 == 상황
 
 [NOTE]
@@ -57,6 +60,7 @@ summary: SMcli -autoSupportConfig show 명령은 관리 도메인에 대한 Auto
 ====
 
 
+[[syntax]]
 == 구문
 
 [source, cli]
@@ -65,18 +69,21 @@ SMcli -autoSupportConfig show
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 없음.
 
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 8.25
 
 
 
+[[example-output-for-the-activation-statuses]]
 == 활성화 상태의 출력 예
 
 [listing]
@@ -87,6 +94,7 @@ The AutoSupport Remote Diagnostics feature is de-activated on this storage manag
 ----
 
 
+[[example-output-for-the-smtp-delivery-method]]
 == SMTP 전달 방법의 출력 예
 
 [listing]
@@ -98,6 +106,7 @@ Sender email address:  user@netapp.com
 ----
 
 
+[[example-output-for-the-http-or-https-delivery-method-with-a-direct-connection]]
 == 직접 연결을 사용하는 HTTP 또는 HTTPS 전달 방법의 출력 예
 
 [listing]
@@ -108,6 +117,7 @@ Connection:  Direct
 ----
 
 
+[[example-output-for-the-http-delivery-method-with-a-proxy-connection]]
 == 프록시 연결을 사용하는 HTTP 전송 메서드의 출력 예
 
 [listing]
@@ -121,6 +131,7 @@ Password: **********
 ----
 
 
+[[example-output-for-the-http-delivery-method-with-an-automatic-proxy-configuration-script-pac]]
 == 자동 프록시 구성 스크립트(PAC)를 사용한 HTTP 전송 방법의 출력 예
 
 [listing]
@@ -130,6 +141,7 @@ Script location: http://esgweb.eng.netapp.com/~user/proxy.pac
 ----
 
 
+[[example-output-for-array-table-all-delivery-methods]]
 == 배열 테이블의 출력 예(모든 전달 방법)
 
 [listing]

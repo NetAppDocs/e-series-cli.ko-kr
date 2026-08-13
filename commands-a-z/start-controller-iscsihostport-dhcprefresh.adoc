@@ -15,24 +15,28 @@ summary: start controller iscsiHostPort dhcpRefresh 명령은 iSCSI 인터페이
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 모든 SMcli 패키지가 설치되어 있는 한 E4000, E2700, E5600, E2800, E5700, EF600, EF300, EF50 및 EF80 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Storage Admin 역할이 있어야 합니다.
 
 
 
+[[context]]
 == 상황
 
 인터페이스의 구성 방법이 DHCP로 설정되어 있지 않으면 프로시저에서 오류를 반환합니다.
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli]
@@ -41,6 +45,7 @@ start controller [(a|b)] iscsiHostPort [portLabel] dhcpRefresh
 ----
 
 
+[[parameter]]
 == 매개 변수
 
 [cols="2*"]
@@ -67,6 +72,7 @@ DHCP 매개변수를 새로 고칠 호스트 포트 레이블 또는 iSCSI 호�
 |===
 
 
+[[identifying-an-iscsi-host-port-label]]
 == iSCSI 호스트 포트 레이블 식별
 
 호스트 포트의 레이블을 지정해야 합니다. 다음 단계에 따라 호스트 포트 레이블을 지정합니다.
@@ -116,12 +122,14 @@ iscsiHostPort[3]
 ====
 
 
+[[notes]]
 == 참고
 
 이 작업은 포털의 iSCSI 연결을 종료하고 포털을 일시적으로 종료합니다.
 
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 7.10

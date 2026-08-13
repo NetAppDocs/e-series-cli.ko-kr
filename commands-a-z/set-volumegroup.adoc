@@ -15,18 +15,21 @@ summary: set volumeGroup 명령은 볼륨 그룹의 속성을 정의합니다.
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 모든 SMcli 패키지가 설치되어 있는 한 E4000, E2700, E5600, E2800, E5700, EF600, EF300, EF50 및 EF80 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Storage Admin 역할이 있어야 합니다.
 
 
 
+[[context]]
 == 상황
 
 [NOTE]
@@ -36,6 +39,7 @@ E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서
 ====
 
 
+[[syntax]]
 == 구문
 
 [source, cli, subs="+macros"]
@@ -47,6 +51,7 @@ set volumeGroup pass:quotes[[_volumeGroupName_]]
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 [cols="2*"]
@@ -87,6 +92,7 @@ set volumeGroup pass:quotes[[_volumeGroupName_]]
 |===
 
 
+[[notes]]
 == 참고
 
 호스트 I/O 오류로 인해 32개 이상의 볼륨이 있는 볼륨 그룹이 생성될 수 있습니다. 볼륨 그룹 정의가 설정되기 전에 시간 초과 기간이 종료되므로 이 작업으로 인해 내부 컨트롤러가 재부팅될 수도 있습니다. 이 문제가 발생하면 호스트 I/O 작업을 중지하고 명령을 다시 시도하십시오.
@@ -102,6 +108,7 @@ addDrives 매개변수는 고용량 드라이브 트레이와 저용량 드라�
 
 
 
+[[troubleshooting]]
 == 문제 해결
 
 DCE(동적 용량 확장)라고도 하는 드라이브를 추가하여 큰 볼륨 그룹을 확장하려고 하면 다음 메시지와 함께 실패할 수 있습니다.
@@ -128,6 +135,7 @@ DCE에서는 원본 볼륨에서 읽은 데이터와 확장 볼륨에 쓸 데이
 
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 7.10은 RAID 6 기능을 추가합니다.

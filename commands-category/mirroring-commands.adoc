@@ -15,6 +15,7 @@ summary: 미러링 명령
 
 
 
+[[asynchronous-mirroring-commands]]
 == 비동기식 미러링 명령
 
 link:../commands-a-z/activate-asynchronous-mirroring.html["비동기식 미러링을 활성화합니다"]
@@ -61,6 +62,7 @@ link:../commands-a-z/diagnose-asyncmirrorgroup.html["비동기식 미러 그룹 
 
 
 
+[[synchronous-mirroring-commands]]
 == 동기 미러링 명령
 
 link:../commands-a-z/activate-synchronous-mirroring.html["동기 미러링을 활성화합니다"]

@@ -15,6 +15,7 @@ SANtricity OS 11.40 릴리즈에는 웹 서비스가 내장된 E2800 및 E5700 �
 
 
 
+[[11-53-and-older-command-line-parameters]]
 == 11.53 및 이전 명령줄 매개변수
 
 기호 프로토콜은 E2700 및 E5600 컨트롤러에서 지원되는 유일한 프로토콜입니다. 기존 스크립트를 보존하고 전환 시간을 최소화하기 위해 CLI 옵션과 문법은 최대한 보존됩니다. 하지만 보안, 인증, AutoSupport, 경고 메시지와 관련하여 해당 컨트롤러에 대해 일부 CLI 문법을 렌더링하는 E2800 및 E5700 컨트롤러의 기능에는 몇 가지 차이가 있습니다. 그러나 새로운 https 프로토콜을 사용할 경우 E2800 또는 E5700에서는 문법이 사용되지 않을 수도 있습니다.
@@ -68,6 +69,7 @@ username 인수를 지정하면 장치 검색을 수행하여 올바른 클라�
 |===
 
 
+[[command-line-parameters-that-only-apply-to-e2700-or-e5600-controllers]]
 == E2700 또는 E5600 컨트롤러에만 적용되는 명령줄 매개 변수입니다
 
 E2700 및 E5600 컨트롤러에는 알림 관리 기능이 내장되어 있지 않으므로 이러한 명령줄 매개 변수를 적용할 수 있습니다. 이러한 매개 변수는 E2800 또는 E5700 컨트롤러에는 적용되지 않습니다.
@@ -130,6 +132,7 @@ SNMP 트랩 대상 또는 e-메일 주소 경고 대상을 제거합니다. '_co
 |===
 
 
+[[command-line-parameters-that-apply-to-all-controllers-running-with-a-symbol-client-type]]
 == 심볼 클라이언트 유형으로 실행되는 모든 컨트롤러에 적용되는 명령줄 매개 변수입니다
 
 [cols="2*"]
@@ -157,6 +160,7 @@ SNMP 트랩 대상 또는 e-메일 주소 경고 대상을 제거합니다. '_co
 |===
 
 
+[[command-line-parameters-applicable-to-all-controllers-and-all-client-types]]
 == 모든 컨트롤러 및 모든 클라이언트 유형에 적용되는 명령줄 매개 변수입니다
 
 [cols="2*"]

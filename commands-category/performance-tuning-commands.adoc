@@ -15,6 +15,7 @@ summary: 성능 튜닝 명령
 
 
 
+[[automatic-load-balancing-commands]]
 == 자동 로드 밸런싱 명령
 
 link:../commands-a-z/save-storagearray-autoloadbalancestatistics-file.html["자동 로드 밸런싱 통계를 저장합니다"]
@@ -23,6 +24,7 @@ link:../commands-a-z/set-storagearray-autoloadbalancingenable.html["자동 로�
 
 
 
+[[ssd-cache-commands]]
 == SSD 캐시 명령입니다
 
 link:../commands-a-z/add-drives-to-ssd-cache.html["SSD 캐시에 드라이브를 추가합니다"]

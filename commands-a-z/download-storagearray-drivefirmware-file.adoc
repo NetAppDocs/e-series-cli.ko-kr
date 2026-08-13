@@ -15,18 +15,21 @@ download storageArray driveFirmware file 명령을 실행하면 펌웨어 이미
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 모든 SMcli 패키지가 설치되어 있는 한 E4000, E2700, E5600, E2800, E5700, EF600, EF300, EF50 및 EF80 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Storage Admin 또는 Support Admin 역할이 있어야 합니다.
 
 
 
+[[syntax]]
 == 구문
 
 [source, cli, subs="+macros"]
@@ -36,6 +39,7 @@ pass:quotes[[file="_filename2_"... file="_filenameN_"]]
 ----
 
 
+[[parameter]]
 == 매개 변수
 
 [cols="2*"]
@@ -55,6 +59,7 @@ pass:quotes[[file="_filename2_"... file="_filenameN_"]]
 |===
 
 
+[[notes]]
 == 참고
 
 이 명령을 실행하면 스토리지 배열의 드라이브에 둘 이상의 펌웨어 이미지 파일을 다운로드할 수 있습니다. 다운로드할 수 있는 펌웨어 이미지 파일 수는 스토리지 배열에 따라 다릅니다. 스토리지 어레이에서 허용할 수 있는 것보다 더 많은 펌웨어 이미지 파일을 다운로드하려고 하면 스토리지 관리 소프트웨어에서 오류를 반환합니다.
@@ -70,6 +75,7 @@ download storageArray driveFirmware 명령은 각 대상 드라이브에 대해 
 
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 5.20

@@ -15,12 +15,14 @@ Set event alert 명령은 특정 alertable event와 관련된 notification을 �
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 E2700 및 E5600 스토리지 어레이에만 적용됩니다.
 
 
 
+[[context]]
 == 상황
 
 [NOTE]
@@ -30,6 +32,7 @@ Set event alert 명령은 특정 alertable event와 관련된 notification을 �
 ====
 
 
+[[context]]
 == 상황
 
 스토리지 배열을 정의할 때 경고를 구성하고 이벤트 경고를 관리하는 방법을 정의할 수 있습니다. 경고를 보내도록 스토리지 배열을 구성한 경우, alertable 이벤트가 발생할 때 지정된 수신자에게 알림이 전송됩니다. 이 알림은 다음 유형 중 하나 또는 모두가 될 수 있습니다.
@@ -53,6 +56,7 @@ set event alert CLI 명령은 단일 스토리지 어레이에서 작동합니�
 ====
 
 
+[[syntax-to-block-an-event-alert]]
 == 이벤트 알림을 차단하는 구문
 
 [source, cli, subs="+macros"]
@@ -61,6 +65,7 @@ set blockEventAlert pass:quotes[_eventType_]
 ----
 
 
+[[syntax-to-unblock-an-event-alert]]
 == 이벤트 알림을 차단 해제하는 구문
 
 [source, cli, subs="+macros"]
@@ -69,6 +74,7 @@ set unBlockEventAlert pass:quotes[_eventType_]
 ----
 
 
+[[parameters]]
 == 매개 변수
 
 [cols="2*"]
@@ -86,6 +92,7 @@ set unBlockEventAlert pass:quotes[_eventType_]
 |===
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 8.10

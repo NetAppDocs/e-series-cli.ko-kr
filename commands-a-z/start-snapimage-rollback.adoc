@@ -15,18 +15,21 @@ summary: SnapImage 롤백 시작 명령은 스냅샷 이미지 세트에 대한 
 
 
 
+[[supported-arrays]]
 == 지원되는 어레이
 
 이 명령은 모든 SMcli 패키지가 설치되어 있는 한 E4000, E2700, E5600, E2800, E5700, EF600, EF300, EF50 및 EF80 어레이를 포함한 모든 개별 스토리지 어레이에 적용됩니다.
 
 
 
+[[roles]]
 == 역할
 
 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Storage Admin 역할이 있어야 합니다.
 
 
 
+[[context]]
 == 상황
 
 기본 볼륨의 컨텐츠는 선택한 스냅샷 이미지 볼륨의 시점 컨텐츠와 일치하도록 즉시 변경됩니다. 롤백 작업이 성공적으로 완료된 후 기본 볼륨을 읽기/쓰기 요청에 즉시 사용할 수 있게 됩니다. 스냅샷 이미지 롤백 작업을 중지하려면 'Stop rollback SnapImage' 명령을 사용합니다.
@@ -40,6 +43,7 @@ E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서
 ====
 
 
+[[syntax]]
 == 구문
 
 [source, cli, subs="+macros"]
@@ -48,6 +52,7 @@ pass:quotes[start snapImage ["_snapImageName_"]] rollback
 ----
 
 
+[[parameter]]
 == 매개 변수
 
 [cols="2*"]
@@ -76,6 +81,7 @@ pass:quotes[start snapImage ["_snapImageName_"]] rollback
 |===
 
 
+[[notes]]
 == 참고
 
 스냅샷 이미지의 이름은 콜론(:)으로 구분된 두 부분으로 구성됩니다.
@@ -98,6 +104,7 @@ start snapImage ["snapGroup1:newest"]rollback;
 ----
 
 
+[[minimum-firmware-level]]
 == 최소 펌웨어 레벨입니다
 
 7.83
