@@ -2,7 +2,7 @@
 permalink: commands-a-z/set-controller-hostport.html 
 sidebar: sidebar 
 keywords: set, controller, host, port, properties 
-summary: set controller hostPort 명령은 iSCSI, iSER, NVMe over InfiniBand 및 NVMe over RoCE와 같은 호스트 포트 유형에 대한 네트워크 속성을 변경합니다. 속성 변경에는 IPv4 및 IPv6 속성, 포트 속도 및 최대 프레임 페이로드가 포함됩니다. 
+summary: '`set controller hostPort` 명령은 iSCSI, iSER, InfiniBand를 통한 NVMe 및 RoCE를 통한 NVMe 등 다음 유형의 호스트 포트에 대한 네트워크 속성을 변경합니다. 속성 변경에는 IPv4 및 IPv6 속성, 포트 속도, 최대 프레임 페이로드가 포함됩니다.' 
 ---
 = 컨트롤러 호스트 포트 속성 설정 - SANtricity CLI
 :allow-uri-read: 

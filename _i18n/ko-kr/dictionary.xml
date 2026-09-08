@@ -645,7 +645,6 @@
   <block id="4f04a7af789c17ab2a8fcd1be1daaa08" category="list-text">가져오기 절차를 진행할지 확인합니다.</block>
   <block id="8776f8b398fc1f838fd8d340a76be74a" category="section-title">가져올 수 없는 구성 요소</block>
   <block id="c1bfb4cd89f37e5c56d6839fe43e4f45" category="paragraph">볼륨 그룹 가져오기 절차 중에는 일부 구성 요소를 가져올 수 없습니다. 이러한 구성 요소는 절차 중에 제거됩니다.</block>
-  <block id="5b00308b71dce0428ac39f3dd1fddebf" category="summary">이름에는 최대 30자를 사용할 수 있습니다.</block>
   <block id="12e6d0dc88f359dcf5383de2e7e9270d" category="doc">명명 규칙</block>
   <block id="aa0dba7a8177abb22592fe6535b2f319" category="list-text">다음 구성 요소의 이름에 영숫자, 하이픈 및 밑줄을 조합하여 사용할 수 있습니다.</block>
   <block id="a390959c210a5bb0121c5a6ddb212a48" category="list-text">지원합니다</block>
@@ -1112,7 +1111,6 @@
   <block id="13a5c724a01932fb25dc47cff9a0842d" category="paragraph">"cacheReadPrefetch"</block>
   <block id="41e3b3490e8364b1c8b8d78ce558f1bf" category="paragraph">캐시 읽기 프리페치를 설정하거나 해제하는 설정입니다. 캐시 읽기 프리페치를 해제하려면 이 매개 변수를 "false"로 설정합니다. 캐시 읽기 프리페치를 설정하려면 이 매개 변수를 "true"로 설정합니다.</block>
   <block id="fa0ce0a81b4649424b523e003edde11f" category="paragraph">디스크 풀에서 생성되는 볼륨의 RAID 레벨을 설정합니다. RAID1을 지정하려면 1로 설정합니다. RAID6를 지정하려면 6으로 설정합니다. RAID 레벨이 설정되지 않은 경우 기본적으로 디스크 풀에 RAID6가 사용됩니다.</block>
-  <block id="e8c798bee03f9fc48d86d3187fec510a" category="paragraph">각 볼륨 이름은 고유해야 합니다. 사용자 레이블에는 영숫자, 밑줄(_), 하이픈(-) 및 파운드(#)를 조합하여 사용할 수 있습니다. 사용자 레이블은 최대 30자까지 가능합니다.</block>
   <block id="567799174afaea6bae404eb0d756d448" category="paragraph">씬 볼륨의 경우 'capacity' 매개변수는 볼륨의 가상 용량을 지정하고 'RepositoryCapacity' 매개변수는 리포지토리 볼륨으로 생성된 볼륨의 용량을 지정합니다. 새 볼륨을 생성하는 대신 기존의 미사용 저장소 볼륨을 지정하려면 "existingRepositoryLabel" 매개 변수를 사용합니다.</block>
   <block id="77788cd84650ddc55455c0a8fdbac04d" category="paragraph">씬 볼륨을 생성할 때 최상의 결과를 얻으려면 저장소 볼륨이 이미 존재하거나 이미 존재하는 디스크 풀에 생성되어야 합니다. 씬 볼륨을 생성할 때 선택적 매개 변수 중 일부를 지정하지 않으면 스토리지 관리 소프트웨어가 저장소 볼륨 생성을 시도합니다. 가장 적합한 대상 볼륨은 이미 존재하고 크기 요구 사항 내에 있는 저장소 볼륨입니다. 다음으로 가장 적합한 대상 볼륨은 디스크 풀 사용 가능 범위에서 생성되는 새 저장소 볼륨입니다.</block>
   <block id="f16c372a173f9cbd48a660f4eb189439" category="paragraph">씬 볼륨의 저장소 볼륨은 볼륨 그룹에서 생성할 수 없습니다.</block>
@@ -2279,7 +2277,6 @@
   <block id="61d7330b4e95acd575f02a3b2ee3c73a" category="paragraph">URL입니다</block>
   <block id="c650fad92344b462dcb68953aabfc9b9" category="paragraph">OCSP 서버 URL의 리터럴 문자열입니다.</block>
   <block id="75f51bfef86211d22df7cdc3e49f0ed8" category="paragraph">URL을 지정하지 않으면 인증서 해지 설정에 있는 OCSP 응답자 URL이 사용됩니다.</block>
-  <block id="8d2da3fc2b8c5b0255a99d3ec326186e" category="summary">set storageArray pqValidateOnReconstruct 명령은 재구성 시 스토리지 배열 P/Q 검증 상태를 설정합니다. 이 기능이 활성화되면 데이터 +P 및 데이터 +Q를 사용하여 데이터가 재구성되고 진행 방법을 결정하기 전에 일관성 여부를 확인하기 위해 결과가 검사됩니다.</block>
   <block id="7c115b65d57d4134de20f83ad0dddb80" category="doc">재구성 시 스토리지 배열 PQ 검증을 설정합니다</block>
   <block id="5b2d2fd7714fa99c9205b344f4c3b620" category="paragraph">'et storageArray pqValidateOnReconstruct' 명령어는 재구성 시 스토리지 배열 P/Q 검증 상태를 설정합니다. 이 기능이 활성화되면 데이터 +P 및 데이터 +Q를 사용하여 데이터가 재구성되고 진행 방법을 결정하기 전에 일관성 여부를 확인하기 위해 결과가 검사됩니다.</block>
   <block id="f7b49d738f89f1e20476843cbc0ab811" category="paragraph">이 기능은 이중 패리티가 있는 디스크 풀 및 RAID 6 볼륨 그룹에 적용됩니다. 이 경우 드라이브 장애가 발생하더라도 볼륨 그룹 또는 디스크 풀에 중복성이 있으므로 재구성 중 데이터 및 패리티 일관성을 확인할 수 있습니다. 재구성 중에 불일치가 발견되고 볼륨에 대해 Data Assurance가 활성화된 경우, 나머지 드라이브를 사용하여 데이터를 재구성할 수 있도록 비일관성의 소스를 식별할 수 있습니다. 이 기능이 활성화되어 있고 볼륨에 대해 Data Assurance가 활성화되어 있지 않거나 비일관성을 단일 드라이브로 격리할 수 없는 경우 재구성되는 블록이 읽을 수 없는 것으로 표시됩니다.</block>
@@ -2294,7 +2291,6 @@
   <block id="c2175400b52a9a9aebaea38f243f27ea" category="list-text">"allMedia"는 스토리지 배열의 모든 미디어에 대해 검증 상태를 설정하려고 함을 나타냅니다.</block>
   <block id="298d3fd378de2f49463734ea02461d98" category="section-title">하드 디스크 드라이브로 지정된 드라이브 미디어 유형의 예</block>
   <block id="7fdcc2048c3db60b50ed9e93c5fcc49a" category="section-title">솔리드 스테이트 드라이브로 지정된 드라이브 미디어 유형의 예</block>
-  <block id="1c77eaff860e37803cc5ca3c3c881983" category="summary">show blockedEventAlertList 명령은 set blockEventAlert 명령으로 현재 차단된 이벤트 목록을 반환합니다. 이 목록의 이벤트는 알림 터미널 및 매개 변수를 사용하여 구성한 알림, 즉 e-메일, syslog 및 트랩 알림을 보내지 않는 이벤트입니다.</block>
   <block id="eb580f5de1def8cbb208f462f2d0bb9e" category="doc">차단된 이벤트 표시</block>
   <block id="127d2048269471576d40c0dbafb5b3ac" category="paragraph">sockedEventAlertList 명령은 Set blockEventAlert 명령으로 현재 차단된 이벤트 목록을 반환합니다. 이 목록의 이벤트는 알림 터미널 및 매개 변수를 사용하여 구성한 알림, 즉 e-메일, syslog 및 트랩 알림을 보내지 않는 이벤트입니다.</block>
   <block id="fb83f82cf0b806fa6ead243b9060c019" category="paragraph">출력에는 차단된 각 이벤트에 대해 하나의 줄이 있으며, 이벤트 유형이 16진수 형식으로 나열되고 이벤트 설명이 표시됩니다. 다음은 출력의 예입니다.</block>
@@ -2616,9 +2612,7 @@
   <block id="f7c7888d42761b1842fec253a12255ab" category="list-text">기본값 -- 스냅샷 이미지 저장소 볼륨은 공간이 있는 모든 볼륨 그룹에 기록됩니다.</block>
   <block id="4e8deada589e1b244a07929c2fb1e321" category="paragraph">최상의 성능을 얻으려면 '메이트 소스' 옵션을 사용하십시오.</block>
   <block id="725b2002f765d40c3931c1c138873935" category="paragraph">'copyType' 파라미터를 'repositoryGroupPreference' 파라미터와 함께 사용해야 합니다.</block>
-  <block id="0b96ebb6bc2c17931297bb42ae92fdd6" category="paragraph">이름에 영숫자, 발생, 밑줄의 조합을 사용할 수 있습니다. 이름에는 최대 30자를 사용할 수 있습니다.</block>
   <block id="8c30d2438c1439840bac4ad622fb913b" category="paragraph">복사 우선 순위는 소스 볼륨과 볼륨 복사본 쌍의 타겟 볼륨 간의 데이터를 복사하는 데 사용되는 시스템 리소스의 양을 정의합니다. 가장 높은 우선 순위 수준을 선택하면 볼륨 복사본은 대부분의 시스템 리소스를 사용하여 볼륨 복사본을 수행하므로 호스트 데이터 전송 성능이 저하됩니다.</block>
-  <block id="fef563ac437ffe92676ddb5f4870b392" category="summary">SMcli enable | disable autoSupportRemoteDiag 명령은 AutoSupport 원격 진단 기능을 켜거나 끕니다. 이 기능을 사용하면 기술 지원 부서에서 지원 데이터를 요청하여 원격으로 문제를 진단할 수 있습니다.</block>
   <block id="d696d59ee6929514ea1ab9ef31828954" category="paragraph">'SMcli enable | disable autoSupportRemoteDiag' 명령은 AutoSupport 원격 진단 기능을 켜거나 끕니다. 이 기능을 사용하면 기술 지원 부서에서 지원 데이터를 요청하여 원격으로 문제를 진단할 수 있습니다.</block>
   <block id="a7dcc0992cb74c432e1e0f6a766c5185" category="paragraph">이 명령은 관리 도메인의 모든 ASUP 지원 스토리지 어레이에 영향을 줍니다.</block>
   <block id="0d9ea4e8fdd29724752b9a7c688f0e2a" category="paragraph">이 기능을 활성화하기 전에 먼저 AutoSupport 기능을 사용하도록 설정한 다음 관리 도메인에서 AutoSupport OnDemand 기능을 사용하도록 설정하십시오.</block>
@@ -3344,19 +3338,10 @@
   <block id="205dde83b9564fc6b64de227847b8271" category="paragraph">'show volume performanceStats' 명령은 볼륨 성능에 대한 정보를 반환합니다.</block>
   <block id="d8557f2abd71b35af6e0db1bcf4abc1d" category="paragraph">스토리지 배열의 각 볼륨에 대해 이 명령은 다음 정보를 반환합니다.</block>
   <block id="54c8f716ac4004ec32db2fe1d3f5d881" category="list-text">스토리지 어레이</block>
-  <block id="9a9410d89e3aedce48647a59ed153b9f" category="list-text">총 입출력 수</block>
   <block id="f71b29da6de1b30cad6507864f0c2b21" category="list-text">읽기 %</block>
   <block id="0189cd985050e2cf9d7e51dc53d55398" category="list-text">운영 읽기 캐시 적중률</block>
   <block id="c0115dfcf2c34f5dca91133d8a480a16" category="list-text">운영 쓰기 캐시 적중률</block>
   <block id="54d70f47f3a520fb827c2aa77706c287" category="list-text">SSD 캐시 적중률</block>
-  <block id="3b0536b14dd4d8829dab61183c2573d5" category="list-text">현재 MBs/s</block>
-  <block id="663178f42dd93dd5def9778e03a289d5" category="list-text">최대 MBs/s</block>
-  <block id="cce1d5444d11a557c3d0a9793b0cb9f1" category="list-text">현재 IO/s</block>
-  <block id="40d7fa90c94bd859372295ad1748dcee" category="list-text">최대 입출력 수</block>
-  <block id="71923d5afcfb8e53e087a50d251be328" category="list-text">최소 입출력 수</block>
-  <block id="fa9529562122b7b0b2d1c1b41c70722c" category="list-text">평균 입출력 수</block>
-  <block id="ab233a6043aa5029e204d7ffb7925d08" category="list-text">최소 MBs/s</block>
-  <block id="6f1c953ac7cc289772028d618d6670d9" category="list-text">평균 MBs/s</block>
   <block id="0e959a4e09e878a915a677a94bfe1cf3" category="list-text">현재 IO 지연 시간</block>
   <block id="2f742096d563e8d2dc249c3223443cef" category="list-text">최대 IO 지연 시간</block>
   <block id="636cb44ad0c80b3ed014702e2f5874d8" category="list-text">최소 IO 지연 시간</block>
@@ -4832,7 +4817,6 @@
   <block id="c338b0b86371253c618f2b1a8d2b4891" category="paragraph">'delete sgSnapVolume' 명령은 정합성 보장 그룹의 스냅샷 볼륨을 삭제합니다. 필요한 경우 리포지토리 구성원을 삭제할 수도 있습니다.</block>
   <block id="efac5228930c9336acee8d630cd5868a" category="paragraph">삭제할 일관성 그룹 스냅샷 볼륨의 이름입니다. 정합성 보장 그룹 스냅샷 볼륨의 이름은 큰따옴표(" ")로 대괄호([])로 묶어야 합니다.</block>
   <block id="a3216dc2158a24c847d7655e884b7d22" category="paragraph">구성원 볼륨을 저장 또는 삭제하는 매개 변수입니다. 구성원 볼륨을 저장하려면 이 매개 변수를 "true"로 설정합니다. 구성원 볼륨을 삭제하려면 이 매개변수를 "false"로 설정합니다. 기본값은 "true"입니다.</block>
-  <block id="274253af5ce8a8c243654dddb36b9ddf" category="summary">set controller hostPort 명령은 iSCSI, iSER, NVMe over InfiniBand 및 NVMe over RoCE와 같은 호스트 포트 유형에 대한 네트워크 속성을 변경합니다. 속성 변경에는 IPv4 및 IPv6 속성, 포트 속도 및 최대 프레임 페이로드가 포함됩니다.</block>
   <block id="363c772dcd24117cfec42f0067361b63" category="paragraph">'Set controller hostPort' 명령은 iSCSI, iSER, NVMe over InfiniBand 및 NVMe over RoCE의 호스트 포트 유형에 대한 네트워크 속성을 변경합니다. 속성 변경에는 IPv4 및 IPv6 속성, 포트 속도 및 최대 프레임 페이로드가 포함됩니다.</block>
   <block id="3c4898dd6737fe8d54b16846ccb57746" category="paragraph">이 명령은 사용되지 않는 를 대체합니다 <block ref="a58b47921e5dcb71d619222e96c78503" category="inline-xref-macro-rx"></block> 명령.</block>
   <block id="86a547cb364a6d472cd6c06e8878c3ea" category="paragraph">속성을 정의할 컨트롤러를 지정할 수 있습니다.</block>
@@ -5409,7 +5393,6 @@
   <block id="8a5a166f792b85b1fabebd39dc2bad00" category="doc">스토리지 배열 ICMP 응답을 설정합니다</block>
   <block id="48231c27e0491caa636f47dbe8614c83" category="paragraph">세트 storageArray icmpPingResponse 명령은 협상 시 스토리지 배열의 시작 지점을 나타내는 세션 및 연결에 대해 협상 가능한 설정의 기본값을 반환합니다.</block>
   <block id="ee560057f648beda238dcde093c87236" category="paragraph">ICMP(Internet Control Message Protocol)는 네트워크의 운영 체제에서 요청된 서비스를 사용할 수 없거나 호스트 또는 라우터에 연결할 수 없는 등의 IP 관련 오류 메시지, 테스트 패킷 및 정보 메시지를 보내는 데 사용됩니다. ICMP 응답 명령은 ICMP Echo Request 메시지를 보내고 ICMP Echo Response 메시지를 수신하여 호스트에 연결할 수 있는지 여부와 패킷이 해당 호스트로 송수신되는 데 걸리는 시간을 결정합니다.</block>
-  <block id="3592ecf46309dcf32cb89f2107cc4621" category="summary">SMcli enable | disable autoSupportOnDemand 명령은 AutoSupport OnDemand 기능을 켜거나 끕니다. 이 기능을 통해 기술 지원 부서에서 AutoSupport 데이터 전송을 조정하고 누락된 지원 데이터의 재전송을 요청할 수 있습니다.</block>
   <block id="72baddf41cff9398012aeac0d348747e" category="doc">EMW 관리 도메인 수준에서 AutoSupport OnDemand 기능 활성화 또는 비활성화(SMcli만 해당)</block>
   <block id="03d70a2c84d82939eeed7eced3bb3355" category="paragraph">'smcli enable | disable autoSupportOnDemand' 명령은 AutoSupport OnDemand 기능을 켜거나 끕니다. 이 기능을 통해 기술 지원 부서에서 AutoSupport 데이터 전송을 조정하고 누락된 지원 데이터의 재전송을 요청할 수 있습니다.</block>
   <block id="063a9f43e7ad9f7450fcf77aa8f0ebc8" category="paragraph">이 기능을 활성화하기 전에 먼저 관리 도메인에서 AutoSupport 기능을 활성화해야 합니다. 이 기능을 활성화한 후 AutoSupport 원격 진단 기능을 활성화할 수 있습니다(필요한 경우). AutoSupport 원격 진단 기능은 AutoSupport OnDemand 기능이 활성화된 경우 기본적으로 활성화됩니다.</block>
@@ -6062,7 +6045,6 @@
   <block id="19952d7c1173f6fdb061b8cc45ac0f8a" category="paragraph">선택한 볼륨 그룹 또는 디스크 풀에 저장소 볼륨을 배치할 수 있습니다. 다른 저장소 볼륨과 동일한 위치에 저장소 볼륨을 가질 필요는 없습니다. 선택한 볼륨 그룹 또는 디스크 풀에 저장소 볼륨을 배치하려면 RepositoryVolume(볼륨) 매개 변수를 사용하고 볼륨 그룹 또는 디스크 풀 및 저장소 볼륨의 크기를 확인합니다. 이 명령 사용의 예는 다음과 같습니다.</block>
   <block id="bc17856d9c5b0558e696334ce4d637d3" category="paragraph">이 예에서 "[.code]""12""는 기존 볼륨 그룹 또는 기존 디스크 풀의 이름입니다. 용량 매개 변수는 저장소 볼륨 그룹에 대해 원하는 크기를 정의합니다.</block>
   <block id="3ec049132550fbb0c37a1649bacc6c28" category="paragraph">볼륨 그룹 또는 디스크 풀에서 새 저장소 볼륨을 생성할 때 볼륨 그룹 이름 및 용량 또는 디스크 풀 이름 및 용량 주위에 괄호를 포함해야 합니다.</block>
-  <block id="83e4d405c1f2771868395ef32d205dc5" category="summary">set snapVolume convertToReadWrite 명령은 읽기 전용 볼륨인 스냅샷 볼륨을 읽기/쓰기 볼륨인 스냅샷 볼륨으로 변경합니다.</block>
   <block id="1a77ae19fc978265379011542f82cca9" category="doc">읽기 전용 스냅샷 볼륨을 읽기/쓰기 볼륨으로 설정합니다</block>
   <block id="d945b68969c6196140c398d2cb9d0be7" category="paragraph">set snapVolume convertToReadWrite 명령을 실행하면 읽기 전용 볼륨인 스냅샷 볼륨이 읽기/쓰기 볼륨인 스냅샷 볼륨으로 변경됩니다.</block>
   <block id="74383b0492ee50521d99db58462a8ac7" category="paragraph">또한 이 명령을 사용하여 읽기/쓰기 볼륨의 새 저장소 볼륨을 식별하거나 저장소 볼륨에 대한 전체 제한 경고 수준을 설정할 수 있습니다.</block>
@@ -8055,7 +8037,6 @@
   <block id="5802de4ead66c595cdb0ce72973b18c2" category="doc">스토리지 어레이 호스트 I/O 프로토콜 설정 - SANtricity CLI</block>
   <block id="d13da51d358cffe624beb9300684e1e6" category="paragraph"><block ref="777e8152565ada0c3a16a8b8868d3bc6" prefix=" " category="inline-code"></block> 명령은 스토리지 어레이 수준에서 호스트 I/O 프로토콜을 구성합니다.</block>
   <block id="36212b3014245fb1e729ddc31e4ff763" category="paragraph"><block ref="777e8152565ada0c3a16a8b8868d3bc6" prefix="" category="inline-code"></block></block>
-  <block id="aff266832a5aa34647a402c2095b347f" category="paragraph">스토리지 어레이에 사용할 호스트 I/O 프로토콜을 지정할 수 있습니다. 유효한 선택 사항은 FC, ISCSI, ISER, nvmeIb, nvmeFc, nvmeRoce, SAS 또는 SRP입니다.</block>
   <block id="1727ed989c7f4287136d81d78aeb960e" category="paragraph">해당 사항 없음.</block>
   <block id="dd91b573b380dac94dc1f2ddbc34f95e" category="paragraph">ODX는 버퍼링된 읽기 및 쓰기 작업을 사용하지 않고 데이터를 전송하는 방법을 제공하며, 데이터 전송 작업에 호스트가 직접 개입할 필요가 없습니다. ODX가 활성화되지 않은 경우, 데이터는 소스 스토리지에서 호스트로 읽어온 다음 호스트에서 대상 스토리지로 기록됩니다. ODX가 활성화되면 데이터 전송 작업은 스토리지 인프라에 의해 직접 관리됩니다. 데이터는 호스트를 거치지 않고 동일한 어레이 내에서 소스 스토리지에서 대상 스토리지로 직접 이동됩니다.</block>
   <block id="f52bb2576426b38ae1623297e50f54fb" category="paragraph">E4000, 2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 Storage Admin 역할이 있어야 합니다.</block>
@@ -8099,4 +8080,37 @@
   <block id="c540831e3a9e23851bfed87fe9daa839" category="paragraph">EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 지원 관리자 역할이 있어야 합니다.</block>
   <block id="3aaeeffd59a60bb91c9bd0ba462a25c0" category="paragraph">이 명령은 모든 SMcli 패키지가 설치되어 있는 경우 E4000, EF50 또는 EF80 스토리지 어레이에 적용됩니다.</block>
   <block id="2c7b4ae92e40349e885951530fef1b89" category="paragraph">E4000, EF50 또는 EF80 스토리지 어레이에서 이 명령을 실행하려면 지원 관리자 역할이 있어야 합니다.</block>
+  <block id="30f637bb78f054ba274e7fe3dd810627" category="paragraph">이름에는 영숫자, 하이픈, 밑줄을 자유롭게 조합하여 사용할 수 있습니다. 일반 및 씬 볼륨 이름은 최대 60자까지 가능합니다.</block>
+  <block id="5ae4782adea181a0d1e64b8c4b495b47" category="admonition">표준 및 씬 볼륨 이름의 문자 제한은 60자입니다. 볼륨 이름에는 영숫자, 밑줄(_), 하이픈(-), 파운드(#)를 어떤 조합으로든 포함할 수 있습니다.</block>
+  <block id="21464790afef410d035fd404225d294f" category="paragraph">이름에는 영숫자, 하이픈, 밑줄을 자유롭게 조합하여 사용할 수 있습니다. 표준 볼륨 및 씬 볼륨 이름은 최대 60자까지, 그 외 모든 구성 요소 이름은 최대 30자까지 사용할 수 있습니다.</block>
+  <block id="72cdd2ed512cd33e389f0cb2906ef5e9" category="paragraph">이름에는 영숫자, 밑줄(_), 하이픈(-), 파운드 기호(#)를 자유롭게 조합하여 사용할 수 있습니다. 표준 볼륨 및 씬 볼륨 이름은 최대 60자까지 가능하며, 그 외 모든 구성 요소 이름은 최대 30자까지 가능합니다.</block>
+  <block id="2f2b2d30efa93a06297737282f08ecb6" category="paragraph">각 볼륨 이름은 고유해야 합니다. 사용자 레이블에는 영숫자, 밑줄(_), 하이픈(-), 파운드(#)를 자유롭게 조합하여 사용할 수 있습니다. 표준 볼륨 이름과 씬 볼륨 이름은 최대 60자까지 사용할 수 있습니다.</block>
+  <block id="e1b911cefd3d4b80427b5d7a292ac64e" category="summary">`set controller hostPort` 명령은 iSCSI, iSER, InfiniBand를 통한 NVMe 및 RoCE를 통한 NVMe 등 다음 유형의 호스트 포트에 대한 네트워크 속성을 변경합니다. 속성 변경에는 IPv4 및 IPv6 속성, 포트 속도, 최대 프레임 페이로드가 포함됩니다.</block>
+  <block id="bc55248fc9cde5a7472469aea43e7aa7" category="summary">The set snapVolume convertToReadWrite 명령은 읽기 전용 스냅샷 볼륨을 읽기/쓰기 가능한 스냅샷 볼륨으로 변경합니다.</block>
+  <block id="a65c92ddfbb6a5d393ffae77cc92712e" category="paragraph">스토리지 어레이에 사용할 호스트 I/O 프로토콜을 지정할 수 있습니다. 유효한 선택 사항은 FC, ISCSI, ISER, nvmeIb, nvmeFc, nvmeRoce, nvmeTcp, SAS 또는 SRP입니다.</block>
+  <block id="2871fbf8ee55a6f0ebb4abc8f588e2ca" category="summary">The set storageArray pqValidateOnReconstruct 명령은 재구성 시 스토리지 어레이의 P/Q 유효성 검사 상태를 설정합니다. 이 기능이 활성화되면 데이터 P와 데이터 Q를 모두 사용하여 데이터를 재구성하고, 진행 방법을 결정하기 전에 결과의 일관성을 검사합니다.</block>
+  <block id="f94b1d82c42c29fb9932f84b35074a39" category="paragraph">DULBE가 활성화된 상태에서는 볼륨 미러링을 설정할 수 없습니다. 미러링을 사용하려면<block ref="ed19f91614a6fffb8d8a8acdad06da4b" prefix=" " category="inline-code"></block>을<block ref="0aaa87422396fdd678498793b6d5250e" prefix=" " category="inline-code"></block>로 설정하십시오.</block>
+  <block id="6840ec2efffba70e14827339c863c1fd" category="summary">show blockedEventAlertList 명령은 set blockEventAlert 명령에 의해 현재 차단된 이벤트 목록을 반환합니다. 이 목록에 있는 이벤트는 이메일, syslog 및 트랩 알림과 같은 알림 터미널 및 매개변수를 사용하여 구성한 알림을 보내지 않는 이벤트입니다.</block>
+  <block id="00cc465faaae7b07daee25c9dcd0f797" category="list-text">총 IO 수</block>
+  <block id="8afc116b7c0b893ee77be00b4d6c6afa" category="list-text">현재 MB/초</block>
+  <block id="7cef665a890768dd25b9d23b0fa91f3e" category="list-text">최대 MB/초</block>
+  <block id="5d5c3bdab72cde95393cd07825385e08" category="list-text">현재 IO/초</block>
+  <block id="55a100481cb54d2f29da99f03a39ae4b" category="list-text">최대 IOs/sec</block>
+  <block id="e37ca7c683db444b390889cbb574a1d1" category="list-text">최소 IOs/sec</block>
+  <block id="7a78e983a7fd5193587c79e7d6d80ccf" category="list-text">초당 평균 IO 횟수</block>
+  <block id="5a88c7b601de8727fdc6fa570d879f17" category="list-text">최소 MB/초</block>
+  <block id="bc6a0dcadfe013ccf720fe7b5e917bfb" category="list-text">평균 MB/초</block>
+  <block id="4773014efbb55b207215d3206977c6eb" category="summary">SMcli enable disable autoSupportOnDemand 명령은 AutoSupport OnDemand 기능을 켜거나 끕니다. 이 기능을 통해 기술 지원 팀이 AutoSupport 데이터 전송을 조정하고 누락된 지원 데이터의 재전송을 요청할 수 있습니다.</block>
+  <block id="7aca99d75f15ae3176740b681b118857" category="summary">SMcli enable disable autoSupportRemoteDiag 명령은 AutoSupport 원격 진단 기능을 켜거나 끕니다. 이 기능을 통해 기술 지원 팀은 원격으로 문제를 진단하기 위한 지원 데이터를 요청할 수 있습니다.</block>
+  <block id="d673045571bd2a923fafba708a25c885" category="list-text">표준 볼륨 및 씬 볼륨 이름은 최대 60자까지 가능합니다. 그 외 모든 구성 요소 이름은 최대 30자까지 가능합니다.</block>
+  <block id="f80b87e5f0d09910810a904407fb6c13" category="section-title">SANtricity 12.10</block>
+  <block id="f4dd2ac2564ee169bd2142813b0816a2" category="paragraph">다음 표는 12.10 릴리스의 CLI 및 스크립트 명령 변경 사항을 나열합니다.</block>
+  <block id="19d76595cbb087fe6ab780404c8fc5ab" category="paragraph"><block ref="9c2b0fa9b24defbb5d7ae0e1caa12847" prefix=" " category="inline-code"></block> 옵션이 명령에 추가되었습니다.</block>
+  <block id="28bd42af30433fbec681386041871b3c" category="paragraph"><block ref="28bd42af30433fbec681386041871b3c" category="inline-link-rx"></block></block>
+  <block id="c3f1c5f3fa2468e21a0fcb3b00010f77" category="paragraph"><block ref="084b91a7aa6610a04582f105860debfd" prefix=" " category="inline-code"></block> 매개변수의 문자 제한이 30자에서 60자로 늘어났습니다.</block>
+  <block id="da2c58010d069455a6d91f692d030c42" category="admonition">SANtricity 12.10에서 이전 버전으로 다운그레이드하는 것은<block ref="084b91a7aa6610a04582f105860debfd" prefix=" " category="inline-code"></block> 매개변수가 30자를 초과하는 경우 지원되지 않습니다.</block>
+  <block id="969e663a111570835165e5a2b76efe1c" category="paragraph"><block ref="969e663a111570835165e5a2b76efe1c" category="inline-link-rx"></block></block>
+  <block id="204c4f0eef528252142e28de7139691f" category="paragraph"><block ref="204c4f0eef528252142e28de7139691f" category="inline-link-rx"></block></block>
+  <block id="4a28200df770471ba49b299dd85762a2" category="paragraph"><block ref="4a28200df770471ba49b299dd85762a2" category="inline-link-rx"></block></block>
+  <block id="d894761ef5b92b18f8cb36c96472dfd6" category="paragraph"><block ref="d894761ef5b92b18f8cb36c96472dfd6" category="inline-link-rx"></block></block>
 </blocks>

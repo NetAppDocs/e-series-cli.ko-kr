@@ -67,6 +67,11 @@ set storageArray resourceProvisionedVolumes=(enable|disable)
 이 값을 변경하면 나중에 생성되는 볼륨 그룹 및 풀에만 적용됩니다. 기존 볼륨 그룹 및 풀의 값은 변경되지 않습니다.
 
 ====
+[NOTE]
+====
+DULBE가 활성화된 상태에서는 볼륨 미러링을 설정할 수 없습니다. 미러링을 사용하려면 `resourceProvisionedVolumes`을 `disable`로 설정하십시오.
+
+====
 |===
 
 

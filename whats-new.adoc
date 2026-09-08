@@ -25,6 +25,74 @@ summary: 이 항목에서는 CLI 명령 및 스크립트 명령의 최신 SANtri
 ====
 
 
+[[santricity-12-10]]
+== SANtricity 12.10
+
+다음 표는 12.10 릴리스의 CLI 및 스크립트 명령 변경 사항을 나열합니다.
+
+[cols="2*"]
+|===
+| 명령 | 변경에 대한 설명 
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/set-storagearray-host-io-protocol.html["스토리지 어레이 호스트 I/O 프로토콜 설정"]
+ a| 
+ `nvmeTcp` 옵션이 명령에 추가되었습니다.
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/create-raid-volume-automatic-drive-select.html["RAID 볼륨 생성(자동 드라이브 선택)"]
+ a| 
+ `userLabel` 매개변수의 문자 제한이 30자에서 60자로 늘어났습니다.
+
+
+NOTE: SANtricity 12.10에서 이전 버전으로 다운그레이드하는 것은 `userLabel` 매개변수가 30자를 초과하는 경우 지원되지 않습니다.
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/create-raid-volume-free-extent-based-select.html["RAID 볼륨 생성(사용 가능한 익스텐트 기반 선택)"]
+ a| 
+ `userLabel` 매개변수의 문자 제한이 30자에서 60자로 늘어났습니다.
+
+
+NOTE: SANtricity 12.10에서 이전 버전으로 다운그레이드하는 것은 `userLabel` 매개변수가 30자를 초과하는 경우 지원되지 않습니다.
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/create-raid-volume-manual-drive-select.html["RAID 볼륨 생성(수동 드라이브 선택)"]
+ a| 
+ `userLabel` 매개변수의 문자 제한이 30자에서 60자로 늘어났습니다.
+
+
+NOTE: SANtricity 12.10에서 이전 버전으로 다운그레이드하는 것은 `userLabel` 매개변수가 30자를 초과하는 경우 지원되지 않습니다.
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/create-volume-diskpool.html["디스크 풀에서 볼륨을 생성합니다"]
+ a| 
+ `userLabel` 매개변수의 문자 제한이 30자에서 60자로 늘어났습니다.
+
+
+NOTE: SANtricity 12.10에서 이전 버전으로 다운그레이드하는 것은 `userLabel` 매개변수가 30자를 초과하는 경우 지원되지 않습니다.
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/recover-volume.html["RAID 볼륨을 복구합니다"]
+ a| 
+ `userLabel` 매개변수의 문자 제한이 30자에서 60자로 늘어났습니다.
+
+
+NOTE: SANtricity 12.10에서 이전 버전으로 다운그레이드하는 것은 `userLabel` 매개변수가 30자를 초과하는 경우 지원되지 않습니다.
+
+|===
+
+
 [[santricity-12-00]]
 == SANtricity 12.00
 
