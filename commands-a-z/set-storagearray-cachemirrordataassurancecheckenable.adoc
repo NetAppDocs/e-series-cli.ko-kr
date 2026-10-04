@@ -18,7 +18,7 @@ summary: set storageArray cacheMirrorDataAssuranceCheckEnable 명령을 사용�
 [[supported-arrays]]
 == 지원되는 어레이
 
-이 명령은 개별 E4000, E2800, E5700, EF600, EF300, EF50 또는 EF80 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
+이 명령은 개별 E4000, E2800, E5700, EF600, EF300, EF50 및 EF80 스토리지 어레이에 적용됩니다. E2700 또는 E5600 스토리지 어레이에서는 작동하지 않습니다.
 
 
 

@@ -16,9 +16,9 @@ indexpage:
     links:
     - title: E-Series 시스템 문서
       url: https://docs.netapp.com/us-en/e-series/index.html
-    - title: SANtricity 시스템 관리자 11.9
+    - title: SANtricity System Manager 12.10
       url: https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html
-    - title: SANtricity 유니파이드 관리자 7
+    - title: SANtricity Unified Manager 8
       url: https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html
   - title: 도구 지원
     links:
